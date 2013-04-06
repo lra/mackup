@@ -1,9 +1,63 @@
 #!/usr/bin/env python
+"""Keep you application settings in sync"""
+
+###########
+# Imports #
+###########
+
+
+import os.path
+import sys
+
+
+#################
+# Configuration #
+#################
+
+
+# Location of the Dropbox folder
+DROPBOX_FOLDER = os.environ['HOME'] + "/Dropbox"
+
+# Location of the Mackup folder
+MACKUP_FOLDER  = DROPBOX_FOLDER + "/Mackup"
+
+
+####################
+# Useful functions #
+####################
+
+
+def error(message):
+    """
+    Throw an error with the given message and immediatly quit.
+
+    Args:
+        message(str): The message to display.
+    """
+    sys.exit(message)
+    # print "Error: {}".format(message)
+
+
+def check_for_usable_environment():
+    """Check if the current env is usable and has everything's required"""
+    # Do we have a home folder ?
+    if not os.path.isdir(DROPBOX_FOLDER):
+        msg = "Unable to find the Dropbox folder: {}".format(DROPBOX_FOLDER)
+        error(msg)
+
+    if not os.path.isdir(MACKUP_FOLDER):
+        msg = "Unable to find the Mackup folder: {}".format(MACKUP_FOLDER)
+        error(msg)
+
+
+################
+# Main Program #
+################
 
 
 def main():
     """Main function"""
-    print "Doing nothing... for now !"
+    check_for_usable_environment()
 
 if __name__ == "__main__":
     main()

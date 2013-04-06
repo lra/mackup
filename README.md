@@ -1,4 +1,4 @@
-# mackup
+# Mackup
 
 Keep you application settings in sync
 

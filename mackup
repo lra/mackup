@@ -34,8 +34,7 @@ def error(message):
     Args:
         message(str): The message to display.
     """
-    sys.exit(message)
-    # print "Error: {}".format(message)
+    sys.exit("Error: {}".format(message))
 
 
 def check_for_usable_environment():

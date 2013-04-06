@@ -62,8 +62,7 @@ def parse_cmdline_args():
     parser = argparse.ArgumentParser(
         description="Keep you application settings in sync",
         epilog=("Mackup requires a Dropbox folder to be located in your home"
-                " folder and fully synced")
-    )
+                " folder and fully synced"))
 
     # Add the required arg
     parser.add_argument("action",

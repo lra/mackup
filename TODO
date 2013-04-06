@@ -1,0 +1,5 @@
+- Make a class out of Mackup as there is state to keep (dropbox folder, tmp
+  folder, mackup folder)
+- Make an ABC for plugins, and base the git plugin on it
+- Tag a version and put the download link in the README
+- Add the plugins I use

@@ -26,6 +26,44 @@ MACKUP_FOLDER = DROPBOX_FOLDER + "/Mackup"
 # Location of the temp folder, used to undelete stuff
 TMP_FOLDER = tempfile.mkdtemp(prefix="mackup_tmp_")
 
+
+#####################
+# Supported plugins #
+#####################
+
+
+GIT_FILES = [".gitconfig"]
+
+
+def backup_git():
+    """Backup git config files"""
+    # if exists home/git
+    #   if home/git is real file
+    #     if exists mackup/git
+    #       are you sure ?
+    #       if sure
+    #         rm mackup/git
+    #         mv home/git mackup/git
+    #         link mackup/git home/git
+    #     else
+    #       mv home/git mackup/git
+    #       link mackup/git home/git
+    pass
+
+
+def restore_git():
+    """Restore git config files"""
+    # if exists mackup/git
+    #   if exists home/git
+    #     are you sure ?
+    #     if sure
+    #       rm home/git
+    #       link mackup/git home/git
+    #   else
+    #     link mackup/git home/git
+    pass
+
+
 ####################
 # Useful functions #
 ####################

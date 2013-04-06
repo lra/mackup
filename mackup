@@ -7,6 +7,7 @@
 
 
 import argparse
+import base64
 import os.path
 import sys
 import tempfile
@@ -18,7 +19,7 @@ import tempfile
 
 
 # Location of the Dropbox folder
-DROPBOX_FOLDER = os.environ['HOME'] + "/Dropbox"
+DROPBOX_FOLDER = ''
 
 # Location of the Mackup folder
 MACKUP_FOLDER = DROPBOX_FOLDER + "/Mackup"
@@ -115,6 +116,21 @@ def parse_cmdline_args():
     return parser.parse_args()
 
 
+def get_dropbox_folder_location():
+    """
+    Try to locate the Dropbox folder
+
+    Returns:
+        (str) Full path to the current Dropbox folder
+    """
+    host_db_path = os.environ['HOME'] + '/.dropbox/host.db'
+    with open(host_db_path, 'r') as f:
+        data = f.read().split()
+    dropbox_home = base64.b64decode(data[1])
+
+    return dropbox_home
+
+
 ################
 # Main Program #
 ################
@@ -122,6 +138,12 @@ def parse_cmdline_args():
 
 def main():
     """Main function"""
+
+    # Location of the Dropbox folder
+    DROPBOX_FOLDER = get_dropbox_folder_location()
+
+    # Location of the Mackup folder
+    MACKUP_FOLDER = DROPBOX_FOLDER + "/Mackup"
 
     # Get the command line arg
     args = parse_cmdline_args()

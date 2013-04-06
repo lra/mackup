@@ -9,6 +9,7 @@
 import argparse
 import os.path
 import sys
+import tempfile
 
 
 #################
@@ -22,6 +23,8 @@ DROPBOX_FOLDER = os.environ['HOME'] + "/Dropbox"
 # Location of the Mackup folder
 MACKUP_FOLDER = DROPBOX_FOLDER + "/Mackup"
 
+# Location of the temp folder, used to undelete stuff
+TMP_FOLDER = tempfile.mkdtemp(prefix="mackup_tmp_")
 
 ####################
 # Useful functions #
@@ -88,6 +91,8 @@ def main():
 
     # Check the env where the command is being run
     check_for_usable_environment()
+
+    # Delete the tmp folder
 
 if __name__ == "__main__":
     main()

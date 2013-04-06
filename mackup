@@ -6,6 +6,7 @@
 ###########
 
 
+import argparse
 import os.path
 import sys
 
@@ -49,6 +50,31 @@ def check_for_usable_environment():
         error(msg)
 
 
+def parse_cmdline_args():
+    """
+    Setup the engine that's gonna parse the command line arguments
+
+    Returns:
+        (argparse.Namespace)
+    """
+
+    # Setup the global parser
+    parser = argparse.ArgumentParser(
+        description="Keep you application settings in sync",
+        epilog=("Mackup requires a Dropbox folder to be located in your home"
+                " folder and fully synced")
+    )
+
+    # Add the required arg
+    parser.add_argument("action",
+                        choices=['backup', 'restore'],
+                        help=("Backup your conf files to Dropbox or restore"
+                              " your files locally from Dropbox"))
+
+    # Parse the command line and return the parsed options
+    return parser.parse_args()
+
+
 ################
 # Main Program #
 ################
@@ -56,6 +82,12 @@ def check_for_usable_environment():
 
 def main():
     """Main function"""
+
+    # Get the command line arg
+    args = parse_cmdline_args()
+    print "Going to {}".format(args.action)
+
+    # Check the env where the command is being run
     check_for_usable_environment()
 
 if __name__ == "__main__":

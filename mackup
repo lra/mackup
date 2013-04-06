@@ -20,7 +20,7 @@ import sys
 DROPBOX_FOLDER = os.environ['HOME'] + "/Dropbox"
 
 # Location of the Mackup folder
-MACKUP_FOLDER  = DROPBOX_FOLDER + "/Mackup"
+MACKUP_FOLDER = DROPBOX_FOLDER + "/Mackup"
 
 
 ####################

@@ -9,6 +9,9 @@ Keep you application settings in sync
   sync multiple workstations
 - One command restore to get all your settings on a newinstalled workstation
 
+By only keep pure configuration files, it keeps the crap out of your freshly new
+installed workstation (cache, temporary and locally specific files)
+
 ## Usage
 
 Backup your application settings in Dropbox

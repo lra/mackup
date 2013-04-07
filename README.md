@@ -118,8 +118,8 @@ That's it, you got your `git` config setup on your new Mac.
   - MacOSX
   - Mercurial
   - S3cmd
-  - SSH
   - Sequel Pro
+  - SSH
   - Sublime Text 2
   - Vim
   - X11

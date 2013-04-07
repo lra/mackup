@@ -48,6 +48,9 @@ SUPPORTED_APPS = {
 
     'Boto': ['.boto'],
 
+    'Emacs': ['.emacs',
+              '.emacs.d'],
+
     'Git': ['.gitconfig'],
 
     'GnuPG': ['.gnupg'],
@@ -72,6 +75,8 @@ SUPPORTED_APPS = {
 
     'X11': ['.Xresources',
             '.fonts'],
+
+    'XEmacs': ['.xemacs'],
 }
 
 

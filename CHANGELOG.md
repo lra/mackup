@@ -5,6 +5,7 @@
 - Added the GPL license
 - Added the changelog
 - Updated the README
+- Added support for Emacs and XEmacs
 
 ## Mackup 0.1
 

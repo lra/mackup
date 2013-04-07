@@ -113,6 +113,7 @@ That's it, you got your `git` config setup on your new Mac.
 
   - [Bash](http://www.gnu.org/software/bash/)
   - [Boto](https://github.com/boto/boto)
+  - [Emacs](http://www.gnu.org/software/emacs/)
   - [Git](http://git-scm.com/)
   - [GnuPG](http://www.gnupg.org/)
   - [MacOSX](http://www.apple.com/osx/)
@@ -123,6 +124,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Sublime Text 2](http://www.sublimetext.com/)
   - [Vim](http://www.vim.org/)
   - [X11](http://www.x.org/)
+  - [XEmacs](http://www.xemacs.org/)
 
 You can add your favorite application by forking it and doing a
 [Pull Request](https://help.github.com/articles/using-pull-requests).

@@ -340,7 +340,6 @@ def copy(src, dst):
         # Copy the src file to dst
         shutil.copy(src, dst)
         # The file should be 0600
-        os.chmod(src, stat.S_IRUSR | stat.S_IWUSR)
 
     # We need to copy a whole folder
     elif os.path.isdir(src):
@@ -349,6 +348,9 @@ def copy(src, dst):
     # What the heck is this ?
     else:
         raise ValueError("Unsupported file: {}".format(src))
+
+    # Set the good mode to the file or folder recursively
+    chmod(dst)
 
 
 def link(target, link):
@@ -376,14 +378,43 @@ def link(target, link):
     if not os.path.isdir(abs_path):
         os.makedirs(abs_path)
 
-    # Make sure the file or folder has the good mode
-    if os.path.isfile(target):
-        os.chmod(target, stat.S_IRUSR | stat.S_IWUSR)
-    elif os.path.isdir(target):
-        os.chmod(target, stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR)
+    # Make sure the file or folder recursively has the good mode
+    chmod(target)
 
     # Create the link to target
     os.symlink(target, link)
+
+
+def chmod(target):
+    """
+    Recursively set the chmod for files to 0600 and 0700 for folders.
+    It's ok unless we need something more specific.
+
+    Args:
+        target (str): Root file or folder
+    """
+    assert isinstance(target, str)
+    assert os.path.exists(target)
+
+    file_mode = stat.S_IRUSR | stat.S_IWUSR
+    folder_mode = stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR
+
+    if os.path.isfile(target):
+        os.chmod(target, file_mode)
+
+    elif os.path.isdir(target):
+        # chmod the root item
+        os.chmod(target, folder_mode)
+
+        # chmod recursively in the folder it it's one
+        for root, dirs, files in os.walk(target):
+            for cur_dir in dirs:
+                os.chmod(os.path.join(root, cur_dir), folder_mode)
+            for cur_file in files:
+                os.chmod(os.path.join(root, cur_file), file_mode)
+
+    else:
+        raise ValueError("Unsupported file type: {}".format(target))
 
 
 def error(message):

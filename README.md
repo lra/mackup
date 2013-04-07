@@ -111,18 +111,18 @@ That's it, you got your `git` config setup on your new Mac.
 
 ## Supported Applications
 
-  - Bash
-  - Boto
-  - Git
-  - GnuPG
-  - MacOSX
-  - Mercurial
-  - S3cmd
-  - Sequel Pro
-  - SSH
-  - Sublime Text 2
-  - Vim
-  - X11
+  - [Bash](http://www.gnu.org/software/bash/)
+  - [Boto](https://github.com/boto/boto)
+  - [Git](http://git-scm.com/)
+  - [GnuPG](http://www.gnupg.org/)
+  - [MacOSX](http://www.apple.com/osx/)
+  - [Mercurial](http://mercurial.selenic.com/)
+  - [OpenSSH](http://www.openssh.org/)
+  - [S3cmd](http://s3tools.org/s3cmd)
+  - [Sequel Pro](http://www.sequelpro.com/)
+  - [Sublime Text 2](http://www.sublimetext.com/)
+  - [Vim](http://www.vim.org/)
+  - [X11](http://www.x.org/)
 
 You can add your favorite application by forking it and doing a
 [Pull Request](https://help.github.com/articles/using-pull-requests).

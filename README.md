@@ -34,9 +34,9 @@ Get some help, obvious...
 
 ## What does it do ?
 
-- Backup your application settings in Dropbox
-- Sync your application settings among all your workstations
-- Restore your configuration on any fresh install in one command line
+- Backups your application settings in Dropbox
+- Syncs your application settings among all your workstations
+- Restores your configuration on any fresh install in one command line
 
 By only tracking pure configuration files, it keeps the crap out of your freshly
 new installed workstation (No cache, temporary and locally specific files are
@@ -79,7 +79,7 @@ That's it, you got your `git` config setup on your new Mac.
   - X11
 
 You can add your favorite application by forking it and doing a
-[Pull Request](https://help.github.com/articles/using-pull-requests)
+[Pull Request](https://help.github.com/articles/using-pull-requests).
 
 ## I don't understand, how can I get support for my beloved app ?
 

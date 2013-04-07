@@ -6,7 +6,7 @@ Keep your Mac application settings in sync.
 
 Install [Dropbox](http://www.dropbox.com/) first, it's needed.
 
-Then:
+On your current Mac:
 ```bash
 # Download Mackup
 curl -o mackup https://raw.github.com/lra/mackup/master/mackup
@@ -17,6 +17,22 @@ chmod +x mackup
 # Launch it and back up your files in Dropbox
 ./mackup backup
 ```
+
+You're all set, and constantly backuped from now on.
+
+Next, on any new Mac, install Dropbox and do:
+```bash
+# Download Mackup
+curl -o mackup https://raw.github.com/lra/mackup/master/mackup
+
+# Make it executable
+chmod +x mackup
+
+# Launch it and restore your files from Dropbox
+./mackup restore
+```
+
+Done !
 
 ## Usage
 

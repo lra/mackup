@@ -1,12 +1,10 @@
 # Mackup Changelog
 
-## Mackup 0.x
+## WIP
 
-- Added the GPL license
-- Added the changelog
-- Updated the README
 - Added support for Emacs and XEmacs
 - Added support for Zsh
+- Doc updates
 
 ## Mackup 0.1
 

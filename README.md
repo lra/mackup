@@ -9,7 +9,7 @@ Install [Dropbox](http://www.dropbox.com/) first, it's needed.
 On your current Mac:
 ```bash
 # Download Mackup
-curl -o mackup https://raw.github.com/lra/mackup/0.1/mackup.py
+curl -o mackup https://raw.github.com/lra/mackup/master/mackup.py
 
 # Make it executable
 chmod +x mackup
@@ -44,7 +44,7 @@ curl -o mackup https://raw.github.com/lra/mackup/0.1/mackup.py
 chmod +x mackup
 
 # Copy it to your path
-sudo cp mackup.py /usr/bin/mackup
+sudo mv mackup.py /usr/bin/mackup
 
 # Launch it
 mackup backup

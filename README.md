@@ -1,6 +1,6 @@
 # Mackup
 
-Keep you application settings in sync
+Keep you Mac application settings in sync.
 
 ## Quickstart
 
@@ -27,6 +27,10 @@ Backup your application settings in Dropbox.
 `mackup restore`
 
 Restore your application settings on a newly installed workstation.
+
+`mackup -h`
+
+Get some help, obvious...
 
 ## What does it do ?
 
@@ -79,7 +83,7 @@ You can add your favorite application by forking it and doing a
 
 ## I don't understand, how can I get support for my beloved app ?
 
-Open a [new issue](https://github.com/lra/mackup/issues)
+Open a [new issue](https://github.com/lra/mackup/issues).
 
 ## Why did you do this ?!
 
@@ -92,7 +96,7 @@ Boxen](http://boxen.github.com/), but I feel like it solves a non problem: I
 don't really spend time installing stuff, I spend time configuring it.
 
 For years, I've used a personnal shell script that was copying known config
-files into `svn`, `git` or Dropbox, and linked them into my home. But, like
+files into Subversion, Git or Dropbox, and linked them into my home. But, like
 the [Homebrew](http://mxcl.github.io/homebrew/) guys, I felt a lot of us had the
 same problem, and I could get help from others to support more apps.
 
@@ -100,7 +104,7 @@ So here it is.
 
 ## What platform is supported ?
 
-1. OS X
+- OS X
 
 ## What's up with the weird name ?
 

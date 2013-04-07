@@ -6,7 +6,6 @@
 ###########
 
 
-import abc
 import argparse
 import base64
 import os.path
@@ -20,13 +19,25 @@ import tempfile
 #################
 
 
-VERSION = '0.1'
+SUPPORTED_APPS = {
+    'Bash': ['.bash_aliases',
+             '.bash_logout',
+             '.bashrc',
+             '.profile'],
+
+    'Git': ['.gitconfig'],
+
+    'X11': ['.Xresources'],
+}
 
 
 #############
 # Constants #
 #############
 
+
+# Current version
+VERSION = '0.1'
 
 # Mode used to backup files to Dropbox
 BACKUP_MODE = 'backup'
@@ -40,31 +51,22 @@ RESTORE_MODE = 'restore'
 ###########
 
 
-class PluginBase(object):
-    """Base class that all plugin should inherit from"""
+class ApplicationProfile(object):
+    """Instantiate this class with application specific data"""
 
-    __metaclass__ = abc.ABCMeta
-
-    @abc.abstractproperty
-    def files(self):
+    def __init__(self, mackup, files):
         """
-        List of configuration files handled by the plugin
-
-        Returns:
-            (list): List of filenames
-        """
-        return []
-
-    def __init__(self, mackup):
-        """
-        Git plugin Constructor
+        Create an ApplicationProfile instance
 
         Args:
             mackup (Mackup)
+            files (list)
         """
         assert isinstance(mackup, Mackup)
+        assert isinstance(files, list)
 
         self.mackup = mackup
+        self.files = files
 
     def backup(self):
         """Backup git config files"""
@@ -207,30 +209,6 @@ class Mackup(object):
                 error("Mackup can't do anything without a home =(")
 
 
-#####################
-# Supported plugins #
-#####################
-
-
-class GitPlugin(PluginBase):
-    """Git plugin for Mackup"""
-
-    @property
-    def files(self):
-        return [".gitconfig"]
-
-
-class BashPlugin(PluginBase):
-    """Bash plugin for Mackup"""
-
-    @property
-    def files(self):
-        return ['.bash_aliases',
-                '.bash_logout',
-                '.bashrc',
-                '.profile']
-
-
 ####################
 # Useful functions #
 ####################
@@ -335,21 +313,17 @@ def main():
         # Check the env where the command is being run
         mackup.check_for_usable_backup_env()
 
-        git_plugin = GitPlugin(mackup)
-        git_plugin.backup()
-
-        bash_plugin = BashPlugin(mackup)
-        bash_plugin.backup()
+        for app_name in SUPPORTED_APPS:
+            app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
+            app.backup()
 
     elif args.mode == RESTORE_MODE:
         # Check the env where the command is being run
         mackup.check_for_usable_restore_env()
 
-        git_plugin = GitPlugin(mackup)
-        git_plugin.restore()
-
-        bash_plugin = BashPlugin(mackup)
-        bash_plugin.restore()
+        for app_name in SUPPORTED_APPS:
+            app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
+            app.restore()
 
     else:
         raise ValueError("Unsupported mode: {}".format(args.mode))

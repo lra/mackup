@@ -264,12 +264,19 @@ def parse_cmdline_args():
         (argparse.Namespace)
     """
 
+    # Format some epilog text
+    epilog = "Supported applications:\n"
+    for app in sorted(SUPPORTED_APPS.iterkeys()):
+        epilog = epilog + "  - {}\n".format(app)
+    epilog += "\nMackup requires a fully synced Dropbox folder."
+
     # Setup the global parser
     parser = argparse.ArgumentParser(
-        description=("Mackup {} -"
-                     " Keep you application settings in sync."
+        description=("Mackup {}\n"
+                     "Keep you application settings in sync."
                      .format(VERSION)),
-        epilog="Mackup requires a fully synced Dropbox folder")
+        epilog=epilog,
+        formatter_class=argparse.RawDescriptionHelpFormatter)
 
     # Add the required arg
     parser.add_argument("mode",

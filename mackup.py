@@ -103,20 +103,32 @@ class ApplicationProfile(object):
             mackup_filepath = os.path.join(self.mackup.mackup_folder, filename)
 
             # If the file exists and is not already a link pointing to Mackup
-            if (os.path.isfile(filepath)
+            if ((os.path.isfile(filepath) or os.path.isdir(filepath))
                 and not (os.path.islink(filepath)
-                         and os.path.isfile(mackup_filepath)
-                         and not os.path.islink(mackup_filepath)
+                         and (os.path.isfile(mackup_filepath)
+                              or os.path.isdir(mackup_filepath))
                          and os.path.samefile(filepath, mackup_filepath))):
 
                 print "Backing up {}...".format(filename)
 
                 # Check if we already have a backup
-                if os.path.isfile(mackup_filepath):
+                if os.path.exists(mackup_filepath):
+
+                    # Name it right
+                    if os.path.isfile(mackup_filepath):
+                        file_type = 'file'
+                    elif os.path.isdir(mackup_filepath):
+                        file_type = 'folder'
+                    elif os.path.islink(mackup_filepath):
+                        file_type = 'link'
+                    else:
+                        raise ValueError("Unsupported file: {}"
+                                         .format(mackup_filepath))
+
                     # Ask the user if he really want to replace it
-                    if confirm("A file named {} already exists in the backup."
+                    if confirm("A {} named {} already exists in the backup."
                                "\nOr you sure that your want to replace it ?"
-                               .format(mackup_filepath)):
+                               .format(file_type, mackup_filepath)):
                         # Delete the file in Mackup
                         delete(mackup_filepath)
                         # Copy the file
@@ -155,18 +167,30 @@ class ApplicationProfile(object):
             home_filepath = os.path.join(os.environ['HOME'], filename)
 
             # If the file exists and is not already pointing to the mackup file
-            if (os.path.isfile(mackup_filepath)
-                and not (os.path.isfile(home_filepath)
+            if ((os.path.isfile(mackup_filepath)
+                 or os.path.isdir(mackup_filepath))
+                and not (os.path.islink(home_filepath)
                          and os.path.samefile(mackup_filepath,
                                               home_filepath))):
 
                 print "Restoring {}...".format(filename)
 
                 # Check if there is already a file in the home folder
-                if os.path.isfile(home_filepath):
-                    if confirm("You already have a file named {} in your home."
+                if os.path.exists(home_filepath):
+                    # Name it right
+                    if os.path.isfile(home_filepath):
+                        file_type = 'file'
+                    elif os.path.isdir(home_filepath):
+                        file_type = 'folder'
+                    elif os.path.islink(home_filepath):
+                        file_type = 'link'
+                    else:
+                        raise ValueError("Unsupported file: {}"
+                                         .format(mackup_filepath))
+
+                    if confirm("You already have a {} named {} in your home."
                                "\nDo you want to replace it with your backup ?"
-                               .format(filename)):
+                               .format(file_type, filename)):
                         delete(home_filepath)
                         link(mackup_filepath, home_filepath)
                 else:
@@ -256,12 +280,16 @@ def confirm(question):
 
 def delete(filepath):
     """
-    Delete the given file. Should support undelete later on.
+    Delete the given file, directory or link.
+    Should support undelete later on.
 
     Args:
         filepath (str): Absolute full path to a file. e.g. /path/to/file
     """
-    os.remove(filepath)
+    if os.path.isfile(filepath) or os.path.islink(filepath):
+        os.remove(filepath)
+    elif os.path.isdir(filepath):
+        shutil.rmtree(filepath)
 
 
 def copy(src, dst):
@@ -299,7 +327,7 @@ def copy(src, dst):
 
     # We need to copy a whole folder
     elif os.path.isdir(src):
-        pass
+        shutil.copytree(src, dst)
 
     # What the heck is this ?
     else:

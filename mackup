@@ -39,42 +39,143 @@ RESTORE_MODE = 'restore'
 #####################
 
 
-GIT_FILES = [".gitconfig"]
+class GitPlugin(object):
+    """Git plugin got Mackup"""
 
+    FILES = [".gitconfig"]
 
-def backup_git():
-    """Backup git config files"""
-    # if exists home/git
-    #   if home/git is real file
-    #     if exists mackup/git
-    #       are you sure ?
-    #       if sure
-    #         rm mackup/git
-    #         mv home/git mackup/git
-    #         link mackup/git home/git
-    #     else
-    #       mv home/git mackup/git
-    #       link mackup/git home/git
-    pass
+    def __init__(self, mackup):
+        """
+        Git plugin Constructor
 
+        Args:
+            mackup (Mackup)
+        """
+        assert isinstance(mackup, Mackup)
 
-def restore_git():
-    """Restore git config files"""
-    # if exists mackup/git
-    #   if exists home/git
-    #     are you sure ?
-    #     if sure
-    #       rm home/git
-    #       link mackup/git home/git
-    #   else
-    #     link mackup/git home/git
-    pass
+        self.mackup = mackup
+
+    def backup(self):
+        """Backup git config files"""
+        # if exists home/git
+        #   if home/git is real file
+        #     if exists mackup/git
+        #       are you sure ?
+        #       if sure
+        #         rm mackup/git
+        #         mv home/git mackup/git
+        #         link mackup/git home/git
+        #     else
+        #       mv home/git mackup/git
+        #       link mackup/git home/git
+
+        # For each file used by git
+        for filename in self.FILES:
+            # Get the full path of each file
+            filepath = os.path.join(os.environ['HOME'], filename)
+            mackup_filepath = os.path.join(self.mackup.mackup_folder, filename)
+
+            # If the file exists and is not already a link pointing to Mackup
+            if (os.path.isfile(filepath)
+                and not (os.path.islink(filepath)
+                         and os.path.isfile(mackup_filepath)
+                         and not os.path.islink(mackup_filepath)
+                         and os.path.samefile(filepath, mackup_filepath))):
+
+                print "Backing up {}...".format(filename)
+
+                # Check if we already have a backup
+                if os.path.isfile(mackup_filepath):
+                    # Ask the user if he really want to replace it
+                    if confirm("A file named {} already exists in the backup.\n"
+                               "Or you sure that your want to replace it ?"
+                               .format(mackup_filepath)):
+                        # Delete the file in Mackup
+                        delete(mackup_filepath)
+                        # Move the user's file to the backup
+                        shutil.copy(filepath, mackup_filepath)
+                        # Delete the file in the home
+                        delete(filepath)
+                        # Link the backuped file to its original place
+                        os.symlink(mackup_filepath, filepath)
+                else:
+                    # Move the user's file to the backup
+                    shutil.copy(filepath, mackup_filepath)
+                    # Delete the file in the home
+                    delete(filepath)
+                    # Link the backuped file to its original place
+                    os.symlink(mackup_filepath, filepath)
+
+    def restore(self):
+        """Restore git config files"""
+        # if exists mackup/git
+        #   if exists home/git
+        #     are you sure ?
+        #     if sure
+        #       rm home/git
+        #       link mackup/git home/git
+        #   else
+        #     link mackup/git home/git
+
+        # For each file used by git
+        for filename in self.FILES:
+            # Get the full path of each file
+            mackup_filepath = os.path.join(self.mackup.mackup_folder, filename)
+            home_filepath = os.path.join(os.environ['HOME'], filename)
+
+            # If the file exists and is not already pointing to the mackup file
+            if (os.path.isfile(mackup_filepath)
+                and not (os.path.isfile(home_filepath)
+                         and os.path.samefile(mackup_filepath, home_filepath))):
+
+                print "Restoring {}...".format(filename)
+
+                # Check if there is already a file in the home folder
+                if os.path.isfile(home_filepath):
+                    if confirm("You already have a file named {} in your home."
+                               "\nDo you want to replace it with your backup ?"
+                               .format(filename)):
+                        delete(home_filepath)
+                        os.symlink(mackup_filepath, home_filepath)
+                else:
+                    os.symlink(mackup_filepath, home_filepath)
+
 
 
 ####################
 # Useful functions #
 ####################
 
+
+def confirm(question):
+    """
+    Ask the user if he really want something to happen
+
+    Args:
+        question(str): What can happen
+
+    Returns:
+        (boolean): Confirmed or not
+    """
+    while True:
+        answer = raw_input(question + ' <Yes|No>')
+        if answer == 'Yes':
+            confirmed = True
+            break
+        if answer == 'No':
+            confirmed = False
+            break
+
+    return confirmed
+
+def delete(filepath):
+    """
+    Delete the given file. Should support undelete later on.
+
+    Args:
+        filepath (str): Absolute full path to a file. e.g. /path/to/file
+    """
+    os.remove(filepath)
 
 def error(message):
     """
@@ -96,7 +197,9 @@ def parse_cmdline_args():
 
     # Setup the global parser
     parser = argparse.ArgumentParser(
-        description="Keep you application settings in sync",
+        description=("Mackup {} -"
+                     " Keep you application settings in sync."
+                     .format(VERSION)),
         epilog="Mackup requires a fully synced Dropbox folder")
 
     # Add the required arg
@@ -156,18 +259,31 @@ class Mackup(object):
     def check_for_usable_backup_env(self):
         """Check if the current env can be used to back up files"""
         self._check_for_usable_environment()
+        self.create_mackup_home()
 
     def check_for_usable_restore_env(self):
         """Check if the current env can be used to restore files"""
         self._check_for_usable_environment()
 
         if not os.path.isdir(self.mackup_folder):
-            error("Unable to find the Mackup folder: {}"
+            error("Unable to find the Mackup folder: {}\n"
+                  "You might want to backup some files or get your Dropbox"
+                  " folder synced first."
                   .format(self.mackup_folder))
 
     def clean_temp_folder(self):
         """Delete the temp folder and files created while running"""
         shutil.rmtree(self.temp_folder)
+
+    def create_mackup_home(self):
+        """If the Mackup home folder does not exist, create it"""
+        if not os.path.isdir(self.mackup_folder):
+            if confirm("Mackup needs a folder to store your configuration files"
+                       "\nDo you want to create it now ? <{}>"
+                       .format(self.mackup_folder)):
+                os.mkdir(self.mackup_folder)
+            else:
+                error("Mackup can't do anything without a home =(")
 
 
 ################
@@ -180,16 +296,21 @@ def main():
 
     # Get the command line arg
     args = parse_cmdline_args()
-    print "Going to {}".format(args.mode)
 
     mackup = Mackup()
 
     if args.mode == BACKUP_MODE:
         # Check the env where the command is being run
         mackup.check_for_usable_backup_env()
+        git_plugin = GitPlugin(mackup)
+        git_plugin.backup()
+
     elif args.mode == RESTORE_MODE:
         # Check the env where the command is being run
         mackup.check_for_usable_restore_env()
+        git_plugin = GitPlugin(mackup)
+        git_plugin.restore()
+
     else:
         raise ValueError("Unsupported mode: {}".format(args.mode))
 

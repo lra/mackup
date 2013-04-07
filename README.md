@@ -110,20 +110,30 @@ Open a [new issue](https://github.com/lra/mackup/issues).
 
 ## Why did you do this ?!
 
-Nowadays, I change my workstation every X months. Each time I either loose the
+Yesterday, I had a talk with [Zach Zaro](http://zacharyzaro.com/), complaining
+about the pain it is to reconfigure our Macbook each time we get a new one or
+install from scratch. That's a talk we already had months ago.
+
+I change my workstation every X months. Each time I either loose the
 configuration of all the apps I use, or I just waste a bunch of hours getting
 setup like I was on my old box.
 
-Some people tried to solve the problem on the application layer, like [Github's
-Boxen](http://boxen.github.com/), but I feel like it solves a non problem: I
-don't really spend time installing stuff, I spend time configuring it.
+Boring...
+
+Some people tried to solve the problem on the application layer, like
+[Github's Boxen](http://boxen.github.com/), but I feel like it solves a non
+problem: I don't really spend time installing stuff, mostly downloading: I
+spend time configuring it.
 
 For years, I've used a personnal shell script that was copying known config
-files into Subversion, Git or Dropbox, and linked them into my home. But, like
-the [Homebrew](http://mxcl.github.io/homebrew/) guys, I felt a lot of us had the
-same problem, and I could get help from others to support more apps.
+files into Subversion, Git or Dropbox, and linked them into my home. But I felt
+a lot of us had the same problem: Making a more generic tool could help others
+and I could get help from others to support more apps in the tool.
 
-So here it is.
+So here comes Mackup, the little tool that will sync all your application
+configs to Dropbox.
+
+And it's [GPL](http://www.gnu.org/licenses/gpl.html) of course.
 
 ## What platform is supported ?
 

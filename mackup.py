@@ -28,6 +28,8 @@ SUPPORTED_APPS = {
              '.bashrc',
              '.profile'],
 
+    'Boto': ['.boto'],
+
     'Git': ['.gitconfig'],
 
     'Mercurial': ['.hgrc'],

@@ -119,23 +119,19 @@ class ApplicationProfile(object):
                                .format(mackup_filepath)):
                         # Delete the file in Mackup
                         delete(mackup_filepath)
-                        # Move the user's file to the backup
-                        shutil.copy(filepath, mackup_filepath)
-                        # The config file should be 0600
-                        os.chmod(mackup_filepath, stat.S_IRUSR | stat.S_IWUSR)
+                        # Copy the file
+                        copy(filepath, mackup_filepath)
                         # Delete the file in the home
                         delete(filepath)
                         # Link the backuped file to its original place
-                        os.symlink(mackup_filepath, filepath)
+                        link(mackup_filepath, filepath)
                 else:
-                    # Move the user's file to the backup
-                    shutil.copy(filepath, mackup_filepath)
-                    # The config file should be 0600
-                    os.chmod(mackup_filepath, stat.S_IRUSR | stat.S_IWUSR)
+                    # Copy the file
+                    copy(filepath, mackup_filepath)
                     # Delete the file in the home
                     delete(filepath)
                     # Link the backuped file to its original place
-                    os.symlink(mackup_filepath, filepath)
+                    link(mackup_filepath, filepath)
 
     def restore(self):
         """
@@ -172,15 +168,9 @@ class ApplicationProfile(object):
                                "\nDo you want to replace it with your backup ?"
                                .format(filename)):
                         delete(home_filepath)
-
-                        # Make sure the config file is 0600
-                        # can't trust Dropbox
-                        os.chmod(mackup_filepath, stat.S_IRUSR | stat.S_IWUSR)
-                        os.symlink(mackup_filepath, home_filepath)
+                        link(mackup_filepath, home_filepath)
                 else:
-                    # Make sure the config file is 0600, can't trust Dropbox
-                    os.chmod(mackup_filepath, stat.S_IRUSR | stat.S_IWUSR)
-                    os.symlink(mackup_filepath, home_filepath)
+                    link(mackup_filepath, home_filepath)
 
 
 class Mackup(object):
@@ -272,6 +262,83 @@ def delete(filepath):
         filepath (str): Absolute full path to a file. e.g. /path/to/file
     """
     os.remove(filepath)
+
+
+def copy(src, dst):
+    """
+    Copy a file or a folder (recursively) from src to dst.
+    For simplicity sake, both src and dst must be absolute path and must
+    include the filename of the file or folder.
+    Also do not include any trailing slash.
+
+    e.g. copy('/path/to/src_file', '/path/to/dst_file')
+    or copy('/path/to/src_folder', '/path/to/dst_folder')
+
+    But not: copy('/path/to/src_file', 'path/to/')
+    or copy('/path/to/src_folder/', '/path/to/dst_folder')
+
+    Args:
+        src (str): Source file or folder
+        dst (str): Destination file or folder
+    """
+    assert isinstance(src, str)
+    assert os.path.exists(src)
+    assert isinstance(dst, str)
+
+    # Create the path to the dst file if it does not exists
+    abs_path = os.path.dirname(os.path.abspath(dst))
+    if not os.path.isdir(abs_path):
+        os.makedirs(abs_path)
+
+    # We need to copy a single file
+    if os.path.isfile(src):
+        # Copy the src file to dst
+        shutil.copy(src, dst)
+        # The file should be 0600
+        os.chmod(src, stat.S_IRUSR | stat.S_IWUSR)
+
+    # We need to copy a whole folder
+    elif os.path.isdir(src):
+        pass
+
+    # What the heck is this ?
+    else:
+        raise ValueError("Unsupported file: {}".format(src))
+
+
+def link(target, link):
+    """
+    Create a link to a target file or a folder.
+    For simplicity sake, both target and link must be absolute path and must
+    include the filename of the file or folder.
+    Also do not include any trailing slash.
+
+    e.g. link('/path/to/file', '/path/to/link')
+
+    But not: link('/path/to/file', 'path/to/')
+    or link('/path/to/folder/', '/path/to/link')
+
+    Args:
+        target (str): file or folder the link will point to
+        link (str): Link to create
+    """
+    assert isinstance(target, str)
+    assert os.path.exists(target)
+    assert isinstance(link, str)
+
+    # Create the path to the link if it does not exists
+    abs_path = os.path.dirname(os.path.abspath(link))
+    if not os.path.isdir(abs_path):
+        os.makedirs(abs_path)
+
+    # Make sure the file or folder has the good mode
+    if os.path.isfile(target):
+        os.chmod(target, stat.S_IRUSR | stat.S_IWUSR)
+    elif os.path.isdir(target):
+        os.chmod(target, stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR)
+
+    # Create the link to target
+    os.symlink(target, link)
 
 
 def error(message):

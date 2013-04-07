@@ -73,20 +73,24 @@ class ApplicationProfile(object):
         self.files = files
 
     def backup(self):
-        """Backup git config files"""
-        # if exists home/git
-        #   if home/git is real file
-        #     if exists mackup/git
-        #       are you sure ?
-        #       if sure
-        #         rm mackup/git
-        #         mv home/git mackup/git
-        #         link mackup/git home/git
-        #     else
-        #       mv home/git mackup/git
-        #       link mackup/git home/git
+        """
+        Backup the application config files
 
-        # For each file used by git
+        Algorithm:
+            if exists home/file
+              if home/file is a real file
+                if exists mackup/file
+                  are you sure ?
+                  if sure
+                    rm mackup/file
+                    mv home/file mackup/file
+                    link mackup/file home/file
+                else
+                  mv home/file mackup/file
+                  link mackup/file home/file
+        """
+
+        # For each file used by the application
         for filename in self.files:
             # Get the full path of each file
             filepath = os.path.join(os.environ['HOME'], filename)
@@ -124,17 +128,21 @@ class ApplicationProfile(object):
                     os.symlink(mackup_filepath, filepath)
 
     def restore(self):
-        """Restore git config files"""
-        # if exists mackup/git
-        #   if exists home/git
-        #     are you sure ?
-        #     if sure
-        #       rm home/git
-        #       link mackup/git home/git
-        #   else
-        #     link mackup/git home/git
+        """
+        Restore the application config files
 
-        # For each file used by git
+        Algorithm:
+            if exists mackup/file
+              if exists home/file
+                are you sure ?
+                if sure
+                  rm home/file
+                  link mackup/file home/file
+              else
+                link mackup/file home/file
+        """
+
+        # For each file used by the application
         for filename in self.files:
             # Get the full path of each file
             mackup_filepath = os.path.join(self.mackup.mackup_folder, filename)

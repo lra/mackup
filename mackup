@@ -9,6 +9,7 @@
 import argparse
 import base64
 import os.path
+import shutil
 import sys
 import tempfile
 
@@ -18,14 +19,19 @@ import tempfile
 #################
 
 
-# Location of the Dropbox folder
-DROPBOX_FOLDER = ''
+VERSION = '0.1'
 
-# Location of the Mackup folder
-MACKUP_FOLDER = DROPBOX_FOLDER + "/Mackup"
 
-# Location of the temp folder, used to undelete stuff
-TMP_FOLDER = tempfile.mkdtemp(prefix="mackup_tmp_")
+#############
+# Constants #
+#############
+
+
+# Mode used to backup files to Dropbox
+BACKUP_MODE = 'backup'
+
+# Mode used to restore files from Dropbox
+RESTORE_MODE = 'restore'
 
 
 #####################
@@ -80,18 +86,6 @@ def error(message):
     sys.exit("Error: {}".format(message))
 
 
-def check_for_usable_environment():
-    """Check if the current env is usable and has everything's required"""
-    # Do we have a home folder ?
-    if not os.path.isdir(DROPBOX_FOLDER):
-        msg = "Unable to find the Dropbox folder: {}".format(DROPBOX_FOLDER)
-        error(msg)
-
-    if not os.path.isdir(MACKUP_FOLDER):
-        msg = "Unable to find the Mackup folder: {}".format(MACKUP_FOLDER)
-        error(msg)
-
-
 def parse_cmdline_args():
     """
     Setup the engine that's gonna parse the command line arguments
@@ -103,12 +97,11 @@ def parse_cmdline_args():
     # Setup the global parser
     parser = argparse.ArgumentParser(
         description="Keep you application settings in sync",
-        epilog=("Mackup requires a Dropbox folder to be located in your home"
-                " folder and fully synced"))
+        epilog="Mackup requires a fully synced Dropbox folder")
 
     # Add the required arg
-    parser.add_argument("action",
-                        choices=['backup', 'restore'],
+    parser.add_argument("mode",
+                        choices=[BACKUP_MODE, RESTORE_MODE],
                         help=("Backup your conf files to Dropbox or restore"
                               " your files locally from Dropbox"))
 
@@ -131,6 +124,47 @@ def get_dropbox_folder_location():
     return dropbox_home
 
 
+class Mackup(object):
+    """Main Mackup class"""
+
+    def __init__(self):
+        """Mackup Constructor"""
+        try:
+            self.dropbox_folder = get_dropbox_folder_location()
+        except IOError:
+            error(("Unable to find the Dropbox folder."
+                   " If Dropbox is not installed and running, go for it on"
+                   " <http://www.dropbox.com/>"))
+
+        self.mackup_folder = self.dropbox_folder + '/Mackup'
+        self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
+
+    def _check_for_usable_environment(self):
+        """Check if the current env is usable and has everything's required"""
+
+        # Do we have a home folder ?
+        if not os.path.isdir(self.dropbox_folder):
+            error(("Unable to find the Dropbox folder."
+                   " If Dropbox is not installed and running, go for it on"
+                   " <http://www.dropbox.com/>"))
+
+    def check_for_usable_backup_env(self):
+        """Check if the current env can be used to back up files"""
+        self._check_for_usable_environment()
+
+    def check_for_usable_restore_env(self):
+        """Check if the current env can be used to restore files"""
+        self._check_for_usable_environment()
+
+        if not os.path.isdir(self.mackup_folder):
+            error("Unable to find the Mackup folder: {}"
+                  .format(self.mackup_folder))
+
+    def clean_temp_folder(self):
+        """Delete the temp folder and files created while running"""
+        shutil.rmtree(self.temp_folder)
+
+
 ################
 # Main Program #
 ################
@@ -139,20 +173,23 @@ def get_dropbox_folder_location():
 def main():
     """Main function"""
 
-    # Location of the Dropbox folder
-    DROPBOX_FOLDER = get_dropbox_folder_location()
-
-    # Location of the Mackup folder
-    MACKUP_FOLDER = DROPBOX_FOLDER + "/Mackup"
-
     # Get the command line arg
     args = parse_cmdline_args()
-    print "Going to {}".format(args.action)
+    print "Going to {}".format(args.mode)
 
-    # Check the env where the command is being run
-    check_for_usable_environment()
+    mackup = Mackup()
+
+    if args.mode == BACKUP_MODE:
+        # Check the env where the command is being run
+        mackup.check_for_usable_backup_env()
+    elif args.mode == RESTORE_MODE:
+        # Check the env where the command is being run
+        mackup.check_for_usable_restore_env()
+    else:
+        raise ValueError("Unsupported mode: {}".format(args.mode))
 
     # Delete the tmp folder
+    mackup.clean_temp_folder()
 
 if __name__ == "__main__":
     main()

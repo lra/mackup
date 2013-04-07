@@ -10,6 +10,7 @@ import argparse
 import base64
 import os.path
 import shutil
+import stat
 import sys
 import tempfile
 
@@ -120,6 +121,8 @@ class ApplicationProfile(object):
                         delete(mackup_filepath)
                         # Move the user's file to the backup
                         shutil.copy(filepath, mackup_filepath)
+                        # The config file should be 0600
+                        os.chmod(mackup_filepath, stat.S_IRUSR | stat.S_IWUSR)
                         # Delete the file in the home
                         delete(filepath)
                         # Link the backuped file to its original place
@@ -127,6 +130,8 @@ class ApplicationProfile(object):
                 else:
                     # Move the user's file to the backup
                     shutil.copy(filepath, mackup_filepath)
+                    # The config file should be 0600
+                    os.chmod(mackup_filepath, stat.S_IRUSR | stat.S_IWUSR)
                     # Delete the file in the home
                     delete(filepath)
                     # Link the backuped file to its original place
@@ -167,8 +172,14 @@ class ApplicationProfile(object):
                                "\nDo you want to replace it with your backup ?"
                                .format(filename)):
                         delete(home_filepath)
+
+                        # The config file should be 0600
+                        os.chmod(mackup_filepath, stat.S_IRUSR | stat.S_IWUSR)
+
                         os.symlink(mackup_filepath, home_filepath)
                 else:
+                    # The config file should be 0600
+                    os.chmod(mackup_filepath, stat.S_IRUSR | stat.S_IWUSR)
                     os.symlink(mackup_filepath, home_filepath)
 
 

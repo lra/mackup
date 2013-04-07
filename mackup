@@ -6,6 +6,7 @@
 ###########
 
 
+import abc
 import argparse
 import base64
 import os.path
@@ -34,15 +35,13 @@ BACKUP_MODE = 'backup'
 RESTORE_MODE = 'restore'
 
 
-#####################
-# Supported plugins #
-#####################
+###########
+# Classes #
+###########
 
 
-class GitPlugin(object):
-    """Git plugin got Mackup"""
-
-    FILES = [".gitconfig"]
+class PluginBase(object):
+    """Base class that all plugin should inherit from"""
 
     def __init__(self, mackup):
         """
@@ -142,6 +141,79 @@ class GitPlugin(object):
                     os.symlink(mackup_filepath, home_filepath)
 
 
+class Mackup(object):
+    """Main Mackup class"""
+
+    def __init__(self):
+        """Mackup Constructor"""
+        try:
+            self.dropbox_folder = get_dropbox_folder_location()
+        except IOError:
+            error(("Unable to find the Dropbox folder."
+                   " If Dropbox is not installed and running, go for it on"
+                   " <http://www.dropbox.com/>"))
+
+        self.mackup_folder = self.dropbox_folder + '/Mackup'
+        self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
+
+    def _check_for_usable_environment(self):
+        """Check if the current env is usable and has everything's required"""
+
+        # Do we have a home folder ?
+        if not os.path.isdir(self.dropbox_folder):
+            error(("Unable to find the Dropbox folder."
+                   " If Dropbox is not installed and running, go for it on"
+                   " <http://www.dropbox.com/>"))
+
+    def check_for_usable_backup_env(self):
+        """Check if the current env can be used to back up files"""
+        self._check_for_usable_environment()
+        self.create_mackup_home()
+
+    def check_for_usable_restore_env(self):
+        """Check if the current env can be used to restore files"""
+        self._check_for_usable_environment()
+
+        if not os.path.isdir(self.mackup_folder):
+            error("Unable to find the Mackup folder: {}\n"
+                  "You might want to backup some files or get your Dropbox"
+                  " folder synced first."
+                  .format(self.mackup_folder))
+
+    def clean_temp_folder(self):
+        """Delete the temp folder and files created while running"""
+        shutil.rmtree(self.temp_folder)
+
+    def create_mackup_home(self):
+        """If the Mackup home folder does not exist, create it"""
+        if not os.path.isdir(self.mackup_folder):
+            if confirm("Mackup needs a folder to store your configuration "
+                       " files\nDo you want to create it now ? <{}>"
+                       .format(self.mackup_folder)):
+                os.mkdir(self.mackup_folder)
+            else:
+                error("Mackup can't do anything without a home =(")
+
+
+#####################
+# Supported plugins #
+#####################
+
+
+class GitPlugin(PluginBase):
+    """Git plugin for Mackup"""
+    FILES = [".gitconfig"]
+
+
+class BashPlugin(PluginBase):
+    """Bash plugin for Mackup"""
+    FILES = ['.bash_aliases',
+             '.bash_logout',
+             '.bashrc',
+             '.profile']
+
+
+
 ####################
 # Useful functions #
 ####################
@@ -229,65 +301,6 @@ def get_dropbox_folder_location():
     return dropbox_home
 
 
-###########
-# Classes #
-###########
-
-
-class Mackup(object):
-    """Main Mackup class"""
-
-    def __init__(self):
-        """Mackup Constructor"""
-        try:
-            self.dropbox_folder = get_dropbox_folder_location()
-        except IOError:
-            error(("Unable to find the Dropbox folder."
-                   " If Dropbox is not installed and running, go for it on"
-                   " <http://www.dropbox.com/>"))
-
-        self.mackup_folder = self.dropbox_folder + '/Mackup'
-        self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
-
-    def _check_for_usable_environment(self):
-        """Check if the current env is usable and has everything's required"""
-
-        # Do we have a home folder ?
-        if not os.path.isdir(self.dropbox_folder):
-            error(("Unable to find the Dropbox folder."
-                   " If Dropbox is not installed and running, go for it on"
-                   " <http://www.dropbox.com/>"))
-
-    def check_for_usable_backup_env(self):
-        """Check if the current env can be used to back up files"""
-        self._check_for_usable_environment()
-        self.create_mackup_home()
-
-    def check_for_usable_restore_env(self):
-        """Check if the current env can be used to restore files"""
-        self._check_for_usable_environment()
-
-        if not os.path.isdir(self.mackup_folder):
-            error("Unable to find the Mackup folder: {}\n"
-                  "You might want to backup some files or get your Dropbox"
-                  " folder synced first."
-                  .format(self.mackup_folder))
-
-    def clean_temp_folder(self):
-        """Delete the temp folder and files created while running"""
-        shutil.rmtree(self.temp_folder)
-
-    def create_mackup_home(self):
-        """If the Mackup home folder does not exist, create it"""
-        if not os.path.isdir(self.mackup_folder):
-            if confirm("Mackup needs a folder to store your configuration "
-                       " files\nDo you want to create it now ? <{}>"
-                       .format(self.mackup_folder)):
-                os.mkdir(self.mackup_folder)
-            else:
-                error("Mackup can't do anything without a home =(")
-
-
 ################
 # Main Program #
 ################
@@ -304,14 +317,22 @@ def main():
     if args.mode == BACKUP_MODE:
         # Check the env where the command is being run
         mackup.check_for_usable_backup_env()
+
         git_plugin = GitPlugin(mackup)
         git_plugin.backup()
+
+        bash_plugin = BashPlugin(mackup)
+        bash_plugin.backup()
 
     elif args.mode == RESTORE_MODE:
         # Check the env where the command is being run
         mackup.check_for_usable_restore_env()
+
         git_plugin = GitPlugin(mackup)
         git_plugin.restore()
+
+        bash_plugin = BashPlugin(mackup)
+        bash_plugin.backup()
 
     else:
         raise ValueError("Unsupported mode: {}".format(args.mode))

@@ -24,6 +24,14 @@ Restore your application settings on a newly installed workstation
 mackup restore
 `
 
+## Supported Applications
+
+  - Bash
+  - Git
+  - Mercurial
+  - S3cmd
+  - X11
+
 ## What's up with the name ?
 
 Mackup is just a contraction of Mac and Backup, I suck at naming stuff

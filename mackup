@@ -29,6 +29,8 @@ SUPPORTED_APPS = {
 
     'Mercurial': ['.hgrc'],
 
+    'S3cmd': ['.s3cfg'],
+
     'X11': ['.Xresources'],
 }
 

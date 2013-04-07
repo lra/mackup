@@ -87,8 +87,8 @@ class GitPlugin(object):
                 # Check if we already have a backup
                 if os.path.isfile(mackup_filepath):
                     # Ask the user if he really want to replace it
-                    if confirm("A file named {} already exists in the backup.\n"
-                               "Or you sure that your want to replace it ?"
+                    if confirm("A file named {} already exists in the backup."
+                               "\nOr you sure that your want to replace it ?"
                                .format(mackup_filepath)):
                         # Delete the file in Mackup
                         delete(mackup_filepath)
@@ -126,7 +126,8 @@ class GitPlugin(object):
             # If the file exists and is not already pointing to the mackup file
             if (os.path.isfile(mackup_filepath)
                 and not (os.path.isfile(home_filepath)
-                         and os.path.samefile(mackup_filepath, home_filepath))):
+                         and os.path.samefile(mackup_filepath,
+                                              home_filepath))):
 
                 print "Restoring {}...".format(filename)
 
@@ -139,7 +140,6 @@ class GitPlugin(object):
                         os.symlink(mackup_filepath, home_filepath)
                 else:
                     os.symlink(mackup_filepath, home_filepath)
-
 
 
 ####################
@@ -168,6 +168,7 @@ def confirm(question):
 
     return confirmed
 
+
 def delete(filepath):
     """
     Delete the given file. Should support undelete later on.
@@ -176,6 +177,7 @@ def delete(filepath):
         filepath (str): Absolute full path to a file. e.g. /path/to/file
     """
     os.remove(filepath)
+
 
 def error(message):
     """
@@ -278,8 +280,8 @@ class Mackup(object):
     def create_mackup_home(self):
         """If the Mackup home folder does not exist, create it"""
         if not os.path.isdir(self.mackup_folder):
-            if confirm("Mackup needs a folder to store your configuration files"
-                       "\nDo you want to create it now ? <{}>"
+            if confirm("Mackup needs a folder to store your configuration "
+                       " files\nDo you want to create it now ? <{}>"
                        .format(self.mackup_folder)):
                 os.mkdir(self.mackup_folder)
             else:

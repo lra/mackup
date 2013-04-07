@@ -33,11 +33,28 @@ SUPPORTED_APPS = {
 
     'Git': ['.gitconfig'],
 
+    'GnuPG': ['.gnupg'],
+
+    'MacOSX': ['.MacOSX'],
+
     'Mercurial': ['.hgrc'],
 
     'S3cmd': ['.s3cfg'],
 
-    'X11': ['.Xresources'],
+    'Sequel Pro': ['Library/Application Support/Sequel Pro/Data'],
+
+    'SSH': ['.ssh'],
+
+    'Sublime Text 2': [
+        'Library/Application Support/Sublime Text 2/Installed Packages',
+        'Library/Application Support/Sublime Text 2/Packages',
+        'Library/Application Support/Sublime Text 2/Pristine Packages'],
+
+    'Vim': ['.vim',
+            '.vimrc'],
+
+    'X11': ['.Xresources',
+            '.fonts'],
 }
 
 

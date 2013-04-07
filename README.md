@@ -34,8 +34,9 @@ Restore your application settings on a newly installed workstation.
 - Sync your application settings among all your workstations
 - Restore your configuration on any fresh install in one command line
 
-By only keeping pure configuration files, it keeps the crap out of your freshly
-new installed workstation (cache, temporary and locally specific files).
+By only tracking pure configuration files, it keeps the crap out of your freshly
+new installed workstation (No cache, temporary and locally specific files are
+transfered).
 
 It also helps you spend more time doing real cool stuff, and less time setting
 you environment
@@ -46,6 +47,7 @@ Let's take `git` as an example. Your settings for `git` are saved in your home
 folder, in the `.gitconfig` file.
 
 When you launch `mackup backup`, here's what it's really doing:
+
 1. cp ~/.gitconfig ~/Dropbox/Mackup/.gitconfig
 1. rm ~/.gitconfig
 1. ln -s ~/Dropbox/Mackup/.gitconfig
@@ -53,6 +55,7 @@ When you launch `mackup backup`, here's what it's really doing:
 Now your `git` config is always backup and up to date on all your Macs.
 
 When you launch `mackup restore`, here's what it's really doing:
+
 1. ln -s ~/Dropbox/Mackup/.gitconfig
 
 That's it, you got your `git` config setup on your new Mac.

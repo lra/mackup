@@ -116,6 +116,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Emacs](http://www.gnu.org/software/emacs/)
   - [Git](http://git-scm.com/)
   - [GnuPG](http://www.gnupg.org/)
+  - [LimeChat](http://limechat.net/mac/)
   - [MacOSX](http://www.apple.com/osx/)
   - [Mercurial](http://mercurial.selenic.com/)
   - [OpenSSH](http://www.openssh.org/)

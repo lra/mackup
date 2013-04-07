@@ -55,6 +55,8 @@ SUPPORTED_APPS = {
 
     'GnuPG': ['.gnupg'],
 
+    'LimeChat': ['Library/Preferences/net.limechat.LimeChat-AppStore.plist'],
+
     'MacOSX': ['.MacOSX'],
 
     'Mercurial': ['.hgrc'],

@@ -34,6 +34,29 @@ chmod +x mackup
 
 Done !
 
+## Install
+
+```bash
+# Download Mackup
+curl -o mackup https://raw.github.com/lra/mackup/0.1/mackup.py
+
+# Make it executable
+chmod +x mackup
+
+# Copy it to your path
+sudo cp mackup.py /usr/bin/mackup
+
+# Launch it
+mackup backup
+```
+
+## Uninstall
+
+```bash
+# Just delete it
+sudo rm /usr/bin/mackup
+```
+
 ## Usage
 
 `mackup backup`

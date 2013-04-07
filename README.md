@@ -1,6 +1,6 @@
 # Mackup
 
-Keep you Mac application settings in sync.
+Keep your Mac application settings in sync.
 
 ## Quickstart
 

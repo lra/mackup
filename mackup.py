@@ -173,12 +173,12 @@ class ApplicationProfile(object):
                                .format(filename)):
                         delete(home_filepath)
 
-                        # The config file should be 0600
+                        # Make sure the config file is 0600
+                        # can't trust Dropbox
                         os.chmod(mackup_filepath, stat.S_IRUSR | stat.S_IWUSR)
-
                         os.symlink(mackup_filepath, home_filepath)
                 else:
-                    # The config file should be 0600
+                    # Make sure the config file is 0600, can't trust Dropbox
                     os.chmod(mackup_filepath, stat.S_IRUSR | stat.S_IWUSR)
                     os.symlink(mackup_filepath, home_filepath)
 

@@ -349,7 +349,7 @@ def main():
         git_plugin.restore()
 
         bash_plugin = BashPlugin(mackup)
-        bash_plugin.backup()
+        bash_plugin.restore()
 
     else:
         raise ValueError("Unsupported mode: {}".format(args.mode))

@@ -116,7 +116,8 @@ install from scratch. That's a talk we already had months ago.
 
 I change my workstation every X months. Each time I either loose the
 configuration of all the apps I use, or I just waste a bunch of hours getting
-setup like I was on my old box.
+setup like I was on my old box. I also spent a lot of time reconfiguring the
+same stuff again on all my workstations (home, work)
 
 Boring...
 

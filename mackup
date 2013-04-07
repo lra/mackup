@@ -124,6 +124,11 @@ def get_dropbox_folder_location():
     return dropbox_home
 
 
+###########
+# Classes #
+###########
+
+
 class Mackup(object):
     """Main Mackup class"""
 

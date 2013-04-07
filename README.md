@@ -39,24 +39,28 @@ new installed workstation (No cache, temporary and locally specific files are
 transfered).
 
 It also helps you spend more time doing real cool stuff, and less time setting
-you environment
+you environment.
 
 ## Bullsh*t, what does it really do to my files ?!
 
 Let's take `git` as an example. Your settings for `git` are saved in your home
 folder, in the `.gitconfig` file.
 
+### Backup
+
 When you launch `mackup backup`, here's what it's really doing:
 
-1. cp ~/.gitconfig ~/Dropbox/Mackup/.gitconfig
-1. rm ~/.gitconfig
-1. ln -s ~/Dropbox/Mackup/.gitconfig
+1. `cp ~/.gitconfig ~/Dropbox/Mackup/.gitconfig`
+1. `rm ~/.gitconfig`
+1. `ln -s ~/Dropbox/Mackup/.gitconfig ~/.gitconfig`
 
 Now your `git` config is always backup and up to date on all your Macs.
 
+### Restore
+
 When you launch `mackup restore`, here's what it's really doing:
 
-1. ln -s ~/Dropbox/Mackup/.gitconfig
+1. `ln -s ~/Dropbox/Mackup/.gitconfig ~/.gitconfig`
 
 That's it, you got your `git` config setup on your new Mac.
 
@@ -73,6 +77,10 @@ That's it, you got your `git` config setup on your new Mac.
 You can add your favorite application by forking it and doing a
 [Pull Request](https://help.github.com/articles/using-pull-requests)
 
+## I don't understand, how can I get support for my beloved app ?
+
+Open a [new issue](https://github.com/lra/mackup/issues)
+
 ## Why did you do this ?!
 
 Nowadays, I change my workstation every X months. Each time I either loose the
@@ -81,14 +89,18 @@ setup like I was on my old box.
 
 Some people tried to solve the problem on the application layer, like [Github's
 Boxen](http://boxen.github.com/), but I feel like it solves a non problem: I
-don't really spend time installing stuff, I spent time configuring it.
+don't really spend time installing stuff, I spend time configuring it.
 
 For years, I've used a personnal shell script that was copying known config
 files into `svn`, `git` or Dropbox, and linked them into my home. But, like
-[Homebrew](http://mxcl.github.io/homebrew/), I felt a lot of us had the same
-problem, and I could help from others to support more apps.
+the [Homebrew](http://mxcl.github.io/homebrew/) guys, I felt a lot of us had the
+same problem, and I could get help from others to support more apps.
 
 So here it is.
+
+## What platform is supported ?
+
+1. OS X
 
 ## What's up with the weird name ?
 

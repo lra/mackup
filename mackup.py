@@ -1,5 +1,22 @@
 #!/usr/bin/env python
-"""Keep you Mac application settings in sync"""
+"""
+Keep you Mac application settings in sync
+
+Copyright (C) 2013 Laurent Raufaste <http://glop.org/>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+"""
 
 ###########
 # Imports #
@@ -444,7 +461,8 @@ def parse_cmdline_args():
     # Setup the global parser
     parser = argparse.ArgumentParser(
         description=("Mackup {}\n"
-                     "Keep you application settings in sync."
+                     "Keep you application settings in sync.\n"
+                     "Copyright (C) 2013 Laurent Raufaste <http://glop.org/>\n"
                      .format(VERSION)),
         epilog=epilog,
         formatter_class=argparse.RawDescriptionHelpFormatter)

@@ -18,6 +18,9 @@ import tempfile
 # Configuration #
 #################
 
+# Applications supported
+# Format:
+# Application Name: List of files (absolute path from the user's home)
 
 SUPPORTED_APPS = {
     'Bash': ['.bash_aliases',

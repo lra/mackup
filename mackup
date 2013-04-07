@@ -43,6 +43,18 @@ RESTORE_MODE = 'restore'
 class PluginBase(object):
     """Base class that all plugin should inherit from"""
 
+    __metaclass__ = abc.ABCMeta
+
+    @abc.abstractproperty
+    def files(self):
+        """
+        List of configuration files handled by the plugin
+
+        Returns:
+            (list): List of filenames
+        """
+        return []
+
     def __init__(self, mackup):
         """
         Git plugin Constructor
@@ -69,7 +81,7 @@ class PluginBase(object):
         #       link mackup/git home/git
 
         # For each file used by git
-        for filename in self.FILES:
+        for filename in self.files:
             # Get the full path of each file
             filepath = os.path.join(os.environ['HOME'], filename)
             mackup_filepath = os.path.join(self.mackup.mackup_folder, filename)
@@ -117,7 +129,7 @@ class PluginBase(object):
         #     link mackup/git home/git
 
         # For each file used by git
-        for filename in self.FILES:
+        for filename in self.files:
             # Get the full path of each file
             mackup_filepath = os.path.join(self.mackup.mackup_folder, filename)
             home_filepath = os.path.join(os.environ['HOME'], filename)
@@ -202,16 +214,21 @@ class Mackup(object):
 
 class GitPlugin(PluginBase):
     """Git plugin for Mackup"""
-    FILES = [".gitconfig"]
+
+    @property
+    def files(self):
+        return [".gitconfig"]
 
 
 class BashPlugin(PluginBase):
     """Bash plugin for Mackup"""
-    FILES = ['.bash_aliases',
-             '.bash_logout',
-             '.bashrc',
-             '.profile']
 
+    @property
+    def files(self):
+        return ['.bash_aliases',
+                '.bash_logout',
+                '.bashrc',
+                '.profile']
 
 
 ####################

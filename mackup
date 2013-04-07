@@ -27,6 +27,8 @@ SUPPORTED_APPS = {
 
     'Git': ['.gitconfig'],
 
+    'Mercurial': ['.hgrc'],
+
     'X11': ['.Xresources'],
 }
 

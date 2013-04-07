@@ -77,6 +77,12 @@ SUPPORTED_APPS = {
             '.fonts'],
 
     'XEmacs': ['.xemacs'],
+
+    'Zsh': ['.zshenv',
+            '.zprofile',
+            '.zshrc',
+            '.zlogin',
+            '.zlogout'],
 }
 
 

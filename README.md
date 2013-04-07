@@ -125,6 +125,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Vim](http://www.vim.org/)
   - [X11](http://www.x.org/)
   - [XEmacs](http://www.xemacs.org/)
+  - [Zsh](http://zsh.sourceforge.net/)
 
 You can add your favorite application by forking it and doing a
 [Pull Request](https://help.github.com/articles/using-pull-requests).

@@ -120,6 +120,8 @@ That's it, you got your `git` config setup on your new Mac.
   - [MacOSX](http://www.apple.com/osx/)
   - [Mercurial](http://mercurial.selenic.com/)
   - [OpenSSH](http://www.openssh.org/)
+  - [Rails](http://rubyonrails.org)
+  - [Ruby](http://ruby-lang.org)
   - [S3cmd](http://s3tools.org/s3cmd)
   - [Sequel Pro](http://www.sequelpro.com/)
   - [Sublime Text 2](http://www.sublimetext.com/)

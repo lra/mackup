@@ -61,6 +61,10 @@ SUPPORTED_APPS = {
 
     'Mercurial': ['.hgrc'],
 
+    'Rails': ['.railsrc'],
+
+    'Ruby': ['.gemrc'],
+
     'S3cmd': ['.s3cfg'],
 
     'Sequel Pro': ['Library/Application Support/Sequel Pro/Data'],

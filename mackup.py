@@ -63,6 +63,8 @@ SUPPORTED_APPS = {
 
     'Mercurial': ['.hgrc'],
 
+    'Oh My Zsh': ['.oh-my-zsh'],
+
     'S3cmd': ['.s3cfg'],
 
     'Sequel Pro': ['Library/Application Support/Sequel Pro/Data'],

@@ -45,6 +45,7 @@ SUPPORTED_APPS = {
              '.bash_logout',
              '.bashrc',
              '.profile',
+             '.bash_profile',
              '.inputrc'],
 
     'Boto': ['.boto'],
@@ -62,6 +63,8 @@ SUPPORTED_APPS = {
 
     'Mercurial': ['.hgrc'],
 
+    'Oh My Zsh': ['.oh-my-zsh'],
+
     'S3cmd': ['.s3cfg'],
 
     'Sequel Pro': ['Library/Application Support/Sequel Pro/Data'],
@@ -72,6 +75,8 @@ SUPPORTED_APPS = {
         'Library/Application Support/Sublime Text 2/Installed Packages',
         'Library/Application Support/Sublime Text 2/Packages',
         'Library/Application Support/Sublime Text 2/Pristine Packages'],
+
+    'Subversion': ['.subversion'],
 
     'Vim': ['.vim',
             '.vimrc'],

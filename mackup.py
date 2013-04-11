@@ -44,7 +44,8 @@ SUPPORTED_APPS = {
     'Bash': ['.bash_aliases',
              '.bash_logout',
              '.bashrc',
-             '.profile'],
+             '.profile',
+             '.inputrc'],
 
     'Boto': ['.boto'],
 

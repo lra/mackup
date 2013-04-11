@@ -51,7 +51,7 @@ SUPPORTED_APPS = {
     'Emacs': ['.emacs',
               '.emacs.d'],
 
-    'Git': ['.gitconfig'],
+    'Git': ['.gitconfig', '.gitignore_global'],
 
     'GnuPG': ['.gnupg'],
 

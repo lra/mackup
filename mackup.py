@@ -61,6 +61,8 @@ SUPPORTED_APPS = {
 
     'Mercurial': ['.hgrc'],
 
+    'Pow': ['.powconfig'],
+
     'Rails': ['.railsrc'],
 
     'Ruby': ['.gemrc'],

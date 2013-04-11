@@ -45,6 +45,7 @@ SUPPORTED_APPS = {
              '.bash_logout',
              '.bashrc',
              '.profile',
+             '.bash_profile',
              '.inputrc'],
 
     'Boto': ['.boto'],

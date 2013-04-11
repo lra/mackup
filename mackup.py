@@ -76,6 +76,8 @@ SUPPORTED_APPS = {
         'Library/Application Support/Sublime Text 2/Packages',
         'Library/Application Support/Sublime Text 2/Pristine Packages'],
 
+    'Subversion': ['.subversion'],
+
     'Vim': ['.vim',
             '.vimrc'],
 

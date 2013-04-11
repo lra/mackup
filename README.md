@@ -44,7 +44,7 @@ curl -o mackup https://raw.github.com/lra/mackup/0.1/mackup.py
 chmod +x mackup
 
 # Copy it to your path
-sudo mv mackup.py /usr/bin/mackup
+sudo mv mackup /usr/bin/mackup
 
 # Launch it
 mackup backup

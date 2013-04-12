@@ -7,6 +7,9 @@
 - Added support for LimeChat
 - Added support for Subversion (thx adamme)
 - Added support for Oh My Zsh (thx adamme)
+- Added support for Ruby and Rails (thx @atipugin)
+- Added support for Pow (thx @atipugin)
+- Improved Git support (thx @atipugin)
 - Improved Bash support (thx adamme)
 - Doc updates
 

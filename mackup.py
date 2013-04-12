@@ -77,6 +77,9 @@ SUPPORTED_APPS = {
 
     'Ruby Version': ['.ruby-version'],
 
+    'Pentadactyl': ['.pentadactyl',
+                    '.pentadactylrc'],
+
     'S3cmd': ['.s3cfg'],
 
     'Sequel Pro': ['Library/Application Support/Sequel Pro/Data'],
@@ -92,6 +95,9 @@ SUPPORTED_APPS = {
 
     'Vim': ['.vim',
             '.vimrc'],
+
+    'Vimperator': ['.vimperator',
+                   '.vimperatorrc'],
 
     'X11': ['.Xresources',
             '.fonts'],

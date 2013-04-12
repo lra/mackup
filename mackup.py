@@ -53,7 +53,7 @@ SUPPORTED_APPS = {
     'Emacs': ['.emacs',
               '.emacs.d'],
 
-    'Git': ['.gitconfig'],
+    'Git': ['.gitconfig', '.gitignore_global'],
 
     'GnuPG': ['.gnupg'],
 
@@ -64,6 +64,12 @@ SUPPORTED_APPS = {
     'Mercurial': ['.hgrc'],
 
     'Oh My Zsh': ['.oh-my-zsh'],
+
+    'Pow': ['.powconfig'],
+
+    'Rails': ['.railsrc'],
+
+    'Ruby': ['.gemrc'],
 
     'S3cmd': ['.s3cfg'],
 

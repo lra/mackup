@@ -124,6 +124,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Pow](http://pow.cx/)
   - [Rails](http://rubyonrails.org/)
   - [Ruby](http://ruby-lang.org/)
+  - [Ruby Version](https://gist.github.com/fnichol/1912050)
   - [S3cmd](http://s3tools.org/s3cmd)
   - [Sequel Pro](http://www.sequelpro.com/)
   - [Sublime Text 2](http://www.sublimetext.com/)

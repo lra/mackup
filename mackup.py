@@ -75,6 +75,8 @@ SUPPORTED_APPS = {
     'Ruby': ['.gemrc',
              '.irbrc'],
 
+    'Ruby Version': ['.ruby-version'],
+
     'S3cmd': ['.s3cfg'],
 
     'Sequel Pro': ['Library/Application Support/Sequel Pro/Data'],

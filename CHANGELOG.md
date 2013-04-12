@@ -9,6 +9,7 @@
 - Added support for Oh My Zsh (thx adamme)
 - Added support for Ruby and Rails (thx @atipugin)
 - Added support for Pow (thx @atipugin)
+- Added support for Ruby Version (thx @adamstac)
 - Improved Git support (thx @atipugin)
 - Improved Bash support (thx adamme)
 - Doc updates

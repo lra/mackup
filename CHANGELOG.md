@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.2
+
 - Added support for Emacs and XEmacs
 - Added support for Zsh
 - Added support for LimeChat

@@ -69,6 +69,9 @@ SUPPORTED_APPS = {
 
     'MacOSX': ['.MacOSX'],
 
+    'MacVim': ['Library/Preferences/org.vim.MacVim.LSSharedFileList.plist',
+               'Library/Preferences/org.vim.MacVim.plist'],
+
     'Mercurial': ['.hgrc'],
 
     'Oh My Zsh': ['.oh-my-zsh'],
@@ -100,7 +103,8 @@ SUPPORTED_APPS = {
 
     'Subversion': ['.subversion'],
 
-    'Vim': ['.vim',
+    'Vim': ['.gvimrc',
+            '.vim',
             '.vimrc'],
 
     'Vimperator': ['.vimperator',

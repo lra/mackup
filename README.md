@@ -128,6 +128,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [GnuPG](http://www.gnupg.org/)
   - [LimeChat](http://limechat.net/mac/)
   - [MacOSX](http://www.apple.com/osx/)
+  - [MacVim](https://code.google.com/p/macvim/)
   - [Mercurial](http://mercurial.selenic.com/)
   - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
   - [OpenSSH](http://www.openssh.org/)

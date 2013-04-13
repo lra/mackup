@@ -621,7 +621,9 @@ def main():
                 app.uninstall()
 
             # Delete the Mackup folder in Dropbox
-            delete(mackup.mackup_folder)
+            # Don't delete this as there might be other Macs that aren't
+            # uninstalled yet
+            # delete(mackup.mackup_folder)
 
             print ("\n"
                    "All your files have been put back into place. You can now"

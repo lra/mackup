@@ -123,7 +123,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Boto](https://github.com/boto/boto)
   - [Byobu](http://byobu.co/)
   - [Emacs](http://www.gnu.org/software/emacs/)
-  - [Fish](https://github.com/fish-shell/fish-shell#readme)
+  - [Fish](http://ridiculousfish.com/shell/)
   - [Git](http://git-scm.com/)
   - [GnuPG](http://www.gnupg.org/)
   - [LimeChat](http://limechat.net/mac/)

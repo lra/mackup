@@ -121,6 +121,7 @@ That's it, you got your `git` config setup on your new Mac.
 
   - [Bash](http://www.gnu.org/software/bash/)
   - [Boto](https://github.com/boto/boto)
+  - [Byobu](http://byobu.co/)
   - [Emacs](http://www.gnu.org/software/emacs/)
   - [Git](http://git-scm.com/)
   - [GnuPG](http://www.gnupg.org/)

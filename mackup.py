@@ -50,6 +50,10 @@ SUPPORTED_APPS = {
 
     'Boto': ['.boto'],
 
+    'Byobu': ['.byoburc',
+              '.byoburc.tmux',
+              '.byoburc.screen'],
+
     'Emacs': ['.emacs',
               '.emacs.d'],
 

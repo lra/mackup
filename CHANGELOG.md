@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added an uninstall mode to revert a system to its pre-Mackup state
+
 ## Mackup 0.2
 
 - Added support for Emacs and XEmacs

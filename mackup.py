@@ -126,6 +126,9 @@ BACKUP_MODE = 'backup'
 # Mode used to restore files from Dropbox
 RESTORE_MODE = 'restore'
 
+# Mode used to remove Mackup and reset and config file
+UNINSTALL_MODE = 'uninstall'
+
 
 ###########
 # Classes #
@@ -266,6 +269,40 @@ class ApplicationProfile(object):
                         link(mackup_filepath, home_filepath)
                 else:
                     link(mackup_filepath, home_filepath)
+
+
+    def uninstall(self):
+        """
+        Uninstall Mackup.
+        Restore any file where it was before the 1st Mackup backup.
+
+        Algorithm:
+            for each file in config
+                if mackup/file exists
+                    if home/file exists
+                        delete home/file
+                    copy mackup/file home/file
+            delete the mackup folder
+            print how to delete mackup
+        """
+        # For each file used by the application
+        for filename in self.files:
+            # Get the full path of each file
+            mackup_filepath = os.path.join(self.mackup.mackup_folder, filename)
+            home_filepath = os.path.join(os.environ['HOME'], filename)
+
+            # If the mackup file exists
+            if (os.path.isfile(mackup_filepath)
+                or os.path.isdir(mackup_filepath)):
+
+                # Check if there is a corresponding file in the home folder
+                if os.path.exists(home_filepath):
+                    # If there is, delete it as we are gonna copy the Dropbox
+                    # one there
+                    delete(home_filepath)
+
+                    # Copy the Dropbox file to the home folder
+                    copy(mackup_filepath, home_filepath)
 
 
 class Mackup(object):
@@ -506,9 +543,14 @@ def parse_cmdline_args():
 
     # Add the required arg
     parser.add_argument("mode",
-                        choices=[BACKUP_MODE, RESTORE_MODE],
-                        help=("Backup your conf files to Dropbox or restore"
-                              " your files locally from Dropbox"))
+                        choices=[BACKUP_MODE, RESTORE_MODE, UNINSTALL_MODE],
+                        help=("Backup will sync your conf files to Dropbox,"
+                              " use this the 1st time you use Mackup.\n"
+                              "Restore will link the conf files already in"
+                              " Dropbox on your system, use it on any new"
+                              " system you use.\n"
+                              "Uninstall will reset everything as it was"
+                              " before using Mackup."))
 
     # Parse the command line and return the parsed options
     return parser.parse_args()
@@ -557,6 +599,34 @@ def main():
         for app_name in SUPPORTED_APPS:
             app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
             app.restore()
+
+    elif args.mode == UNINSTALL_MODE:
+        # Check the env where the command is being run
+        mackup.check_for_usable_restore_env()
+
+        if confirm("You are going to uninstall Mackup.\n"
+                   "Every configuration file, setting and dotfile managed"
+                   " by Mackup will be unlinked and moved back to their"
+                   " original place, in your home folder.\n"
+                   "Are you sure ?"):
+            for app_name in SUPPORTED_APPS:
+                app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
+                app.uninstall()
+
+            # Delete the Mackup folder in Dropbox
+            delete(mackup.mackup_folder)
+
+            print ("\n"
+                   "All your files have been put back into place. You can now"
+                   " safely uninstall Mackup.\n"
+                   "If you installed it by hand, you should only have to"
+                   " launch this command:\n"
+                   "\n"
+                   "\tsudo rm {}\n"
+                   "\n"
+                   "Thanks for using Mackup !"
+                   .format(os.path.abspath(__file__)))
+
 
     else:
         raise ValueError("Unsupported mode: {}".format(args.mode))

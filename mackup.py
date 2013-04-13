@@ -58,6 +58,8 @@ SUPPORTED_APPS = {
     'Emacs': ['.emacs',
               '.emacs.d'],
 
+    'Fish': ['.config/fish'],
+
     'Git': ['.gitconfig',
             '.gitignore_global'],
 

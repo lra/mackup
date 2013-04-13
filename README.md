@@ -70,6 +70,11 @@ Backup your application settings in Dropbox.
 
 Restore your application settings on a newly installed workstation.
 
+`mackup uninstall`
+
+Revert any synced config file to its original state, and delete the Mackup
+folder in Dropbox. This will revert your system at pre-Mackup state.
+
 `mackup -h`
 
 Get some help, obvious...

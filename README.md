@@ -52,10 +52,13 @@ mackup backup
 
 ## Uninstall
 
+You can revert all your files to their original state.
 ```bash
-# Just delete it
-sudo rm /usr/bin/mackup
+# Just run this
+mackup uninstall
 ```
+This will move back any file from Dropbox to its original place in your home
+folder and destroy the Mackup folder in Dropbox.
 
 ## Usage
 

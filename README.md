@@ -20,6 +20,11 @@ chmod +x mackup
 
 You're all set, and constantly backuped from now on.
 
+If you trust http://preview.tinyurl.com/mackuppy you can download Mackup with the easier to rememeber:
+```bash
+curl -o mackup -L http://tinyurl.com/mackuppy
+```
+
 Next, on any new Mac, install Dropbox and do:
 ```bash
 # Download Mackup
@@ -48,6 +53,11 @@ sudo mv mackup /usr/bin/mackup
 
 # Launch it
 mackup backup
+```
+
+If you trust http://preview.tinyurl.com/mackuppy you can download Mackup with the easier to rememeber:
+```bash
+curl -o mackup -L http://tinyurl.com/mackuppy
 ```
 
 ## Uninstall

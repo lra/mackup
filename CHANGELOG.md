@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.3
+
 - Added an uninstall mode to revert a system to its pre-Mackup state
 - Added support for Byobu (thx @drye)
 - Added support for Fish (thx @saulshanabrook)

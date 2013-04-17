@@ -41,6 +41,9 @@ import tempfile
 # Application Name: List of files (absolute path from the user's home)
 
 SUPPORTED_APPS = {
+    'Adium': ['Library/Application Support/Adium 2.0',
+              'Library/Preferences/com.adiumX.adiumX.plist']
+
     'Bash': ['.bash_aliases',
              '.bash_logout',
              '.bashrc',

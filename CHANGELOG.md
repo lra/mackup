@@ -2,6 +2,10 @@
 
 ## WIP
 
+## Mackup 0.4
+
+- Added support for Sublime Text 3
+
 ## Mackup 0.3
 
 - Added an uninstall mode to revert a system to its pre-Mackup state

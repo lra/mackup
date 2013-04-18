@@ -101,6 +101,10 @@ SUPPORTED_APPS = {
         'Library/Application Support/Sublime Text 2/Packages',
         'Library/Application Support/Sublime Text 2/Pristine Packages'],
 
+    'Sublime Text 3': [
+        'Library/Application Support/Sublime Text 3/Installed Packages',
+        'Library/Application Support/Sublime Text 3/Packages'],
+
     'Subversion': ['.subversion'],
 
     'Vim': ['.gvimrc',
@@ -129,7 +133,7 @@ SUPPORTED_APPS = {
 
 
 # Current version
-VERSION = '0.3'
+VERSION = '0.4'
 
 # Mode used to backup files to Dropbox
 BACKUP_MODE = 'backup'

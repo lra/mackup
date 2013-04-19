@@ -60,10 +60,18 @@ SUPPORTED_APPS = {
 
     'Fish': ['.config/fish'],
 
+    'GeekTool': ['Library/Preferences/org.tynsoe.geeklet.file.plist',
+                 'Library/Preferences/org.tynsoe.geeklet.image.plist',
+                 'Library/Preferences/org.tynsoe.geeklet.shell.plist',
+                 'Library/Preferences/org.tynsoe.geektool3.plist'],
+
     'Git': ['.gitconfig',
             '.gitignore_global'],
 
     'GnuPG': ['.gnupg'],
+
+    'KeyRemap4MacBook': ['Library/Application Support/' +
+                                        'KeyRemap4MacBook/private.xml'],
 
     'LimeChat': ['Library/Preferences/net.limechat.LimeChat-AppStore.plist'],
 
@@ -80,6 +88,8 @@ SUPPORTED_APPS = {
             '.powenv',
             '.powrc'],
 
+    'Quicksilver': ['Library/Preferences/com.blacktree.Quicksilver.plist'],
+
     'Rails': ['.railsrc'],
 
     'Ruby': ['.gemrc',
@@ -94,6 +104,8 @@ SUPPORTED_APPS = {
 
     'Sequel Pro': ['Library/Application Support/Sequel Pro/Data'],
 
+    'Slate': ['.slate'],
+
     'SSH': ['.ssh'],
 
     'Sublime Text 2': [
@@ -102,6 +114,8 @@ SUPPORTED_APPS = {
         'Library/Application Support/Sublime Text 2/Pristine Packages'],
 
     'Subversion': ['.subversion'],
+
+    'tmux': ['.tmux.conf'],
 
     'Vim': ['.gvimrc',
             '.vim',

@@ -41,6 +41,9 @@ import tempfile
 # Application Name: List of files (absolute path from the user's home)
 
 SUPPORTED_APPS = {
+    'Adium': ['Library/Application Support/Adium 2.0',
+              'Library/Preferences/com.adiumX.adiumX.plist'],
+
     'Bash': ['.bash_aliases',
              '.bash_logout',
              '.bashrc',
@@ -61,7 +64,8 @@ SUPPORTED_APPS = {
     'Fish': ['.config/fish'],
 
     'Git': ['.gitconfig',
-            '.gitignore_global'],
+            '.gitignore_global',
+            'git-info.sh'],
 
     'GnuPG': ['.gnupg'],
 
@@ -72,7 +76,8 @@ SUPPORTED_APPS = {
     'MacVim': ['Library/Preferences/org.vim.MacVim.LSSharedFileList.plist',
                'Library/Preferences/org.vim.MacVim.plist'],
 
-    'Mercurial': ['.hgrc'],
+    'Mercurial': ['.hgrc',
+                  '.hgignore_global'],
 
     'Oh My Zsh': ['.oh-my-zsh'],
 
@@ -93,6 +98,8 @@ SUPPORTED_APPS = {
     'S3cmd': ['.s3cfg'],
 
     'Sequel Pro': ['Library/Application Support/Sequel Pro/Data'],
+
+    'Slate': ['.slate'],
 
     'SSH': ['.ssh'],
 

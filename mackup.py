@@ -71,7 +71,8 @@ SUPPORTED_APPS = {
 
     'LimeChat': ['Library/Preferences/net.limechat.LimeChat-AppStore.plist'],
 
-    'MacOSX': ['.MacOSX'],
+    'MacOSX': ['.MacOSX',
+               'Library/ColorSync/Profiles'],
 
     'MacVim': ['Library/Preferences/org.vim.MacVim.LSSharedFileList.plist',
                'Library/Preferences/org.vim.MacVim.plist'],

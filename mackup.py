@@ -65,6 +65,9 @@ SUPPORTED_APPS = {
 
     'GnuPG': ['.gnupg'],
 
+    'KeyRemap4MacBook': ['Library/Application Support/' +
+                                        'KeyRemap4MacBook/private.xml'],
+
     'LimeChat': ['Library/Preferences/net.limechat.LimeChat-AppStore.plist'],
 
     'MacOSX': ['.MacOSX'],

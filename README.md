@@ -119,6 +119,7 @@ That's it, you got your `git` config setup on your new Mac.
 
 ## Supported Applications
 
+  - [Adium](http://adium.im)
   - [Bash](http://www.gnu.org/software/bash/)
   - [Boto](https://github.com/boto/boto)
   - [Byobu](http://byobu.co/)
@@ -139,6 +140,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Ruby Version](https://gist.github.com/fnichol/1912050)
   - [S3cmd](http://s3tools.org/s3cmd)
   - [Sequel Pro](http://www.sequelpro.com/)
+  - [Slate](https://github.com/jigish/slate)
   - [Sublime Text 2](http://www.sublimetext.com/)
   - [Subversion](http://subversion.apache.org/)
   - [Vim](http://www.vim.org/)

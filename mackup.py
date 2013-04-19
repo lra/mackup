@@ -74,6 +74,8 @@ SUPPORTED_APPS = {
 
     'Mercurial': ['.hgrc'],
 
+    'mpv':['.mpv/config'],
+
     'Oh My Zsh': ['.oh-my-zsh'],
 
     'Pow': ['.powconfig',

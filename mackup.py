@@ -88,6 +88,8 @@ SUPPORTED_APPS = {
             '.powenv',
             '.powrc'],
 
+    'Quicksilver': ['Library/Preferences/com.blacktree.Quicksilver.plist'],
+
     'Rails': ['.railsrc'],
 
     'Ruby': ['.gemrc',

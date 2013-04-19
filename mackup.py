@@ -94,6 +94,8 @@ SUPPORTED_APPS = {
 
     'Sequel Pro': ['Library/Application Support/Sequel Pro/Data'],
 
+    'Slate': ['.slate'],
+
     'SSH': ['.ssh'],
 
     'Sublime Text 2': [
@@ -102,6 +104,8 @@ SUPPORTED_APPS = {
         'Library/Application Support/Sublime Text 2/Pristine Packages'],
 
     'Subversion': ['.subversion'],
+
+    'tmux': ['.tmux.conf'],
 
     'Vim': ['.gvimrc',
             '.vim',

@@ -125,7 +125,8 @@ SUPPORTED_APPS = {
         PREFERENCES + 'com.irradiatedsoftware.SizeUp.plist',
         APP_SUPPORT + 'SizeUp/SizeUp.sizeuplicense'],
 
-    'Slate': ['.slate'],
+    'Slate': ['.slate'
+              APP_SUPPORT + 'com.slate.Slate'],
 
     'SSH': ['.ssh'],
 

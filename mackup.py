@@ -64,8 +64,7 @@ SUPPORTED_APPS = {
     'Fish': ['.config/fish'],
 
     'Git': ['.gitconfig',
-            '.gitignore_global',
-            'git-info.sh'],
+            '.gitignore_global'],
 
     'GnuPG': ['.gnupg'],
 

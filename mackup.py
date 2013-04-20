@@ -110,6 +110,8 @@ SUPPORTED_APPS = {
 
     'Subversion': ['.subversion'],
 
+    'Ventrilo': ['Library/Preferences/Ventrilo'],
+
     'Vim': ['.gvimrc',
             '.vim',
             '.vimrc'],

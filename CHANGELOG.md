@@ -8,6 +8,7 @@
 - Added support for Sublime Text 3 (thx @laupiFrpar)
 - Added support for MPV (thx @Nyx0uf)
 - Added support for Ventrilo (thx @stechico)
+- Added support for TextMate (thx @hkaju)
 
 ## Mackup 0.3
 

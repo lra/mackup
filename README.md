@@ -119,7 +119,7 @@ That's it, you got your `git` config setup on your new Mac.
 
 ## Supported Applications
 
-  - [Adium](http://adium.im)
+  - [Adium](http://adium.im/)
   - [Bash](http://www.gnu.org/software/bash/)
   - [Boto](https://github.com/boto/boto)
   - [Byobu](http://byobu.co/)

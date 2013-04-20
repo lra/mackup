@@ -84,6 +84,8 @@ SUPPORTED_APPS = {
 
     'Oh My Zsh': ['.oh-my-zsh'],
 
+    'PCKeyboardHack': ['Library/Preferences/org.pqrs.PCKeyboardHack.plist'],
+
     'Pow': ['.powconfig',
             '.powenv',
             '.powrc'],
@@ -105,6 +107,10 @@ SUPPORTED_APPS = {
     'S3cmd': ['.s3cfg'],
 
     'Sequel Pro': ['Library/Application Support/Sequel Pro/Data'],
+
+    'SizeUp': [
+        'Library/Preferences/com.irradiatedsoftware.SizeUp.plist',
+        'Library/Application Support/SizeUp/SizeUp.sizeuplicense'],
 
     'Slate': ['.slate'],
 

@@ -143,6 +143,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Slate](https://github.com/jigish/slate)
   - [Sublime Text 2](http://www.sublimetext.com/)
   - [Subversion](http://subversion.apache.org/)
+  - [Ventrilo](http://www.ventrilo.com/)
   - [Vim](http://www.vim.org/)
   - [Vimperator](http://www.vimperator.org/vimperator)
   - [X11](http://www.x.org/)

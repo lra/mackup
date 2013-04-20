@@ -62,6 +62,8 @@ SUPPORTED_APPS = {
               '.byoburc.tmux',
               '.byoburc.screen'],
 
+    'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
+
     'Emacs': ['.emacs',
               '.emacs.d'],
 

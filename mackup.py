@@ -32,13 +32,20 @@ import sys
 import tempfile
 
 
+#############
+#   Paths   #
+#############
+
+PREFERENCES = 'Library/Preferences/'
+APP_SUPPORT = 'Library/Application Support/'
+
 #################
 # Configuration #
 #################
 
 # Applications supported
 # Format:
-# Application Name: List of files (absolute path from the user's home)
+# Application Name: List of files (relative path from the user's home)
 
 SUPPORTED_APPS = {
     'Adium': ['Library/Application Support/Adium 2.0',
@@ -58,22 +65,40 @@ SUPPORTED_APPS = {
               '.byoburc.tmux',
               '.byoburc.screen'],
 
+    'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
+
     'Emacs': ['.emacs',
               '.emacs.d'],
 
     'Fish': ['.config/fish'],
+
+    'GeekTool': [
+        PREFERENCES + 'org.tynsoe.GeekTool.plist',
+        PREFERENCES + 'org.tynsoe.geeklet.file.plist',
+        PREFERENCES + 'org.tynsoe.geeklet.image.plist',
+        PREFERENCES + 'org.tynsoe.geeklet.shell.plist',
+        PREFERENCES + 'org.tynsoe.geektool3.plist'],
 
     'Git': ['.gitconfig',
             '.gitignore_global'],
 
     'GnuPG': ['.gnupg'],
 
-    'LimeChat': ['Library/Preferences/net.limechat.LimeChat-AppStore.plist'],
+    'Keymo': [PREFERENCES + 'com.manytricks.Keymo.plist'],
+
+    'KeyRemap4MacBook': [
+        PREFERENCES + 'org.pqrs.KeyRemap4MacBook.plist',
+        PREFERENCES + 'org.pqrs.KeyRemap4MacBook.multitouchextension.plist',
+        APP_SUPPORT + 'KeyRemap4MacBook/private.xml'],
+
+    'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
 
     'MacOSX': ['.MacOSX'],
 
-    'MacVim': ['Library/Preferences/org.vim.MacVim.LSSharedFileList.plist',
-               'Library/Preferences/org.vim.MacVim.plist'],
+    'MacVim': [PREFERENCES + 'org.vim.MacVim.LSSharedFileList.plist',
+               PREFERENCES + 'org.vim.MacVim.plist'],
+
+    'Many Tricks Licenses': [APP_SUPPORT + 'Many Tricks/Licenses'],
 
     'Mercurial': ['.hgrc',
                   '.hgignore_global'],
@@ -82,11 +107,19 @@ SUPPORTED_APPS = {
            '.mpv/config',
            '.mpv/input.conf'],
 
+    'MercuryMover': [PREFERENCES + 'com.heliumfoot.MyWiAgent.plist'],
+
     'Oh My Zsh': ['.oh-my-zsh'],
+
+    'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
 
     'Pow': ['.powconfig',
             '.powenv',
             '.powrc'],
+
+    'Quicksilver': [
+        PREFERENCES + 'com.blacktree.Quicksilver.plist',
+        APP_SUPPORT + 'Quicksilver'],
 
     'Rails': ['.railsrc'],
 
@@ -100,16 +133,23 @@ SUPPORTED_APPS = {
 
     'S3cmd': ['.s3cfg'],
 
-    'Sequel Pro': ['Library/Application Support/Sequel Pro/Data'],
+    'Sequel Pro': [APP_SUPPORT + 'Sequel Pro/Data'],
+
+    'SizeUp': [
+        PREFERENCES + 'com.irradiatedsoftware.SizeUp.plist',
+        APP_SUPPORT + 'SizeUp/SizeUp.sizeuplicense'],
+
+    'Slate': ['.slate',
+              APP_SUPPORT + 'com.slate.Slate'],
 
     'Slate': ['.slate'],
 
     'SSH': ['.ssh'],
 
     'Sublime Text 2': [
-        'Library/Application Support/Sublime Text 2/Installed Packages',
-        'Library/Application Support/Sublime Text 2/Packages',
-        'Library/Application Support/Sublime Text 2/Pristine Packages'],
+        APP_SUPPORT + 'Sublime Text 2/Installed Packages',
+        APP_SUPPORT + 'Sublime Text 2/Packages',
+        APP_SUPPORT + 'Sublime Text 2/Pristine Packages'],
 
     'Sublime Text 3': [
         'Library/Application Support/Sublime Text 3/Installed Packages',
@@ -120,6 +160,8 @@ SUPPORTED_APPS = {
     'TextMate': ['Library/Application Support/TextMate',
                  'Library/Preferences/com.macromates.textmate.plist'],
 
+    'tmux': ['.tmux.conf'],
+
     'Ventrilo': ['Library/Preferences/Ventrilo'],
 
     'Vim': ['.gvimrc',
@@ -128,6 +170,8 @@ SUPPORTED_APPS = {
 
     'Vimperator': ['.vimperator',
                    '.vimperatorrc'],
+
+    'witch': [PREFERENCES + 'com.manytricks.Witch.plist'],
 
     'X11': ['.Xresources',
             '.fonts'],
@@ -140,7 +184,6 @@ SUPPORTED_APPS = {
             '.zlogin',
             '.zlogout'],
 }
-
 
 #############
 # Constants #

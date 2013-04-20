@@ -70,8 +70,8 @@ SUPPORTED_APPS = {
 
     'GnuPG': ['.gnupg'],
 
-    'KeyRemap4MacBook': ['Library/Application Support/' +
-                                        'KeyRemap4MacBook/private.xml'],
+    'KeyRemap4MacBook': [
+        'Library/Application Support/KeyRemap4MacBook/private.xml'],
 
     'LimeChat': ['Library/Preferences/net.limechat.LimeChat-AppStore.plist'],
 
@@ -88,7 +88,9 @@ SUPPORTED_APPS = {
             '.powenv',
             '.powrc'],
 
-    'Quicksilver': ['Library/Preferences/com.blacktree.Quicksilver.plist'],
+    'Quicksilver': [
+        'Library/Preferences/com.blacktree.Quicksilver.plist',
+        'Library/Application Support/Quicksilver'],
 
     'Rails': ['.railsrc'],
 

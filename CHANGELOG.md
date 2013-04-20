@@ -2,6 +2,10 @@
 
 ## WIP
 
+- Added support for Slate (thx @stechico)
+- Added support for Adium (thx @stechico)
+- Improved support for Mercurial (thx @stechico)
+
 ## Mackup 0.3
 
 - Added an uninstall mode to revert a system to its pre-Mackup state

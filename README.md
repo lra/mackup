@@ -131,6 +131,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [MacOSX](http://www.apple.com/osx/)
   - [MacVim](https://code.google.com/p/macvim/)
   - [Mercurial](http://mercurial.selenic.com/)
+  - [MPV](http://mpv.io/)
   - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
   - [OpenSSH](http://www.openssh.org/)
   - [Pentadactyl](http://5digits.org/pentadactyl/)

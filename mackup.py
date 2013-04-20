@@ -78,7 +78,9 @@ SUPPORTED_APPS = {
     'Mercurial': ['.hgrc',
                   '.hgignore_global'],
 
-    'mpv':['.mpv/config'],
+    'MPV':['.mpv/channels.conf',
+           '.mpv/config',
+           '.mpv/input.conf'],
 
     'Oh My Zsh': ['.oh-my-zsh'],
 

@@ -6,6 +6,7 @@
 - Added support for Adium (thx @stechico)
 - Improved support for Mercurial (thx @stechico)
 - Added support for Sublime Text 3 (thx @laupiFrpar)
+- Added support for MPV (thx @Nyx0uf)
 
 ## Mackup 0.3
 

@@ -79,6 +79,8 @@ SUPPORTED_APPS = {
 
     'GnuPG': ['.gnupg'],
 
+    'Keymo': [PREFERENCES + 'com.manytricks.Keymo.plist'],
+
     'KeyRemap4MacBook': [
         PREFERENCES + 'org.pqrs.KeyRemap4MacBook.plist',
         PREFERENCES + 'org.pqrs.KeyRemap4MacBook.multitouchextension.plist',
@@ -90,6 +92,8 @@ SUPPORTED_APPS = {
 
     'MacVim': [PREFERENCES + 'org.vim.MacVim.LSSharedFileList.plist',
                PREFERENCES + 'org.vim.MacVim.plist'],
+
+    'Many Tricks Licenses': [APP_SUPPORT + 'Many Tricks/Licenses'],
 
     'Mercurial': ['.hgrc'],
 
@@ -125,7 +129,7 @@ SUPPORTED_APPS = {
         PREFERENCES + 'com.irradiatedsoftware.SizeUp.plist',
         APP_SUPPORT + 'SizeUp/SizeUp.sizeuplicense'],
 
-    'Slate': ['.slate'
+    'Slate': ['.slate',
               APP_SUPPORT + 'com.slate.Slate'],
 
     'SSH': ['.ssh'],
@@ -145,6 +149,8 @@ SUPPORTED_APPS = {
 
     'Vimperator': ['.vimperator',
                    '.vimperatorrc'],
+
+    'witch': [PREFERENCES + 'com.manytricks.Witch.plist'],
 
     'X11': ['.Xresources',
             '.fonts'],

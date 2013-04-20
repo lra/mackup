@@ -112,6 +112,9 @@ SUPPORTED_APPS = {
         'Library/Application Support/Sublime Text 3/Packages'],
 
     'Subversion': ['.subversion'],
+    
+    'TextMate': ['Library/Application Support/TextMate',
+        'Library/Preferences/com.macromates.textmate.plist'],
 
     'Vim': ['.gvimrc',
             '.vim',

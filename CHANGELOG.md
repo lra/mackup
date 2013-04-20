@@ -5,6 +5,7 @@
 - Added support for Slate (thx @stechico)
 - Added support for Adium (thx @stechico)
 - Improved support for Mercurial (thx @stechico)
+- Added support for Sublime Text 3 (thx @laupiFrpar)
 
 ## Mackup 0.3
 

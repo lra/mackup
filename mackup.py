@@ -32,9 +32,9 @@ import sys
 import tempfile
 
 
-#############
-#   Paths   #
-#############
+#######################
+# Commonly used paths #
+#######################
 
 PREFERENCES = 'Library/Preferences/'
 APP_SUPPORT = 'Library/Application Support/'
@@ -48,8 +48,8 @@ APP_SUPPORT = 'Library/Application Support/'
 # Application Name: List of files (relative path from the user's home)
 
 SUPPORTED_APPS = {
-    'Adium': ['Library/Application Support/Adium 2.0',
-              'Library/Preferences/com.adiumX.adiumX.plist'],
+    'Adium': [APP_SUPPORT + 'Adium 2.0',
+              PREFERENCES + 'com.adiumX.adiumX.plist'],
 
     'Bash': ['.bash_aliases',
              '.bash_logout',
@@ -117,9 +117,8 @@ SUPPORTED_APPS = {
             '.powenv',
             '.powrc'],
 
-    'Quicksilver': [
-        PREFERENCES + 'com.blacktree.Quicksilver.plist',
-        APP_SUPPORT + 'Quicksilver'],
+    'Quicksilver': [PREFERENCES + 'com.blacktree.Quicksilver.plist',
+                    APP_SUPPORT + 'Quicksilver'],
 
     'Rails': ['.railsrc'],
 
@@ -135,34 +134,29 @@ SUPPORTED_APPS = {
 
     'Sequel Pro': [APP_SUPPORT + 'Sequel Pro/Data'],
 
-    'SizeUp': [
-        PREFERENCES + 'com.irradiatedsoftware.SizeUp.plist',
-        APP_SUPPORT + 'SizeUp/SizeUp.sizeuplicense'],
+    'SizeUp': [PREFERENCES + 'com.irradiatedsoftware.SizeUp.plist',
+               APP_SUPPORT + 'SizeUp/SizeUp.sizeuplicense'],
 
     'Slate': ['.slate',
               APP_SUPPORT + 'com.slate.Slate'],
 
-    'Slate': ['.slate'],
-
     'SSH': ['.ssh'],
 
-    'Sublime Text 2': [
-        APP_SUPPORT + 'Sublime Text 2/Installed Packages',
-        APP_SUPPORT + 'Sublime Text 2/Packages',
-        APP_SUPPORT + 'Sublime Text 2/Pristine Packages'],
+    'Sublime Text 2': [APP_SUPPORT + 'Sublime Text 2/Installed Packages',
+                       APP_SUPPORT + 'Sublime Text 2/Packages',
+                       APP_SUPPORT + 'Sublime Text 2/Pristine Packages'],
 
-    'Sublime Text 3': [
-        'Library/Application Support/Sublime Text 3/Installed Packages',
-        'Library/Application Support/Sublime Text 3/Packages'],
+    'Sublime Text 3': [APP_SUPPORT + 'Sublime Text 3/Installed Packages',
+                       APP_SUPPORT + 'Sublime Text 3/Packages'],
 
     'Subversion': ['.subversion'],
 
-    'TextMate': ['Library/Application Support/TextMate',
-                 'Library/Preferences/com.macromates.textmate.plist'],
+    'TextMate': [APP_SUPPORT + 'TextMate',
+                 PREFERENCES + 'com.macromates.textmate.plist'],
 
-    'tmux': ['.tmux.conf'],
+    'Tmux': ['.tmux.conf'],
 
-    'Ventrilo': ['Library/Preferences/Ventrilo'],
+    'Ventrilo': [PREFERENCES + 'Ventrilo'],
 
     'Vim': ['.gvimrc',
             '.vim',
@@ -171,7 +165,7 @@ SUPPORTED_APPS = {
     'Vimperator': ['.vimperator',
                    '.vimperatorrc'],
 
-    'witch': [PREFERENCES + 'com.manytricks.Witch.plist'],
+    'Witch': [PREFERENCES + 'com.manytricks.Witch.plist'],
 
     'X11': ['.Xresources',
             '.fonts'],

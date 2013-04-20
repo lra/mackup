@@ -9,6 +9,8 @@
 - Added support for MPV (thx @Nyx0uf)
 - Added support for Ventrilo (thx @stechico)
 - Added support for TextMate (thx @hkaju)
+- Added support for Tmux, SizeUp, Quicksilver, Witch, ControlPlane, GeekTool,
+  Keymo, KeyRemap4MacBook, MercuryMover, PCKeyboardHack (thx @orenshk)
 
 ## Mackup 0.3
 

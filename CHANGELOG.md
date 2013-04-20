@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.3.1
+
 - Added support for Slate (thx @stechico)
 - Added support for Adium (thx @stechico)
 - Improved support for Mercurial (thx @stechico)

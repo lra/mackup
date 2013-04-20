@@ -11,6 +11,7 @@
 - Added support for TextMate (thx @hkaju)
 - Added support for Tmux, SizeUp, Quicksilver, Witch, ControlPlane, GeekTool,
   Keymo, KeyRemap4MacBook, MercuryMover, PCKeyboardHack (thx @orenshk)
+- Made the help screen more readable (too many supported apps)
 
 ## Mackup 0.3
 

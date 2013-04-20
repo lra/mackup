@@ -594,10 +594,9 @@ def parse_cmdline_args():
     """
 
     # Format some epilog text
-    epilog = "Supported applications:\n"
-    for app in sorted(SUPPORTED_APPS.iterkeys()):
-        epilog = epilog + "  - {}\n".format(app)
-    epilog += "\nMackup requires a fully synced Dropbox folder."
+    epilog = "Supported applications: "
+    epilog += ', '.join(sorted(SUPPORTED_APPS.iterkeys()))
+    epilog += "\n\nMackup requires a fully synced Dropbox folder."
 
     # Setup the global parser
     parser = argparse.ArgumentParser(

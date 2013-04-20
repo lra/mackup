@@ -93,6 +93,8 @@ SUPPORTED_APPS = {
 
     'Mercurial': ['.hgrc'],
 
+    'MercuryMover': [PREFERENCES + 'com.heliumfoot.MyWiAgent.plist'],
+
     'Oh My Zsh': ['.oh-my-zsh'],
 
     'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],

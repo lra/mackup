@@ -32,6 +32,13 @@ import sys
 import tempfile
 
 
+#############
+#   Paths   #
+#############
+
+PREFERENCES = 'Library/Preferences/'
+APP_SUPPORT = 'Library/Application Support/'
+
 #################
 # Configuration #
 #################
@@ -60,10 +67,12 @@ SUPPORTED_APPS = {
 
     'Fish': ['.config/fish'],
 
-    'GeekTool': ['Library/Preferences/org.tynsoe.geeklet.file.plist',
-                 'Library/Preferences/org.tynsoe.geeklet.image.plist',
-                 'Library/Preferences/org.tynsoe.geeklet.shell.plist',
-                 'Library/Preferences/org.tynsoe.geektool3.plist'],
+    'GeekTool': [
+        PREFERENCES + 'org.tynsoe.GeekTool.plist',
+        PREFERENCES + 'org.tynsoe.geeklet.file.plist',
+        PREFERENCES + 'org.tynsoe.geeklet.image.plist',
+        PREFERENCES + 'org.tynsoe.geeklet.shell.plist',
+        PREFERENCES + 'org.tynsoe.geektool3.plist'],
 
     'Git': ['.gitconfig',
             '.gitignore_global'],
@@ -71,28 +80,30 @@ SUPPORTED_APPS = {
     'GnuPG': ['.gnupg'],
 
     'KeyRemap4MacBook': [
-        'Library/Application Support/KeyRemap4MacBook/private.xml'],
+        PREFERENCES + 'org.pqrs.KeyRemap4MacBook.plist',
+        PREFERENCES + 'org.pqrs.KeyRemap4MacBook.multitouchextension.plist',
+        APP_SUPPORT + 'KeyRemap4MacBook/private.xml'],
 
-    'LimeChat': ['Library/Preferences/net.limechat.LimeChat-AppStore.plist'],
+    'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
 
     'MacOSX': ['.MacOSX'],
 
-    'MacVim': ['Library/Preferences/org.vim.MacVim.LSSharedFileList.plist',
-               'Library/Preferences/org.vim.MacVim.plist'],
+    'MacVim': [PREFERENCES + 'org.vim.MacVim.LSSharedFileList.plist',
+               PREFERENCES + 'org.vim.MacVim.plist'],
 
     'Mercurial': ['.hgrc'],
 
     'Oh My Zsh': ['.oh-my-zsh'],
 
-    'PCKeyboardHack': ['Library/Preferences/org.pqrs.PCKeyboardHack.plist'],
+    'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
 
     'Pow': ['.powconfig',
             '.powenv',
             '.powrc'],
 
     'Quicksilver': [
-        'Library/Preferences/com.blacktree.Quicksilver.plist',
-        'Library/Application Support/Quicksilver'],
+        PREFERENCES + 'com.blacktree.Quicksilver.plist',
+        APP_SUPPORT + 'Quicksilver'],
 
     'Rails': ['.railsrc'],
 
@@ -106,20 +117,20 @@ SUPPORTED_APPS = {
 
     'S3cmd': ['.s3cfg'],
 
-    'Sequel Pro': ['Library/Application Support/Sequel Pro/Data'],
+    'Sequel Pro': [APP_SUPPORT + 'Sequel Pro/Data'],
 
     'SizeUp': [
-        'Library/Preferences/com.irradiatedsoftware.SizeUp.plist',
-        'Library/Application Support/SizeUp/SizeUp.sizeuplicense'],
+        PREFERENCES + 'com.irradiatedsoftware.SizeUp.plist',
+        APP_SUPPORT + 'SizeUp/SizeUp.sizeuplicense'],
 
     'Slate': ['.slate'],
 
     'SSH': ['.ssh'],
 
     'Sublime Text 2': [
-        'Library/Application Support/Sublime Text 2/Installed Packages',
-        'Library/Application Support/Sublime Text 2/Packages',
-        'Library/Application Support/Sublime Text 2/Pristine Packages'],
+        APP_SUPPORT + 'Sublime Text 2/Installed Packages',
+        APP_SUPPORT + 'Sublime Text 2/Packages',
+        APP_SUPPORT + 'Sublime Text 2/Pristine Packages'],
 
     'Subversion': ['.subversion'],
 
@@ -143,7 +154,6 @@ SUPPORTED_APPS = {
             '.zlogin',
             '.zlogout'],
 }
-
 
 #############
 # Constants #

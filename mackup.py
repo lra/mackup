@@ -51,6 +51,10 @@ SUPPORTED_APPS = {
     'Adium': [APP_SUPPORT + 'Adium 2.0',
               PREFERENCES + 'com.adiumX.adiumX.plist'],
 
+    'Alfred': [
+        APP_SUPPORT + 'Alfred',
+        PREFERENCES + 'com.alfredapp.Alfred.plist'],
+
     'Bash': ['.bash_aliases',
              '.bash_logout',
              '.bashrc',
@@ -83,6 +87,8 @@ SUPPORTED_APPS = {
             '.gitignore_global'],
 
     'GnuPG': ['.gnupg'],
+
+    'iTerm2': [PREFERENCES + 'com.googlecode.iterm2.plist'],
 
     'Keymo': [PREFERENCES + 'com.manytricks.Keymo.plist'],
 

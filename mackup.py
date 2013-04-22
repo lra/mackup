@@ -51,10 +51,6 @@ SUPPORTED_APPS = {
     'Adium': [APP_SUPPORT + 'Adium 2.0',
               PREFERENCES + 'com.adiumX.adiumX.plist'],
 
-    'Alfred': [
-        APP_SUPPORT + 'Alfred',
-        PREFERENCES + 'com.alfredapp.Alfred.plist'],
-
     'Bash': ['.bash_aliases',
              '.bash_logout',
              '.bashrc',

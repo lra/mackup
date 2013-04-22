@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for iTerm2 (thx @joshbrown)
+
 ## Mackup 0.3.1
 
 - Added support for Slate (thx @stechico)

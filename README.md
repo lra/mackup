@@ -129,6 +129,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [GeekTool](http://projects.tynsoe.org/en/geektool/)
   - [Git](http://git-scm.com/)
   - [GnuPG](http://www.gnupg.org/)
+  - [ITerm2](http://www.iterm2.com/)
   - [Keymo](http://manytricks.com/keymo/)
   - [KeyRemap4MacBook](http://pqrs.org/macosx/keyremap4macbook/)
   - [LimeChat](http://limechat.net/mac/)

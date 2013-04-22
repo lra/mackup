@@ -84,6 +84,8 @@ SUPPORTED_APPS = {
 
     'GnuPG': ['.gnupg'],
 
+    'iTerm2': [PREFERENCES + 'com.googlecode.iterm2.plist'],
+
     'Keymo': [PREFERENCES + 'com.manytricks.Keymo.plist'],
 
     'KeyRemap4MacBook': [

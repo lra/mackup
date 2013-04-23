@@ -101,6 +101,11 @@ SUPPORTED_APPS = {
 
     'Slate': ['.slate'],
 
+    'SourceTree': ['Library/Application Support/SourceTree/sourcetree.license',
+                   'Library/Application Support/SourceTree/browser.plist',
+                   'Library/Application Support/SourceTree/hgrc_sourcetree',
+                   'Library/Application Support/SourceTree/hostingservices.plist'],
+
     'SSH': ['.ssh'],
 
     'Sublime Text 2': [

@@ -50,6 +50,26 @@ sudo mv mackup /usr/bin/mackup
 mackup backup
 ```
 
+## Upgrade
+
+Same as Install:
+
+```bash
+# Download Mackup
+curl -o mackup https://raw.github.com/lra/mackup/master/mackup.py
+
+# Make it executable
+chmod +x mackup
+
+# Copy it to your path
+sudo mv mackup /usr/bin/mackup
+
+# Launch it
+mackup backup
+```
+
+It will add support for any application you were missing before.
+
 ## Uninstall
 
 You can revert all your files to their original state.

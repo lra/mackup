@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for iTerm2 (thx @joshbrown)
+- Added support for SourceTree (thx @stechico)
 
 ## Mackup 0.3.1
 

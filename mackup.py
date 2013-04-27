@@ -143,10 +143,10 @@ SUPPORTED_APPS = {
     'Slate': ['.slate',
               APP_SUPPORT + 'com.slate.Slate'],
 
-    'SourceTree': ['Library/Application Support/SourceTree/sourcetree.license',
-                   'Library/Application Support/SourceTree/browser.plist',
-                   'Library/Application Support/SourceTree/hgrc_sourcetree',
-                   'Library/Application Support/SourceTree/hostingservices.plist'],
+    'SourceTree': [APP_SUPPORT + 'SourceTree/sourcetree.license',
+                   APP_SUPPORT + 'SourceTree/browser.plist',
+                   APP_SUPPORT + 'SourceTree/hgrc_sourcetree',
+                   APP_SUPPORT + 'SourceTree/hostingservices.plist'],
 
     'SSH': ['.ssh'],
 

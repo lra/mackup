@@ -73,6 +73,8 @@ SUPPORTED_APPS = {
     'Emacs': ['.emacs',
               '.emacs.d'],
 
+    'ExpanDrive': [APP_SUPPORT + 'ExpanDrive'],
+
     'Fish': ['.config/fish'],
 
     'GeekTool': [

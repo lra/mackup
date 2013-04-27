@@ -4,6 +4,10 @@
 
 - Added support for iTerm2 (thx @joshbrown)
 - Added support for SourceTree (thx @stechico)
+- Added support for OS X's ColorSync profiles (thx @stechico)
+- Added support of AppCode 2 (thx @MarcoSero)
+- Added support of IntelliJIdea 12 (thx @MarcoSero)
+- Added support of RubyMine 4 (thx @MarcoSero)
 
 ## Mackup 0.3.1
 

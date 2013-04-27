@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.3.2
+
 - Added support for iTerm2 (thx @joshbrown)
 - Added support for SourceTree (thx @stechico)
 - Added support for OS X's ColorSync profiles (thx @stechico)

@@ -95,7 +95,8 @@ SUPPORTED_APPS = {
 
     'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
 
-    'MacOSX': ['.MacOSX'],
+    'MacOSX': ['.MacOSX',
+               'Library/ColorSync/Profiles'],
 
     'MacVim': [PREFERENCES + 'org.vim.MacVim.LSSharedFileList.plist',
                PREFERENCES + 'org.vim.MacVim.plist'],
@@ -141,6 +142,11 @@ SUPPORTED_APPS = {
 
     'Slate': ['.slate',
               APP_SUPPORT + 'com.slate.Slate'],
+
+    'SourceTree': ['Library/Application Support/SourceTree/sourcetree.license',
+                   'Library/Application Support/SourceTree/browser.plist',
+                   'Library/Application Support/SourceTree/hgrc_sourcetree',
+                   'Library/Application Support/SourceTree/hostingservices.plist'],
 
     'SSH': ['.ssh'],
 

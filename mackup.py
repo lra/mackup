@@ -126,6 +126,8 @@ SUPPORTED_APPS = {
             '.powenv',
             '.powrc'],
 
+    'PyPI': ['.pypirc'],
+
     'Quicksilver': [PREFERENCES + 'com.blacktree.Quicksilver.plist',
                     APP_SUPPORT + 'Quicksilver'],
 

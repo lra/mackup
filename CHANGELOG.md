@@ -8,6 +8,11 @@
 - Added support of AppCode 2 (thx @MarcoSero)
 - Added support of IntelliJIdea 12 (thx @MarcoSero)
 - Added support of RubyMine 4 (thx @MarcoSero)
+- Fixed a typo (thx @dhellmann)
+- Added support for Screen (thx @dhellmann)
+- Added support for PyPI (thx @dhellmann)
+- Added support for ExpanDrive (thx @dhellmann)
+- Added support for Git Hooks (thx @dhellmann)
 
 ## Mackup 0.3.1
 

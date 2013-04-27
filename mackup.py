@@ -85,8 +85,9 @@ SUPPORTED_APPS = {
         PREFERENCES + 'org.tynsoe.geektool3.plist'],
 
     'Git': ['.gitconfig',
-            '.gitignore_global',
-            '.git_hooks'],
+            '.gitignore_global'],
+
+    'Git Hooks': ['.git_hooks'],
 
     'GnuPG': ['.gnupg'],
 

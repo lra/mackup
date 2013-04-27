@@ -134,6 +134,8 @@ SUPPORTED_APPS = {
 
     'S3cmd': ['.s3cfg'],
 
+    'Screen': ['.screenrc'],
+
     'Sequel Pro': [APP_SUPPORT + 'Sequel Pro/Data'],
 
     'SizeUp': [PREFERENCES + 'com.irradiatedsoftware.SizeUp.plist',

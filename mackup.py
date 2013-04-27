@@ -51,6 +51,9 @@ SUPPORTED_APPS = {
     'Adium': [APP_SUPPORT + 'Adium 2.0',
               PREFERENCES + 'com.adiumX.adiumX.plist'],
 
+    'AppCode2': [APP_SUPPORT + 'appCode20',
+                 PREFERENCES + 'appCode20'],
+
     'Bash': ['.bash_aliases',
              '.bash_logout',
              '.bashrc',
@@ -83,6 +86,9 @@ SUPPORTED_APPS = {
             '.gitignore_global'],
 
     'GnuPG': ['.gnupg'],
+
+    'IntelliJIdea12': [APP_SUPPORT + 'IntelliJIdea12',
+                       PREFERENCES + 'IntelliJIdea12'],
 
     'iTerm2': [PREFERENCES + 'com.googlecode.iterm2.plist'],
 
@@ -127,6 +133,9 @@ SUPPORTED_APPS = {
 
     'Ruby': ['.gemrc',
              '.irbrc'],
+
+    'RubyMine4': [APP_SUPPORT + 'RubyMine40',
+                  PREFERENCES + 'RubyMine40'],
 
     'Ruby Version': ['.ruby-version'],
 

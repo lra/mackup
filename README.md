@@ -120,6 +120,7 @@ That's it, you got your `git` config setup on your new Mac.
 ## Supported Applications
 
   - [Adium](http://adium.im/)
+  - [AppCode 2](http://www.jetbrains.com/objc/)
   - [Bash](http://www.gnu.org/software/bash/)
   - [Boto](https://github.com/boto/boto)
   - [Byobu](http://byobu.co/)
@@ -129,6 +130,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [GeekTool](http://projects.tynsoe.org/en/geektool/)
   - [Git](http://git-scm.com/)
   - [GnuPG](http://www.gnupg.org/)
+  - [IntelliJIDEA 12](http://www.jetbrains.com/idea/)
   - [ITerm2](http://www.iterm2.com/)
   - [Keymo](http://manytricks.com/keymo/)
   - [KeyRemap4MacBook](http://pqrs.org/macosx/keyremap4macbook/)
@@ -147,6 +149,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Rails](http://rubyonrails.org/)
   - [Ruby Version](https://gist.github.com/fnichol/1912050)
   - [Ruby](http://ruby-lang.org/)
+  - [RubyMine 4](http://www.jetbrains.com/ruby/)
   - [S3cmd](http://s3tools.org/s3cmd)
   - [Sequel Pro](http://www.sequelpro.com/)
   - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)

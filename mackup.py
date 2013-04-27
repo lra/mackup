@@ -270,7 +270,7 @@ class ApplicationProfile(object):
 
                     # Ask the user if he really want to replace it
                     if confirm("A {} named {} already exists in the backup."
-                               "\nOr you sure that your want to replace it ?"
+                               "\nAre you sure that your want to replace it ?"
                                .format(file_type, mackup_filepath)):
                         # Delete the file in Mackup
                         delete(mackup_filepath)

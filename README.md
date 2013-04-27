@@ -154,12 +154,8 @@ That's it, you got your `git` config setup on your new Mac.
   - [Sequel Pro](http://www.sequelpro.com/)
   - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
   - [Slate](https://github.com/jigish/slate)
-<<<<<<< HEAD
-  - [Sublime Text](http://www.sublimetext.com/)
-=======
   - [SourceTree](http://sourcetreeapp.com)
-  - [Sublime Text 2](http://www.sublimetext.com/)
->>>>>>> b24347d2a0fc4fbc1a05d68537cd93607efcd0af
+  - [Sublime Text](http://www.sublimetext.com/)
   - [Subversion](http://subversion.apache.org/)
   - [TextMate](http://macromates.com/)
   - [Tmux](http://tmux.sourceforge.net/)

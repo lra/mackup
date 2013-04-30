@@ -530,7 +530,6 @@ def copy(src, dst):
     if os.path.isfile(src):
         # Copy the src file to dst
         shutil.copy(src, dst)
-        # The file should be 0600
 
     # We need to copy a whole folder
     elif os.path.isdir(src):

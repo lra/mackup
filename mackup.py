@@ -491,7 +491,7 @@ def delete(filepath):
     subprocess.call(['/bin/chmod', '-R', '-N', filepath])
 
     # Some files on OS X have custom flags, let's remove them recursively
-    subprocess.call(['/usr/bin/chflags', '-R', 'nouch', filepath])
+    subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', filepath])
 
     # Finally remove the files and folders
     if os.path.isfile(filepath) or os.path.islink(filepath):

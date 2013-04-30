@@ -3,6 +3,7 @@
 ## WIP
 
 - Added ~/bin as a commonly used folder to sync (thx @zanona)
+- Fixed support for locked files e.g. SourceTree (thx @dbingham)
 
 ## Mackup 0.3.2
 

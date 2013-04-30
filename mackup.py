@@ -28,6 +28,7 @@ import base64
 import os.path
 import shutil
 import stat
+import subprocess
 import sys
 import tempfile
 
@@ -488,6 +489,13 @@ def delete(filepath):
     Args:
         filepath (str): Absolute full path to a file. e.g. /path/to/file
     """
+    # Some files on OS X have ACLs, let's remove them recursively
+    subprocess.call(['/bin/chmod', '-R', '-N', filepath])
+
+    # Some files on OS X have custom flags, let's remove them recursively
+    subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', filepath])
+
+    # Finally remove the files and folders
     if os.path.isfile(filepath) or os.path.islink(filepath):
         os.remove(filepath)
     elif os.path.isdir(filepath):
@@ -524,7 +532,6 @@ def copy(src, dst):
     if os.path.isfile(src):
         # Copy the src file to dst
         shutil.copy(src, dst)
-        # The file should be 0600
 
     # We need to copy a whole folder
     elif os.path.isdir(src):
@@ -583,6 +590,9 @@ def chmod(target):
 
     file_mode = stat.S_IRUSR | stat.S_IWUSR
     folder_mode = stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR
+
+    # Remove the immutable flag recursively if there is one
+    subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', target])
 
     if os.path.isfile(target):
         os.chmod(target, file_mode)

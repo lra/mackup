@@ -191,6 +191,10 @@ That's it, you got your `git` config setup on your new Mac.
   - [XEmacs](http://www.xemacs.org/)
   - [Zsh](http://zsh.sourceforge.net/)
 
+Mackup also syncs some commonly used folders:
+
+  - `~/bin` for user's binaries
+
 You can add your favorite application by forking it and doing a
 [Pull Request](https://help.github.com/articles/using-pull-requests).
 

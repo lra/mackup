@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added ~/bin as a commonly used folder to sync (thx @zanona)
+
 ## Mackup 0.3.2
 
 - Added support for iTerm2 (thx @joshbrown)

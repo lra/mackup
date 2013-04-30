@@ -28,6 +28,7 @@ import base64
 import os.path
 import shutil
 import stat
+import subprocess
 import sys
 import tempfile
 
@@ -486,6 +487,8 @@ def delete(filepath):
     Args:
         filepath (str): Absolute full path to a file. e.g. /path/to/file
     """
+    # Some files on OS X have ACLs, let's remove them
+    subprocess.call(['/bin/chmod', '-N', filepath])
     if os.path.isfile(filepath) or os.path.islink(filepath):
         os.remove(filepath)
     elif os.path.isdir(filepath):

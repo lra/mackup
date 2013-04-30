@@ -589,6 +589,9 @@ def chmod(target):
     file_mode = stat.S_IRUSR | stat.S_IWUSR
     folder_mode = stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR
 
+    # Remove the immutable flag recursively if there is one
+    subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', target])
+
     if os.path.isfile(target):
         os.chmod(target, file_mode)
 

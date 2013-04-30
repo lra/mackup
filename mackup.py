@@ -487,8 +487,13 @@ def delete(filepath):
     Args:
         filepath (str): Absolute full path to a file. e.g. /path/to/file
     """
-    # Some files on OS X have ACLs, let's remove them
+    # Some files on OS X have ACLs, let's remove them recursively
     subprocess.call(['/bin/chmod', '-R', '-N', filepath])
+
+    # Some files on OS X have custom flags, let's remove them recursively
+    subprocess.call(['/usr/bin/chflags', '-R', 'nouch', filepath])
+
+    # Finally remove the files and folders
     if os.path.isfile(filepath) or os.path.islink(filepath):
         os.remove(filepath)
     elif os.path.isdir(filepath):

@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Fixed support for locked files e.g. SourceTree (thx @dbingham)
+
 ## Mackup 0.3.2
 
 - Added support for iTerm2 (thx @joshbrown)

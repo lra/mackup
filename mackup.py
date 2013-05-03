@@ -80,6 +80,8 @@ SUPPORTED_APPS = {
     'Mercurial': ['.hgrc',
                   '.hgignore_global'],
 
+    'Nano': ['.nanorc'],
+
     'Oh My Zsh': ['.oh-my-zsh'],
 
     'Pow': ['.powconfig',

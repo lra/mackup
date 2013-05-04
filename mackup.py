@@ -123,6 +123,8 @@ SUPPORTED_APPS = {
 
     'MercuryMover': [PREFERENCES + 'com.heliumfoot.MyWiAgent.plist'],
 
+    'Nano': ['.nanorc'],
+
     'Oh My Zsh': ['.oh-my-zsh'],
 
     'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],

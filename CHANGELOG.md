@@ -4,6 +4,7 @@
 
 - Fixed support for locked files e.g. SourceTree (thx @dbingham)
 - Added support for Nano (thx @stechico)
+- Added support for SHSH Blobs (thx @stechico)
 
 ## Mackup 0.3.2
 

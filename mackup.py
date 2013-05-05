@@ -157,6 +157,8 @@ SUPPORTED_APPS = {
 
     'Sequel Pro': [APP_SUPPORT + 'Sequel Pro/Data'],
 
+    'SHSH Blobs': ['.shsh'],
+
     'SizeUp': [PREFERENCES + 'com.irradiatedsoftware.SizeUp.plist',
                APP_SUPPORT + 'SizeUp/SizeUp.sizeuplicense'],
 

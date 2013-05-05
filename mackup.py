@@ -102,6 +102,8 @@ SUPPORTED_APPS = {
 
     'Sequel Pro': ['Library/Application Support/Sequel Pro/Data'],
 
+    'SHSH Blobs': ['.shsh'],
+
     'Slate': ['.slate'],
 
     'SourceTree': ['Library/Application Support/SourceTree/sourcetree.license',

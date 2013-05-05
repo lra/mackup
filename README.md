@@ -142,7 +142,6 @@ That's it, you got your `git` config setup on your new Mac.
   - [S3cmd](http://s3tools.org/s3cmd)
   - [Sequel Pro](http://www.sequelpro.com/)
   - [SHSH Blobs](http://en.wikipedia.org/wiki/SHSH_blob)
-  - [Skitch](http://evernote.com/skitch/)
   - [Slate](https://github.com/jigish/slate)
   - [SourceTree](http://sourcetreeapp.com)
   - [Sublime Text 2](http://www.sublimetext.com/)

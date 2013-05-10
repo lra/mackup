@@ -181,10 +181,14 @@ SUPPORTED_APPS = {
 
     'Subversion': ['.subversion'],
 
+    'Teamocil': ['.teamocil'], 
+
     'TextMate': [APP_SUPPORT + 'TextMate',
                  PREFERENCES + 'com.macromates.textmate.plist'],
 
     'Tmux': ['.tmux.conf'],
+
+    'Tmuxinator': ['.tmuxinator'], 
 
     'Ventrilo': [PREFERENCES + 'Ventrilo'],
 

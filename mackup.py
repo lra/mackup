@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import argparse
 import base64
-import os.path
+import os
 import shutil
 import stat
 import subprocess
@@ -432,6 +432,17 @@ class Mackup(object):
             error(("Unable to find the Dropbox folder."
                    " If Dropbox is not installed and running, go for it on"
                    " <http://www.dropbox.com/>"))
+
+        # Is Sublime Text running ?
+        DEVNULL = open(os.devnull, 'wb')
+        returncode = subprocess.call(['/usr/bin/pgrep', 'Sublime Text'],
+                                     stdout=DEVNULL)
+        if returncode == 0:
+            error(("Sublime Text is running. It is known to cause problems"
+                   " when Sublime Text is running while I backup or restore"
+                   " its configuration files. Please close Sublime Text and"
+                   " run me again."))
+
 
     def check_for_usable_backup_env(self):
         """Check if the current env can be used to back up files"""

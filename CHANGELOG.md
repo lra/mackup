@@ -7,6 +7,7 @@
 - Added support for SHSH Blobs (thx @stechico)
 - Added support for Teamocil and Tmuxinator (thx @djquan)
 - Added support for Viscosity and Transmission (thx @ovrtn)
+- Fixed support for Sublime Text (thx @nZac)
 
 ## Mackup 0.3.2
 

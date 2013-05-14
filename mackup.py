@@ -713,12 +713,15 @@ def get_ignored_apps():
     """
     # If a config file exists, grab it and parser it
     config = configparser.SafeConfigParser(allow_no_value=True)
-    config.read(os.environ['HOME'] + '/.mackup.cfg')
 
-    try:
-        ignored_apps = config.options('Ignored Applications')
-    except configparser.NoSectionError:
-        ignored_apps = []
+    # We ignore nothing by default
+    ignored_apps = []
+
+    # Is the config file there ?
+    if config.read(os.environ['HOME'] + '/.mackup.cfg'):
+        # Is the "Ignored Applications" in the cfg file ?
+        if config.has_section('Ignored Applications'):
+            ignored_apps = config.options('Ignored Applications')
 
     return ignored_apps
 

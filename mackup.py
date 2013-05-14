@@ -186,8 +186,7 @@ SUPPORTED_APPS = {
 
     'Tmux': ['.tmux.conf'],
 
-    'Transmission': [APP_SUPPORT + 'Transmission',
-                     PREFERENCES + 'org.m0k.transmission.plist'],
+    'Transmission': [PREFERENCES + 'org.m0k.transmission.plist'],
 
     'Ventrilo': [PREFERENCES + 'Ventrilo'],
 

@@ -746,14 +746,15 @@ def main():
         # Check the env where the command is being run
         mackup.check_for_usable_backup_env()
 
-        # Figure out the list of apps to process, ignoring the list of apps
-        # the user ignored
-        apps_to_process = set(SUPPORTED_APPS.keys()) - set(get_ignored_apps())
+        # Get the list of ignored applications
+        ignored_apps = get_ignored_apps()
 
-        # Backup each non ignored application
-        for app_name in apps_to_process:
-            app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
-            app.backup()
+        # Backup each application
+        for app_name in SUPPORTED_APPS:
+            # Make sure we don't backup an ignored application
+            if app_name.lower() not in ignored_apps:
+                app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
+                app.backup()
 
     elif args.mode == RESTORE_MODE:
         # Check the env where the command is being run

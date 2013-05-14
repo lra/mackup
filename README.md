@@ -216,7 +216,14 @@ SSH
 Adium
 ```
 
-A [sample](.mackup.cfg) of this file is available for download.
+A [sample](.mackup.cfg) of this file is available for download:
+
+```bash
+cd
+curl -o .mackup.cfg https://raw.github.com/lra/mackup/master/.mackup.cfg
+```
+Be careful, if you download it like this, Mackup will ignore SSH and Adium from
+now on !
 
 ## Why did you do this ?!
 

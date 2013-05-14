@@ -181,6 +181,8 @@ SUPPORTED_APPS = {
 
     'Subversion': ['.subversion'],
 
+    'Terminal.app': [PREFERENCES + 'com.apple.Terminal.plist'],
+
     'TextMate': [APP_SUPPORT + 'TextMate',
                  PREFERENCES + 'com.macromates.textmate.plist'],
 

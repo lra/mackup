@@ -190,9 +190,6 @@ SUPPORTED_APPS = {
 
     'Tmuxinator': ['.tmuxinator'],
 
-    'Transmission': [APP_SUPPORT + 'Transmission',
-                     PREFERENCES + 'org.m0k.transmission.plist'],
-
     'Ventrilo': [PREFERENCES + 'Ventrilo'],
 
     'Vim': ['.gvimrc',

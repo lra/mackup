@@ -6,7 +6,7 @@
 - Added support for Nano (thx @stechico)
 - Added support for SHSH Blobs (thx @stechico)
 - Added support for Teamocil and Tmuxinator (thx @djquan)
-- Added support for Viscosity (thx @ovrtn)
+- Added support for Viscosity and Transmission (thx @ovrtn)
 
 ## Mackup 0.3.2
 

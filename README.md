@@ -6,6 +6,8 @@ Keep your Mac application settings in sync.
 
 Install [Dropbox](http://www.dropbox.com/) first, it's needed.
 
+Close Sublime Text if you have it installed and open to avoid error messages when package files are moved.
+
 On your current Mac:
 ```bash
 # Download Mackup

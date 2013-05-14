@@ -195,6 +195,9 @@ SUPPORTED_APPS = {
     'Vimperator': ['.vimperator',
                    '.vimperatorrc'],
 
+    'Viscosity': [APP_SUPPORT + 'Viscosity',
+                  PREFERENCES + 'com.viscosityvpn.Viscosity.plist'],
+
     'Witch': [PREFERENCES + 'com.manytricks.Witch.plist'],
 
     'X11': ['.Xresources',

@@ -216,8 +216,7 @@ SSH
 Adium
 ```
 
-A sample of this file is available at
-https://github.com/lra/mackup/blob/master/.mackup.cfg
+A [sample](.mackup.cfg) of this file is available for download.
 
 ## Why did you do this ?!
 

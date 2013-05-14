@@ -187,6 +187,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [TextMate](http://macromates.com/)
   - [Tmux](http://tmux.sourceforge.net/)
   - [Tmuxinator](https://github.com/aziz/tmuxinator)
+  - [Transmission](http://www.transmissionbt.com/)
   - [Ventrilo](http://www.ventrilo.com/)
   - [Vim](http://www.vim.org/)
   - [Vimperator](http://www.vimperator.org/vimperator)

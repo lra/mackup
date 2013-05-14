@@ -685,6 +685,10 @@ def parse_cmdline_args():
                               "Uninstall will reset everything as it was"
                               " before using Mackup."))
 
+    parser.add_argument("--ignore", nargs='*',
+                        help=("A list of supported applications to ignore "
+                              "during a backup."))
+
     # Parse the command line and return the parsed options
     return parser.parse_args()
 
@@ -704,7 +708,7 @@ def get_dropbox_folder_location():
     return dropbox_home
 
 
-def get_ignored_apps():
+def get_ignored_apps(args):
     """
     Get the list of applications ignored in the config file
 
@@ -723,7 +727,11 @@ def get_ignored_apps():
         if config.has_section('Ignored Applications'):
             ignored_apps = config.options('Ignored Applications')
 
-    return ignored_apps
+    # Add on any command line arguments
+    if args:
+        ignored_apps = ignored_apps + [app.lower() for app in args]
+
+    return set(ignored_apps)
 
 
 ################
@@ -738,16 +746,13 @@ def main():
     args = parse_cmdline_args()
 
     # Get the list of ignored apps
-    ignored_apps = get_ignored_apps()
+    ignored_apps = get_ignored_apps(args.ignore)
 
     mackup = Mackup()
 
     if args.mode == BACKUP_MODE:
         # Check the env where the command is being run
         mackup.check_for_usable_backup_env()
-
-        # Get the list of ignored applications
-        ignored_apps = get_ignored_apps()
 
         # Backup each application
         for app_name in SUPPORTED_APPS:

@@ -32,6 +32,12 @@ import subprocess
 import sys
 import tempfile
 
+# Py3k compatible
+try:
+    import configparser
+except ImportError:
+    import ConfigParser as configparser
+
 
 #######################
 # Commonly used paths #
@@ -620,7 +626,7 @@ def chmod(target):
 
 def error(message):
     """
-    Throw an error with the given message and immediatly quit.
+    Throw an error with the given message and immediately quit.
 
     Args:
         message(str): The message to display.
@@ -691,13 +697,26 @@ def main():
     # Get the command line arg
     args = parse_cmdline_args()
 
+    # If a config file exists, grab it and parser it
+    configs = configparser.RawConfigParser()
+    configs.read(".mackup.cfg")
+
     mackup = Mackup()
 
     if args.mode == BACKUP_MODE:
         # Check the env where the command is being run
         mackup.check_for_usable_backup_env()
 
-        for app_name in SUPPORTED_APPS:
+        # If the we actually got a config file, great! Otherwise skip this and
+        # just use the default list
+        try:
+            ignore_apps = [app.strip() for app in configs.get('ignore_apps', 
+                'apps').split(",")]
+            apps_to_process = set(SUPPORTED_APPS.keys()) - set(ignore_apps)
+        except configparser.NoSectionError:
+            apps_to_process = SUPPORTED_APPS.keys()
+
+        for app_name in apps_to_process:
             app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
             app.backup()
 

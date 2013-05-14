@@ -31,6 +31,7 @@ import stat
 import subprocess
 import sys
 import tempfile
+import sqlite3
 
 
 #######################
@@ -414,26 +415,42 @@ class ApplicationProfile(object):
 class Mackup(object):
     """Main Mackup class"""
 
-    def __init__(self):
+    def __init__(self, args):
         """Mackup Constructor"""
-        try:
-            self.dropbox_folder = get_dropbox_folder_location()
-        except IOError:
-            error(("Unable to find the Dropbox folder."
-                   " If Dropbox is not installed and running, go for it on"
-                   " <http://www.dropbox.com/>"))
+        # Set syncApp to use
+        self.syncApp = args.sync
+        
+        if (self.syncApp == 'googledrive'):
+            try:
+                self.sync_folder = get_google_drive_folder_location()
+            except IOError:
+                error(("Unable to find the Google Drive folder."
+                       " If Google Drive is not installed and running, go for it on"
+                       " <https://drive.google.com/>"))
+        else:
+            try:
+                self.sync_folder = get_dropbox_folder_location()
+            except IOError:
+                error(("Unable to find the Dropbox folder."
+                       " If Dropbox is not installed and running, go for it on"
+                       " <http://www.dropbox.com/>"))
 
-        self.mackup_folder = self.dropbox_folder + '/Mackup'
+        self.mackup_folder = self.sync_folder + '/Mackup'
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
     def _check_for_usable_environment(self):
         """Check if the current env is usable and has everything's required"""
 
         # Do we have a home folder ?
-        if not os.path.isdir(self.dropbox_folder):
-            error(("Unable to find the Dropbox folder."
-                   " If Dropbox is not installed and running, go for it on"
-                   " <http://www.dropbox.com/>"))
+        if not os.path.isdir(self.sync_folder):
+            if (self.syncApp == 'googledrive'):
+                error(("Unable to find the Google Drive folder."
+                       " If Google Drive is not installed and running, go for it on"
+                       " <https://drive.google.com/>"))
+            else:
+                error(("Unable to find the Dropbox folder."
+                       " If Dropbox is not installed and running, go for it on"
+                       " <http://www.dropbox.com/>"))
 
         # Is Sublime Text running ?
         DEVNULL = open(os.devnull, 'wb')
@@ -677,6 +694,9 @@ def parse_cmdline_args():
                               "Uninstall will reset everything as it was"
                               " before using Mackup."))
 
+    parser.add_argument('-s', '--sync', default="dropbox", help="sync method to use: dropbox, googledrive "
+        "[default: dropbox]")
+
     # Parse the command line and return the parsed options
     return parser.parse_args()
 
@@ -696,6 +716,32 @@ def get_dropbox_folder_location():
     return dropbox_home
 
 
+def get_google_drive_folder_location():
+    """
+    Try to locate the Google Drive folder
+
+    Returns:
+        (str) Full path to the current Google Drive folder
+    """
+    try:
+        con = None
+        googleDriveDatabase = os.path.join(os.environ['HOME'], "Library/Application Support/Google/Drive/sync_config.db")
+        if (os.path.isfile(googleDriveDatabase)):
+            con = sqlite3.connect(googleDriveDatabase)
+            cur = con.cursor()
+            cur.execute("SELECT data_value FROM data WHERE entry_key = 'local_sync_root_path'")
+            data = cur.fetchone()
+            googledrive_home = str(data[0])
+    except sqlite3.Error, e:
+        print "Error %s:" % e.args[0]
+        sys.exit(1)
+    finally:
+        if con:
+            con.close()
+
+    return googledrive_home
+
+
 ################
 # Main Program #
 ################
@@ -707,7 +753,7 @@ def main():
     # Get the command line arg
     args = parse_cmdline_args()
 
-    mackup = Mackup()
+    mackup = Mackup(args)
 
     if args.mode == BACKUP_MODE:
         # Check the env where the command is being run

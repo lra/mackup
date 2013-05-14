@@ -190,6 +190,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Ventrilo](http://www.ventrilo.com/)
   - [Vim](http://www.vim.org/)
   - [Vimperator](http://www.vimperator.org/vimperator)
+  - [Viscosity](http://www.sparklabs.com/viscosity/)
   - [Witch](http://manytricks.com/witch/)
   - [X11](http://www.x.org/)
   - [XEmacs](http://www.xemacs.org/)

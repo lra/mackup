@@ -687,7 +687,9 @@ def parse_cmdline_args():
 
     parser.add_argument("--ignore", nargs='*',
                         help=("A list of supported applications to ignore "
-                              "during a backup."))
+                              "during a backup.  Wrap application names "
+                              "with spaces in quotes. "
+                              "e.g. --ignore 'oh my zsh'"))
 
     # Parse the command line and return the parsed options
     return parser.parse_args()
@@ -728,6 +730,7 @@ def get_ignored_apps(args):
             ignored_apps = config.options('Ignored Applications')
 
     # Add on any command line arguments
+    # We have to use .lower() here to eliminate user error
     if args:
         ignored_apps = ignored_apps + [app.lower() for app in args]
 
@@ -757,7 +760,7 @@ def main():
         # Backup each application
         for app_name in SUPPORTED_APPS:
             # Make sure we don't backup an ignored application
-            if app_name.lower() not in ignored_apps:
+            if app_name not in ignored_apps:
                 app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
                 app.backup()
 

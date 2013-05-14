@@ -170,6 +170,8 @@ SUPPORTED_APPS = {
                    APP_SUPPORT + 'SourceTree/hgrc_sourcetree',
                    APP_SUPPORT + 'SourceTree/hostingservices.plist'],
 
+    'Sparrow': ['Library/Containers/com.sparrowmailapp.sparrow/Data/Library/Application Support/Sparrow'],
+
     'SSH': ['.ssh'],
 
     'Sublime Text 2': [APP_SUPPORT + 'Sublime Text 2/Installed Packages',

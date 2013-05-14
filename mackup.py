@@ -55,171 +55,171 @@ APP_SUPPORT = 'Library/Application Support/'
 # Application Name: List of files (relative path from the user's home)
 
 SUPPORTED_APPS = {
-    'Adium': [APP_SUPPORT + 'Adium 2.0',
+    'adium': [APP_SUPPORT + 'Adium 2.0',
               PREFERENCES + 'com.adiumX.adiumX.plist'],
 
-    'AppCode 2': [APP_SUPPORT + 'appCode20',
+    'appcode 2': [APP_SUPPORT + 'appCode20',
                  PREFERENCES + 'appCode20'],
 
-    'Bash': ['.bash_aliases',
+    'bash': ['.bash_aliases',
              '.bash_logout',
              '.bashrc',
              '.profile',
              '.bash_profile',
              '.inputrc'],
 
-    'Boto': ['.boto'],
+    'boto': ['.boto'],
 
-    'Byobu': ['.byobu',
+    'byobu': ['.byobu',
               '.byoburc',
               '.byoburc.tmux',
               '.byoburc.screen'],
 
-    'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
+    'controlplane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
 
-    'Emacs': ['.emacs',
+    'emacs': ['.emacs',
               '.emacs.d'],
 
-    'ExpanDrive': [APP_SUPPORT + 'ExpanDrive'],
+    'expandrive': [APP_SUPPORT + 'ExpanDrive'],
 
-    'Fish': ['.config/fish'],
+    'fish': ['.config/fish'],
 
-    'GeekTool': [
+    'geektool': [
         PREFERENCES + 'org.tynsoe.GeekTool.plist',
         PREFERENCES + 'org.tynsoe.geeklet.file.plist',
         PREFERENCES + 'org.tynsoe.geeklet.image.plist',
         PREFERENCES + 'org.tynsoe.geeklet.shell.plist',
         PREFERENCES + 'org.tynsoe.geektool3.plist'],
 
-    'Git': ['.gitconfig',
+    'git': ['.gitconfig',
             '.gitignore_global'],
 
-    'Git Hooks': ['.git_hooks'],
+    'git hooks': ['.git_hooks'],
 
-    'GnuPG': ['.gnupg'],
+    'gnupg': ['.gnupg'],
 
-    'IntelliJIdea 12': [APP_SUPPORT + 'IntelliJIdea12',
+    'intellijidea 12': [APP_SUPPORT + 'IntelliJIdea12',
                        PREFERENCES + 'IntelliJIdea12'],
 
-    'iTerm2': [PREFERENCES + 'com.googlecode.iterm2.plist'],
+    'iterm2': [PREFERENCES + 'com.googlecode.iterm2.plist'],
 
-    'Keymo': [PREFERENCES + 'com.manytricks.Keymo.plist'],
+    'keymo': [PREFERENCES + 'com.manytricks.Keymo.plist'],
 
-    'KeyRemap4MacBook': [
+    'keyremap4macbook': [
         PREFERENCES + 'org.pqrs.KeyRemap4MacBook.plist',
         PREFERENCES + 'org.pqrs.KeyRemap4MacBook.multitouchextension.plist',
         APP_SUPPORT + 'KeyRemap4MacBook/private.xml'],
 
-    'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
+    'limechat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
 
-    'Mackup': ['.mackup.cfg'],
+    'mackup': ['.mackup.cfg'],
 
-    'MacOSX': ['.MacOSX',
+    'macosx': ['.MacOSX',
                'Library/ColorSync/Profiles'],
 
-    'MacVim': [PREFERENCES + 'org.vim.MacVim.LSSharedFileList.plist',
+    'macvim': [PREFERENCES + 'org.vim.MacVim.LSSharedFileList.plist',
                PREFERENCES + 'org.vim.MacVim.plist'],
 
-    'Many Tricks Licenses': [APP_SUPPORT + 'Many Tricks/Licenses'],
+    'many tricks licenses': [APP_SUPPORT + 'Many Tricks/Licenses'],
 
-    'Mercurial': ['.hgrc',
+    'mercurial': ['.hgrc',
                   '.hgignore_global'],
 
-    'MPV':['.mpv/channels.conf',
+    'mpv':['.mpv/channels.conf',
            '.mpv/config',
            '.mpv/input.conf'],
 
-    'MercuryMover': [PREFERENCES + 'com.heliumfoot.MyWiAgent.plist'],
+    'mercurymover': [PREFERENCES + 'com.heliumfoot.MyWiAgent.plist'],
 
-    'Nano': ['.nanorc'],
+    'nano': ['.nanorc'],
 
-    'Oh My Zsh': ['.oh-my-zsh'],
+    'oh my zsh': ['.oh-my-zsh'],
 
-    'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
+    'pckeyboardhack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
 
-    'Pow': ['.powconfig',
+    'pow': ['.powconfig',
             '.powenv',
             '.powrc'],
 
-    'PyPI': ['.pypirc'],
+    'pypi': ['.pypirc'],
 
-    'Quicksilver': [PREFERENCES + 'com.blacktree.Quicksilver.plist',
+    'quicksilver': [PREFERENCES + 'com.blacktree.Quicksilver.plist',
                     APP_SUPPORT + 'Quicksilver'],
 
-    'Rails': ['.railsrc'],
+    'rails': ['.railsrc'],
 
-    'Ruby': ['.gemrc',
+    'ruby': ['.gemrc',
              '.irbrc'],
 
-    'RubyMine 4': [APP_SUPPORT + 'RubyMine40',
+    'rubymine 4': [APP_SUPPORT + 'RubyMine40',
                   PREFERENCES + 'RubyMine40'],
 
-    'Ruby Version': ['.ruby-version'],
+    'ruby version': ['.ruby-version'],
 
-    'Pentadactyl': ['.pentadactyl',
+    'pentadactyl': ['.pentadactyl',
                     '.pentadactylrc'],
 
-    'S3cmd': ['.s3cfg'],
+    's3cmd': ['.s3cfg'],
 
-    'Screen': ['.screenrc'],
+    'screen': ['.screenrc'],
 
-    'Sequel Pro': [APP_SUPPORT + 'Sequel Pro/Data'],
+    'sequel pro': [APP_SUPPORT + 'Sequel Pro/Data'],
 
-    'SHSH Blobs': ['.shsh'],
+    'shsh blobs': ['.shsh'],
 
-    'SizeUp': [PREFERENCES + 'com.irradiatedsoftware.SizeUp.plist',
+    'sizeup': [PREFERENCES + 'com.irradiatedsoftware.SizeUp.plist',
                APP_SUPPORT + 'SizeUp/SizeUp.sizeuplicense'],
 
-    'Slate': ['.slate',
+    'slate': ['.slate',
               APP_SUPPORT + 'com.slate.Slate'],
 
-    'SourceTree': [APP_SUPPORT + 'SourceTree/sourcetree.license',
+    'sourcetree': [APP_SUPPORT + 'SourceTree/sourcetree.license',
                    APP_SUPPORT + 'SourceTree/browser.plist',
                    APP_SUPPORT + 'SourceTree/hgrc_sourcetree',
                    APP_SUPPORT + 'SourceTree/hostingservices.plist'],
 
-    'SSH': ['.ssh'],
+    'ssh': ['.ssh'],
 
-    'Sublime Text 2': [APP_SUPPORT + 'Sublime Text 2/Installed Packages',
+    'sublime text 2': [APP_SUPPORT + 'Sublime Text 2/Installed Packages',
                        APP_SUPPORT + 'Sublime Text 2/Packages',
                        APP_SUPPORT + 'Sublime Text 2/Pristine Packages'],
 
-    'Sublime Text 3': [APP_SUPPORT + 'Sublime Text 3/Installed Packages',
+    'sublime text 3': [APP_SUPPORT + 'Sublime Text 3/Installed Packages',
                        APP_SUPPORT + 'Sublime Text 3/Packages'],
 
-    'Subversion': ['.subversion'],
+    'subversion': ['.subversion'],
 
-    'Teamocil': ['.teamocil'],
+    'teamocil': ['.teamocil'],
 
-    'TextMate': [APP_SUPPORT + 'TextMate',
+    'textmate': [APP_SUPPORT + 'TextMate',
                  PREFERENCES + 'com.macromates.textmate.plist'],
 
-    'Tmux': ['.tmux.conf'],
+    'tmux': ['.tmux.conf'],
 
-    'Tmuxinator': ['.tmuxinator'],
+    'tmuxinator': ['.tmuxinator'],
 
-    'Transmission': [PREFERENCES + 'org.m0k.transmission.plist'],
+    'transmission': [PREFERENCES + 'org.m0k.transmission.plist'],
 
-    'Ventrilo': [PREFERENCES + 'Ventrilo'],
+    'ventrilo': [PREFERENCES + 'Ventrilo'],
 
-    'Vim': ['.gvimrc',
+    'vim': ['.gvimrc',
             '.vim',
             '.vimrc'],
 
-    'Vimperator': ['.vimperator',
+    'vimperator': ['.vimperator',
                    '.vimperatorrc'],
 
-    'Viscosity': [APP_SUPPORT + 'Viscosity',
+    'viscosity': [APP_SUPPORT + 'Viscosity',
                   PREFERENCES + 'com.viscosityvpn.Viscosity.plist'],
 
-    'Witch': [PREFERENCES + 'com.manytricks.Witch.plist'],
+    'witch': [PREFERENCES + 'com.manytricks.Witch.plist'],
 
-    'X11': ['.Xresources',
+    'x11': ['.Xresources',
             '.fonts'],
 
-    'XEmacs': ['.xemacs'],
+    'xemacs': ['.xemacs'],
 
-    'Zsh': ['.zshenv',
+    'zsh': ['.zshenv',
             '.zprofile',
             '.zshrc',
             '.zlogin',
@@ -685,6 +685,12 @@ def parse_cmdline_args():
                               "Uninstall will reset everything as it was"
                               " before using Mackup."))
 
+    parser.add_argument("--ignore", nargs='*',
+                        help=("A list of supported applications to ignore "
+                              "during a backup.  Wrap application names "
+                              "with spaces in quotes. "
+                              "e.g. --ignore 'oh my zsh'"))
+
     # Parse the command line and return the parsed options
     return parser.parse_args()
 
@@ -704,7 +710,7 @@ def get_dropbox_folder_location():
     return dropbox_home
 
 
-def get_ignored_apps():
+def get_ignored_apps(args):
     """
     Get the list of applications ignored in the config file
 
@@ -723,7 +729,12 @@ def get_ignored_apps():
         if config.has_section('Ignored Applications'):
             ignored_apps = config.options('Ignored Applications')
 
-    return ignored_apps
+    # Add on any command line arguments
+    # We have to use .lower() here to eliminate user error
+    if args:
+        ignored_apps = ignored_apps + [app.lower() for app in args]
+
+    return set(ignored_apps)
 
 
 ################
@@ -738,7 +749,7 @@ def main():
     args = parse_cmdline_args()
 
     # Get the list of ignored apps
-    ignored_apps = get_ignored_apps()
+    ignored_apps = get_ignored_apps(args.ignore)
 
     mackup = Mackup()
 
@@ -746,13 +757,10 @@ def main():
         # Check the env where the command is being run
         mackup.check_for_usable_backup_env()
 
-        # Get the list of ignored applications
-        ignored_apps = get_ignored_apps()
-
         # Backup each application
         for app_name in SUPPORTED_APPS:
             # Make sure we don't backup an ignored application
-            if app_name.lower() not in ignored_apps:
+            if app_name not in ignored_apps:
                 app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
                 app.backup()
 

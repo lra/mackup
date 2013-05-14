@@ -206,7 +206,7 @@ Open a [new issue](https://github.com/lra/mackup/issues).
 
 ## How can I tell Mackup to not sync an application ?
 
-In your home folder, create a file name `.mackup.cfg` and add the application
+In your home folder, create a file named `.mackup.cfg` and add the application
 names to ignore in the `Ignored Applications` section, one by line.
 
 ```ini

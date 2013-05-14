@@ -112,6 +112,8 @@ SUPPORTED_APPS = {
 
     'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
 
+    'Mackup': ['.mackup.cfg'],
+
     'MacOSX': ['.MacOSX',
                'Library/ColorSync/Profiles'],
 
@@ -702,6 +704,25 @@ def get_dropbox_folder_location():
     return dropbox_home
 
 
+def get_ignored_apps():
+    """
+    Get the list of applications ignored in the config file
+
+    Returns:
+        (list) List of application names to ignore, lowercase
+    """
+    # If a config file exists, grab it and parser it
+    config = configparser.SafeConfigParser(allow_no_value=True)
+    config.read(os.environ['HOME'] + '.mackup.cfg')
+
+    try:
+        ignored_apps = config.options('Ignored Applications')
+    except configparser.NoSectionError:
+        ignored_apps = []
+
+    return ignored_apps
+
+
 ################
 # Main Program #
 ################
@@ -713,9 +734,8 @@ def main():
     # Get the command line arg
     args = parse_cmdline_args()
 
-    # If a config file exists, grab it and parser it
-    configs = configparser.RawConfigParser()
-    configs.read(".mackup.cfg")
+    # Get the list of ignored apps
+    ignored_apps = get_ignored_apps()
 
     mackup = Mackup()
 
@@ -723,15 +743,11 @@ def main():
         # Check the env where the command is being run
         mackup.check_for_usable_backup_env()
 
-        # If the we actually got a config file, great! Otherwise skip this and
-        # just use the default list
-        try:
-            ignore_apps = [app.strip() for app in configs.get('ignore_apps', 
-                'apps').split(",")]
-            apps_to_process = set(SUPPORTED_APPS.keys()) - set(ignore_apps)
-        except configparser.NoSectionError:
-            apps_to_process = SUPPORTED_APPS.keys()
+        # Figure out the list of apps to process, ignoring the list of apps
+        # the user ignored
+        apps_to_process = set(SUPPORTED_APPS.keys()) - set(get_ignored_apps())
 
+        # Backup each non ignored application
         for app_name in apps_to_process:
             app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
             app.backup()

@@ -204,6 +204,21 @@ You can add your favorite application by forking it and doing a
 
 Open a [new issue](https://github.com/lra/mackup/issues).
 
+## How can I tell Mackup to not sync an application ?
+
+In your home folder, create a file name `.mackup.cfg` and add the application
+names to ignore in the `Ignored Applications` section, one by line.
+
+```ini
+# Example, to not sync SSH and Adium:
+[Ignored Applications]
+SSH
+Adium
+```
+
+A sample of this file is available at
+https://github.com/lra/mackup/blob/master/.mackup.cfg
+
 ## Why did you do this ?!
 
 Yesterday, I had a talk with [Zach Zaro](http://zacharyzaro.com/), complaining

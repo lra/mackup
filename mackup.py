@@ -170,7 +170,8 @@ SUPPORTED_APPS = {
                    APP_SUPPORT + 'SourceTree/hgrc_sourcetree',
                    APP_SUPPORT + 'SourceTree/hostingservices.plist'],
 
-    'Sparrow': ['Library/Containers/com.sparrowmailapp.sparrow/Data/Library/Application Support/Sparrow'],
+    'Sparrow': ['Library/Containers/com.sparrowmailapp.sparrow/Data/Library/Application Support/Sparrow/Accounts',
+                'Library/Containers/com.sparrowmailapp.sparrow/Data/Library/Preferences/com.sparrowmailapp.sparrow.plist'],
 
     'SSH': ['.ssh'],
 

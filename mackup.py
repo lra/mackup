@@ -126,6 +126,8 @@ SUPPORTED_APPS = {
 
     'Nano': ['.nanorc'],
 
+    'nvALT': [PREFERENCES + 'net.elasticthreads.nv.plist'],
+
     'Oh My Zsh': ['.oh-my-zsh'],
 
     'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
@@ -419,7 +421,7 @@ class Mackup(object):
         """Mackup Constructor"""
         # Set syncApp to use
         self.syncApp = args.sync
-        
+
         if (self.syncApp == 'googledrive'):
             try:
                 self.sync_folder = get_google_drive_folder_location()

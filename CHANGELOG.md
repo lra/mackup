@@ -8,6 +8,7 @@
 - Added support for Teamocil and Tmuxinator (thx @djquan)
 - Added support for Viscosity and Transmission (thx @ovrtn)
 - Fixed support for Sublime Text (thx @nZac)
+- Added a config file to not sync some user defined applications (thx @nZac)
 
 ## Mackup 0.3.2
 

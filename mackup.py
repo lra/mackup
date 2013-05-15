@@ -32,6 +32,12 @@ import subprocess
 import sys
 import tempfile
 
+# Py3k compatible
+try:
+    import configparser
+except ImportError:
+    import ConfigParser as configparser
+
 
 #######################
 # Commonly used paths #
@@ -105,6 +111,8 @@ SUPPORTED_APPS = {
         APP_SUPPORT + 'KeyRemap4MacBook/private.xml'],
 
     'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
+
+    'Mackup': ['.mackup.cfg'],
 
     'MacOSX': ['.MacOSX',
                'Library/ColorSync/Profiles'],
@@ -636,7 +644,7 @@ def chmod(target):
 
 def error(message):
     """
-    Throw an error with the given message and immediatly quit.
+    Throw an error with the given message and immediately quit.
 
     Args:
         message(str): The message to display.
@@ -696,6 +704,46 @@ def get_dropbox_folder_location():
     return dropbox_home
 
 
+def get_ignored_apps():
+    """
+    Get the list of applications ignored in the config file
+
+    Returns:
+        (set) List of application names to ignore, lowercase
+    """
+    # If a config file exists, grab it and parser it
+    config = configparser.SafeConfigParser(allow_no_value=True)
+
+    # We ignore nothing by default
+    ignored_apps = []
+
+    # Is the config file there ?
+    if config.read(os.environ['HOME'] + '/.mackup.cfg'):
+        # Is the "Ignored Applications" in the cfg file ?
+        if config.has_section('Ignored Applications'):
+            ignored_apps = config.options('Ignored Applications')
+
+    return set(ignored_apps)
+
+
+def get_apps_to_backup():
+    """
+    Get the list of application that should be backup by Mackup.
+    It's the list of supported apps minus the list of ignored apps.
+
+    Returns:
+        (set) List of application names to backup
+    """
+    apps_to_backup = set()
+    apps_to_ignore = get_ignored_apps()
+
+    for app_name in SUPPORTED_APPS:
+        if app_name.lower() not in apps_to_ignore:
+            apps_to_backup.add(app_name)
+
+    return apps_to_backup
+
+
 ################
 # Main Program #
 ################
@@ -713,7 +761,8 @@ def main():
         # Check the env where the command is being run
         mackup.check_for_usable_backup_env()
 
-        for app_name in SUPPORTED_APPS:
+        # Backup each application
+        for app_name in get_apps_to_backup():
             app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
             app.backup()
 

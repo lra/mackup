@@ -444,11 +444,11 @@ class Mackup(object):
                    " <http://www.dropbox.com/>"))
 
         # Is Sublime Text running ?
-        if is_process_running('Sublime Text'):
-            error(("Sublime Text is running. It is known to cause problems"
-                   " when Sublime Text is running while I backup or restore"
-                   " its configuration files. Please close Sublime Text and"
-                   " run me again."))
+        #if is_process_running('Sublime Text'):
+        #    error(("Sublime Text is running. It is known to cause problems"
+        #           " when Sublime Text is running while I backup or restore"
+        #           " its configuration files. Please close Sublime Text and"
+        #           " run me again."))
 
 
     def check_for_usable_backup_env(self):

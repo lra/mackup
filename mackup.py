@@ -709,7 +709,7 @@ def get_ignored_apps():
     Get the list of applications ignored in the config file
 
     Returns:
-        (list) List of application names to ignore, lowercase
+        (set) List of application names to ignore, lowercase
     """
     # If a config file exists, grab it and parser it
     config = configparser.SafeConfigParser(allow_no_value=True)
@@ -723,7 +723,25 @@ def get_ignored_apps():
         if config.has_section('Ignored Applications'):
             ignored_apps = config.options('Ignored Applications')
 
-    return ignored_apps
+    return set(ignored_apps)
+
+
+def get_apps_to_backup():
+    """
+    Get the list of application that should be backup by Mackup.
+    It's the list of supported apps minus the list of ignored apps.
+
+    Returns:
+        (set) List of application names to backup
+    """
+    apps_to_backup = set()
+    apps_to_ignore = get_ignored_apps()
+
+    for app_name in SUPPORTED_APPS:
+        if app_name.lower() not in apps_to_ignore:
+            apps_to_backup.add(app_name)
+
+    return apps_to_backup
 
 
 ################
@@ -737,24 +755,16 @@ def main():
     # Get the command line arg
     args = parse_cmdline_args()
 
-    # Get the list of ignored apps
-    ignored_apps = get_ignored_apps()
-
     mackup = Mackup()
 
     if args.mode == BACKUP_MODE:
         # Check the env where the command is being run
         mackup.check_for_usable_backup_env()
 
-        # Get the list of ignored applications
-        ignored_apps = get_ignored_apps()
-
         # Backup each application
-        for app_name in SUPPORTED_APPS:
-            # Make sure we don't backup an ignored application
-            if app_name.lower() not in ignored_apps:
-                app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
-                app.backup()
+        for app_name in get_apps_to_backup():
+            app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
+            app.backup()
 
     elif args.mode == RESTORE_MODE:
         # Check the env where the command is being run

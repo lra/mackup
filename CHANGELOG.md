@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Made a method to check if a process is running
+
 ## Mackup 0.4
 
 - Fixed support for locked files e.g. SourceTree (thx @dbingham)

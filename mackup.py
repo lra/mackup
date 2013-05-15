@@ -232,7 +232,7 @@ SUPPORTED_APPS = {
 
 
 # Current version
-VERSION = '0.3.2'
+VERSION = '0.4'
 
 # Mode used to backup files to Dropbox
 BACKUP_MODE = 'backup'

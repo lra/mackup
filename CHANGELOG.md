@@ -2,7 +2,11 @@
 
 ## WIP
 
-- Made a method to check if a process is running
+- Made a method to check if a process is running (not yet)
+
+## Mackup 0.4.1
+
+- Hotfix: Checking that a process is runnin is not working everywhere
 
 ## Mackup 0.4
 

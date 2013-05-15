@@ -126,7 +126,9 @@ SUPPORTED_APPS = {
 
     'Nano': ['.nanorc'],
 
-    'nvALT': [PREFERENCES + 'net.elasticthreads.nv.plist'],
+    'nvALT': [PREFERENCES + 'net.elasticthreads.nv.plist',
+              APP_SUPPORT + 'Notational Velocity',
+              APP_SUPPORT + 'Notational Data'],
 
     'Oh My Zsh': ['.oh-my-zsh'],
 

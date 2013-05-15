@@ -444,10 +444,7 @@ class Mackup(object):
                    " <http://www.dropbox.com/>"))
 
         # Is Sublime Text running ?
-        DEVNULL = open(os.devnull, 'wb')
-        returncode = subprocess.call(['/usr/bin/pgrep', 'Sublime Text'],
-                                     stdout=DEVNULL)
-        if returncode == 0:
+        if is_process_running('Sublime Text'):
             error(("Sublime Text is running. It is known to cause problems"
                    " when Sublime Text is running while I backup or restore"
                    " its configuration files. Please close Sublime Text and"
@@ -742,6 +739,23 @@ def get_apps_to_backup():
             apps_to_backup.add(app_name)
 
     return apps_to_backup
+
+
+def is_process_running(process_name):
+    """
+    Check if a process with the given name is running
+
+    Args:
+        (str): Process name, e.g. "Sublime Text"
+
+    Returns:
+        (bool): True if the process is running
+    """
+    DEVNULL = open(os.devnull, 'wb')
+    returncode = subprocess.call(['/usr/bin/pgrep', process_name],
+                                 stdout=DEVNULL)
+
+    return bool(returncode == 0)
 
 
 ################

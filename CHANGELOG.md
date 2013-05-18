@@ -3,6 +3,7 @@
 ## WIP
 
 - Made a method to check if a process is running (not yet)
+- Added support for XCode (thx @adeca)
 
 ## Mackup 0.4.1
 

@@ -194,6 +194,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Viscosity](http://www.sparklabs.com/viscosity/)
   - [Witch](http://manytricks.com/witch/)
   - [X11](http://www.x.org/)
+  - [XCode](https://developer.apple.com/xcode/)
   - [XEmacs](http://www.xemacs.org/)
   - [Zsh](http://zsh.sourceforge.net/)
 

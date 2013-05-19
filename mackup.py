@@ -220,7 +220,7 @@ SUPPORTED_APPS = {
     'Xcode': ['Library/Developer/Xcode/UserData/CodeSnippets',
               'Library/Developer/Xcode/UserData/FontAndColorThemes',
               'Library/Developer/Xcode/UserData/KeyBindings',
-              'Library/Developer/Xcode/UserData/SearchScopes.xcsclist']
+              'Library/Developer/Xcode/UserData/SearchScopes.xcsclist'],
 
     'XEmacs': ['.xemacs'],
 

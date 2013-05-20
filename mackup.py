@@ -178,6 +178,8 @@ SUPPORTED_APPS = {
                    APP_SUPPORT + 'SourceTree/hgrc_sourcetree',
                    APP_SUPPORT + 'SourceTree/hostingservices.plist'],
 
+    'Spark': [APP_SUPPORT + 'Spark'],
+
     'SSH': ['.ssh'],
 
     'Sublime Text 2': [APP_SUPPORT + 'Sublime Text 2/Installed Packages',

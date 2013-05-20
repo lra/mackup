@@ -68,6 +68,14 @@ SUPPORTED_APPS = {
              '.bash_profile',
              '.inputrc'],
 
+    'BetterTouchTool': [
+        PREFERENCES + 'com.hegenberg.BetterTouchTool.plist',
+        APP_SUPPORT + 'BetterTouchTool'],
+
+    'BetterSnapTool': [
+        PREFERENCES + 'com.hegenberg.BetterSnapTool.plist',
+        APP_SUPPORT + 'BetterSnapTool'],
+
     'Boto': ['.boto'],
 
     'Byobu': ['.byobu',

@@ -148,6 +148,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [CoRD](http://cord.sourceforge.net/)
   - [Emacs](http://www.gnu.org/software/emacs/)
   - [ExpanDrive](http://www.expandrive.com/)
+  - [Flux](http://stereopsis.com/flux/)
   - [Fish](http://ridiculousfish.com/shell/)
   - [GeekTool](http://projects.tynsoe.org/en/geektool/)
   - [Git](http://git-scm.com/)

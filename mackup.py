@@ -86,6 +86,8 @@ SUPPORTED_APPS = {
 
     'Fish': ['.config/fish'],
 
+    'Flux': [PREFERENCES + 'org.herf.Flux.plist'],
+
     'GeekTool': [
         PREFERENCES + 'org.tynsoe.GeekTool.plist',
         PREFERENCES + 'org.tynsoe.geeklet.file.plist',

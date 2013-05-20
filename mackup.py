@@ -77,6 +77,8 @@ SUPPORTED_APPS = {
 
     'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
 
+    'CoRD': [APP_SUPPORT + 'CoRD'],
+
     'Emacs': ['.emacs',
               '.emacs.d'],
 
@@ -177,6 +179,8 @@ SUPPORTED_APPS = {
                    APP_SUPPORT + 'SourceTree/browser.plist',
                    APP_SUPPORT + 'SourceTree/hgrc_sourcetree',
                    APP_SUPPORT + 'SourceTree/hostingservices.plist'],
+
+    'Spark': [APP_SUPPORT + 'Spark'],
 
     'SSH': ['.ssh'],
 

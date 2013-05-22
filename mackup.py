@@ -147,6 +147,8 @@ SUPPORTED_APPS = {
 
     'PyPI': ['.pypirc'],
 
+	'Quicklook': ['Library/Quicklook'],
+
     'Quicksilver': [PREFERENCES + 'com.blacktree.Quicksilver.plist',
                     APP_SUPPORT + 'Quicksilver'],
 
@@ -165,9 +167,13 @@ SUPPORTED_APPS = {
 
     'S3cmd': ['.s3cfg'],
 
+	'Scripts': ['Library/Scripts'],
+
     'Screen': ['.screenrc'],
 
     'Sequel Pro': [APP_SUPPORT + 'Sequel Pro/Data'],
+
+	'Services': ['Library/Services'],
 
     'SHSH Blobs': ['.shsh'],
 
@@ -837,3 +843,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    

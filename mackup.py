@@ -98,6 +98,8 @@ SUPPORTED_APPS = {
     'Git': ['.gitconfig',
             '.gitignore_global'],
 
+    'Gitbox': [PREFERENCES + 'com.oleganza.gitbox.plist'],
+
     'Git Hooks': ['.git_hooks'],
 
     'GnuPG': ['.gnupg'],
@@ -117,6 +119,8 @@ SUPPORTED_APPS = {
     'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
 
     'Mackup': ['.mackup.cfg'],
+
+    'MailPlane': [PREFERENCES + 'com.mailplaneapp.Mailplane.plist'],
 
     'MacOSX': ['.MacOSX',
                'Library/ColorSync/Profiles'],

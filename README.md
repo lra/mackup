@@ -248,6 +248,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Subversion](http://subversion.apache.org/)
   - [Teamocil](http://remiprev.github.io/teamocil/)
   - [TextMate](http://macromates.com/)
+  - [TextMate GetBundles](http://al3x.net/2008/12/03/how-i-use-textmate.html)
   - [Tmux](http://tmux.sourceforge.net/)
   - [Tmuxinator](https://github.com/aziz/tmuxinator)
   - [TotalFinder](http://totalfinder.binaryage.com/)

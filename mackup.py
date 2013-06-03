@@ -364,6 +364,8 @@ SUPPORTED_APPS = {
                  PREFERENCES + 'com.macromates.textmate.plist',
                  PREFERENCES + 'com.macromates.textmate.webpreview.plist'],
 
+    'TextMate GetBundles': [PREFERENCES + 'com.macromates.textmate.getbundles.plist'],
+
     'Tmux': ['.tmux.conf'],
 
     'Tmuxinator': ['.tmuxinator'],

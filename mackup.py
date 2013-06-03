@@ -379,6 +379,11 @@ SUPPORTED_APPS = {
 
     'Twitterrific': [APP_SUPPORT + 'Twitterrific'],
 
+    'VelaClock': [PREFERENCES + 'widget-com.veladg.widget.velaclockdeluxe.plist',
+                  PREFERENCES + 'com.veladg.vcDeluxeReg.plist',
+                  APP_SUPPORT + 'VelaClock',
+                  APP_SUPPORT + 'Vela Design Group'],
+
     'Ventrilo': [PREFERENCES + 'Ventrilo'],
 
     'Vim': ['.gvimrc',

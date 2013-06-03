@@ -361,7 +361,8 @@ SUPPORTED_APPS = {
     'Teamocil': ['.teamocil'],
 
     'TextMate': [APP_SUPPORT + 'TextMate',
-                 PREFERENCES + 'com.macromates.textmate.plist'],
+                 PREFERENCES + 'com.macromates.textmate.plist',
+                 PREFERENCES + 'com.macromates.textmate.webpreview.plist'],
 
     'Tmux': ['.tmux.conf'],
 

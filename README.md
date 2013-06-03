@@ -192,6 +192,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [IntelliJIDEA 12](http://www.jetbrains.com/idea/)
   - [Irssi](http://www.irssi.org/)
   - [ITerm2](http://www.iterm2.com/)
+  - [iWork Templates](http://www.apple.com/iwork/resources/)
   - [Janus](https://github.com/carlhuda/janus)
   - [Keymo](http://manytricks.com/keymo/)
   - [KeyRemap4MacBook](http://pqrs.org/macosx/keyremap4macbook/)

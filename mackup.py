@@ -182,6 +182,8 @@ SUPPORTED_APPS = {
 
     'Irssi': ['.irssi'],
 
+    'iWork Templates': [APP_SUPPORT + "iWork"],
+
     'Janus': ['.janus'],
 
     'Keymo': [PREFERENCES + 'com.manytricks.Keymo.plist'],

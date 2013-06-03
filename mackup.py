@@ -367,6 +367,9 @@ SUPPORTED_APPS = {
 
     'Tmuxinator': ['.tmuxinator'],
 
+    'TotalFinder': [PREFERENCES + 'com.binaryage.totalfinder.crashwatcher.plist',
+                    PREFERENCES + 'com.binaryage.totalfinder.plist'],
+
     'TotalTerminal': [PREFERENCES + 'com.binaryage.totalterminal.crashwatcher.plist',
                       PREFERENCES + 'com.binaryage.totalterminal.plist'],
 

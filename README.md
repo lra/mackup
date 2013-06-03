@@ -250,6 +250,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [TextMate](http://macromates.com/)
   - [Tmux](http://tmux.sourceforge.net/)
   - [Tmuxinator](https://github.com/aziz/tmuxinator)
+  - [TotalFinder](http://totalfinder.binaryage.com/)
   - [TotalTerminal](http://totalterminal.binaryage.com/)
   - [Tower](http://www.git-tower.com/)
   - [Transmission](http://www.transmissionbt.com/)

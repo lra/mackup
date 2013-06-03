@@ -366,6 +366,10 @@ SUPPORTED_APPS = {
 
     'TextMate GetBundles': [PREFERENCES + 'com.macromates.textmate.getbundles.plist'],
 
+    'TextWrangler': [APP_SUPPORT + 'TextWrangler',
+                     PREFERENCES + 'com.barebones.textwrangler.PreferenceData',
+                     PREFERENCES + 'com.barebones.textwrangler.plist'],
+
     'Tmux': ['.tmux.conf'],
 
     'Tmuxinator': ['.tmuxinator'],

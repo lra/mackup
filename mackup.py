@@ -345,7 +345,8 @@ SUPPORTED_APPS = {
 
     'Sublime Text 2': [APP_SUPPORT + 'Sublime Text 2/Installed Packages',
                        APP_SUPPORT + 'Sublime Text 2/Packages',
-                       APP_SUPPORT + 'Sublime Text 2/Pristine Packages'],
+                       APP_SUPPORT + 'Sublime Text 2/Pristine Packages',
+                       APP_SUPPORT + 'Sublime Text 2/Settings'],
 
     'Sublime Text 3': [APP_SUPPORT + 'Sublime Text 3/Installed Packages',
                        APP_SUPPORT + 'Sublime Text 3/Packages'],

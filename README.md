@@ -262,6 +262,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Textual](http://www.codeux.com/textual/)
   - [Tmux](http://tmux.sourceforge.net/)
   - [Tmuxinator](https://github.com/aziz/tmuxinator)
+  - [TotalTerminal](http://totalterminal.binaryage.com/)
   - [Tower](http://www.git-tower.com/)
   - [Transmission](http://www.transmissionbt.com/)
   - [Transmit](http://panic.com/transmit/)

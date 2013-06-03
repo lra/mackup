@@ -321,6 +321,9 @@ SUPPORTED_APPS = {
 
     'Skim': [PREFERENCES + 'net.sourceforge.skim-app.skim.plist'],
 
+    'Skype': [PREFERENCES + 'com.skype.skype.plist',
+              APP_SUPPORT + 'Skype'],
+
     'Slate': ['.slate',
               APP_SUPPORT + 'com.slate.Slate'],
 

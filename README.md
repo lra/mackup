@@ -151,6 +151,7 @@ That's it, you got your `git` config setup on your new workstation.
 
 ## Supported Applications
 
+  - [ABBY FineReader for ScanSnap](http://www.abbyy.com/support/FRScanSnap/)
   - [Ack](http://beyondgrep.com/)
   - [Adium](http://adium.im/)
   - [Adobe Lightroom](http://www.adobe.com/products/photoshop-lightroom.html)
@@ -164,6 +165,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Boto](https://github.com/boto/boto)
   - [Byobu](http://byobu.co/)
   - [Caffeine](http://lightheadsw.com/caffeine/)
+  - [Cardiris for ScanSnap](http://www.irislink.com/c2-2329-189/Cardiris--for-ScanSnap.aspx)
   - [Chef](http://www.opscode.com/chef/)
   - [ClipMenu](http://www.clipmenu.com/)
   - [CloudApp](http://getcloudapp.com/)
@@ -224,6 +226,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [RubyMine 4](http://www.jetbrains.com/ruby/)
   - [RubyMine 5](http://www.jetbrains.com/ruby/)
   - [S3cmd](http://s3tools.org/s3cmd)
+  - [ScanSnap Manager V3.2](http://www.fujitsu.com/global/support/computing/peripheral/scanners/software/s1500.html)
   - [Scenario](http://www.lagentesoft.com/scenario/)
   - [Screen](http://www.gnu.org/software/screen/)
   - [SelfControl](http://selfcontrolapp.com/)

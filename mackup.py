@@ -87,6 +87,9 @@ SUPPORTED_APPS = {
 
     'CoRD': [APP_SUPPORT + 'CoRD'],
 
+    'Coda 2': [APP_SUPPORT + 'Coda 2',
+                 PREFERENCES + 'com.panic.Coda2.plist'],
+
     'Emacs': ['.emacs',
               '.emacs.d'],
 

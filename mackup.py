@@ -131,7 +131,7 @@ SUPPORTED_APPS = {
 
     'Mackup': ['.mackup.cfg'],
 
-    'MailPlane': [PREFERENCES + 'com.mailplaneapp.Mailplane.plist'],
+    'Mailplane': [PREFERENCES + 'com.mailplaneapp.Mailplane.plist'],
 
     'MacOSX': ['.MacOSX',
                'Library/ColorSync/Profiles'],

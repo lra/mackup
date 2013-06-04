@@ -68,13 +68,13 @@ SUPPORTED_APPS = {
              '.bash_profile',
              '.inputrc'],
 
-    'BetterTouchTool': [
-        PREFERENCES + 'com.hegenberg.BetterTouchTool.plist',
-        APP_SUPPORT + 'BetterTouchTool'],
-
     'BetterSnapTool': [
         PREFERENCES + 'com.hegenberg.BetterSnapTool.plist',
         APP_SUPPORT + 'BetterSnapTool'],
+
+    'BetterTouchTool': [
+        PREFERENCES + 'com.hegenberg.BetterTouchTool.plist',
+        APP_SUPPORT + 'BetterTouchTool'],
 
     'Boto': ['.boto'],
 
@@ -88,7 +88,7 @@ SUPPORTED_APPS = {
     'CoRD': [APP_SUPPORT + 'CoRD'],
 
     'Coda 2': [APP_SUPPORT + 'Coda 2',
-                 PREFERENCES + 'com.panic.Coda2.plist'],
+               PREFERENCES + 'com.panic.Coda2.plist'],
 
     'Emacs': ['.emacs',
               '.emacs.d'],
@@ -233,7 +233,7 @@ SUPPORTED_APPS = {
 
     'X11': ['.Xresources',
             '.fonts'],
-            
+
     'Xcode': ['Library/Developer/Xcode/UserData/CodeSnippets',
               'Library/Developer/Xcode/UserData/FontAndColorThemes',
               'Library/Developer/Xcode/UserData/KeyBindings',

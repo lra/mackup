@@ -4,8 +4,8 @@
 
 - Made a method to check if a process is running (not yet)
 - Added support for XCode (thx @adeca)
-- Added support for CoRD, Spark, f.lux, BetterTouchTool and BetterSnapTool (thx
-  @TimCorcoran)
+- Added support for CoRD, Spark, f.lux, BetterTouchTool, BetterSnapTool and
+  Coda 2 (thx @TimCorcoran)
 
 ## Mackup 0.4.1
 

@@ -147,6 +147,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Boto](https://github.com/boto/boto)
   - [Byobu](http://byobu.co/)
   - [ControlPlane](http://www.controlplaneapp.com/)
+  - [Coda 2](http://panic.com/coda/)
   - [CoRD](http://cord.sourceforge.net/)
   - [Emacs](http://www.gnu.org/software/emacs/)
   - [ExpanDrive](http://www.expandrive.com/)

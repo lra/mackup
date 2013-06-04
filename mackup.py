@@ -397,6 +397,9 @@ SUPPORTED_APPS = {
                   APP_SUPPORT + 'VelaClock',
                   APP_SUPPORT + 'Vela Design Group'],
 
+    'VelaTerra': [PREFERENCES + 'com.veladg.VelaTerra.plist',
+                  APP_SUPPORT + 'VelaTerra'],
+
     'Ventrilo': [PREFERENCES + 'Ventrilo'],
 
     'Vim': ['.gvimrc',

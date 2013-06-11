@@ -157,7 +157,8 @@ SUPPORTED_APPS = {
     'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
 
     'PhpStorm 6': [APP_SUPPORT + 'WebIde60',
-                  PREFERENCES + 'WebIde60'],
+                  PREFERENCES + 'WebIde60',
+                  PREFERENCES + 'com.jetbrains.PhpStorm.plist'],
 
     'Pow': ['.powconfig',
             '.powenv',

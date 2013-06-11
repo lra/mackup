@@ -152,6 +152,8 @@ SUPPORTED_APPS = {
 
     'Nano': ['.nanorc'],
 
+    'nvALT': [PREFERENCES + 'net.elasticthreads.nv.plist'],
+
     'Oh My Zsh': ['.oh-my-zsh'],
 
     'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],

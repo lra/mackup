@@ -233,6 +233,9 @@ SUPPORTED_APPS = {
     'Viscosity': [APP_SUPPORT + 'Viscosity',
                   PREFERENCES + 'com.viscosityvpn.Viscosity.plist'],
 
+    'WebIde60': [APP_SUPPORT + 'WebIde60',
+                 PREFERENCES + 'WebIde60'],
+
     'Witch': [PREFERENCES + 'com.manytricks.Witch.plist'],
 
     'X11': ['.Xresources',

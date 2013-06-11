@@ -182,6 +182,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Ruby Version](https://gist.github.com/fnichol/1912050)
   - [Ruby](http://ruby-lang.org/)
   - [RubyMine 4](http://www.jetbrains.com/ruby/)
+  - [RubyMine 5](http://www.jetbrains.com/ruby/)
   - [S3cmd](http://s3tools.org/s3cmd)
   - [Screen](http://www.gnu.org/software/screen/)
   - [Sequel Pro](http://www.sequelpro.com/)

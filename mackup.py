@@ -156,6 +156,9 @@ SUPPORTED_APPS = {
 
     'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
 
+    'PhpStorm 6': [APP_SUPPORT + 'WebIde60',
+                  PREFERENCES + 'WebIde60'],
+
     'Pow': ['.powconfig',
             '.powenv',
             '.powrc'],
@@ -172,6 +175,9 @@ SUPPORTED_APPS = {
 
     'RubyMine 4': [APP_SUPPORT + 'RubyMine40',
                   PREFERENCES + 'RubyMine40'],
+
+    'RubyMine 5': [APP_SUPPORT + 'RubyMine50',
+                  PREFERENCES + 'RubyMine50'],
 
     'Ruby Version': ['.ruby-version'],
 
@@ -232,9 +238,6 @@ SUPPORTED_APPS = {
 
     'Viscosity': [APP_SUPPORT + 'Viscosity',
                   PREFERENCES + 'com.viscosityvpn.Viscosity.plist'],
-
-    'WebIde60': [APP_SUPPORT + 'WebIde60',
-                 PREFERENCES + 'WebIde60'],
 
     'Witch': [PREFERENCES + 'com.manytricks.Witch.plist'],
 

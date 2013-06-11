@@ -146,6 +146,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [BetterTouchTool](http://blog.boastr.net/)
   - [Boto](https://github.com/boto/boto)
   - [Byobu](http://byobu.co/)
+  - [Caffeine](http://lightheadsw.com/caffeine/)
   - [ClipMenu](http://www.clipmenu.com/)
   - [Coda 2](http://panic.com/coda/)
   - [ControlPlane](http://www.controlplaneapp.com/)

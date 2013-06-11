@@ -83,6 +83,8 @@ SUPPORTED_APPS = {
               '.byoburc.tmux',
               '.byoburc.screen'],
 
+    'Caffeine': [PREFERENCES + 'com.lightheadsw.Caffeine.plist'],
+
     'ClipMenu': [APP_SUPPORT + 'ClipMenu',
                 PREFERENCES + 'com.naotaka.ClipMenu.plist'],
 

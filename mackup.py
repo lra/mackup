@@ -83,6 +83,11 @@ SUPPORTED_APPS = {
               '.byoburc.tmux',
               '.byoburc.screen'],
 
+    'Caffeine': [PREFERENCES + 'com.lightheadsw.Caffeine.plist'],
+
+    'ClipMenu': [APP_SUPPORT + 'ClipMenu',
+                PREFERENCES + 'com.naotaka.ClipMenu.plist'],
+
     'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
 
     'CoRD': [APP_SUPPORT + 'CoRD'],
@@ -141,6 +146,8 @@ SUPPORTED_APPS = {
 
     'Many Tricks Licenses': [APP_SUPPORT + 'Many Tricks/Licenses'],
 
+    'MenuMeters': [PREFERENCES + 'com.ragingmenace.MenuMeters.plist'],
+
     'Mercurial': ['.hgrc',
                   '.hgignore_global'],
 
@@ -152,9 +159,15 @@ SUPPORTED_APPS = {
 
     'Nano': ['.nanorc'],
 
+    'nvALT': [PREFERENCES + 'net.elasticthreads.nv.plist'],
+
     'Oh My Zsh': ['.oh-my-zsh'],
 
     'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
+
+    'PhpStorm 6': [APP_SUPPORT + 'WebIde60',
+                  PREFERENCES + 'WebIde60',
+                  PREFERENCES + 'com.jetbrains.PhpStorm.plist'],
 
     'Pow': ['.powconfig',
             '.powenv',
@@ -172,6 +185,9 @@ SUPPORTED_APPS = {
 
     'RubyMine 4': [APP_SUPPORT + 'RubyMine40',
                   PREFERENCES + 'RubyMine40'],
+
+    'RubyMine 5': [APP_SUPPORT + 'RubyMine50',
+                  PREFERENCES + 'RubyMine50'],
 
     'Ruby Version': ['.ruby-version'],
 
@@ -199,6 +215,10 @@ SUPPORTED_APPS = {
 
     'Spark': [APP_SUPPORT + 'Spark'],
 
+    'Spotify' : [PREFERENCES + 'com.spotify.client.plist',
+                APP_SUPPORT + 'Spotify',
+                APP_SUPPORT + 'SpotifyResolver'],
+
     'SSH': ['.ssh'],
 
     'Sublime Text 2': [APP_SUPPORT + 'Sublime Text 2/Installed Packages',
@@ -220,6 +240,9 @@ SUPPORTED_APPS = {
     'Tmuxinator': ['.tmuxinator'],
 
     'Transmission': [PREFERENCES + 'org.m0k.transmission.plist'],
+
+    'uTorrent': [APP_SUPPORT + 'uTorrent',
+                PREFERENCES+ 'com.bittorrent.uTorrent.plist'],
 
     'Ventrilo': [PREFERENCES + 'Ventrilo'],
 

@@ -144,6 +144,8 @@ SUPPORTED_APPS = {
 
     'Many Tricks Licenses': [APP_SUPPORT + 'Many Tricks/Licenses'],
 
+    'MenuMeters': [PREFERENCES + 'com.ragingmenace.MenuMeters.plist'],
+
     'Mercurial': ['.hgrc',
                   '.hgignore_global'],
 

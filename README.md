@@ -167,6 +167,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [MacOSX](http://www.apple.com/osx/)
   - [MacVim](https://code.google.com/p/macvim/)
   - [Mailplane](http://mailplaneapp.com/)
+  - [MenuMeters](http://www.ragingmenace.com/software/menumeters/)
   - [Mercurial](http://mercurial.selenic.com/)
   - [MercuryMover](http://www.heliumfoot.com/mercurymover/)
   - [MPV](http://mpv.io/)

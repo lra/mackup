@@ -191,6 +191,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Slate](https://github.com/jigish/slate)
   - [SourceTree](http://sourcetreeapp.com)
   - [Spark](http://www.shadowlab.org/softwares/spark.php)
+  - [Spotify](https://www.spotify.com)
   - [Sublime Text](http://www.sublimetext.com/)
   - [Subversion](http://subversion.apache.org/)
   - [Teamocil](http://remiprev.github.io/teamocil/)

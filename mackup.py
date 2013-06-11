@@ -205,6 +205,10 @@ SUPPORTED_APPS = {
 
     'Spark': [APP_SUPPORT + 'Spark'],
 
+    'Spotify' : [PREFERENCES + 'com.spotify.client.plist',
+                APP_SUPPORT + 'Spotify',
+                APP_SUPPORT + 'SpotifyResolver'],
+
     'SSH': ['.ssh'],
 
     'Sublime Text 2': [APP_SUPPORT + 'Sublime Text 2/Installed Packages',

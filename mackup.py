@@ -241,6 +241,9 @@ SUPPORTED_APPS = {
 
     'Transmission': [PREFERENCES + 'org.m0k.transmission.plist'],
 
+    'uTorrent': [APP_SUPPORT + 'uTorrent',
+                PREFERENCES+ 'com.bittorrent.uTorrent.plist'],
+
     'Ventrilo': [PREFERENCES + 'Ventrilo'],
 
     'Vim': ['.gvimrc',

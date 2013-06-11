@@ -83,6 +83,9 @@ SUPPORTED_APPS = {
               '.byoburc.tmux',
               '.byoburc.screen'],
 
+    'ClipMenu': [APP_SUPPORT + 'ClipMenu',
+                PREFERENCES + 'com.naotaka.ClipMenu.plist'],
+
     'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
 
     'CoRD': [APP_SUPPORT + 'CoRD'],

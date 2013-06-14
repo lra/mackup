@@ -175,6 +175,11 @@ SUPPORTED_APPS = {
         APP_SUPPORT + 'OmniFocus/Themes',
         'Library/Scripts/Applications/OmniFocus'],
 
+    'Pastebot': [
+        PREFERENCES + 'com.tapbots.PastebotSync.plist',
+        PREFERENCES + 'com.tapbots.PastebotSync.prefPane.plist',
+        PREFERENCES + 'com.tapbots.PastebotSync.stats.plist'],
+
     'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
 
     'Pow': ['.powconfig',

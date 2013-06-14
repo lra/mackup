@@ -183,6 +183,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Pastebot](http://tapbots.com/software/pastebot/)
   - [PCKeyboardHack](http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en)
   - [Pentadactyl](http://5digits.org/pentadactyl/)
+  - [PopClip](http://pilotmoon.com/popclip/)
   - [Pow](http://pow.cx/)
   - [PyPI](https://pypi.python.org/pypi)
   - [Quicksilver](http://qsapp.com/)

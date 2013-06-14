@@ -182,6 +182,10 @@ SUPPORTED_APPS = {
 
     'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
 
+    'PopClip': [
+        PREFERENCES + 'com.pilotmoon.popclip.plist',
+        APP_SUPPORT + 'PopClip'],
+
     'Pow': ['.powconfig',
             '.powenv',
             '.powrc'],

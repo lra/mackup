@@ -103,6 +103,8 @@ SUPPORTED_APPS = {
 
     'ExpanDrive': [APP_SUPPORT + 'ExpanDrive'],
 
+    'Fantastical': [PREFERENCES + 'com.flexibits.fantastical.plist'],
+
     'Fish': ['.config/fish'],
 
     'Flux': [PREFERENCES + 'org.herf.Flux.plist'],

@@ -170,6 +170,11 @@ SUPPORTED_APPS = {
 
     'Oh My Zsh': ['.oh-my-zsh'],
 
+    'OmniFocus': [
+        APP_SUPPORT + 'OmniFocus/Plug-Ins',
+        APP_SUPPORT + 'OmniFocus/Themes',
+        'Library/Scripts/Applications/OmniFocus'],
+
     'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
 
     'Pow': ['.powconfig',

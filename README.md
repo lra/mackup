@@ -178,6 +178,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Nano](http://www.nano-editor.org/)
   - [nvALT](http://brettterpstra.com/projects/nvalt/)
   - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
+  - [OmniFocus](http://www.omnigroup.com/products/omnifocus/)
   - [OpenSSH](http://www.openssh.org/)
   - [PCKeyboardHack](http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en)
   - [Pentadactyl](http://5digits.org/pentadactyl/)

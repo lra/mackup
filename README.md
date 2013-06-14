@@ -148,6 +148,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Boto](https://github.com/boto/boto)
   - [Byobu](http://byobu.co/)
   - [Caffeinne](http://lightheadsw.com/caffeine/)  
+  - [CloudApp](http://getcloudapp.com/)
   - [Coda 2](http://panic.com/coda/)
   - [ControlPlane](http://www.controlplaneapp.com/)
   - [CoRD](http://cord.sourceforge.net/)

@@ -86,6 +86,8 @@ SUPPORTED_APPS = {
               '.byoburc.screen'],
 
     'Caffeine': [PREFERENCES + 'com.lightheadsw.Caffeine.plist'],
+    
+    'CloudApp': [PREFERENCES + 'com.linebreak.CloudAppMacOSX.plist'],
 
     'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
 

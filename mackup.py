@@ -85,6 +85,8 @@ SUPPORTED_APPS = {
               '.byoburc.tmux',
               '.byoburc.screen'],
 
+    'Caffeine': [PREFERENCES + 'com.lightheadsw.Caffeine.plist'],
+
     'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
 
     'CoRD': [APP_SUPPORT + 'CoRD'],

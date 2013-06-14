@@ -222,6 +222,8 @@ SUPPORTED_APPS = {
     'Slate': ['.slate',
               APP_SUPPORT + 'com.slate.Slate'],
 
+    'Slogger': ['Slogger'],
+
     'SourceTree': [APP_SUPPORT + 'SourceTree/sourcetree.license',
                    APP_SUPPORT + 'SourceTree/browser.plist',
                    APP_SUPPORT + 'SourceTree/hgrc_sourcetree',

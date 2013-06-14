@@ -197,6 +197,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [SHSH Blobs](http://en.wikipedia.org/wiki/SHSH_blob)
   - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
   - [Slate](https://github.com/jigish/slate)
+  - [Slogger](http://brettterpstra.com/projects/slogger/)
   - [SourceTree](http://sourcetreeapp.com)
   - [Spark](http://www.shadowlab.org/softwares/spark.php)
   - [Sublime Text](http://www.sublimetext.com/)

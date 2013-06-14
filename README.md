@@ -152,6 +152,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Coda 2](http://panic.com/coda/)
   - [ControlPlane](http://www.controlplaneapp.com/)
   - [CoRD](http://cord.sourceforge.net/)
+  - [Droplr](https://droplr.com/hello)
   - [Emacs](http://www.gnu.org/software/emacs/)
   - [ExpanDrive](http://www.expandrive.com/)
   - [Fish](http://ridiculousfish.com/shell/)

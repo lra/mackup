@@ -86,7 +86,7 @@ SUPPORTED_APPS = {
               '.byoburc.screen'],
 
     'Caffeine': [PREFERENCES + 'com.lightheadsw.Caffeine.plist'],
-    
+
     'CloudApp': [PREFERENCES + 'com.linebreak.CloudAppMacOSX.plist'],
 
     'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
@@ -95,6 +95,8 @@ SUPPORTED_APPS = {
 
     'Coda 2': [APP_SUPPORT + 'Coda 2',
                PREFERENCES + 'com.panic.Coda2.plist'],
+
+    'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],
 
     'Emacs': ['.emacs',
               '.emacs.d'],

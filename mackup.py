@@ -154,6 +154,10 @@ SUPPORTED_APPS = {
     'Mercurial': ['.hgrc',
                   '.hgignore_global'],
 
+    'Moom': [
+        PREFERENCES + 'com.manytricks.Moom.plist',
+        APP_SUPPORT + 'Many Tricks'],
+
     'MPV':['.mpv/channels.conf',
            '.mpv/config',
            '.mpv/input.conf'],

@@ -173,6 +173,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Mailplane](http://mailplaneapp.com/)
   - [Mercurial](http://mercurial.selenic.com/)
   - [MercuryMover](http://www.heliumfoot.com/mercurymover/)
+  - [Moom](http://manytricks.com/moom/)
   - [MPV](http://mpv.io/)
   - [Nano](http://www.nano-editor.org/)
   - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)

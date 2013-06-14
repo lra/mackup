@@ -61,6 +61,8 @@ SUPPORTED_APPS = {
     'AppCode 2': [APP_SUPPORT + 'appCode20',
                  PREFERENCES + 'appCode20'],
 
+    'Bartender': [PREFERENCES + 'com.surteesstudios.Bartender.plist'],
+
     'Bash': ['.bash_aliases',
              '.bash_logout',
              '.bashrc',
@@ -83,6 +85,10 @@ SUPPORTED_APPS = {
               '.byoburc.tmux',
               '.byoburc.screen'],
 
+    'Caffeine': [PREFERENCES + 'com.lightheadsw.Caffeine.plist'],
+
+    'CloudApp': [PREFERENCES + 'com.linebreak.CloudAppMacOSX.plist'],
+
     'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
 
     'CoRD': [APP_SUPPORT + 'CoRD'],
@@ -90,10 +96,14 @@ SUPPORTED_APPS = {
     'Coda 2': [APP_SUPPORT + 'Coda 2',
                PREFERENCES + 'com.panic.Coda2.plist'],
 
+    'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],
+
     'Emacs': ['.emacs',
               '.emacs.d'],
 
     'ExpanDrive': [APP_SUPPORT + 'ExpanDrive'],
+
+    'Fantastical': [PREFERENCES + 'com.flexibits.fantastical.plist'],
 
     'Fish': ['.config/fish'],
 
@@ -144,6 +154,10 @@ SUPPORTED_APPS = {
     'Mercurial': ['.hgrc',
                   '.hgignore_global'],
 
+    'Moom': [
+        PREFERENCES + 'com.manytricks.Moom.plist',
+        APP_SUPPORT + 'Many Tricks'],
+
     'MPV':['.mpv/channels.conf',
            '.mpv/config',
            '.mpv/input.conf'],
@@ -152,9 +166,25 @@ SUPPORTED_APPS = {
 
     'Nano': ['.nanorc'],
 
+    'nvALT': [PREFERENCES + 'net.elasticthreads.nv.plist'],
+
     'Oh My Zsh': ['.oh-my-zsh'],
 
+    'OmniFocus': [
+        APP_SUPPORT + 'OmniFocus/Plug-Ins',
+        APP_SUPPORT + 'OmniFocus/Themes',
+        'Library/Scripts/Applications/OmniFocus'],
+
+    'Pastebot': [
+        PREFERENCES + 'com.tapbots.PastebotSync.plist',
+        PREFERENCES + 'com.tapbots.PastebotSync.prefPane.plist',
+        PREFERENCES + 'com.tapbots.PastebotSync.stats.plist'],
+
     'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
+
+    'PopClip': [
+        PREFERENCES + 'com.pilotmoon.popclip.plist',
+        APP_SUPPORT + 'PopClip'],
 
     'Pow': ['.powconfig',
             '.powenv',
@@ -191,6 +221,8 @@ SUPPORTED_APPS = {
 
     'Slate': ['.slate',
               APP_SUPPORT + 'com.slate.Slate'],
+
+    'Slogger': ['Slogger'],
 
     'SourceTree': [APP_SUPPORT + 'SourceTree/sourcetree.license',
                    APP_SUPPORT + 'SourceTree/browser.plist',

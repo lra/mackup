@@ -141,6 +141,7 @@ That's it, you got your `git` config setup on your new Mac.
 
   - [Adium](http://adium.im/)
   - [AppCode 2](http://www.jetbrains.com/objc/)
+  - [Bartender](http://www.macbartender.com/)
   - [Bash](http://www.gnu.org/software/bash/)
   - [BetterSnapTool](http://blog.boastr.net/)
   - [BetterTouchTool](http://blog.boastr.net/)

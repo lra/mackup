@@ -76,12 +76,22 @@ SUPPORTED_APPS = {
     'AppCode 2': [APP_SUPPORT + 'appCode20',
                  PREFERENCES + 'appCode20'],
 
+    'Bartender': [PREFERENCES + 'com.surteesstudios.Bartender.plist'],
+
     'Bash': ['.bash_aliases',
              '.bash_logout',
              '.bashrc',
              '.profile',
              '.bash_profile',
              '.inputrc'],
+
+    'BetterSnapTool': [
+        PREFERENCES + 'com.hegenberg.BetterSnapTool.plist',
+        APP_SUPPORT + 'BetterSnapTool'],
+
+    'BetterTouchTool': [
+        PREFERENCES + 'com.hegenberg.BetterTouchTool.plist',
+        APP_SUPPORT + 'BetterTouchTool'],
 
     'Boto': ['.boto'],
 
@@ -90,14 +100,25 @@ SUPPORTED_APPS = {
               '.byoburc.tmux',
               '.byoburc.screen'],
 
+    'Caffeine': [PREFERENCES + 'com.lightheadsw.Caffeine.plist'],
+
+    'CloudApp': [PREFERENCES + 'com.linebreak.CloudAppMacOSX.plist'],
+
     'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
 
     'CoRD': [APP_SUPPORT + 'CoRD'],
+
+    'Coda 2': [APP_SUPPORT + 'Coda 2',
+               PREFERENCES + 'com.panic.Coda2.plist'],
+
+    'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],
 
     'Emacs': ['.emacs',
               '.emacs.d'],
 
     'ExpanDrive': [APP_SUPPORT + 'ExpanDrive'],
+
+    'Fantastical': [PREFERENCES + 'com.flexibits.fantastical.plist'],
 
     'Fish': ['.config/fish'],
 
@@ -112,6 +133,8 @@ SUPPORTED_APPS = {
 
     'Git': ['.gitconfig',
             '.gitignore_global'],
+
+    'Gitbox': [PREFERENCES + 'com.oleganza.gitbox.plist'],
 
     'Git Hooks': ['.git_hooks'],
 
@@ -133,6 +156,8 @@ SUPPORTED_APPS = {
 
     'Mackup': ['.mackup.cfg'],
 
+    'Mailplane': [PREFERENCES + 'com.mailplaneapp.Mailplane.plist'],
+
     'MacOSX': ['.MacOSX',
                'Library/ColorSync/Profiles'],
 
@@ -144,6 +169,10 @@ SUPPORTED_APPS = {
     'Mercurial': ['.hgrc',
                   '.hgignore_global'],
 
+    'Moom': [
+        PREFERENCES + 'com.manytricks.Moom.plist',
+        APP_SUPPORT + 'Many Tricks'],
+
     'MPV':['.mpv/channels.conf',
            '.mpv/config',
            '.mpv/input.conf'],
@@ -152,9 +181,25 @@ SUPPORTED_APPS = {
 
     'Nano': ['.nanorc'],
 
+    'nvALT': [PREFERENCES + 'net.elasticthreads.nv.plist'],
+
     'Oh My Zsh': ['.oh-my-zsh'],
 
+    'OmniFocus': [
+        APP_SUPPORT + 'OmniFocus/Plug-Ins',
+        APP_SUPPORT + 'OmniFocus/Themes',
+        'Library/Scripts/Applications/OmniFocus'],
+
+    'Pastebot': [
+        PREFERENCES + 'com.tapbots.PastebotSync.plist',
+        PREFERENCES + 'com.tapbots.PastebotSync.prefPane.plist',
+        PREFERENCES + 'com.tapbots.PastebotSync.stats.plist'],
+
     'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
+
+    'PopClip': [
+        PREFERENCES + 'com.pilotmoon.popclip.plist',
+        APP_SUPPORT + 'PopClip'],
 
     'Pow': ['.powconfig',
             '.powenv',
@@ -197,6 +242,8 @@ SUPPORTED_APPS = {
 
     'Slate': ['.slate',
               APP_SUPPORT + 'com.slate.Slate'],
+
+    'Slogger': ['Slogger'],
 
     'SourceTree': [APP_SUPPORT + 'SourceTree/sourcetree.license',
                    APP_SUPPORT + 'SourceTree/browser.plist',
@@ -243,7 +290,7 @@ SUPPORTED_APPS = {
 
     'X11': ['.Xresources',
             '.fonts'],
-            
+
     'Xcode': ['Library/Developer/Xcode/UserData/CodeSnippets',
               'Library/Developer/Xcode/UserData/FontAndColorThemes',
               'Library/Developer/Xcode/UserData/KeyBindings',
@@ -264,7 +311,7 @@ SUPPORTED_APPS = {
 
 
 # Current version
-VERSION = '0.4.1'
+VERSION = '0.4.2'
 
 # Mode used to backup files to Dropbox
 BACKUP_MODE = 'backup'

@@ -2,9 +2,13 @@
 
 ## WIP
 
+## Mackup 0.4.2
+
 - Made a method to check if a process is running (not yet)
 - Added support for XCode (thx @adeca)
-- Added support for CoRD, Spark and f.lux (thx @TimCorcoran)
+- Added support for CoRD, Spark, f.lux, BetterTouchTool, BetterSnapTool and
+  Coda 2 (thx @TimCorcoran)
+- Added support for Mailplane and Gitbox (thx @THEY)
 
 ## Mackup 0.4.1
 

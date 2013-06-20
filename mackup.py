@@ -164,8 +164,6 @@ SUPPORTED_APPS = {
     'MacVim': [PREFERENCES + 'org.vim.MacVim.LSSharedFileList.plist',
                PREFERENCES + 'org.vim.MacVim.plist'],
 
-    'Many Tricks Licenses': [APP_SUPPORT + 'Many Tricks/Licenses'],
-
     'Mercurial': ['.hgrc',
                   '.hgignore_global'],
 

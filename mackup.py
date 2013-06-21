@@ -82,6 +82,8 @@ SUPPORTED_APPS = {
               '.byoburc',
               '.byoburc.tmux',
               '.byoburc.screen'],
+              
+    'Concentrate': [APP_SUPPORT + 'Concentrate/Concentrate.sqlite3'],
 
     'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
 

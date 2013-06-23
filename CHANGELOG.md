@@ -3,6 +3,10 @@
 ## WIP
 
 - Added support for nvALT (thx @stenehall)
+- Added support for Adobe Lightroom, OS X Scripts Services and Quicklook (thx
+  @Tam-Lin)
+- Added support for Bartender, Caffeine, CloudApp, Droplr, Fantastical, Moom,
+  OmniFocus, Pastebot, PopClip, Slogger (thx @ediventurin)
 
 ## Mackup 0.4.2
 

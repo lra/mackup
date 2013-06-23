@@ -58,8 +58,25 @@ SUPPORTED_APPS = {
     'Adium': [APP_SUPPORT + 'Adium 2.0',
               PREFERENCES + 'com.adiumX.adiumX.plist'],
 
+    'Adobe Lightroom': [APP_SUPPORT + 'Adobe/Lightroom/Develop Presets',
+    			APP_SUPPORT + 	'Adobe/Lightroom/Export Actions',
+    			APP_SUPPORT + 	'Adobe/Lightroom/Export Presets',
+    			APP_SUPPORT + 	'Adobe/Lightroom/Filename Templates',
+    			APP_SUPPORT + 	'Adobe/Lightroom/Filter Presets',
+    			APP_SUPPORT + 	'Adobe/Lightroom/Import Presets',
+    			APP_SUPPORT + 	'Adobe/Lightroom/Keyword Sets',
+    			APP_SUPPORT + 	'Adobe/Lightroom/Label Sets',
+    			APP_SUPPORT + 	'Adobe/Lightroom/Local Adjustment Presets',
+    			APP_SUPPORT + 	'Adobe/Lightroom/Locations',
+    			APP_SUPPORT + 	'Adobe/Lightroom/Metadata Presets',
+    			APP_SUPPORT + 	'Adobe/Lightroom/Modules',
+    			APP_SUPPORT + 	'Adobe/Lightroom/Plugins',
+    			APP_SUPPORT + 	'Adobe/Lightroom/Watermarks'],
+
     'AppCode 2': [APP_SUPPORT + 'appCode20',
                  PREFERENCES + 'appCode20'],
+
+    'Bartender': [PREFERENCES + 'com.surteesstudios.Bartender.plist'],
 
     'Bash': ['.bash_aliases',
              '.bash_logout',
@@ -83,6 +100,10 @@ SUPPORTED_APPS = {
               '.byoburc.tmux',
               '.byoburc.screen'],
 
+    'Caffeine': [PREFERENCES + 'com.lightheadsw.Caffeine.plist'],
+
+    'CloudApp': [PREFERENCES + 'com.linebreak.CloudAppMacOSX.plist'],
+
     'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
 
     'CoRD': [APP_SUPPORT + 'CoRD'],
@@ -90,10 +111,14 @@ SUPPORTED_APPS = {
     'Coda 2': [APP_SUPPORT + 'Coda 2',
                PREFERENCES + 'com.panic.Coda2.plist'],
 
+    'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],
+
     'Emacs': ['.emacs',
               '.emacs.d'],
 
     'ExpanDrive': [APP_SUPPORT + 'ExpanDrive'],
+
+    'Fantastical': [PREFERENCES + 'com.flexibits.fantastical.plist'],
 
     'Fish': ['.config/fish'],
 
@@ -139,10 +164,12 @@ SUPPORTED_APPS = {
     'MacVim': [PREFERENCES + 'org.vim.MacVim.LSSharedFileList.plist',
                PREFERENCES + 'org.vim.MacVim.plist'],
 
-    'Many Tricks Licenses': [APP_SUPPORT + 'Many Tricks/Licenses'],
-
     'Mercurial': ['.hgrc',
                   '.hgignore_global'],
+
+    'Moom': [
+        PREFERENCES + 'com.manytricks.Moom.plist',
+        APP_SUPPORT + 'Many Tricks'],
 
     'MPV':['.mpv/channels.conf',
            '.mpv/config',
@@ -158,13 +185,29 @@ SUPPORTED_APPS = {
 
     'Oh My Zsh': ['.oh-my-zsh'],
 
+    'OmniFocus': [
+        APP_SUPPORT + 'OmniFocus/Plug-Ins',
+        APP_SUPPORT + 'OmniFocus/Themes',
+        'Library/Scripts/Applications/OmniFocus'],
+
+    'Pastebot': [
+        PREFERENCES + 'com.tapbots.PastebotSync.plist',
+        PREFERENCES + 'com.tapbots.PastebotSync.prefPane.plist',
+        PREFERENCES + 'com.tapbots.PastebotSync.stats.plist'],
+
     'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
+
+    'PopClip': [
+        PREFERENCES + 'com.pilotmoon.popclip.plist',
+        APP_SUPPORT + 'PopClip'],
 
     'Pow': ['.powconfig',
             '.powenv',
             '.powrc'],
 
     'PyPI': ['.pypirc'],
+
+	'Quicklook': ['Library/Quicklook'],
 
     'Quicksilver': [PREFERENCES + 'com.blacktree.Quicksilver.plist',
                     APP_SUPPORT + 'Quicksilver'],
@@ -184,9 +227,13 @@ SUPPORTED_APPS = {
 
     'S3cmd': ['.s3cfg'],
 
+	'Scripts': ['Library/Scripts'],
+
     'Screen': ['.screenrc'],
 
     'Sequel Pro': [APP_SUPPORT + 'Sequel Pro/Data'],
+
+	'Services': ['Library/Services'],
 
     'SHSH Blobs': ['.shsh'],
 
@@ -195,6 +242,8 @@ SUPPORTED_APPS = {
 
     'Slate': ['.slate',
               APP_SUPPORT + 'com.slate.Slate'],
+
+    'Slogger': ['Slogger'],
 
     'SourceTree': [APP_SUPPORT + 'SourceTree/sourcetree.license',
                    APP_SUPPORT + 'SourceTree/browser.plist',
@@ -856,3 +905,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

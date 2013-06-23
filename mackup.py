@@ -264,9 +264,7 @@ SUPPORTED_APPS = {
 
     'Spark': [APP_SUPPORT + 'Spark'],
 
-    'Spotify' : [PREFERENCES + 'com.spotify.client.plist',
-                APP_SUPPORT + 'Spotify',
-                APP_SUPPORT + 'SpotifyResolver'],
+    'Spotify' : [PREFERENCES + 'com.spotify.client.plist'],
 
     'SSH': ['.ssh'],
 
@@ -289,9 +287,6 @@ SUPPORTED_APPS = {
     'Tmuxinator': ['.tmuxinator'],
 
     'Transmission': [PREFERENCES + 'org.m0k.transmission.plist'],
-
-    'uTorrent': [APP_SUPPORT + 'uTorrent',
-                PREFERENCES+ 'com.bittorrent.uTorrent.plist'],
 
     'Ventrilo': [PREFERENCES + 'Ventrilo'],
 

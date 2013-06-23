@@ -7,8 +7,8 @@
   @Tam-Lin)
 - Added support for Bartender, Caffeine, CloudApp, Droplr, Fantastical, Moom,
   OmniFocus, Pastebot, PopClip, Slogger (thx @ediventurin)
-- Added support for ClipMenu, MenuMeters, PhpStorm 6, RubyMine 5, Spotify and
-  uTorrent (thx @hakubo)
+- Added support for ClipMenu, MenuMeters, PhpStorm 6, RubyMine 5, Spotify
+  (thx @hakubo)
 
 ## Mackup 0.4.2
 

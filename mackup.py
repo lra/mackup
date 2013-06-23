@@ -84,8 +84,6 @@ SUPPORTED_APPS = {
              '.profile',
              '.bash_profile',
              '.inputrc'],
-             
-    'BibDesk': [PREFERENCES + 'edu.ucsd.cs.mmccrack.bibdesk.plist'],
 
     'BetterSnapTool': [
         PREFERENCES + 'com.hegenberg.BetterSnapTool.plist',
@@ -94,6 +92,8 @@ SUPPORTED_APPS = {
     'BetterTouchTool': [
         PREFERENCES + 'com.hegenberg.BetterTouchTool.plist',
         APP_SUPPORT + 'BetterTouchTool'],
+
+    'BibDesk': [PREFERENCES + 'edu.ucsd.cs.mmccrack.bibdesk.plist'],
 
     'Boto': ['.boto'],
 

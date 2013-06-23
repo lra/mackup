@@ -146,6 +146,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Bash](http://www.gnu.org/software/bash/)
   - [BetterSnapTool](http://blog.boastr.net/)
   - [BetterTouchTool](http://blog.boastr.net/)
+  - [BibDesk](http://bibdesk.sourceforge.net/)
   - [Boto](https://github.com/boto/boto)
   - [Byobu](http://byobu.co/)
   - [Caffeine](http://lightheadsw.com/caffeine/)

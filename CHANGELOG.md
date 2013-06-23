@@ -10,6 +10,7 @@
 - Added support for ClipMenu, MenuMeters, PhpStorm 6, RubyMine 5, Spotify
   (thx @hakubo)
 - Added support for Concentrate (thx @raylillywhite)
+- Added support for BibDesk (thx @twsh)
 
 ## Mackup 0.4.2
 

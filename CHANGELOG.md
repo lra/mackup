@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for nvALT (thx @stenehall)
+
 ## Mackup 0.4.2
 
 - Made a method to check if a process is running (not yet)

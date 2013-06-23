@@ -170,6 +170,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [MercuryMover](http://www.heliumfoot.com/mercurymover/)
   - [MPV](http://mpv.io/)
   - [Nano](http://www.nano-editor.org/)
+  - [nvALT](http://brettterpstra.com/projects/nvalt/)
   - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
   - [OpenSSH](http://www.openssh.org/)
   - [PCKeyboardHack](http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en)

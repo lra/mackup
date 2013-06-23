@@ -152,6 +152,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [ClipMenu](http://www.clipmenu.com/)
   - [CloudApp](http://getcloudapp.com/)
   - [Coda 2](http://panic.com/coda/)
+  - [Concentrate](http://www.getconcentrating.com/)
   - [ControlPlane](http://www.controlplaneapp.com/)
   - [CoRD](http://cord.sourceforge.net/)
   - [Droplr](https://droplr.com/hello)

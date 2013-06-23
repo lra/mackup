@@ -99,8 +99,6 @@ SUPPORTED_APPS = {
               '.byoburc',
               '.byoburc.tmux',
               '.byoburc.screen'],
-              
-    'Concentrate': [APP_SUPPORT + 'Concentrate/Concentrate.sqlite3'],
 
     'Caffeine': [PREFERENCES + 'com.lightheadsw.Caffeine.plist'],
 
@@ -108,6 +106,8 @@ SUPPORTED_APPS = {
                  PREFERENCES + 'com.naotaka.ClipMenu.plist'],
 
     'CloudApp': [PREFERENCES + 'com.linebreak.CloudAppMacOSX.plist'],
+
+    'Concentrate': [APP_SUPPORT + 'Concentrate/Concentrate.sqlite3'],
 
     'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
 

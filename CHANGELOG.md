@@ -9,6 +9,7 @@
   OmniFocus, Pastebot, PopClip, Slogger (thx @ediventurin)
 - Added support for ClipMenu, MenuMeters, PhpStorm 6, RubyMine 5, Spotify
   (thx @hakubo)
+- Added support for Concentrate (thx @raylillywhite)
 
 ## Mackup 0.4.2
 

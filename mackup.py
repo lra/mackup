@@ -102,6 +102,9 @@ SUPPORTED_APPS = {
 
     'Caffeine': [PREFERENCES + 'com.lightheadsw.Caffeine.plist'],
 
+    'ClipMenu': [APP_SUPPORT + 'ClipMenu',
+                 PREFERENCES + 'com.naotaka.ClipMenu.plist'],
+
     'CloudApp': [PREFERENCES + 'com.linebreak.CloudAppMacOSX.plist'],
 
     'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
@@ -164,6 +167,8 @@ SUPPORTED_APPS = {
     'MacVim': [PREFERENCES + 'org.vim.MacVim.LSSharedFileList.plist',
                PREFERENCES + 'org.vim.MacVim.plist'],
 
+    'MenuMeters': [PREFERENCES + 'com.ragingmenace.MenuMeters.plist'],
+
     'Mercurial': ['.hgrc',
                   '.hgignore_global'],
 
@@ -197,6 +202,10 @@ SUPPORTED_APPS = {
 
     'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
 
+    'PhpStorm 6': [APP_SUPPORT + 'WebIde60',
+                   PREFERENCES + 'WebIde60',
+                   PREFERENCES + 'com.jetbrains.PhpStorm.plist'],
+
     'PopClip': [
         PREFERENCES + 'com.pilotmoon.popclip.plist',
         APP_SUPPORT + 'PopClip'],
@@ -218,7 +227,10 @@ SUPPORTED_APPS = {
              '.irbrc'],
 
     'RubyMine 4': [APP_SUPPORT + 'RubyMine40',
-                  PREFERENCES + 'RubyMine40'],
+                   PREFERENCES + 'RubyMine40'],
+
+    'RubyMine 5': [APP_SUPPORT + 'RubyMine50',
+                   PREFERENCES + 'RubyMine50'],
 
     'Ruby Version': ['.ruby-version'],
 
@@ -252,6 +264,10 @@ SUPPORTED_APPS = {
 
     'Spark': [APP_SUPPORT + 'Spark'],
 
+    'Spotify' : [PREFERENCES + 'com.spotify.client.plist',
+                APP_SUPPORT + 'Spotify',
+                APP_SUPPORT + 'SpotifyResolver'],
+
     'SSH': ['.ssh'],
 
     'Sublime Text 2': [APP_SUPPORT + 'Sublime Text 2/Installed Packages',
@@ -273,6 +289,9 @@ SUPPORTED_APPS = {
     'Tmuxinator': ['.tmuxinator'],
 
     'Transmission': [PREFERENCES + 'org.m0k.transmission.plist'],
+
+    'uTorrent': [APP_SUPPORT + 'uTorrent',
+                PREFERENCES+ 'com.bittorrent.uTorrent.plist'],
 
     'Ventrilo': [PREFERENCES + 'Ventrilo'],
 

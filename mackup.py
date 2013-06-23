@@ -99,6 +99,8 @@ SUPPORTED_APPS = {
               '.byoburc',
               '.byoburc.tmux',
               '.byoburc.screen'],
+              
+    'Concentrate': [APP_SUPPORT + 'Concentrate/Concentrate.sqlite3'],
 
     'Caffeine': [PREFERENCES + 'com.lightheadsw.Caffeine.plist'],
 

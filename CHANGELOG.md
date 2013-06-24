@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.4.3
+
 - Added support for nvALT (thx @stenehall)
 - Added support for Adobe Lightroom, OS X Scripts Services and Quicklook (thx
   @Tam-Lin)

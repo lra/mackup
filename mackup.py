@@ -196,8 +196,7 @@ SUPPORTED_APPS = {
 
     'OmniFocus': [
         APP_SUPPORT + 'OmniFocus/Plug-Ins',
-        APP_SUPPORT + 'OmniFocus/Themes',
-        'Library/Scripts/Applications/OmniFocus'],
+        APP_SUPPORT + 'OmniFocus/Themes'],
 
     'Pastebot': [
         PREFERENCES + 'com.tapbots.PastebotSync.plist',

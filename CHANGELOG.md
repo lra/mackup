@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Conflict folder sync fix (thx @ediventurin)
+
 ## Mackup 0.4.3
 
 - Added support for nvALT (thx @stenehall)

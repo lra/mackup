@@ -297,6 +297,9 @@ SUPPORTED_APPS = {
 
     'Transmission': [PREFERENCES + 'org.m0k.transmission.plist'],
 
+    'Vagrant': ['.vagrant',
+                '.vagrant.d'],
+
     'Ventrilo': [PREFERENCES + 'Ventrilo'],
 
     'Vim': ['.gvimrc',

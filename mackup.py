@@ -118,6 +118,8 @@ SUPPORTED_APPS = {
     'Coda 2': [APP_SUPPORT + 'Coda 2',
                PREFERENCES + 'com.panic.Coda2.plist'],
 
+    'Dotcloud': ['.dotcloud_cli'],
+    
     'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],
 
     'Emacs': ['.emacs',
@@ -126,6 +128,8 @@ SUPPORTED_APPS = {
     'ExpanDrive': [APP_SUPPORT + 'ExpanDrive'],
 
     'Fantastical': [PREFERENCES + 'com.flexibits.fantastical.plist'],
+
+    'FileZilla': ['.filezilla'],
 
     'Fish': ['.config/fish'],
 
@@ -147,10 +151,14 @@ SUPPORTED_APPS = {
 
     'GnuPG': ['.gnupg'],
 
+    'Htop': ['.htoprc'],
+
     'IntelliJIdea 12': [APP_SUPPORT + 'IntelliJIdea12',
                        PREFERENCES + 'IntelliJIdea12'],
 
     'iTerm2': [PREFERENCES + 'com.googlecode.iterm2.plist'],
+
+    'Janus': ['.janus'],
 
     'Keymo': [PREFERENCES + 'com.manytricks.Keymo.plist'],
 
@@ -290,6 +298,9 @@ SUPPORTED_APPS = {
     'Tmuxinator': ['.tmuxinator'],
 
     'Transmission': [PREFERENCES + 'org.m0k.transmission.plist'],
+
+    'Vagrant': ['.vagrant',
+                '.vagrant.d'],
 
     'Ventrilo': [PREFERENCES + 'Ventrilo'],
 

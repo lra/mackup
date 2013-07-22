@@ -83,7 +83,8 @@ SUPPORTED_APPS = {
              '.bashrc',
              '.profile',
              '.bash_profile',
-             '.inputrc'],
+             '.inputrc',
+             '.bash'],
 
     'BetterSnapTool': [
         PREFERENCES + 'com.hegenberg.BetterSnapTool.plist',

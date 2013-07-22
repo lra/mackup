@@ -189,6 +189,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [PCKeyboardHack](http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en)
   - [Pentadactyl](http://5digits.org/pentadactyl/)
   - [PhpStorm 6](http://www.jetbrains.com/phpstorm/)
+  - [Pear](http://pear.php.net/)
   - [PopClip](http://pilotmoon.com/popclip/)
   - [Pow](http://pow.cx/)
   - [PyPI](https://pypi.python.org/pypi)

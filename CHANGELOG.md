@@ -6,6 +6,7 @@
 - Added support for PIP (thx @dhellmann)
 - Added support for FTP's .netrc, Chef, Pear (thx @yabawock)
 - Added support for Irssi (thx @louisrli)
+- Improved Vim support (thx @yabawock)
 
 ## Mackup 0.4.3
 

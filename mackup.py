@@ -151,13 +151,17 @@ SUPPORTED_APPS = {
 
     'GnuPG': ['.gnupg'],
 
+    'Htop': ['.htoprc'],
+
     'IntelliJIdea 12': [APP_SUPPORT + 'IntelliJIdea12',
                        PREFERENCES + 'IntelliJIdea12'],
 
     'iTerm2': [PREFERENCES + 'com.googlecode.iterm2.plist'],
 
     'Irssi': ['.irssi'],
-    
+
+    'Janus': ['.janus'],
+
     'Keymo': [PREFERENCES + 'com.manytricks.Keymo.plist'],
 
     'KeyRemap4MacBook': [

@@ -189,6 +189,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [OpenSSH](http://www.openssh.org/)
   - [Pastebot](http://tapbots.com/software/pastebot/)
   - [PCKeyboardHack](http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en)
+  - [Pear](http://pear.php.net/)
   - [Pentadactyl](http://5digits.org/pentadactyl/)
   - [PhpStorm 6](http://www.jetbrains.com/phpstorm/)
   - [PIP](http://www.pip-installer.org/)

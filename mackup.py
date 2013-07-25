@@ -118,6 +118,8 @@ SUPPORTED_APPS = {
     'Coda 2': [APP_SUPPORT + 'Coda 2',
                PREFERENCES + 'com.panic.Coda2.plist'],
 
+    'Curl': ['.netrc'],
+
     'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],
 
     'Emacs': ['.emacs',

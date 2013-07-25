@@ -156,7 +156,6 @@ That's it, you got your `git` config setup on your new Mac.
   - [Concentrate](http://www.getconcentrating.com/)
   - [ControlPlane](http://www.controlplaneapp.com/)
   - [CoRD](http://cord.sourceforge.net/)
-  - [Curl](http://curl.haxx.se/)
   - [Droplr](https://droplr.com/hello)
   - [Emacs](http://www.gnu.org/software/emacs/)
   - [ExpanDrive](http://www.expandrive.com/)

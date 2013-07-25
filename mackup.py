@@ -104,6 +104,8 @@ SUPPORTED_APPS = {
 
     'Caffeine': [PREFERENCES + 'com.lightheadsw.Caffeine.plist'],
 
+    'Chef': ['.chef'],
+
     'ClipMenu': [APP_SUPPORT + 'ClipMenu',
                  PREFERENCES + 'com.naotaka.ClipMenu.plist'],
 

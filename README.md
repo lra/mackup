@@ -168,6 +168,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Gitbox](http://gitboxapp.com/)
   - [GnuPG](http://www.gnupg.org/)
   - [IntelliJIDEA 12](http://www.jetbrains.com/idea/)
+  - [Irssi](http://www.irssi.org/)
   - [ITerm2](http://www.iterm2.com/)
   - [Keymo](http://manytricks.com/keymo/)
   - [KeyRemap4MacBook](http://pqrs.org/macosx/keyremap4macbook/)

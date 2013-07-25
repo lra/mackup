@@ -5,6 +5,7 @@
 - Conflict folder sync fix (thx @ediventurin)
 - Added support for PIP (thx @dhellmann)
 - Added support for FTP's .netrc (thx @yabawock)
+- Added support for Irssi (thx @louisrli)
 
 ## Mackup 0.4.3
 

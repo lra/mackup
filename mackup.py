@@ -304,8 +304,12 @@ SUPPORTED_APPS = {
     'Ventrilo': [PREFERENCES + 'Ventrilo'],
 
     'Vim': ['.gvimrc',
+            '.gvimrc.before',
+            '.gvimrc.after',
             '.vim',
-            '.vimrc'],
+            '.vimrc',
+            '.vimrc.before',
+            '.vimrc.after'],
 
     'Vimperator': ['.vimperator',
                    '.vimperatorrc'],

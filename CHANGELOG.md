@@ -3,6 +3,7 @@
 ## WIP
 
 - Conflict folder sync fix (thx @ediventurin)
+- Added support for PIP (thx @dhellmann)
 
 ## Mackup 0.4.3
 

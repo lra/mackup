@@ -154,6 +154,8 @@ SUPPORTED_APPS = {
 
     'iTerm2': [PREFERENCES + 'com.googlecode.iterm2.plist'],
 
+    'Irssi': ['.irssi'],
+    
     'Keymo': [PREFERENCES + 'com.manytricks.Keymo.plist'],
 
     'KeyRemap4MacBook': [

@@ -59,19 +59,19 @@ SUPPORTED_APPS = {
               PREFERENCES + 'com.adiumX.adiumX.plist'],
 
     'Adobe Lightroom': [APP_SUPPORT + 'Adobe/Lightroom/Develop Presets',
-                        APP_SUPPORT + 	'Adobe/Lightroom/Export Actions',
-                        APP_SUPPORT + 	'Adobe/Lightroom/Export Presets',
-                        APP_SUPPORT + 	'Adobe/Lightroom/Filename Templates',
-                        APP_SUPPORT + 	'Adobe/Lightroom/Filter Presets',
-                        APP_SUPPORT + 	'Adobe/Lightroom/Import Presets',
-                        APP_SUPPORT + 	'Adobe/Lightroom/Keyword Sets',
-                        APP_SUPPORT + 	'Adobe/Lightroom/Label Sets',
-                        APP_SUPPORT + 	'Adobe/Lightroom/Local Adjustment Presets',
-                        APP_SUPPORT + 	'Adobe/Lightroom/Locations',
-                        APP_SUPPORT + 	'Adobe/Lightroom/Metadata Presets',
-                        APP_SUPPORT + 	'Adobe/Lightroom/Modules',
-                        APP_SUPPORT + 	'Adobe/Lightroom/Plugins',
-                        APP_SUPPORT + 	'Adobe/Lightroom/Watermarks'],
+                        APP_SUPPORT + 'Adobe/Lightroom/Export Actions',
+                        APP_SUPPORT + 'Adobe/Lightroom/Export Presets',
+                        APP_SUPPORT + 'Adobe/Lightroom/Filename Templates',
+                        APP_SUPPORT + 'Adobe/Lightroom/Filter Presets',
+                        APP_SUPPORT + 'Adobe/Lightroom/Import Presets',
+                        APP_SUPPORT + 'Adobe/Lightroom/Keyword Sets',
+                        APP_SUPPORT + 'Adobe/Lightroom/Label Sets',
+                        APP_SUPPORT + 'Adobe/Lightroom/Local Adjustment Presets',
+                        APP_SUPPORT + 'Adobe/Lightroom/Locations',
+                        APP_SUPPORT + 'Adobe/Lightroom/Metadata Presets',
+                        APP_SUPPORT + 'Adobe/Lightroom/Modules',
+                        APP_SUPPORT + 'Adobe/Lightroom/Plugins',
+                        APP_SUPPORT + 'Adobe/Lightroom/Watermarks'],
 
     'AppCode 2': [APP_SUPPORT + 'appCode20',
                   PREFERENCES + 'appCode20'],
@@ -430,12 +430,12 @@ class ApplicationProfile(object):
                         file_type = 'link'
                     else:
                         raise ValueError("Unsupported file: {}"
-                        .format(mackup_filepath))
+                                         .format(mackup_filepath))
 
                     # Ask the user if he really want to replace it
                     if confirm("A {} named {} already exists in the backup."
                                "\nAre you sure that your want to replace it ?"
-                    .format(file_type, mackup_filepath)):
+                               .format(file_type, mackup_filepath)):
                         # Delete the file in Mackup
                         delete(mackup_filepath)
                         # Copy the file
@@ -493,11 +493,11 @@ class ApplicationProfile(object):
                         file_type = 'link'
                     else:
                         raise ValueError("Unsupported file: {}"
-                        .format(mackup_filepath))
+                                         .format(mackup_filepath))
 
                     if confirm("You already have a {} named {} in your home."
                                "\nDo you want to replace it with your backup ?"
-                    .format(file_type, filename)):
+                               .format(file_type, filename)):
                         delete(home_filepath)
                         link(mackup_filepath, home_filepath)
                 else:
@@ -562,12 +562,12 @@ class Mackup(object):
                    " If Dropbox is not installed and running, go for it on"
                    " <http://www.dropbox.com/>"))
 
-            # Is Sublime Text running ?
-            #if is_process_running('Sublime Text'):
-            #    error(("Sublime Text is running. It is known to cause problems"
-            #           " when Sublime Text is running while I backup or restore"
-            #           " its configuration files. Please close Sublime Text and"
-            #           " run me again."))
+        # Is Sublime Text running ?
+        #if is_process_running('Sublime Text'):
+        #    error(("Sublime Text is running. It is known to cause problems"
+        #           " when Sublime Text is running while I backup or restore"
+        #           " its configuration files. Please close Sublime Text and"
+        #           " run me again."))
 
 
     def check_for_usable_backup_env(self):
@@ -583,7 +583,7 @@ class Mackup(object):
             error("Unable to find the Mackup folder: {}\n"
                   "You might want to backup some files or get your Dropbox"
                   " folder synced first."
-            .format(self.mackup_folder))
+                  .format(self.mackup_folder))
 
     def clean_temp_folder(self):
         """Delete the temp folder and files created while running"""
@@ -594,7 +594,7 @@ class Mackup(object):
         if not os.path.isdir(self.mackup_folder):
             if confirm("Mackup needs a folder to store your configuration "
                        " files\nDo you want to create it now ? <{}>"
-            .format(self.mackup_folder)):
+                       .format(self.mackup_folder)):
                 os.mkdir(self.mackup_folder)
             else:
                 error("Mackup can't do anything without a home =(")

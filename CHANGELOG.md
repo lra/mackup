@@ -7,6 +7,7 @@
 - Added support for FTP's .netrc, Chef, Pear (thx @yabawock)
 - Added support for Irssi (thx @louisrli)
 - Added support for Htop and Janus (thx @walkertraylor)
+- Added support for Transmit (thx @dustinmm80)
 - Improved Vim support (thx @yabawock)
 
 ## Mackup 0.4.3

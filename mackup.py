@@ -151,6 +151,8 @@ SUPPORTED_APPS = {
 
     'GnuPG': ['.gnupg'],
 
+    'Heroku': ['.heroku/accounts', '.heroku/plugins'],
+
     'Htop': ['.htoprc'],
 
     'IntelliJIdea 12': [APP_SUPPORT + 'IntelliJIdea12',

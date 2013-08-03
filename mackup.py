@@ -842,18 +842,46 @@ def get_ignored_apps():
     return set(ignored_apps)
 
 
+def get_allowed_apps():
+    """
+    Get the list of applications allowed in the config file
+
+    Returns:
+        (set) list of applciation names to backup
+    """
+
+    # If a config file exists, grab it and parser it
+    config = configparser.SafeConfigParser(allow_no_value=True)
+
+    # We allow all by default
+    allowed_apps = set(SUPPORTED_APPS)
+
+    # Is the config file there ?
+    if config.read(os.environ['HOME'] + '/.mackup.cfg'):
+        # Is the "Allowed Applications" in the cfg file ?
+        if config.has_section('Allowed Applications'):
+            # Reset allowed apps to include only the user-defined
+            allowed_apps = set()
+            for app_name in SUPPORTED_APPS:
+                if app_name.lower() in config.options('Allowed Applications'):
+                    allowed_apps.add(app_name)
+
+    return allowed_apps
+
+
 def get_apps_to_backup():
     """
     Get the list of application that should be backup by Mackup.
-    It's the list of supported apps minus the list of ignored apps.
+    It's the list of allowed apps minus the list of ignored apps.
 
     Returns:
         (set) List of application names to backup
     """
     apps_to_backup = set()
     apps_to_ignore = get_ignored_apps()
+    apps_to_allow = get_allowed_apps()
 
-    for app_name in SUPPORTED_APPS:
+    for app_name in apps_to_allow:
         if app_name.lower() not in apps_to_ignore:
             apps_to_backup.add(app_name)
 

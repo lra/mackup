@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for Shuttle (thx @yabawock)
+
 ## Mackup 0.4.4
 
 - Conflict folder sync fix (thx @ediventurin)

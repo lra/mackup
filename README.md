@@ -208,6 +208,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Screen](http://www.gnu.org/software/screen/)
   - [Sequel Pro](http://www.sequelpro.com/)
   - [SHSH Blobs](http://en.wikipedia.org/wiki/SHSH_blob)
+  - [Shuttle](http://fitztrev.github.io/shuttle/)
   - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
   - [Slate](https://github.com/jigish/slate)
   - [Slogger](http://brettterpstra.com/projects/slogger/)

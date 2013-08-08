@@ -266,6 +266,8 @@ SUPPORTED_APPS = {
 
     'SHSH Blobs': ['.shsh'],
 
+    'Shuttle': ['.shuttle.json'],
+
     'SizeUp': [PREFERENCES + 'com.irradiatedsoftware.SizeUp.plist',
                APP_SUPPORT + 'SizeUp/SizeUp.sizeuplicense'],
 

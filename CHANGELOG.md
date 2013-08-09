@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for exercism (thx @mwarkentin)
+
 ## Mackup 0.5
 
 - Added GNU/Linux support (thx @flexiondotorg)

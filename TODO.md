@@ -10,7 +10,6 @@ Feel free to implement any of those ;)
 - A GUI, we could definitely use an OS X gui that woule display the status:
     synced apps, unsynced apps
 - homebrew: Would be cool to just have to do `brew install mackup`
-- Linux support
 - Try with hard links to support the Fonts pb
 - Support for DropBox alternatives
 - Support for ~/bin (need a custom mode for non 0600 synced files)

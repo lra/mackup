@@ -26,6 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import argparse
 import base64
 import os
+import platform
 import shutil
 import stat
 import subprocess
@@ -647,10 +648,20 @@ def delete(filepath):
         filepath (str): Absolute full path to a file. e.g. /path/to/file
     """
     # Some files on OS X have ACLs, let's remove them recursively
-    subprocess.call(['/bin/chmod', '-R', '-N', filepath])
+    if platform.system() == 'Darwin':
+        subprocess.call(['/bin/chmod', '-R', '-N', filepath])
+    elif platform.system() == 'Linux':
+        subprocess.call(['/bin/setfacl', '-R', '-b', filepath])
+    else:
+        pass
 
     # Some files on OS X have custom flags, let's remove them recursively
-    subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', filepath])
+    if platform.system() == 'Darwin':
+        subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', filepath])
+    elif platform.system() == 'Linux':
+        subprocess.call(['/usr/bin/chattr', '-R', '-i', filepath])
+    else:
+        pass
 
     # Finally remove the files and folders
     if os.path.isfile(filepath) or os.path.islink(filepath):
@@ -749,7 +760,12 @@ def chmod(target):
     folder_mode = stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR
 
     # Remove the immutable flag recursively if there is one
-    subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', target])
+    if platform.system() == 'Darwin':
+        subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', target])
+    elif platform.system() == 'Linux':
+        subprocess.call(['/usr/bin/chattr', '-R', '-i', target])
+    else:
+        pass
 
     if os.path.isfile(target):
         os.chmod(target, file_mode)

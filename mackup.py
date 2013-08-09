@@ -97,6 +97,8 @@ SUPPORTED_APPS = {
 
     'Boto': ['.boto'],
 
+    'Bundler': ['.bundler'],
+
     'Byobu': ['.byobu',
               '.byoburc',
               '.byoburc.tmux',
@@ -245,7 +247,6 @@ SUPPORTED_APPS = {
     'Ruby': ['.gemrc',
              '.irbrc',
              '.gem',
-             '.bundler',
              '.pryrc',
              '.aprc'],
 

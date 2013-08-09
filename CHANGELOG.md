@@ -4,8 +4,8 @@
 
 - Added the ability to explicitly list the list of applications to sync (thx
   @zuhao)
-- Added support for Shuttle and the heroku-accounts plugin for Heroku (thx
-  @yabawock)
+- Added support for Shuttle, the heroku-accounts plugin for Heroku, bundler, pry
+  and awesome-print for Ruby (thx @yabawock)
 
 ## Mackup 0.4.4
 

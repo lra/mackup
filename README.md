@@ -160,6 +160,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [CoRD](http://cord.sourceforge.net/)
   - [Droplr](https://droplr.com/hello)
   - [Emacs](http://www.gnu.org/software/emacs/)
+  - [Exercism](http://exercism.io/)
   - [ExpanDrive](http://www.expandrive.com/)
   - [Fantastical](http://flexibits.com/fantastical)
   - [Fish](http://ridiculousfish.com/shell/)

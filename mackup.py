@@ -132,6 +132,8 @@ SUPPORTED_APPS = {
     'Emacs': ['.emacs',
               '.emacs.d'],
 
+    'Exercism': ['.exercism'],
+
     'ExpanDrive': [APP_SUPPORT + 'ExpanDrive'],
 
     'Fantastical': [PREFERENCES + 'com.flexibits.fantastical.plist'],

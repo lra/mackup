@@ -144,6 +144,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [AppCode 2](http://www.jetbrains.com/objc/)
   - [Bartender](http://www.macbartender.com/)
   - [Bash](http://www.gnu.org/software/bash/)
+  - [Bash it](https://github.com/revans/bash-it/)
   - [BetterSnapTool](http://blog.boastr.net/)
   - [BetterTouchTool](http://blog.boastr.net/)
   - [BibDesk](http://bibdesk.sourceforge.net/)

@@ -374,6 +374,10 @@ RESTORE_MODE = 'restore'
 # Mode used to remove Mackup and reset and config file
 UNINSTALL_MODE = 'uninstall'
 
+# Support platforms
+PLATFORM_DARWIN = 'Darwin'
+PLATFORM_LINUX  = 'Linux'
+
 
 ###########
 # Classes #
@@ -648,17 +652,17 @@ def delete(filepath):
         filepath (str): Absolute full path to a file. e.g. /path/to/file
     """
     # Some files on OS X have ACLs, let's remove them recursively
-    if platform.system() == 'Darwin':
+    if platform.system() == PLATFORM_DARWIN:
         subprocess.call(['/bin/chmod', '-R', '-N', filepath])
-    elif platform.system() == 'Linux':
+    elif platform.system() == PLATFORM_LINUX:
         subprocess.call(['/bin/setfacl', '-R', '-b', filepath])
     else:
         pass
 
     # Some files on OS X have custom flags, let's remove them recursively
-    if platform.system() == 'Darwin':
+    if platform.system() == PLATFORM_DARWIN:
         subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', filepath])
-    elif platform.system() == 'Linux':
+    elif platform.system() == PLATFORM_LINUX:
         subprocess.call(['/usr/bin/chattr', '-R', '-i', filepath])
     else:
         pass
@@ -760,9 +764,9 @@ def chmod(target):
     folder_mode = stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR
 
     # Remove the immutable flag recursively if there is one
-    if platform.system() == 'Darwin':
+    if platform.system() == PLATFORM_DARWIN:
         subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', target])
-    elif platform.system() == 'Linux':
+    elif platform.system() == PLATFORM_LINUX:
         subprocess.call(['/usr/bin/chattr', '-R', '-i', target])
     else:
         pass

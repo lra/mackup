@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added GNU/Linux support (thx @flexiondotorg)
 - Added the ability to explicitly list the list of applications to sync (thx
   @zuhao)
 - Added support for Shuttle, the heroku-accounts plugin for Heroku, bundler, pry

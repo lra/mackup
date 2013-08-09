@@ -316,6 +316,7 @@ And it's [GPL](http://www.gnu.org/licenses/gpl.html) of course.
 ## What platform is supported ?
 
 - OS X
+- GNU/Linux
 
 ## What's up with the weird name ?
 

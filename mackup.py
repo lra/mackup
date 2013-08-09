@@ -651,21 +651,11 @@ def delete(filepath):
     Args:
         filepath (str): Absolute full path to a file. e.g. /path/to/file
     """
-    # Some files on OS X have ACLs, let's remove them recursively
-    if platform.system() == PLATFORM_DARWIN:
-        subprocess.call(['/bin/chmod', '-R', '-N', filepath])
-    elif platform.system() == PLATFORM_LINUX:
-        subprocess.call(['/bin/setfacl', '-R', '-b', filepath])
-    else:
-        pass
+    # Some files have ACLs, let's remove them recursively
+    remove_acl(filepath)
 
-    # Some files on OS X have custom flags, let's remove them recursively
-    if platform.system() == PLATFORM_DARWIN:
-        subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', filepath])
-    elif platform.system() == PLATFORM_LINUX:
-        subprocess.call(['/usr/bin/chattr', '-R', '-i', filepath])
-    else:
-        pass
+    # Some files have immutable attributes, let's remove them recursively
+    remove_immutable_attribute(filepath)
 
     # Finally remove the files and folders
     if os.path.isfile(filepath) or os.path.islink(filepath):
@@ -763,13 +753,8 @@ def chmod(target):
     file_mode = stat.S_IRUSR | stat.S_IWUSR
     folder_mode = stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR
 
-    # Remove the immutable flag recursively if there is one
-    if platform.system() == PLATFORM_DARWIN:
-        subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', target])
-    elif platform.system() == PLATFORM_LINUX:
-        subprocess.call(['/usr/bin/chattr', '-R', '-i', target])
-    else:
-        pass
+    # Remove the immutable attribute recursively if there is one
+    remove_immutable_attribute(target)
 
     if os.path.isfile(target):
         os.chmod(target, file_mode)
@@ -934,6 +919,41 @@ def is_process_running(process_name):
                                  stdout=DEVNULL)
 
     return bool(returncode == 0)
+
+
+def remove_acl(path):
+    """
+    Remove the ACL of the file or folder located on the given path.
+    Also remove the ACL of any file and folder below the given one, recursively.
+
+    Args:
+        path (str): Path to the file or folder to remove the ACL for,
+                    recursively.
+    """
+    # Some files have ACLs, let's remove them recursively
+    if platform.system() == PLATFORM_DARWIN and os.path.isfile('/bin/chmod'):
+        subprocess.call(['/bin/chmod', '-R', '-N', path])
+    elif platform.system() == PLATFORM_LINUX and os.path.isfile('/bin/setfacl'):
+        subprocess.call(['/bin/setfacl', '-R', '-b', path])
+
+
+def remove_immutable_attribute(path):
+    """
+    Remove the immutable attribute of the file or folder located on the given
+    path. Also remove the immutable attribute of any file and folder below the
+    given one, recursively.
+
+    Args:
+        path (str): Path to the file or folder to remove the immutable attribute
+                    for, recursively.
+    """
+    # Some files have ACLs, let's remove them recursively
+    if (platform.system() == PLATFORM_DARWIN
+        and os.path.isfile('/usr/bin/chflags')):
+        subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', path])
+    elif (platform.system() == PLATFORM_LINUX
+          and os.path.isfile('/usr/bin/chattr')):
+        subprocess.call(['/usr/bin/chattr', '-R', '-i', path])
 
 
 ################

@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added the ability to explicitly list the list of applications to sync (thx
+  @zuhao)
 - Added support for Shuttle (thx @yabawock)
 
 ## Mackup 0.4.4

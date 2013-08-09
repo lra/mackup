@@ -241,6 +241,27 @@ You can add your favorite application by forking it and doing a
 
 Open a [new issue](https://github.com/lra/mackup/issues).
 
+## How can I tell Mackp to sync only one or two application ?
+
+In your home folder, create a file named `.mackup.cfg` and add the application
+names to ignore in the `Allowed Applications` section, one by line.
+
+```ini
+# Example, to only sync SSH and Adium:
+[Allowed Applications]
+SSH
+Adium
+```
+
+A [sample](.mackup.cfg) of this file is available for download:
+
+```bash
+cd
+curl -o .mackup.cfg https://raw.github.com/lra/mackup/master/.mackup.cfg
+```
+Be careful, if you download it like this, Mackup will only try to sync SSH and
+Adium from now on !
+
 ## How can I tell Mackup to not sync an application ?
 
 In your home folder, create a file named `.mackup.cfg` and add the application

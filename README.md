@@ -168,6 +168,7 @@ That's it, you got your `git` config setup on your new Mac.
   - [Git Hooks](https://github.com/icefox/git-hooks)
   - [Gitbox](http://gitboxapp.com/)
   - [GnuPG](http://www.gnupg.org/)
+  - [Heroku](https://www.heroku.com/)
   - [Htop](http://htop.sourceforge.net/)
   - [IntelliJIDEA 12](http://www.jetbrains.com/idea/)
   - [Irssi](http://www.irssi.org/)

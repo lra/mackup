@@ -243,7 +243,11 @@ SUPPORTED_APPS = {
     'Rails': ['.railsrc'],
 
     'Ruby': ['.gemrc',
-             '.irbrc'],
+             '.irbrc',
+             '.gem',
+             '.bundler',
+             '.pryrc',
+             '.aprc'],
 
     'RubyMine 4': [APP_SUPPORT + 'RubyMine40',
                    PREFERENCES + 'RubyMine40'],

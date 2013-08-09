@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.5
+
 - Added GNU/Linux support (thx @flexiondotorg)
 - Added the ability to explicitly list the list of applications to sync (thx
   @zuhao)

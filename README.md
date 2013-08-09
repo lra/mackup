@@ -1,12 +1,12 @@
 # Mackup
 
-Keep your Mac application settings in sync.
+Keep your application settings in sync.
 
 ## Quickstart
 
 Install [Dropbox](http://www.dropbox.com/) first, it's needed.
 
-On your current Mac:
+On your current workstation:
 ```bash
 # Download Mackup
 curl -o mackup https://raw.github.com/lra/mackup/master/mackup.py
@@ -20,7 +20,7 @@ chmod +x mackup
 
 You're all set, and constantly backuped from now on.
 
-Next, on any new Mac, install Dropbox and do:
+Next, on any new workstation, install Dropbox and do:
 ```bash
 # Download Mackup
 curl -o mackup https://raw.github.com/lra/mackup/master/mackup.py
@@ -125,7 +125,7 @@ When you launch `mackup backup`, here's what it's really doing:
 1. `rm ~/.gitconfig`
 1. `ln -s ~/Dropbox/Mackup/.gitconfig ~/.gitconfig`
 
-Now your `git` config is always backup and up to date on all your Macs.
+Now your `git` config is always backup and up to date on all your workstations.
 
 ### Restore
 
@@ -133,7 +133,7 @@ When you launch `mackup restore`, here's what it's really doing:
 
 1. `ln -s ~/Dropbox/Mackup/.gitconfig ~/.gitconfig`
 
-That's it, you got your `git` config setup on your new Mac.
+That's it, you got your `git` config setup on your new workstation.
 
 `mackup` does the same for any supported application.
 
@@ -243,7 +243,7 @@ You can add your favorite application by forking it and doing a
 
 Open a [new issue](https://github.com/lra/mackup/issues).
 
-## How can I tell Mackp to sync only one or two application ?
+## How can I tell Mackup to sync only one or two application ?
 
 In your home folder, create a file named `.mackup.cfg` and add the application
 names to ignore in the `Allowed Applications` section, one by line.

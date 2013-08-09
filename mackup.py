@@ -914,11 +914,16 @@ def is_process_running(process_name):
     Returns:
         (bool): True if the process is running
     """
-    DEVNULL = open(os.devnull, 'wb')
-    returncode = subprocess.call(['/usr/bin/pgrep', process_name],
-                                 stdout=DEVNULL)
+    is_running = False
 
-    return bool(returncode == 0)
+    # On systems with pgrep, check if the given process is running
+    if os.path.isfile('/usr/bin/pgrep'):
+        DEVNULL = open(os.devnull, 'wb')
+        returncode = subprocess.call(['/usr/bin/pgrep', process_name],
+                                     stdout=DEVNULL)
+        is_running = bool(returncode == 0)
+
+    return is_running
 
 
 def remove_acl(path):

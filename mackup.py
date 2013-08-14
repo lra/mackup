@@ -199,6 +199,10 @@ SUPPORTED_APPS = {
         PREFERENCES + 'com.manytricks.Moom.plist',
         APP_SUPPORT + 'Many Tricks'],
 
+    'Mou': [
+        PREFERENCES + 'com.mouapp.Mou.plist',
+        APP_SUPPORT + 'Mou'],
+
     'MPV':['.mpv/channels.conf',
            '.mpv/config',
            '.mpv/input.conf'],

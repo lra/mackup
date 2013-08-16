@@ -208,6 +208,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [RubyMine 4](http://www.jetbrains.com/ruby/)
   - [RubyMine 5](http://www.jetbrains.com/ruby/)
   - [S3cmd](http://s3tools.org/s3cmd)
+  - [Scenario](http://www.lagentesoft.com/scenario/)
   - [Screen](http://www.gnu.org/software/screen/)
   - [Sequel Pro](http://www.sequelpro.com/)
   - [SHSH Blobs](http://en.wikipedia.org/wiki/SHSH_blob)

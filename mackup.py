@@ -268,6 +268,9 @@ SUPPORTED_APPS = {
 
     'S3cmd': ['.s3cfg'],
 
+    'Scenario': [PREFERENCES + 'com.lagente.scenario.plist',
+                 'Library/Scenario'],
+
     'Scripts': ['Library/Scripts'],
 
     'Screen': ['.screenrc'],

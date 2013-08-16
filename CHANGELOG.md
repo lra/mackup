@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for exercism (thx @mwarkentin)
+- Added support for Skim
 
 ## Mackup 0.5
 

@@ -213,6 +213,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [SHSH Blobs](http://en.wikipedia.org/wiki/SHSH_blob)
   - [Shuttle](http://fitztrev.github.io/shuttle/)
   - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
+  - [Skim](http://skim-app.sourceforge.net/)
   - [Slate](https://github.com/jigish/slate)
   - [Slogger](http://brettterpstra.com/projects/slogger/)
   - [SourceTree](http://sourcetreeapp.com)

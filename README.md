@@ -249,7 +249,7 @@ Open a [new issue](https://github.com/lra/mackup/issues).
 ## How can I tell Mackup to sync only one or two application ?
 
 In your home folder, create a file named `.mackup.cfg` and add the application
-names to ignore in the `Allowed Applications` section, one by line.
+names to allow in the `Allowed Applications` section, one by line.
 
 ```ini
 # Example, to only sync SSH and Adium:

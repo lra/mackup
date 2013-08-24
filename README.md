@@ -6,7 +6,16 @@ Keep your application settings in sync.
 
 Install [Dropbox](http://www.dropbox.com/) first, it's needed.
 
-On your current workstation:
+On OS X, if you want an easy install, you can install [Homebrew](http://brew.sh/) and do:
+```bash
+# Install Mackup
+brew install mackup
+
+# Launch it and back up your files in Dropbox
+mackup backup
+```
+
+If not running OS X, or you don't like Homebrew, run on your current workstation:
 ```bash
 # Download Mackup
 curl -o mackup https://raw.github.com/lra/mackup/master/mackup.py

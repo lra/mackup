@@ -277,6 +277,8 @@ SUPPORTED_APPS = {
 
     'Screen': ['.screenrc'],
 
+    'SelfControl' : [PREFERENCES + 'org.eyebeam.SelfControl.plist'],
+
     'Sequel Pro': [APP_SUPPORT + 'Sequel Pro/Data'],
 
     'Services': ['Library/Services'],

@@ -306,6 +306,10 @@ SUPPORTED_APPS = {
 
     'SSH': ['.ssh'],
 
+    'Stata': [APP_SUPPORT + 'Stata',
+              PREFERENCES + 'com.stata.stata12.plist',
+              PREFERENCES + 'com.stata.stata13.plist'],
+
     'Sublime Text 2': [APP_SUPPORT + 'Sublime Text 2/Installed Packages',
                        APP_SUPPORT + 'Sublime Text 2/Packages',
                        APP_SUPPORT + 'Sublime Text 2/Pristine Packages'],

@@ -2,6 +2,8 @@
 
 Keep your application settings in sync.
 
+[![Build Status](https://travis-ci.org/lra/mackup.png?branch=master)](https://travis-ci.org/lra/mackup)
+
 ## Quickstart
 
 Install [Dropbox](http://www.dropbox.com/) first, it's needed.

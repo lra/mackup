@@ -179,7 +179,7 @@ SUPPORTED_APPS = {
         PREFERENCES + 'org.pqrs.KeyRemap4MacBook.plist',
         PREFERENCES + 'org.pqrs.KeyRemap4MacBook.multitouchextension.plist',
         APP_SUPPORT + 'KeyRemap4MacBook/private.xml'],
-        
+
     'LaTeXiT': [PREFERENCES + 'fr.chachatelier.pierre.LaTeXiT.plist'],
 
     'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
@@ -507,11 +507,14 @@ class ApplicationProfile(object):
             home_filepath = os.path.join(os.environ['HOME'], filename)
 
             # If the file exists and is not already pointing to the mackup file
+            # and the folder makes sense on the current platform (Don't sync
+            # any subfolder of ~/Library on GNU/Linux)
             if ((os.path.isfile(mackup_filepath)
                  or os.path.isdir(mackup_filepath))
                 and not (os.path.islink(home_filepath)
                          and os.path.samefile(mackup_filepath,
-                                              home_filepath))):
+                                              home_filepath))
+                and can_file_be_synced_on_current_platform(filename)):
 
                 print "Restoring {}...".format(filename)
 
@@ -976,6 +979,40 @@ def remove_immutable_attribute(path):
     elif (platform.system() == PLATFORM_LINUX
           and os.path.isfile('/usr/bin/chattr')):
         subprocess.call(['/usr/bin/chattr', '-R', '-i', path])
+
+
+def can_file_be_synced_on_current_platform(path):
+    """
+    Check if it makes sens to sync the file at the given path on the current
+    platform.
+    For now we don't sync any file in the ~/Library folder on GNU/Linux.
+    There might be other exceptions in the future.
+
+    Args:
+        (str): Path to the file or folder to check. If relative, prepend it with
+               the home folder.
+               'abc' becomes '~/abc'
+               '/def' stays '/def'
+
+    Returns:
+        (bool): True if given file can be synced
+    """
+    can_be_synced = True
+
+    # If the given path is relative, prepend home
+    fullpath = os.path.join(os.environ['HOME'], path)
+
+    # Compute the ~/Library path on OS X
+    # End it with a slash because we are looking for this specific folder and
+    # not any file/folder named LibrarySomething
+    library_path = os.path.join(os.environ['HOME'], 'Library/')
+
+    if platform.system() == PLATFORM_LINUX:
+        if fullpath.startswith(library_path):
+            can_be_synced = False
+
+    return can_be_synced
+
 
 
 ################

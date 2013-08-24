@@ -8,6 +8,7 @@
 - Added support for Ack (thx @adamlogic)
 - Added support for Stata and SelfControl (thx @kfinlay)
 - Added support for LaTeXiT (thx @twsh)
+- Do not link ~/Library/* files on GNU/Linux, should fix #104
 
 ## Mackup 0.5
 

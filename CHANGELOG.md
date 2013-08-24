@@ -6,6 +6,7 @@
 - Added support for Skim
 - Added support for Scenario
 - Added support for Ack (thx @adamlogic)
+- Added support for Stata (thx @kfinlay)
 
 ## Mackup 0.5
 

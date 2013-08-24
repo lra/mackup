@@ -211,6 +211,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [S3cmd](http://s3tools.org/s3cmd)
   - [Scenario](http://www.lagentesoft.com/scenario/)
   - [Screen](http://www.gnu.org/software/screen/)
+  - [SelfControl](http://selfcontrolapp.com/)
   - [Sequel Pro](http://www.sequelpro.com/)
   - [SHSH Blobs](http://en.wikipedia.org/wiki/SHSH_blob)
   - [Shuttle](http://fitztrev.github.io/shuttle/)

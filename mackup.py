@@ -56,6 +56,8 @@ APP_SUPPORT = 'Library/Application Support/'
 # Application Name: List of files (relative path from the user's home)
 
 SUPPORTED_APPS = {
+    'Ack': ['.ackrc'],
+
     'Adium': [APP_SUPPORT + 'Adium 2.0',
               PREFERENCES + 'com.adiumX.adiumX.plist'],
 

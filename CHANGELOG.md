@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.5.1
+
 - Added support for exercism (thx @mwarkentin)
 - Added support for Skim
 - Added support for Scenario

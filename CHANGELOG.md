@@ -5,6 +5,7 @@
 - Added support for exercism (thx @mwarkentin)
 - Added support for Skim
 - Added support for Scenario
+- Added support for Ack (thx @adamlogic)
 
 ## Mackup 0.5
 

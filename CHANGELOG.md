@@ -2,6 +2,13 @@
 
 ## WIP
 
+## Mackup 0.5.2
+
+- Added Support for Tower (@MichaelRBond)
+- Added Support for Colloquy (@MichaelRBond)
+- Added Support for Twitterrific (@MichaelRBond)
+- Mackup path in dropbox is now configurable via constant (@MichaelRBond)
+
 ## Mackup 0.5.1
 
 - Added support for exercism (thx @mwarkentin)

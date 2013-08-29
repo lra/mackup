@@ -44,8 +44,9 @@ except ImportError:
 # Commonly used paths #
 #######################
 
-PREFERENCES = 'Library/Preferences/'
-APP_SUPPORT = 'Library/Application Support/'
+MACKUP_DB_PATH = 'Mackup'
+PREFERENCES    = 'Library/Preferences/'
+APP_SUPPORT    = 'Library/Application Support/'
 
 #################
 # Configuration #
@@ -117,6 +118,11 @@ SUPPORTED_APPS = {
                  PREFERENCES + 'com.naotaka.ClipMenu.plist'],
 
     'CloudApp': [PREFERENCES + 'com.linebreak.CloudAppMacOSX.plist'],
+
+    'Colloquy': [
+        PREFERENCES + 'info.colloquy.plist',
+        APP_SUPPORT + 'Colloquy'
+    ],
 
     'Concentrate': [APP_SUPPORT + 'Concentrate/Concentrate.sqlite3'],
 
@@ -332,11 +338,18 @@ SUPPORTED_APPS = {
 
     'Tmuxinator': ['.tmuxinator'],
 
+    'Tower' : [APP_SUPPORT + 'Tower',
+               PREFERENCES + "com.fournova.Tower.plist"],
+
     'Transmission': [PREFERENCES + 'org.m0k.transmission.plist'],
 
     'Transmit': [
         PREFERENCES + 'com.panic.Transmit.plist',
         APP_SUPPORT + 'Transmit/Metadata'
+    ],
+
+    'Twitterrific' : [
+        APP_SUPPORT + 'Twitterrific'
     ],
 
     'Ventrilo': [PREFERENCES + 'Ventrilo'],
@@ -380,7 +393,7 @@ SUPPORTED_APPS = {
 
 
 # Current version
-VERSION = '0.5.1'
+VERSION = '0.5.2'
 
 # Mode used to backup files to Dropbox
 BACKUP_MODE = 'backup'
@@ -586,7 +599,7 @@ class Mackup(object):
                    " If Dropbox is not installed and running, go for it on"
                    " <http://www.dropbox.com/>"))
 
-        self.mackup_folder = self.dropbox_folder + '/Mackup'
+        self.mackup_folder = os.path.join(self.dropbox_folder, MACKUP_DB_PATH)
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
     def _check_for_usable_environment(self):

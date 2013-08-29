@@ -348,6 +348,10 @@ SUPPORTED_APPS = {
         APP_SUPPORT + 'Transmit/Metadata'
     ],
 
+    'Twitterrific' : [
+        APP_SUPPORT + 'Twitterrific'
+    ],
+
     'Ventrilo': [PREFERENCES + 'Ventrilo'],
 
     'Vim': ['.gvimrc',

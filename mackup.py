@@ -333,6 +333,9 @@ SUPPORTED_APPS = {
 
     'Tmuxinator': ['.tmuxinator'],
 
+    'Tower' : [APP_SUPPORT + 'Tower',
+               PREFERENCES + "com.fournova.Tower.plist"],
+
     'Transmission': [PREFERENCES + 'org.m0k.transmission.plist'],
 
     'Transmit': [

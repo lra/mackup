@@ -119,6 +119,11 @@ SUPPORTED_APPS = {
 
     'CloudApp': [PREFERENCES + 'com.linebreak.CloudAppMacOSX.plist'],
 
+    'Colloquy': [
+        PREFERENCES + 'info.colloquy.plist',
+        APP_SUPPORT + 'Colloquy'
+    ],
+
     'Concentrate': [APP_SUPPORT + 'Concentrate/Concentrate.sqlite3'],
 
     'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],

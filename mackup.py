@@ -599,7 +599,7 @@ class Mackup(object):
                    " If Dropbox is not installed and running, go for it on"
                    " <http://www.dropbox.com/>"))
 
-        self.mackup_folder = self.dropbox_folder + "/" + MACKUP_DB_PATH
+        self.mackup_folder = os.path.join(self.dropbox_folder, MACKUP_DB_PATH)
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
     def _check_for_usable_environment(self):

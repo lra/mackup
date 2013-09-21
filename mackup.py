@@ -45,8 +45,8 @@ except ImportError:
 #######################
 
 MACKUP_DB_PATH = 'Mackup'
-PREFERENCES    = 'Library/Preferences/'
-APP_SUPPORT    = 'Library/Application Support/'
+PREFERENCES = 'Library/Preferences/'
+APP_SUPPORT = 'Library/Application Support/'
 
 #################
 # Configuration #
@@ -62,20 +62,21 @@ SUPPORTED_APPS = {
     'Adium': [APP_SUPPORT + 'Adium 2.0',
               PREFERENCES + 'com.adiumX.adiumX.plist'],
 
-    'Adobe Lightroom': [APP_SUPPORT + 'Adobe/Lightroom/Develop Presets',
-                        APP_SUPPORT + 'Adobe/Lightroom/Export Actions',
-                        APP_SUPPORT + 'Adobe/Lightroom/Export Presets',
-                        APP_SUPPORT + 'Adobe/Lightroom/Filename Templates',
-                        APP_SUPPORT + 'Adobe/Lightroom/Filter Presets',
-                        APP_SUPPORT + 'Adobe/Lightroom/Import Presets',
-                        APP_SUPPORT + 'Adobe/Lightroom/Keyword Sets',
-                        APP_SUPPORT + 'Adobe/Lightroom/Label Sets',
-                        APP_SUPPORT + 'Adobe/Lightroom/Local Adjustment Presets',
-                        APP_SUPPORT + 'Adobe/Lightroom/Locations',
-                        APP_SUPPORT + 'Adobe/Lightroom/Metadata Presets',
-                        APP_SUPPORT + 'Adobe/Lightroom/Modules',
-                        APP_SUPPORT + 'Adobe/Lightroom/Plugins',
-                        APP_SUPPORT + 'Adobe/Lightroom/Watermarks'],
+    'Adobe Lightroom': [
+        APP_SUPPORT + 'Adobe/Lightroom/Develop Presets',
+        APP_SUPPORT + 'Adobe/Lightroom/Export Actions',
+        APP_SUPPORT + 'Adobe/Lightroom/Export Presets',
+        APP_SUPPORT + 'Adobe/Lightroom/Filename Templates',
+        APP_SUPPORT + 'Adobe/Lightroom/Filter Presets',
+        APP_SUPPORT + 'Adobe/Lightroom/Import Presets',
+        APP_SUPPORT + 'Adobe/Lightroom/Keyword Sets',
+        APP_SUPPORT + 'Adobe/Lightroom/Label Sets',
+        APP_SUPPORT + 'Adobe/Lightroom/Local Adjustment Presets',
+        APP_SUPPORT + 'Adobe/Lightroom/Locations',
+        APP_SUPPORT + 'Adobe/Lightroom/Metadata Presets',
+        APP_SUPPORT + 'Adobe/Lightroom/Modules',
+        APP_SUPPORT + 'Adobe/Lightroom/Plugins',
+        APP_SUPPORT + 'Adobe/Lightroom/Watermarks'],
 
     'AppCode 2': [APP_SUPPORT + 'appCode20',
                   PREFERENCES + 'appCode20'],
@@ -207,9 +208,9 @@ SUPPORTED_APPS = {
         PREFERENCES + 'com.manytricks.Moom.plist',
         APP_SUPPORT + 'Many Tricks'],
 
-    'MPV':['.mpv/channels.conf',
-           '.mpv/config',
-           '.mpv/input.conf'],
+    'MPV': ['.mpv/channels.conf',
+            '.mpv/config',
+            '.mpv/input.conf'],
 
     'MercuryMover': [PREFERENCES + 'com.heliumfoot.MyWiAgent.plist'],
 
@@ -283,7 +284,7 @@ SUPPORTED_APPS = {
 
     'Screen': ['.screenrc'],
 
-    'SelfControl' : [PREFERENCES + 'org.eyebeam.SelfControl.plist'],
+    'SelfControl': [PREFERENCES + 'org.eyebeam.SelfControl.plist'],
 
     'Sequel Pro': [APP_SUPPORT + 'Sequel Pro/Data'],
 
@@ -310,7 +311,7 @@ SUPPORTED_APPS = {
 
     'Spark': [APP_SUPPORT + 'Spark'],
 
-    'Spotify' : [PREFERENCES + 'com.spotify.client.plist'],
+    'Spotify': [PREFERENCES + 'com.spotify.client.plist'],
 
     'SSH': ['.ssh'],
 
@@ -402,7 +403,7 @@ UNINSTALL_MODE = 'uninstall'
 
 # Support platforms
 PLATFORM_DARWIN = 'Darwin'
-PLATFORM_LINUX  = 'Linux'
+PLATFORM_LINUX = 'Linux'
 
 
 ###########
@@ -548,7 +549,6 @@ class ApplicationProfile(object):
                 else:
                     link(mackup_filepath, home_filepath)
 
-
     def uninstall(self):
         """
         Uninstall Mackup.
@@ -613,7 +613,6 @@ class Mackup(object):
         #           " when Sublime Text is running while I backup or restore"
         #           " its configuration files. Please close Sublime Text and"
         #           " run me again."))
-
 
     def check_for_usable_backup_env(self):
         """Check if the current env can be used to back up files"""
@@ -958,7 +957,8 @@ def is_process_running(process_name):
 def remove_acl(path):
     """
     Remove the ACL of the file or folder located on the given path.
-    Also remove the ACL of any file and folder below the given one, recursively.
+    Also remove the ACL of any file and folder below the given one,
+    recursively.
 
     Args:
         path (str): Path to the file or folder to remove the ACL for,
@@ -967,7 +967,8 @@ def remove_acl(path):
     # Some files have ACLs, let's remove them recursively
     if platform.system() == PLATFORM_DARWIN and os.path.isfile('/bin/chmod'):
         subprocess.call(['/bin/chmod', '-R', '-N', path])
-    elif platform.system() == PLATFORM_LINUX and os.path.isfile('/bin/setfacl'):
+    elif ((platform.system() == PLATFORM_LINUX)
+          and os.path.isfile('/bin/setfacl')):
         subprocess.call(['/bin/setfacl', '-R', '-b', path])
 
 
@@ -978,11 +979,11 @@ def remove_immutable_attribute(path):
     given one, recursively.
 
     Args:
-        path (str): Path to the file or folder to remove the immutable attribute
-                    for, recursively.
+        path (str): Path to the file or folder to remove the immutable
+                    attribute for, recursively.
     """
     # Some files have ACLs, let's remove them recursively
-    if (platform.system() == PLATFORM_DARWIN
+    if ((platform.system() == PLATFORM_DARWIN)
         and os.path.isfile('/usr/bin/chflags')):
         subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', path])
     elif (platform.system() == PLATFORM_LINUX
@@ -998,8 +999,8 @@ def can_file_be_synced_on_current_platform(path):
     There might be other exceptions in the future.
 
     Args:
-        (str): Path to the file or folder to check. If relative, prepend it with
-               the home folder.
+        (str): Path to the file or folder to check. If relative, prepend it
+               with the home folder.
                'abc' becomes '~/abc'
                '/def' stays '/def'
 
@@ -1021,7 +1022,6 @@ def can_file_be_synced_on_current_platform(path):
             can_be_synced = False
 
     return can_be_synced
-
 
 
 ################
@@ -1082,8 +1082,6 @@ def main():
                    "\n"
                    "Thanks for using Mackup !"
                    .format(os.path.abspath(__file__)))
-
-
     else:
         raise ValueError("Unsupported mode: {}".format(args.mode))
 
@@ -1092,4 +1090,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

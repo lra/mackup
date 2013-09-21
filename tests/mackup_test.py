@@ -25,7 +25,7 @@ class TestMackup(unittest.TestCase):
         tfpath = tempfile.mkdtemp()
 
         # Let's put a file in it just for fun
-        tf = tempfile.NamedTemporaryFile(dir=tfpath,delete=False)
+        tf = tempfile.NamedTemporaryFile(dir=tfpath, delete=False)
         filepath = tf.name
         tf.close()
 
@@ -33,7 +33,7 @@ class TestMackup(unittest.TestCase):
         subfolder_path = tempfile.mkdtemp(dir=tfpath)
 
         # And a file in the subfolder
-        tf = tempfile.NamedTemporaryFile(dir=subfolder_path,delete=False)
+        tf = tempfile.NamedTemporaryFile(dir=subfolder_path, delete=False)
         subfilepath = tf.name
         tf.close()
 

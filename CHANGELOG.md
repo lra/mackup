@@ -2,10 +2,11 @@
 
 ## WIP
 
-- Added Support for Tower (@MichaelRBond)
-- Added Support for Colloquy (@MichaelRBond)
-- Added Support for Twitterrific (@MichaelRBond)
-- Mackup path in dropbox is now configurable via constant (@MichaelRBond)
+- Added support for Tower (thx @MichaelRBond)
+- Added support for Colloquy (thx @MichaelRBond)
+- Added support for Twitterrific (thx @MichaelRBond)
+- Mackup path in dropbox is now configurable via constant (thx @MichaelRBond)
+- Added support for Spectacle (thx @vincecima)
 
 ## Mackup 0.5.1
 

@@ -234,6 +234,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Slogger](http://brettterpstra.com/projects/slogger/)
   - [SourceTree](http://sourcetreeapp.com)
   - [Spark](http://www.shadowlab.org/softwares/spark.php)
+  - [Spectacle](http://spectacleapp.com/)
   - [Spotify](https://www.spotify.com/)
   - [Stata](http://www.stata.com/)
   - [Sublime Text](http://www.sublimetext.com/)

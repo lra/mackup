@@ -311,7 +311,9 @@ SUPPORTED_APPS = {
 
     'Spark': [APP_SUPPORT + 'Spark'],
 
-    'Spotify': [PREFERENCES + 'com.spotify.client.plist'],
+    'Spectacle': [PREFERENCES + 'com.divisiblebyzero.Spectacle.plist'],
+
+    'Spotify' : [PREFERENCES + 'com.spotify.client.plist'],
 
     'SSH': ['.ssh'],
 

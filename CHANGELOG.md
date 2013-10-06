@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.5.2
+
 - Added support for Tower (thx @MichaelRBond)
 - Added support for Colloquy (thx @MichaelRBond)
 - Added support for Twitterrific (thx @MichaelRBond)

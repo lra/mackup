@@ -344,3 +344,7 @@ And it's [GPL](http://www.gnu.org/licenses/gpl.html) of course.
 ## What's up with the weird name ?
 
 Mackup is just a contraction of Mac and Backup, I suck at naming stuff, ok.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lra/mackup/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

@@ -179,6 +179,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Fantastical](http://flexibits.com/fantastical)
   - [Fish](http://ridiculousfish.com/shell/)
   - [Flux](http://stereopsis.com/flux/)
+  - [ForkLift 2](http://www.binarynights.com/forklift/)
   - [GeekTool](http://projects.tynsoe.org/en/geektool/)
   - [Git](http://git-scm.com/)
   - [Git Hooks](https://github.com/icefox/git-hooks)

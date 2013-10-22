@@ -5,6 +5,7 @@
 - Added support for Apple Messages
 - Added support for Skype
 - Added support for SuperDuper!
+- Added support for ForkLift 2
 
 ## Mackup 0.5.2
 

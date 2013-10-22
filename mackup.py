@@ -149,6 +149,8 @@ SUPPORTED_APPS = {
 
     'Flux': [PREFERENCES + 'org.herf.Flux.plist'],
 
+    'ForkLift 2': [PREFERENCES + 'com.binarynights.ForkLift2.plist'],
+
     'GeekTool': [
         PREFERENCES + 'org.tynsoe.GeekTool.plist',
         PREFERENCES + 'org.tynsoe.geeklet.file.plist',

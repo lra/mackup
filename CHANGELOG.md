@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for Apple Messages
+
 ## Mackup 0.5.2
 
 - Added support for Tower (thx @MichaelRBond)

@@ -204,6 +204,8 @@ SUPPORTED_APPS = {
     'Mercurial': ['.hgrc',
                   '.hgignore_global'],
 
+    'Messages': ['Library/Messages'],
+
     'Moom': [
         PREFERENCES + 'com.manytricks.Moom.plist',
         APP_SUPPORT + 'Many Tricks'],

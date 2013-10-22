@@ -200,6 +200,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [MenuMeters](http://www.ragingmenace.com/software/menumeters/)
   - [Mercurial](http://mercurial.selenic.com/)
   - [MercuryMover](http://www.heliumfoot.com/mercurymover/)
+  - [Messages](http://www.apple.com/osx/apps/#messages)
   - [Moom](http://manytricks.com/moom/)
   - [MPV](http://mpv.io/)
   - [Nano](http://www.nano-editor.org/)

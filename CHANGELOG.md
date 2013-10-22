@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Apple Messages
+- Added support for Skype
 
 ## Mackup 0.5.2
 

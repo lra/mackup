@@ -4,6 +4,7 @@
 
 - Added support for Apple Messages
 - Added support for Skype
+- Added support for SuperDuper!
 
 ## Mackup 0.5.2
 

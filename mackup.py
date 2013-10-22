@@ -334,6 +334,8 @@ SUPPORTED_APPS = {
 
     'Subversion': ['.subversion'],
 
+    'SuperDuper!': [APP_SUPPORT + 'SuperDuper!'],
+
     'Teamocil': ['.teamocil'],
 
     'TextMate': [APP_SUPPORT + 'TextMate',

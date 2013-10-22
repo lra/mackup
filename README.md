@@ -242,6 +242,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Stata](http://www.stata.com/)
   - [Sublime Text](http://www.sublimetext.com/)
   - [Subversion](http://subversion.apache.org/)
+  - [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html)
   - [Teamocil](http://remiprev.github.io/teamocil/)
   - [TextMate](http://macromates.com/)
   - [Tmux](http://tmux.sourceforge.net/)

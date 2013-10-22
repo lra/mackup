@@ -139,6 +139,8 @@ SUPPORTED_APPS = {
     'Emacs': ['.emacs',
               '.emacs.d'],
 
+    'Ember': ['Library/Group Containers/P97H7FTHWN.com.realmacsoftware.ember'],
+
     'Exercism': ['.exercism'],
 
     'ExpanDrive': [APP_SUPPORT + 'ExpanDrive'],

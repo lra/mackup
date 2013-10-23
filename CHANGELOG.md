@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added support for Arara
 - Added support for Aspell
 
 ## Mackup 0.5.2

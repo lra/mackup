@@ -156,7 +156,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Adobe Lightroom](http://www.adobe.com/products/photoshop-lightroom.html)
   - [AppCode 2](http://www.jetbrains.com/objc/)
   - [Arara](http://cereda.github.io/arara/)
-  - [Aspell](http://aspell.net)
+  - [Aspell](http://aspell.net/)
   - [Bartender](http://www.macbartender.com/)
   - [Bash](http://www.gnu.org/software/bash/)
   - [Bash it](https://github.com/revans/bash-it/)

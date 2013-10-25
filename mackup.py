@@ -137,6 +137,9 @@ SUPPORTED_APPS = {
 
     'Curl': ['.netrc'],
 
+    'Cyberduck': [APP_SUPPORT + 'Cyberduck',
+                  PREFERENCES + 'ch.sudo.cyberduck.plist'],
+
     'Divvy': [PREFERENCES + 'com.mizage.direct.Divvy.plist'],
 
     'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],

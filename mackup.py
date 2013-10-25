@@ -133,6 +133,8 @@ SUPPORTED_APPS = {
                PREFERENCES + 'com.panic.Coda2.plist'],
 
     'Curl': ['.netrc'],
+    
+    'Divvy': [PREFERENCES + 'com.mizage.direct.Divvy.plist'],
 
     'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],
 

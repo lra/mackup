@@ -173,6 +173,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [ControlPlane](http://www.controlplaneapp.com/)
   - [CoRD](http://cord.sourceforge.net/)
   - [Droplr](https://droplr.com/hello)
+  - [Divvy](http://mizage.com/divvy/)
   - [Emacs](http://www.gnu.org/software/emacs/)
   - [Exercism](http://exercism.io/)
   - [ExpanDrive](http://www.expandrive.com/)

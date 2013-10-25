@@ -1,6 +1,7 @@
 # Mackup Changelog
 
 ## WIP
+- Added support for Divvy (thx @saulshanabrook)
 
 ## Mackup 0.5.2
 

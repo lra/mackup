@@ -78,6 +78,9 @@ SUPPORTED_APPS = {
         APP_SUPPORT + 'Adobe/Lightroom/Plugins',
         APP_SUPPORT + 'Adobe/Lightroom/Watermarks'],
 
+    'Alfred 2': [APP_SUPPORT + 'Alfred 2',
+                  PREFERENCES + 'com.runningwithcrayons.Alfred-2.plist'],
+
     'AppCode 2': [APP_SUPPORT + 'appCode20',
                   PREFERENCES + 'appCode20'],
 
@@ -133,7 +136,7 @@ SUPPORTED_APPS = {
                PREFERENCES + 'com.panic.Coda2.plist'],
 
     'Curl': ['.netrc'],
-    
+
     'Divvy': [PREFERENCES + 'com.mizage.direct.Divvy.plist'],
 
     'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],

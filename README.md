@@ -172,6 +172,8 @@ That's it, you got your `git` config setup on your new workstation.
   - [Concentrate](http://www.getconcentrating.com/)
   - [ControlPlane](http://www.controlplaneapp.com/)
   - [CoRD](http://cord.sourceforge.net/)
+  - [Cyberduck](http://cyberduck.ch/)
+  - [Dash](http://kapeli.com/dash)
   - [Droplr](https://droplr.com/hello)
   - [Divvy](http://mizage.com/divvy/)
   - [Emacs](http://www.gnu.org/software/emacs/)

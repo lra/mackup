@@ -46,6 +46,7 @@ except ImportError:
 
 PREFERENCES = 'Library/Preferences/'
 APP_SUPPORT = 'Library/Application Support/'
+CONFIG_PATH = '.config/'
 
 #################
 # Configuration #
@@ -84,7 +85,9 @@ SUPPORTED_APPS = {
              '.bashrc',
              '.profile',
              '.bash_profile',
-             '.inputrc'],
+             '.inputrc',
+			'.git-completion.bash',
+			'.git-prompt.sh'],
 
     'Bash it': ['.bash_it'],
 
@@ -201,6 +204,7 @@ SUPPORTED_APPS = {
 
     'Mou': [
         PREFERENCES + 'com.mouapp.Mou.plist',
+        PREFERENCES + 'com.mouapp.Mou.LSSharedFileList.plist',
         APP_SUPPORT + 'Mou'],
 
     'MPV':['.mpv/channels.conf',
@@ -208,6 +212,10 @@ SUPPORTED_APPS = {
            '.mpv/input.conf'],
 
     'MercuryMover': [PREFERENCES + 'com.heliumfoot.MyWiAgent.plist'],
+
+    'Musicbrainz': [
+        PREFERENCES + 'org.musicbrainz.picard.plist',
+        CONFIG_PATH + 'MusicBrainz'],
 
     'Nano': ['.nanorc'],
 

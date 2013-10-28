@@ -133,7 +133,7 @@ SUPPORTED_APPS = {
                PREFERENCES + 'com.panic.Coda2.plist'],
 
     'Curl': ['.netrc'],
-    
+
     'Divvy': [PREFERENCES + 'com.mizage.direct.Divvy.plist'],
 
     'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],
@@ -210,9 +210,14 @@ SUPPORTED_APPS = {
         PREFERENCES + 'com.manytricks.Moom.plist',
         APP_SUPPORT + 'Many Tricks'],
 
-    'MPV': ['.mpv/channels.conf',
-            '.mpv/config',
-            '.mpv/input.conf'],
+    'Mou': [
+        PREFERENCES + 'com.mouapp.Mou.plist',
+        PREFERENCES + 'com.mouapp.Mou.LSSharedFileList.plist',
+        APP_SUPPORT + 'Mou'],
+
+    'MPV':['.mpv/channels.conf',
+           '.mpv/config',
+           '.mpv/input.conf'],
 
     'MercuryMover': [PREFERENCES + 'com.heliumfoot.MyWiAgent.plist'],
 

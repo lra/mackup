@@ -202,6 +202,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Mercurial](http://mercurial.selenic.com/)
   - [MercuryMover](http://www.heliumfoot.com/mercurymover/)
   - [Moom](http://manytricks.com/moom/)
+  - [Mou](http://mouapp.com/)
   - [MPV](http://mpv.io/)
   - [Nano](http://www.nano-editor.org/)
   - [nvALT](http://brettterpstra.com/projects/nvalt/)

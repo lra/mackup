@@ -133,7 +133,14 @@ SUPPORTED_APPS = {
                PREFERENCES + 'com.panic.Coda2.plist'],
 
     'Curl': ['.netrc'],
-    
+
+    'Cyberduck': [APP_SUPPORT + 'Cyberduck',
+                  PREFERENCES + 'ch.sudo.cyberduck.plist'],
+
+    'Dash': [APP_SUPPORT + 'Dash/DocSets',
+             APP_SUPPORT + 'Dash/library.dash',
+             PREFERENCES + 'com.kapeli.dash.plist'],
+
     'Divvy': [PREFERENCES + 'com.mizage.direct.Divvy.plist'],
 
     'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],

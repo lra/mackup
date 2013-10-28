@@ -2,6 +2,7 @@
 
 ## WIP
 - Added support for Divvy (thx @saulshanabrook)
+- Added support for Dash and Cyberduck (thx @suprememoocow)
 
 ## Mackup 0.5.2
 

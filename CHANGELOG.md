@@ -1,8 +1,25 @@
 # Mackup Changelog
 
 ## WIP
+- Added support for Divvy (thx @saulshanabrook)
+
+## Mackup 0.5.2
+
+- Added support for Tower (thx @MichaelRBond)
+- Added support for Colloquy (thx @MichaelRBond)
+- Added support for Twitterrific (thx @MichaelRBond)
+- Mackup path in dropbox is now configurable via constant (thx @MichaelRBond)
+- Added support for Spectacle (thx @vincecima)
+
+## Mackup 0.5.1
 
 - Added support for exercism (thx @mwarkentin)
+- Added support for Skim
+- Added support for Scenario
+- Added support for Ack (thx @adamlogic)
+- Added support for Stata and SelfControl (thx @kfinlay)
+- Added support for LaTeXiT (thx @twsh)
+- Do not link ~/Library/* files on GNU/Linux, should fix #104
 
 ## Mackup 0.5
 

@@ -44,6 +44,7 @@ except ImportError:
 # Commonly used paths #
 #######################
 
+MACKUP_DB_PATH = 'Mackup'
 PREFERENCES = 'Library/Preferences/'
 APP_SUPPORT = 'Library/Application Support/'
 CONFIG_PATH = '.config/'
@@ -57,23 +58,26 @@ CONFIG_PATH = '.config/'
 # Application Name: List of files (relative path from the user's home)
 
 SUPPORTED_APPS = {
+    'Ack': ['.ackrc'],
+
     'Adium': [APP_SUPPORT + 'Adium 2.0',
               PREFERENCES + 'com.adiumX.adiumX.plist'],
 
-    'Adobe Lightroom': [APP_SUPPORT + 'Adobe/Lightroom/Develop Presets',
-                        APP_SUPPORT + 'Adobe/Lightroom/Export Actions',
-                        APP_SUPPORT + 'Adobe/Lightroom/Export Presets',
-                        APP_SUPPORT + 'Adobe/Lightroom/Filename Templates',
-                        APP_SUPPORT + 'Adobe/Lightroom/Filter Presets',
-                        APP_SUPPORT + 'Adobe/Lightroom/Import Presets',
-                        APP_SUPPORT + 'Adobe/Lightroom/Keyword Sets',
-                        APP_SUPPORT + 'Adobe/Lightroom/Label Sets',
-                        APP_SUPPORT + 'Adobe/Lightroom/Local Adjustment Presets',
-                        APP_SUPPORT + 'Adobe/Lightroom/Locations',
-                        APP_SUPPORT + 'Adobe/Lightroom/Metadata Presets',
-                        APP_SUPPORT + 'Adobe/Lightroom/Modules',
-                        APP_SUPPORT + 'Adobe/Lightroom/Plugins',
-                        APP_SUPPORT + 'Adobe/Lightroom/Watermarks'],
+    'Adobe Lightroom': [
+        APP_SUPPORT + 'Adobe/Lightroom/Develop Presets',
+        APP_SUPPORT + 'Adobe/Lightroom/Export Actions',
+        APP_SUPPORT + 'Adobe/Lightroom/Export Presets',
+        APP_SUPPORT + 'Adobe/Lightroom/Filename Templates',
+        APP_SUPPORT + 'Adobe/Lightroom/Filter Presets',
+        APP_SUPPORT + 'Adobe/Lightroom/Import Presets',
+        APP_SUPPORT + 'Adobe/Lightroom/Keyword Sets',
+        APP_SUPPORT + 'Adobe/Lightroom/Label Sets',
+        APP_SUPPORT + 'Adobe/Lightroom/Local Adjustment Presets',
+        APP_SUPPORT + 'Adobe/Lightroom/Locations',
+        APP_SUPPORT + 'Adobe/Lightroom/Metadata Presets',
+        APP_SUPPORT + 'Adobe/Lightroom/Modules',
+        APP_SUPPORT + 'Adobe/Lightroom/Plugins',
+        APP_SUPPORT + 'Adobe/Lightroom/Watermarks'],
 
     'AppCode 2': [APP_SUPPORT + 'appCode20',
                   PREFERENCES + 'appCode20'],
@@ -86,8 +90,8 @@ SUPPORTED_APPS = {
              '.profile',
              '.bash_profile',
              '.inputrc',
-			'.git-completion.bash',
-			'.git-prompt.sh'],
+             '.git-completion.bash',
+             '.git-prompt.sh'],
 
     'Bash it': ['.bash_it'],
 
@@ -119,6 +123,9 @@ SUPPORTED_APPS = {
 
     'CloudApp': [PREFERENCES + 'com.linebreak.CloudAppMacOSX.plist'],
 
+    'Colloquy': [PREFERENCES + 'info.colloquy.plist',
+                 APP_SUPPORT + 'Colloquy'],
+
     'Concentrate': [APP_SUPPORT + 'Concentrate/Concentrate.sqlite3'],
 
     'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
@@ -129,6 +136,8 @@ SUPPORTED_APPS = {
                PREFERENCES + 'com.panic.Coda2.plist'],
 
     'Curl': ['.netrc'],
+
+    'Divvy': [PREFERENCES + 'com.mizage.direct.Divvy.plist'],
 
     'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],
 
@@ -180,6 +189,8 @@ SUPPORTED_APPS = {
         PREFERENCES + 'org.pqrs.KeyRemap4MacBook.plist',
         PREFERENCES + 'org.pqrs.KeyRemap4MacBook.multitouchextension.plist',
         APP_SUPPORT + 'KeyRemap4MacBook/private.xml'],
+
+    'LaTeXiT': [PREFERENCES + 'fr.chachatelier.pierre.LaTeXiT.plist'],
 
     'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
 
@@ -280,9 +291,14 @@ SUPPORTED_APPS = {
 
     'S3cmd': ['.s3cfg'],
 
+    'Scenario': [PREFERENCES + 'com.lagente.scenario.plist',
+                 'Library/Scenario'],
+
     'Scripts': ['Library/Scripts'],
 
     'Screen': ['.screenrc'],
+
+    'SelfControl': [PREFERENCES + 'org.eyebeam.SelfControl.plist'],
 
     'Sequel Pro': [APP_SUPPORT + 'Sequel Pro/Data'],
 
@@ -294,6 +310,8 @@ SUPPORTED_APPS = {
 
     'SizeUp': [PREFERENCES + 'com.irradiatedsoftware.SizeUp.plist',
                APP_SUPPORT + 'SizeUp/SizeUp.sizeuplicense'],
+
+    'Skim': [PREFERENCES + 'net.sourceforge.skim-app.skim.plist'],
 
     'Slate': ['.slate',
               APP_SUPPORT + 'com.slate.Slate'],
@@ -307,9 +325,15 @@ SUPPORTED_APPS = {
 
     'Spark': [APP_SUPPORT + 'Spark'],
 
+    'Spectacle': [PREFERENCES + 'com.divisiblebyzero.Spectacle.plist'],
+
     'Spotify' : [PREFERENCES + 'com.spotify.client.plist'],
 
     'SSH': ['.ssh'],
+
+    'Stata': [APP_SUPPORT + 'Stata',
+              PREFERENCES + 'com.stata.stata12.plist',
+              PREFERENCES + 'com.stata.stata13.plist'],
 
     'Sublime Text 2': [APP_SUPPORT + 'Sublime Text 2/Installed Packages',
                        APP_SUPPORT + 'Sublime Text 2/Packages',
@@ -329,12 +353,17 @@ SUPPORTED_APPS = {
 
     'Tmuxinator': ['.tmuxinator'],
 
+    'Tower': [APP_SUPPORT + 'Tower',
+              PREFERENCES + 'com.fournova.Tower.plist'],
+
     'Transmission': [PREFERENCES + 'org.m0k.transmission.plist'],
 
     'Transmit': [
         PREFERENCES + 'com.panic.Transmit.plist',
         APP_SUPPORT + 'Transmit/Metadata'
     ],
+
+    'Twitterrific': [APP_SUPPORT + 'Twitterrific'],
 
     'Ventrilo': [PREFERENCES + 'Ventrilo'],
 
@@ -377,7 +406,7 @@ SUPPORTED_APPS = {
 
 
 # Current version
-VERSION = '0.5'
+VERSION = '0.5.2'
 
 # Mode used to backup files to Dropbox
 BACKUP_MODE = 'backup'
@@ -390,7 +419,7 @@ UNINSTALL_MODE = 'uninstall'
 
 # Support platforms
 PLATFORM_DARWIN = 'Darwin'
-PLATFORM_LINUX  = 'Linux'
+PLATFORM_LINUX = 'Linux'
 
 
 ###########
@@ -504,11 +533,14 @@ class ApplicationProfile(object):
             home_filepath = os.path.join(os.environ['HOME'], filename)
 
             # If the file exists and is not already pointing to the mackup file
+            # and the folder makes sense on the current platform (Don't sync
+            # any subfolder of ~/Library on GNU/Linux)
             if ((os.path.isfile(mackup_filepath)
                  or os.path.isdir(mackup_filepath))
                 and not (os.path.islink(home_filepath)
                          and os.path.samefile(mackup_filepath,
-                                              home_filepath))):
+                                              home_filepath))
+                and can_file_be_synced_on_current_platform(filename)):
 
                 print "Restoring {}...".format(filename)
 
@@ -532,7 +564,6 @@ class ApplicationProfile(object):
                         link(mackup_filepath, home_filepath)
                 else:
                     link(mackup_filepath, home_filepath)
-
 
     def uninstall(self):
         """
@@ -580,7 +611,7 @@ class Mackup(object):
                    " If Dropbox is not installed and running, go for it on"
                    " <http://www.dropbox.com/>"))
 
-        self.mackup_folder = self.dropbox_folder + '/Mackup'
+        self.mackup_folder = os.path.join(self.dropbox_folder, MACKUP_DB_PATH)
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
     def _check_for_usable_environment(self):
@@ -598,7 +629,6 @@ class Mackup(object):
         #           " when Sublime Text is running while I backup or restore"
         #           " its configuration files. Please close Sublime Text and"
         #           " run me again."))
-
 
     def check_for_usable_backup_env(self):
         """Check if the current env can be used to back up files"""
@@ -943,7 +973,8 @@ def is_process_running(process_name):
 def remove_acl(path):
     """
     Remove the ACL of the file or folder located on the given path.
-    Also remove the ACL of any file and folder below the given one, recursively.
+    Also remove the ACL of any file and folder below the given one,
+    recursively.
 
     Args:
         path (str): Path to the file or folder to remove the ACL for,
@@ -952,7 +983,8 @@ def remove_acl(path):
     # Some files have ACLs, let's remove them recursively
     if platform.system() == PLATFORM_DARWIN and os.path.isfile('/bin/chmod'):
         subprocess.call(['/bin/chmod', '-R', '-N', path])
-    elif platform.system() == PLATFORM_LINUX and os.path.isfile('/bin/setfacl'):
+    elif ((platform.system() == PLATFORM_LINUX)
+          and os.path.isfile('/bin/setfacl')):
         subprocess.call(['/bin/setfacl', '-R', '-b', path])
 
 
@@ -963,16 +995,49 @@ def remove_immutable_attribute(path):
     given one, recursively.
 
     Args:
-        path (str): Path to the file or folder to remove the immutable attribute
-                    for, recursively.
+        path (str): Path to the file or folder to remove the immutable
+                    attribute for, recursively.
     """
     # Some files have ACLs, let's remove them recursively
-    if (platform.system() == PLATFORM_DARWIN
+    if ((platform.system() == PLATFORM_DARWIN)
         and os.path.isfile('/usr/bin/chflags')):
         subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', path])
     elif (platform.system() == PLATFORM_LINUX
           and os.path.isfile('/usr/bin/chattr')):
         subprocess.call(['/usr/bin/chattr', '-R', '-i', path])
+
+
+def can_file_be_synced_on_current_platform(path):
+    """
+    Check if it makes sens to sync the file at the given path on the current
+    platform.
+    For now we don't sync any file in the ~/Library folder on GNU/Linux.
+    There might be other exceptions in the future.
+
+    Args:
+        (str): Path to the file or folder to check. If relative, prepend it
+               with the home folder.
+               'abc' becomes '~/abc'
+               '/def' stays '/def'
+
+    Returns:
+        (bool): True if given file can be synced
+    """
+    can_be_synced = True
+
+    # If the given path is relative, prepend home
+    fullpath = os.path.join(os.environ['HOME'], path)
+
+    # Compute the ~/Library path on OS X
+    # End it with a slash because we are looking for this specific folder and
+    # not any file/folder named LibrarySomething
+    library_path = os.path.join(os.environ['HOME'], 'Library/')
+
+    if platform.system() == PLATFORM_LINUX:
+        if fullpath.startswith(library_path):
+            can_be_synced = False
+
+    return can_be_synced
 
 
 ################
@@ -1033,8 +1098,6 @@ def main():
                    "\n"
                    "Thanks for using Mackup !"
                    .format(os.path.abspath(__file__)))
-
-
     else:
         raise ValueError("Unsupported mode: {}".format(args.mode))
 
@@ -1043,4 +1106,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

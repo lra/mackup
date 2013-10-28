@@ -2,11 +2,23 @@
 
 Keep your application settings in sync.
 
+[![Build Status](https://travis-ci.org/lra/mackup.png?branch=master)](https://travis-ci.org/lra/mackup)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lra/mackup/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 ## Quickstart
 
 Install [Dropbox](http://www.dropbox.com/) first, it's needed.
 
-On your current workstation:
+On OS X, if you want an easy install, you can install [Homebrew](http://brew.sh/) and do:
+```bash
+# Install Mackup
+brew install mackup
+
+# Launch it and back up your files in Dropbox
+mackup backup
+```
+
+If not running OS X, or you don't like Homebrew, run on your current workstation:
 ```bash
 # Download Mackup
 curl -o mackup https://raw.github.com/lra/mackup/master/mackup.py
@@ -139,6 +151,7 @@ That's it, you got your `git` config setup on your new workstation.
 
 ## Supported Applications
 
+  - [Ack](http://beyondgrep.com/)
   - [Adium](http://adium.im/)
   - [Adobe Lightroom](http://www.adobe.com/products/photoshop-lightroom.html)
   - [AppCode 2](http://www.jetbrains.com/objc/)
@@ -155,10 +168,12 @@ That's it, you got your `git` config setup on your new workstation.
   - [ClipMenu](http://www.clipmenu.com/)
   - [CloudApp](http://getcloudapp.com/)
   - [Coda 2](http://panic.com/coda/)
+  - [Colloquy](http://colloquy.info/)
   - [Concentrate](http://www.getconcentrating.com/)
   - [ControlPlane](http://www.controlplaneapp.com/)
   - [CoRD](http://cord.sourceforge.net/)
   - [Droplr](https://droplr.com/hello)
+  - [Divvy](http://mizage.com/divvy/)
   - [Emacs](http://www.gnu.org/software/emacs/)
   - [Exercism](http://exercism.io/)
   - [ExpanDrive](http://www.expandrive.com/)
@@ -178,6 +193,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Janus](https://github.com/carlhuda/janus)
   - [Keymo](http://manytricks.com/keymo/)
   - [KeyRemap4MacBook](http://pqrs.org/macosx/keyremap4macbook/)
+  - [LaTeXiT](http://www.chachatelier.fr/latexit/latexit-home.php?lang=en)
   - [LimeChat](http://limechat.net/mac/)
   - [MacOSX](http://www.apple.com/osx/)
   - [MacVim](https://code.google.com/p/macvim/)
@@ -209,24 +225,31 @@ That's it, you got your `git` config setup on your new workstation.
   - [RubyMine 4](http://www.jetbrains.com/ruby/)
   - [RubyMine 5](http://www.jetbrains.com/ruby/)
   - [S3cmd](http://s3tools.org/s3cmd)
+  - [Scenario](http://www.lagentesoft.com/scenario/)
   - [Screen](http://www.gnu.org/software/screen/)
+  - [SelfControl](http://selfcontrolapp.com/)
   - [Sequel Pro](http://www.sequelpro.com/)
   - [SHSH Blobs](http://en.wikipedia.org/wiki/SHSH_blob)
   - [Shuttle](http://fitztrev.github.io/shuttle/)
   - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
+  - [Skim](http://skim-app.sourceforge.net/)
   - [Slate](https://github.com/jigish/slate)
   - [Slogger](http://brettterpstra.com/projects/slogger/)
   - [SourceTree](http://sourcetreeapp.com)
   - [Spark](http://www.shadowlab.org/softwares/spark.php)
+  - [Spectacle](http://spectacleapp.com/)
   - [Spotify](https://www.spotify.com/)
+  - [Stata](http://www.stata.com/)
   - [Sublime Text](http://www.sublimetext.com/)
   - [Subversion](http://subversion.apache.org/)
   - [Teamocil](http://remiprev.github.io/teamocil/)
   - [TextMate](http://macromates.com/)
   - [Tmux](http://tmux.sourceforge.net/)
   - [Tmuxinator](https://github.com/aziz/tmuxinator)
+  - [Tower](http://www.git-tower.com/)
   - [Transmission](http://www.transmissionbt.com/)
   - [Transmit](http://panic.com/transmit/)
+  - [Twitterrific](http://twitterrific.com/)
   - [uTorrent](http://www.utorrent.com/)
   - [Ventrilo](http://www.ventrilo.com/)
   - [Vim](http://www.vim.org/)
@@ -248,7 +271,7 @@ Open a [new issue](https://github.com/lra/mackup/issues).
 ## How can I tell Mackup to sync only one or two application ?
 
 In your home folder, create a file named `.mackup.cfg` and add the application
-names to ignore in the `Allowed Applications` section, one by line.
+names to allow in the `Allowed Applications` section, one by line.
 
 ```ini
 # Example, to only sync SSH and Adium:

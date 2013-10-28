@@ -78,9 +78,6 @@ SUPPORTED_APPS = {
         APP_SUPPORT + 'Adobe/Lightroom/Plugins',
         APP_SUPPORT + 'Adobe/Lightroom/Watermarks'],
 
-    'Alfred 2': [APP_SUPPORT + 'Alfred 2',
-                  PREFERENCES + 'com.runningwithcrayons.Alfred-2.plist'],
-
     'AppCode 2': [APP_SUPPORT + 'appCode20',
                   PREFERENCES + 'appCode20'],
 

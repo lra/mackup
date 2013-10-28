@@ -47,7 +47,6 @@ except ImportError:
 MACKUP_DB_PATH = 'Mackup'
 PREFERENCES = 'Library/Preferences/'
 APP_SUPPORT = 'Library/Application Support/'
-CONFIG_PATH = '.config/'
 
 #################
 # Configuration #
@@ -89,9 +88,7 @@ SUPPORTED_APPS = {
              '.bashrc',
              '.profile',
              '.bash_profile',
-             '.inputrc',
-             '.git-completion.bash',
-             '.git-prompt.sh'],
+             '.inputrc'],
 
     'Bash it': ['.bash_it'],
 
@@ -223,10 +220,6 @@ SUPPORTED_APPS = {
            '.mpv/input.conf'],
 
     'MercuryMover': [PREFERENCES + 'com.heliumfoot.MyWiAgent.plist'],
-
-    'Musicbrainz': [
-        PREFERENCES + 'org.musicbrainz.picard.plist',
-        CONFIG_PATH + 'MusicBrainz'],
 
     'Nano': ['.nanorc'],
 

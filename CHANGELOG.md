@@ -2,6 +2,7 @@
 
 ## WIP
 - Added support for Divvy (thx @saulshanabrook)
+- Added support for Mou (thx @jannae)
 
 ## Mackup 0.5.2
 

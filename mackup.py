@@ -133,7 +133,7 @@ SUPPORTED_APPS = {
                PREFERENCES + 'com.panic.Coda2.plist'],
 
     'Curl': ['.netrc'],
-    
+
     'Divvy': [PREFERENCES + 'com.mizage.direct.Divvy.plist'],
 
     'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],
@@ -240,6 +240,9 @@ SUPPORTED_APPS = {
     'PhpStorm 6': [APP_SUPPORT + 'WebIde60',
                    PREFERENCES + 'WebIde60',
                    PREFERENCES + 'com.jetbrains.PhpStorm.plist'],
+
+    'PhpStorm 7': [APP_SUPPORT + 'WebIde70',
+                   PREFERENCES + 'WebIde70'],
 
     'pip': ['.pip/pip.cfg'],
 

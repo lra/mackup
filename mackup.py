@@ -47,6 +47,7 @@ except ImportError:
 MACKUP_DB_PATH = 'Mackup'
 PREFERENCES = 'Library/Preferences/'
 APP_SUPPORT = 'Library/Application Support/'
+CONTAINERS = 'Library/Containers/'
 
 #################
 # Configuration #
@@ -271,6 +272,8 @@ SUPPORTED_APPS = {
 
     'RubyMine 4': [APP_SUPPORT + 'RubyMine40',
                    PREFERENCES + 'RubyMine40'],
+
+    'Microsoft Remote Desktop': [CONTAINERS + 'com.microsoft.rdc.mac' ],
 
     'RubyMine 5': [APP_SUPPORT + 'RubyMine50',
                    PREFERENCES + 'RubyMine50'],
@@ -732,7 +735,7 @@ def copy(src, dst):
 
     # We need to copy a whole folder
     elif os.path.isdir(src):
-        shutil.copytree(src, dst)
+        shutil.copytree(src, dst, True)
 
     # What the heck is this ?
     else:
@@ -791,23 +794,25 @@ def chmod(target):
     # Remove the immutable attribute recursively if there is one
     remove_immutable_attribute(target)
 
-    if os.path.isfile(target):
-        os.chmod(target, file_mode)
+    if not os.path.islink(target):
 
-    elif os.path.isdir(target):
-        # chmod the root item
-        os.chmod(target, folder_mode)
+        if os.path.isfile(target):
+            os.chmod(target, file_mode)
 
-        # chmod recursively in the folder it it's one
-        for root, dirs, files in os.walk(target):
-            for cur_dir in dirs:
-                os.chmod(os.path.join(root, cur_dir), folder_mode)
-            for cur_file in files:
-                os.chmod(os.path.join(root, cur_file), file_mode)
+        elif os.path.isdir(target):
+            # chmod the root item
+            os.chmod(target, folder_mode)
 
-    else:
-        raise ValueError("Unsupported file type: {}".format(target))
+            # chmod recursively in the folder it it's one
+            for root, dirs, files in os.walk(target):
+                for cur_dir in dirs:
+                    os.chmod(os.path.join(root, cur_dir), folder_mode)
+                for cur_file in files:
+                    if not os.path.islink(os.path.join(root, cur_file)):
+                        os.chmod(os.path.join(root, cur_file), file_mode)
 
+        else:
+            raise ValueError("Unsupported file type: {}".format(target))
 
 def error(message):
     """

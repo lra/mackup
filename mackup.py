@@ -354,8 +354,9 @@ SUPPORTED_APPS = {
 
     'Transmit': [
         PREFERENCES + 'com.panic.Transmit.plist',
-        APP_SUPPORT + 'Transmit/Metadata'
-    ],
+        APP_SUPPORT + 'Transmit/Metadata',
+        APP_SUPPORT + 'Transmit/Favorites'
+        ],
 
     'Twitterrific': [APP_SUPPORT + 'Twitterrific'],
 

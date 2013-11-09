@@ -273,8 +273,6 @@ SUPPORTED_APPS = {
     'RubyMine 4': [APP_SUPPORT + 'RubyMine40',
                    PREFERENCES + 'RubyMine40'],
 
-    'Microsoft Remote Desktop': [CONTAINERS + 'com.microsoft.rdc.mac' ],
-
     'RubyMine 5': [APP_SUPPORT + 'RubyMine50',
                    PREFERENCES + 'RubyMine50'],
 

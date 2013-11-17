@@ -1061,7 +1061,7 @@ def main():
         # Check the env where the command is being run
         mackup.check_for_usable_restore_env()
 
-        for app_name in SUPPORTED_APPS:
+        for app_name in get_apps_to_backup():
             app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
             app.restore()
 

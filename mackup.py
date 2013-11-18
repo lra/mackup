@@ -183,6 +183,9 @@ SUPPORTED_APPS = {
 
     'Keymo': [PREFERENCES + 'com.manytricks.Keymo.plist'],
 
+    'Kaleidoscope': [APP_SUPPORT + 'Kaleidoscope',
+                        PREFERENCES + 'com.blackpixel.kaleidoscope.plist'],
+
     'KeyRemap4MacBook': [
         PREFERENCES + 'org.pqrs.KeyRemap4MacBook.plist',
         PREFERENCES + 'org.pqrs.KeyRemap4MacBook.multitouchextension.plist',

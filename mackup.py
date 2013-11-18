@@ -343,6 +343,9 @@ SUPPORTED_APPS = {
 
     'Teamocil': ['.teamocil'],
 
+    'TextExpander': [APP_SUPPORT + 'TextExpander',
+                 PREFERENCES + 'com.smileonmymac.textexpander.plist'],
+
     'TextMate': [APP_SUPPORT + 'TextMate',
                  PREFERENCES + 'com.macromates.textmate.plist'],
 

@@ -327,7 +327,9 @@ SUPPORTED_APPS = {
     'SourceTree': [APP_SUPPORT + 'SourceTree/sourcetree.license',
                    APP_SUPPORT + 'SourceTree/browser.plist',
                    APP_SUPPORT + 'SourceTree/hgrc_sourcetree',
-                   APP_SUPPORT + 'SourceTree/hostingservices.plist'],
+                   APP_SUPPORT + 'SourceTree/hostingservices.plist',
+                   PREFERENCES + 'com.torusknot.SourceTree.plist',
+                   PREFERENCES + 'com.torusknot.SourceTreeNotMAS.plist'],
 
     'Spark': [APP_SUPPORT + 'Spark'],
 

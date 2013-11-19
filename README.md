@@ -151,6 +151,7 @@ That's it, you got your `git` config setup on your new workstation.
 
 ## Supported Applications
 
+  - [ABBY FineReader for ScanSnap](http://www.abbyy.com/support/FRScanSnap/)
   - [Ack](http://beyondgrep.com/)
   - [Adium](http://adium.im/)
   - [Adobe Lightroom](http://www.adobe.com/products/photoshop-lightroom.html)
@@ -164,6 +165,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Boto](https://github.com/boto/boto)
   - [Byobu](http://byobu.co/)
   - [Caffeine](http://lightheadsw.com/caffeine/)
+  - [Cardiris for ScanSnap](http://www.irislink.com/c2-2329-189/Cardiris--for-ScanSnap.aspx)
   - [Chef](http://www.opscode.com/chef/)
   - [ClipMenu](http://www.clipmenu.com/)
   - [CloudApp](http://getcloudapp.com/)
@@ -190,6 +192,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [IntelliJIDEA 12](http://www.jetbrains.com/idea/)
   - [Irssi](http://www.irssi.org/)
   - [ITerm2](http://www.iterm2.com/)
+  - [iWork Templates](http://www.apple.com/iwork/resources/)
   - [Janus](https://github.com/carlhuda/janus)
   - [Keymo](http://manytricks.com/keymo/)
   - [KeyRemap4MacBook](http://pqrs.org/macosx/keyremap4macbook/)
@@ -224,6 +227,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [RubyMine 4](http://www.jetbrains.com/ruby/)
   - [RubyMine 5](http://www.jetbrains.com/ruby/)
   - [S3cmd](http://s3tools.org/s3cmd)
+  - [ScanSnap Manager V3.2](http://www.fujitsu.com/global/support/computing/peripheral/scanners/software/s1500.html)
   - [Scenario](http://www.lagentesoft.com/scenario/)
   - [Screen](http://www.gnu.org/software/screen/)
   - [SelfControl](http://selfcontrolapp.com/)
@@ -232,6 +236,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Shuttle](http://fitztrev.github.io/shuttle/)
   - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
   - [Skim](http://skim-app.sourceforge.net/)
+  - [Skype](http://www.skype.com/)
   - [Slate](https://github.com/jigish/slate)
   - [Slogger](http://brettterpstra.com/projects/slogger/)
   - [SourceTree](http://sourcetreeapp.com)
@@ -243,13 +248,19 @@ That's it, you got your `git` config setup on your new workstation.
   - [Subversion](http://subversion.apache.org/)
   - [Teamocil](http://remiprev.github.io/teamocil/)
   - [TextMate](http://macromates.com/)
+  - [TextMate GetBundles](http://al3x.net/2008/12/03/how-i-use-textmate.html)
+  - [TextWrangler](http://www.barebones.com/products/textwrangler/)
   - [Tmux](http://tmux.sourceforge.net/)
   - [Tmuxinator](https://github.com/aziz/tmuxinator)
+  - [TotalFinder](http://totalfinder.binaryage.com/)
+  - [TotalTerminal](http://totalterminal.binaryage.com/)
   - [Tower](http://www.git-tower.com/)
   - [Transmission](http://www.transmissionbt.com/)
   - [Transmit](http://panic.com/transmit/)
   - [Twitterrific](http://twitterrific.com/)
   - [uTorrent](http://www.utorrent.com/)
+  - [VelaClock](http://veladg.com/velaclockwidget.html)
+  - [VelaTerra](http://veladg.com/velaterra.html)
   - [Ventrilo](http://www.ventrilo.com/)
   - [Vim](http://www.vim.org/)
   - [Vimperator](http://www.vimperator.org/vimperator)
@@ -288,10 +299,30 @@ curl -o .mackup.cfg https://raw.github.com/lra/mackup/master/.mackup.cfg
 Be careful, if you download it like this, Mackup will only try to sync SSH and
 Adium from now on !
 
+## I have a custom application that doesn't need to be part of the app, but that I still want to sync.  What do I do?
+
+In your home folder, create a file named `.mackup.cfg` (if you don't already have one) and add an entry like the following:
+
+```ini
+# Example config to add a custom apps list:
+[Custom Applications]
+dictionaryFile=~/.mackupCustom.json
+```
+
+Then create the file you referenced in your config and put the application definitions in there:
+
+```json
+{
+    "MyCoolApp": ["Library/Preferences/my.cool.app.plist",
+                  "Library/Application Support/CoolApp"],
+    "AnotherApp": ["Library/Preferences/AnotherApp/preferences.plist"]
+}
+```
+
 ## How can I tell Mackup to not sync an application ?
 
-In your home folder, create a file named `.mackup.cfg` and add the application
-names to ignore in the `Ignored Applications` section, one by line.
+In your home folder, create a file named `.mackup.cfg` (if you don't already have one) and add the application
+names to ignore in the `Ignored Applications` section, one per line.
 
 ```ini
 # Example, to not sync SSH and Adium:
@@ -299,6 +330,8 @@ names to ignore in the `Ignored Applications` section, one by line.
 SSH
 Adium
 ```
+
+## Do you have a sample `.mackup.cfg` file available?
 
 A [sample](.mackup.cfg) of this file is available for download:
 
@@ -309,9 +342,16 @@ curl -o .mackup.cfg https://raw.github.com/lra/mackup/master/.mackup.cfg
 Be careful, if you download it like this, Mackup will ignore SSH and Adium from
 now on !
 
+You can also download the [sample custom apps file](.mackupCustom.json) like this:
+
+```bash
+cd
+curl -o .mackupCustom.json https://raw.github.com/lra/mackup/master/.mackupCustom.json
+```
+
 ## Why did you do this ?!
 
-Yesterday, I had a talk with [Zach Zaro](http://zacharyzaro.com/), complaining
+A while back, I had a talk with [Zach Zaro](http://zacharyzaro.com/), complaining
 about the pain it is to reconfigure our Macbook each time we get a new one or
 install from scratch. That's a talk we already had months ago.
 

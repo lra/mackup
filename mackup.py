@@ -133,7 +133,7 @@ SUPPORTED_APPS = {
                PREFERENCES + 'com.panic.Coda2.plist'],
 
     'Curl': ['.netrc'],
-    
+
     'Divvy': [PREFERENCES + 'com.mizage.direct.Divvy.plist'],
 
     'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],
@@ -276,6 +276,9 @@ SUPPORTED_APPS = {
 
     'Pentadactyl': ['.pentadactyl',
                     '.pentadactylrc'],
+
+    'PokerStars': [PREFERENCES + 'com.pokerstars.user.ini',
+                   PREFERENCES + 'com.pokerstars.PokerStars.plist'],
 
     'S3cmd': ['.s3cfg'],
 

@@ -82,6 +82,9 @@ SUPPORTED_APPS = {
     'AppCode 2': [APP_SUPPORT + 'appCode20',
                   PREFERENCES + 'appCode20'],
 
+    'Airfoil': [APP_SUPPORT + 'Rogue Amoeba/Hijacker/Airfoil',
+                  PREFERENCES + 'com.rogueamoeba.Airfoil.plist'],
+
     'Bartender': [PREFERENCES + 'com.surteesstudios.Bartender.plist'],
 
     'Bash': ['.bash_aliases',

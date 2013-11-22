@@ -346,6 +346,8 @@ SUPPORTED_APPS = {
     'TextMate': [APP_SUPPORT + 'TextMate',
                  PREFERENCES + 'com.macromates.textmate.plist'],
 
+    'TextExpander': [APP_SUPPORT + 'TextExpander'],
+
     'Tmux': ['.tmux.conf'],
 
     'Tmuxinator': ['.tmuxinator'],

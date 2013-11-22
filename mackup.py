@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import argparse
 import base64
+import json
 import os
 import platform
 import shutil
@@ -57,6 +58,8 @@ APP_SUPPORT = 'Library/Application Support/'
 # Application Name: List of files (relative path from the user's home)
 
 SUPPORTED_APPS = {
+    'ABBY FineReader for ScanSnap': [PREFERENCES + 'com.abbyy.FineReaderForScanSnap.plist'],
+
     'Ack': ['.ackrc'],
 
     'Adium': [APP_SUPPORT + 'Adium 2.0',
@@ -77,6 +80,9 @@ SUPPORTED_APPS = {
         APP_SUPPORT + 'Adobe/Lightroom/Modules',
         APP_SUPPORT + 'Adobe/Lightroom/Plugins',
         APP_SUPPORT + 'Adobe/Lightroom/Watermarks'],
+
+    'Alfred 2': [APP_SUPPORT + 'Alfred 2',
+        PREFERENCES + 'com.runningwithcrayons.Alfred-2.plist'],
 
     'AppCode 2': [APP_SUPPORT + 'appCode20',
                   PREFERENCES + 'appCode20'],
@@ -113,6 +119,8 @@ SUPPORTED_APPS = {
 
     'Caffeine': [PREFERENCES + 'com.lightheadsw.Caffeine.plist'],
 
+    'Cardiris for ScanSnap': [PREFERENCES + 'Cardiris Prefs'],
+
     'Chef': ['.chef'],
 
     'ClipMenu': [APP_SUPPORT + 'ClipMenu',
@@ -133,6 +141,13 @@ SUPPORTED_APPS = {
                PREFERENCES + 'com.panic.Coda2.plist'],
 
     'Curl': ['.netrc'],
+
+    'Cyberduck': [APP_SUPPORT + 'Cyberduck',
+        PREFERENCES + 'ch.sudo.cyberduck.plist'],
+
+    'Dash': [APP_SUPPORT + 'Dash/DocSets',
+        APP_SUPPORT + 'Dash/library.dash',
+        PREFERENCES + 'com.kapeli.dash.plist'],
     
     'Divvy': [PREFERENCES + 'com.mizage.direct.Divvy.plist'],
 
@@ -141,15 +156,24 @@ SUPPORTED_APPS = {
     'Emacs': ['.emacs',
               '.emacs.d'],
 
+    'Ember': ['Library/Group Containers/P97H7FTHWN.com.realmacsoftware.ember'],
+
     'Exercism': ['.exercism'],
 
     'ExpanDrive': [APP_SUPPORT + 'ExpanDrive'],
 
     'Fantastical': [PREFERENCES + 'com.flexibits.fantastical.plist'],
 
+    'Filezilla': [
+        '.filezilla/sitemanager.xml',
+        '.filezilla/layout.xml',
+        '.filezilla/filezilla.xml'],
+
     'Fish': ['.config/fish'],
 
     'Flux': [PREFERENCES + 'org.herf.Flux.plist'],
+
+    'ForkLift 2': [PREFERENCES + 'com.binarynights.ForkLift2.plist'],
 
     'GeekTool': [
         PREFERENCES + 'org.tynsoe.GeekTool.plist',
@@ -178,7 +202,12 @@ SUPPORTED_APPS = {
 
     'Irssi': ['.irssi'],
 
+    'iWork Templates': [APP_SUPPORT + "iWork"],
+
     'Janus': ['.janus'],
+
+    'Kaleidoscope': [APP_SUPPORT + 'Kaleidoscope',
+        PREFERENCES + 'com.blackpixel.kaleidoscope.plist'],
 
     'Keymo': [PREFERENCES + 'com.manytricks.Keymo.plist'],
 
@@ -189,7 +218,9 @@ SUPPORTED_APPS = {
 
     'LaTeXiT': [PREFERENCES + 'fr.chachatelier.pierre.LaTeXiT.plist'],
 
-    'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
+    'LimeChat': [APP_SUPPORT + 'LimeChat',
+        PREFERENCES + 'net.limechat.LimeChat.plist'],
+
 
     'Mackup': ['.mackup.cfg'],
 
@@ -241,6 +272,9 @@ SUPPORTED_APPS = {
                    PREFERENCES + 'WebIde60',
                    PREFERENCES + 'com.jetbrains.PhpStorm.plist'],
 
+    'PhpStorm 7': [APP_SUPPORT + 'WebIde70',
+                   PREFERENCES + 'WebIde70'],
+
     'pip': ['.pip/pip.cfg'],
 
     'PopClip': [
@@ -279,6 +313,20 @@ SUPPORTED_APPS = {
 
     'S3cmd': ['.s3cfg'],
 
+    'ScanSnap Manager V3.2': [PREFERENCES + 'jp.co.pfu.ScanSnap.P2IUNISET.plist',
+                              PREFERENCES + 'jp.co.pfu.ScanSnap.QMScanToPrint.plist',
+                              PREFERENCES + 'jp.co.pfu.ScanSnap.Scan2EN2Setting.plist',
+                              PREFERENCES + 'jp.co.pfu.ScanSnap.Scan2Folder.plist',
+                              PREFERENCES + 'jp.co.pfu.ScanSnap.Scan2FolderSetting.plist',
+                              PREFERENCES + 'jp.co.pfu.ScanSnap.Scan2GDocSetting.plist',
+                              PREFERENCES + 'jp.co.pfu.ScanSnap.Scan2MailSetting.plist',
+                              PREFERENCES + 'jp.co.pfu.ScanSnap.Scan2MobileSetting.plist',
+                              PREFERENCES + 'jp.co.pfu.ScanSnap.Scan2PrintSetting.plist',
+                              PREFERENCES + 'jp.co.pfu.ScanSnap.ScanToDropboxSetting.plist',
+                              PREFERENCES + 'jp.co.pfu.ScanSnap.ScanToFolder.plist',
+                              PREFERENCES + 'jp.co.pfu.ScanSnap.ScanToSalesforceSetting.plist',
+                              PREFERENCES + 'jp.co.pfu.ScanSnap.V10L10.plist'],
+
     'Scenario': [PREFERENCES + 'com.lagente.scenario.plist',
                  'Library/Scenario'],
 
@@ -301,6 +349,9 @@ SUPPORTED_APPS = {
 
     'Skim': [PREFERENCES + 'net.sourceforge.skim-app.skim.plist'],
 
+    'Skype': [PREFERENCES + 'com.skype.skype.plist',
+              APP_SUPPORT + 'Skype'],
+
     'Slate': ['.slate',
               APP_SUPPORT + 'com.slate.Slate'],
 
@@ -309,7 +360,9 @@ SUPPORTED_APPS = {
     'SourceTree': [APP_SUPPORT + 'SourceTree/sourcetree.license',
                    APP_SUPPORT + 'SourceTree/browser.plist',
                    APP_SUPPORT + 'SourceTree/hgrc_sourcetree',
-                   APP_SUPPORT + 'SourceTree/hostingservices.plist'],
+                   APP_SUPPORT + 'SourceTree/hostingservices.plist',
+                   PREFERENCES + 'com.torusknot.SourceTree.plist',
+                   PREFERENCES + 'com.torusknot.SourceTreeNotMAS.plist'],
 
     'Spark': [APP_SUPPORT + 'Spark'],
 
@@ -325,21 +378,38 @@ SUPPORTED_APPS = {
 
     'Sublime Text 2': [APP_SUPPORT + 'Sublime Text 2/Installed Packages',
                        APP_SUPPORT + 'Sublime Text 2/Packages',
-                       APP_SUPPORT + 'Sublime Text 2/Pristine Packages'],
+                       APP_SUPPORT + 'Sublime Text 2/Pristine Packages',
+                       APP_SUPPORT + 'Sublime Text 2/Settings'],
 
     'Sublime Text 3': [APP_SUPPORT + 'Sublime Text 3/Installed Packages',
                        APP_SUPPORT + 'Sublime Text 3/Packages'],
 
     'Subversion': ['.subversion'],
 
+    'SuperDuper!': [APP_SUPPORT + 'SuperDuper!'],
+
+
     'Teamocil': ['.teamocil'],
 
     'TextMate': [APP_SUPPORT + 'TextMate',
-                 PREFERENCES + 'com.macromates.textmate.plist'],
+                 PREFERENCES + 'com.macromates.textmate.plist',
+                 PREFERENCES + 'com.macromates.textmate.webpreview.plist'],
+
+    'TextMate GetBundles': [PREFERENCES + 'com.macromates.textmate.getbundles.plist'],
+
+    'TextWrangler': [APP_SUPPORT + 'TextWrangler',
+                     PREFERENCES + 'com.barebones.textwrangler.PreferenceData',
+                     PREFERENCES + 'com.barebones.textwrangler.plist'],
 
     'Tmux': ['.tmux.conf'],
 
     'Tmuxinator': ['.tmuxinator'],
+
+    'TotalFinder': [PREFERENCES + 'com.binaryage.totalfinder.crashwatcher.plist',
+                    PREFERENCES + 'com.binaryage.totalfinder.plist'],
+
+    'TotalTerminal': [PREFERENCES + 'com.binaryage.totalterminal.crashwatcher.plist',
+                      PREFERENCES + 'com.binaryage.totalterminal.plist'],
 
     'Tower': [APP_SUPPORT + 'Tower',
               PREFERENCES + 'com.fournova.Tower.plist'],
@@ -348,10 +418,19 @@ SUPPORTED_APPS = {
 
     'Transmit': [
         PREFERENCES + 'com.panic.Transmit.plist',
-        APP_SUPPORT + 'Transmit/Metadata'
+        APP_SUPPORT + 'Transmit/Metadata',
+        APP_SUPPORT + 'Transmit/Favorites'
     ],
 
     'Twitterrific': [APP_SUPPORT + 'Twitterrific'],
+
+    'VelaClock': [PREFERENCES + 'widget-com.veladg.widget.velaclockdeluxe.plist',
+                  PREFERENCES + 'com.veladg.vcDeluxeReg.plist',
+                  APP_SUPPORT + 'VelaClock',
+                  APP_SUPPORT + 'Vela Design Group'],
+
+    'VelaTerra': [PREFERENCES + 'com.veladg.VelaTerra.plist',
+                  APP_SUPPORT + 'VelaTerra'],
 
     'Ventrilo': [PREFERENCES + 'Ventrilo'],
 
@@ -713,9 +792,9 @@ def copy(src, dst):
         src (str): Source file or folder
         dst (str): Destination file or folder
     """
-    assert isinstance(src, str)
+    assert isinstance(src, str) or isinstance(src, unicode)
     assert os.path.exists(src)
-    assert isinstance(dst, str)
+    assert isinstance(dst, str) or isinstance(src, unicode)
 
     # Create the path to the dst file if it does not exists
     abs_path = os.path.dirname(os.path.abspath(dst))
@@ -755,9 +834,9 @@ def link(target, link):
         target (str): file or folder the link will point to
         link (str): Link to create
     """
-    assert isinstance(target, str)
+    assert isinstance(target, str) or isinstance(target, unicode)
     assert os.path.exists(target)
-    assert isinstance(link, str)
+    assert isinstance(link, str) or isinstance(target, unicode)
 
     # Create the path to the link if it does not exists
     abs_path = os.path.dirname(os.path.abspath(link))
@@ -779,7 +858,7 @@ def chmod(target):
     Args:
         target (str): Root file or folder
     """
-    assert isinstance(target, str)
+    assert isinstance(target, str) or isinstance(target, unicode)
     assert os.path.exists(target)
 
     file_mode = stat.S_IRUSR | stat.S_IWUSR
@@ -889,6 +968,59 @@ def get_ignored_apps():
 
     return set(ignored_apps)
 
+def get_config_path_and_append_to_backup(section, optionName, mackup):
+    """
+    Looks in the config for the specified option in the specified section.  If it is there,
+    it reads the value and parses it as a path.  If the path is valid, it appends the path
+    to the list of files to backup for the 'Mackup' application entry.
+
+    Args:
+        section(str): The section in the config file
+        optionName(str): The option name to look for
+        mackup(Mackup): the instance that is running
+
+    Returns:
+        The path if it is valid and exists, the empty string otherwise.
+    """
+    # If a config file exists, grab it and parser it
+    config = configparser.SafeConfigParser(allow_no_value=True)
+
+    # Is the config file there (be sure to check the backup dir since it may not have been copied yet) ?
+    if config.read(os.environ['HOME'] + '/.mackup.cfg') or config.read(mackup.mackup_folder + '/.mackup.cfg'):
+        # Is the section/option pair in the cfg file ?
+        if config.has_option(section,optionName):
+            path = os.path.expanduser( config.get(section,optionName))
+            relPath = os.path.relpath(path, os.environ['HOME'])
+            # Is the specified path valid (either on the real system or in the backup) ?
+            if os.path.exists(path): 
+                SUPPORTED_APPS['Mackup'].append(relPath)
+                return path;
+            elif os.path.exists(mackup.mackup_folder + '/' + relPath):
+                SUPPORTED_APPS['Mackup'].append(relPath)
+                return mackup.mackup_folder + '/' + relPath
+
+    return "";
+
+
+
+def get_custom_apps(mackup):
+    """
+    Get the list of custom applications referenced in the config file and
+    reads it in as a dictionary.
+
+    Args:
+        mackup(Mackup) the instance that is running
+
+    Returns:
+        (dictionary) Applications / files to backup or an empy dictionary
+        if the user didn't specify any custom applications
+    """
+    path = get_config_path_and_append_to_backup('Custom Applications', 'dictionaryFile', mackup)
+    if path:
+        json_data=open(path).read()
+        return json.loads(json_data)
+
+    return {}
 
 def get_allowed_apps():
     """
@@ -1027,6 +1159,17 @@ def can_file_be_synced_on_current_platform(path):
 
     return can_be_synced
 
+def update_supported_apps(mackup):
+    """
+    Get the list of custom apps that the user has specified 
+    (if any) and append it to the SUPPORTED_APPS list, replacing 
+    any that are duplicated.
+
+    Args:
+        mackup(Mackup) the instance that is running.
+    """
+    SUPPORTED_APPS.update(get_custom_apps(mackup))
+
 
 ################
 # Main Program #
@@ -1036,10 +1179,12 @@ def can_file_be_synced_on_current_platform(path):
 def main():
     """Main function"""
 
+    mackup = Mackup()
+
+    update_supported_apps(mackup)
+
     # Get the command line arg
     args = parse_cmdline_args()
-
-    mackup = Mackup()
 
     if args.mode == BACKUP_MODE:
         # Check the env where the command is being run
@@ -1053,6 +1198,10 @@ def main():
     elif args.mode == RESTORE_MODE:
         # Check the env where the command is being run
         mackup.check_for_usable_restore_env()
+
+        # Restore 'Mackup' first to get the configs in place
+        app = ApplicationProfile(mackup, SUPPORTED_APPS['Mackup'])
+        app.restore()
 
         for app_name in SUPPORTED_APPS:
             app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])

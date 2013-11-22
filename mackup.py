@@ -47,6 +47,7 @@ except ImportError:
 MACKUP_DB_PATH = 'Mackup'
 PREFERENCES = 'Library/Preferences/'
 APP_SUPPORT = 'Library/Application Support/'
+CONTAINERS = 'Library/Containers/'
 
 #################
 # Configuration #
@@ -80,6 +81,9 @@ SUPPORTED_APPS = {
 
     'AppCode 2': [APP_SUPPORT + 'appCode20',
                   PREFERENCES + 'appCode20'],
+
+    'Airfoil': [APP_SUPPORT + 'Rogue Amoeba/Hijacker/Airfoil',
+                  PREFERENCES + 'com.rogueamoeba.Airfoil.plist'],
 
     'Bartender': [PREFERENCES + 'com.surteesstudios.Bartender.plist'],
 
@@ -133,7 +137,7 @@ SUPPORTED_APPS = {
                PREFERENCES + 'com.panic.Coda2.plist'],
 
     'Curl': ['.netrc'],
-    
+
     'Divvy': [PREFERENCES + 'com.mizage.direct.Divvy.plist'],
 
     'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],
@@ -182,6 +186,9 @@ SUPPORTED_APPS = {
 
     'Keymo': [PREFERENCES + 'com.manytricks.Keymo.plist'],
 
+    'Kaleidoscope': [APP_SUPPORT + 'Kaleidoscope',
+                        PREFERENCES + 'com.blackpixel.kaleidoscope.plist'],
+
     'KeyRemap4MacBook': [
         PREFERENCES + 'org.pqrs.KeyRemap4MacBook.plist',
         PREFERENCES + 'org.pqrs.KeyRemap4MacBook.multitouchextension.plist',
@@ -189,7 +196,9 @@ SUPPORTED_APPS = {
 
     'LaTeXiT': [PREFERENCES + 'fr.chachatelier.pierre.LaTeXiT.plist'],
 
-    'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
+    'LimeChat': [APP_SUPPORT + 'LimeChat',
+        PREFERENCES + 'net.limechat.LimeChat.plist',
+    ],
 
     'Mackup': ['.mackup.cfg'],
 
@@ -240,6 +249,9 @@ SUPPORTED_APPS = {
     'PhpStorm 6': [APP_SUPPORT + 'WebIde60',
                    PREFERENCES + 'WebIde60',
                    PREFERENCES + 'com.jetbrains.PhpStorm.plist'],
+
+    'PhpStorm 7': [APP_SUPPORT + 'WebIde70',
+                   PREFERENCES + 'WebIde70'],
 
     'pip': ['.pip/pip.cfg'],
 
@@ -334,8 +346,13 @@ SUPPORTED_APPS = {
 
     'Teamocil': ['.teamocil'],
 
+    'TextExpander': [APP_SUPPORT + 'TextExpander',
+                 PREFERENCES + 'com.smileonmymac.textexpander.plist'],
+
     'TextMate': [APP_SUPPORT + 'TextMate',
                  PREFERENCES + 'com.macromates.textmate.plist'],
+
+    'TextExpander': [APP_SUPPORT + 'TextExpander'],
 
     'Tmux': ['.tmux.conf'],
 
@@ -348,8 +365,9 @@ SUPPORTED_APPS = {
 
     'Transmit': [
         PREFERENCES + 'com.panic.Transmit.plist',
-        APP_SUPPORT + 'Transmit/Metadata'
-    ],
+        APP_SUPPORT + 'Transmit/Metadata',
+        APP_SUPPORT + 'Transmit/Favorites'
+        ],
 
     'Twitterrific': [APP_SUPPORT + 'Twitterrific'],
 
@@ -729,7 +747,7 @@ def copy(src, dst):
 
     # We need to copy a whole folder
     elif os.path.isdir(src):
-        shutil.copytree(src, dst)
+        shutil.copytree(src, dst, True)
 
     # What the heck is this ?
     else:
@@ -788,23 +806,25 @@ def chmod(target):
     # Remove the immutable attribute recursively if there is one
     remove_immutable_attribute(target)
 
-    if os.path.isfile(target):
-        os.chmod(target, file_mode)
+    if not os.path.islink(target):
 
-    elif os.path.isdir(target):
-        # chmod the root item
-        os.chmod(target, folder_mode)
+        if os.path.isfile(target):
+            os.chmod(target, file_mode)
 
-        # chmod recursively in the folder it it's one
-        for root, dirs, files in os.walk(target):
-            for cur_dir in dirs:
-                os.chmod(os.path.join(root, cur_dir), folder_mode)
-            for cur_file in files:
-                os.chmod(os.path.join(root, cur_file), file_mode)
+        elif os.path.isdir(target):
+            # chmod the root item
+            os.chmod(target, folder_mode)
 
-    else:
-        raise ValueError("Unsupported file type: {}".format(target))
+            # chmod recursively in the folder it it's one
+            for root, dirs, files in os.walk(target):
+                for cur_dir in dirs:
+                    os.chmod(os.path.join(root, cur_dir), folder_mode)
+                for cur_file in files:
+                    if not os.path.islink(os.path.join(root, cur_file)):
+                        os.chmod(os.path.join(root, cur_file), file_mode)
 
+        else:
+            raise ValueError("Unsupported file type: {}".format(target))
 
 def error(message):
     """
@@ -1054,7 +1074,7 @@ def main():
         # Check the env where the command is being run
         mackup.check_for_usable_restore_env()
 
-        for app_name in SUPPORTED_APPS:
+        for app_name in get_apps_to_backup():
             app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
             app.restore()
 

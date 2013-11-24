@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.5.3
+
 - Added support for Divvy (thx @saulshanabrook)
 - Added support for Apple Messages (thx @pzbyszynski)
 - Added support for Skype (thx @pzbyszynski)

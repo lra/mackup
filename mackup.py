@@ -141,6 +141,8 @@ SUPPORTED_APPS = {
     'Emacs': ['.emacs',
               '.emacs.d'],
 
+    'Ember': ['Library/Group Containers/P97H7FTHWN.com.realmacsoftware.ember'],
+
     'Exercism': ['.exercism'],
 
     'ExpanDrive': [APP_SUPPORT + 'ExpanDrive'],
@@ -150,6 +152,8 @@ SUPPORTED_APPS = {
     'Fish': ['.config/fish'],
 
     'Flux': [PREFERENCES + 'org.herf.Flux.plist'],
+
+    'ForkLift 2': [PREFERENCES + 'com.binarynights.ForkLift2.plist'],
 
     'GeekTool': [
         PREFERENCES + 'org.tynsoe.GeekTool.plist',
@@ -205,6 +209,8 @@ SUPPORTED_APPS = {
 
     'Mercurial': ['.hgrc',
                   '.hgignore_global'],
+
+    'Messages': ['Library/Messages'],
 
     'Moom': [
         PREFERENCES + 'com.manytricks.Moom.plist',
@@ -301,6 +307,8 @@ SUPPORTED_APPS = {
 
     'Skim': [PREFERENCES + 'net.sourceforge.skim-app.skim.plist'],
 
+    'Skype': [APP_SUPPORT + 'Skype'],
+
     'Slate': ['.slate',
               APP_SUPPORT + 'com.slate.Slate'],
 
@@ -331,6 +339,8 @@ SUPPORTED_APPS = {
                        APP_SUPPORT + 'Sublime Text 3/Packages'],
 
     'Subversion': ['.subversion'],
+
+    'SuperDuper!': [APP_SUPPORT + 'SuperDuper!'],
 
     'Teamocil': ['.teamocil'],
 

@@ -3,6 +3,12 @@
 ## WIP
 - Added support for Divvy (thx @saulshanabrook)
 
+- Added support for Apple Messages
+- Added support for Skype
+- Added support for SuperDuper!
+- Added support for ForkLift 2
+- Added support for Ember
+
 ## Mackup 0.5.2
 
 - Added support for Tower (thx @MichaelRBond)

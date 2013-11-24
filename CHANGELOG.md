@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for Arara and Aspell (thx @twsh)
+
 ## Mackup 0.5.3
 
 - Added support for Divvy (thx @saulshanabrook)

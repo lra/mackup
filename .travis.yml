@@ -1,2 +1,4 @@
 language: python
 script: nosetests
+after_success:
+  - coveralls

@@ -3,6 +3,7 @@
 Keep your application settings in sync.
 
 [![Build Status](https://travis-ci.org/lra/mackup.png?branch=master)](https://travis-ci.org/lra/mackup)
+[![Coverage Status](https://coveralls.io/repos/lra/mackup/badge.png)](https://coveralls.io/r/lra/mackup)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lra/mackup/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 ## Quickstart

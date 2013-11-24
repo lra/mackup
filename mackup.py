@@ -80,6 +80,13 @@ SUPPORTED_APPS = {
 
     'AppCode 2': [APP_SUPPORT + 'appCode20',
                   PREFERENCES + 'appCode20'],
+                  
+    'Arara': [	'.araraconfig.yaml',
+        	    'araraconfig.yaml'],
+
+    'Aspell': [ '.aspell.conf',
+        	    '.aspell.en.prepl',
+        	    '.aspell.en.pws'],
 
     'Bartender': [PREFERENCES + 'com.surteesstudios.Bartender.plist'],
 

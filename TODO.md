@@ -9,3 +9,4 @@ Feel free to implement any of those ;)
 - Try with hard links to support the Fonts pb
 - Support for DropBox alternatives
 - Support for ~/bin (need a custom mode for non 0600 synced files)
+- 100% test coverage

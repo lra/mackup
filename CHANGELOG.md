@@ -8,6 +8,9 @@
 - Added support for ForkLift 2 (thx @pzbyszynski)
 - Added support for Ember (thx @pzbyszynski)
 
+- Added support for Arara
+- Added support for Aspell
+
 ## Mackup 0.5.2
 
 - Added support for Tower (thx @MichaelRBond)

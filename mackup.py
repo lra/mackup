@@ -295,6 +295,9 @@ SUPPORTED_APPS = {
     'Pentadactyl': ['.pentadactyl',
                     '.pentadactylrc'],
 
+    'PokerStars': [PREFERENCES + 'com.pokerstars.user.ini',
+                   PREFERENCES + 'com.pokerstars.PokerStars.plist'],
+
     'S3cmd': ['.s3cfg'],
 
     'Scenario': [PREFERENCES + 'com.lagente.scenario.plist',

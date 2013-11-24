@@ -10,6 +10,7 @@
 - Added support for Ember (thx @pzbyszynski)
 - Added support for Dash and Cyberduck (thx @suprememoocow)
 - Added support for Mou (thx @jannae)
+- Added support for PokerStars (thx @vitorgalvao)
 
 ## Mackup 0.5.2
 

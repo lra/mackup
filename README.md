@@ -220,6 +220,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Pentadactyl](http://5digits.org/pentadactyl/)
   - [PhpStorm 6](http://www.jetbrains.com/phpstorm/)
   - [PIP](http://www.pip-installer.org/)
+  - [PokerStars](http://www.pokerstars.com/)
   - [PopClip](http://pilotmoon.com/popclip/)
   - [Pow](http://pow.cx/)
   - [PyPI](https://pypi.python.org/pypi)

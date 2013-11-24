@@ -9,6 +9,7 @@
 - Added support for ForkLift 2 (thx @pzbyszynski)
 - Added support for Ember (thx @pzbyszynski)
 - Added support for Dash and Cyberduck (thx @suprememoocow)
+- Added support for Mou (thx @jannae)
 
 ## Mackup 0.5.2
 

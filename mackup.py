@@ -318,8 +318,6 @@ SUPPORTED_APPS = {
 
     'Sequel Pro': [APP_SUPPORT + 'Sequel Pro/Data'],
 
-    'Services': ['Library/Services'],
-
     'SHSH Blobs': ['.shsh'],
 
     'Shuttle': ['.shuttle.json'],

@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Arara and Aspell (thx @twsh)
+- Removed support of OS X Services, as it does not support links
 
 ## Mackup 0.5.3
 

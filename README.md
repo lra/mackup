@@ -156,6 +156,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Adium](http://adium.im/)
   - [Adobe Lightroom](http://www.adobe.com/products/photoshop-lightroom.html)
   - [AppCode 2](http://www.jetbrains.com/objc/)
+  - Apple Messages
   - [Arara](http://cereda.github.io/arara/)
   - [Aspell](http://aspell.net/)
   - [Bartender](http://www.macbartender.com/)
@@ -194,6 +195,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [GnuPG](http://www.gnupg.org/)
   - [Heroku](https://www.heroku.com/)
   - [Htop](http://htop.sourceforge.net/)
+  - [i2cssh](https://github.com/wouterdebie/i2cssh)
   - [IntelliJIDEA 12](http://www.jetbrains.com/idea/)
   - [Irssi](http://www.irssi.org/)
   - [ITerm2](http://www.iterm2.com/)

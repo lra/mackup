@@ -189,6 +189,8 @@ SUPPORTED_APPS = {
 
     'Htop': ['.htoprc'],
 
+    'i2cssh': ['.i2csshrc'],
+
     'IntelliJIdea 12': [APP_SUPPORT + 'IntelliJIdea12',
                         PREFERENCES + 'IntelliJIdea12'],
 

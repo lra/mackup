@@ -4,35 +4,36 @@
 
 - Added support for Arara and Aspell (thx @twsh)
 - Removed support of OS X Services, as it does not support links
+- Added support for [i2cssh](https://github.com/wouterdebie/i2cssh) (thx @jannae)
 
 ## Mackup 0.5.3
 
-- Added support for Divvy (thx @saulshanabrook)
+- Added support for [Divvy](http://mizage.com/divvy/) (thx @saulshanabrook)
 - Added support for Apple Messages (thx @pzbyszynski)
-- Added support for Skype (thx @pzbyszynski)
-- Added support for SuperDuper! (thx @pzbyszynski)
-- Added support for ForkLift 2 (thx @pzbyszynski)
-- Added support for Ember (thx @pzbyszynski)
-- Added support for Dash and Cyberduck (thx @suprememoocow)
-- Added support for Mou (thx @jannae)
-- Added support for PokerStars (thx @vitorgalvao)
+- Added support for [Skype](http://www.skype.com/)
+- Added support for [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html) (thx @pzbyszynski)
+- Added support for [ForkLift 2](http://www.binarynights.com/forklift/) (thx @pzbyszynski)
+- Added support for [Ember](http://www.realmacsoftware.com/ember) (thx @pzbyszynski)
+- Added support for [Dash](http://kapeli.com/dash) and [Cyberduck](http://cyberduck.ch/) (thx @suprememoocow)
+- Added support for [Mou](http://mouapp.com/) (thx @jannae)
+- Added support for [PokerStars](http://www.pokerstars.com/) (thx @vitorgalvao)
 
 ## Mackup 0.5.2
 
-- Added support for Tower (thx @MichaelRBond)
-- Added support for Colloquy (thx @MichaelRBond)
-- Added support for Twitterrific (thx @MichaelRBond)
+- Added support for [Tower](http://www.git-tower.com/) (thx @MichaelRBond)
+- Added support for [Colloquy](http://colloquy.info/) (thx @MichaelRBond)
+- Added support for [Twitterrific](http://twitterrific.com/) (thx @MichaelRBond)
 - Mackup path in dropbox is now configurable via constant (thx @MichaelRBond)
-- Added support for Spectacle (thx @vincecima)
+- Added support for [Spectacle](http://spectacleapp.com/) (thx @vincecima)
 
 ## Mackup 0.5.1
 
-- Added support for exercism (thx @mwarkentin)
-- Added support for Skim
-- Added support for Scenario
-- Added support for Ack (thx @adamlogic)
-- Added support for Stata and SelfControl (thx @kfinlay)
-- Added support for LaTeXiT (thx @twsh)
+- Added support for [Exercism](http://exercism.io/) (thx @mwarkentin)
+- Added support for [Skim](http://skim-app.sourceforge.net/)
+- Added support for [Scenario](http://www.lagentesoft.com/scenario/)
+- Added support for [Ack](http://beyondgrep.com/) (thx @adamlogic)
+- Added support for [Stata](http://www.stata.com/) and [SelfControl](http://selfcontrolapp.com/) (thx @kfinlay)
+- Added support for [LaTeXiT](http://www.chachatelier.fr/latexit/latexit-home.php?lang=en) (thx @twsh)
 - Do not link ~/Library/* files on GNU/Linux, should fix #104
 
 ## Mackup 0.5

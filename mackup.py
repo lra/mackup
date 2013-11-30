@@ -696,6 +696,23 @@ class Mackup(object):
                 error("Mackup can't do anything without a home =(")
 
 
+class State(object):
+    """Object to store state"""
+
+    _shared_state = {}
+
+    def __init__(self):
+        self.__dict__ = self._shared_state
+
+    def set_args(self, val):
+        self._args = val
+
+    def get_args(self):
+        return getattr(self, '_args', None)
+
+    args = property(get_args, set_args)
+
+
 ####################
 # Useful functions #
 ####################
@@ -731,6 +748,12 @@ def delete(filepath):
     Args:
         filepath (str): Absolute full path to a file. e.g. /path/to/file
     """
+    args = State().args
+    if args and args.verbose:
+        print "Deleting {}".format(filepath)
+    if args and args.simulate:
+        return
+
     # Some files have ACLs, let's remove them recursively
     remove_acl(filepath)
 
@@ -761,6 +784,12 @@ def copy(src, dst):
         src (str): Source file or folder
         dst (str): Destination file or folder
     """
+    args = State().args
+    if args and args.verbose:
+        print "Copying {} to {}".format(src, dst)
+    if args and args.simulate:
+        return
+
     assert isinstance(src, str)
     assert os.path.exists(src)
     assert isinstance(dst, str)
@@ -803,6 +832,12 @@ def link(target, link):
         target (str): file or folder the link will point to
         link (str): Link to create
     """
+    args = State().args
+    if args and args.verbose:
+        print "Linking {} to {}".format(link, target)
+    if args and args.simulate:
+        return
+
     assert isinstance(target, str)
     assert os.path.exists(target)
     assert isinstance(link, str)
@@ -896,6 +931,10 @@ def parse_cmdline_args():
                               " system you use.\n"
                               "Uninstall will reset everything as it was"
                               " before using Mackup."))
+
+    # Simulate and verbose options.
+    parser.add_argument("-S", "--simulate", action="store_true", help="Simulate the Mackup operation but don't actually do anything.")
+    parser.add_argument("-v", "--verbose", action="store_true", help="Show verbose output for file operations.")
 
     # Parse the command line and return the parsed options
     return parser.parse_args()
@@ -1086,6 +1125,9 @@ def main():
 
     # Get the command line arg
     args = parse_cmdline_args()
+    # Store command line arguments in a global state object.
+    state = State()
+    state.args = args
 
     mackup = Mackup()
 

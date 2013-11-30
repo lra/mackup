@@ -112,6 +112,16 @@ folder in Dropbox. This will revert your system at pre-Mackup state.
 
 Get some help, obvious...
 
+### Options
+
+`-S`, `--simulate`
+
+Simulate the Mackup operation but don't actually do anything.
+
+`-v`, `--verbose`
+
+Show verbose output for file operations.
+
 ## What does it do ?
 
 - Backups your application settings in Dropbox

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Keep you Mac application settings in sync
+Keep your application settings in sync.
 
 Copyright (C) 2013 Laurent Raufaste <http://glop.org/>
 
@@ -862,7 +862,7 @@ def parse_cmdline_args():
     # Setup the global parser
     parser = argparse.ArgumentParser(
         description=("Mackup {}\n"
-                     "Keep you application settings in sync.\n"
+                     "Keep your application settings in sync.\n"
                      "Copyright (C) 2013 Laurent Raufaste <http://glop.org/>\n"
                      .format(VERSION)),
         epilog=epilog,

@@ -189,10 +189,14 @@ SUPPORTED_APPS = {
 
     'Htop': ['.htoprc'],
 
+    'i2cssh': ['.i2csshrc'],
+
     'IntelliJIdea 12': [APP_SUPPORT + 'IntelliJIdea12',
                         PREFERENCES + 'IntelliJIdea12'],
 
     'iTerm2': [PREFERENCES + 'com.googlecode.iterm2.plist'],
+
+    'iTunesScripts': ['Library/iTunes/Scripts'],
 
     'Irssi': ['.irssi'],
 

@@ -196,6 +196,8 @@ SUPPORTED_APPS = {
 
     'iTerm2': [PREFERENCES + 'com.googlecode.iterm2.plist'],
 
+    'iTunesScripts': ['Library/iTunes/Scripts'],
+
     'Irssi': ['.irssi'],
 
     'Janus': ['.janus'],

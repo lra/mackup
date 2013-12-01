@@ -4,7 +4,7 @@
 
 - Added support for Arara and Aspell (thx @twsh)
 - Removed support of OS X Services, as it does not support links
-- Added support for [i2cssh](https://github.com/wouterdebie/i2cssh) (thx @jannae)
+- Added support for [i2cssh](https://github.com/wouterdebie/i2cssh) and iTunes Applescripts (thx @jannae)
 
 ## Mackup 0.5.3
 

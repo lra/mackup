@@ -56,13 +56,10 @@ class TestMackup(unittest.TestCase):
         srcfile = tf.name
         tf.close()
 
-        # Get the filename
-        srcfilename = os.path.basename(srcfile)
-
         # Create a tmp folder
         dstpath = tempfile.mkdtemp()
         # Set the destination filename
-        dstfile = os.path.join(dstpath, srcfilename)
+        dstfile = os.path.join(dstpath, os.path.basename(srcfile))
 
         # Make sure the source file and destination folder exist and the
         # destination file doesn't yet exist

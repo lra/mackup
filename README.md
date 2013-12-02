@@ -198,6 +198,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Irssi](http://www.irssi.org/)
   - [ITerm2](http://www.iterm2.com/)
   - [Janus](https://github.com/carlhuda/janus)
+  - [Keka](http://kekaosx.com/)
   - [Keymo](http://manytricks.com/keymo/)
   - [KeyRemap4MacBook](http://pqrs.org/macosx/keyremap4macbook/)
   - [LaTeXiT](http://www.chachatelier.fr/latexit/latexit-home.php?lang=en)

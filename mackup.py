@@ -198,6 +198,8 @@ SUPPORTED_APPS = {
 
     'Janus': ['.janus'],
 
+    'Keka': [PREFERENCES + 'com.aone.keka.plist'],
+
     'Keymo': [PREFERENCES + 'com.manytricks.Keymo.plist'],
 
     'KeyRemap4MacBook': [

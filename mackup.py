@@ -367,6 +367,9 @@ SUPPORTED_APPS = {
     'TextMate': [APP_SUPPORT + 'TextMate',
                  PREFERENCES + 'com.macromates.textmate.plist'],
 
+    'Textual': [APP_SUPPORT + 'Textual IRC',
+                PREFERENCES + 'com.codeux.irc.textual.plist'],
+
     'Tmux': ['.tmux.conf'],
 
     'Tmuxinator': ['.tmuxinator'],

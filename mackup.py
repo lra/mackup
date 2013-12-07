@@ -629,15 +629,24 @@ class Mackup(object):
                    " If Dropbox is not installed and running, go for it on"
                    " <http://www.dropbox.com/>"))
 
-        self.mackup_folder = os.path.join(self.dropbox_folder, MACKUP_DB_PATH)
+        self.alternate_folder = get_alternate_folder_location()
+
+        if self.alternate_folder is not None:
+            self.target_folder = self.alternate_folder
+        else:
+            self.target_folder = self.dropbox_folder
+
+        print(self.target_folder)
+        print(MACKUP_DB_PATH)
+        self.mackup_folder = os.path.join(self.target_folder, MACKUP_DB_PATH)
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
     def _check_for_usable_environment(self):
         """Check if the current env is usable and has everything's required"""
 
         # Do we have a home folder ?
-        if not os.path.isdir(self.dropbox_folder):
-            error(("Unable to find the Dropbox folder."
+        if not os.path.isdir(self.target_folder):
+            error(("Unable to find alternate or Dropbox folder."
                    " If Dropbox is not installed and running, go for it on"
                    " <http://www.dropbox.com/>"))
 
@@ -897,6 +906,36 @@ def get_dropbox_folder_location():
 
     return dropbox_home
 
+def get_alternate_folder_location():
+    """
+    Get the alernate folder location in the config file, if specified
+
+    Returns:
+        (str) Full path to alternate folder
+    """
+    # If a config file exists, grab it and parser it
+    config = configparser.SafeConfigParser(allow_no_value=True)
+
+    # Defaults to nothing
+    storage_location = None;
+
+    # Is the config file there ?
+    if config.read(os.environ['HOME'] + '/.mackup.cfg'):
+        # Is the "Alternate Storage Location" in the cfg file ?
+        if config.has_section('Alternate Storage Location'):
+            storage_config = config.options('Alternate Storage Location')
+
+            if len(storage_config) == 1:
+                if not os.path.isdir(storage_config[0]):
+                    error(("Valid file path required"))
+
+            if len(storage_config) > 1:
+                error(("More than one file path is specified."
+                   "Please specify a single file path"))
+
+            storage_location = storage_config[0]
+
+    return storage_location
 
 def get_ignored_apps():
     """

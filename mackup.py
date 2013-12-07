@@ -930,7 +930,7 @@ def get_alternate_folder_location():
                     error(("Valid file path required"))
 
             if len(storage_config) > 1:
-                error(("More than one file path is specified."
+                error(("More than one file path is specified. "
                    "Please specify a single file path"))
 
             storage_location = storage_config[0]

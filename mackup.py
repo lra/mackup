@@ -636,8 +636,6 @@ class Mackup(object):
         else:
             self.target_folder = self.dropbox_folder
 
-        print(self.target_folder)
-        print(MACKUP_DB_PATH)
         self.mackup_folder = os.path.join(self.target_folder, MACKUP_DB_PATH)
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
@@ -866,7 +864,6 @@ def parse_cmdline_args():
     # Format some epilog text
     epilog = "Supported applications: "
     epilog += ', '.join(sorted(SUPPORTED_APPS.iterkeys()))
-    epilog += "\n\nMackup requires a fully synced Dropbox folder."
 
     # Setup the global parser
     parser = argparse.ArgumentParser(
@@ -880,10 +877,11 @@ def parse_cmdline_args():
     # Add the required arg
     parser.add_argument("mode",
                         choices=[BACKUP_MODE, RESTORE_MODE, UNINSTALL_MODE],
-                        help=("Backup will sync your conf files to Dropbox,"
+                        help=("Backup will sync your conf files to Dropbox"
+                              "or another specified folder,"
                               " use this the 1st time you use Mackup.\n"
-                              "Restore will link the conf files already in"
-                              " Dropbox on your system, use it on any new"
+                              "Restore will link the conf files already"
+                              "on your system, use it on any new"
                               " system you use.\n"
                               "Uninstall will reset everything as it was"
                               " before using Mackup."))
@@ -905,6 +903,7 @@ def get_dropbox_folder_location():
     dropbox_home = base64.b64decode(data[1])
 
     return dropbox_home
+
 
 def get_alternate_folder_location():
     """
@@ -936,6 +935,7 @@ def get_alternate_folder_location():
             storage_location = storage_config[0]
 
     return storage_location
+
 
 def get_ignored_apps():
     """

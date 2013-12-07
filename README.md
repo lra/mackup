@@ -8,14 +8,14 @@ Keep your application settings in sync.
 
 ## Quickstart
 
-Install [Dropbox](http://www.dropbox.com/) first, it's needed.
+Install [Dropbox](http://www.dropbox.com/) first if you'd like to backup there. Mackup uses Dropbox as its default backup location.
 
 On OS X, if you want an easy install, you can install [Homebrew](http://brew.sh/) and do:
 ```bash
 # Install Mackup
 brew install mackup
 
-# Launch it and back up your files in Dropbox
+# Launch it and back up your files
 mackup backup
 ```
 
@@ -27,7 +27,7 @@ curl -o mackup https://raw.github.com/lra/mackup/master/mackup.py
 # Make it executable
 chmod +x mackup
 
-# Launch it and back up your files in Dropbox
+# Launch it and back up your files
 ./mackup backup
 ```
 
@@ -41,7 +41,7 @@ curl -o mackup https://raw.github.com/lra/mackup/master/mackup.py
 # Make it executable
 chmod +x mackup
 
-# Launch it and restore your files from Dropbox
+# Launch it and restore your files
 ./mackup restore
 ```
 
@@ -90,14 +90,14 @@ You can revert all your files to their original state.
 # Just run this
 mackup uninstall
 ```
-This will move back any file from Dropbox to its original place in your home
-folder and destroy the Mackup folder in Dropbox.
+This will move back any file from your backup directory to its original place in your home
+folder and destroy the Mackup folder in your backup directory.
 
 ## Usage
 
 `mackup backup`
 
-Backup your application settings in Dropbox.
+Backup your application settings.
 
 `mackup restore`
 
@@ -106,7 +106,7 @@ Restore your application settings on a newly installed workstation.
 `mackup uninstall`
 
 Revert any synced config file to its original state, and delete the Mackup
-folder in Dropbox. This will revert your system at pre-Mackup state.
+folder in your backup directory. This will revert your system at pre-Mackup state.
 
 `mackup -h`
 
@@ -114,7 +114,7 @@ Get some help, obvious...
 
 ## What does it do ?
 
-- Backups your application settings in Dropbox
+- Backups your application settings in Dropbox or a custom backup directory
 - Syncs your application settings among all your workstations
 - Restores your configuration on any fresh install in one command line
 
@@ -345,7 +345,7 @@ a lot of us had the same problem: Making a more generic tool could help others
 and I could get help from others to support more apps in the tool.
 
 So here comes Mackup, the little tool that will sync all your application
-configs to Dropbox.
+configs.
 
 And it's [GPL](http://www.gnu.org/licenses/gpl.html) of course.
 

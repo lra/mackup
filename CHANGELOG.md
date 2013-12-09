@@ -5,6 +5,7 @@
 - Added support for Arara and Aspell (thx @twsh)
 - Removed support of OS X Services, as it does not support links
 - Added support for i2cssh and iTunes Applescripts (thx @jannae)
+- Make slogan consistent throughout (thx @Cottser)
 
 ## Mackup 0.5.3
 

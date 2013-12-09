@@ -181,6 +181,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Divvy](http://mizage.com/divvy/)
   - [Emacs](http://www.gnu.org/software/emacs/)
   - [Ember](http://www.realmacsoftware.com/ember)
+  - [Enjoyable](http://yukkurigames.com/enjoyable/)
   - [Exercism](http://exercism.io/)
   - [ExpanDrive](http://www.expandrive.com/)
   - [Fantastical](http://flexibits.com/fantastical)

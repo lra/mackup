@@ -228,7 +228,14 @@ SUPPORTED_APPS = {
     'Mercurial': ['.hgrc',
                   '.hgignore_global'],
 
-    'Messages': ['Library/Messages'],
+    'Messages': ['Library/Messages',
+                 'Library/Application Scripts/com.apple.iChat',
+                 PREFERENCES + 'com.apple.iChat.plist',
+                 PREFERENCES + 'com.apple.iChat.AIM.plist',
+                 PREFERENCES + 'com.apple.iChat.Jabber.plist',
+                 PREFERENCES + 'com.apple.iChat.LSSharedFileList.plist',
+                 PREFERENCES + 'com.apple.iChat.StatusMessages.plist',
+                 PREFERENCES + 'com.apple.iChat.Yahoo.plist'],
 
     'Moom': [
         PREFERENCES + 'com.manytricks.Moom.plist',

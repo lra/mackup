@@ -49,3 +49,24 @@ class TestMackup(unittest.TestCase):
         assert not os.path.exists(filepath)
         assert not os.path.exists(subfolder_path)
         assert not os.path.exists(subfilepath)
+
+    def test_copy_file(self):
+        # Create a tmp file
+        tf = tempfile.NamedTemporaryFile(delete=False)
+        srcfile = tf.name
+        tf.close()
+
+        # Create a tmp folder
+        dstpath = tempfile.mkdtemp()
+        # Set the destination filename
+        dstfile = os.path.join(dstpath, "subfolder", os.path.basename(srcfile))
+
+        # Make sure the source file and destination folder exist and the
+        # destination file doesn't yet exist
+        assert os.path.isfile(srcfile)
+        assert os.path.isdir(dstpath)
+        assert not os.path.exists(dstfile)
+
+        # Check if mackup can copy it
+        mackup.copy(srcfile, dstfile)
+        assert os.path.exists(dstfile)

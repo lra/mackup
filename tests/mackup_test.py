@@ -69,4 +69,10 @@ class TestMackup(unittest.TestCase):
 
         # Check if mackup can copy it
         mackup.copy(srcfile, dstfile)
+        assert os.path.isfile(srcfile)
+        assert os.path.isdir(dstpath)
         assert os.path.exists(dstfile)
+
+        # Let's clean up
+        mackup.delete(dstpath)
+

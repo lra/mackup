@@ -163,6 +163,8 @@ SUPPORTED_APPS = {
 
     'Fantastical': [PREFERENCES + 'com.flexibits.fantastical.plist'],
 
+    'Feeds': [PREFERENCES + 'com.feedsapp.Feeds.plist'],
+
     'Fish': ['.config/fish'],
 
     'Flux': [PREFERENCES + 'org.herf.Flux.plist'],

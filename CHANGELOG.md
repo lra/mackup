@@ -9,6 +9,7 @@
 - Added tests to cover file copying and linking (thx @Cottser)
 - Better Apple Messages support (thx @vitorgalvao)
 - Added support for Keka (thx @vitorgalvao)
+- Added support for Feeds (thx @vitorgalvao)
 
 ## Mackup 0.5.3
 

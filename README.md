@@ -259,6 +259,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html)
   - [Teamocil](http://remiprev.github.io/teamocil/)
   - [TextMate](http://macromates.com/)
+  - [Textual](http://www.codeux.com/textual/)
   - [Tmux](http://tmux.sourceforge.net/)
   - [Tmuxinator](https://github.com/aziz/tmuxinator)
   - [Tower](http://www.git-tower.com/)

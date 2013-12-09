@@ -4,6 +4,8 @@
 
 - Added support for Arara and Aspell (thx @twsh)
 - Removed support of OS X Services, as it does not support links
+- Added support for specifying a custom backup directory instead of Dropbox
+- Added support for custom backup folder name
 
 ## Mackup 0.5.3
 

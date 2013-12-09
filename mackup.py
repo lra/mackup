@@ -629,15 +629,23 @@ class Mackup(object):
                    " If Dropbox is not installed and running, go for it on"
                    " <http://www.dropbox.com/>"))
 
-        self.mackup_folder = os.path.join(self.dropbox_folder, MACKUP_DB_PATH)
+        self.alternate_folder = get_alternate_folder_location()
+
+        if self.alternate_folder is not None:
+            self.target_folder = self.alternate_folder
+        else:
+            self.target_folder = self.dropbox_folder
+
+        self.mackup_db_path = get_mackup_db_path()
+        self.mackup_folder = os.path.join(self.dropbox_folder, self.mackup_db_path)
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
     def _check_for_usable_environment(self):
         """Check if the current env is usable and has everything's required"""
 
         # Do we have a home folder ?
-        if not os.path.isdir(self.dropbox_folder):
-            error(("Unable to find the Dropbox folder."
+        if not os.path.isdir(self.target_folder):
+            error(("Unable to find alternate or Dropbox folder."
                    " If Dropbox is not installed and running, go for it on"
                    " <http://www.dropbox.com/>"))
 
@@ -857,7 +865,6 @@ def parse_cmdline_args():
     # Format some epilog text
     epilog = "Supported applications: "
     epilog += ', '.join(sorted(SUPPORTED_APPS.iterkeys()))
-    epilog += "\n\nMackup requires a fully synced Dropbox folder."
 
     # Setup the global parser
     parser = argparse.ArgumentParser(
@@ -871,10 +878,11 @@ def parse_cmdline_args():
     # Add the required arg
     parser.add_argument("mode",
                         choices=[BACKUP_MODE, RESTORE_MODE, UNINSTALL_MODE],
-                        help=("Backup will sync your conf files to Dropbox,"
+                        help=("Backup will sync your conf files to Dropbox"
+                              "or another specified folder,"
                               " use this the 1st time you use Mackup.\n"
-                              "Restore will link the conf files already in"
-                              " Dropbox on your system, use it on any new"
+                              "Restore will link the conf files already"
+                              "on your system, use it on any new"
                               " system you use.\n"
                               "Uninstall will reset everything as it was"
                               " before using Mackup."))
@@ -896,6 +904,63 @@ def get_dropbox_folder_location():
     dropbox_home = base64.b64decode(data[1])
 
     return dropbox_home
+
+
+def get_alternate_folder_location():
+    """
+    Get the alernate folder location in the config file, if specified
+
+    Returns:
+        (str) Full path to alternate folder
+    """
+    # If a config file exists, grab it and parser it
+    config = configparser.SafeConfigParser(allow_no_value=True)
+
+    # Defaults to nothing
+    storage_location = None;
+
+    # Is the config file there ?
+    if config.read(os.environ['HOME'] + '/.mackup.cfg'):
+        # Is the "Alternate Storage Location" in the cfg file ?
+        if config.has_section('Alternate Storage Location'):
+            storage_config = config.options('Alternate Storage Location')
+
+            if len(storage_config) == 1:
+                if not os.path.isdir(storage_config[0]):
+                    error(("Valid file path required"))
+
+            if len(storage_config) > 1:
+                error(("More than one file path is specified. "
+                   "Please specify a single file path"))
+
+            storage_location = storage_config[0]
+
+    return storage_location
+
+
+def get_mackup_db_path():
+    """
+    Get the alternate Mackup DB path, if specified
+
+    Returns:
+        (str) Name of the Mackup DB folder
+    """
+    # Set the default
+    mackup_db_path = MACKUP_DB_PATH;
+
+    # Is the config file there ?
+    if config.read(os.environ['HOME'] + '/.mackup.cfg'):
+        # Is the "Mackup Folder Name" in the cfg file ?
+        if config.has_section('Mackup Folder Name'):
+            mackup_db_config = config.options('Mackup Folder Name')
+
+            if len(mackup_db_config) > 1:
+                error(("More than one name is specified. "
+                   "Please specify a single name"))
+
+            mackup_db_path = mackup_db_config[0];
+
+    return mackup_db_path
 
 
 def get_ignored_apps():

@@ -6,7 +6,7 @@
 - Removed support of OS X Services, as it does not support links
 - Added support for i2cssh and iTunes Applescripts (thx @jannae)
 - Make slogan consistent throughout (thx @Cottser)
-- Added tests to cover file copying (thx @Cottser)
+- Added tests to cover file copying and linking (thx @Cottser)
 - Better Apple Messages support (thx @vitorgalvao)
 
 ## Mackup 0.5.3

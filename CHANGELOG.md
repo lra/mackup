@@ -8,6 +8,7 @@
 - Make slogan consistent throughout (thx @Cottser)
 - Added tests to cover file copying and linking (thx @Cottser)
 - Better Apple Messages support (thx @vitorgalvao)
+- Added support for Keka (thx @vitorgalvao)
 
 ## Mackup 0.5.3
 

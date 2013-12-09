@@ -636,7 +636,8 @@ class Mackup(object):
         else:
             self.target_folder = self.dropbox_folder
 
-        self.mackup_folder = os.path.join(self.target_folder, MACKUP_DB_PATH)
+        self.mackup_db_path = get_mackup_db_path()
+        self.mackup_folder = os.path.join(self.dropbox_folder, self.mackup_db_path)
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
     def _check_for_usable_environment(self):
@@ -935,6 +936,31 @@ def get_alternate_folder_location():
             storage_location = storage_config[0]
 
     return storage_location
+
+
+def get_mackup_db_path():
+    """
+    Get the alternate Mackup DB path, if specified
+
+    Returns:
+        (str) Name of the Mackup DB folder
+    """
+    # Set the default
+    mackup_db_path = MACKUP_DB_PATH;
+
+    # Is the config file there ?
+    if config.read(os.environ['HOME'] + '/.mackup.cfg'):
+        # Is the "Mackup Folder Name" in the cfg file ?
+        if config.has_section('Mackup Folder Name'):
+            mackup_db_config = config.options('Mackup Folder Name')
+
+            if len(mackup_db_config) > 1:
+                error(("More than one name is specified. "
+                   "Please specify a single name"))
+
+            mackup_db_path = mackup_db_config[0];
+
+    return mackup_db_path
 
 
 def get_ignored_apps():

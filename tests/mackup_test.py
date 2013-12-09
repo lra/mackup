@@ -76,3 +76,29 @@ class TestMackup(unittest.TestCase):
         # Let's clean up
         mackup.delete(dstpath)
 
+    def test_link_file(self):
+        # Create a tmp file
+        tf = tempfile.NamedTemporaryFile(delete=False)
+        srcfile = tf.name
+        tf.close()
+
+        # Create a tmp folder
+        dstpath = tempfile.mkdtemp()
+        # Set the destination filename
+        dstfile = os.path.join(dstpath, "subfolder", os.path.basename(srcfile))
+
+        # Make sure the source file and destination folder exist and the
+        # destination file doesn't yet exist
+        assert os.path.isfile(srcfile)
+        assert os.path.isdir(dstpath)
+        assert not os.path.exists(dstfile)
+
+        # Check if mackup can link it and the link points to the correct place
+        mackup.link(srcfile, dstfile)
+        assert os.path.isfile(srcfile)
+        assert os.path.isdir(dstpath)
+        assert os.path.exists(dstfile)
+        assert os.readlink(dstfile) == srcfile
+
+        # Let's clean up
+        mackup.delete(dstpath)

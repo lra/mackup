@@ -7,6 +7,7 @@
 - Added support for i2cssh and iTunes Applescripts (thx @jannae)
 - Make slogan consistent throughout (thx @Cottser)
 - Added tests to cover file copying (thx @Cottser)
+- Better Apple Messages support (thx @vitorgalvao)
 
 ## Mackup 0.5.3
 

@@ -47,6 +47,7 @@ except ImportError:
 MACKUP_DB_PATH = 'Mackup'
 PREFERENCES = 'Library/Preferences/'
 APP_SUPPORT = 'Library/Application Support/'
+CONTAINERS = 'Library/Containers/'
 
 #################
 # Configuration #

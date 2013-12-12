@@ -142,6 +142,9 @@ SUPPORTED_APPS = {
 
     'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],
 
+    'Dropzone': [APP_SUPPORT + 'Dropzone',
+               PREFERENCES + 'com.aptonic.Dropzone.plist'],
+
     'Emacs': ['.emacs',
               '.emacs.d'],
 

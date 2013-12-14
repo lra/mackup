@@ -227,6 +227,9 @@ SUPPORTED_APPS = {
     'MacVim': [PREFERENCES + 'org.vim.MacVim.LSSharedFileList.plist',
                PREFERENCES + 'org.vim.MacVim.plist'],
 
+    'MagicPrefs': [PREFERENCES + 'com.vladalexa.MagicPrefs.MagicPrefsPlugins.plist',
+                   PREFERENCES + 'com.vladalexa.MagicPrefs.plist'],
+
     'MenuMeters': [PREFERENCES + 'com.ragingmenace.MenuMeters.plist'],
 
     'Mercurial': ['.hgrc',

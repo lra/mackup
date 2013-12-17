@@ -728,6 +728,10 @@ def confirm(question):
     Returns:
         (boolean): Confirmed or not
     """
+    args = State().args
+    if args and args.simulate:
+        return True
+
     while True:
         answer = raw_input(question + ' <Yes|No>')
         if answer == 'Yes':

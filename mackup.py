@@ -389,6 +389,9 @@ SUPPORTED_APPS = {
 
     'Tmuxinator': ['.tmuxinator'],
 
+    'TotalTerminal': [PREFERENCES + 'com.binaryage.totalterminal.crashwatcher.plist',
+                      PREFERENCES + 'com.binaryage.totalterminal.plist'],
+
     'Tower': [APP_SUPPORT + 'Tower',
               PREFERENCES + 'com.fournova.Tower.plist'],
 

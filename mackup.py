@@ -414,6 +414,8 @@ SUPPORTED_APPS = {
     'Vimperator': ['.vimperator',
                    '.vimperatorrc'],
 
+    'VimWiki': ['vimwiki'],
+                   
     'Viscosity': [APP_SUPPORT + 'Viscosity',
                   PREFERENCES + 'com.viscosityvpn.Viscosity.plist'],
 

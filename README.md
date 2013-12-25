@@ -275,6 +275,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [X11](http://www.x.org/)
   - [XCode](https://developer.apple.com/xcode/)
   - [XEmacs](http://www.xemacs.org/)
+  - [XLD](http://tmkk.undo.jp/xld/)
   - [Zsh](http://zsh.sourceforge.net/)
 
 You can add your favorite application by forking it and doing a

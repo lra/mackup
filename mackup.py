@@ -429,6 +429,9 @@ SUPPORTED_APPS = {
 
     'XEmacs': ['.xemacs'],
 
+    'XLD': [APP_SUPPORT + 'XLD',
+            PREFERENCES + 'jp.tmkk.XLD.plist'],
+
     'Zsh': ['.zshenv',
             '.zprofile',
             '.zshrc',

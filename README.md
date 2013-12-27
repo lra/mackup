@@ -181,6 +181,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Cyberduck](http://cyberduck.ch/)
   - [Dash](http://kapeli.com/dash)
   - [Deal Alert](http://dealalertapp.com/)
+  - [Default Folder X](http://www.stclairsoft.com/DefaultFolderX/)
   - [Divvy](http://mizage.com/divvy/)
   - [Droplr](https://droplr.com/hello)
   - [Emacs](http://www.gnu.org/software/emacs/)

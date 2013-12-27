@@ -146,6 +146,10 @@ SUPPORTED_APPS = {
 
     'Deal Alert': [PREFERENCES + 'com.LittleFin.DealAlert.plist'],
 
+    'Default Folder X': [PREFERENCES + 'com.stclairsoft.DefaultFolderX.favorites.plist',
+                         PREFERENCES + 'com.stclairsoft.DefaultFolderX.plist',
+                         PREFERENCES + 'com.stclairsoft.DefaultFolderX.settings.plist'],
+
     'Divvy': [PREFERENCES + 'com.mizage.direct.Divvy.plist'],
 
     'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],

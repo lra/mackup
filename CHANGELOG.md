@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for Gmail Notifr (thx @lachlancooper)
+
 ## Mackup 0.5.4
 
 - Added support for Arara and Aspell (thx @twsh)

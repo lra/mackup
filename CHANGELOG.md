@@ -1,7 +1,7 @@
 # Mackup Changelog
 
 ## WIP
-
+- Add support for mpd and ncmpcpp (they kinda go hand in hand)
 ## Mackup 0.5.4
 
 - Added support for Arara and Aspell (thx @twsh)

@@ -370,8 +370,7 @@ SUPPORTED_APPS = {
                        APP_SUPPORT + 'Sublime Text 2/Packages',
                        APP_SUPPORT + 'Sublime Text 2/Pristine Packages'],
 
-    'Sublime Text 3': [APP_SUPPORT + 'Sublime Text 3/Installed Packages',
-                       APP_SUPPORT + 'Sublime Text 3/Packages'],
+    'Sublime Text 3': [APP_SUPPORT + 'Sublime Text 3/Packages/User'],
 
     'Subversion': ['.subversion'],
 

@@ -185,6 +185,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [ExpanDrive](http://www.expandrive.com/)
   - [Fantastical](http://flexibits.com/fantastical)
   - [Feeds](http://www.feedsapp.com/)
+  - [Filezilla](https://filezilla-project.org/)
   - [Fish](http://ridiculousfish.com/shell/)
   - [Flux](http://stereopsis.com/flux/)
   - [ForkLift 2](http://www.binarynights.com/forklift/)

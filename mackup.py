@@ -215,6 +215,10 @@ SUPPORTED_APPS = {
 
     'LaTeXiT': [PREFERENCES + 'fr.chachatelier.pierre.LaTeXiT.plist'],
 
+    'Light Table': [APP_SUPPORT + 'LightTable/plugins',
+                    APP_SUPPORT + 'LightTable/settings',
+                    PREFERENCES + 'com.kodowa.LightTable.plist'],
+
     'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
 
     'Mackup': ['.mackup.cfg'],

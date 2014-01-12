@@ -59,11 +59,6 @@ APP_SUPPORT = 'Library/Application Support/'
 SUPPORTED_APPS = {
     'Ack': ['.ackrc'],
 
-    '1Password': [PREFERENCES + 'ws.agile.1Password.plist',
-                  APP_SUPPORT + '1Password/License',
-                  APP_SUPPORT + '1Password/Backups',
-                  APP_SUPPORT + '1Password/1Password.agilekeychain'],
-
     'Adium': [APP_SUPPORT + 'Adium 2.0',
               PREFERENCES + 'com.adiumX.adiumX.plist'],
 
@@ -174,9 +169,6 @@ SUPPORTED_APPS = {
 
     'Flux': [PREFERENCES + 'org.herf.Flux.plist'],
 
-    'FontExplorer X': [APP_SUPPORT + 'Linotype/FontExplorer X',
-                      'FontExplorer X'],
-
     'ForkLift 2': [PREFERENCES + 'com.binarynights.ForkLift2.plist'],
 
     'GeekTool': [
@@ -224,10 +216,6 @@ SUPPORTED_APPS = {
     'LaTeXiT': [PREFERENCES + 'fr.chachatelier.pierre.LaTeXiT.plist'],
 
     'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
-
-    'LittleSnitch': [PREFERENCES + 'at.obdev.LittleSnitchNetworkMonitor.plist',
-                     APP_SUPPORT + 'Little Snitch/rules.usr.xpl',
-                     APP_SUPPORT + 'Little Snitch/configuration.xpl'],
 
     'Mackup': ['.mackup.cfg'],
 
@@ -279,8 +267,6 @@ SUPPORTED_APPS = {
     'OmniFocus': [
         APP_SUPPORT + 'OmniFocus/Plug-Ins',
         APP_SUPPORT + 'OmniFocus/Themes'],
-
-    'OmniGraffle': [APP_SUPPORT + 'The Omni Group/OmniGraffle'],
 
     'Pastebot': [
         PREFERENCES + 'com.tapbots.PastebotSync.plist',
@@ -336,9 +322,6 @@ SUPPORTED_APPS = {
 
     'S3cmd': ['.s3cfg'],
 
-    'SABnzbd': [APP_SUPPORT + 'SABnzbd/sabnzbd.ini',
-                APP_SUPPORT + 'SABnzbd/admin/rss_data.sab'],
-
     'Scenario': [PREFERENCES + 'com.lagente.scenario.plist',
                  'Library/Scenario'],
 
@@ -358,9 +341,6 @@ SUPPORTED_APPS = {
                APP_SUPPORT + 'SizeUp/SizeUp.sizeuplicense'],
 
     'Skim': [PREFERENCES + 'net.sourceforge.skim-app.skim.plist'],
-
-    'Skitch': [PREFERENCES + 'com.plasq.skitch.plist',
-               PREFERENCES + 'com.plasq.skitch.history'],
 
     'Skype': [APP_SUPPORT + 'Skype'],
 

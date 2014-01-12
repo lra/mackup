@@ -1,10 +1,4 @@
 - Extend support of Transmission to its blocklists (@stechico)
-- Added support for FontExplorer X (@stechico)
-- Added support for Skitch (@stechico)
-- Added support for SABnzbd (@stechico)
-- Added support for OmniGraffle (@stecico)
-- Added support for LittleSnitch (@stechio)
-- Added support for 1Password (@stechico)
 
 # Mackup Changelog
 

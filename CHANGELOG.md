@@ -1,3 +1,4 @@
+- Added support for Skitch (@stechico)
 - Added support for SABnzbd (@stechico)
 - Added support for OmniGraffle (@stecico)
 - Added support for LittleSnitch (@stechio)

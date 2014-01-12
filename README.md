@@ -233,6 +233,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [nvALT](http://brettterpstra.com/projects/nvalt/)
   - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
   - [OmniFocus](http://www.omnigroup.com/products/omnifocus/)
+  - [OmniGraffle](http://www.omnigroup.com/omnigraffle/)
   - [OpenSSH](http://www.openssh.org/)
   - [Pastebot](http://tapbots.com/software/pastebot/)
   - [PCKeyboardHack](http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en)

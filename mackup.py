@@ -174,7 +174,7 @@ SUPPORTED_APPS = {
     'Fantastical': [PREFERENCES + 'com.flexibits.fantastical.plist'],
 
     'Feeds': [PREFERENCES + 'com.feedsapp.Feeds.plist'],
-    
+
     'Filezilla': ['.filezilla'],
 
     'Fish': ['.config/fish'],
@@ -233,6 +233,10 @@ SUPPORTED_APPS = {
 
     'LaunchBar': [PREFERENCES + 'at.obdev.LaunchBar.plist',
                   APP_SUPPORT + 'LaunchBar'],
+
+    'Light Table': [APP_SUPPORT + 'LightTable/plugins',
+                    APP_SUPPORT + 'LightTable/settings',
+                    PREFERENCES + 'com.kodowa.LightTable.plist'],
 
     'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
 

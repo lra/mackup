@@ -15,6 +15,7 @@
 - Add support for mpd and ncmpcpp (thx @zmrow)
 - Improved Sublime 3 support (thx @laupiFrpar)
 - Added FileZilla support (thx @kidh0)
+- Added support for Light Table (thx @vitorgalvao)
 
 ## Mackup 0.5.4
 

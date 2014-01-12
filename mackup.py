@@ -137,6 +137,9 @@ SUPPORTED_APPS = {
 
     'Flux': [PREFERENCES + 'org.herf.Flux.plist'],
 
+    'FontExplorer X': [APP_SUPPORT + 'Linotype/FontExplorer X',
+                      'FontExplorer X'],
+
     'GeekTool': [
         PREFERENCES + 'org.tynsoe.GeekTool.plist',
         PREFERENCES + 'org.tynsoe.geeklet.file.plist',

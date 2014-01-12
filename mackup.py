@@ -180,6 +180,10 @@ SUPPORTED_APPS = {
 
     'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
 
+    'LittleSnitch': [PREFERENCES + 'at.obdev.LittleSnitchNetworkMonitor.plist',
+                     APP_SUPPORT + 'Little Snitch/rules.usr.xpl',
+                     APP_SUPPORT + 'Little Snitch/configuration.xpl'],
+
     'Mackup': ['.mackup.cfg'],
 
     'Mailplane': [PREFERENCES + 'com.mailplaneapp.Mailplane.plist'],

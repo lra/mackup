@@ -157,6 +157,8 @@ SUPPORTED_APPS = {
 
     'Ember': ['Library/Group Containers/P97H7FTHWN.com.realmacsoftware.ember'],
 
+    'Enjoyable': [PREFERENCES + 'com.yukkurigames.Enjoyable.plist'],
+
     'Exercism': ['.exercism'],
 
     'ExpanDrive': [APP_SUPPORT + 'ExpanDrive'],

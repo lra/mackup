@@ -1,11 +1,4 @@
 - Extend support for Adobe Lightroom LR version 2-4 that still stores files in “Preferences”. Also, backup all folders under “APP_SUPPORT” for it (@stechico)
-- Extend support of Transmission to its blocklists (@stechico)
-- Added support for FontExplorer X (@stechico)
-- Added support for Skitch (@stechico)
-- Added support for SABnzbd (@stechico)
-- Added support for OmniGraffle (@stecico)
-- Added support for LittleSnitch (@stechio)
-- Added support for 1Password (@stechico)
 
 # Mackup Changelog
 

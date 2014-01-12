@@ -198,6 +198,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Gmail Notifr](http://ashchan.com/projects/gmail-notifr)
   - [GnuPG](http://www.gnupg.org/)
   - [Heroku](https://www.heroku.com/)
+  - [Hexels](http://hexraystudios.com/hexels/)
   - [Htop](http://htop.sourceforge.net/)
   - [i2cssh](https://github.com/wouterdebie/i2cssh)
   - [IntelliJIDEA 12](http://www.jetbrains.com/idea/)

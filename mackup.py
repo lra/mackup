@@ -199,6 +199,8 @@ SUPPORTED_APPS = {
 
     'Heroku': ['.heroku/accounts', '.heroku/plugins'],
 
+    'Hexels': [PREFERENCES + 'com.hex-ray.hexels.plist'],
+
     'Htop': ['.htoprc'],
 
     'i2cssh': ['.i2csshrc'],

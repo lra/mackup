@@ -10,6 +10,7 @@
 - Added support for Gmail Notifr (thx @lachlancooper)
 - Added support for Awareness (thx @lachlancooper)
 - Added support for Chicken (thx @lachlancooper)
+- Added support for Hexels (thx @lachlancooper)
 
 ## Mackup 0.5.4
 

@@ -1,3 +1,5 @@
+- Added support for SABnzbd (@stechico)
+
 # Mackup Changelog
 
 ## WIP

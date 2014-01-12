@@ -1,3 +1,5 @@
+- Extend support of Transmission to its blocklists (@stechico)
+
 # Mackup Changelog
 
 ## WIP

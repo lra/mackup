@@ -422,7 +422,8 @@ SUPPORTED_APPS = {
     'Tower': [APP_SUPPORT + 'Tower',
               PREFERENCES + 'com.fournova.Tower.plist'],
 
-    'Transmission': [PREFERENCES + 'org.m0k.transmission.plist'],
+    'Transmission': [PREFERENCES + 'org.m0k.transmission.plist',
+                     APP_SUPPORT + 'Transmission/blocklists'],
 
     'Transmit': [
         PREFERENCES + 'com.panic.Transmit.plist',

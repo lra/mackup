@@ -297,6 +297,9 @@ SUPPORTED_APPS = {
 
     'Skim': [PREFERENCES + 'net.sourceforge.skim-app.skim.plist'],
 
+    'Skitch': [PREFERENCES + 'com.plasq.skitch.plist',
+               PREFERENCES + 'com.plasq.skitch.history'],
+
     'Slate': ['.slate',
               APP_SUPPORT + 'com.slate.Slate'],
 

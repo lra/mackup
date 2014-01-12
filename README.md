@@ -215,6 +215,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [LaunchBar](http://www.obdev.at/products/launchbar/index.html)
   - [Light Table](http://www.lighttable.com/)
   - [LimeChat](http://limechat.net/mac/)
+  - [LittleSnitch](http://www.obdev.at/products/littlesnitch/)
   - [MacOSX](http://www.apple.com/osx/)
   - [MacVim](https://code.google.com/p/macvim/)
   - [MagicPrefs](http://magicprefs.com/)

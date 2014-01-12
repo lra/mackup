@@ -1,3 +1,4 @@
+- Extend support of Transmission to its blocklists (@stechico)
 - Added support for FontExplorer X (@stechico)
 - Added support for Skitch (@stechico)
 - Added support for SABnzbd (@stechico)

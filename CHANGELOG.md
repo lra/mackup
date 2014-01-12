@@ -1,3 +1,5 @@
+- Extend support for Adobe Lightroom LR version 2-4 that still stores files in “Preferences”. Also, backup all folders under “APP_SUPPORT” for it (@stechico)
+
 # Mackup Changelog
 
 ## WIP

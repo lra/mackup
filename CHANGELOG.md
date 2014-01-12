@@ -12,6 +12,7 @@
 - Added support for Chicken (thx @lachlancooper)
 - Added support for Hexels (thx @lachlancooper)
 - Added support for Clementine (thx @lachlancooper)
+- Add support for mpd and ncmpcpp (thx @zmrow)
 
 ## Mackup 0.5.4
 

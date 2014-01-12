@@ -148,6 +148,8 @@ SUPPORTED_APPS = {
              APP_SUPPORT + 'Dash/library.dash',
              PREFERENCES + 'com.kapeli.dash.plist'],
 
+    'Deal Alert': [PREFERENCES + 'com.LittleFin.DealAlert.plist'],
+
     'Divvy': [PREFERENCES + 'com.mizage.direct.Divvy.plist'],
 
     'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],

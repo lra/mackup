@@ -59,11 +59,6 @@ APP_SUPPORT = 'Library/Application Support/'
 SUPPORTED_APPS = {
     'Ack': ['.ackrc'],
 
-    '1Password': [PREFERENCES + 'ws.agile.1Password.plist',
-                  APP_SUPPORT + '1Password/License',
-                  APP_SUPPORT + '1Password/Backups',
-                  APP_SUPPORT + '1Password/1Password.agilekeychain'],
-
     'Adium': [APP_SUPPORT + 'Adium 2.0',
               PREFERENCES + 'com.adiumX.adiumX.plist'],
 
@@ -221,10 +216,6 @@ SUPPORTED_APPS = {
     'LaTeXiT': [PREFERENCES + 'fr.chachatelier.pierre.LaTeXiT.plist'],
 
     'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
-
-    'LittleSnitch': [PREFERENCES + 'at.obdev.LittleSnitchNetworkMonitor.plist',
-                     APP_SUPPORT + 'Little Snitch/rules.usr.xpl',
-                     APP_SUPPORT + 'Little Snitch/configuration.xpl'],
 
     'Mackup': ['.mackup.cfg'],
 

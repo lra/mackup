@@ -193,6 +193,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Gitbox](http://gitboxapp.com/)
   - [GnuPG](http://www.gnupg.org/)
   - [Heroku](https://www.heroku.com/)
+  - [Hexels](http://hexraystudios.com/hexels/)
   - [Htop](http://htop.sourceforge.net/)
   - [i2cssh](https://github.com/wouterdebie/i2cssh)
   - [IntelliJIDEA 12](http://www.jetbrains.com/idea/)

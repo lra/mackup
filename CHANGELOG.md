@@ -14,6 +14,7 @@
 - Added support for Clementine (thx @lachlancooper)
 - Add support for mpd and ncmpcpp (thx @zmrow)
 - Improved Sublime 3 support (thx @laupiFrpar)
+- Added FileZilla support (thx @kidh0)
 
 ## Mackup 0.5.4
 

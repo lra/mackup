@@ -181,6 +181,9 @@ SUPPORTED_APPS = {
 
     'Flux': [PREFERENCES + 'org.herf.Flux.plist'],
 
+    'FontExplorer X': [APP_SUPPORT + 'Linotype/FontExplorer X',
+                       'FontExplorer X'],
+
     'ForkLift 2': [PREFERENCES + 'com.binarynights.ForkLift2.plist'],
 
     'GeekTool': [

@@ -1,3 +1,4 @@
+- Added support for OmniGraffle (@stecico)
 - Added support for LittleSnitch (@stechio)
 - Added support for 1Password (@stechico)
 

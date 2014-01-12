@@ -167,6 +167,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Byobu](http://byobu.co/)
   - [Caffeine](http://lightheadsw.com/caffeine/)
   - [Chef](http://www.opscode.com/chef/)
+  - [Chicken](http://sourceforge.net/projects/chicken/)
   - [ClipMenu](http://www.clipmenu.com/)
   - [CloudApp](http://getcloudapp.com/)
   - [Coda 2](http://panic.com/coda/)

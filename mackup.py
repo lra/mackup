@@ -59,6 +59,11 @@ APP_SUPPORT = 'Library/Application Support/'
 SUPPORTED_APPS = {
     'Ack': ['.ackrc'],
 
+    '1Password': [PREFERENCES + 'ws.agile.1Password.plist',
+                  APP_SUPPORT + '1Password/License',
+                  APP_SUPPORT + '1Password/Backups',
+                  APP_SUPPORT + '1Password/1Password.agilekeychain'],
+
     'Adium': [APP_SUPPORT + 'Adium 2.0',
               PREFERENCES + 'com.adiumX.adiumX.plist'],
 

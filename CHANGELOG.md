@@ -1,3 +1,5 @@
+- Added support for 1Password (@stechico)
+
 # Mackup Changelog
 
 ## WIP

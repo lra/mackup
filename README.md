@@ -187,6 +187,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Feeds](http://www.feedsapp.com/)
   - [Fish](http://ridiculousfish.com/shell/)
   - [Flux](http://stereopsis.com/flux/)
+  - [FontExplorer X](http://www.fontexplorerx.com/)
   - [ForkLift 2](http://www.binarynights.com/forklift/)
   - [GeekTool](http://projects.tynsoe.org/en/geektool/)
   - [Git](http://git-scm.com/)

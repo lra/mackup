@@ -1,3 +1,4 @@
+- Added support for FontExplorer X (@stechico)
 - Added support for Skitch (@stechico)
 - Added support for SABnzbd (@stechico)
 - Added support for OmniGraffle (@stecico)

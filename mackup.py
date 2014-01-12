@@ -334,7 +334,8 @@ SUPPORTED_APPS = {
 
     'Tmuxinator': ['.tmuxinator'],
 
-    'Transmission': [PREFERENCES + 'org.m0k.transmission.plist'],
+    'Transmission': [PREFERENCES + 'org.m0k.transmission.plist',
+                     APP_SUPPORT + 'Transmission/blocklists'],
 
     'Transmit': [
         PREFERENCES + 'com.panic.Transmit.plist',

@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.5.5
+
 - Added support for Enjoyable (thx @vitorgalvao)
 - Added support for Deal Alert (thx @vitorgalvao)
 - Added support for MagicPrefs (thx @vitorgalvao)

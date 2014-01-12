@@ -88,6 +88,8 @@ SUPPORTED_APPS = {
         	   '.aspell.en.prepl',
         	   '.aspell.en.pws'],
 
+    'Awareness': [PREFERENCES + 'com.futureproof.awareness.plist'],
+
     'Bartender': [PREFERENCES + 'com.surteesstudios.Bartender.plist'],
 
     'Bash': ['.bash_aliases',

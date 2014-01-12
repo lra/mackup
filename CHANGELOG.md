@@ -1,3 +1,5 @@
+- Added support for LittleSnitch (@stechio)
+
 # Mackup Changelog
 
 ## WIP

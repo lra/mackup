@@ -211,6 +211,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Keka](http://kekaosx.com/)
   - [Keymo](http://manytricks.com/keymo/)
   - [KeyRemap4MacBook](http://pqrs.org/macosx/keyremap4macbook/)
+  - [LittleSnitch](http://www.obdev.at/products/littlesnitch/)
   - [LaTeXiT](http://www.chachatelier.fr/latexit/latexit-home.php?lang=en)
   - [LaunchBar](http://www.obdev.at/products/launchbar/index.html)
   - [Light Table](http://www.lighttable.com/)

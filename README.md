@@ -176,6 +176,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [CoRD](http://cord.sourceforge.net/)
   - [Cyberduck](http://cyberduck.ch/)
   - [Dash](http://kapeli.com/dash)
+  - [Deal Alert](http://dealalertapp.com/)
   - [Droplr](https://droplr.com/hello)
   - [Divvy](http://mizage.com/divvy/)
   - [Emacs](http://www.gnu.org/software/emacs/)

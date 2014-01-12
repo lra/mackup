@@ -1,3 +1,5 @@
+- Added support for Skitch (@stechico)
+
 # Mackup Changelog
 
 ## WIP

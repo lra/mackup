@@ -258,6 +258,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Shuttle](http://fitztrev.github.io/shuttle/)
   - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
   - [Skim](http://skim-app.sourceforge.net/)
+  - [Skitch](http://evernote.com/skitch/)
   - [Skype](http://www.skype.com/)
   - [Slate](https://github.com/jigish/slate)
   - [Slogger](http://brettterpstra.com/projects/slogger/)

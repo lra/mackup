@@ -10,3 +10,4 @@ Feel free to implement any of those ;)
 - Support for DropBox alternatives
 - Support for ~/bin (need a custom mode for non 0600 synced files)
 - 100% test coverage
+- Externalie the applications database as a folder full of json files, one for each app.

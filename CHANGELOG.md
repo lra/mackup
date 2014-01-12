@@ -8,6 +8,7 @@
 - Added support for Skitch (thx @stechico)
 - Added support for FontExplorer X (thx @stechico)
 - Improved Transmission support (thx @stechico)
+- Added support for Lightroom 2, 3 and 4 (thx @stechico)
 
 ## Mackup 0.5.5
 

@@ -76,7 +76,10 @@ SUPPORTED_APPS = {
         APP_SUPPORT + 'Adobe/Lightroom/Metadata Presets',
         APP_SUPPORT + 'Adobe/Lightroom/Modules',
         APP_SUPPORT + 'Adobe/Lightroom/Plugins',
-        APP_SUPPORT + 'Adobe/Lightroom/Watermarks'],
+        APP_SUPPORT + 'Adobe/Lightroom/Watermarks',
+        PREFERENCES + 'com.adobe.Lightroom2.plist',
+        PREFERENCES + 'com.adobe.Lightroom3.plist',
+        PREFERENCES + 'com.adobe.Lightroom4.plist'],
 
     'AppCode 2': [APP_SUPPORT + 'appCode20',
                   PREFERENCES + 'appCode20'],

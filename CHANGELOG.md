@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Enjoyable (thx @vitorgalvao)
+- Added support for Deal Alert (thx @vitorgalvao)
 
 ## Mackup 0.5.4
 
@@ -15,7 +16,6 @@
 - Added support for Keka (thx @vitorgalvao)
 - Added support for Feeds (thx @vitorgalvao)
 - Added support for Textual (thx @vitorgalvao)
-- Added support for Deal Alert (thx @vitorgalvao)
 
 ## Mackup 0.5.3
 

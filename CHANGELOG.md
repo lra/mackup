@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for LittleSnitch (thx @stechio)
+- Added support for OmniGraffle (thx @stecico)
 
 ## Mackup 0.5.5
 

@@ -240,10 +240,6 @@ SUPPORTED_APPS = {
 
     'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
 
-    'LittleSnitch': [PREFERENCES + 'at.obdev.LittleSnitchNetworkMonitor.plist',
-                     APP_SUPPORT + 'Little Snitch/rules.usr.xpl',
-                     APP_SUPPORT + 'Little Snitch/configuration.xpl'],
-
     'Mackup': ['.mackup.cfg'],
 
     'Mailplane': [PREFERENCES + 'com.mailplaneapp.Mailplane.plist'],
@@ -302,6 +298,8 @@ SUPPORTED_APPS = {
     'OmniFocus': [
         APP_SUPPORT + 'OmniFocus/Plug-Ins',
         APP_SUPPORT + 'OmniFocus/Themes'],
+
+    'OmniGraffle': [APP_SUPPORT + 'The Omni Group/OmniGraffle'],
 
     'Pastebot': [
         PREFERENCES + 'com.tapbots.PastebotSync.plist',

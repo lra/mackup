@@ -157,6 +157,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [AppCode 2](http://www.jetbrains.com/objc/)
   - [Arara](http://cereda.github.io/arara/)
   - [Aspell](http://aspell.net/)
+  - [Awareness](http://iamfutureproof.com/tools/awareness/)
   - [Bartender](http://www.macbartender.com/)
   - [Bash](http://www.gnu.org/software/bash/)
   - [Bash it](https://github.com/revans/bash-it/)

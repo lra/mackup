@@ -11,6 +11,7 @@
 - Added support for Awareness (thx @lachlancooper)
 - Added support for Chicken (thx @lachlancooper)
 - Added support for Hexels (thx @lachlancooper)
+- Added support for Clementine (thx @lachlancooper)
 
 ## Mackup 0.5.4
 

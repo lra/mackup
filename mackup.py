@@ -126,6 +126,8 @@ SUPPORTED_APPS = {
 
     'Chicken': [PREFERENCES + 'net.sourceforge.chicken.plist'],
 
+    'Clementine': [PREFERENCES + 'org.clementine-player.Clementine.plist'],
+
     'ClipMenu': [APP_SUPPORT + 'ClipMenu',
                  PREFERENCES + 'com.naotaka.ClipMenu.plist'],
 

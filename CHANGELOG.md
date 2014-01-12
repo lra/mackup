@@ -1,8 +1,8 @@
-- Added support for LittleSnitch (@stechio)
-
 # Mackup Changelog
 
 ## WIP
+
+- Added support for LittleSnitch (thx @stechio)
 
 ## Mackup 0.5.5
 

@@ -151,6 +151,7 @@ That's it, you got your `git` config setup on your new workstation.
 
 ## Supported Applications
 
+  - [1Password](https://agilebits.com/onepassword)
   - [Ack](http://beyondgrep.com/)
   - [Adium](http://adium.im/)
   - [Adobe Lightroom](http://www.adobe.com/products/photoshop-lightroom.html)

@@ -1,5 +1,4 @@
 - Added support for LittleSnitch (@stechio)
-- Added support for 1Password (@stechico)
 
 # Mackup Changelog
 

@@ -151,7 +151,6 @@ That's it, you got your `git` config setup on your new workstation.
 
 ## Supported Applications
 
-  - [1Password](https://agilebits.com/onepassword)
   - [Ack](http://beyondgrep.com/)
   - [Adium](http://adium.im/)
   - [Adobe Lightroom](http://www.adobe.com/products/photoshop-lightroom.html)
@@ -204,7 +203,6 @@ That's it, you got your `git` config setup on your new workstation.
   - [Keka](http://kekaosx.com/)
   - [Keymo](http://manytricks.com/keymo/)
   - [KeyRemap4MacBook](http://pqrs.org/macosx/keyremap4macbook/)
-  - [LittleSnitch](http://www.obdev.at/products/littlesnitch/)
   - [LaTeXiT](http://www.chachatelier.fr/latexit/latexit-home.php?lang=en)
   - [LimeChat](http://limechat.net/mac/)
   - [MacOSX](http://www.apple.com/osx/)
@@ -221,7 +219,6 @@ That's it, you got your `git` config setup on your new workstation.
   - [nvALT](http://brettterpstra.com/projects/nvalt/)
   - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
   - [OmniFocus](http://www.omnigroup.com/products/omnifocus/)
-  - [OmniGraffle](http://www.omnigroup.com/omnigraffle/)
   - [OpenSSH](http://www.openssh.org/)
   - [Pastebot](http://tapbots.com/software/pastebot/)
   - [PCKeyboardHack](http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en)

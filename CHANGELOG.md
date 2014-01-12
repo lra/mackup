@@ -16,6 +16,7 @@
 - Added support for Keka (thx @vitorgalvao)
 - Added support for Feeds (thx @vitorgalvao)
 - Added support for Textual (thx @vitorgalvao)
+- Added support for MagicPrefs (thx @vitorgalvao)
 
 ## Mackup 0.5.3
 

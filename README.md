@@ -209,6 +209,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [LimeChat](http://limechat.net/mac/)
   - [MacOSX](http://www.apple.com/osx/)
   - [MacVim](https://code.google.com/p/macvim/)
+  - [MagicPrefs](http://magicprefs.com/)
   - [Mailplane](http://mailplaneapp.com/)
   - [MenuMeters](http://www.ragingmenace.com/software/menumeters/)
   - [Mercurial](http://mercurial.selenic.com/)

@@ -174,6 +174,8 @@ SUPPORTED_APPS = {
     'Fantastical': [PREFERENCES + 'com.flexibits.fantastical.plist'],
 
     'Feeds': [PREFERENCES + 'com.feedsapp.Feeds.plist'],
+    
+    'Filezilla': ['.filezilla'],
 
     'Fish': ['.config/fish'],
 

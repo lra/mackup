@@ -250,6 +250,9 @@ SUPPORTED_APPS = {
         PREFERENCES + 'com.mouapp.Mou.LSSharedFileList.plist',
         APP_SUPPORT + 'Mou'],
 
+    'mpd': ['.mpd',
+            '.mpdconf'],
+
     'MPV': ['.mpv/channels.conf',
             '.mpv/config',
             '.mpv/input.conf'],
@@ -261,6 +264,8 @@ SUPPORTED_APPS = {
     'nvALT': [PREFERENCES + 'net.elasticthreads.nv.plist',
               APP_SUPPORT + 'Notational Velocity',
               APP_SUPPORT + 'Notational Data'],
+
+    'ncmpcpp': ['.ncmpcpp'],
 
     'Oh My Zsh': ['.oh-my-zsh'],
 

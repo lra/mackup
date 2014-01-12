@@ -333,6 +333,9 @@ SUPPORTED_APPS = {
 
     'S3cmd': ['.s3cfg'],
 
+    'SABnzbd': [APP_SUPPORT + 'SABnzbd/sabnzbd.ini',
+                APP_SUPPORT + 'SABnzbd/admin/rss_data.sab'],
+
     'Scenario': [PREFERENCES + 'com.lagente.scenario.plist',
                  'Library/Scenario'],
 

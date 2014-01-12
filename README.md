@@ -204,6 +204,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Keymo](http://manytricks.com/keymo/)
   - [KeyRemap4MacBook](http://pqrs.org/macosx/keyremap4macbook/)
   - [LaTeXiT](http://www.chachatelier.fr/latexit/latexit-home.php?lang=en)
+  - [LaunchBar](http://www.obdev.at/products/launchbar/index.html)
   - [LimeChat](http://limechat.net/mac/)
   - [MacOSX](http://www.apple.com/osx/)
   - [MacVim](https://code.google.com/p/macvim/)

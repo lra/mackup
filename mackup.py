@@ -56,6 +56,11 @@ APP_SUPPORT = 'Library/Application Support/'
 # Application Name: List of files (relative path from the user's home)
 
 SUPPORTED_APPS = {
+    '1Password': ['Library/Preferences/ws.agile.1Password.plist',
+                   'Library/Application Support/1Password/License',
+                   'Library/Application Support/1Password/Backups',
+                   'Library/Application Support/1Password/1Password.agilekeychain'],
+
     'Adium': [APP_SUPPORT + 'Adium 2.0',
               PREFERENCES + 'com.adiumX.adiumX.plist'],
 

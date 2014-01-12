@@ -139,6 +139,7 @@ That's it, you got your `git` config setup on your new workstation.
 
 ## Supported Applications
 
+  - [1Password](https://agilebits.com/onepassword)
   - [Adium](http://adium.im/)
   - [Adobe Lightroom](http://www.adobe.com/products/photoshop-lightroom.html)
   - [AppCode 2](http://www.jetbrains.com/objc/)
@@ -164,6 +165,8 @@ That's it, you got your `git` config setup on your new workstation.
   - [ExpanDrive](http://www.expandrive.com/)
   - [Fantastical](http://flexibits.com/fantastical)
   - [Fish](http://ridiculousfish.com/shell/)
+  - [FontExplorer X](http://www.fontexplorerx.com/)
+  - [ForkLift](http://binarynights.com/forklift/)
   - [Flux](http://stereopsis.com/flux/)
   - [GeekTool](http://projects.tynsoe.org/en/geektool/)
   - [Git](http://git-scm.com/)
@@ -178,6 +181,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Janus](https://github.com/carlhuda/janus)
   - [Keymo](http://manytricks.com/keymo/)
   - [KeyRemap4MacBook](http://pqrs.org/macosx/keyremap4macbook/)
+  - [LittleSnitch](http://www.obdev.at/products/littlesnitch/)
   - [LimeChat](http://limechat.net/mac/)
   - [MacOSX](http://www.apple.com/osx/)
   - [MacVim](https://code.google.com/p/macvim/)
@@ -191,6 +195,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [nvALT](http://brettterpstra.com/projects/nvalt/)
   - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
   - [OmniFocus](http://www.omnigroup.com/products/omnifocus/)
+  - [OmniGraffle](http://www.omnigroup.com/omnigraffle/)
   - [OpenSSH](http://www.openssh.org/)
   - [Pastebot](http://tapbots.com/software/pastebot/)
   - [PCKeyboardHack](http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en)
@@ -208,6 +213,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [RubyMine 4](http://www.jetbrains.com/ruby/)
   - [RubyMine 5](http://www.jetbrains.com/ruby/)
   - [S3cmd](http://s3tools.org/s3cmd)
+  - [SABnzbd](http://sabnzbd.org/)
   - [Scenario](http://www.lagentesoft.com/scenario/)
   - [Screen](http://www.gnu.org/software/screen/)
   - [Sequel Pro](http://www.sequelpro.com/)
@@ -215,6 +221,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Shuttle](http://fitztrev.github.io/shuttle/)
   - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
   - [Skim](http://skim-app.sourceforge.net/)
+  - [Skitch](http://evernote.com/skitch/)
   - [Slate](https://github.com/jigish/slate)
   - [Slogger](http://brettterpstra.com/projects/slogger/)
   - [SourceTree](http://sourcetreeapp.com)

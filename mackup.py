@@ -124,6 +124,8 @@ SUPPORTED_APPS = {
 
     'Chef': ['.chef'],
 
+    'Chicken': [PREFERENCES + 'net.sourceforge.chicken.plist'],
+
     'ClipMenu': [APP_SUPPORT + 'ClipMenu',
                  PREFERENCES + 'com.naotaka.ClipMenu.plist'],
 

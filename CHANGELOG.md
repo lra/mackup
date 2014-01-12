@@ -9,6 +9,7 @@
 - Added support for XLD (thx @vitorgalvao)
 - Added support for Gmail Notifr (thx @lachlancooper)
 - Added support for Awareness (thx @lachlancooper)
+- Added support for Chicken (thx @lachlancooper)
 
 ## Mackup 0.5.4
 

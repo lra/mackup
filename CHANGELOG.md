@@ -1,3 +1,5 @@
+- Added support for FontExplorer X (@stechico)
+
 # Mackup Changelog
 
 ## WIP

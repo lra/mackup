@@ -219,6 +219,9 @@ SUPPORTED_APPS = {
 
     'LaTeXiT': [PREFERENCES + 'fr.chachatelier.pierre.LaTeXiT.plist'],
 
+    'LaunchBar': [PREFERENCES + 'at.obdev.LaunchBar.plist',
+                  APP_SUPPORT + 'LaunchBar'],
+
     'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
 
     'Mackup': ['.mackup.cfg'],

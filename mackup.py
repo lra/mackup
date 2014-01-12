@@ -82,11 +82,11 @@ SUPPORTED_APPS = {
                   PREFERENCES + 'appCode20'],
 
     'Arara': ['.araraconfig.yaml',
-        	  'araraconfig.yaml'],
+              'araraconfig.yaml'],
 
     'Aspell': ['.aspell.conf',
-        	   '.aspell.en.prepl',
-        	   '.aspell.en.pws'],
+               '.aspell.en.prepl',
+               '.aspell.en.pws'],
 
     'Awareness': [PREFERENCES + 'com.futureproof.awareness.plist'],
 
@@ -389,7 +389,7 @@ SUPPORTED_APPS = {
 
     'Spectacle': [PREFERENCES + 'com.divisiblebyzero.Spectacle.plist'],
 
-    'Spotify' : [PREFERENCES + 'com.spotify.client.plist'],
+    'Spotify': [PREFERENCES + 'com.spotify.client.plist'],
 
     'SSH': ['.ssh'],
 

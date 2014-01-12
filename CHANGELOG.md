@@ -4,6 +4,7 @@
 
 - Added support for LittleSnitch (thx @stechio)
 - Added support for OmniGraffle (thx @stecico)
+- Added support for SABnzbd (thx @stechico)
 
 ## Mackup 0.5.5
 

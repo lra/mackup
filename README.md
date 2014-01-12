@@ -193,6 +193,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Git](http://git-scm.com/)
   - [Git Hooks](https://github.com/icefox/git-hooks)
   - [Gitbox](http://gitboxapp.com/)
+  - [Gmail Notifr](http://ashchan.com/projects/gmail-notifr)
   - [GnuPG](http://www.gnupg.org/)
   - [Heroku](https://www.heroku.com/)
   - [Htop](http://htop.sourceforge.net/)

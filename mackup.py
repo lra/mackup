@@ -189,6 +189,8 @@ SUPPORTED_APPS = {
 
     'Git Hooks': ['.git_hooks'],
 
+    'Gmail Notifr': [PREFERENCES + 'com.ashchan.GmailNotifr.plist'],
+
     'GnuPG': ['.gnupg'],
 
     'Heroku': ['.heroku/accounts', '.heroku/plugins'],

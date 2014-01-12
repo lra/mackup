@@ -7,6 +7,7 @@
 - Added support for MagicPrefs (thx @vitorgalvao)
 - Added support for LaunchBar (thx @Cottser)
 - Added support for XLD (thx @vitorgalvao)
+- Added support for Gmail Notifr (thx @lachlancooper)
 
 ## Mackup 0.5.4
 

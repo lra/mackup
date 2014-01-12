@@ -140,6 +140,8 @@ SUPPORTED_APPS = {
     'FontExplorer X': [APP_SUPPORT + 'Linotype/FontExplorer X',
                       'FontExplorer X'],
 
+    'ForkLift': [PREFERENCES + 'com.binarynights.ForkLift2.plist'],
+
     'GeekTool': [
         PREFERENCES + 'org.tynsoe.GeekTool.plist',
         PREFERENCES + 'org.tynsoe.geeklet.file.plist',

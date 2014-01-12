@@ -13,6 +13,7 @@
 - Added support for Hexels (thx @lachlancooper)
 - Added support for Clementine (thx @lachlancooper)
 - Add support for mpd and ncmpcpp (thx @zmrow)
+- Improved Sublime 3 support (thx @laupiFrpar)
 
 ## Mackup 0.5.4
 

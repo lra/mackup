@@ -7,6 +7,7 @@
 - Added support for SABnzbd (thx @stechico)
 - Added support for Skitch (thx @stechico)
 - Added support for FontExplorer X (thx @stechico)
+- Improved Transmission support (thx @stechico)
 
 ## Mackup 0.5.5
 

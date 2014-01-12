@@ -299,6 +299,8 @@ SUPPORTED_APPS = {
         APP_SUPPORT + 'OmniFocus/Plug-Ins',
         APP_SUPPORT + 'OmniFocus/Themes'],
 
+    'OmniGraffle': [APP_SUPPORT + 'The Omni Group/OmniGraffle'],
+
     'Pastebot': [
         PREFERENCES + 'com.tapbots.PastebotSync.plist',
         PREFERENCES + 'com.tapbots.PastebotSync.prefPane.plist',

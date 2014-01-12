@@ -1,3 +1,5 @@
+- Added support for OmniGraffle (@stecico)
+
 # Mackup Changelog
 
 ## WIP

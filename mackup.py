@@ -59,24 +59,18 @@ APP_SUPPORT = 'Library/Application Support/'
 SUPPORTED_APPS = {
     'Ack': ['.ackrc'],
 
+    '1Password': [PREFERENCES + 'ws.agile.1Password.plist',
+                  APP_SUPPORT + '1Password/License',
+                  APP_SUPPORT + '1Password/Backups',
+                  APP_SUPPORT + '1Password/1Password.agilekeychain'],
+
     'Adium': [APP_SUPPORT + 'Adium 2.0',
               PREFERENCES + 'com.adiumX.adiumX.plist'],
 
-    'Adobe Lightroom': [
-        APP_SUPPORT + 'Adobe/Lightroom/Develop Presets',
-        APP_SUPPORT + 'Adobe/Lightroom/Export Actions',
-        APP_SUPPORT + 'Adobe/Lightroom/Export Presets',
-        APP_SUPPORT + 'Adobe/Lightroom/Filename Templates',
-        APP_SUPPORT + 'Adobe/Lightroom/Filter Presets',
-        APP_SUPPORT + 'Adobe/Lightroom/Import Presets',
-        APP_SUPPORT + 'Adobe/Lightroom/Keyword Sets',
-        APP_SUPPORT + 'Adobe/Lightroom/Label Sets',
-        APP_SUPPORT + 'Adobe/Lightroom/Local Adjustment Presets',
-        APP_SUPPORT + 'Adobe/Lightroom/Locations',
-        APP_SUPPORT + 'Adobe/Lightroom/Metadata Presets',
-        APP_SUPPORT + 'Adobe/Lightroom/Modules',
-        APP_SUPPORT + 'Adobe/Lightroom/Plugins',
-        APP_SUPPORT + 'Adobe/Lightroom/Watermarks'],
+    'Adobe Lightroom': [PREFERENCES + 'com.adobe.Lightroom2.plist',
+                        PREFERENCES + 'com.adobe.Lightroom3.plist',
+                        PREFERENCES + 'com.adobe.Lightroom4.plist',
+                        APP_SUPPORT + 'Adobe/Lightroom'],
 
     'AppCode 2': [APP_SUPPORT + 'appCode20',
                   PREFERENCES + 'appCode20'],
@@ -181,6 +175,9 @@ SUPPORTED_APPS = {
 
     'Flux': [PREFERENCES + 'org.herf.Flux.plist'],
 
+    'FontExplorer X': [APP_SUPPORT + 'Linotype/FontExplorer X',
+                      'FontExplorer X'],
+
     'ForkLift 2': [PREFERENCES + 'com.binarynights.ForkLift2.plist'],
 
     'GeekTool': [
@@ -239,6 +236,10 @@ SUPPORTED_APPS = {
                     PREFERENCES + 'com.kodowa.LightTable.plist'],
 
     'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
+
+    'LittleSnitch': [PREFERENCES + 'at.obdev.LittleSnitchNetworkMonitor.plist',
+                     APP_SUPPORT + 'Little Snitch/rules.usr.xpl',
+                     APP_SUPPORT + 'Little Snitch/configuration.xpl'],
 
     'Mackup': ['.mackup.cfg'],
 
@@ -299,6 +300,8 @@ SUPPORTED_APPS = {
         APP_SUPPORT + 'OmniFocus/Plug-Ins',
         APP_SUPPORT + 'OmniFocus/Themes'],
 
+    'OmniGraffle': [APP_SUPPORT + 'The Omni Group/OmniGraffle'],
+
     'Pastebot': [
         PREFERENCES + 'com.tapbots.PastebotSync.plist',
         PREFERENCES + 'com.tapbots.PastebotSync.prefPane.plist',
@@ -353,6 +356,9 @@ SUPPORTED_APPS = {
 
     'S3cmd': ['.s3cfg'],
 
+    'SABnzbd': [APP_SUPPORT + 'SABnzbd/sabnzbd.ini',
+                APP_SUPPORT + 'SABnzbd/admin/rss_data.sab'],
+
     'Scenario': [PREFERENCES + 'com.lagente.scenario.plist',
                  'Library/Scenario'],
 
@@ -372,6 +378,9 @@ SUPPORTED_APPS = {
                APP_SUPPORT + 'SizeUp/SizeUp.sizeuplicense'],
 
     'Skim': [PREFERENCES + 'net.sourceforge.skim-app.skim.plist'],
+
+    'Skitch': [PREFERENCES + 'com.plasq.skitch.plist',
+               PREFERENCES + 'com.plasq.skitch.history'],
 
     'Skype': [APP_SUPPORT + 'Skype'],
 
@@ -422,7 +431,8 @@ SUPPORTED_APPS = {
     'Tower': [APP_SUPPORT + 'Tower',
               PREFERENCES + 'com.fournova.Tower.plist'],
 
-    'Transmission': [PREFERENCES + 'org.m0k.transmission.plist'],
+    'Transmission': [PREFERENCES + 'org.m0k.transmission.plist',
+                     APP_SUPPORT + 'Transmission/blocklists'],
 
     'Transmit': [
         PREFERENCES + 'com.panic.Transmit.plist',

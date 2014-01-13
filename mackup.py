@@ -103,7 +103,7 @@ SUPPORTED_APPS = {
 
     'Boto': ['.boto'],
 
-    'Bundler': ['.bundler'],
+    'Bundler': ['.bundle'],
 
     'Byobu': ['.byobu',
               '.byoburc',

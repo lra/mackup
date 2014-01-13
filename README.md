@@ -159,12 +159,13 @@ That's it, you got your `git` config setup on your new workstation.
   - [Aspell](http://aspell.net/)
   - [Awareness](http://iamfutureproof.com/tools/awareness/)
   - [Bartender](http://www.macbartender.com/)
-  - [Bash](http://www.gnu.org/software/bash/)
   - [Bash it](https://github.com/revans/bash-it/)
+  - [Bash](http://www.gnu.org/software/bash/)
   - [BetterSnapTool](http://blog.boastr.net/)
   - [BetterTouchTool](http://blog.boastr.net/)
   - [BibDesk](http://bibdesk.sourceforge.net/)
   - [Boto](https://github.com/boto/boto)
+  - [Bundler](http://bundler.io)
   - [Byobu](http://byobu.co/)
   - [Caffeine](http://lightheadsw.com/caffeine/)
   - [Chef](http://www.opscode.com/chef/)
@@ -180,8 +181,8 @@ That's it, you got your `git` config setup on your new workstation.
   - [Cyberduck](http://cyberduck.ch/)
   - [Dash](http://kapeli.com/dash)
   - [Deal Alert](http://dealalertapp.com/)
-  - [Droplr](https://droplr.com/hello)
   - [Divvy](http://mizage.com/divvy/)
+  - [Droplr](https://droplr.com/hello)
   - [Emacs](http://www.gnu.org/software/emacs/)
   - [Ember](http://www.realmacsoftware.com/ember)
   - [Enjoyable](http://yukkurigames.com/enjoyable/)
@@ -195,8 +196,8 @@ That's it, you got your `git` config setup on your new workstation.
   - [FontExplorer X](http://www.fontexplorerx.com/)
   - [ForkLift 2](http://www.binarynights.com/forklift/)
   - [GeekTool](http://projects.tynsoe.org/en/geektool/)
-  - [Git](http://git-scm.com/)
   - [Git Hooks](https://github.com/icefox/git-hooks)
+  - [Git](http://git-scm.com/)
   - [Gitbox](http://gitboxapp.com/)
   - [Gmail Notifr](http://ashchan.com/projects/gmail-notifr)
   - [GnuPG](http://www.gnupg.org/)
@@ -207,7 +208,6 @@ That's it, you got your `git` config setup on your new workstation.
   - [IntelliJIDEA 12](http://www.jetbrains.com/idea/)
   - [Irssi](http://www.irssi.org/)
   - [ITerm2](http://www.iterm2.com/)
-  - iTunes Applescripts
   - [Janus](https://github.com/carlhuda/janus)
   - [Keka](http://kekaosx.com/)
   - [Keymo](http://manytricks.com/keymo/)
@@ -294,6 +294,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [XEmacs](http://www.xemacs.org/)
   - [XLD](http://tmkk.undo.jp/xld/)
   - [Zsh](http://zsh.sourceforge.net/)
+  - iTunes Applescripts
 
 You can add your favorite application by forking it and doing a
 [Pull Request](https://help.github.com/articles/using-pull-requests).

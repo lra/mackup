@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Only sync the config for Bundler
+
 ## Mackup 0.5.6
 
 - Added support for LittleSnitch (thx @stechio)

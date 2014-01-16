@@ -255,8 +255,7 @@ SUPPORTED_APPS = {
     'Mercurial': ['.hgrc',
                   '.hgignore_global'],
 
-    'Messages': ['Library/Messages',
-                 'Library/Application Scripts/com.apple.iChat',
+    'Messages': ['Library/Application Scripts/com.apple.iChat',
                  PREFERENCES + 'com.apple.iChat.plist',
                  PREFERENCES + 'com.apple.iChat.AIM.plist',
                  PREFERENCES + 'com.apple.iChat.Jabber.plist',

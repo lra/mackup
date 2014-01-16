@@ -3,6 +3,7 @@
 ## WIP
 
 - Only sync the config for Bundler
+- Don't sync Apple Messages attachments
 
 ## Mackup 0.5.6
 

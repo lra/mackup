@@ -302,6 +302,10 @@ SUPPORTED_APPS = {
         PREFERENCES + 'com.tapbots.PastebotSync.prefPane.plist',
         PREFERENCES + 'com.tapbots.PastebotSync.stats.plist'],
 
+    'Path Finder': [PREFERENCES + 'com.cocoatech.PathFinder.plist',
+                    APP_SUPPORT + 'Path Finder/PlugIns',
+                    APP_SUPPORT + 'Path Finder/Settings'],
+
     'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
 
     'Pear': ['.pearrc'],

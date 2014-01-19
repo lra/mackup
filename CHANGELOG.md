@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.5.7
+
 - Only sync the config for Bundler
 - Don't sync Apple Messages attachments
 - Added support for Default Folder X (thx @Cottser)

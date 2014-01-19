@@ -5,6 +5,7 @@
 - Only sync the config for Bundler
 - Don't sync Apple Messages attachments
 - Added support for Default Folder X (thx @Cottser)
+- Added support for Path Finder (thx @Cottser)
 
 ## Mackup 0.5.6
 

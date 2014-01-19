@@ -238,6 +238,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [OmniGraffle](http://www.omnigroup.com/omnigraffle/)
   - [OpenSSH](http://www.openssh.org/)
   - [Pastebot](http://tapbots.com/software/pastebot/)
+  - [Path Finder](http://www.cocoatech.com/pathfinder/)
   - [PCKeyboardHack](http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en)
   - [Pear](http://pear.php.net/)
   - [Pentadactyl](http://5digits.org/pentadactyl/)

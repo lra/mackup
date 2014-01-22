@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support to Hands Off! (@stechico)
+
 ## Mackup 0.5.7
 
 - Only sync the config for Bundler

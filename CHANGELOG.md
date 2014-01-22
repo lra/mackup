@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Extend Little Snitch with latest user config file.
+
 ## Mackup 0.5.7
 
 - Only sync the config for Bundler

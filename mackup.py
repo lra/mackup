@@ -239,7 +239,8 @@ SUPPORTED_APPS = {
 
     'LittleSnitch': [PREFERENCES + 'at.obdev.LittleSnitchNetworkMonitor.plist',
                      APP_SUPPORT + 'Little Snitch/rules.usr.xpl',
-                     APP_SUPPORT + 'Little Snitch/configuration.xpl'],
+                     APP_SUPPORT + 'Little Snitch/configuration.xpl',
+                     APP_SUPPORT + 'Little Snitch/configuration.user.xpl'],
 
     'Mackup': ['.mackup.cfg'],
 

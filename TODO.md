@@ -11,3 +11,4 @@ Feel free to implement any of those ;)
 - Support for ~/bin (need a custom mode for non 0600 synced files)
 - 100% test coverage
 - Externalize the applications database as a folder full of json files, one for each app.
+- Rollback any file that's not maintained by mackup anymore https://github.com/lra/mackup/issues/190

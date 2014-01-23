@@ -4,6 +4,7 @@
 
 - Extend Little Snitch with latest user config file (thx @stechico)
 - Added support to Hands Off! (thx @stechico)
+- Added different backup folder support
 
 ## Mackup 0.5.7
 

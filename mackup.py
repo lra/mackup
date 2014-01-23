@@ -198,8 +198,6 @@ SUPPORTED_APPS = {
 
     'GnuPG': ['.gnupg'],
 
-    'Hands Off!': [PREFERENCES + 'com.metakine.handsoff.plist'],
-
     'Heroku': ['.heroku/accounts', '.heroku/plugins'],
 
     'Hexels': [PREFERENCES + 'com.hex-ray.hexels.plist'],
@@ -241,8 +239,7 @@ SUPPORTED_APPS = {
 
     'LittleSnitch': [PREFERENCES + 'at.obdev.LittleSnitchNetworkMonitor.plist',
                      APP_SUPPORT + 'Little Snitch/rules.usr.xpl',
-                     APP_SUPPORT + 'Little Snitch/configuration.xpl',
-                     APP_SUPPORT + 'Little Snitch/configuration.user.xpl'],
+                     APP_SUPPORT + 'Little Snitch/configuration.xpl'],
 
     'Mackup': ['.mackup.cfg'],
 
@@ -690,20 +687,20 @@ class Mackup(object):
     def __init__(self):
         """Mackup Constructor"""
         try:
-            self.dropbox_folder = get_dropbox_folder_location()
+            self.backup_folder = get_backup_folder_location()
         except IOError:
             error(("Unable to find the Dropbox folder."
                    " If Dropbox is not installed and running, go for it on"
                    " <http://www.dropbox.com/>"))
 
-        self.mackup_folder = os.path.join(self.dropbox_folder, MACKUP_DB_PATH)
+        self.mackup_folder = os.path.join(self.backup_folder, MACKUP_DB_PATH)
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
     def _check_for_usable_environment(self):
         """Check if the current env is usable and has everything's required"""
 
         # Do we have a home folder ?
-        if not os.path.isdir(self.dropbox_folder):
+        if not os.path.isdir(self.backup_folder):
             error(("Unable to find the Dropbox folder."
                    " If Dropbox is not installed and running, go for it on"
                    " <http://www.dropbox.com/>"))
@@ -950,13 +947,23 @@ def parse_cmdline_args():
     return parser.parse_args()
 
 
-def get_dropbox_folder_location():
+def get_backup_folder_location():
     """
-    Try to locate the Dropbox folder
+    Try to locate the backup folder specifed in the configuration file. Failing
+    that, tries to use the Dropbox folder
 
     Returns:
-        (str) Full path to the current Dropbox folder
+        (str) Full path to the backup folder
     """
+    config = configparser.SafeConfigParser(allow_no_value=True)
+
+    #Is the config file there ?
+    if config.read(os.environ['HOME'] + '/.mackup.cfg'):
+        #Is their a "Backup Folder" option in the cfg file ?
+        if config.has_option("Backup Location", "Location"):
+            return config.get("Backup Location", "Location")
+
+    #If there is no config file with a specified backup folder
     host_db_path = os.environ['HOME'] + '/.dropbox/host.db'
     with open(host_db_path, 'r') as f:
         data = f.read().split()

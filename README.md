@@ -202,6 +202,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Gitbox](http://gitboxapp.com/)
   - [Gmail Notifr](http://ashchan.com/projects/gmail-notifr)
   - [GnuPG](http://www.gnupg.org/)
+  - [Hands Off!](http://www.oneperiodic.com/products/handsoff/)
   - [Heroku](https://www.heroku.com/)
   - [Hexels](http://hexraystudios.com/hexels/)
   - [Htop](http://htop.sourceforge.net/)

@@ -2,7 +2,7 @@
 
 ## WIP
 
-- Extend Little Snitch with latest user config file.
+- Extend Little Snitch with latest user config file (thx @stechico)
 
 ## Mackup 0.5.7
 

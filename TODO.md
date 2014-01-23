@@ -12,3 +12,4 @@ Feel free to implement any of those ;)
 - 100% test coverage
 - Externalize the applications database as a folder full of json files, one for each app.
 - Rollback any file that's not maintained by mackup anymore https://github.com/lra/mackup/issues/190
+- Ability to encrypt specific files, asked in #134 and #109

@@ -198,6 +198,8 @@ SUPPORTED_APPS = {
 
     'GnuPG': ['.gnupg'],
 
+    'Hands Off!': [PREFERENCES + 'com.metakine.handsoff.plist'],
+
     'Heroku': ['.heroku/accounts', '.heroku/plugins'],
 
     'Hexels': [PREFERENCES + 'com.hex-ray.hexels.plist'],

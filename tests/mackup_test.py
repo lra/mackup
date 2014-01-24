@@ -7,6 +7,22 @@ import mackup
 
 class TestMackup(unittest.TestCase):
 
+    def test_custom_backup_folder(self):
+        #make mackup_backup folder
+        os.mkdir(os.path.join(os.environ['HOME'], 'mackup_backup'))
+        
+        #Do general test
+        mackup_object = mackup.Mackup()
+        mackup_object._check_for_usable_environment()
+        mackup_object.check_for_usable_backup_env()
+        mackup_object.check_for_usable_restore_env()
+        mackup_object.clean_temp_folder()
+        
+        #delete the backup folder
+        os.rmdir(os.path.join(os.environ['HOME'], 'mackup_backup'))
+
+    #General Function Tests
+
     def test_delete_file(self):
         # Create a tmp file
         tf = tempfile.NamedTemporaryFile(delete=False)

@@ -196,7 +196,11 @@ SUPPORTED_APPS = {
 
     'Gmail Notifr': [PREFERENCES + 'com.ashchan.GmailNotifr.plist'],
 
-    'GnuPG': ['.gnupg'],
+    'GnuPG': ['.gnupg/gpg-agent.conf',
+              '.gnupg/gpg.conf',
+              '.gnupg/secring.gpg',
+              '.gnupg/trustdb.gpg',
+              '.gnupg/pubring.gpg'],
 
     'Hands Off!': [PREFERENCES + 'com.metakine.handsoff.plist'],
 

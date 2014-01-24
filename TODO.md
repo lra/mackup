@@ -13,3 +13,4 @@ Feel free to implement any of those ;)
 - Externalize the applications database as a folder full of json files, one for each app.
 - Rollback any file that's not maintained by mackup anymore https://github.com/lra/mackup/issues/190
 - Ability to encrypt specific files, asked in #134 and #109
+- Ability to sync custom folders or files https://shellycloud.com/blog/2014/01/synchronize-your-settings-with-dropbox-and-mackup

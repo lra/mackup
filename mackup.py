@@ -688,6 +688,7 @@ class Mackup(object):
         """Mackup Constructor"""
         try:
             self.backup_folder = get_backup_folder_location()
+            print self.backup_folder
         except IOError:
             error(("Unable to find the Dropbox folder."
                    " If Dropbox is not installed and running, go for it on"

@@ -183,6 +183,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [Deal Alert](http://dealalertapp.com/)
   - [Default Folder X](http://www.stclairsoft.com/DefaultFolderX/)
   - [Divvy](http://mizage.com/divvy/)
+  - [Dolphin](https://dolphin-emu.org/)
   - [Droplr](https://droplr.com/hello)
   - [Emacs](http://www.gnu.org/software/emacs/)
   - [Ember](http://www.realmacsoftware.com/ember)

@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for rTorrent (thx @mgalkiewicz)
+- Added support for Dolphin (thx @lachlancooper)
 
 ## Mackup 0.5.8
 

@@ -152,6 +152,9 @@ SUPPORTED_APPS = {
 
     'Divvy': [PREFERENCES + 'com.mizage.direct.Divvy.plist'],
 
+    'Dolphin': [APP_SUPPORT + 'Dolphin',
+                PREFERENCES + 'org.dolphin-emu.dolphin.plist'],
+
     'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],
 
     'Emacs': ['.emacs',

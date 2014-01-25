@@ -344,6 +344,8 @@ SUPPORTED_APPS = {
 
     'Rails': ['.railsrc'],
 
+    'rTorrent': ['.rtorrent.rc'],
+
     'Ruby': ['.gemrc',
              '.irbrc',
              '.gem',

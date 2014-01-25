@@ -251,6 +251,7 @@ That's it, you got your `git` config setup on your new workstation.
   - [PyPI](https://pypi.python.org/pypi)
   - [Quicksilver](http://qsapp.com/)
   - [Rails](http://rubyonrails.org/)
+  - [rTorrent](http://libtorrent.rakshasa.no/)
   - [Ruby Version](https://gist.github.com/fnichol/1912050)
   - [Ruby](http://ruby-lang.org/)
   - [RubyMine 4](http://www.jetbrains.com/ruby/)

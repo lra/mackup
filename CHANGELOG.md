@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for rTorrent (thx @mgalkiewicz)
+
 ## Mackup 0.5.8
 
 - Extend Little Snitch with latest user config file (thx @stechico)

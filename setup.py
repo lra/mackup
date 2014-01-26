@@ -1,8 +1,8 @@
 import setuptools
-import mackup.main as mackup
+import mackup.main
 
 
 setuptools.setup(
     name = 'Mackup',
-    version = mackup.VERSION,
+    version = mackup.main.VERSION,
 )

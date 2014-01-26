@@ -4,7 +4,7 @@ import sys
 import os.path
 
 try:
-    from mackup.main import main
+    import mackup.main as mackup
 except ImportError:
     # If Mackup is not installed globally, we are in a dev environment and
     # the mackup module is at the same path level as the bin folder where
@@ -13,8 +13,8 @@ except ImportError:
     bin_dir_path = os.path.dirname(os.path.abspath(__file__))
     parent_dir_path = os.path.dirname(bin_dir_path)
     sys.path.append(parent_dir_path)
-    from mackup.main import main
+    import mackup.main as mackup
 
 
 if __name__ == '__main__':
-    main()
+    mackup.main()

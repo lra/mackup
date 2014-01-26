@@ -5,6 +5,7 @@
 - Added support for rTorrent (thx @mgalkiewicz)
 - Added support for Dolphin (thx @lachlancooper)
 - Improved Janus support for Vim
+- Do not sync Dash Docsets anymore
 
 ## Mackup 0.5.8
 

@@ -140,8 +140,7 @@ SUPPORTED_APPS = {
     'Cyberduck': [APP_SUPPORT + 'Cyberduck',
                   PREFERENCES + 'ch.sudo.cyberduck.plist'],
 
-    'Dash': [APP_SUPPORT + 'Dash/DocSets',
-             APP_SUPPORT + 'Dash/library.dash',
+    'Dash': [APP_SUPPORT + 'Dash/library.dash',
              PREFERENCES + 'com.kapeli.dash.plist'],
 
     'Deal Alert': [PREFERENCES + 'com.LittleFin.DealAlert.plist'],

@@ -224,7 +224,9 @@ SUPPORTED_APPS = {
 
     'Irssi': ['.irssi'],
 
-    'Janus': ['.janus'],
+    'Janus': ['.janus',
+              '.vimrc.before',
+              '.vimrc.after'],
 
     'Keka': [PREFERENCES + 'com.aone.keka.plist'],
 

@@ -2,7 +2,7 @@ import os
 import tempfile
 import unittest
 
-import mackup
+import mackup.main as mackup
 
 
 class TestMackup(unittest.TestCase):

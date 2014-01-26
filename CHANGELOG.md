@@ -2,11 +2,12 @@
 
 ## WIP
 
-- Added support for Lightroom 5 (thx @Darep)
 - Added support for rTorrent (thx @mgalkiewicz)
 - Added support for Dolphin (thx @lachlancooper)
 - Improved Janus support for Vim
 - Do not sync Dash Docsets anymore
+- Added support for Lightroom 5 (thx @Darep)
+- Added support for Adobe Camera Raw (thx @Darep)
 
 ## Mackup 0.5.8
 

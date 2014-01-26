@@ -62,6 +62,8 @@ SUPPORTED_APPS = {
     'Adium': [APP_SUPPORT + 'Adium 2.0',
               PREFERENCES + 'com.adiumX.adiumX.plist'],
 
+    'Adobe Camera Raw': [APP_SUPPORT + 'Adobe/CameraRaw'],
+
     'Adobe Lightroom': [
         APP_SUPPORT + 'Adobe/Lightroom',
         PREFERENCES + 'com.adobe.Lightroom2.plist',

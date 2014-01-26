@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added support for Adobe Camera Raw (thx @Darep)
 - Added support for rTorrent (thx @mgalkiewicz)
 - Added support for Dolphin (thx @lachlancooper)
 - Improved Janus support for Vim

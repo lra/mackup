@@ -66,7 +66,8 @@ SUPPORTED_APPS = {
         APP_SUPPORT + 'Adobe/Lightroom',
         PREFERENCES + 'com.adobe.Lightroom2.plist',
         PREFERENCES + 'com.adobe.Lightroom3.plist',
-        PREFERENCES + 'com.adobe.Lightroom4.plist'],
+        PREFERENCES + 'com.adobe.Lightroom4.plist',
+        PREFERENCES + 'com.adobe.Lightroom5.plist'],
 
     'AppCode 2': [APP_SUPPORT + 'appCode20',
                   PREFERENCES + 'appCode20'],

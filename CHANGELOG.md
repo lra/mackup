@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added support for Lightroom 5 (thx @Darep)
 - Added support for rTorrent (thx @mgalkiewicz)
 - Added support for Dolphin (thx @lachlancooper)
 - Improved Janus support for Vim

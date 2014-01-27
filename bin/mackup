@@ -9,7 +9,7 @@ except ImportError:
     # If Mackup is not installed globally, we are looking for the mackup module
     # at the same path level as the bin folder where this script is in.
     # In this case, let's dynamically add the parent path to the python path
-    bin_dir_path = os.path.dirname(os.path.abspath(__file__))
+    bin_dir_path = os.path.dirname(os.path.realpath(__file__))
     parent_dir_path = os.path.dirname(bin_dir_path)
     sys.path.append(parent_dir_path)
     import mackup.main

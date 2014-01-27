@@ -332,7 +332,7 @@ SUPPORTED_APPS = {
                    PREFERENCES + 'WebIde60',
                    PREFERENCES + 'com.jetbrains.PhpStorm.plist'],
 
-    'pip': ['.pip/pip.cfg'],
+    'pip': ['.pip/pip.conf'],
 
     'PopClip': [
         PREFERENCES + 'com.pilotmoon.popclip.plist',

@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Fixed pip support (thx @lachlancooper)
+
 ## Mackup 0.5.9
 
 - Added support for rTorrent (thx @mgalkiewicz)

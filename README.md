@@ -21,27 +21,24 @@ mackup backup
 If not running OS X, or you don't like Homebrew, run on your current workstation:
 ```bash
 # Download Mackup
-curl -o mackup https://raw.github.com/lra/mackup/master/mackup.py
+curl -o mackup.zip https://codeload.github.com/lra/mackup/zip/master
 
-# Make it executable
-chmod +x mackup
+# Uncompress the archive
+unzip mackup.zip
 
 # Launch it and back up your files in Dropbox
-./mackup backup
+./mackup-master/bin/mackup backup
 ```
 
 You're all set, and constantly backuped from now on.
 
 Next, on any new workstation, install Dropbox and do:
 ```bash
-# Download Mackup
-curl -o mackup https://raw.github.com/lra/mackup/master/mackup.py
-
-# Make it executable
-chmod +x mackup
+# Install Mackup
+brew install mackup
 
 # Launch it and restore your files from Dropbox
-./mackup restore
+mackup restore
 ```
 
 Done !
@@ -50,15 +47,16 @@ Done !
 
 ```bash
 # Download Mackup
-curl -o mackup https://raw.github.com/lra/mackup/master/mackup.py
+curl -o mackup.zip https://codeload.github.com/lra/mackup/zip/master
 
-# Make it executable
-chmod +x mackup
+# Uncompress the archive
+unzip mackup.zip
 
-# Copy it to your path
-sudo mv mackup /usr/bin/mackup
+# Install Mackup on your system
+cd mackup-master
+sudo python setup.py install
 
-# Launch it
+# Launch it and back up your files in Dropbox
 mackup backup
 ```
 
@@ -68,15 +66,16 @@ Same as Install:
 
 ```bash
 # Download Mackup
-curl -o mackup https://raw.github.com/lra/mackup/master/mackup.py
+curl -o mackup.zip https://codeload.github.com/lra/mackup/zip/master
 
-# Make it executable
-chmod +x mackup
+# Uncompress the archive
+unzip mackup.zip
 
-# Copy it to your path
-sudo mv mackup /usr/bin/mackup
+# Upgrade Mackup on your system
+cd mackup-master
+sudo python setup.py install
 
-# Launch it
+# Launch it and back up your files in Dropbox
 mackup backup
 ```
 

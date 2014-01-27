@@ -504,7 +504,7 @@ SUPPORTED_APPS = {
 
 
 # Current version
-VERSION = '0.5.8'
+VERSION = '0.5.9'
 
 # Mode used to backup files to Dropbox
 BACKUP_MODE = 'backup'

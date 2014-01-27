@@ -21,76 +21,29 @@ mackup backup
 If not running OS X, or you don't like Homebrew, run on your current workstation:
 ```bash
 # Download Mackup
-curl -o mackup https://raw.github.com/lra/mackup/master/mackup.py
+curl -o mackup.zip https://codeload.github.com/lra/mackup/zip/master
 
-# Make it executable
-chmod +x mackup
+# Uncompress the archive
+unzip mackup.zip
 
 # Launch it and back up your files in Dropbox
-./mackup backup
+./mackup-master/bin/mackup backup
 ```
 
 You're all set, and constantly backuped from now on.
 
 Next, on any new workstation, install Dropbox and do:
 ```bash
-# Download Mackup
-curl -o mackup https://raw.github.com/lra/mackup/master/mackup.py
-
-# Make it executable
-chmod +x mackup
+# Install Mackup
+brew install mackup
 
 # Launch it and restore your files from Dropbox
-./mackup restore
+mackup restore
 ```
 
 Done !
 
-## Install
-
-```bash
-# Download Mackup
-curl -o mackup https://raw.github.com/lra/mackup/master/mackup.py
-
-# Make it executable
-chmod +x mackup
-
-# Copy it to your path
-sudo mv mackup /usr/bin/mackup
-
-# Launch it
-mackup backup
-```
-
-## Upgrade
-
-Same as Install:
-
-```bash
-# Download Mackup
-curl -o mackup https://raw.github.com/lra/mackup/master/mackup.py
-
-# Make it executable
-chmod +x mackup
-
-# Copy it to your path
-sudo mv mackup /usr/bin/mackup
-
-# Launch it
-mackup backup
-```
-
-It will add support for any application you were missing before.
-
-## Uninstall
-
-You can revert all your files to their original state.
-```bash
-# Just run this
-mackup uninstall
-```
-This will move back any file from Dropbox to its original place in your home
-folder and destroy the Mackup folder in Dropbox.
+You can find more detailled instructions in [INSTALL.md](INSTALL.md)
 
 ## Usage
 
@@ -148,6 +101,16 @@ When you launch `mackup restore`, here's what it's really doing:
 That's it, you got your `git` config setup on your new workstation.
 
 `mackup` does the same for any supported application.
+
+### Uninstall
+
+You can revert all your files to their original state.
+```bash
+# Just run this
+mackup uninstall
+```
+This will move back any file from Dropbox to its original place in your home
+folder and destroy the Mackup folder in Dropbox.
 
 ## Supported Applications
 

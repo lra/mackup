@@ -1201,6 +1201,3 @@ def main():
 
     # Delete the tmp folder
     mackup.clean_temp_folder()
-
-if __name__ == "__main__":
-    main()

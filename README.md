@@ -43,53 +43,7 @@ mackup restore
 
 Done !
 
-## Install
-
-```bash
-# Download Mackup
-curl -o mackup.zip https://codeload.github.com/lra/mackup/zip/master
-
-# Uncompress the archive
-unzip mackup.zip
-
-# Install Mackup on your system
-cd mackup-master
-sudo python setup.py install
-
-# Launch it and back up your files in Dropbox
-mackup backup
-```
-
-## Upgrade
-
-Same as Install:
-
-```bash
-# Download Mackup
-curl -o mackup.zip https://codeload.github.com/lra/mackup/zip/master
-
-# Uncompress the archive
-unzip mackup.zip
-
-# Upgrade Mackup on your system
-cd mackup-master
-sudo python setup.py install
-
-# Launch it and back up your files in Dropbox
-mackup backup
-```
-
-It will add support for any application you were missing before.
-
-## Uninstall
-
-You can revert all your files to their original state.
-```bash
-# Just run this
-mackup uninstall
-```
-This will move back any file from Dropbox to its original place in your home
-folder and destroy the Mackup folder in Dropbox.
+You can find more detailled instructions in (INSTALL.md)
 
 ## Usage
 
@@ -147,6 +101,16 @@ When you launch `mackup restore`, here's what it's really doing:
 That's it, you got your `git` config setup on your new workstation.
 
 `mackup` does the same for any supported application.
+
+### Uninstall
+
+You can revert all your files to their original state.
+```bash
+# Just run this
+mackup uninstall
+```
+This will move back any file from Dropbox to its original place in your home
+folder and destroy the Mackup folder in Dropbox.
 
 ## Supported Applications
 

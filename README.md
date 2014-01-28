@@ -150,7 +150,6 @@ folder and destroy the Mackup folder in Dropbox.
   - [Dolphin](https://dolphin-emu.org/)
   - [Droplr](https://droplr.com/hello)
   - [Emacs](http://www.gnu.org/software/emacs/)
-  - [Ember](http://www.realmacsoftware.com/ember)
   - [Enjoyable](http://yukkurigames.com/enjoyable/)
   - [Exercism](http://exercism.io/)
   - [ExpanDrive](http://www.expandrive.com/)

@@ -162,8 +162,6 @@ SUPPORTED_APPS = {
     'Emacs': ['.emacs',
               '.emacs.d'],
 
-    'Ember': ['Library/Group Containers/P97H7FTHWN.com.realmacsoftware.ember'],
-
     'Enjoyable': [PREFERENCES + 'com.yukkurigames.Enjoyable.plist'],
 
     'Exercism': ['.exercism'],

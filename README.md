@@ -259,6 +259,7 @@ folder and destroy the Mackup folder in Dropbox.
   - [Viscosity](http://www.sparklabs.com/viscosity/)
   - [Witch](http://manytricks.com/witch/)
   - [X11](http://www.x.org/)
+  - [Xchat](http://www.xchat.org/)
   - [XCode](https://developer.apple.com/xcode/)
   - [XEmacs](http://www.xemacs.org/)
   - [XLD](http://tmkk.undo.jp/xld/)

@@ -40,464 +40,6 @@ except ImportError:
     import ConfigParser as configparser
 
 
-#######################
-# Commonly used paths #
-#######################
-
-MACKUP_DB_PATH = 'Mackup'
-PREFERENCES = 'Library/Preferences/'
-APP_SUPPORT = 'Library/Application Support/'
-
-#################
-# Configuration #
-#################
-
-# Applications supported
-# Format:
-# Application Name: List of files (relative path from the user's home)
-
-SUPPORTED_APPS = {
-    'Ack': ['.ackrc'],
-
-    'Adium': [APP_SUPPORT + 'Adium 2.0',
-              PREFERENCES + 'com.adiumX.adiumX.plist'],
-
-    'Adobe Camera Raw': [APP_SUPPORT + 'Adobe/CameraRaw'],
-
-    'Adobe Lightroom': [
-        APP_SUPPORT + 'Adobe/Lightroom',
-        PREFERENCES + 'com.adobe.Lightroom2.plist',
-        PREFERENCES + 'com.adobe.Lightroom3.plist',
-        PREFERENCES + 'com.adobe.Lightroom4.plist',
-        PREFERENCES + 'com.adobe.Lightroom5.plist'],
-
-    'AppCode 2': [APP_SUPPORT + 'appCode20',
-                  PREFERENCES + 'appCode20'],
-
-    'Arara': ['.araraconfig.yaml',
-              'araraconfig.yaml'],
-
-    'Aspell': ['.aspell.conf',
-               '.aspell.en.prepl',
-               '.aspell.en.pws'],
-
-    'Awareness': [PREFERENCES + 'com.futureproof.awareness.plist'],
-
-    'Bartender': [PREFERENCES + 'com.surteesstudios.Bartender.plist'],
-
-    'Bash': ['.bash_aliases',
-             '.bash_logout',
-             '.bashrc',
-             '.profile',
-             '.bash_profile',
-             '.inputrc'],
-
-    'Bash it': ['.bash_it'],
-
-    'BetterSnapTool': [
-        PREFERENCES + 'com.hegenberg.BetterSnapTool.plist',
-        APP_SUPPORT + 'BetterSnapTool'],
-
-    'BetterTouchTool': [
-        PREFERENCES + 'com.hegenberg.BetterTouchTool.plist',
-        APP_SUPPORT + 'BetterTouchTool'],
-
-    'BibDesk': [PREFERENCES + 'edu.ucsd.cs.mmccrack.bibdesk.plist'],
-
-    'Boto': ['.boto'],
-
-    'Bundler': ['.bundle/config'],
-
-    'Byobu': ['.byobu',
-              '.byoburc',
-              '.byoburc.tmux',
-              '.byoburc.screen'],
-
-    'Caffeine': [PREFERENCES + 'com.lightheadsw.Caffeine.plist'],
-
-    'Chef': ['.chef'],
-
-    'Chicken': [PREFERENCES + 'net.sourceforge.chicken.plist'],
-
-    'Clementine': [PREFERENCES + 'org.clementine-player.Clementine.plist'],
-
-    'ClipMenu': [APP_SUPPORT + 'ClipMenu',
-                 PREFERENCES + 'com.naotaka.ClipMenu.plist'],
-
-    'CloudApp': [PREFERENCES + 'com.linebreak.CloudAppMacOSX.plist'],
-
-    'Colloquy': [PREFERENCES + 'info.colloquy.plist',
-                 APP_SUPPORT + 'Colloquy'],
-
-    'Concentrate': [APP_SUPPORT + 'Concentrate/Concentrate.sqlite3'],
-
-    'ControlPlane': [PREFERENCES + 'com.dustinrue.ControlPlane.plist'],
-
-    'CoRD': [APP_SUPPORT + 'CoRD'],
-
-    'Coda 2': [APP_SUPPORT + 'Coda 2',
-               PREFERENCES + 'com.panic.Coda2.plist'],
-
-    'Curl': ['.netrc'],
-
-    'Cyberduck': [APP_SUPPORT + 'Cyberduck',
-                  PREFERENCES + 'ch.sudo.cyberduck.plist'],
-
-    'Dash': [APP_SUPPORT + 'Dash/library.dash',
-             PREFERENCES + 'com.kapeli.dash.plist'],
-
-    'Deal Alert': [PREFERENCES + 'com.LittleFin.DealAlert.plist'],
-
-    'Default Folder X': [PREFERENCES + 'com.stclairsoft.DefaultFolderX.favorites.plist',
-                         PREFERENCES + 'com.stclairsoft.DefaultFolderX.plist',
-                         PREFERENCES + 'com.stclairsoft.DefaultFolderX.settings.plist'],
-
-    'Divvy': [PREFERENCES + 'com.mizage.direct.Divvy.plist'],
-
-    'Dolphin': [APP_SUPPORT + 'Dolphin',
-                PREFERENCES + 'org.dolphin-emu.dolphin.plist'],
-
-    'Droplr': [PREFERENCES + 'com.droplr.droplr-mac.plist'],
-
-    'Emacs': ['.emacs',
-              '.emacs.d'],
-
-    'Enjoyable': [PREFERENCES + 'com.yukkurigames.Enjoyable.plist'],
-
-    'Exercism': ['.exercism'],
-
-    'ExpanDrive': [APP_SUPPORT + 'ExpanDrive'],
-
-    'Fantastical': [PREFERENCES + 'com.flexibits.fantastical.plist'],
-
-    'Feeds': [PREFERENCES + 'com.feedsapp.Feeds.plist'],
-
-    'Filezilla': ['.filezilla'],
-
-    'Fish': ['.config/fish'],
-
-    'Flux': [PREFERENCES + 'org.herf.Flux.plist'],
-
-    'FontExplorer X': [APP_SUPPORT + 'Linotype/FontExplorer X',
-                       'FontExplorer X'],
-
-    'ForkLift 2': [PREFERENCES + 'com.binarynights.ForkLift2.plist'],
-
-    'GeekTool': [
-        PREFERENCES + 'org.tynsoe.GeekTool.plist',
-        PREFERENCES + 'org.tynsoe.geeklet.file.plist',
-        PREFERENCES + 'org.tynsoe.geeklet.image.plist',
-        PREFERENCES + 'org.tynsoe.geeklet.shell.plist',
-        PREFERENCES + 'org.tynsoe.geektool3.plist'],
-
-    'Git': ['.gitconfig',
-            '.gitignore_global'],
-
-    'Gitbox': [PREFERENCES + 'com.oleganza.gitbox.plist'],
-
-    'Git Hooks': ['.git_hooks'],
-
-    'Gmail Notifr': [PREFERENCES + 'com.ashchan.GmailNotifr.plist'],
-
-    'GnuPG': ['.gnupg/gpg-agent.conf',
-              '.gnupg/gpg.conf',
-              '.gnupg/secring.gpg',
-              '.gnupg/trustdb.gpg',
-              '.gnupg/pubring.gpg'],
-
-    'Hands Off!': [PREFERENCES + 'com.metakine.handsoff.plist'],
-
-    'Heroku': ['.heroku/accounts', '.heroku/plugins'],
-
-    'Hexels': [PREFERENCES + 'com.hex-ray.hexels.plist'],
-
-    'Htop': ['.htoprc'],
-
-    'i2cssh': ['.i2csshrc'],
-
-    'IntelliJIdea 12': [APP_SUPPORT + 'IntelliJIdea12',
-                        PREFERENCES + 'IntelliJIdea12'],
-
-    'iTerm2': [PREFERENCES + 'com.googlecode.iterm2.plist'],
-
-    'iTunesScripts': ['Library/iTunes/Scripts'],
-
-    'Irssi': ['.irssi'],
-
-    'Janus': ['.janus',
-              '.vimrc.before',
-              '.vimrc.after'],
-
-    'Keka': [PREFERENCES + 'com.aone.keka.plist'],
-
-    'Keymo': [PREFERENCES + 'com.manytricks.Keymo.plist'],
-
-    'KeyRemap4MacBook': [
-        PREFERENCES + 'org.pqrs.KeyRemap4MacBook.plist',
-        PREFERENCES + 'org.pqrs.KeyRemap4MacBook.multitouchextension.plist',
-        APP_SUPPORT + 'KeyRemap4MacBook/private.xml'],
-
-    'LaTeXiT': [PREFERENCES + 'fr.chachatelier.pierre.LaTeXiT.plist'],
-
-    'LaunchBar': [PREFERENCES + 'at.obdev.LaunchBar.plist',
-                  APP_SUPPORT + 'LaunchBar'],
-
-    'Light Table': [APP_SUPPORT + 'LightTable/plugins',
-                    APP_SUPPORT + 'LightTable/settings',
-                    PREFERENCES + 'com.kodowa.LightTable.plist'],
-
-    'LimeChat': [PREFERENCES + 'net.limechat.LimeChat-AppStore.plist'],
-
-    'LittleSnitch': [PREFERENCES + 'at.obdev.LittleSnitchNetworkMonitor.plist',
-                     APP_SUPPORT + 'Little Snitch/rules.usr.xpl',
-                     APP_SUPPORT + 'Little Snitch/configuration.xpl',
-                     APP_SUPPORT + 'Little Snitch/configuration.user.xpl'],
-
-    'Mackup': ['.mackup.cfg'],
-
-    'Mailplane': [PREFERENCES + 'com.mailplaneapp.Mailplane.plist'],
-
-    'MacOSX': ['.MacOSX',
-               'Library/ColorSync/Profiles'],
-
-    'MacVim': [PREFERENCES + 'org.vim.MacVim.LSSharedFileList.plist',
-               PREFERENCES + 'org.vim.MacVim.plist'],
-
-    'MagicPrefs': [PREFERENCES + 'com.vladalexa.MagicPrefs.MagicPrefsPlugins.plist',
-                   PREFERENCES + 'com.vladalexa.MagicPrefs.plist'],
-
-    'MenuMeters': [PREFERENCES + 'com.ragingmenace.MenuMeters.plist'],
-
-    'Mercurial': ['.hgrc',
-                  '.hgignore_global'],
-
-    'Messages': ['Library/Application Scripts/com.apple.iChat',
-                 PREFERENCES + 'com.apple.iChat.plist',
-                 PREFERENCES + 'com.apple.iChat.AIM.plist',
-                 PREFERENCES + 'com.apple.iChat.Jabber.plist',
-                 PREFERENCES + 'com.apple.iChat.LSSharedFileList.plist',
-                 PREFERENCES + 'com.apple.iChat.StatusMessages.plist',
-                 PREFERENCES + 'com.apple.iChat.Yahoo.plist'],
-
-    'Moom': [
-        PREFERENCES + 'com.manytricks.Moom.plist',
-        APP_SUPPORT + 'Many Tricks'],
-
-    'Mou': [
-        PREFERENCES + 'com.mouapp.Mou.plist',
-        PREFERENCES + 'com.mouapp.Mou.LSSharedFileList.plist',
-        APP_SUPPORT + 'Mou'],
-
-    'mpd': ['.mpd',
-            '.mpdconf'],
-
-    'MPV': ['.mpv/channels.conf',
-            '.mpv/config',
-            '.mpv/input.conf'],
-
-    'MercuryMover': [PREFERENCES + 'com.heliumfoot.MyWiAgent.plist'],
-
-    'Nano': ['.nanorc'],
-
-    'nvALT': [PREFERENCES + 'net.elasticthreads.nv.plist',
-              APP_SUPPORT + 'Notational Velocity',
-              APP_SUPPORT + 'Notational Data'],
-
-    'ncmpcpp': ['.ncmpcpp'],
-
-    'Oh My Zsh': ['.oh-my-zsh'],
-
-    'OmniFocus': [
-        APP_SUPPORT + 'OmniFocus/Plug-Ins',
-        APP_SUPPORT + 'OmniFocus/Themes'],
-
-    'OmniGraffle': [APP_SUPPORT + 'The Omni Group/OmniGraffle'],
-
-    'Pastebot': [
-        PREFERENCES + 'com.tapbots.PastebotSync.plist',
-        PREFERENCES + 'com.tapbots.PastebotSync.prefPane.plist',
-        PREFERENCES + 'com.tapbots.PastebotSync.stats.plist'],
-
-    'Path Finder': [PREFERENCES + 'com.cocoatech.PathFinder.plist',
-                    APP_SUPPORT + 'Path Finder/PlugIns',
-                    APP_SUPPORT + 'Path Finder/Settings'],
-
-    'PCKeyboardHack': [PREFERENCES + 'org.pqrs.PCKeyboardHack.plist'],
-
-    'Pear': ['.pearrc'],
-
-    'PhpStorm 6': [APP_SUPPORT + 'WebIde60',
-                   PREFERENCES + 'WebIde60',
-                   PREFERENCES + 'com.jetbrains.PhpStorm.plist'],
-
-    'pip': ['.pip/pip.conf'],
-
-    'PopClip': [
-        PREFERENCES + 'com.pilotmoon.popclip.plist',
-        APP_SUPPORT + 'PopClip'],
-
-    'Pow': ['.powconfig',
-            '.powenv',
-            '.powrc'],
-
-    'PyPI': ['.pypirc'],
-
-    'Quicklook': ['Library/Quicklook'],
-
-    'Quicksilver': [PREFERENCES + 'com.blacktree.Quicksilver.plist',
-                    APP_SUPPORT + 'Quicksilver'],
-
-    'Rails': ['.railsrc'],
-
-    'rTorrent': ['.rtorrent.rc'],
-
-    'Ruby': ['.gemrc',
-             '.irbrc',
-             '.gem',
-             '.pryrc',
-             '.aprc'],
-
-    'RubyMine 4': [APP_SUPPORT + 'RubyMine40',
-                   PREFERENCES + 'RubyMine40'],
-
-    'RubyMine 5': [APP_SUPPORT + 'RubyMine50',
-                   PREFERENCES + 'RubyMine50'],
-
-    'Ruby Version': ['.ruby-version'],
-
-    'Pentadactyl': ['.pentadactyl',
-                    '.pentadactylrc'],
-
-    'PokerStars': [PREFERENCES + 'com.pokerstars.user.ini',
-                   PREFERENCES + 'com.pokerstars.PokerStars.plist'],
-
-    'S3cmd': ['.s3cfg'],
-
-    'SABnzbd': [APP_SUPPORT + 'SABnzbd/sabnzbd.ini',
-                APP_SUPPORT + 'SABnzbd/admin/rss_data.sab'],
-
-    'Scenario': [PREFERENCES + 'com.lagente.scenario.plist',
-                 'Library/Scenario'],
-
-    'Scripts': ['Library/Scripts'],
-
-    'Screen': ['.screenrc'],
-
-    'SelfControl': [PREFERENCES + 'org.eyebeam.SelfControl.plist'],
-
-    'Sequel Pro': [APP_SUPPORT + 'Sequel Pro/Data'],
-
-    'SHSH Blobs': ['.shsh'],
-
-    'Shuttle': ['.shuttle.json'],
-
-    'SizeUp': [PREFERENCES + 'com.irradiatedsoftware.SizeUp.plist',
-               APP_SUPPORT + 'SizeUp/SizeUp.sizeuplicense'],
-
-    'Skim': [PREFERENCES + 'net.sourceforge.skim-app.skim.plist'],
-
-    'Skitch': [PREFERENCES + 'com.plasq.skitch.plist',
-               PREFERENCES + 'com.plasq.skitch.history'],
-
-    'Skype': [APP_SUPPORT + 'Skype'],
-
-    'Slate': ['.slate',
-              APP_SUPPORT + 'com.slate.Slate'],
-
-    'Slogger': ['Slogger'],
-
-    'SourceTree': [APP_SUPPORT + 'SourceTree/sourcetree.license',
-                   APP_SUPPORT + 'SourceTree/browser.plist',
-                   APP_SUPPORT + 'SourceTree/hgrc_sourcetree',
-                   APP_SUPPORT + 'SourceTree/hostingservices.plist'],
-
-    'Spark': [APP_SUPPORT + 'Spark'],
-
-    'Spectacle': [PREFERENCES + 'com.divisiblebyzero.Spectacle.plist'],
-
-    'Spotify': [PREFERENCES + 'com.spotify.client.plist'],
-
-    'SSH': ['.ssh'],
-
-    'Stata': [APP_SUPPORT + 'Stata',
-              PREFERENCES + 'com.stata.stata12.plist',
-              PREFERENCES + 'com.stata.stata13.plist'],
-
-    'Sublime Text 2': [APP_SUPPORT + 'Sublime Text 2/Installed Packages',
-                       APP_SUPPORT + 'Sublime Text 2/Packages',
-                       APP_SUPPORT + 'Sublime Text 2/Pristine Packages'],
-
-    'Sublime Text 3': [APP_SUPPORT + 'Sublime Text 3/Packages/User'],
-
-    'Subversion': ['.subversion'],
-
-    'SuperDuper!': [APP_SUPPORT + 'SuperDuper!'],
-
-    'Teamocil': ['.teamocil'],
-
-    'TextMate': [APP_SUPPORT + 'TextMate',
-                 PREFERENCES + 'com.macromates.textmate.plist'],
-
-    'Textual': [APP_SUPPORT + 'Textual IRC',
-                PREFERENCES + 'com.codeux.irc.textual.plist'],
-
-    'Tmux': ['.tmux.conf'],
-
-    'Tmuxinator': ['.tmuxinator'],
-
-    'Tower': [APP_SUPPORT + 'Tower',
-              PREFERENCES + 'com.fournova.Tower.plist'],
-
-    'Transmission': [PREFERENCES + 'org.m0k.transmission.plist',
-                     APP_SUPPORT + 'Transmission/blocklists'],
-
-    'Transmit': [
-        PREFERENCES + 'com.panic.Transmit.plist',
-        APP_SUPPORT + 'Transmit/Metadata'
-    ],
-
-    'Twitterrific': [APP_SUPPORT + 'Twitterrific'],
-
-    'Ventrilo': [PREFERENCES + 'Ventrilo'],
-
-    'Vim': ['.gvimrc',
-            '.gvimrc.before',
-            '.gvimrc.after',
-            '.vim',
-            '.vimrc',
-            '.vimrc.before',
-            '.vimrc.after'],
-
-    'Vimperator': ['.vimperator',
-                   '.vimperatorrc'],
-
-    'Viscosity': [APP_SUPPORT + 'Viscosity',
-                  PREFERENCES + 'com.viscosityvpn.Viscosity.plist'],
-
-    'Witch': [PREFERENCES + 'com.manytricks.Witch.plist'],
-
-    'X11': ['.Xresources',
-            '.fonts'],
-
-    'Xchat': ['.xchat2'],
-
-    'Xcode': ['Library/Developer/Xcode/UserData/CodeSnippets',
-              'Library/Developer/Xcode/UserData/FontAndColorThemes',
-              'Library/Developer/Xcode/UserData/KeyBindings',
-              'Library/Developer/Xcode/UserData/SearchScopes.xcsclist'],
-
-    'XEmacs': ['.xemacs'],
-
-    'XLD': [APP_SUPPORT + 'XLD',
-            PREFERENCES + 'jp.tmkk.XLD.plist'],
-
-    'Zsh': ['.zshenv',
-            '.zprofile',
-            '.zshrc',
-            '.zlogin',
-            '.zlogout'],
-    }
-
 #############
 # Constants #
 #############
@@ -519,10 +61,123 @@ UNINSTALL_MODE = 'uninstall'
 PLATFORM_DARWIN = 'Darwin'
 PLATFORM_LINUX = 'Linux'
 
+# Directory containing the application configs
+APPS_DIR = 'applications'
+
+# Default Mackup backup path where it stores its files in Dropbox
+MACKUP_BACKUP_PATH = 'Mackup'
+
+# Mackup config file
+MACKUP_CONFIG_FILE = '.mackup.cfg'
+CUSTOM_APPS_DIR = '.mackup'
+
 
 ###########
 # Classes #
 ###########
+
+
+class ApplicationsDatabase(object):
+    """Database containing all the configured applications"""
+
+    def __init__(self):
+        """
+        Create a ApplicationsDatabase instance
+        """
+        # Configure the config parser
+        apps_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)),
+                                APPS_DIR)
+        custom_apps_dir = os.path.join(os.environ['HOME'], CUSTOM_APPS_DIR)
+
+        # Build the list of stock application config files
+        config_files = []
+        for filename in os.listdir(apps_dir):
+            if filename.endswith('.cfg'):
+                config_files.append(os.path.join(apps_dir, filename))
+
+        # Append the list of custom application config files
+        if os.path.isdir(custom_apps_dir):
+            for filename in os.listdir(custom_apps_dir):
+                if filename.endswith('.cfg'):
+                    config_files.append(os.path.join(custom_apps_dir, filename))
+
+        # Build the dict that will contain the properties of each application
+        self.apps = dict()
+
+        for config_file in config_files:
+            config = configparser.SafeConfigParser(allow_no_value=True)
+
+            # Needed to not lowercase the configuration_files in the ini files
+            config.optionxform = str
+
+            if config.read(config_file):
+                # Get the filename without the directory name
+                filename = os.path.basename(config_file)
+                # The app name is the cfg filename with the extension
+                app_name = filename[:-len('.cfg')]
+
+                # Start building a dict for this app
+                self.apps[app_name] = dict()
+
+                # Add the fancy name for the app, for display purpose
+                app_pretty_name = config.get('application', 'name')
+                self.apps[app_name]['name'] = app_pretty_name
+
+                # Add the configuration files to sync
+                self.apps[app_name]['configuration_files'] = set()
+                if config.has_section('configuration_files'):
+                    for cf in config.options('configuration_files'):
+                        self.apps[app_name]['configuration_files'].add(cf)
+
+    def get_name(self, name):
+        """
+        Return the fancy name of an application
+
+        Args:
+            name (str)
+
+        Returns:
+            str
+        """
+        return self.apps[name]['name']
+
+    def get_files(self, name):
+        """
+        Return the list of config files of an application
+
+        Args:
+            name (str)
+
+        Returns:
+            list(str)
+        """
+        return list(self.apps[name]['configuration_files'])
+
+    def get_app_names(self):
+        """
+        Return the list of application names that are available in the database
+
+        Returns:
+            list(str)
+        """
+        app_names = []
+        for name in self.apps:
+            app_names.append(name)
+
+        return app_names
+
+    def get_pretty_app_names(self):
+        """
+        Return the list of pretty app names that are available in the database
+
+        Returns:
+            list(str)
+        """
+        pretty_app_names = []
+        for app_name in self.get_app_names():
+            pretty_app_names.append(self.get_name(app_name))
+
+        return pretty_app_names
 
 
 class ApplicationProfile(object):
@@ -655,8 +310,8 @@ class ApplicationProfile(object):
                         raise ValueError("Unsupported file: {}"
                                          .format(mackup_filepath))
 
-                    if confirm("You already have a {} named {} in your home."
-                               "\nDo you want to replace it with your backup ?"
+                    if confirm("You already have a {} named {} in your home.\n"
+                               "Do you want to replace it with your backup ?"
                                .format(file_type, filename)):
                         delete(home_filepath)
                         link(mackup_filepath, home_filepath)
@@ -709,7 +364,8 @@ class Mackup(object):
                    " If Dropbox is not installed and running, go for it on"
                    " <http://www.dropbox.com/>"))
 
-        self.mackup_folder = os.path.join(self.dropbox_folder, MACKUP_DB_PATH)
+        self.mackup_folder = os.path.join(self.dropbox_folder,
+                                          MACKUP_BACKUP_PATH)
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
     def _check_for_usable_environment(self):
@@ -720,6 +376,28 @@ class Mackup(object):
             error(("Unable to find the Dropbox folder."
                    " If Dropbox is not installed and running, go for it on"
                    " <http://www.dropbox.com/>"))
+
+        # Do we have an old config file ?
+        config = configparser.SafeConfigParser(allow_no_value=True)
+
+        # Is the config file there ?
+        path_to_cfg = "{}/{}".format(os.environ['HOME'], MACKUP_CONFIG_FILE)
+        if config.read(path_to_cfg):
+            # Is an old setion is in the config file ?
+            old_sections = ['Allowed Applications', 'Ignored Applications']
+            for old_section in old_sections:
+                if config.has_section(old_section):
+                    error(("Old config file detected. Aborting.\n"
+                           "\n"
+                           "An old section (e.g. [Allowed Applications] or"
+                           " [Ignored Applications] has been detected in your"
+                           " {} file.\n"
+                           "I'd rather do nothing than do something you do not"
+                           " want me to do.\n"
+                           "\n"
+                           "Please read the up to date documentation on"
+                           " <https://github.com/lra/mackup> and migrate your"
+                           " configuration file.".format(path_to_cfg)))
 
         # Is Sublime Text running ?
         #if is_process_running('Sublime Text'):
@@ -934,16 +612,20 @@ def parse_cmdline_args():
         (argparse.Namespace)
     """
 
+    app_db = ApplicationsDatabase()
+
     # Format some epilog text
-    epilog = "Supported applications: "
-    epilog += ', '.join(sorted(SUPPORTED_APPS.iterkeys()))
+    epilog = "Supported applications:\n"
+    for app_name in sorted(app_db.get_app_names()):
+        epilog += " - {}\n".format(app_name)
     epilog += "\n\nMackup requires a fully synced Dropbox folder."
 
     # Setup the global parser
     parser = argparse.ArgumentParser(
         description=("Mackup {}\n"
                      "Keep your application settings in sync.\n"
-                     "Copyright (C) 2013 Laurent Raufaste <http://glop.org/>\n"
+                     "Copyright (C) 2013-2014 Laurent Raufaste"
+                     " <http://glop.org/>\n"
                      .format(VERSION)),
         epilog=epilog,
         formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -992,10 +674,11 @@ def get_ignored_apps():
     ignored_apps = []
 
     # Is the config file there ?
-    if config.read(os.environ['HOME'] + '/.mackup.cfg'):
-        # Is the "Ignored Applications" in the cfg file ?
-        if config.has_section('Ignored Applications'):
-            ignored_apps = config.options('Ignored Applications')
+    path_to_cfg = "{}/{}".format(os.environ['HOME'], MACKUP_CONFIG_FILE)
+    if config.read(path_to_cfg):
+        # Is the "[applications_to_ignore]" in the cfg file ?
+        if config.has_section('applications_to_ignore'):
+            ignored_apps = config.options('applications_to_ignore')
 
     return set(ignored_apps)
 
@@ -1005,24 +688,28 @@ def get_allowed_apps():
     Get the list of applications allowed in the config file
 
     Returns:
-        (set) list of applciation names to backup
+        (list) list of application names to backup
     """
+
+    # Instantiate the app db
+    app_db = ApplicationsDatabase()
 
     # If a config file exists, grab it and parser it
     config = configparser.SafeConfigParser(allow_no_value=True)
 
     # We allow all by default
-    allowed_apps = set(SUPPORTED_APPS)
+    allowed_apps = app_db.get_app_names()
 
     # Is the config file there ?
-    if config.read(os.environ['HOME'] + '/.mackup.cfg'):
-        # Is the "Allowed Applications" in the cfg file ?
-        if config.has_section('Allowed Applications'):
+    path_to_cfg = "{}/{}".format(os.environ['HOME'], MACKUP_CONFIG_FILE)
+    if config.read(path_to_cfg):
+        # Is the "[applications_to_sync]" section in the cfg file ?
+        if config.has_section('applications_to_sync'):
             # Reset allowed apps to include only the user-defined
-            allowed_apps = set()
-            for app_name in SUPPORTED_APPS:
-                if app_name.lower() in config.options('Allowed Applications'):
-                    allowed_apps.add(app_name)
+            allowed_apps = []
+            for app_name in app_db.get_app_names():
+                if app_name in config.options('applications_to_sync'):
+                    allowed_apps.append(app_name)
 
     return allowed_apps
 
@@ -1035,13 +722,13 @@ def get_apps_to_backup():
     Returns:
         (set) List of application names to backup
     """
-    apps_to_backup = set()
+    apps_to_backup = []
     apps_to_ignore = get_ignored_apps()
     apps_to_allow = get_allowed_apps()
 
     for app_name in apps_to_allow:
-        if app_name.lower() not in apps_to_ignore:
-            apps_to_backup.add(app_name)
+        if app_name not in apps_to_ignore:
+            apps_to_backup.append(app_name)
 
     return apps_to_backup
 
@@ -1150,6 +837,7 @@ def main():
     args = parse_cmdline_args()
 
     mackup = Mackup()
+    app_db = ApplicationsDatabase()
 
     if args.mode == BACKUP_MODE:
         # Check the env where the command is being run
@@ -1157,15 +845,15 @@ def main():
 
         # Backup each application
         for app_name in get_apps_to_backup():
-            app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
+            app = ApplicationProfile(mackup, app_db.get_files(app_name))
             app.backup()
 
     elif args.mode == RESTORE_MODE:
         # Check the env where the command is being run
         mackup.check_for_usable_restore_env()
 
-        for app_name in SUPPORTED_APPS:
-            app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
+        for app_name in app_db.get_app_names():
+            app = ApplicationProfile(mackup, app_db.get_files(app_name))
             app.restore()
 
     elif args.mode == UNINSTALL_MODE:
@@ -1177,8 +865,8 @@ def main():
                    " by Mackup will be unlinked and moved back to their"
                    " original place, in your home folder.\n"
                    "Are you sure ?"):
-            for app_name in SUPPORTED_APPS:
-                app = ApplicationProfile(mackup, SUPPORTED_APPS[app_name])
+            for app_name in app_db.get_app_names():
+                app = ApplicationProfile(mackup, app_db.get_files(app_name))
                 app.uninstall()
 
             # Delete the Mackup folder in Dropbox
@@ -1189,10 +877,6 @@ def main():
             print ("\n"
                    "All your files have been put back into place. You can now"
                    " safely uninstall Mackup.\n"
-                   "If you installed it by hand, you should only have to"
-                   " launch this command:\n"
-                   "\n"
-                   "\tsudo rm {}\n"
                    "\n"
                    "Thanks for using Mackup !"
                    .format(os.path.abspath(__file__)))

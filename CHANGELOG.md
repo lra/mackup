@@ -3,6 +3,7 @@
 ## WIP
 
 - Fixed pip support (thx @lachlancooper)
+- Added XChat support (thx @scottydelta)
 
 ## Mackup 0.5.9
 

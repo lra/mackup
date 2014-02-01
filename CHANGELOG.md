@@ -8,6 +8,8 @@
 - Fixed pip support (thx @lachlancooper)
 - Added XChat support (thx @scottydelta)
 - Removing Ember support, it does not like file links
+- Homebrew fixes
+- Doc updates
 
 ## Mackup 0.5.9
 

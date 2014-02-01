@@ -6,12 +6,6 @@ import os.path
 try:
     import mackup.main
 except ImportError:
-    # Debug info for Homebrew
-    print "HOMEBREW DEBUG sys.path"
-    print sys.path
-    print "HOMEBREW DEBUG __file__"
-    print __file__
-
     # If Mackup is not installed globally, we are looking for the mackup module
     # at the same path level as the bin folder where this script is in.
     # In this case, let's dynamically add the parent path to the python path

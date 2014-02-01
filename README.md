@@ -268,52 +268,6 @@ folder and destroy the Mackup folder in Dropbox.
 You can add your favorite application by forking it and doing a
 [Pull Request](https://help.github.com/articles/using-pull-requests).
 
-## I don't understand, how can I get support for my beloved app ?
-
-Open a [new issue](https://github.com/lra/mackup/issues).
-
-## How can I tell Mackup to sync only one or two application ?
-
-In your home folder, create a file named `.mackup.cfg` and add the application
-names to allow in the `Allowed Applications` section, one by line.
-
-```ini
-# Example, to only sync SSH and Adium:
-[Allowed Applications]
-SSH
-Adium
-```
-
-A [sample](.mackup.cfg) of this file is available for download:
-
-```bash
-cd
-curl -o .mackup.cfg https://raw.github.com/lra/mackup/master/.mackup.cfg
-```
-Be careful, if you download it like this, Mackup will only try to sync SSH and
-Adium from now on !
-
-## How can I tell Mackup to not sync an application ?
-
-In your home folder, create a file named `.mackup.cfg` and add the application
-names to ignore in the `Ignored Applications` section, one by line.
-
-```ini
-# Example, to not sync SSH and Adium:
-[Ignored Applications]
-SSH
-Adium
-```
-
-A [sample](.mackup.cfg) of this file is available for download:
-
-```bash
-cd
-curl -o .mackup.cfg https://raw.github.com/lra/mackup/master/.mackup.cfg
-```
-Be careful, if you download it like this, Mackup will ignore SSH and Adium from
-now on !
-
 ## Why did you do this ?!
 
 Yesterday, I had a talk with [Zach Zaro](http://zacharyzaro.com/), complaining
@@ -350,3 +304,7 @@ And it's [GPL](http://www.gnu.org/licenses/gpl.html) of course.
 ## What's up with the weird name ?
 
 Mackup is just a contraction of Mac and Backup, I suck at naming stuff, ok.
+
+## Where can I find more information ?
+
+In the [doc](doc) directory.

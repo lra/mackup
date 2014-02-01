@@ -12,8 +12,15 @@ except ImportError:
     bin_dir_path = os.path.dirname(os.path.realpath(__file__))
     parent_dir_path = os.path.dirname(bin_dir_path)
     sys.path.append(parent_dir_path)
-    import mackup.main
-
+    try:
+        import mackup.main
+    except ImportError:
+        # We are being run on a half-backed system (*cough* brew bot *cough*)
+        # Let's hack our way in
+        hacky_packages_path = os.path.join(parent_dir_path,
+                                           'lib/python2.7/site-packages')
+        sys.path.append(hacky_packages_path)
+        import mackup.main
 
 if __name__ == '__main__':
     mackup.main.main()

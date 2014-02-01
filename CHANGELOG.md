@@ -2,6 +2,9 @@
 
 ## WIP
 
+## Mackup 0.6
+
+- Added support for custom applications
 - Fixed pip support (thx @lachlancooper)
 - Added XChat support (thx @scottydelta)
 - Removing Ember support, it does not like file links

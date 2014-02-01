@@ -46,7 +46,7 @@ except ImportError:
 
 
 # Current version
-VERSION = '0.5.9'
+VERSION = '0.6'
 
 # Mode used to backup files to Dropbox
 BACKUP_MODE = 'backup'

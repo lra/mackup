@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """
 Keep your application settings in sync.
 

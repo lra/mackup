@@ -98,7 +98,8 @@ class ApplicationsDatabase(object):
         if os.path.isdir(custom_apps_dir):
             for filename in os.listdir(custom_apps_dir):
                 if filename.endswith('.cfg'):
-                    config_files.append(os.path.join(custom_apps_dir, filename))
+                    config_files.append(os.path.join(custom_apps_dir,
+                                                     filename))
 
         # Build the dict that will contain the properties of each application
         self.apps = dict()

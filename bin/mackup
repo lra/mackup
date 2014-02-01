@@ -22,5 +22,6 @@ except ImportError:
         sys.path.append(hacky_packages_path)
         import mackup.main
 
+
 if __name__ == '__main__':
     mackup.main.main()

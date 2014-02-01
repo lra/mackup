@@ -46,10 +46,6 @@ unzip mackup.zip
 
 # Run it without the need to install it
 ./mackup-master/bin/mackup -h
-
-# You can also install it for good, but it's dirty (no easy uninstall)
-cd mackup-master
-python setup.py install
 ```
 
 ## Upgrade

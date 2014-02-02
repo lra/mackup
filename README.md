@@ -183,6 +183,7 @@ folder and destroy the Mackup folder in Dropbox.
   - [Light Table](http://www.lighttable.com/)
   - [LimeChat](http://limechat.net/mac/)
   - [LittleSnitch](http://www.obdev.at/products/littlesnitch/)
+  - [Livestreamer](http://livestreamer.tanuki.se/)
   - [MacOSX](http://www.apple.com/osx/)
   - [MacVim](https://code.google.com/p/macvim/)
   - [MagicPrefs](http://magicprefs.com/)

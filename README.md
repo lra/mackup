@@ -180,6 +180,7 @@ folder and destroy the Mackup folder in Dropbox.
   - [KeyRemap4MacBook](http://pqrs.org/macosx/keyremap4macbook/)
   - [LaTeXiT](http://www.chachatelier.fr/latexit/latexit-home.php?lang=en)
   - [LaunchBar](http://www.obdev.at/products/launchbar/index.html)
+  - [Leaf](http://www.rockysandstudio.com/apps/leaf)
   - [Light Table](http://www.lighttable.com/)
   - [LimeChat](http://limechat.net/mac/)
   - [LittleSnitch](http://www.obdev.at/products/littlesnitch/)

@@ -209,6 +209,7 @@ folder and destroy the Mackup folder in Dropbox.
   - [Pentadactyl](http://5digits.org/pentadactyl/)
   - [PhpStorm 6](http://www.jetbrains.com/phpstorm/)
   - [PIP](http://www.pip-installer.org/)
+  - [Pixelmator](http://www.pixelmator.com/)
   - [PokerStars](http://www.pokerstars.com/)
   - [PopClip](http://pilotmoon.com/popclip/)
   - [Pow](http://pow.cx/)

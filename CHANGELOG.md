@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for Google Chrome (thx @vitorgalvao)
+
 ## Mackup 0.6
 
 - Added support for custom applications

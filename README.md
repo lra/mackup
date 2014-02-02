@@ -166,6 +166,7 @@ folder and destroy the Mackup folder in Dropbox.
   - [Gitbox](http://gitboxapp.com/)
   - [Gmail Notifr](http://ashchan.com/projects/gmail-notifr)
   - [GnuPG](http://www.gnupg.org/)
+  - [Google Chrome](https://www.google.com/chrome)
   - [Hands Off!](http://www.oneperiodic.com/products/handsoff/)
   - [Heroku](https://www.heroku.com/)
   - [Hexels](http://hexraystudios.com/hexels/)

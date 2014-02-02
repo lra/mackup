@@ -134,6 +134,7 @@ folder and destroy the Mackup folder in Dropbox.
   - [Caffeine](http://lightheadsw.com/caffeine/)
   - [Chef](http://www.opscode.com/chef/)
   - [Chicken](http://sourceforge.net/projects/chicken/)
+  - [Clear](http://realmacsoftware.com/clear)
   - [Clementine](http://www.clementine-player.org/)
   - [ClipMenu](http://www.clipmenu.com/)
   - [CloudApp](http://getcloudapp.com/)

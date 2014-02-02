@@ -250,6 +250,7 @@ folder and destroy the Mackup folder in Dropbox.
   - [Tower](http://www.git-tower.com/)
   - [Transmission](http://www.transmissionbt.com/)
   - [Transmit](http://panic.com/transmit/)
+  - [Tweetbot](http://tapbots.com/software/tweetbot/mac/)
   - [Twitterrific](http://twitterrific.com/)
   - [uTorrent](http://www.utorrent.com/)
   - [Ventrilo](http://www.ventrilo.com/)

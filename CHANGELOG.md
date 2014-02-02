@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for Tweetbot (thx @vitorgalvao)
+
 ## Mackup 0.6
 
 - Added support for custom applications

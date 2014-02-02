@@ -215,6 +215,7 @@ folder and destroy the Mackup folder in Dropbox.
   - [PyPI](https://pypi.python.org/pypi)
   - [Quicksilver](http://qsapp.com/)
   - [Rails](http://rubyonrails.org/)
+  - [Readkit](http://readkitapp.com/)
   - [rTorrent](http://libtorrent.rakshasa.no/)
   - [Ruby Version](https://gist.github.com/fnichol/1912050)
   - [Ruby](http://ruby-lang.org/)

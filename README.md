@@ -229,6 +229,7 @@ folder and destroy the Mackup folder in Dropbox.
   - [SHSH Blobs](http://en.wikipedia.org/wiki/SHSH_blob)
   - [Shuttle](http://fitztrev.github.io/shuttle/)
   - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
+  - [Sketch](http://www.bohemiancoding.com/sketch/)
   - [Skim](http://skim-app.sourceforge.net/)
   - [Skitch](http://evernote.com/skitch/)
   - [Skype](http://www.skype.com/)

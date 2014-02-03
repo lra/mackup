@@ -1,11 +1,11 @@
 import distutils.core
 
-import mackup.main
+import mackup.constants
 
 
 distutils.core.setup(
     name='Mackup',
-    version=mackup.main.VERSION,
+    version=mackup.constants.VERSION,
     author='Laurent Raufaste',
     author_email='analogue@glop.org',
     url='https://github.com/lra/mackup',

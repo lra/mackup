@@ -38,146 +38,21 @@ try:
 except ImportError:
     import ConfigParser as configparser
 
-
-#############
-# Constants #
-#############
-
-
-# Current version
-VERSION = '0.6'
-
-# Mode used to backup files to Dropbox
-BACKUP_MODE = 'backup'
-
-# Mode used to restore files from Dropbox
-RESTORE_MODE = 'restore'
-
-# Mode used to remove Mackup and reset and config file
-UNINSTALL_MODE = 'uninstall'
-
-# Support platforms
-PLATFORM_DARWIN = 'Darwin'
-PLATFORM_LINUX = 'Linux'
-
-# Directory containing the application configs
-APPS_DIR = 'applications'
-
-# Default Mackup backup path where it stores its files in Dropbox
-MACKUP_BACKUP_PATH = 'Mackup'
-
-# Mackup config file
-MACKUP_CONFIG_FILE = '.mackup.cfg'
-CUSTOM_APPS_DIR = '.mackup'
+import appsdb
+from constants import VERSION
+from constants import BACKUP_MODE
+from constants import RESTORE_MODE
+from constants import UNINSTALL_MODE
+from constants import PLATFORM_DARWIN
+from constants import PLATFORM_LINUX
+from constants import MACKUP_BACKUP_PATH
+from constants import MACKUP_CONFIG_FILE
+from constants import CUSTOM_APPS_DIR
 
 
 ###########
 # Classes #
 ###########
-
-
-class ApplicationsDatabase(object):
-    """Database containing all the configured applications"""
-
-    def __init__(self):
-        """
-        Create a ApplicationsDatabase instance
-        """
-        # Configure the config parser
-        apps_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)),
-                                APPS_DIR)
-        custom_apps_dir = os.path.join(os.environ['HOME'], CUSTOM_APPS_DIR)
-
-        # Build the list of stock application config files
-        config_files = []
-        for filename in os.listdir(apps_dir):
-            if filename.endswith('.cfg'):
-                config_files.append(os.path.join(apps_dir, filename))
-
-        # Append the list of custom application config files
-        if os.path.isdir(custom_apps_dir):
-            for filename in os.listdir(custom_apps_dir):
-                if filename.endswith('.cfg'):
-                    config_files.append(os.path.join(custom_apps_dir,
-                                                     filename))
-
-        # Build the dict that will contain the properties of each application
-        self.apps = dict()
-
-        for config_file in config_files:
-            config = configparser.SafeConfigParser(allow_no_value=True)
-
-            # Needed to not lowercase the configuration_files in the ini files
-            config.optionxform = str
-
-            if config.read(config_file):
-                # Get the filename without the directory name
-                filename = os.path.basename(config_file)
-                # The app name is the cfg filename with the extension
-                app_name = filename[:-len('.cfg')]
-
-                # Start building a dict for this app
-                self.apps[app_name] = dict()
-
-                # Add the fancy name for the app, for display purpose
-                app_pretty_name = config.get('application', 'name')
-                self.apps[app_name]['name'] = app_pretty_name
-
-                # Add the configuration files to sync
-                self.apps[app_name]['configuration_files'] = set()
-                if config.has_section('configuration_files'):
-                    for cf in config.options('configuration_files'):
-                        self.apps[app_name]['configuration_files'].add(cf)
-
-    def get_name(self, name):
-        """
-        Return the fancy name of an application
-
-        Args:
-            name (str)
-
-        Returns:
-            str
-        """
-        return self.apps[name]['name']
-
-    def get_files(self, name):
-        """
-        Return the list of config files of an application
-
-        Args:
-            name (str)
-
-        Returns:
-            list(str)
-        """
-        return list(self.apps[name]['configuration_files'])
-
-    def get_app_names(self):
-        """
-        Return the list of application names that are available in the database
-
-        Returns:
-            list(str)
-        """
-        app_names = []
-        for name in self.apps:
-            app_names.append(name)
-
-        return app_names
-
-    def get_pretty_app_names(self):
-        """
-        Return the list of pretty app names that are available in the database
-
-        Returns:
-            list(str)
-        """
-        pretty_app_names = []
-        for app_name in self.get_app_names():
-            pretty_app_names.append(self.get_name(app_name))
-
-        return pretty_app_names
 
 
 class ApplicationProfile(object):
@@ -612,7 +487,7 @@ def parse_cmdline_args():
         (argparse.Namespace)
     """
 
-    app_db = ApplicationsDatabase()
+    app_db = appsdb.ApplicationsDatabase()
 
     # Format some epilog text
     epilog = "Supported applications:\n"
@@ -692,7 +567,7 @@ def get_allowed_apps():
     """
 
     # Instantiate the app db
-    app_db = ApplicationsDatabase()
+    app_db = appsdb.ApplicationsDatabase()
 
     # If a config file exists, grab it and parser it
     config = configparser.SafeConfigParser(allow_no_value=True)
@@ -837,7 +712,7 @@ def main():
     args = parse_cmdline_args()
 
     mackup = Mackup()
-    app_db = ApplicationsDatabase()
+    app_db = appsdb.ApplicationsDatabase()
 
     if args.mode == BACKUP_MODE:
         # Check the env where the command is being run

@@ -1,3 +1,4 @@
+"""System static utilities being used by the modules"""
 import argparse
 import base64
 import os

@@ -1,3 +1,8 @@
+"""
+The Mackup class is keeping all the state that mackup needs to keep during its
+runtime. It also provides easy to use interface that is used by the Mackup UI.
+The only UI for now is the command line.
+"""
 import os
 import shutil
 import tempfile

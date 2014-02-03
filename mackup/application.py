@@ -1,3 +1,7 @@
+"""
+An Application Profile contains all the information about an application in
+Mackup. Name, files, ...
+"""
 import os
 
 from .mackup import Mackup

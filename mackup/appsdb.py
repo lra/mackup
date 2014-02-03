@@ -1,3 +1,7 @@
+"""
+The Applications Database provides an easy to use interface to load application
+data from the Mackup Database (files)
+"""
 import os
 
 try:

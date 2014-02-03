@@ -326,9 +326,9 @@ def is_process_running(process_name):
 
     # On systems with pgrep, check if the given process is running
     if os.path.isfile('/usr/bin/pgrep'):
-        DEVNULL = open(os.devnull, 'wb')
+        dev_null = open(os.devnull, 'wb')
         returncode = subprocess.call(['/usr/bin/pgrep', process_name],
-                                     stdout=DEVNULL)
+                                     stdout=dev_null)
         is_running = bool(returncode == 0)
 
     return is_running

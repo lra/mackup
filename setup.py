@@ -1,3 +1,4 @@
+"""Setup file to automate the install of Mackup in the Python environment"""
 import distutils.core
 
 import mackup.constants

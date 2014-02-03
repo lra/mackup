@@ -6,8 +6,8 @@ except ImportError:
     import ConfigParser as configparser
 
 
-from constants import APPS_DIR
-from constants import CUSTOM_APPS_DIR
+from .constants import APPS_DIR
+from .constants import CUSTOM_APPS_DIR
 
 
 class ApplicationsDatabase(object):

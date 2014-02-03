@@ -1,7 +1,7 @@
 import os
 
-from mackup import Mackup
-import utils
+from .mackup import Mackup
+from . import utils
 
 
 class ApplicationProfile(object):

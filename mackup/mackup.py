@@ -6,8 +6,8 @@ try:
 except ImportError:
     import ConfigParser as configparser
 
-import constants
-import utils
+from . import constants
+from . import utils
 
 
 class Mackup(object):

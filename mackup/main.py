@@ -18,11 +18,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 import os
 
-import appsdb
-import application
-import constants
-import mackup
-import utils
+from .appsdb import ApplicationsDatabase
+from .application import ApplicationProfile
+from .constants import BACKUP_MODE, RESTORE_MODE, UNINSTALL_MODE
+from .mackup import Mackup
+from . import utils
 
 
 def main():
@@ -31,29 +31,27 @@ def main():
     # Get the command line arg
     args = utils.parse_cmdline_args()
 
-    mckp = mackup.Mackup()
-    app_db = appsdb.ApplicationsDatabase()
+    mckp = Mackup()
+    app_db = ApplicationsDatabase()
 
-    if args.mode == constants.BACKUP_MODE:
+    if args.mode == BACKUP_MODE:
         # Check the env where the command is being run
         mckp.check_for_usable_backup_env()
 
         # Backup each application
         for app_name in utils.get_apps_to_backup():
-            app = application.ApplicationProfile(mckp,
-                                                 app_db.get_files(app_name))
+            app = ApplicationProfile(mckp, app_db.get_files(app_name))
             app.backup()
 
-    elif args.mode == constants.RESTORE_MODE:
+    elif args.mode == RESTORE_MODE:
         # Check the env where the command is being run
         mckp.check_for_usable_restore_env()
 
         for app_name in app_db.get_app_names():
-            app = application.ApplicationProfile(mckp,
-                                                 app_db.get_files(app_name))
+            app = ApplicationProfile(mckp, app_db.get_files(app_name))
             app.restore()
 
-    elif args.mode == constants.UNINSTALL_MODE:
+    elif args.mode == UNINSTALL_MODE:
         # Check the env where the command is being run
         mckp.check_for_usable_restore_env()
 
@@ -63,9 +61,7 @@ def main():
                          " to their original place, in your home folder.\n"
                          "Are you sure ?"):
             for app_name in app_db.get_app_names():
-                app = application.ApplicationProfile(mckp,
-                                                     app_db.get_files(app_name)
-                                                     )
+                app = ApplicationProfile(mckp, app_db.get_files(app_name))
                 app.uninstall()
 
             # Delete the Mackup folder in Dropbox

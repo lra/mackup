@@ -11,8 +11,8 @@ try:
 except ImportError:
     import ConfigParser as configparser
 
-import appsdb
-import constants
+from . import appsdb
+from . import constants
 
 
 def confirm(question):

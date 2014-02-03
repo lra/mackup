@@ -64,8 +64,8 @@ class ApplicationsDatabase(object):
                 # Add the configuration files to sync
                 self.apps[app_name]['configuration_files'] = set()
                 if config.has_section('configuration_files'):
-                    for cf in config.options('configuration_files'):
-                        self.apps[app_name]['configuration_files'].add(cf)
+                    for paths in config.options('configuration_files'):
+                        self.apps[app_name]['configuration_files'].add(paths)
 
     def get_name(self, name):
         """

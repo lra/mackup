@@ -230,8 +230,8 @@ def get_dropbox_folder_location():
         (str) Full path to the current Dropbox folder
     """
     host_db_path = os.environ['HOME'] + '/.dropbox/host.db'
-    with open(host_db_path, 'r') as f:
-        data = f.read().split()
+    with open(host_db_path, 'r') as f_hostdb:
+        data = f_hostdb.read().split()
     dropbox_home = base64.b64decode(data[1])
 
     return dropbox_home

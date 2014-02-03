@@ -2,7 +2,7 @@ import os
 import tempfile
 import unittest
 
-import mackup.main as mackup
+from mackup import utils
 
 
 class TestMackup(unittest.TestCase):
@@ -17,7 +17,7 @@ class TestMackup(unittest.TestCase):
         assert os.path.isfile(tfpath)
 
         # Check if mackup can really delete it
-        mackup.delete(tfpath)
+        utils.delete(tfpath)
         assert not os.path.exists(tfpath)
 
     def test_delete_folder_recursively(self):
@@ -44,7 +44,7 @@ class TestMackup(unittest.TestCase):
         assert os.path.isfile(subfilepath)
 
         # Check if mackup can really delete it
-        mackup.delete(tfpath)
+        utils.delete(tfpath)
         assert not os.path.exists(tfpath)
         assert not os.path.exists(filepath)
         assert not os.path.exists(subfolder_path)
@@ -68,13 +68,13 @@ class TestMackup(unittest.TestCase):
         assert not os.path.exists(dstfile)
 
         # Check if mackup can copy it
-        mackup.copy(srcfile, dstfile)
+        utils.copy(srcfile, dstfile)
         assert os.path.isfile(srcfile)
         assert os.path.isdir(dstpath)
         assert os.path.exists(dstfile)
 
         # Let's clean up
-        mackup.delete(dstpath)
+        utils.delete(dstpath)
 
     def test_link_file(self):
         # Create a tmp file
@@ -94,11 +94,11 @@ class TestMackup(unittest.TestCase):
         assert not os.path.exists(dstfile)
 
         # Check if mackup can link it and the link points to the correct place
-        mackup.link(srcfile, dstfile)
+        utils.link(srcfile, dstfile)
         assert os.path.isfile(srcfile)
         assert os.path.isdir(dstpath)
         assert os.path.exists(dstfile)
         assert os.readlink(dstfile) == srcfile
 
         # Let's clean up
-        mackup.delete(dstpath)
+        utils.delete(dstpath)

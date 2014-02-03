@@ -18,11 +18,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 import os
 
-from constants import BACKUP_MODE
-from constants import RESTORE_MODE
-from constants import UNINSTALL_MODE
 import appsdb
 import application
+import constants
 import mackup
 import utils
 
@@ -36,7 +34,7 @@ def main():
     mckp = mackup.Mackup()
     app_db = appsdb.ApplicationsDatabase()
 
-    if args.mode == BACKUP_MODE:
+    if args.mode == constants.BACKUP_MODE:
         # Check the env where the command is being run
         mckp.check_for_usable_backup_env()
 
@@ -46,7 +44,7 @@ def main():
                                                  app_db.get_files(app_name))
             app.backup()
 
-    elif args.mode == RESTORE_MODE:
+    elif args.mode == constants.RESTORE_MODE:
         # Check the env where the command is being run
         mckp.check_for_usable_restore_env()
 
@@ -55,7 +53,7 @@ def main():
                                                  app_db.get_files(app_name))
             app.restore()
 
-    elif args.mode == UNINSTALL_MODE:
+    elif args.mode == constants.UNINSTALL_MODE:
         # Check the env where the command is being run
         mckp.check_for_usable_restore_env()
 

@@ -23,9 +23,9 @@ class Mackup(object):
         try:
             self.dropbox_folder = utils.get_dropbox_folder_location()
         except IOError:
-            utils.error(("Unable to find the Dropbox folder. If Dropbox is not"
-                         " installed and running, go for it on"
-                         " <http://www.dropbox.com/>"))
+            utils.error("Unable to find the Dropbox folder. If Dropbox is not"
+                        " installed and running, go for it on"
+                        " <http://www.dropbox.com/>")
 
         self.mackup_folder = os.path.join(self.dropbox_folder,
                                           constants.MACKUP_BACKUP_PATH)
@@ -41,9 +41,9 @@ class Mackup(object):
 
         # Do we have a home folder ?
         if not os.path.isdir(self.dropbox_folder):
-            utils.error(("Unable to find the Dropbox folder. If Dropbox is not"
-                         " installed and running, go for it on"
-                         " <http://www.dropbox.com/>"))
+            utils.error("Unable to find the Dropbox folder. If Dropbox is not"
+                        " installed and running, go for it on"
+                        " <http://www.dropbox.com/>")
 
         # Do we have an old config file ?
         config = configparser.SafeConfigParser(allow_no_value=True)
@@ -56,25 +56,25 @@ class Mackup(object):
             old_sections = ['Allowed Applications', 'Ignored Applications']
             for old_section in old_sections:
                 if config.has_section(old_section):
-                    utils.error(("Old config file detected. Aborting.\n"
-                                 "\n"
-                                 "An old section (e.g. [Allowed Applications]"
-                                 " or [Ignored Applications] has been detected"
-                                 " in your {} file.\n"
-                                 "I'd rather do nothing than do something you"
-                                 " do not want me to do.\n"
-                                 "\n"
-                                 "Please read the up to date documentation on"
-                                 " <https://github.com/lra/mackup> and migrate"
-                                 " your configuration file."
-                                 .format(path_to_cfg)))
+                    utils.error("Old config file detected. Aborting.\n"
+                                "\n"
+                                "An old section (e.g. [Allowed Applications]"
+                                " or [Ignored Applications] has been detected"
+                                " in your {} file.\n"
+                                "I'd rather do nothing than do something you"
+                                " do not want me to do.\n"
+                                "\n"
+                                "Please read the up to date documentation on"
+                                " <https://github.com/lra/mackup> and migrate"
+                                " your configuration file."
+                                .format(path_to_cfg))
 
         # Is Sublime Text running ?
         #if is_process_running('Sublime Text'):
-        #    error(("Sublime Text is running. It is known to cause problems"
-        #           " when Sublime Text is running while I backup or restore"
-        #           " its configuration files. Please close Sublime Text and"
-        #           " run me again."))
+        #    error("Sublime Text is running. It is known to cause problems"
+        #          " when Sublime Text is running while I backup or restore"
+        #          " its configuration files. Please close Sublime Text and"
+        #          " run me again.")
 
     def check_for_usable_backup_env(self):
         """Check if the current env can be used to back up files"""

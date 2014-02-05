@@ -34,6 +34,11 @@ class Mackup(object):
     def _check_for_usable_environment(self):
         """Check if the current env is usable and has everything's required"""
 
+        # Do not let the user run Mackup as root
+        if os.geteuid() == 0:
+            utils.error("Running Mackup as a superuser is useless and"
+                        " dangerous. Don't do it!")
+
         # Do we have a home folder ?
         if not os.path.isdir(self.dropbox_folder):
             utils.error(("Unable to find the Dropbox folder. If Dropbox is not"

@@ -3,6 +3,8 @@
 ## WIP
 
 - Added support for Livestreamer (thx @vitorgalvao)
+- Prevent Mackup to be run as a superuser
+- Code cleanup
 
 ## Mackup 0.6
 

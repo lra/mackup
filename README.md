@@ -130,6 +130,7 @@ folder and destroy the Mackup folder in Dropbox.
   - [BetterTouchTool](http://blog.boastr.net/)
   - [BibDesk](http://bibdesk.sourceforge.net/)
   - [Boto](https://github.com/boto/boto)
+  - [Brackets](http://brackets.io/)
   - [Bundler](http://bundler.io)
   - [Byobu](http://byobu.co/)
   - [Caffeine](http://lightheadsw.com/caffeine/)

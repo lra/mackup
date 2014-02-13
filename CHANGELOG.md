@@ -5,6 +5,7 @@
 - Added support for Livestreamer (thx @vitorgalvao)
 - Prevent Mackup to be run as a superuser
 - Code cleanup
+- Added support for Brackets (thx @vitorgalvao)
 
 ## Mackup 0.6
 

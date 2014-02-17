@@ -1,7 +1,7 @@
 import os
 import tempfile
 import unittest
-import mock
+import stat
 
 # from unittest.mock import patch
 
@@ -100,6 +100,36 @@ class TestMackup(unittest.TestCase):
         # Let's clean up
         utils.delete(dstpath)
 
+    def test_copy_fail(self):
+        # Create a tmp FIFO file
+        tf = tempfile.NamedTemporaryFile()
+        srcfile = tf.name
+        tf.close()
+        os.mkfifo(srcfile)
+
+        # Create a tmp folder
+        dstpath = tempfile.mkdtemp()
+        # Set the destination filename
+        dstfile = os.path.join(dstpath, "subfolder", os.path.basename(srcfile))
+
+        # Make sure the source file and destination folder exist and the
+        # destination file doesn't yet exist
+        assert not os.path.isfile(srcfile)
+        assert stat.S_ISFIFO(os.stat(srcfile).st_mode)
+        assert os.path.isdir(dstpath)
+        assert not os.path.exists(dstfile)
+
+        # Check if mackup can copy it
+        self.assertRaises(ValueError, utils.copy, srcfile, dstfile)
+        assert not os.path.isfile(srcfile)
+        assert stat.S_ISFIFO(os.stat(srcfile).st_mode)
+        assert os.path.isdir(dstpath)
+        assert not os.path.exists(dstfile)
+
+        # Let's clean up
+        utils.delete(srcfile)
+        utils.delete(dstpath)
+
     def test_copy_dir(self):
         # Create a tmp folder
         srcpath = tempfile.mkdtemp()
@@ -115,6 +145,7 @@ class TestMackup(unittest.TestCase):
         # Set the destination filename
         srcpath_basename = os.path.basename(srcpath)
         dstfile = os.path.join(dstpath,
+                               'subfolder',
                                srcpath_basename,
                                os.path.basename(srcfile))
         # Make sure the source file and destination folder exist and the

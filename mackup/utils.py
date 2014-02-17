@@ -189,16 +189,29 @@ def parse_cmdline_args():
 
     app_db = appsdb.ApplicationsDatabase()
 
+    # Format the description text
+    description = ("Mackup {}\n"
+                   "Keep your application settings in sync.\n"
+                   "Copyright (C) 2013-2014 Laurent Raufaste"
+                   " <http://glop.org/>\n"
+                   .format(constants.VERSION))
+
     # Format some epilog text
-    epilog = "Mackup requires a fully synced Dropbox folder."
+    epilog = ("Mackup modes of action:\n"
+              " - backup: sync your conf files to Dropbox, use this the 1st"
+              " time you use Mackup.\n"
+              " - restore: link the conf files already in Dropbox on your "
+              " system, use it on any new system you use.\n"
+              " - uninstall: reset everything as it was before using Mackup.\n"
+              " - list: display a list of all supported applications.\n"
+              "\n"
+              "Mackup requires a fully synced Dropbox folder.")
+
+    help = "Required action mode for Mackup, see below for details."
 
     # Setup the global parser
     parser = argparse.ArgumentParser(
-        description=("Mackup {}\n"
-                     "Keep your application settings in sync.\n"
-                     "Copyright (C) 2013-2014 Laurent Raufaste"
-                     " <http://glop.org/>\n"
-                     .format(constants.VERSION)),
+        description=description,
         epilog=epilog,
         formatter_class=argparse.RawDescriptionHelpFormatter)
 
@@ -208,15 +221,7 @@ def parse_cmdline_args():
                                  constants.RESTORE_MODE,
                                  constants.UNINSTALL_MODE,
                                  constants.LIST_MODE],
-                        help=("Backup will sync your conf files to Dropbox,"
-                              " use this the 1st time you use Mackup.\n"
-                              "Restore will link the conf files already in"
-                              " Dropbox on your system, use it on any new"
-                              " system you use.\n"
-                              "Uninstall will reset everything as it was"
-                              " before using Mackup.\n"
-                              "List will display a list of all supported"
-                              " applications.\n"))
+                        help=help)
 
     # Parse the command line and return the parsed options
     return parser.parse_args()

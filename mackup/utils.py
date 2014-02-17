@@ -187,8 +187,6 @@ def parse_cmdline_args():
         (argparse.Namespace)
     """
 
-    app_db = appsdb.ApplicationsDatabase()
-
     # Format the description text
     description = ("Mackup {}\n"
                    "Keep your application settings in sync.\n"

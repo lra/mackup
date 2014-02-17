@@ -85,9 +85,7 @@ bin
 
 You can run mackup to see if they are listed
 ```bash
-$ mackup -h
-usage: mackup [-h] {backup,restore,uninstall}
-[...]
+$ mackup list
 Supported applications:
 [...]
  - my-files

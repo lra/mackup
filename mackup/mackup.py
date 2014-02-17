@@ -31,7 +31,7 @@ class Mackup(object):
                                           constants.MACKUP_BACKUP_PATH)
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
-    def _check_for_usable_environment(self):
+    def check_for_usable_environment(self):
         """Check if the current env is usable and has everything's required"""
 
         # Do not let the user run Mackup as root
@@ -78,12 +78,12 @@ class Mackup(object):
 
     def check_for_usable_backup_env(self):
         """Check if the current env can be used to back up files"""
-        self._check_for_usable_environment()
+        self.check_for_usable_environment()
         self.create_mackup_home()
 
     def check_for_usable_restore_env(self):
         """Check if the current env can be used to restore files"""
-        self._check_for_usable_environment()
+        self.check_for_usable_environment()
 
         if not os.path.isdir(self.mackup_folder):
             utils.error("Unable to find the Mackup folder: {}\n"

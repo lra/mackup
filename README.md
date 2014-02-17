@@ -61,6 +61,10 @@ Restore your application settings on a newly installed workstation.
 Revert any synced config file to its original state, and delete the Mackup
 folder in Dropbox. This will revert your system at pre-Mackup state.
 
+`mackup list`
+
+Display the list of applications supported by Mackup.
+
 `mackup -h`
 
 Get some help, obvious...

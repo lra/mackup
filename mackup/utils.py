@@ -190,10 +190,7 @@ def parse_cmdline_args():
     app_db = appsdb.ApplicationsDatabase()
 
     # Format some epilog text
-    epilog = "Supported applications:\n"
-    for app_name in sorted(app_db.get_app_names()):
-        epilog += " - {}\n".format(app_name)
-    epilog += "\n\nMackup requires a fully synced Dropbox folder."
+    epilog = "Mackup requires a fully synced Dropbox folder."
 
     # Setup the global parser
     parser = argparse.ArgumentParser(
@@ -209,14 +206,17 @@ def parse_cmdline_args():
     parser.add_argument("mode",
                         choices=[constants.BACKUP_MODE,
                                  constants.RESTORE_MODE,
-                                 constants.UNINSTALL_MODE],
+                                 constants.UNINSTALL_MODE,
+                                 constants.LIST_MODE],
                         help=("Backup will sync your conf files to Dropbox,"
                               " use this the 1st time you use Mackup.\n"
                               "Restore will link the conf files already in"
                               " Dropbox on your system, use it on any new"
                               " system you use.\n"
                               "Uninstall will reset everything as it was"
-                              " before using Mackup."))
+                              " before using Mackup.\n"
+                              "List will display a list of all supported"
+                              " applications.\n"))
 
     # Parse the command line and return the parsed options
     return parser.parse_args()

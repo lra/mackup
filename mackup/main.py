@@ -20,7 +20,11 @@ import os
 
 from .appsdb import ApplicationsDatabase
 from .application import ApplicationProfile
-from .constants import BACKUP_MODE, RESTORE_MODE, UNINSTALL_MODE
+from .constants import (BACKUP_MODE,
+                        RESTORE_MODE,
+                        UNINSTALL_MODE,
+                        LIST_MODE,
+                        VERSION)
 from .mackup import Mackup
 from . import utils
 
@@ -75,6 +79,17 @@ def main():
                    "\n"
                    "Thanks for using Mackup !"
                    .format(os.path.abspath(__file__)))
+
+    elif args.mode == LIST_MODE:
+        # Display the list of supported applications
+        mckp.check_for_usable_environment()
+        output = "Supported applications:\n"
+        for app_name in sorted(app_db.get_app_names()):
+            output += " - {}\n".format(app_name)
+        output += "\n"
+        output += ("{} applications supported in Mackup v{}"
+                   .format(len(app_db.get_app_names()), VERSION))
+        print output
     else:
         raise ValueError("Unsupported mode: {}".format(args.mode))
 

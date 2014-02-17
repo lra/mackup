@@ -2,6 +2,9 @@
 # Current version
 VERSION = '0.6'
 
+# Mode used to list supported applications
+LIST_MODE = 'list'
+
 # Mode used to backup files to Dropbox
 BACKUP_MODE = 'backup'
 

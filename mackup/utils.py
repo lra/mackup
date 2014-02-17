@@ -205,7 +205,7 @@ def parse_cmdline_args():
               "\n"
               "Mackup requires a fully synced Dropbox folder.")
 
-    help = "Required action mode for Mackup, see below for details."
+    help_msg = "Required action mode for Mackup, see below for details."
 
     # Setup the global parser
     parser = argparse.ArgumentParser(
@@ -219,7 +219,7 @@ def parse_cmdline_args():
                                  constants.RESTORE_MODE,
                                  constants.UNINSTALL_MODE,
                                  constants.LIST_MODE],
-                        help=help)
+                        help=help_msg)
 
     # Parse the command line and return the parsed options
     return parser.parse_args()

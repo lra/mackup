@@ -2,10 +2,14 @@
 
 ## WIP
 
+## Mackup 0.6.1
+
 - Added support for Livestreamer (thx @vitorgalvao)
+- Added support for Brackets (thx @vitorgalvao)
+- Added a list mode to list supported apps
+- Improved the help message
 - Prevent Mackup to be run as a superuser
 - Code cleanup
-- Added support for Brackets (thx @vitorgalvao)
 
 ## Mackup 0.6
 

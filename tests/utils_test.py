@@ -100,6 +100,41 @@ class TestMackup(unittest.TestCase):
         # Let's clean up
         utils.delete(dstpath)
 
+    def test_copy_dir(self):
+        # Create a tmp folder
+        srcpath = tempfile.mkdtemp()
+
+        # Create a tmp file
+        tf = tempfile.NamedTemporaryFile(delete=False, dir=srcpath)
+        srcfile = tf.name
+        tf.close()
+
+        # Create a tmp folder
+        dstpath = tempfile.mkdtemp()
+
+        # Set the destination filename
+        srcpath_basename = os.path.basename(srcpath)
+        dstfile = os.path.join(dstpath,
+                               srcpath_basename,
+                               os.path.basename(srcfile))
+        # Make sure the source file and destination folder exist and the
+        # destination file doesn't yet exist
+        assert os.path.isdir(srcpath)
+        assert os.path.isfile(srcfile)
+        assert os.path.isdir(dstpath)
+        assert not os.path.exists(dstfile)
+
+        # Check if mackup can copy it
+        utils.copy(srcfile, dstfile)
+        assert os.path.isdir(srcpath)
+        assert os.path.isfile(srcfile)
+        assert os.path.isdir(dstpath)
+        assert os.path.exists(dstfile)
+
+        # Let's clean up
+        utils.delete(srcpath)
+        utils.delete(dstpath)
+
     def test_link_file(self):
         # Create a tmp file
         tf = tempfile.NamedTemporaryFile(delete=False)

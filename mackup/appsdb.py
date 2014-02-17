@@ -21,28 +21,10 @@ class ApplicationsDatabase(object):
         """
         Create a ApplicationsDatabase instance
         """
-        # Configure the config parser
-        apps_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)),
-                                APPS_DIR)
-        custom_apps_dir = os.path.join(os.environ['HOME'], CUSTOM_APPS_DIR)
-
-        # Build the list of stock application config files
-        config_files = []
-        for filename in os.listdir(apps_dir):
-            if filename.endswith('.cfg'):
-                config_files.append(os.path.join(apps_dir, filename))
-
-        # Append the list of custom application config files
-        if os.path.isdir(custom_apps_dir):
-            for filename in os.listdir(custom_apps_dir):
-                if filename.endswith('.cfg'):
-                    config_files.append(os.path.join(custom_apps_dir,
-                                                     filename))
-
         # Build the dict that will contain the properties of each application
         self.apps = dict()
 
-        for config_file in config_files:
+        for config_file in ApplicationsDatabase.get_config_files():
             config = configparser.SafeConfigParser(allow_no_value=True)
 
             # Needed to not lowercase the configuration_files in the ini files
@@ -66,6 +48,35 @@ class ApplicationsDatabase(object):
                 if config.has_section('configuration_files'):
                     for paths in config.options('configuration_files'):
                         self.apps[app_name]['configuration_files'].add(paths)
+
+    @staticmethod
+    def get_config_files():
+        """
+        Return a list of configuration files describing the apps supported by
+        Mackup. The files return are absolute fullpath to those files.
+        e.g. /usr/lib/mackup/applications/bash.cfg
+
+        Returns:
+            - list of string
+        """
+        # Configure the config parser
+        apps_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)),
+                                APPS_DIR)
+        custom_apps_dir = os.path.join(os.environ['HOME'], CUSTOM_APPS_DIR)
+
+        # Build the list of stock application config files
+        config_files = []
+        for filename in os.listdir(apps_dir):
+            if filename.endswith('.cfg'):
+                config_files.append(os.path.join(apps_dir, filename))
+
+        # Append the list of custom application config files
+        if os.path.isdir(custom_apps_dir):
+            for filename in os.listdir(custom_apps_dir):
+                if filename.endswith('.cfg'):
+                    config_files.append(os.path.join(custom_apps_dir,
+                                                     filename))
+        return config_files
 
     def get_name(self, name):
         """

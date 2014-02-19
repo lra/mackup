@@ -12,3 +12,5 @@ Feel free to implement any of those ;)
 - Rollback any file that's not maintained by mackup anymore https://github.com/lra/mackup/issues/190
 - Ability to encrypt specific files, asked in #134 and #109
 - Setup some webpage
+- Ability to enable/disable an app (will update the cfg file)
+- Progress bar on syncing

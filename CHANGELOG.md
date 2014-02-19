@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Improved the test coverage
+
 ## Mackup 0.6.1
 
 - Added support for Livestreamer (thx @vitorgalvao)

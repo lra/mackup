@@ -1,6 +1,61 @@
 # Configuration
 
-## Only sync one or two application
+## Storage
+
+### Dropbox
+
+You can specify the storage type Mackup will use to store your configuration
+files.
+For now you have 3 options: `dropbox`, `google_drive` and `file_system`.
+If none is specified, Mackup will try to use the default: `dropbox`.
+With the `dropbox` storage engine, Mackup will automatically figure out your
+Dropbox folder.
+
+```ini
+[storage]
+engine = dropbox
+```
+
+### Google Drive
+
+If you choose the `google_drive` storage engine instead, Mackup will figure out
+where your Google Drive is and store your configuration files in it.
+
+```ini
+[storage]
+engine = google_drive
+```
+
+### File System
+
+If you want to specify another directory, you can use the `file_system` engine
+and Mackup won't try to detect any path for you: it will store your files where
+you explicitely told him to, using the `path` setting.
+The `path` can be absolute (from the `/` of your drive) or relative to your home
+directory.
+The `path` setting is mandatory when using the `file_system` engine.
+
+```ini
+[storage]
+engine = file_system
+path = some/folder/in/your/home
+# or path = /some/folder/in/your/root
+```
+
+### Custom Directory Name
+
+You can customize the directory name in which Mackup stores your file. By
+default, if not specified, Mackup creates a `Mackup` directory in the storage
+engine you chose, e.g. `~/Dropbox/Mackup`.
+
+```ini
+[storage]
+directory = Mackup
+```
+
+## Applications
+
+### Only sync one or two application
 
 In your home folder, create a file named `.mackup.cfg` and add the application
 names to allow in the `[applications_to_sync]` section, one by line.
@@ -19,7 +74,7 @@ in your home folder:
 $ cp mackup/doc/.mackup.cfg ~/
 ```
 
-## Don't sync an application
+### Don't sync an application
 
 In your home folder, create a file named `.mackup.cfg` and add the application
 names to ignore in the `[applications_to_ignore]` section, one by line.
@@ -38,14 +93,14 @@ in your home folder:
 $ cp mackup/doc/.mackup.cfg ~/
 ```
 
-## Get official support for an application
+### Get official support for an application
 
 Open a [new issue](https://github.com/lra/mackup/issues) and ask for it, or
 fork Mackup and open a
 [Pull Request](https://help.github.com/articles/using-pull-requests).
 The stock application configs are in the `mackup/applications` directory.
 
-## Add support for an application or any file or directory
+### Add support for an application or any file or directory
 
 You can customize the Mackup engine and add support for unsupported applications
 or just custom files and directories you'd like to sync.

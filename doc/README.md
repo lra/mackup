@@ -53,6 +53,17 @@ engine you chose, e.g. `~/Dropbox/Mackup`.
 directory = Mackup
 ```
 
+For example:
+
+```ini
+[storage]
+engine = file_system
+path = dotfiles
+directory = backup
+```
+
+This will store your files in the `~/dotfiles/backup` directory in your home.
+
 ## Applications
 
 ### Only sync one or two application

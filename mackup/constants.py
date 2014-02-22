@@ -31,6 +31,6 @@ MACKUP_CONFIG_FILE = '.mackup.cfg'
 CUSTOM_APPS_DIR = '.mackup'
 
 # Supported engines
-ENGINE_DROPBOX = u'dropbox'
-ENGINE_GDRIVE = u'google_drive'
-ENGINE_FS = u'file_system'
+ENGINE_DROPBOX = 'dropbox'
+ENGINE_GDRIVE = 'google_drive'
+ENGINE_FS = 'file_system'

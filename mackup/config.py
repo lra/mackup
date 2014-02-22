@@ -25,8 +25,8 @@ class Config(object):
     def __init__(self, filename=None):
         """
         Args:
-            filename (unicode): Optional filename of the config file. If empty,
-                                defaults to MACKUP_CONFIG_FILE
+            filename (str): Optional filename of the config file. If empty,
+                            defaults to MACKUP_CONFIG_FILE
         """
         assert isinstance(filename, str) or filename is None
 
@@ -52,9 +52,9 @@ class Config(object):
         ENGINE_DROPBOX, ENGINE_GDRIVE or ENGINE_FS.
 
         Returns:
-            unicode
+            str
         """
-        return unicode(self._engine)
+        return str(self._engine)
 
     @property
     def path(self):
@@ -63,9 +63,9 @@ class Config(object):
         directory.
 
         Returns:
-            unicode
+            str
         """
-        return unicode(self._path)
+        return str(self._path)
 
     @property
     def directory(self):
@@ -73,9 +73,9 @@ class Config(object):
         The name of the Mackup directory, named Mackup by default.
 
         Returns:
-            unicode
+            str
         """
-        return unicode(self._directory)
+        return str(self._directory)
 
     @property
     def fullpath(self):
@@ -84,14 +84,14 @@ class Config(object):
         files.
 
         Returns:
-            unicode
+            str
         """
-        return unicode(os.path.join(self.path, self.directory))
+        return str(os.path.join(self.path, self.directory))
 
     def _setup_parser(self, filename=None):
         """
         Args:
-            filename (unicode) or None
+            filename (str) or None
 
         Returns:
             SafeConfigParser
@@ -128,50 +128,50 @@ class Config(object):
     def _parse_engine(self):
         """
         Returns:
-            unicode
+            str
         """
         if self._parser.has_option('storage', 'engine'):
-            engine = unicode(self._parser.get('storage', 'engine'))
+            engine = str(self._parser.get('storage', 'engine'))
         else:
             engine = ENGINE_DROPBOX
 
-        assert isinstance(engine, unicode)
+        assert isinstance(engine, str)
 
         if engine not in [ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_FS]:
             raise ConfigError('Unknown storage engine: {}'.format(engine))
 
-        return unicode(engine)
+        return str(engine)
 
     def _parse_path(self):
         """
         Returns:
-            unicode
+            str
         """
         if self.engine == ENGINE_DROPBOX:
-            path = unicode(get_dropbox_folder_location())
+            path = str(get_dropbox_folder_location())
         elif self.engine == ENGINE_GDRIVE:
             path = get_google_drive_folder_location()
         elif self.engine == ENGINE_FS:
             if self._parser.has_option('storage', 'path'):
-                cfg_path = unicode(self._parser.get('storage', 'path'))
+                cfg_path = str(self._parser.get('storage', 'path'))
                 path = os.path.join(os.environ['HOME'], cfg_path)
             else:
                 raise ConfigError("The required 'path' can't be found while the"
                                   " 'file_system' engine is used.")
 
-        return unicode(path)
+        return str(path)
 
     def _parse_directory(self):
         """
         Returns:
-            unicode
+            str
         """
         if self._parser.has_option('storage', 'directory'):
             directory = self._parser.get('storage', 'directory')
         else:
             directory = MACKUP_BACKUP_PATH
 
-        return unicode(directory)
+        return str(directory)
 
 
 class ConfigError(Exception):

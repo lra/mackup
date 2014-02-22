@@ -8,7 +8,11 @@ Keep your application settings in sync.
 
 ## Quickstart
 
-On OS X, if you want an easy install, you can install [Homebrew](http://brew.sh/) and do:
+If you have Dropbox installed and want to use it to save your config files,
+that's super easy.
+
+On OS X, if you want an easy install, you can install
+[Homebrew](http://brew.sh/) and do:
 ```bash
 # Install Mackup
 brew install mackup
@@ -17,7 +21,8 @@ brew install mackup
 mackup backup
 ```
 
-If not running OS X, or you don't like Homebrew, run on your current workstation:
+If not running OS X, or you don't like Homebrew, run on your current
+workstation:
 ```bash
 # Download Mackup
 curl -o mackup.zip https://codeload.github.com/lra/mackup/zip/master

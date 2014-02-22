@@ -32,9 +32,9 @@ class Mackup(object):
                         " dangerous. Don't do it!")
 
         # Do we have a folder to put the Mackup folder ?
-        if not os.path.isdir(self._config.fullpath):
+        if not os.path.isdir(self._config.path):
             utils.error("Unable to find the storage folder: {}"
-                        .format(self._config.fullpath))
+                        .format(self._config.path))
 
         # Is Sublime Text running ?
         #if is_process_running('Sublime Text'):

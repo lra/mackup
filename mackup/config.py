@@ -148,12 +148,12 @@ class Config(object):
             str
         """
         if self.engine == ENGINE_DROPBOX:
-            path = str(get_dropbox_folder_location())
+            path = get_dropbox_folder_location()
         elif self.engine == ENGINE_GDRIVE:
             path = get_google_drive_folder_location()
         elif self.engine == ENGINE_FS:
             if self._parser.has_option('storage', 'path'):
-                cfg_path = str(self._parser.get('storage', 'path'))
+                cfg_path = self._parser.get('storage', 'path')
                 path = os.path.join(os.environ['HOME'], cfg_path)
             else:
                 raise ConfigError("The required 'path' can't be found while the"

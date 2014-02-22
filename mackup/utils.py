@@ -233,8 +233,11 @@ def get_dropbox_folder_location():
         (str) Full path to the current Dropbox folder
     """
     host_db_path = os.path.join(os.environ['HOME'], '.dropbox/host.db')
-    with open(host_db_path, 'r') as f_hostdb:
-        data = f_hostdb.read().split()
+    try:
+        with open(host_db_path, 'r') as f_hostdb:
+            data = f_hostdb.read().split()
+    except IOError:
+        error("Unable to find your Dropbox install =(")
     dropbox_home = base64.b64decode(data[1])
 
     return dropbox_home
@@ -248,7 +251,7 @@ def get_google_drive_folder_location():
         (unicode) Full path to the current Google Drive folder
     """
     gdrive_db_path = 'Library/Application Support/Google/Drive/sync_config.db'
-    gdrive_home = None
+    googledrive_home = None
 
     gdrive_db = os.path.join(os.environ['HOME'], gdrive_db_path)
     if (os.path.isfile(gdrive_db)):
@@ -262,6 +265,9 @@ def get_google_drive_folder_location():
             data = cur.fetchone()
             googledrive_home = unicode(data[0])
             con.close()
+
+    if not googledrive_home:
+        error("Unable to find your Google Drive install =(")
 
     return googledrive_home
 

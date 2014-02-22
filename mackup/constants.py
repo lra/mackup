@@ -1,6 +1,6 @@
 """Constants used in Mackup"""
 # Current version
-VERSION = '0.6.1'
+VERSION = '0.7'
 
 # Mode used to list supported applications
 LIST_MODE = 'list'
@@ -29,3 +29,8 @@ MACKUP_CONFIG_FILE = '.mackup.cfg'
 
 # Directory that can contains user defined app configs
 CUSTOM_APPS_DIR = '.mackup'
+
+# Supported engines
+ENGINE_DROPBOX = 'dropbox'
+ENGINE_GDRIVE = 'google_drive'
+ENGINE_FS = 'file_system'

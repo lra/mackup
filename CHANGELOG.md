@@ -2,6 +2,11 @@
 
 ## WIP
 
+## Mackup 0.7
+
+- Added support for Google Drive to store your files
+- Added support for any directory to store your files
+- Ability to customize the Mackup directory name
 - Improved the test coverage
 
 ## Mackup 0.6.1

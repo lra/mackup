@@ -8,18 +8,21 @@ Keep your application settings in sync.
 
 ## Quickstart
 
-Install [Dropbox](http://www.dropbox.com/) first, it's needed.
+If you have Dropbox installed and want to use it to save your config files,
+that's super easy.
 
-On OS X, if you want an easy install, you can install [Homebrew](http://brew.sh/) and do:
+On OS X, if you want an easy install, you can install
+[Homebrew](http://brew.sh/) and do:
 ```bash
 # Install Mackup
 brew install mackup
 
-# Launch it and back up your files in Dropbox
+# Launch it and back up your files
 mackup backup
 ```
 
-If not running OS X, or you don't like Homebrew, run on your current workstation:
+If not running OS X, or you don't like Homebrew, run on your current
+workstation:
 ```bash
 # Download Mackup
 curl -o mackup.zip https://codeload.github.com/lra/mackup/zip/master
@@ -27,18 +30,18 @@ curl -o mackup.zip https://codeload.github.com/lra/mackup/zip/master
 # Uncompress the archive
 unzip mackup.zip
 
-# Launch it and back up your files in Dropbox
+# Launch it and back up your files
 ./mackup-master/bin/mackup backup
 ```
 
 You're all set, and constantly backuped from now on.
 
-Next, on any new workstation, install Dropbox and do:
+Next, on any new workstation, do:
 ```bash
 # Install Mackup
 brew install mackup
 
-# Launch it and restore your files from Dropbox
+# Launch it and restore your files
 mackup restore
 ```
 
@@ -50,7 +53,7 @@ You can find more detailled instructions in [INSTALL.md](INSTALL.md)
 
 `mackup backup`
 
-Backup your application settings in Dropbox.
+Backup your application settings.
 
 `mackup restore`
 
@@ -71,7 +74,7 @@ Get some help, obvious...
 
 ## What does it do ?
 
-- Backups your application settings in Dropbox
+- Backups your application settings in a safe directory (e.g. Dropbox)
 - Syncs your application settings among all your workstations
 - Restores your configuration on any fresh install in one command line
 
@@ -89,7 +92,8 @@ folder, in the `.gitconfig` file.
 
 ### Backup
 
-When you launch `mackup backup`, here's what it's really doing:
+If you have Dropbox, when you launch `mackup backup`, here's what it's really
+doing:
 
 1. `cp ~/.gitconfig ~/Dropbox/Mackup/.gitconfig`
 1. `rm ~/.gitconfig`
@@ -116,6 +120,14 @@ mackup uninstall
 ```
 This will move back any file from Dropbox to its original place in your home
 folder and destroy the Mackup folder in Dropbox.
+
+## Supported Storages
+
+ - [Dropbox](https://www.dropbox.com/)
+ - [Google Drive](https://drive.google.com/)
+ - Anything able to sync a folder (e.g. [Git](http://git-scm.com/))
+
+See the [README](doc/README.md) file in the doc directory for more info.
 
 ## Supported Applications
 
@@ -299,7 +311,7 @@ a lot of us had the same problem: Making a more generic tool could help others
 and I could get help from others to support more apps in the tool.
 
 So here comes Mackup, the little tool that will sync all your application
-configs to Dropbox.
+configs to Dropbox (or Google Drive, or anything).
 
 And it's [GPL](http://www.gnu.org/licenses/gpl.html) of course.
 

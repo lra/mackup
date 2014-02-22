@@ -7,6 +7,8 @@ import shutil
 import stat
 import subprocess
 import sys
+import sqlite3
+
 try:
     import configparser
 except ImportError:
@@ -196,14 +198,12 @@ def parse_cmdline_args():
 
     # Format some epilog text
     epilog = ("Mackup modes of action:\n"
-              " - backup: sync your conf files to Dropbox, use this the 1st"
-              " time you use Mackup.\n"
-              " - restore: link the conf files already in Dropbox on your "
-              " system, use it on any new system you use.\n"
+              " - backup: sync your conf files to your synced storage, use this"
+              " the 1st time you use Mackup.\n"
+              " - restore: link the conf files already in your synced storage"
+              " on your system, use it on any new system you use.\n"
               " - uninstall: reset everything as it was before using Mackup.\n"
-              " - list: display a list of all supported applications.\n"
-              "\n"
-              "Mackup requires a fully synced Dropbox folder.")
+              " - list: display a list of all supported applications.\n")
 
     help_msg = "Required action mode for Mackup, see below for details."
 
@@ -232,12 +232,44 @@ def get_dropbox_folder_location():
     Returns:
         (str) Full path to the current Dropbox folder
     """
-    host_db_path = os.environ['HOME'] + '/.dropbox/host.db'
-    with open(host_db_path, 'r') as f_hostdb:
-        data = f_hostdb.read().split()
+    host_db_path = os.path.join(os.environ['HOME'], '.dropbox/host.db')
+    try:
+        with open(host_db_path, 'r') as f_hostdb:
+            data = f_hostdb.read().split()
+    except IOError:
+        error("Unable to find your Dropbox install =(")
     dropbox_home = base64.b64decode(data[1])
 
     return dropbox_home
+
+
+def get_google_drive_folder_location():
+    """
+    Try to locate the Google Drive folder
+
+    Returns:
+        (unicode) Full path to the current Google Drive folder
+    """
+    gdrive_db_path = 'Library/Application Support/Google/Drive/sync_config.db'
+    googledrive_home = None
+
+    gdrive_db = os.path.join(os.environ['HOME'], gdrive_db_path)
+    if (os.path.isfile(gdrive_db)):
+        con = sqlite3.connect(gdrive_db)
+        if con:
+            cur = con.cursor()
+            query = ("SELECT data_value "
+                     "FROM data "
+                     "WHERE entry_key = 'local_sync_root_path';")
+            cur.execute(query)
+            data = cur.fetchone()
+            googledrive_home = unicode(data[0])
+            con.close()
+
+    if not googledrive_home:
+        error("Unable to find your Google Drive install =(")
+
+    return googledrive_home
 
 
 def get_ignored_apps():

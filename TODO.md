@@ -13,3 +13,5 @@ Feel free to implement any of those ;)
 - Setup some webpage
 - Ability to enable/disable an app (will update the cfg file)
 - Progress bar on syncing
+- Invite the user to generate the conf file at launch if Mackup has no conf file
+- Merge all the config code in Config()

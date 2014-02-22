@@ -29,3 +29,8 @@ MACKUP_CONFIG_FILE = '.mackup.cfg'
 
 # Directory that can contains user defined app configs
 CUSTOM_APPS_DIR = '.mackup'
+
+# Supported engines
+ENGINE_DROPBOX = u'dropbox'
+ENGINE_GDRIVE = u'google_drive'
+ENGINE_FS = u'file_system'

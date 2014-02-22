@@ -7,7 +7,6 @@ Feel free to implement any of those ;)
 - A GUI, we could definitely use an OS X gui that woule display the status:
     synced apps, unsynced apps, using wxPython ?
 - Try with hard links to support the Fonts pb
-- Support for DropBox alternatives
 - 100% test coverage
 - Rollback any file that's not maintained by mackup anymore https://github.com/lra/mackup/issues/190
 - Ability to encrypt specific files, asked in #134 and #109

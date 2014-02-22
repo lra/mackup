@@ -5,7 +5,6 @@ from mackup.constants import (ENGINE_DROPBOX,
                               ENGINE_GDRIVE,
                               ENGINE_FS)
 from mackup.config import Config, ConfigError
-from mackup import utils
 
 
 class TestConfig(unittest.TestCase):
@@ -13,7 +12,6 @@ class TestConfig(unittest.TestCase):
     def setUp(self):
         realpath = os.path.dirname(os.path.realpath(__file__))
         os.environ['HOME'] = os.path.join(realpath, 'fixtures')
-
 
     def test_config_empty(self):
         cfg = Config('mackup-empty.cfg')

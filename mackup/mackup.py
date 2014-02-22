@@ -8,7 +8,6 @@ import os.path
 import shutil
 import tempfile
 
-from . import constants
 from . import utils
 from . import config
 

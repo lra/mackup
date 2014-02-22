@@ -198,8 +198,8 @@ def parse_cmdline_args():
 
     # Format some epilog text
     epilog = ("Mackup modes of action:\n"
-              " - backup: sync your conf files to your synced storage, use this"
-              " the 1st time you use Mackup.\n"
+              " - backup: sync your conf files to your synced storage, use"
+              " this the 1st time you use Mackup.\n"
               " - restore: link the conf files already in your synced storage"
               " on your system, use it on any new system you use.\n"
               " - uninstall: reset everything as it was before using Mackup.\n"

@@ -11,7 +11,8 @@ from constants import (MACKUP_BACKUP_PATH,
                        ENGINE_GDRIVE,
                        ENGINE_FS)
 
-from utils import (get_dropbox_folder_location,
+from utils import (error,
+                   get_dropbox_folder_location,
                    get_google_drive_folder_location)
 
 try:
@@ -112,18 +113,18 @@ class Config(object):
         old_sections = ['Allowed Applications', 'Ignored Applications']
         for old_section in old_sections:
             if self._parser.has_section(old_section):
-                utils.error("Old config file detected. Aborting.\n"
-                            "\n"
-                            "An old section (e.g. [Allowed Applications]"
-                            " or [Ignored Applications] has been detected"
-                            " in your {} file.\n"
-                            "I'd rather do nothing than do something you"
-                            " do not want me to do.\n"
-                            "\n"
-                            "Please read the up to date documentation on"
-                            " <https://github.com/lra/mackup> and migrate"
-                            " your configuration file."
-                            .format(path_to_cfg))
+                error("Old config file detected. Aborting.\n"
+                      "\n"
+                      "An old section (e.g. [Allowed Applications]"
+                      " or [Ignored Applications] has been detected"
+                      " in your {} file.\n"
+                      "I'd rather do nothing than do something you"
+                      " do not want me to do.\n"
+                      "\n"
+                      "Please read the up to date documentation on"
+                      " <https://github.com/lra/mackup> and migrate"
+                      " your configuration file."
+                      .format(MACKUP_CONFIG_FILE))
 
     def _parse_engine(self):
         """
@@ -156,8 +157,8 @@ class Config(object):
                 cfg_path = self._parser.get('storage', 'path')
                 path = os.path.join(os.environ['HOME'], cfg_path)
             else:
-                raise ConfigError("The required 'path' can't be found while the"
-                                  " 'file_system' engine is used.")
+                raise ConfigError("The required 'path' can't be found while"
+                                  " the 'file_system' engine is used.")
 
         return str(path)
 

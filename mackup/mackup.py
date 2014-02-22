@@ -4,15 +4,13 @@ runtime. It also provides easy to use interface that is used by the Mackup UI.
 The only UI for now is the command line.
 """
 import os
+import os.path
 import shutil
 import tempfile
-try:
-    import configparser
-except ImportError:
-    import ConfigParser as configparser
 
 from . import constants
 from . import utils
+from . import config
 
 
 class Mackup(object):
@@ -20,15 +18,9 @@ class Mackup(object):
 
     def __init__(self):
         """Mackup Constructor"""
-        try:
-            self.dropbox_folder = utils.get_dropbox_folder_location()
-        except IOError:
-            utils.error("Unable to find the Dropbox folder. If Dropbox is not"
-                        " installed and running, go for it on"
-                        " <http://www.dropbox.com/>")
+        self._config = config.Config()
 
-        self.mackup_folder = os.path.join(self.dropbox_folder,
-                                          constants.MACKUP_BACKUP_PATH)
+        self.mackup_folder = self._config.fullpath
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
     def check_for_usable_environment(self):
@@ -39,35 +31,10 @@ class Mackup(object):
             utils.error("Running Mackup as a superuser is useless and"
                         " dangerous. Don't do it!")
 
-        # Do we have a home folder ?
-        if not os.path.isdir(self.dropbox_folder):
-            utils.error("Unable to find the Dropbox folder. If Dropbox is not"
-                        " installed and running, go for it on"
-                        " <http://www.dropbox.com/>")
-
-        # Do we have an old config file ?
-        config = configparser.SafeConfigParser(allow_no_value=True)
-
-        # Is the config file there ?
-        path_to_cfg = "{}/{}".format(os.environ['HOME'],
-                                     constants.MACKUP_CONFIG_FILE)
-        if config.read(path_to_cfg):
-            # Is an old setion is in the config file ?
-            old_sections = ['Allowed Applications', 'Ignored Applications']
-            for old_section in old_sections:
-                if config.has_section(old_section):
-                    utils.error("Old config file detected. Aborting.\n"
-                                "\n"
-                                "An old section (e.g. [Allowed Applications]"
-                                " or [Ignored Applications] has been detected"
-                                " in your {} file.\n"
-                                "I'd rather do nothing than do something you"
-                                " do not want me to do.\n"
-                                "\n"
-                                "Please read the up to date documentation on"
-                                " <https://github.com/lra/mackup> and migrate"
-                                " your configuration file."
-                                .format(path_to_cfg))
+        # Do we have a folder to put the Mackup folder ?
+        if not os.path.isdir(self._config.fullpath):
+            utils.error("Unable to find the storage folder: {}"
+                        .format(self._config.fullpath))
 
         # Is Sublime Text running ?
         #if is_process_running('Sublime Text'):
@@ -88,7 +55,7 @@ class Mackup(object):
         if not os.path.isdir(self.mackup_folder):
             utils.error("Unable to find the Mackup folder: {}\n"
                         "You might want to backup some files or get your"
-                        " Dropbox folder synced first."
+                        " storage directory synced first."
                         .format(self.mackup_folder))
 
     def clean_temp_folder(self):
@@ -98,9 +65,9 @@ class Mackup(object):
     def create_mackup_home(self):
         """If the Mackup home folder does not exist, create it"""
         if not os.path.isdir(self.mackup_folder):
-            if utils.confirm("Mackup needs a folder to store your"
-                             " configuration files\nDo you want to create it"
-                             " now ? <{}>"
+            if utils.confirm("Mackup needs a directory to store your"
+                             " configuration files\n"
+                             "Do you want to create it now ? <{}>"
                              .format(self.mackup_folder)):
                 os.mkdir(self.mackup_folder)
             else:

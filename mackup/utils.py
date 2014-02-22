@@ -198,14 +198,12 @@ def parse_cmdline_args():
 
     # Format some epilog text
     epilog = ("Mackup modes of action:\n"
-              " - backup: sync your conf files to Dropbox, use this the 1st"
-              " time you use Mackup.\n"
-              " - restore: link the conf files already in Dropbox on your "
-              " system, use it on any new system you use.\n"
+              " - backup: sync your conf files to your synced storage, use this"
+              " the 1st time you use Mackup.\n"
+              " - restore: link the conf files already in your synced storage"
+              " on your system, use it on any new system you use.\n"
               " - uninstall: reset everything as it was before using Mackup.\n"
-              " - list: display a list of all supported applications.\n"
-              "\n"
-              "Mackup requires a fully synced Dropbox folder.")
+              " - list: display a list of all supported applications.\n")
 
     help_msg = "Required action mode for Mackup, see below for details."
 

@@ -75,7 +75,7 @@ class ApplicationsDatabase(object):
             for filename in os.listdir(custom_apps_dir):
                 if filename.endswith('.cfg'):
                     config_files.add(os.path.join(custom_apps_dir,
-                                                     filename))
+                                                  filename))
         return config_files
 
     def get_name(self, name):
@@ -98,9 +98,9 @@ class ApplicationsDatabase(object):
             name (str)
 
         Returns:
-            list(str)
+            set(str)
         """
-        return list(self.apps[name]['configuration_files'])
+        return self.apps[name]['configuration_files']
 
     def get_app_names(self):
         """

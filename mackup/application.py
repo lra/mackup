@@ -20,10 +20,10 @@ class ApplicationProfile(object):
             files (list)
         """
         assert isinstance(mackup, Mackup)
-        assert isinstance(files, list)
+        assert isinstance(files, set)
 
         self.mackup = mackup
-        self.files = files
+        self.files = list(files)
 
     def backup(self):
         """

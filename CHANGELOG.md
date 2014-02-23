@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Improved the configuration loader engine
+
 ## Mackup 0.7
 
 - Added support for Google Drive to store your files

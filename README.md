@@ -78,9 +78,9 @@ Get some help, obvious...
 - Syncs your application settings among all your workstations
 - Restores your configuration on any fresh install in one command line
 
-By only tracking pure configuration files, it keeps the crap out of your freshly
-new installed workstation (No cache, temporary and locally specific files are
-transfered).
+By only tracking pure configuration files, it keeps the crap out of your
+freshly new installed workstation (No cache, temporary and locally specific
+files are transfered).
 
 It also helps you spend more time doing real cool stuff, and less time setting
 you environment.

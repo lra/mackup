@@ -3,7 +3,8 @@
 There are 3 ways to run mackup
 
 1. Install it with Homebrew and run it (OSX only)
-1. Download it, install it with python setuptools and run it (OSX and GNU/Linux)
+1. Download it, install it with python setuptools and run it (OSX and
+   GNU/Linux)
 1. Download it, and run it without installing it (OSX and GNU/Linux)
 
 ## Install

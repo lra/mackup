@@ -31,8 +31,8 @@ engine = google_drive
 If you want to specify another directory, you can use the `file_system` engine
 and Mackup won't try to detect any path for you: it will store your files where
 you explicitely told him to, using the `path` setting.
-The `path` can be absolute (from the `/` of your drive) or relative to your home
-directory.
+The `path` can be absolute (from the `/` of your drive) or relative to your
+home directory.
 The `path` setting is mandatory when using the `file_system` engine.
 
 ```ini
@@ -113,11 +113,12 @@ The stock application configs are in the `mackup/applications` directory.
 
 ### Add support for an application or any file or directory
 
-You can customize the Mackup engine and add support for unsupported applications
-or just custom files and directories you'd like to sync.
+You can customize the Mackup engine and add support for unsupported
+applications or just custom files and directories you'd like to sync.
 
-Let's say that you'd like to add support for Nethack (config file: `.nethackrc`)
-and for the `bin` and `.hidden` directories you keep in your home.
+Let's say that you'd like to add support for Nethack (config file:
+`.nethackrc`) and for the `bin` and `.hidden` directories you keep in your
+home.
 
 In your home, create a `.mackup` directory and add a config file for the
 application you'd like to support.

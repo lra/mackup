@@ -127,8 +127,8 @@
 - Added GNU/Linux support (thx @flexiondotorg)
 - Added the ability to explicitly list the list of applications to sync (thx
   @zuhao)
-- Added support for Shuttle, the heroku-accounts plugin for Heroku, bundler, pry
-  and awesome-print for Ruby (thx @yabawock)
+- Added support for Shuttle, the heroku-accounts plugin for Heroku, bundler,
+  pry and awesome-print for Ruby (thx @yabawock)
 - Added support for Bash it (thx @Tam-Lin)
 
 ## Mackup 0.4.4

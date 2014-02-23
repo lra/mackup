@@ -98,7 +98,7 @@ class ApplicationsDatabase(object):
             name (str)
 
         Returns:
-            set(str)
+            set of str.
         """
         return self.apps[name]['configuration_files']
 
@@ -107,7 +107,7 @@ class ApplicationsDatabase(object):
         Return the list of application names that are available in the database
 
         Returns:
-            set of str
+            set of str.
         """
         app_names = set()
         for name in self.apps:
@@ -120,10 +120,10 @@ class ApplicationsDatabase(object):
         Return the list of pretty app names that are available in the database
 
         Returns:
-            list(str)
+            set of str.
         """
-        pretty_app_names = []
+        pretty_app_names = set()
         for app_name in self.get_app_names():
-            pretty_app_names.append(self.get_name(app_name))
+            pretty_app_names.add(self.get_name(app_name))
 
         return pretty_app_names

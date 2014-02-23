@@ -43,7 +43,7 @@ def main():
         mckp.check_for_usable_backup_env()
 
         # Backup each application
-        for app_name in utils.get_apps_to_backup():
+        for app_name in mckp.get_apps_to_backup():
             app = ApplicationProfile(mckp, app_db.get_files(app_name))
             app.backup()
 

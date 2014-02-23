@@ -9,12 +9,6 @@ import subprocess
 import sys
 import sqlite3
 
-try:
-    import configparser
-except ImportError:
-    import ConfigParser as configparser
-
-from . import appsdb
 from . import constants
 
 
@@ -270,81 +264,6 @@ def get_google_drive_folder_location():
         error("Unable to find your Google Drive install =(")
 
     return googledrive_home
-
-
-def get_ignored_apps():
-    """
-    Get the list of applications ignored in the config file
-
-    Returns:
-        (set) List of application names to ignore, lowercase
-    """
-    # If a config file exists, grab it and parser it
-    config = configparser.SafeConfigParser(allow_no_value=True)
-
-    # We ignore nothing by default
-    ignored_apps = []
-
-    # Is the config file there ?
-    path_to_cfg = "{}/{}".format(os.environ['HOME'],
-                                 constants.MACKUP_CONFIG_FILE)
-    if config.read(path_to_cfg):
-        # Is the "[applications_to_ignore]" in the cfg file ?
-        if config.has_section('applications_to_ignore'):
-            ignored_apps = config.options('applications_to_ignore')
-
-    return set(ignored_apps)
-
-
-def get_allowed_apps():
-    """
-    Get the list of applications allowed in the config file
-
-    Returns:
-        (list) list of application names to backup
-    """
-
-    # Instantiate the app db
-    app_db = appsdb.ApplicationsDatabase()
-
-    # If a config file exists, grab it and parser it
-    config = configparser.SafeConfigParser(allow_no_value=True)
-
-    # We allow all by default
-    allowed_apps = app_db.get_app_names()
-
-    # Is the config file there ?
-    path_to_cfg = "{}/{}".format(os.environ['HOME'],
-                                 constants.MACKUP_CONFIG_FILE)
-    if config.read(path_to_cfg):
-        # Is the "[applications_to_sync]" section in the cfg file ?
-        if config.has_section('applications_to_sync'):
-            # Reset allowed apps to include only the user-defined
-            allowed_apps = []
-            for app_name in app_db.get_app_names():
-                if app_name in config.options('applications_to_sync'):
-                    allowed_apps.append(app_name)
-
-    return allowed_apps
-
-
-def get_apps_to_backup():
-    """
-    Get the list of application that should be backup by Mackup.
-    It's the list of allowed apps minus the list of ignored apps.
-
-    Returns:
-        (set) List of application names to backup
-    """
-    apps_to_backup = []
-    apps_to_ignore = get_ignored_apps()
-    apps_to_allow = get_allowed_apps()
-
-    for app_name in apps_to_allow:
-        if app_name not in apps_to_ignore:
-            apps_to_backup.append(app_name)
-
-    return apps_to_backup
 
 
 def is_process_running(process_name):

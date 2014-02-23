@@ -14,7 +14,6 @@ from constants import (MACKUP_BACKUP_PATH,
 from utils import (error,
                    get_dropbox_folder_location,
                    get_google_drive_folder_location)
-
 try:
     import configparser
 except ImportError:
@@ -45,6 +44,12 @@ class Config(object):
 
         # Get the directory replacing 'Mackup', if any
         self._directory = self._parse_directory()
+
+        # Get the list of apps to ignore
+        self._apps_to_ignore = self._parse_apps_to_ignore()
+
+        # Get the list of apps to allow
+        self._apps_to_sync = self._parse_apps_to_sync()
 
     @property
     def engine(self):
@@ -88,6 +93,26 @@ class Config(object):
             str
         """
         return str(os.path.join(self.path, self.directory))
+
+    @property
+    def apps_to_ignore(self):
+        """
+        Get the list of applications ignored in the config file.
+
+        Returns:
+            set. Set of application names to ignore, lowercase
+        """
+        return set(self._apps_to_ignore)
+
+    @property
+    def apps_to_sync(self):
+        """
+        Get the list of applications allowed in the config file.
+
+        Returns:
+            set. Set of application names to allow, lowercase
+        """
+        return set(self._apps_to_sync)
 
     def _setup_parser(self, filename=None):
         """
@@ -173,6 +198,36 @@ class Config(object):
             directory = MACKUP_BACKUP_PATH
 
         return str(directory)
+
+    def _parse_apps_to_ignore(self):
+        """
+        Returns:
+            set
+        """
+        # We ignore nothing by default
+        apps_to_ignore = set()
+
+        # Is the "[applications_to_ignore]" in the cfg file ?
+        section_title = 'applications_to_ignore'
+        if self._parser.has_section(section_title):
+            apps_to_ignore = set(self._parser.options(section_title))
+
+        return apps_to_ignore
+
+    def _parse_apps_to_sync(self):
+        """
+        Returns:
+            set
+        """
+        # We allow nothing by default
+        apps_to_sync = set()
+
+        # Is the "[applications_to_sync]" section in the cfg file ?
+        section_title = 'applications_to_sync'
+        if self._parser.has_section(section_title):
+            apps_to_sync = set(self._parser.options(section_title))
+
+        return apps_to_sync
 
 
 class ConfigError(Exception):

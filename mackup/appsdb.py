@@ -107,11 +107,11 @@ class ApplicationsDatabase(object):
         Return the list of application names that are available in the database
 
         Returns:
-            list(str)
+            set of str
         """
-        app_names = []
+        app_names = set()
         for name in self.apps:
-            app_names.append(name)
+            app_names.add(name)
 
         return app_names
 

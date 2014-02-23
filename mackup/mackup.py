@@ -10,6 +10,7 @@ import tempfile
 
 from . import utils
 from . import config
+from . import appsdb
 
 
 class Mackup(object):
@@ -71,3 +72,27 @@ class Mackup(object):
                 os.mkdir(self.mackup_folder)
             else:
                 utils.error("Mackup can't do anything without a home =(")
+
+    def get_apps_to_backup(self):
+        """
+        Get the list of application that should be backup by Mackup.
+        It's the list of allowed apps minus the list of ignored apps.
+
+        Returns:
+            (set) List of application names to backup
+        """
+        # Instantiate the app db
+        app_db = appsdb.ApplicationsDatabase()
+
+        # If a list of apps to sync is specify, we only allow those
+        if self._config.apps_to_sync:
+            apps_to_backup = self._config.apps_to_sync
+        else:
+            # We allow every supported app by default
+            apps_to_backup = app_db.get_app_names()
+
+        # Remove the specified apps to ignore
+        for app_name in self._config.apps_to_ignore:
+            apps_to_backup.discard(app_name)
+
+        return apps_to_backup

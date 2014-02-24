@@ -187,6 +187,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Hands Off!](http://www.oneperiodic.com/products/handsoff/)
   - [Heroku](https://www.heroku.com/)
   - [Hexels](http://hexraystudios.com/hexels/)
+  - [Hive](https://www.hivewallet.com/)
   - [Htop](http://htop.sourceforge.net/)
   - [i2cssh](https://github.com/wouterdebie/i2cssh)
   - [IntelliJIDEA 12](http://www.jetbrains.com/idea/)

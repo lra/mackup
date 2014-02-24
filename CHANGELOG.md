@@ -3,6 +3,7 @@
 ## WIP
 
 - Improved the configuration loader engine
+- Added support for the Hive Wallet
 
 ## Mackup 0.7
 

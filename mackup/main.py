@@ -24,9 +24,11 @@ from .constants import (BACKUP_MODE,
                         RESTORE_MODE,
                         UNINSTALL_MODE,
                         LIST_MODE,
+                        STATUS_MODE,
                         VERSION)
 from .mackup import Mackup
 from . import utils
+from . import config
 
 
 def list_mode():
@@ -43,6 +45,39 @@ def list_mode():
     output += ("{} applications supported in Mackup v{}"
                .format(len(app_db.get_app_names()), VERSION))
     print output
+
+
+def status_mode():
+    """
+    Display the storage engine and the application status
+    """
+    cfg = config.Config()
+    mckp = Mackup()
+    app_db = ApplicationsDatabase()
+    dropbox_path = utils.get_dropbox_folder_location()
+    gdrive_path = utils.get_google_drive_folder_location()
+
+    print "Storage engines supported:"
+    if dropbox_path:
+        print " - dropbox: Available under {}".format(dropbox_path)
+    else:
+        print " - dropbox: Not available"
+    if gdrive_path:
+        print " - google_drive: Available under {}".format(gdrive_path)
+    else:
+        print " - google_drive: Not available"
+    print " - file_system: Available below {}".format(os.environ['HOME'])
+    print
+    print "Engine selected: {}".format(cfg.engine)
+    print "Files location: {}".format(cfg.fullpath)
+    print
+
+    # Check the env where the command is being run
+    mckp.check_for_usable_restore_env()
+
+    print "Applications status:"
+    for app_name in mckp.get_apps_to_backup():
+        print " - {}".format(app_name)
 
 
 def backup_mode():
@@ -116,6 +151,8 @@ def main():
 
     if args.mode == LIST_MODE:
         list_mode()
+    elif args.mode == STATUS_MODE:
+        status_mode()
     elif args.mode == BACKUP_MODE:
         backup_mode()
     elif args.mode == RESTORE_MODE:

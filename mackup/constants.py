@@ -5,6 +5,9 @@ VERSION = '0.7'
 # Mode used to list supported applications
 LIST_MODE = 'list'
 
+# Mode used to display what's available (apps, storage)
+STATUS_MODE = 'status'
+
 # Mode used to backup files to Dropbox
 BACKUP_MODE = 'backup'
 

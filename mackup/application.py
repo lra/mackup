@@ -180,3 +180,37 @@ class ApplicationProfile(object):
 
                     # Copy the Dropbox file to the home folder
                     utils.copy(mackup_filepath, home_filepath)
+
+    def status(self):
+        """
+        Returns the text status of an application.
+
+        Algorithm:
+            for each file in config
+                all_files_exist = true
+                if not (bool(mackup/link points to file)
+                        or bool(home/file exists))
+                    all_files_exist = false
+                    break
+                    if time(mackup/file) == time(home/file)
+                        status is sync
+                    elif time
+
+
+        In sync:
+            home_link points to mackup_file
+
+        Safe to backup:
+            home_file exists and mackup_file not exists
+
+        Safe to restore:
+            home_file not exists and_mackup file exists
+
+        Restored: home_file exists (==) mackup_file exists
+
+        Conflict (both exists):
+            home_file exists (!=) mackup_file exists:
+                mackup outdated (should backup): home_file exists newer (!=) than mackup_file exists
+                home outdated (should restore): home_file exists and older (!=) than mackup_file exists
+                uber conflict (should manually find out): some home_file older than mackup_file and some home_file newer than mackup_file
+        """

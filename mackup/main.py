@@ -92,6 +92,3 @@ def main():
         print output
     else:
         raise ValueError("Unsupported mode: {}".format(args.mode))
-
-    # Delete the tmp folder
-    mckp.clean_temp_folder()

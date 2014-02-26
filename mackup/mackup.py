@@ -5,8 +5,6 @@ The only UI for now is the command line.
 """
 import os
 import os.path
-import shutil
-import tempfile
 
 from . import utils
 from . import config
@@ -21,7 +19,6 @@ class Mackup(object):
         self._config = config.Config()
 
         self.mackup_folder = self._config.fullpath
-        self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
     def check_for_usable_environment(self):
         """Check if the current env is usable and has everything's required"""
@@ -57,10 +54,6 @@ class Mackup(object):
                         "You might want to backup some files or get your"
                         " storage directory synced first."
                         .format(self.mackup_folder))
-
-    def clean_temp_folder(self):
-        """Delete the temp folder and files created while running"""
-        shutil.rmtree(self.temp_folder)
 
     def create_mackup_home(self):
         """If the Mackup home folder does not exist, create it"""

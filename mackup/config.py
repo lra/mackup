@@ -175,15 +175,21 @@ class Config(object):
         """
         if self.engine == ENGINE_DROPBOX:
             path = get_dropbox_folder_location()
+            if not path:
+                error("Unable to find your Dropbox install =(")
+
         elif self.engine == ENGINE_GDRIVE:
             path = get_google_drive_folder_location()
+            if not path:
+                error("Unable to find your Google Drive install =(")
+
         elif self.engine == ENGINE_FS:
             if self._parser.has_option('storage', 'path'):
                 cfg_path = self._parser.get('storage', 'path')
                 path = os.path.join(os.environ['HOME'], cfg_path)
             else:
-                raise ConfigError("The required 'path' can't be found while"
-                                  " the 'file_system' engine is used.")
+                error("The required 'path' can't be found while the"
+                      " 'file_system' engine is used.")
 
         return str(path)
 

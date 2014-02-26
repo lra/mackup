@@ -3,6 +3,7 @@
 ## WIP
 
 - Improved the configuration loader engine
+- The list mode does not require a storage engine anymore
 
 ## Mackup 0.7
 

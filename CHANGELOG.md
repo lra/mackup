@@ -3,6 +3,7 @@
 ## WIP
 
 - Improved the configuration loader engine
+- Added support for Fontcase (thx @vitorgalvao)
 
 ## Mackup 0.7
 

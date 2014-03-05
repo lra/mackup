@@ -3,6 +3,7 @@
 ## WIP
 
 - Improved the configuration loader engine
+- Added support for Processing (thx @vitorgalvao)
 
 ## Mackup 0.7
 

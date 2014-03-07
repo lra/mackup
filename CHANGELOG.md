@@ -5,6 +5,7 @@
 - Improved the configuration loader engine
 - Added support for Processing (thx @vitorgalvao)
 - Improved support for launchbar and fish (thx @aristidesfl)
+- Support for R (via @yonkeltron)
 
 ## Mackup 0.7
 

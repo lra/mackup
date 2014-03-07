@@ -236,6 +236,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Quicksilver](http://qsapp.com/)
   - [Rails](http://rubyonrails.org/)
   - [rTorrent](http://libtorrent.rakshasa.no/)
+  - [R](http://www.r-project.org/)
   - [Ruby Version](https://gist.github.com/fnichol/1912050)
   - [Ruby](http://ruby-lang.org/)
   - [RubyMine 4](http://www.jetbrains.com/ruby/)

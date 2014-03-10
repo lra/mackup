@@ -243,6 +243,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [RubyMine 5](http://www.jetbrains.com/ruby/)
   - [S3cmd](http://s3tools.org/s3cmd)
   - [SABnzbd](http://sabnzbd.org/)
+  - [SBCL](http://www.sbcl.org/)
   - [Scenario](http://www.lagentesoft.com/scenario/)
   - [Screen](http://www.gnu.org/software/screen/)
   - [SelfControl](http://selfcontrolapp.com/)

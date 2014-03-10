@@ -2,6 +2,7 @@
 
 ## WIP
 - Support for SBCL (via @yonkeltron)
+- Support for asciinema (via @yonkeltron)
 
 ## Mackup 0.7.1
 

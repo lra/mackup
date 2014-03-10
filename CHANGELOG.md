@@ -2,10 +2,13 @@
 
 ## WIP
 
+## Mackup 0.7.1
+
 - Improved the configuration loader engine
 - Added support for Processing (thx @vitorgalvao)
 - Improved support for launchbar and fish (thx @aristidesfl)
 - Support for R (via @yonkeltron)
+- Error out when an absolute filepath is used in a application config
 
 ## Mackup 0.7
 

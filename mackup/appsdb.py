@@ -46,8 +46,11 @@ class ApplicationsDatabase(object):
                 # Add the configuration files to sync
                 self.apps[app_name]['configuration_files'] = set()
                 if config.has_section('configuration_files'):
-                    for paths in config.options('configuration_files'):
-                        self.apps[app_name]['configuration_files'].add(paths)
+                    for path in config.options('configuration_files'):
+                        if path.startswith('/'):
+                            raise ValueError('Unsupported absolute path: {}'
+                                             .format(path))
+                        self.apps[app_name]['configuration_files'].add(path)
 
     @staticmethod
     def get_config_files():

@@ -140,6 +140,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [asciinema](https://asciinema.org/)
   - [Aspell](http://aspell.net/)
   - [Awareness](http://iamfutureproof.com/tools/awareness/)
+  - [AWS Command Line Interface](https://aws.amazon.com/cli/)
   - [Bartender](http://www.macbartender.com/)
   - [Bash it](https://github.com/revans/bash-it/)
   - [Bash](http://www.gnu.org/software/bash/)

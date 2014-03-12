@@ -9,24 +9,51 @@ import sys
 import sqlite3
 
 from . import constants
+from . import appsdb
 
-def choose(question, options, multiple_answers = False):
+
+def choose(question, options, default=None):
     """
     Ask the user which option he wants of the options list
-    
+
     Args:
         question(str): What can happen
         options(list): List of strings the user can choose from
-        multiple_answers(bool): Whether the user can choose multiple options 
-    
+        default(str): If given and in the options list, the default is used
+        if the user does not give an option
+
     Returns:
         (list): The option(s) they chose from the list
     """
+    default_str = ("(default: {})".format(default) if default in options
+                   else "")
     while True:
-        answer = raw_input(question + ' <{}>\n'.format(options))
+        answer = raw_input("{} {} <{}>\n".format(question, default_str,
+                                                 options))
         answers = [word for word in answer.split() if word in options]
         if answers:
             return answers
+        elif not answer and default in options:
+            return [default]
+
+
+def choose_one(question, options, default=None):
+    """
+    Asks the user to choose one and only option from the options list
+
+    Args:
+        question(str): What can happen
+        options(list): List of strings the user can choose from
+        default(str): If given and in the options list, the default is used
+        if the user does not give an option
+    """
+    while True:
+        answer = choose(question, options, default)
+        if len(answer) == 1:
+            return answer[0]
+        else:
+            print "Please choose only one option!"
+
 
 # Flag that controls how user confirmation works.
 # If True, the user wants to say "yes" to everything.
@@ -222,7 +249,7 @@ def get_dropbox_folder_location():
         with open(host_db_path, 'r') as f_hostdb:
             data = f_hostdb.read().split()
     except IOError:
-        raise IOError, "Unable to find your Dropbox install =("
+        error("Unable to find your Dropbox install =(")
     dropbox_home = base64.b64decode(data[1])
 
     return dropbox_home
@@ -424,3 +451,121 @@ def can_file_be_synced_on_current_platform(path):
             can_be_synced = False
 
     return can_be_synced
+
+
+def get_storage_config():
+    """
+    Asks the user to enter storage information written that will later be
+    written to configuration file.
+
+    Returns:
+        (tuple): The storage_type, path, and directory strings the user entered
+    """
+    storage_type = choose_one("What method would you like to use to backup "
+                              "your configuration files?",
+                              [constants.ENGINE_DROPBOX, constants.ENGINE_FS,
+                               constants.ENGINE_GDRIVE],
+                              constants.ENGINE_DROPBOX)
+    path = None
+    if storage_type == "file_system":
+        while True:
+            path = raw_input("Please enter the path where Mackup will save "
+                             "your configuration files. You can use relative "
+                             "or absolute paths\n")
+            exists = os.path.exists(
+                ("" if path.startswith(os.sep) or path.startswith("./")
+                else os.environ['HOME']) + path)
+            if exists:
+                break
+            else:
+                print "The path {} does not exist!".format(exists)
+
+    while True:
+        directory = (raw_input("What would directory name would you like to "
+                                "use? (default: {})\n".format(
+                                   constants.MACKUP_BACKUP_PATH))
+                     or constants.MACKUP_BACKUP_PATH)
+        if os.sep in directory:
+            print "directory should not be a path, only the folder name!"
+        else:
+            break
+
+    return (storage_type, path, directory)
+
+
+def get_whitelist_and_blacklist_config():
+    """
+    Asks the user to enter whitelist and blacklist information that will later
+    be written to the configuration file.
+
+    Returns:
+        (tuple): List of the applications to whitelist and a list of the
+        applications to blacklist
+    """
+    app_database = appsdb.ApplicationsDatabase()
+    apps = app_database.get_app_names()
+    whitelist = []
+    if not confirm("Would you like to sync all applications?"):
+        whitelist = choose("Choose any of the following "
+                           "(deliminated by a space): ", apps)
+
+    blacklist = []
+    if confirm("Would you like to specify any applications you would NOT like "
+               "to sync?"):
+        blacklist = choose("Choose any of the following "
+                           "(deliminated by a space): ", apps)
+
+    return (whitelist, blacklist)
+
+
+def make_config_file(storage_type=constants.ENGINE_DROPBOX, path="",
+                     directory=constants.MACKUP_BACKUP_PATH, whitelist=None,
+                     blacklist=None):
+    """
+    Writes a configuration file (~/.mackup.cfg) using the parameters. If no
+    options are specified, a default configuration file is made.
+
+    Args:
+        (str): The storage_type to be written (dropbox, google_drive,
+        file_system)
+        (str): The path to use if storage_type was file_system
+        (str): The custom directory name that will be used
+        (list): The list of applications that will be synced
+        (list): The list of applications that will not be synced
+    """
+    # Get the names of the apps to check the whitelist and blacklist
+    if not whitelist:
+        whitelist = []
+    if not blacklist:
+        blacklist = []
+    # Make sure the storage_type is correct
+    assert storage_type in (constants.ENGINE_DROPBOX, constants.ENGINE_FS,
+                            constants.ENGINE_GDRIVE)
+    # If the path is specified, make sure it exists
+    if path:
+        assert os.path.exists(path), (
+            "The path {} does not exist!".format(path))
+    # Write the configuration file in the home directory
+    configuration = ["[storage]",
+                     "engine = {}".format(storage_type),
+                     ("path = " + (path or "")) if storage_type else "",
+                     "directory = {}".format(directory),
+
+                     "[applications_to_sync]",
+                     "\n".join(whitelist),
+
+                     "[applications_to_ignore]",
+                     "\n".join(blacklist)
+                     ]
+    config_path = os.path.join(os.environ['HOME'],
+                               constants.MACKUP_CONFIG_FILE)
+    with open(config_path, "w") as config_file:
+        config_file.writelines(line + "\n" for line in configuration)
+
+
+def config_exists():
+    """
+    Returns True if the user has a mackup configuration file.
+    """
+    return os.path.isfile(os.path.join(os.environ['HOME'],
+                                       constants.MACKUP_CONFIG_FILE))

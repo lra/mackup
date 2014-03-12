@@ -24,7 +24,50 @@ try:
 except ImportError:
     import ConfigParser as configparser
 
-import appsdb
+
+def make_config_file(storage_type=ENGINE_DROPBOX, path="",
+                     directory=MACKUP_BACKUP_PATH, whitelist=None,
+                     blacklist=None):
+    """
+    Writes a configuration file (~/.mackup.cfg) using the parameters. If no
+    options are specified, a default configuration file is made.
+
+    Args:
+        (str): The storage_type to be written (dropbox, google_drive,
+        file_system)
+        (str): The path to use if storage_type was file_system
+        (str): The custom directory name that will be used
+        (list): The list of applications that will be synced
+        (list): The list of applications that will not be synced
+    """
+    # Get the names of the apps to check the whitelist and blacklist
+    if not whitelist:
+        whitelist = []
+    if not blacklist:
+        blacklist = []
+    # Make sure the storage_type is correct
+    assert storage_type in (ENGINE_DROPBOX, ENGINE_FS,
+                            ENGINE_GDRIVE)
+    # If the path is specified, make sure it exists
+    if path:
+        assert os.path.exists(path), (
+            "The path {} does not exist!".format(path))
+    # Write the configuration file in the home directory
+    configuration = ["[storage]",
+                     "engine = {}".format(storage_type),
+                     ("path = " + (path or "")) if storage_type else "",
+                     "directory = {}".format(directory),
+
+                     "[applications_to_sync]",
+                     "\n".join(whitelist),
+
+                     "[applications_to_ignore]",
+                     "\n".join(blacklist)
+                     ]
+    config_path = os.path.join(os.environ['HOME'],
+                               MACKUP_CONFIG_FILE)
+    with open(config_path, "w") as config_file:
+        config_file.writelines(line + "\n" for line in configuration)
 
 
 class Config(object):
@@ -52,7 +95,6 @@ class Config(object):
 
         # Get the path where the Mackup folder is
         self._path = self._parse_path()
-        print self._path
 
         # Get the directory replacing 'Mackup', if any
         self._directory = self._parse_directory()
@@ -180,10 +222,8 @@ class Config(object):
             str
         """
         if self._parser.has_option('storage', 'engine'):
-            print "Yes!"
             engine = str(self._parser.get('storage', 'engine'))
         else:
-            print "No"
             engine = ENGINE_DROPBOX
 
         assert isinstance(engine, str)

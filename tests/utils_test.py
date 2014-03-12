@@ -6,6 +6,8 @@ import stat
 # from unittest.mock import patch
 
 from mackup import utils
+from mackup import constants
+from mackup import appsdb
 
 
 def convert_to_octal(file_name):
@@ -335,3 +337,55 @@ class TestMackup(unittest.TestCase):
         # Try to use the library path on Linux, which shouldn't work
         path = os.path.join(os.environ["HOME"], "Library/")
         assert not utils.can_file_be_synced_on_current_platform(path)
+
+    def test_get_storage_config(self):
+        # Testing the defaults (Dropbox and ~/Mackup)
+        answers = ["", ""]
+        utils.raw_input = lambda _: answers.pop(0)
+        assert utils.get_storage_config() == (constants.ENGINE_DROPBOX, None,
+                                              constants.MACKUP_BACKUP_PATH)
+
+        # Explicitly choosing Dropbox but using a different directory name
+        answers = [constants.ENGINE_DROPBOX, "some_directory"]
+        assert utils.get_storage_config() == (constants.ENGINE_DROPBOX, None,
+                                              "some_directory")
+
+        # Test that directory names with paths don't work
+        answers = ["", "should{0}not{0}work".format(os.sep),
+                  "{0}also_not_work".format(os.sep),
+                  "not_even_this{0}".format(os.sep), "should_work"]
+        assert utils.get_storage_config() == (constants.ENGINE_DROPBOX, None,
+                                              "should_work")
+
+        # Test that paths that don't exist for custom backup folders don't work
+        # Assumes the current directory exists :P
+        answers = [constants.ENGINE_FS, "/this/doesn't/exist",
+                  "neither/does/this", "./", constants.MACKUP_BACKUP_PATH]
+        assert utils.get_storage_config() == (constants.ENGINE_FS, "./",
+                                              constants.MACKUP_BACKUP_PATH)
+
+    def test_get_whitelist_and_blacklist_config(self):
+        utils.raw_input = lambda _: answers.pop(0)
+        app_database = appsdb.ApplicationsDatabase()
+        apps = ' '.join(app for app in app_database.get_app_names())
+
+        # Test defaults (empty blacklist and empty whitelist)
+        answers = ["Yes", "No"]
+        assert utils.get_whitelist_and_blacklist_config() == ([], [])
+
+        # Test adding everything to both lists
+        answers = ["No", apps + " random white noise",
+                   "Yes", apps + " this will be ignored"]
+        assert utils.get_whitelist_and_blacklist_config() == (apps.split(),
+                                                               apps.split())
+
+        # Test that you can't pass pure gibberish
+        answers = ["No", "This won't work",
+                   "Yes", "You have to actually enter an app"]
+        try:
+            utils.get_whitelist_and_blacklist_config() == ([], [])
+            raise AssertionError, (
+                "You shouldn't be able to enter gibbersh for this prompt")
+        except IndexError:
+            pass
+

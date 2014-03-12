@@ -13,6 +13,7 @@ import tempfile
 from . import utils
 from . import config
 from . import appsdb
+from . import constants
 
 
 class Mackup(object):

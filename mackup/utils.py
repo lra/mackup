@@ -10,6 +10,23 @@ import sqlite3
 
 from . import constants
 
+def choose(question, options, multiple_answers = False):
+    """
+    Ask the user which option he wants of the options list
+    
+    Args:
+        question(str): What can happen
+        options(list): List of strings the user can choose from
+        multiple_answers(bool): Whether the user can choose multiple options 
+    
+    Returns:
+        (list): The option(s) they chose from the list
+    """
+    while True:
+        answer = raw_input(question + ' <{}>\n'.format(options))
+        answers = [word for word in answer.split() if word in options]
+        if answers:
+            return answers
 
 # Flag that controls how user confirmation works.
 # If True, the user wants to say "yes" to everything.
@@ -205,7 +222,7 @@ def get_dropbox_folder_location():
         with open(host_db_path, 'r') as f_hostdb:
             data = f_hostdb.read().split()
     except IOError:
-        error("Unable to find your Dropbox install =(")
+        raise IOError, "Unable to find your Dropbox install =("
     dropbox_home = base64.b64decode(data[1])
 
     return dropbox_home

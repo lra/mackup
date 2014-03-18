@@ -357,3 +357,60 @@ def can_file_be_synced_on_current_platform(path):
             can_be_synced = False
 
     return can_be_synced
+
+
+def append_to_config(config, section, apps):
+    """
+    Writes the apps to the section in the config file. If the section is not
+    in the config it is created
+
+    Args:
+        (Config): The config object that is used in mackup which implements a
+                  (safe) config parser
+        (str): The section where the apps will be written to in the config file
+        (iterable): The apps to be written to the config file
+    """
+    config_path = os.path.join(os.environ['HOME'],
+                               constants.MACKUP_CONFIG_FILE)
+    for app in apps:
+        # Double check that each app is not already ignored or synced
+        if app in config._apps_to_sync or app in config.apps_to_ignore:
+            error("{} is approved to be {} according to {}".format(
+            app, "synced" if app in config._apps_to_sync else "ignored",
+            config._path))
+    # If that section is not in the config file, add it
+    # If a bad section is passed in, it won't affect mackup
+    if not config.has_section(section):
+        config.add_section(section)
+        with open(config_path, "w") as config_file:
+            config.write(config_file)
+    # Write the apps to the config file
+    with open(config_path, "w+") as config_file:
+        for line in config_file:
+            # Find where the section starts
+            if line == section:
+                # Skip a line and write the apps to the file
+                config_file.readline()
+                config_file.writelines(apps)
+                break
+
+
+def clear(apps):
+    """
+    Clears all instances of any of the apps in the config file. This should be
+    ran before appending the apps to the config file due to unforeseeable bugs
+
+    Args:
+        (iterable): The apps that will be purged from the config file
+    """
+    # Get all the text in the config file first
+    with open(os.path.join(os.environ['HOME'], constants.MACKUP_CONFIG_FILE),
+              "r") as config_file:
+        text = config_file.readlines()
+    # Rewrite to the config file
+    with open(os.path.join(os.environ['HOME'],
+               constants.MACKUP_CONFIG_FILE), "w") as config_file:
+        for line in text:
+            # Ignore any lines that have one of the apps in it
+            if line not in (app + "\n" for app in apps):
+                config_file.write(line)

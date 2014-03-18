@@ -5,6 +5,7 @@
 - Support for asciinema (via @yonkeltron)
 - Support for AWS CLI (via @yonkeltron)
 - Limit .vim folder backup for better linux support (thx @Imperiopolis)
+- Add a missing OmniFocus preferences file (via @sbleon)
 
 ## Mackup 0.7.1
 

@@ -19,3 +19,4 @@ Feel free to implement any of those ;)
 - Merge all the config code in Config()
 - Ability to `mackup list` without any storage, and use `mackup list` as a test
   in `homebrew`
+- Do not crash on non existing file during uninstall #240

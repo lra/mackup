@@ -94,6 +94,9 @@ def main():
         print output
 
     elif args.mode in (ENABLE_MODE, DISABLE_MODE):
+        if not args.apps:
+            utils.error("At least one app is required to run {}!".format(
+                       args.mode))
         # Chooses the section to used depending on the mode
         section = ("applications_to_sync" if args.mode == ENABLE_MODE
                   else "applications_to_ignore")

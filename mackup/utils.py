@@ -197,7 +197,9 @@ def parse_cmdline_args():
               " - restore: link the conf files already in your synced storage"
               " on your system, use it on any new system you use.\n"
               " - uninstall: reset everything as it was before using Mackup.\n"
-              " - list: display a list of all supported applications.\n")
+              " - list: display a list of all supported applications.\n"
+              " - enable: enables apps in the config file\n"
+              " - disable: disables the apps in the config file\n")
 
     help_msg = "Required action mode for Mackup, see below for details."
 
@@ -217,7 +219,8 @@ def parse_cmdline_args():
                                  constants.DISABLE_MODE,],
                         help=help_msg)
     # Get the list of apps for DISABLE/ENABLE mode
-    parser.add_argument("apps", nargs = argparse.REMAINDER)
+    parser.add_argument("apps", nargs = argparse.REMAINDER, help=("The list "
+                       "of apps used in the enable/disable commands"))
 
     # Parse the command line and return the parsed options
     return parser.parse_args()

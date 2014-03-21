@@ -1,6 +1,7 @@
 # Mackup Changelog
 
 ## WIP
+- Enable and Disable commands added
 - Support for SBCL (via @yonkeltron)
 - Support for asciinema (via @yonkeltron)
 - Support for AWS CLI (via @yonkeltron)

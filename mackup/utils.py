@@ -212,8 +212,12 @@ def parse_cmdline_args():
                         choices=[constants.BACKUP_MODE,
                                  constants.RESTORE_MODE,
                                  constants.UNINSTALL_MODE,
-                                 constants.LIST_MODE],
+                                 constants.LIST_MODE,
+                                 constants.ENABLE_MODE,
+                                 constants.DISABLE_MODE,],
                         help=help_msg)
+    # Get the list of apps for DISABLE/ENABLE mode
+    parser.add_argument("apps", nargs = argparse.REMAINDER)
 
     # Parse the command line and return the parsed options
     return parser.parse_args()
@@ -368,34 +372,40 @@ def append_to_config(config, section, apps):
         (Config): The config object that is used in mackup which implements a
                   (safe) config parser
         (str): The section where the apps will be written to in the config file
+               Do NOT include the brackets
         (iterable): The apps to be written to the config file
     """
     config_path = os.path.join(os.environ['HOME'],
                                constants.MACKUP_CONFIG_FILE)
     for app in apps:
         # Double check that each app is not already ignored or synced
-        if app in config._apps_to_sync or app in config.apps_to_ignore:
+        # We parse the configuration file again because it might have changed
+        if app in config._apps_to_sync.union(config._apps_to_ignore):
             error("{} is approved to be {} according to {}".format(
             app, "synced" if app in config._apps_to_sync else "ignored",
-            config._path))
+            config_path))
     # If that section is not in the config file, add it
-    # If a bad section is passed in, it won't affect mackup
-    if not config.has_section(section):
-        config.add_section(section)
+    # Bad sections aren't checked, because it wouldn't affect mackup
+    if not config._parser.has_section(section):
+        config._parser.add_section(section)
         with open(config_path, "w") as config_file:
-            config.write(config_file)
+            config._parser.write(config_file)
+    # Get all the text in the config file first
+    with open(os.path.join(os.environ['HOME'], constants.MACKUP_CONFIG_FILE),
+              "r") as config_file:
+        text = config_file.readlines()
     # Write the apps to the config file
-    with open(config_path, "w+") as config_file:
-        for line in config_file:
+    with open(config_path, "r+") as config_file:
+        for line in text:
+            config_file.write(line)
             # Find where the section starts
-            if line == section:
-                # Skip a line and write the apps to the file
-                config_file.readline()
+            if line == "[" + section + "]\n":
                 config_file.writelines(apps)
-                break
+                # Write extra line so it can be parsed properly (yes hacky)
+                config_file.write("\n")
 
 
-def clear(apps):
+def clean_config_file(apps):
     """
     Clears all instances of any of the apps in the config file. This should be
     ran before appending the apps to the config file due to unforeseeable bugs

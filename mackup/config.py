@@ -230,5 +230,18 @@ class Config(object):
         return apps_to_sync
 
 
+    def refresh(self):
+        """
+        Refreshes all of the config values by re-running __init__. This could
+        cause later issues if __init__ is changed significantly, so this
+        should be considered a hack
+        """
+        # Refreshes all of the values from the config file
+        # This way, if the config file changes this can reflect the changes
+        # This is a bit of a hack to get enable/disable commands working
+        # Can't find a better way to do it though
+        self.__init__()
+
+
 class ConfigError(Exception):
     pass

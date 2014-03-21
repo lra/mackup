@@ -24,6 +24,8 @@ from .constants import (BACKUP_MODE,
                         RESTORE_MODE,
                         UNINSTALL_MODE,
                         LIST_MODE,
+                        ENABLE_MODE,
+                        DISABLE_MODE,
                         VERSION)
 from .mackup import Mackup
 from . import utils
@@ -90,8 +92,21 @@ def main():
         output += ("{} applications supported in Mackup v{}"
                    .format(len(app_db.get_app_names()), VERSION))
         print output
+
+    elif args.mode in (ENABLE_MODE, DISABLE_MODE):
+        # Chooses the section to used depending on the mode
+        section = ("applications_to_sync" if args.mode == ENABLE_MODE
+                  else "applications_to_ignore")
+        utils.clean_config_file(args.apps)
+        # Refresh the config parser because we edited the file
+        # This should be considered a hack, because it just recalls constructor
+        # which could cause issues if config's __init__ changes significantly
+        mckp._config.refresh()
+        utils.append_to_config(mckp._config, section, args.apps)
+
     else:
         raise ValueError("Unsupported mode: {}".format(args.mode))
+
 
     # Delete the tmp folder
     mckp.clean_temp_folder()

@@ -14,6 +14,12 @@ RESTORE_MODE = 'restore'
 # Mode used to remove Mackup and reset and config file
 UNINSTALL_MODE = 'uninstall'
 
+# Mode used to add an application to the whitelist in the configuration file
+ENABLE_MODE = 'enable'
+
+# Mode used to add an application to the blacklist in the configuration file
+DISABLE_MODE = 'disable'
+
 # Support platforms
 PLATFORM_DARWIN = 'Darwin'
 PLATFORM_LINUX = 'Linux'

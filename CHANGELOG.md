@@ -1,6 +1,7 @@
 # Mackup Changelog
 
 ## WIP
+- Support for RubyMine 6 (via @damiankloip)
 - Support for SBCL (via @yonkeltron)
 - Support for asciinema (via @yonkeltron)
 - Support for AWS CLI (via @yonkeltron)

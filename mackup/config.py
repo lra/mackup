@@ -229,7 +229,6 @@ class Config(object):
 
         return apps_to_sync
 
-
     def refresh(self):
         """
         Refreshes all of the config values by re-running __init__. This could

@@ -216,11 +216,11 @@ def parse_cmdline_args():
                                  constants.UNINSTALL_MODE,
                                  constants.LIST_MODE,
                                  constants.ENABLE_MODE,
-                                 constants.DISABLE_MODE,],
+                                 constants.DISABLE_MODE],
                         help=help_msg)
     # Get the list of apps for DISABLE/ENABLE mode
-    parser.add_argument("apps", nargs = argparse.REMAINDER, help=("The list "
-                       "of apps used in the enable/disable commands"))
+    parser.add_argument("apps", nargs=argparse.REMAINDER, help=("The list "
+                        "of apps used in the enable/disable commands"))
 
     # Parse the command line and return the parsed options
     return parser.parse_args()
@@ -385,8 +385,8 @@ def append_to_config(config, section, apps):
         # We parse the configuration file again because it might have changed
         if app in config._apps_to_sync.union(config._apps_to_ignore):
             error("{} is approved to be {} according to {}".format(
-            app, "synced" if app in config._apps_to_sync else "ignored",
-            config_path))
+                app, "synced" if app in config._apps_to_sync else "ignored",
+                config_path))
     # If that section is not in the config file, add it
     # Bad sections aren't checked, because it wouldn't affect mackup
     if not config._parser.has_section(section):
@@ -422,7 +422,7 @@ def clean_config_file(apps):
         text = config_file.readlines()
     # Rewrite to the config file
     with open(os.path.join(os.environ['HOME'],
-               constants.MACKUP_CONFIG_FILE), "w") as config_file:
+                           constants.MACKUP_CONFIG_FILE), "w") as config_file:
         for line in text:
             # Ignore any lines that have one of the apps in it
             if line not in (app + "\n" for app in apps):

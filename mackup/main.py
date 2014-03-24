@@ -75,12 +75,12 @@ def main():
             # uninstalled yet
             # delete(mckp.mackup_folder)
 
-            print ("\n"
-                   "All your files have been put back into place. You can now"
-                   " safely uninstall Mackup.\n"
-                   "\n"
-                   "Thanks for using Mackup !"
-                   .format(os.path.abspath(__file__)))
+            print("\n"
+                  "All your files have been put back into place. You can now"
+                  " safely uninstall Mackup.\n"
+                  "\n"
+                  "Thanks for using Mackup !"
+                  .format(os.path.abspath(__file__)))
 
     elif args.mode == LIST_MODE:
         # Display the list of supported applications
@@ -96,10 +96,10 @@ def main():
     elif args.mode in (ENABLE_MODE, DISABLE_MODE):
         if not args.apps:
             utils.error("At least one app is required to run {}!".format(
-                       args.mode))
+                        args.mode))
         # Chooses the section to used depending on the mode
         section = ("applications_to_sync" if args.mode == ENABLE_MODE
-                  else "applications_to_ignore")
+                   else "applications_to_ignore")
         utils.clean_config_file(args.apps)
         # Refresh the config parser because we edited the file
         # This should be considered a hack, because it just recalls constructor
@@ -109,7 +109,6 @@ def main():
 
     else:
         raise ValueError("Unsupported mode: {}".format(args.mode))
-
 
     # Delete the tmp folder
     mckp.clean_temp_folder()

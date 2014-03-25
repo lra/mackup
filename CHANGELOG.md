@@ -1,6 +1,7 @@
 # Mackup Changelog
 
 ## WIP
+- Support for Atom (via @damiankloip)
 - Support for RubyMine 6 (via @damiankloip)
 - Support for SBCL (via @yonkeltron)
 - Support for asciinema (via @yonkeltron)

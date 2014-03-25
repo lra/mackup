@@ -136,6 +136,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Adobe Camera Raw](http://www.adobe.com/products/photoshop/extend.html)
   - [Adobe Lightroom](http://www.adobe.com/products/photoshop-lightroom.html)
   - [AppCode 2](http://www.jetbrains.com/objc/)
+  - [Atom](https://atom.io/)
   - [Arara](http://cereda.github.io/arara/)
   - [asciinema](https://asciinema.org/)
   - [Aspell](http://aspell.net/)

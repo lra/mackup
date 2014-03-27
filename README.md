@@ -229,6 +229,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [PCKeyboardHack](http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en)
   - [Pear](http://pear.php.net/)
   - [Pentadactyl](http://5digits.org/pentadactyl/)
+  - [Phoenix](https://github.com/sdegutis/Phoenix)
   - [PhpStorm 6](http://www.jetbrains.com/phpstorm/)
   - [PIP](http://www.pip-installer.org/)
   - [PokerStars](http://www.pokerstars.com/)

@@ -8,6 +8,7 @@
 - Support for AWS CLI (via @yonkeltron)
 - Limit .vim folder backup for better linux support (thx @Imperiopolis)
 - Add a missing OmniFocus preferences file (via @sbleon)
+- Support for Phoenix (via @vitorgalvao)
 
 ## Mackup 0.7.1
 

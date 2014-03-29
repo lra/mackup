@@ -9,6 +9,7 @@
 - Limit .vim folder backup for better linux support (thx @Imperiopolis)
 - Add a missing OmniFocus preferences file (via @sbleon)
 - Support for Phoenix (via @vitorgalvao)
+- Print out the moved files on uninstall
 
 ## Mackup 0.7.1
 

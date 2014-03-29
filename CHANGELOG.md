@@ -1,6 +1,9 @@
 # Mackup Changelog
 
 ## WIP
+
+## Mackup 0.7.2
+
 - Support for Atom (via @damiankloip)
 - Support for RubyMine 6 (via @damiankloip)
 - Support for SBCL (via @yonkeltron)

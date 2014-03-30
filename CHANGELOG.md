@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Support for Keybase
+
 ## Mackup 0.7.2
 
 - Support for Atom (via @damiankloip)

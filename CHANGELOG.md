@@ -3,6 +3,7 @@
 ## WIP
 
 - Support for Keybase
+- Support for AusKey
 
 ## Mackup 0.7.2
 

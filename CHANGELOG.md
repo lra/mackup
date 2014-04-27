@@ -4,6 +4,7 @@
 
 - Support for Keybase
 - Support for MySQL (via @fayland)
+- Support for Wget (via @fayland)
 
 ## Mackup 0.7.2
 

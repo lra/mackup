@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Support for Charles (via @raylillywhite)
 - Support for Keybase
 - Support for MySQL (via @fayland)
 - Support for Wget (via @fayland)

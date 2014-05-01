@@ -3,6 +3,7 @@
 ## WIP
 
 - Support for Keybase
+- More support for Divvy (via @oalders)
 
 ## Mackup 0.7.2
 

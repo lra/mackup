@@ -2,7 +2,7 @@
 
 ## WIP
 
-- Support for Sublime Text 3 in Linux
+- Support for Sublime Text 3 in Linux (thx @hiyer)
 - Support for Charles (via @raylillywhite)
 - Support for Keybase
 - Support for MySQL (via @fayland)

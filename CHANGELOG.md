@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Livestreamer (thx @vitorgalvao)
+- Added support of AppCode 3 (thx @dsiu)
 
 ## Mackup 0.6
 

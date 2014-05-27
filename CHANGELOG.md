@@ -7,6 +7,7 @@
 - Support for Keybase
 - Support for MySQL (via @fayland)
 - Support for Wget (via @fayland)
+- More support for Divvy (via @oalders)
 
 ## Mackup 0.7.2
 

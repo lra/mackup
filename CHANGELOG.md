@@ -11,6 +11,7 @@
 - Improved support for Divvy (via @oalders)
 - Support for SBT (via @laughedelic)
 - Imroved support for nvALT (via @aristidesfl)
+- Support for Perl related configuration (via @fayland)
 
 ## Mackup 0.7.2
 

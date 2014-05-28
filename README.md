@@ -251,6 +251,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [S3cmd](http://s3tools.org/s3cmd)
   - [SABnzbd](http://sabnzbd.org/)
   - [SBCL](http://www.sbcl.org/)
+  - [SBT](http://www.scala-sbt.org/)
   - [Scenario](http://www.lagentesoft.com/scenario/)
   - [Screen](http://www.gnu.org/software/screen/)
   - [SelfControl](http://selfcontrolapp.com/)

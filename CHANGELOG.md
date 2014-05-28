@@ -10,6 +10,7 @@
 - Support for Wget (via @fayland)
 - Improved support for Divvy (via @oalders)
 - Support for SBT (via @laughedelic)
+- Imroved support for nvALT (via @aristidesfl)
 
 ## Mackup 0.7.2
 

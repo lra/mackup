@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.7.3
+
 - Support for Liftoff (via @Lumde)
 - Support for Sublime Text 3 in Linux (via @hiyer)
 - Support for Charles (via @raylillywhite)

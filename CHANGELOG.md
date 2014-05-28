@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Support for Liftoff (vía @Lumde)
 - Support for Sublime Text 3 in Linux (thx @hiyer)
 - Support for Charles (via @raylillywhite)
 - Support for Keybase

@@ -12,6 +12,7 @@
 - Support for SBT (via @laughedelic)
 - Imroved support for nvALT (via @aristidesfl)
 - Support for Perl related configuration (via @fayland)
+- Support for AusKey (via @antulik)
 
 ## Mackup 0.7.2
 

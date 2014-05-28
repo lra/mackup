@@ -203,6 +203,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [KeyRemap4MacBook](http://pqrs.org/macosx/keyremap4macbook/)
   - [LaTeXiT](http://www.chachatelier.fr/latexit/latexit-home.php?lang=en)
   - [LaunchBar](http://www.obdev.at/products/launchbar/index.html)
+  - [Liftoff](https://github.com/thoughtbot/liftoff)
   - [Light Table](http://www.lighttable.com/)
   - [LimeChat](http://limechat.net/mac/)
   - [LittleSnitch](http://www.obdev.at/products/littlesnitch/)

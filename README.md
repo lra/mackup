@@ -140,6 +140,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Arara](http://cereda.github.io/arara/)
   - [asciinema](https://asciinema.org/)
   - [Aspell](http://aspell.net/)
+  - [AusKey](https://abr.gov.au/AUSkey/)
   - [Awareness](http://iamfutureproof.com/tools/awareness/)
   - [AWS Command Line Interface](https://aws.amazon.com/cli/)
   - [Bartender](http://www.macbartender.com/)

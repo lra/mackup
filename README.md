@@ -120,6 +120,7 @@ folder and destroy the Mackup folder in Dropbox.
   - [Adobe Camera Raw](http://www.adobe.com/products/photoshop/extend.html)
   - [Adobe Lightroom](http://www.adobe.com/products/photoshop-lightroom.html)
   - [AppCode 2](http://www.jetbrains.com/objc/)
+  - [AppCode 3](http://www.jetbrains.com/objc/)
   - [Arara](http://cereda.github.io/arara/)
   - [Aspell](http://aspell.net/)
   - [Awareness](http://iamfutureproof.com/tools/awareness/)

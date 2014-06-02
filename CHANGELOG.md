@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Support for Tig (via @damiankloip)
+
 ## Mackup 0.7.3
 
 - Support for Liftoff (via @Lumde)

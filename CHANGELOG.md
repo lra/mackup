@@ -3,6 +3,7 @@
 ## WIP
 
 - Support for Tig (via @damiankloip)
+- Added bundle directory to vim config (via @alanlamielle)
 
 ## Mackup 0.7.3
 

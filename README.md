@@ -138,6 +138,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [AppCode 2](http://www.jetbrains.com/objc/)
   - [Atom](https://atom.io/)
   - [Arara](http://cereda.github.io/arara/)
+  - [Artistic Style](http://astyle.sourceforge.net)
   - [asciinema](https://asciinema.org/)
   - [Aspell](http://aspell.net/)
   - [AusKey](https://abr.gov.au/AUSkey/)

@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Support for Artistic Style (via @feigaochn)
 - Support for Tig (via @damiankloip)
 - Added bundle directory to vim config (via @alanlamielle)
 

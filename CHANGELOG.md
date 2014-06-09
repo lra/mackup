@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added doc, ftdetect, ftplugin, indent, syntax directories to vim config
+  (via @feigaochn)
 - Support for Tig (via @damiankloip)
 - Added bundle directory to vim config (via @alanlamielle)
 

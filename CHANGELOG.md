@@ -5,6 +5,7 @@
 - Support for Artistic Style (via @feigaochn)
 - Support for Tig (via @damiankloip)
 - Added bundle directory to vim config (via @alanlamielle)
+- Support for Prezto (via @ponceleao)
 
 ## Mackup 0.7.3
 

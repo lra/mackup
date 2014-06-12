@@ -242,6 +242,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [PokerStars](http://www.pokerstars.com/)
   - [PopClip](http://pilotmoon.com/popclip/)
   - [Pow](http://pow.cx/)
+  - [Prezto](https://github.com/sorin-ionescu/prezto)
   - [Processing](http://processing.org/)
   - [PyPI](https://pypi.python.org/pypi)
   - [Quicksilver](http://qsapp.com/)

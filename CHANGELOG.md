@@ -6,6 +6,7 @@
 - Support for Tig (via @damiankloip)
 - Added bundle directory to vim config (via @alanlamielle)
 - Support for Prezto (via @ponceleao)
+- Support for PHPStorm 7 (via @singles)
 
 ## Mackup 0.7.3
 

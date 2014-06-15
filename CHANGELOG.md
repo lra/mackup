@@ -7,6 +7,7 @@
 - Added bundle directory to vim config (via @alanlamielle)
 - Support for Prezto (via @ponceleao)
 - Added support for PHPStorm 7 & 8 (via @singles)
+- Added support for aria2c (via @singles)
 
 ## Mackup 0.7.3
 

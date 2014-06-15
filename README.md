@@ -237,7 +237,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Pentadactyl](http://5digits.org/pentadactyl/)
   - [Perl](http://www.perl.org/)
   - [Phoenix](https://github.com/sdegutis/Phoenix)
-  - [PhpStorm 6](http://www.jetbrains.com/phpstorm/)
+  - [PhpStorm](http://www.jetbrains.com/phpstorm/)
   - [PIP](http://www.pip-installer.org/)
   - [PokerStars](http://www.pokerstars.com/)
   - [PopClip](http://pilotmoon.com/popclip/)

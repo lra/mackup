@@ -213,6 +213,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Livestreamer](http://livestreamer.tanuki.se/)
   - [MacOSX](http://www.apple.com/osx/)
   - [MacVim](https://code.google.com/p/macvim/)
+  - [Magic Launch](https://www.oneperiodic.com/products/magiclaunch/)
   - [MagicPrefs](http://magicprefs.com/)
   - [Mailplane](http://mailplaneapp.com/)
   - [MenuMeters](http://www.ragingmenace.com/software/menumeters/)

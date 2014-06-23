@@ -10,6 +10,7 @@
 - Added support for aria2c (via @singles)
 - Added support for Magic Launch (via @ryanburnett)
 - Added support for Hazel (via @ryanburnett)
+- Added support for Soulver (via @ryanburnett)
 
 ## Mackup 0.7.3
 

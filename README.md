@@ -271,6 +271,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Skype](http://www.skype.com/)
   - [Slate](https://github.com/jigish/slate)
   - [Slogger](http://brettterpstra.com/projects/slogger/)
+  - [Soulver](http://www.acqualia.com/soulver/)
   - [SourceTree](http://sourcetreeapp.com)
   - [Spark](http://www.shadowlab.org/softwares/spark.php)
   - [Spectacle](http://spectacleapp.com/)

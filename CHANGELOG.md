@@ -11,6 +11,7 @@
 - Added support for Magic Launch (via @ryanburnett)
 - Added support for Hazel (via @ryanburnett)
 - Added support for Soulver (via @ryanburnett)
+- Support for newsbeuter (via @ToostInc)
 
 ## Mackup 0.7.3
 

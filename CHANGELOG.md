@@ -13,6 +13,7 @@
 - Added support for Soulver (via @ryanburnett)
 - Support for newsbeuter (via @ToostInc)
 - Improved support for Stata (via @kfinlay)
+- Improved Messages support (via @vitorgalvao)
 
 ## Mackup 0.7.3
 

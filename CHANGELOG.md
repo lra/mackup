@@ -1,7 +1,7 @@
 # Mackup Changelog
 
 ## WIP
-
+- Atom now only syncs essential files, excluding compiled and cache folders (via @lmartins)
 - Support for Artistic Style (via @feigaochn)
 - Support for Tig (via @damiankloip)
 - Added bundle directory to vim config (via @alanlamielle)

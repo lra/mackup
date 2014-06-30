@@ -12,6 +12,7 @@
 - Added support for Hazel (via @ryanburnett)
 - Added support for Soulver (via @ryanburnett)
 - Support for newsbeuter (via @ToostInc)
+- Improved support for Stata (via @kfinlay)
 
 ## Mackup 0.7.3
 

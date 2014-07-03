@@ -263,6 +263,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Scenario](http://www.lagentesoft.com/scenario/)
   - [Screen](http://www.gnu.org/software/screen/)
   - [SelfControl](http://selfcontrolapp.com/)
+  - [Seil](https://pqrs.org/macosx/keyremap4macbook/seil.html.en)
   - [Sequel Pro](http://www.sequelpro.com/)
   - [SHSH Blobs](http://en.wikipedia.org/wiki/SHSH_blob)
   - [Shuttle](http://fitztrev.github.io/shuttle/)

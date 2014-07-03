@@ -236,7 +236,6 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [OpenSSH](http://www.openssh.org/)
   - [Pastebot](http://tapbots.com/software/pastebot/)
   - [Path Finder](http://www.cocoatech.com/pathfinder/)
-  - [PCKeyboardHack](http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html.en)
   - [Pear](http://pear.php.net/)
   - [Pentadactyl](http://5digits.org/pentadactyl/)
   - [Perl](http://www.perl.org/)

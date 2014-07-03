@@ -14,6 +14,7 @@
 - Support for newsbeuter (via @ToostInc)
 - Improved support for Stata (via @kfinlay)
 - Improved Messages support (via @vitorgalvao)
+- Added support for Seil, a renamed PCKeyboardHack (via @kfinlay)
 
 ## Mackup 0.7.3
 

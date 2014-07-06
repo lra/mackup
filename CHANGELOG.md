@@ -15,6 +15,7 @@
 - Improved support for Stata (via @kfinlay)
 - Improved Messages support (via @vitorgalvao)
 - Support for Seil and moved PCKeyboardHack there (via @kfinlay)
+- Improved support for ssh, excluding any the credential keys (via @nkcfan)
 
 ## Mackup 0.7.3
 

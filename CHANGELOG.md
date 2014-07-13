@@ -15,6 +15,7 @@
 - Improved support for Stata (via @kfinlay)
 - Improved Messages support (via @vitorgalvao)
 - Support for Seil and moved PCKeyboardHack there (via @kfinlay)
+- Support for Karabiner and moved KeyRemap4MacBook there (via @kfinlay)
 
 ## Mackup 0.7.3
 

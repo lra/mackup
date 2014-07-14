@@ -16,6 +16,7 @@
 - Improved Messages support (via @vitorgalvao)
 - Support for Seil and moved PCKeyboardHack there (via @kfinlay)
 - Improved support for curl (via @nkcfan)
+- Improved support for fish (via @nanoxd)
 
 ## Mackup 0.7.3
 

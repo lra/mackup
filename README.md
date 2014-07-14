@@ -230,6 +230,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [ncmpcpp](http://ncmpcpp.rybczak.net)
   - [newsbeuter](http://newsbeuter.org/)
   - [nvALT](http://brettterpstra.com/projects/nvalt/)
+  - [nvpy](https://github.com/cpbotha/nvpy)
   - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
   - [OmniFocus](http://www.omnigroup.com/products/omnifocus/)
   - [OmniGraffle](http://www.omnigroup.com/omnigraffle/)

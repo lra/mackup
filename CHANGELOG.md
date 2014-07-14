@@ -6,6 +6,7 @@
 - Support for Tig (via @damiankloip)
 - Added bundle directory to vim config (via @alanlamielle)
 - Support for Prezto (via @ponceleao)
+- Added support of AppCode 3 (via @turygo)
 - Added support for PHPStorm 7 & 8 (via @singles)
 - Added support for aria2c (via @singles)
 - Added support for Magic Launch (via @ryanburnett)

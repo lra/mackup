@@ -1,10 +1,21 @@
 # Mackup Changelog
 
 ## WIP
-
+- Atom now only syncs essential files, excluding compiled and cache folders (via @lmartins)
 - Support for Artistic Style (via @feigaochn)
 - Support for Tig (via @damiankloip)
 - Added bundle directory to vim config (via @alanlamielle)
+- Support for Prezto (via @ponceleao)
+- Added support for PHPStorm 7 & 8 (via @singles)
+- Added support for aria2c (via @singles)
+- Added support for Magic Launch (via @ryanburnett)
+- Added support for Hazel (via @ryanburnett)
+- Added support for Soulver (via @ryanburnett)
+- Support for newsbeuter (via @ToostInc)
+- Improved support for Stata (via @kfinlay)
+- Improved Messages support (via @vitorgalvao)
+- Support for Seil and moved PCKeyboardHack there (via @kfinlay)
+- Improved support for curl (via @nkcfan)
 
 ## Mackup 0.7.3
 

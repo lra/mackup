@@ -18,6 +18,7 @@
 - Support for Seil and moved PCKeyboardHack there (via @kfinlay)
 - Improved support for curl (via @nkcfan)
 - Improved support for fish (via @nanoxd)
+- Support for Karabiner and moved KeyRemap4MacBook there (via @kfinlay)
 
 ## Mackup 0.7.3
 

@@ -1,6 +1,7 @@
 # Mackup Changelog
 
 ## WIP
+- Improved support for Slate (via @bradcerasani)
 - Added support for nvpy - a Linux client for SimpleNote (via @hiyer)
 - Atom now only syncs essential files, excluding compiled and cache folders (via @lmartins)
 - Support for Artistic Style (via @feigaochn)

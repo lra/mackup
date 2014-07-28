@@ -19,6 +19,7 @@
 - Support for Seil and moved PCKeyboardHack there (via @kfinlay)
 - Improved support for curl (via @nkcfan)
 - Improved support for fish (via @nanoxd)
+- Improved support for BibDesk (via @kfinlay)
 
 ## Mackup 0.7.3
 

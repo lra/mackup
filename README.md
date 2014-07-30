@@ -201,6 +201,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Irssi](http://www.irssi.org/)
   - [ITerm2](http://www.iterm2.com/)
   - [Janus](https://github.com/carlhuda/janus)
+  - [Karabiner](https://pqrs.org/osx/karabiner)
   - [Keka](http://kekaosx.com/)
   - [Keybase](https://keybase.io/)
   - [Keymo](http://manytricks.com/keymo/)

@@ -156,6 +156,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Bundler](http://bundler.io)
   - [Byobu](http://byobu.co/)
   - [Caffeine](http://lightheadsw.com/caffeine/)
+  - [Cartographica](http://www.macgis.com)
   - [Charles](http://www.charlesproxy.com)
   - [Chef](http://www.opscode.com/chef/)
   - [Chicken](http://sourceforge.net/projects/chicken/)

@@ -22,6 +22,7 @@
 - Improved support for BibDesk (via @kfinlay)
 - Support for Karabiner (via @kfinlay)
 - Latex config for TextMate (via @kfinlay)
+- Support for Cartographica (via @kfinlay)
 
 ## Mackup 0.7.3
 

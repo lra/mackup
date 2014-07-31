@@ -21,6 +21,7 @@
 - Improved support for fish (via @nanoxd)
 - Improved support for BibDesk (via @kfinlay)
 - Support for Karabiner (via @kfinlay)
+- Latex config for TextMate (via @kfinlay)
 
 ## Mackup 0.7.3
 

@@ -191,6 +191,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Git](http://git-scm.com/)
   - [Gitbox](http://gitboxapp.com/)
   - [Gmail Notifr](http://ashchan.com/projects/gmail-notifr)
+  - [Go2Shell](http://zipzapmac.com/Go2Shell)
   - [GnuPG](http://www.gnupg.org/)
   - [Hands Off!](http://www.oneperiodic.com/products/handsoff/)
   - [Hazel](http://www.noodlesoft.com/hazel.php)

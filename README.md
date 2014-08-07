@@ -201,6 +201,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [IntelliJIDEA 12](http://www.jetbrains.com/idea/)
   - [Irssi](http://www.irssi.org/)
   - [ITerm2](http://www.iterm2.com/)
+  - [JSHint](http://www.jshint.com/)
   - [Janus](https://github.com/carlhuda/janus)
   - [Karabiner](https://pqrs.org/osx/karabiner)
   - [Keka](http://kekaosx.com/)

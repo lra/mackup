@@ -25,6 +25,7 @@
 - Latex config for TextMate (via @kfinlay)
 - Support for Cartographica (via @kfinlay)
 - Support for Go2Shell (via @kfinlay)
+- Improved support for ExpanDrive (via @kfinlay)
 
 ## Mackup 0.7.3
 

@@ -89,7 +89,7 @@ def main():
         output += "\n"
         output += ("{} applications supported in Mackup v{}"
                    .format(len(app_db.get_app_names()), VERSION))
-        print output
+        print (output)
     else:
         raise ValueError("Unsupported mode: {}".format(args.mode))
 

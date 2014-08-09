@@ -26,6 +26,7 @@
 - Support for Cartographica (via @kfinlay)
 - Support for Go2Shell (via @kfinlay)
 - Improved support for ExpanDrive (via @kfinlay)
+- Added support for Tower 2 (via @mAAdhaTTah)
 
 ## Mackup 0.7.3
 

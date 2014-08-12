@@ -56,7 +56,7 @@ class ApplicationProfile(object):
                               or os.path.isdir(mackup_filepath))
                          and os.path.samefile(filepath, mackup_filepath))):
 
-                print "Backing up {}...".format(filename)
+                print ("Backing up {}...".format(filename))
 
                 # Check if we already have a backup
                 if os.path.exists(mackup_filepath):
@@ -124,7 +124,7 @@ class ApplicationProfile(object):
                                               home_filepath))
                 and utils.can_file_be_synced_on_current_platform(filename)):
 
-                print "Restoring {}...".format(filename)
+                print ("Restoring {}...".format(filename))
 
                 # Check if there is already a file in the home folder
                 if os.path.exists(home_filepath):
@@ -174,7 +174,7 @@ class ApplicationProfile(object):
 
                 # Check if there is a corresponding file in the home folder
                 if os.path.exists(home_filepath):
-                    print "Moving {} back into your home...".format(filename)
+                    print ("Moving {} back into your home...".format(filename))
                     # If there is, delete it as we are gonna copy the Dropbox
                     # one there
                     utils.delete(home_filepath)

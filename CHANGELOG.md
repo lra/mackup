@@ -27,6 +27,7 @@
 - Support for Go2Shell (via @kfinlay)
 - Improved support for ExpanDrive (via @kfinlay)
 - Added support for Tower 2 (via @mAAdhaTTah)
+- Improved support for Textual (via @oalders)
 
 ## Mackup 0.7.3
 

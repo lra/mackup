@@ -56,7 +56,7 @@ class ApplicationProfile(object):
                               or os.path.isdir(mackup_filepath))
                          and os.path.samefile(filepath, mackup_filepath))):
 
-                print "Backing up {}...".format(filename)
+                print ("Backing up {}...".format(filename))
 
                 # Check if we already have a backup
                 if os.path.exists(mackup_filepath):

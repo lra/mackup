@@ -73,12 +73,12 @@ def main():
             # uninstalled yet
             # delete(mckp.mackup_folder)
 
-            print ("\n"
-                   "All your files have been put back into place. You can now"
-                   " safely uninstall Mackup.\n"
-                   "\n"
-                   "Thanks for using Mackup !"
-                   .format(os.path.abspath(__file__)))
+            print("\n"
+                  "All your files have been put back into place. You can now"
+                  " safely uninstall Mackup.\n"
+                  "\n"
+                  "Thanks for using Mackup !"
+                  .format(os.path.abspath(__file__)))
 
     elif args.mode == LIST_MODE:
         # Display the list of supported applications
@@ -89,7 +89,7 @@ def main():
         output += "\n"
         output += ("{} applications supported in Mackup v{}"
                    .format(len(app_db.get_app_names()), VERSION))
-        print output
+        print(output)
     else:
         raise ValueError("Unsupported mode: {}".format(args.mode))
 

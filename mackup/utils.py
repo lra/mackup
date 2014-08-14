@@ -11,6 +11,8 @@ import sqlite3
 
 from . import constants
 
+try: input = raw_input
+except NameError: pass
 
 def confirm(question):
     """
@@ -23,7 +25,7 @@ def confirm(question):
         (boolean): Confirmed or not
     """
     while True:
-        answer = raw_input(question + ' <Yes|No>')
+        answer = input(question + ' <Yes|No>')
         if answer == 'Yes':
             confirmed = True
             break

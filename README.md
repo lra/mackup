@@ -3,7 +3,7 @@
 Keep your application settings in sync.
 
 [![Build Status](https://travis-ci.org/lra/mackup.svg?branch=master)](https://travis-ci.org/lra/mackup)
-[![Coverage Status](https://coveralls.io/repos/lra/mackup/badge.png)](https://coveralls.io/r/lra/mackup)
+[![Coverage Status](https://img.shields.io/coveralls/lra/mackup.svg)](https://coveralls.io/r/lra/mackup?branch=master)
 [![Code Health](https://landscape.io/github/lra/mackup/master/landscape.png)](https://landscape.io/github/lra/mackup/master)
 
 ## Quickstart

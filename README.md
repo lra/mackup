@@ -2,7 +2,7 @@
 
 Keep your application settings in sync.
 
-[![Build Status](https://travis-ci.org/lra/mackup.png?branch=master)](https://travis-ci.org/lra/mackup)
+[![Build Status](https://travis-ci.org/lra/mackup.svg?branch=master)](https://travis-ci.org/lra/mackup)
 [![Coverage Status](https://coveralls.io/repos/lra/mackup/badge.png)](https://coveralls.io/r/lra/mackup)
 [![Code Health](https://landscape.io/github/lra/mackup/master/landscape.png)](https://landscape.io/github/lra/mackup/master)
 

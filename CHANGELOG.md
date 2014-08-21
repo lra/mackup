@@ -27,6 +27,7 @@
 - Support for Go2Shell (via @kfinlay)
 - Improved support for ExpanDrive (via @kfinlay)
 - Added support for Tower 2 (via @mAAdhaTTah)
+- Added DefaultKeyBinding.dict to MacOSX config (via @kfinlay)
 
 ## Mackup 0.7.3
 

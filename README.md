@@ -2,7 +2,7 @@
 
 Keep your application settings in sync.
 
-[![Build Status](https://travis-ci.org/lra/mackup.svg?branch=master)](https://travis-ci.org/lra/mackup)
+[![Circle CI](https://circleci.com/gh/lra/mackup.png?style=badge)](https://circleci.com/gh/lra/mackup)
 [![Coverage Status](https://img.shields.io/coveralls/lra/mackup.svg)](https://coveralls.io/r/lra/mackup?branch=master)
 [![Code Health](https://landscape.io/github/lra/mackup/master/landscape.png)](https://landscape.io/github/lra/mackup/master)
 

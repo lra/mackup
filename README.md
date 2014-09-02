@@ -233,6 +233,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Nano](http://www.nano-editor.org/)
   - [ncmpcpp](http://ncmpcpp.rybczak.net)
   - [newsbeuter](http://newsbeuter.org/)
+  - [npm](https://www.npmjs.org/)
   - [nvALT](http://brettterpstra.com/projects/nvalt/)
   - [nvpy](https://github.com/cpbotha/nvpy)
   - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
@@ -354,3 +355,4 @@ Mackup is just a contraction of Mac and Backup, I suck at naming stuff, ok.
 ## Where can I find more information ?
 
 In the [doc](doc) directory.
+

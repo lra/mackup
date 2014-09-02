@@ -1,6 +1,7 @@
 # Mackup Changelog
 
 ## WIP
+- Adding support for ngrok .ngrok (via @yonkeltron)
 - Added support for JSHints .jshintrc
 - Improved support for Slate (via @bradcerasani)
 - Added support for nvpy - a Linux client for SimpleNote (via @hiyer)

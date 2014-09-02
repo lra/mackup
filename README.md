@@ -233,6 +233,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Nano](http://www.nano-editor.org/)
   - [ncmpcpp](http://ncmpcpp.rybczak.net)
   - [newsbeuter](http://newsbeuter.org/)
+  - [ngrok](https://ngrok.com/)
   - [nvALT](http://brettterpstra.com/projects/nvalt/)
   - [nvpy](https://github.com/cpbotha/nvpy)
   - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)

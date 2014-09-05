@@ -193,6 +193,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Gmail Notifr](http://ashchan.com/projects/gmail-notifr)
   - [Go2Shell](http://zipzapmac.com/Go2Shell)
   - [GnuPG](http://www.gnupg.org/)
+  - [Google Chrome](https://www.google.com/chrome)
   - [Hands Off!](http://www.oneperiodic.com/products/handsoff/)
   - [Hazel](http://www.noodlesoft.com/hazel.php)
   - [Heroku](https://www.heroku.com/)

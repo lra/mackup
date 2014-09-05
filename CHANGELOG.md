@@ -80,6 +80,8 @@
 - Prevent Mackup to be run as a superuser
 - Code cleanup
 
+- Added support for Google Chrome (thx @vitorgalvao)
+
 ## Mackup 0.6
 
 - Added support for custom applications

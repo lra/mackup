@@ -296,6 +296,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Tower](http://www.git-tower.com/)
   - [Transmission](http://www.transmissionbt.com/)
   - [Transmit](http://panic.com/transmit/)
+  - [Tweetbot](http://tapbots.com/software/tweetbot/mac/)
   - [Twitterrific](http://twitterrific.com/)
   - [uTorrent](http://www.utorrent.com/)
   - [Ventrilo](http://www.ventrilo.com/)

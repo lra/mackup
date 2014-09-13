@@ -272,6 +272,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Sequel Pro](http://www.sequelpro.com/)
   - [SHSH Blobs](http://en.wikipedia.org/wiki/SHSH_blob)
   - [Shuttle](http://fitztrev.github.io/shuttle/)
+  - [Sip](http://theolabrothers.com/sip/)
   - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
   - [Skim](http://skim-app.sourceforge.net/)
   - [Skitch](http://evernote.com/skitch/)

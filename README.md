@@ -256,6 +256,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [PyPI](https://pypi.python.org/pypi)
   - [Quicksilver](http://qsapp.com/)
   - [Rails](http://rubyonrails.org/)
+  - [Readkit](http://readkitapp.com/)
   - [rTorrent](http://libtorrent.rakshasa.no/)
   - [R](http://www.r-project.org/)
   - [Ruby Version](https://gist.github.com/fnichol/1912050)

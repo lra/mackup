@@ -248,6 +248,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Phoenix](https://github.com/sdegutis/Phoenix)
   - [PhpStorm](http://www.jetbrains.com/phpstorm/)
   - [PIP](http://www.pip-installer.org/)
+  - [Pixelmator](http://www.pixelmator.com/)
   - [PokerStars](http://www.pokerstars.com/)
   - [PopClip](http://pilotmoon.com/popclip/)
   - [Pow](http://pow.cx/)

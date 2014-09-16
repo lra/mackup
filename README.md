@@ -21,17 +21,13 @@ brew install mackup
 mackup backup
 ```
 
-If not running OS X, or you don't like Homebrew, run on your current
-workstation:
+If not running OS X, or you don't like Homebrew, you can use PIP:
 ```bash
-# Download Mackup
-curl -o mackup.zip https://codeload.github.com/lra/mackup/zip/master
-
-# Uncompress the archive
-unzip mackup.zip
+# Install Mackup with PIP
+pip install mackup
 
 # Launch it and back up your files
-./mackup-master/bin/mackup backup
+mackup backup
 ```
 
 You're all set, and constantly backuped from now on.

@@ -2,9 +2,8 @@
 
 There are 3 ways to run mackup
 
-1. Install it with Homebrew and run it (OSX only)
-1. Download it, install it with python setuptools and run it (OSX and
-   GNU/Linux)
+1. Install it with Homebrew (OSX only)
+1. Install it with PIP (OSX and GNU/Linux)
 1. Download it, and run it without installing it (OSX and GNU/Linux)
 
 ## Install
@@ -19,18 +18,11 @@ brew install mackup
 mackup -h
 ```
 
-### With Python Setuptools
+### With Python's PIP
 
 ```bash
-# Download Mackup
-curl -o mackup.zip https://codeload.github.com/lra/mackup/zip/master
-
-# Uncompress the archive
-unzip mackup.zip
-
-# Install Mackup on your system
-cd mackup-master
-sudo python setup.py install
+# Easy too
+pip install mackup
 
 # Now you can run it
 mackup -h
@@ -59,20 +51,10 @@ brew upgrade
 mackup -h
 ```
 
-### With Python Setuptools
+### With Python's PIP
 
 ```bash
-# Download Mackup
-curl -o mackup.zip https://codeload.github.com/lra/mackup/zip/master
-
-# Uncompress the archive
-unzip mackup.zip
-
-# Install Mackup on your system
-cd mackup-master
-sudo python setup.py install
-
-# Now you can run it
+pip install --upgrade mackup
 mackup -h
 ```
 
@@ -84,10 +66,10 @@ mackup -h
 brew uninstall mackup
 ```
 
-### With Python Setuptools
+### With Python's PIP
 
 ```bash
-sudo rm -rf /usr/local/bin/mackup /usr/local/lib/python?.?/site-packages/Mackup-*.egg/
+pip uninstall mackup
 ```
 
 

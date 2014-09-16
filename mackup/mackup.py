@@ -37,7 +37,7 @@ class Mackup(object):
                         .format(self._config.path))
 
         # Is Sublime Text running ?
-        #if is_process_running('Sublime Text'):
+        # if is_process_running('Sublime Text'):
         #    error("Sublime Text is running. It is known to cause problems"
         #          " when Sublime Text is running while I backup or restore"
         #          " its configuration files. Please close Sublime Text and"

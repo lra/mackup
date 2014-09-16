@@ -8,6 +8,7 @@ test:
 	nosetests
 
 clean:
+	rm -rf dist/
 	rm -rf Mackup.egg-info/
 
 release: clean

@@ -1,3 +1,3 @@
 # Let's install nose to run some tests
 # Run "pip install -r requirements.txt" then "nosetests"
-nose==1.3.0
+nose==1.3.4

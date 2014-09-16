@@ -4,7 +4,7 @@ from mackup.constants import VERSION
 
 
 setup(
-    name='Mackup',
+    name='mackup',
     version=VERSION,
     author='Laurent Raufaste',
     author_email='analogue@glop.org',

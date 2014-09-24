@@ -1,6 +1,7 @@
 # Mackup Changelog
 
 ## WIP
+- Added support for Popcorn Time (via @JacopKane)
 
 ## Mackup 0.7.4
 

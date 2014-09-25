@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Support for Houdini (via @kfinlay)
+
 ## Mackup 0.7.4
 
 - Better Python packaging, deleted the half-baked binary
@@ -33,7 +35,6 @@
 - Improved support for ExpanDrive (via @kfinlay)
 - Added support for Tower 2 (via @mAAdhaTTah)
 - Improved support for Textual (via @oalders)
-- Support for Houdini (via @kfinlay)
 
 ## Mackup 0.7.3
 

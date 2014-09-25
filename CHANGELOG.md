@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Support for Houdini (via @kfinlay)
+
 ## Mackup 0.7.4
 
 - Better Python packaging, deleted the half-baked binary

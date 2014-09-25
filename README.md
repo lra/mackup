@@ -193,6 +193,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Hazel](http://www.noodlesoft.com/hazel.php)
   - [Heroku](https://www.heroku.com/)
   - [Hexels](http://hexraystudios.com/hexels/)
+  - [Houdini](http://uglyapps.co.uk/houdini/)
   - [Htop](http://htop.sourceforge.net/)
   - [i2cssh](https://github.com/wouterdebie/i2cssh)
   - [IntelliJIDEA 12](http://www.jetbrains.com/idea/)

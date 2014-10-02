@@ -79,7 +79,7 @@ freshly new installed workstation (No cache, temporary and locally specific
 files are transfered).
 
 It also helps you spend more time doing real cool stuff, and less time setting
-you environment.
+up your environment.
 
 ## Bullsh*t, what does it really do to my files ?!
 

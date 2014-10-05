@@ -30,7 +30,7 @@ engine = google_drive
 ### Copy
 
 If you choose the `copy` storage engine, Mackup will figure out
-where your Google Drive is and store your configuration files in it.
+where your Copy folder is and store your configuration files in it.
 
 ```ini
 [storage]

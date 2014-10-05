@@ -1,5 +1,10 @@
 # Configuration
 
+To configure mackup, create a file named ´.mackup.cfg´ in your home directory.
+```bash
+nano ~/.mackup.cfg
+```
+
 ## Storage
 
 ### Dropbox

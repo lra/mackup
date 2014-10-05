@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Support for Copy sync engine (via @exiva)
 - Support for Houdini (via @kfinlay)
 
 ## Mackup 0.7.4

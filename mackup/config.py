@@ -9,10 +9,12 @@ from constants import (MACKUP_BACKUP_PATH,
                        MACKUP_CONFIG_FILE,
                        ENGINE_DROPBOX,
                        ENGINE_GDRIVE,
+                       ENGINE_COPY,
                        ENGINE_FS)
 
 from utils import (error,
                    get_dropbox_folder_location,
+                   get_copy_folder_location,
                    get_google_drive_folder_location)
 try:
     import configparser
@@ -55,7 +57,7 @@ class Config(object):
     def engine(self):
         """
         The engine used by the storage.
-        ENGINE_DROPBOX, ENGINE_GDRIVE or ENGINE_FS.
+        ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_COPY or ENGINE_FS.
 
         Returns:
             str
@@ -163,7 +165,8 @@ class Config(object):
 
         assert isinstance(engine, str)
 
-        if engine not in [ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_FS]:
+        if engine not in [ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_COPY,
+                         ENGINE_FS]:
             raise ConfigError('Unknown storage engine: {}'.format(engine))
 
         return str(engine)
@@ -177,6 +180,8 @@ class Config(object):
             path = get_dropbox_folder_location()
         elif self.engine == ENGINE_GDRIVE:
             path = get_google_drive_folder_location()
+        elif self.engine == ENGINE_COPY:
+            path = get_copy_folder_location()
         elif self.engine == ENGINE_FS:
             if self._parser.has_option('storage', 'path'):
                 cfg_path = self._parser.get('storage', 'path')

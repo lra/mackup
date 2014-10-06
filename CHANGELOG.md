@@ -3,6 +3,7 @@
 ## WIP
 
 - Support for Houdini (via @kfinlay)
+- Add .gitignore (via @eyadsibai)
 
 ## Mackup 0.7.4
 

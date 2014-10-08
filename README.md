@@ -196,7 +196,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Houdini](http://uglyapps.co.uk/houdini/)
   - [Htop](http://htop.sourceforge.net/)
   - [i2cssh](https://github.com/wouterdebie/i2cssh)
-  - [IntelliJIDEA 12](http://www.jetbrains.com/idea/)
+  - [IntelliJIDEA](http://www.jetbrains.com/idea/)
   - [Irssi](http://www.irssi.org/)
   - [ITerm2](http://www.iterm2.com/)
   - [JSHint](http://www.jshint.com/)

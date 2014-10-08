@@ -3,6 +3,7 @@
 ## WIP
 
 - Support for Houdini (via @kfinlay)
+- Support for dig (via @glaszig)
 
 ## Mackup 0.7.4
 

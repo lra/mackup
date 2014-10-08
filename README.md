@@ -168,6 +168,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Dash](http://kapeli.com/dash)
   - [Deal Alert](http://dealalertapp.com/)
   - [Default Folder X](http://www.stclairsoft.com/DefaultFolderX/)
+  - [Dig](http://en.wikipedia.org/wiki/Dig_(command))
   - [Divvy](http://mizage.com/divvy/)
   - [Dolphin](https://dolphin-emu.org/)
   - [Droplr](https://droplr.com/hello)

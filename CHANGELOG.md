@@ -3,6 +3,7 @@
 ## WIP
 
 - Support for Houdini (via @kfinlay)
+- Support for IntelliJ IDEA 13 (via @dsager)
 
 ## Mackup 0.7.4
 

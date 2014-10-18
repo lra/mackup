@@ -5,6 +5,7 @@
 - Support for Terminator (via @chr1sbest)
 - Support for Houdini (via @kfinlay)
 - Support for IntelliJ IDEA 13 (via @dsager)
+- Support for Ubersicht (via @kfinlay)
 
 ## Mackup 0.7.4
 

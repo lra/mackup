@@ -60,7 +60,7 @@ class ApplicationsDatabase(object):
         e.g. /usr/lib/mackup/applications/bash.cfg
 
         Returns:
-            set of strings.
+            list of strings.
         """
         # Configure the config parser
         apps_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)),
@@ -68,16 +68,16 @@ class ApplicationsDatabase(object):
         custom_apps_dir = os.path.join(os.environ['HOME'], CUSTOM_APPS_DIR)
 
         # Build the list of stock application config files
-        config_files = set()
+        config_files = list()
         for filename in os.listdir(apps_dir):
             if filename.endswith('.cfg'):
-                config_files.add(os.path.join(apps_dir, filename))
+                config_files.append(os.path.join(apps_dir, filename))
 
         # Append the list of custom application config files
         if os.path.isdir(custom_apps_dir):
             for filename in os.listdir(custom_apps_dir):
                 if filename.endswith('.cfg'):
-                    config_files.add(os.path.join(custom_apps_dir,
+                    config_files.append(os.path.join(custom_apps_dir,
                                                   filename))
         return config_files
 

@@ -7,6 +7,7 @@
 - Support for Houdini (via @kfinlay)
 - Support for IntelliJ IDEA 13 (via @dsager)
 - Support for Pass (via @kykim)
+- Support for Composer (via @fayland)
 
 ## Mackup 0.7.4
 

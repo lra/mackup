@@ -161,6 +161,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [CloudApp](http://getcloudapp.com/)
   - [Coda 2](http://panic.com/coda/)
   - [Colloquy](http://colloquy.info/)
+  - [Composer](https://getcomposer.org/)
   - [Concentrate](http://www.getconcentrating.com/)
   - [ControlPlane](http://www.controlplaneapp.com/)
   - [CoRD](http://cord.sourceforge.net/)

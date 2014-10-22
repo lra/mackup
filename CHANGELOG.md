@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Support for XtraFinder (via @ethanl)
 - Support for Rubocop (via @iainbeeston)
 - Support for Terminator (via @chr1sbest)
 - Support for Houdini (via @kfinlay)

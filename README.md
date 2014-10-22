@@ -310,6 +310,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [XCode](https://developer.apple.com/xcode/)
   - [XEmacs](http://www.xemacs.org/)
   - [XLD](http://tmkk.undo.jp/xld/)
+  - [XtraFinder](http://www.trankynam.com/xtrafinder/)
   - [Zsh](http://zsh.sourceforge.net/)
   - iTunes Applescripts
 

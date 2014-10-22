@@ -4,5 +4,3 @@ name = Vpn Tracker 8
 [configuration_files]
 Library/Application Support/VPN Tracker 8
 Library/Preferences/com.equinux.VPNTracker8.plist
-~/Library/Application Support/VPN Tracker 8
-~/Library/Preferences/com.equinux.VPNTracker8.plist

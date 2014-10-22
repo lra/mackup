@@ -8,6 +8,7 @@
 - Support for IntelliJ IDEA 13 (via @dsager)
 - Support for Pass (via @kykim)
 - Support for Composer (via @fayland)
+- Support for Vpn Tracker 8 (via @davidodere)
 
 ## Mackup 0.7.4
 

@@ -303,6 +303,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Vim](http://www.vim.org/)
   - [Vimperator](http://www.vimperator.org/vimperator)
   - [Viscosity](http://www.sparklabs.com/viscosity/)
+  - [Vpn Tracker 8](http://www.vpntracker.com/)
   - [Wget](https://www.gnu.org/software/wget/)
   - [Witch](http://manytricks.com/witch/)
   - [X11](http://www.x.org/)

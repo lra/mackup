@@ -184,6 +184,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [FontExplorer X](http://www.fontexplorerx.com/)
   - [ForkLift 2](http://www.binarynights.com/forklift/)
   - [GeekTool](http://projects.tynsoe.org/en/geektool/)
+  - [GHCi](http://www.haskell.org/haskellwiki/GHC/GHCi)
   - [Git Hooks](https://github.com/icefox/git-hooks)
   - [Git](http://git-scm.com/)
   - [Gitbox](http://gitboxapp.com/)

@@ -9,6 +9,7 @@
 - Support for Pass (via @kykim)
 - Support for Composer (via @fayland)
 - Support for GHCi (via @marcosero)
+- Add .gitignore (via @eyadsibai)
 
 ## Mackup 0.7.4
 

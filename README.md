@@ -282,6 +282,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Soulver](http://www.acqualia.com/soulver/)
   - [SourceTree](http://sourcetreeapp.com)
   - [Spark](http://www.shadowlab.org/softwares/spark.php)
+  - [Spectrwm](https://opensource.conformal.com/wiki/spectrwm)
   - [Spectacle](http://spectacleapp.com/)
   - [Spotify](https://www.spotify.com/)
   - [Stata](http://www.stata.com/)

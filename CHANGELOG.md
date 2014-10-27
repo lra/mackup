@@ -10,6 +10,7 @@
 - Support for Composer (via @fayland)
 - Support for GHCi (via @marcosero)
 - Add .gitignore (via @eyadsibai)
+- Support for spectrwm (via @cnodell)
 
 ## Mackup 0.7.4
 

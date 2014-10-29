@@ -11,6 +11,7 @@
 - Support for GHCi (via @marcosero)
 - Add .gitignore (via @eyadsibai)
 - Support for spectrwm (via @cnodell)
+- Fixed Textual support (via @crkochan)
 
 ## Mackup 0.7.4
 

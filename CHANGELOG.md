@@ -5,7 +5,7 @@
 - Support for Rubocop (via @iainbeeston)
 - Support for Terminator (via @chr1sbest)
 - Support for Houdini (via @kfinlay)
-- Support for IntelliJ IDEA 13 (via @dsager)
+- Support for IntelliJ IDEA 13 & 14 (via @dsager)
 - Support for Pass (via @kykim)
 - Support for Composer (via @fayland)
 - Support for GHCi (via @marcosero)

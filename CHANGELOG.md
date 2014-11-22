@@ -12,6 +12,7 @@
 - Add .gitignore (via @eyadsibai)
 - Support for spectrwm (via @cnodell)
 - Fixed Textual support (via @crkochan)
+- Support for 1Password 4 (via @jverdeyen)
 
 ## Mackup 0.7.4
 

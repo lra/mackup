@@ -127,6 +127,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 
 ## Supported Applications
 
+  - [1Password 4](https://agilebits.com/onepassword)
   - [Ack](http://beyondgrep.com/)
   - [Adium](http://adium.im/)
   - [Adobe Camera Raw](http://www.adobe.com/products/photoshop/extend.html)

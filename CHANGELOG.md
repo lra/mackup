@@ -13,6 +13,7 @@
 - Support for spectrwm (via @cnodell)
 - Fixed Textual support (via @crkochan)
 - Support for 1Password 4 (via @jverdeyen)
+- Support for GrandTotal 3 (via @jverdeyen)
 
 ## Mackup 0.7.4
 

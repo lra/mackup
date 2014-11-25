@@ -148,6 +148,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [BetterSnapTool](http://blog.boastr.net/)
   - [BetterTouchTool](http://blog.boastr.net/)
   - [BibDesk](http://bibdesk.sourceforge.net/)
+  - [BIllings Pro](https://www.marketcircle.com/billingspro/)
   - [Boto](https://github.com/boto/boto)
   - [Brackets](http://brackets.io/)
   - [Bundler](http://bundler.io)

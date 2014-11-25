@@ -1,0 +1,6 @@
+[application]
+name = Postgres
+
+[configuration_files]
+Library/Application Support/Postgres
+Library/Preferences/com.postgresapp.Postgres.plist

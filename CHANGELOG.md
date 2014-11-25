@@ -14,6 +14,7 @@
 - Fixed Textual support (via @crkochan)
 - Support for 1Password 4 (via @jverdeyen)
 - Support for GrandTotal 3 (via @jverdeyen)
+- Support for SequelPro plist (via @iloveitaly)
 
 ## Mackup 0.7.4
 

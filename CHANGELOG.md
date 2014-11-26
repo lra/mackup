@@ -17,6 +17,7 @@
 - Support for TaskPaper (via @iloveitaly)
 - Support for SequelPro plist (via @iloveitaly)
 - Support for Kaleidoscope (via @iloveitaly)
+- Support for Stay (via @iloveitaly)
 
 ## Mackup 0.7.4
 

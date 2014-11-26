@@ -21,6 +21,7 @@
 - Support for Screenhero (via @iloveitaly)
 - Support for Scrivener (via @iloveitaly)
 - Support for ColorSchemer Studio 2 (via @iloveitaly)
+- Support for Billings Pro Server Admin (via @iloveitaly)
 
 ## Mackup 0.7.4
 

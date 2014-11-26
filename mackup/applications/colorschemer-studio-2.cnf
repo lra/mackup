@@ -1,0 +1,6 @@
+[application]
+name = ColorSchemer Studio 2
+
+[configuration_files]
+Library/Preferences/com.colorschemer.studio2.plist
+Library/Application Support/ColorSchemer

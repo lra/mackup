@@ -162,6 +162,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [CloudApp](http://getcloudapp.com/)
   - [Coda 2](http://panic.com/coda/)
   - [Colloquy](http://colloquy.info/)
+  - [ColorSchemer Studio 2](http://www.colorschemer.com/osx_info.php)
   - [Composer](https://getcomposer.org/)
   - [Concentrate](http://www.getconcentrating.com/)
   - [ControlPlane](http://www.controlplaneapp.com/)

@@ -22,6 +22,7 @@
 - Support for Scrivener (via @iloveitaly)
 - Support for ColorSchemer Studio 2 (via @iloveitaly)
 - Support for Billings Pro Server Admin (via @iloveitaly)
+- Support for iStat Menus 5 (via @jverdeyen)
 
 ## Mackup 0.7.4
 

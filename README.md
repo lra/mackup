@@ -204,6 +204,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [i2cssh](https://github.com/wouterdebie/i2cssh)
   - [IntelliJIDEA](http://www.jetbrains.com/idea/)
   - [Irssi](http://www.irssi.org/)
+  - [iStat Menus 5](http://bjango.com/mac/istatmenus/)
   - [ITerm2](http://www.iterm2.com/)
   - [JSHint](http://www.jshint.com/)
   - [Janus](https://github.com/carlhuda/janus)

@@ -19,6 +19,7 @@
 - Support for Kaleidoscope (via @iloveitaly)
 - Support for Stay (via @iloveitaly)
 - Support for Screenhero (via @iloveitaly)
+- Support for Scrivener (via @iloveitaly)
 
 ## Mackup 0.7.4
 

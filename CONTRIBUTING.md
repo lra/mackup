@@ -1,15 +1,12 @@
 # How to contribute
 
-To speed up the process of getting your PR (Pull Request) approved and merged
-into Mackup, make sure you follow those guidelines:
+To speed up Pull Request (PR) approval and merger into Mackup, please follow these guidelines:
 - Keep one application supported per PR
-- Add the application you want to support in the list of supported applications
-  in the README.md file
-- Add yourself a changelog line at the top WIP section of the CHANGELOG.md file
-- Don't contribute an application that already provide a way to sync its
-  config. e.g. Google Chrome or Alfred (paid version)
-- If you want to sync the config of your favorite application, sync only the
-  config, not the data. You don't want to have MB of always changing data in
-  your syncing folders.
+- Add the application to the list of supported applications in README.md
+- Add your change to the WIP section of CHANGELOG.md
+- Sync configurations should follow the follow principles:
+  - Syncing should not break the application, and PRs should be tested
+  - Syncing should not break any syncing functionality internal to the application
+  - The configuation should sync the minimal set of data, so that syncing happens quickly. Leave large app data out of the sync configuration.
 
-Thanks in advance for your contribution !
+Thank you for your contribution!

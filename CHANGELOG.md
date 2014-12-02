@@ -23,6 +23,7 @@
 - Support for ColorSchemer Studio 2 (via @iloveitaly)
 - Support for Billings Pro Server Admin (via @iloveitaly)
 - Support for iStat Menus 5 (via @jverdeyen)
+- Support for WebStorm 9 (via @inxilpro)
 
 ## Mackup 0.7.4
 

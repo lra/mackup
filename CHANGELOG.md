@@ -24,6 +24,7 @@
 - Support for Billings Pro Server Admin (via @iloveitaly)
 - Support for iStat Menus 5 (via @jverdeyen)
 - Support for WebStorm 9 (via @inxilpro)
+- Support for Oh My Fish (via @inxilpro)
 
 ## Mackup 0.7.4
 

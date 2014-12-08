@@ -277,6 +277,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Screen](http://www.gnu.org/software/screen/)
   - [Screenhero](https://screenhero.com)
   - [Scrivener](http://www.literatureandlatte.com/scrivener.php)
+  - [Scroll Reverser](https://pilotmoon.com/scrollreverser/)
   - [SelfControl](http://selfcontrolapp.com/)
   - [Seil](https://pqrs.org/macosx/keyremap4macbook/seil.html.en)
   - [Sequel Pro](http://www.sequelpro.com/)

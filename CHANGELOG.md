@@ -25,6 +25,7 @@
 - Support for iStat Menus 5 (via @jverdeyen)
 - Support for WebStorm 9 (via @inxilpro)
 - Support for Oh My Fish (via @inxilpro)
+- Support for Scroll Reverser (via @ponychicken)
 
 ## Mackup 0.7.4
 

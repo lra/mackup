@@ -26,6 +26,7 @@
 - Support for WebStorm 9 (via @inxilpro)
 - Support for Oh My Fish (via @inxilpro)
 - Support for Scroll Reverser (via @ponychicken)
+- Support for JuliaLang (via @danielsuo)
 
 ## Mackup 0.7.4
 

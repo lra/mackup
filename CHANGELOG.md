@@ -26,6 +26,7 @@
 - Support for WebStorm 9 (via @inxilpro)
 - Support for Oh My Fish (via @inxilpro)
 - Support for Scroll Reverser (via @ponychicken)
+- Support for OsX Stickies (via @djabbz)
 
 ## Mackup 0.7.4
 

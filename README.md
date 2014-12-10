@@ -208,6 +208,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [ITerm2](http://www.iterm2.com/)
   - [JSHint](http://www.jshint.com/)
   - [Janus](https://github.com/carlhuda/janus)
+  - [Julia](http://julialang.org)
   - [Kaleidoscope](http://www.kaleidoscopeapp.com/)
   - [Karabiner](https://pqrs.org/osx/karabiner)
   - [Keka](http://kekaosx.com/)

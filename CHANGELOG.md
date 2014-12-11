@@ -28,6 +28,7 @@
 - Support for Oh My Fish (via @inxilpro)
 - Support for Scroll Reverser (via @ponychicken)
 - Support for JuliaLang (via @danielsuo)
+- Support for OsX Stickies (via @djabbz)
 
 ## Mackup 0.7.4
 

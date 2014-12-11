@@ -299,6 +299,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Spotify](https://www.spotify.com/)
   - [Stata](http://www.stata.com/)
   - [Stay](https://cordlessdog.com/stay/)
+  - [Stickies](https://en.wikipedia.org/wiki/Stickies_%28software%29)
   - [Sublime Text](http://www.sublimetext.com/)
   - [Subversion](http://subversion.apache.org/)
   - [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html)

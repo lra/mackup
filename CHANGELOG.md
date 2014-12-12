@@ -29,6 +29,7 @@
 - Support for Scroll Reverser (via @ponychicken)
 - Support for JuliaLang (via @danielsuo)
 - Support for OsX Stickies (via @djabbz)
+- Sublime Text 3 now only syncs essential files, excluding session and cache folders
 
 ## Mackup 0.7.4
 

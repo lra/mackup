@@ -29,6 +29,8 @@
 - Support for Scroll Reverser (via @ponychicken)
 - Support for JuliaLang (via @danielsuo)
 - Support for OsX Stickies (via @djabbz)
+- Support for Navicat Database GUI tools (via @tdm00)
+
 
 ## Mackup 0.7.4
 

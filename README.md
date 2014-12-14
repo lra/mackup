@@ -260,6 +260,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [PIP](http://www.pip-installer.org/)
   - [PokerStars](http://www.pokerstars.com/)
   - [PopClip](http://pilotmoon.com/popclip/)
+  - [Popcorn Time](https://popcorntime.io/)
   - [Pow](http://pow.cx/)
   - [Prezto](https://github.com/sorin-ionescu/prezto)
   - [Processing](http://processing.org/)

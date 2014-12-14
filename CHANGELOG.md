@@ -1,6 +1,7 @@
 # Mackup Changelog
 
 ## WIP
+- Added support for Popcorn Time (via @JacopKane)
 
 - Support for jrnl (via @huyhong)
 - Support for Rubocop (via @iainbeeston)

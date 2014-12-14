@@ -238,6 +238,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [mpd](http://www.musicpd.org)
   - [MPV](http://mpv.io/)
   - [Nano](http://www.nano-editor.org/)
+  - [Navicat](http://navicat.com/)
   - [ncmpcpp](http://ncmpcpp.rybczak.net)
   - [newsbeuter](http://newsbeuter.org/)
   - [ngrok](https://ngrok.com/)

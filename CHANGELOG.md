@@ -6,6 +6,7 @@
 - Support for consular (via @bashu)
 - Support for Punto Switcher (via @bashu)
 - Support for Poedit (via @bashu)
+- Support for Max (via @bashu)
 - Support for jrnl (via @huyhong)
 - Support for Rubocop (via @iainbeeston)
 - Support for Terminator (via @chr1sbest)

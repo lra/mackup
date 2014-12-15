@@ -1,5 +1,7 @@
 # Configuration
 
+All the configuration is done into a file named `.mackup.cfg` to store at the root of your home folder.
+
 ## Storage
 
 ### Dropbox

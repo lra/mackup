@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Support for Punto Switcher (via @bashu)
 - Support for jrnl (via @huyhong)
 - Support for Rubocop (via @iainbeeston)
 - Support for Terminator (via @chr1sbest)

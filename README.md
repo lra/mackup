@@ -165,6 +165,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Colloquy](http://colloquy.info/)
   - [ColorSchemer Studio 2](http://www.colorschemer.com/osx_info.php)
   - [Composer](https://getcomposer.org/)
+  - [Consular](http://www.rubydoc.info/github/achiu/consular/master/file/README.md)
   - [Concentrate](http://www.getconcentrating.com/)
   - [ControlPlane](http://www.controlplaneapp.com/)
   - [CoRD](http://cord.sourceforge.net/)

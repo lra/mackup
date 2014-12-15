@@ -265,6 +265,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Pow](http://pow.cx/)
   - [Prezto](https://github.com/sorin-ionescu/prezto)
   - [Processing](http://processing.org/)
+  - [Punto Switcher](http://punto.yandex.ru/)
   - [PyPI](https://pypi.python.org/pypi)
   - [Quicksilver](http://qsapp.com/)
   - [Rails](http://rubyonrails.org/)

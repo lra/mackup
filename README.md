@@ -259,6 +259,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Phoenix](https://github.com/sdegutis/Phoenix)
   - [PhpStorm](http://www.jetbrains.com/phpstorm/)
   - [PIP](http://www.pip-installer.org/)
+  - [Poedit](http://poedit.net/)
   - [PokerStars](http://www.pokerstars.com/)
   - [PopClip](http://pilotmoon.com/popclip/)
   - [PostgreSQL](http://postgresql.org/)

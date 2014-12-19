@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Limit .gem folder backup for Ruby, including credentials file only (via @ashchan)
 - Support for PostgreSQL (via @bashu)
 - Support for consular (via @bashu)
 - Support for Punto Switcher (via @bashu)

@@ -37,6 +37,7 @@
 - Support for OsX Stickies (via @djabbz)
 - Support for Navicat Database GUI tools (via @tdm00)
 - Sublime Text 3 now only syncs essential files, excluding session and cache folders
+- Support for tint2
 
 ## Mackup 0.7.4
 

@@ -268,6 +268,8 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Pow](http://pow.cx/)
   - [Prezto](https://github.com/sorin-ionescu/prezto)
   - [Processing](http://processing.org/)
+  - [ProxyChains](http://proxychains.sourceforge.net)
+  - [ProxyChains NG](https://sourceforge.net/projects/proxychains-ng)
   - [Punto Switcher](http://punto.yandex.ru/)
   - [PyPI](https://pypi.python.org/pypi)
   - [Quicksilver](http://qsapp.com/)

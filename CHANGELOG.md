@@ -38,6 +38,7 @@
 - Support for Navicat Database GUI tools (via @tdm00)
 - Sublime Text 3 now only syncs essential files, excluding session and cache folders
 - Support for ProxyChains & ProxyChains NG (via @mttrb)
+- Support for Maven (via @jcgay)
 
 ## Mackup 0.7.4
 

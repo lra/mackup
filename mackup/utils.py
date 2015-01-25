@@ -178,7 +178,9 @@ def error(message):
     Args:
         message(str): The message to display.
     """
-    sys.exit("Error: {}".format(message))
+    fail = '\033[91m'
+    end = '\033[0m'
+    sys.exit(fail + "Error: {}".format(message) + end)
 
 
 def parse_cmdline_args():

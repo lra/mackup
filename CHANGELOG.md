@@ -61,6 +61,8 @@
 - Improved bash support (via @pkyeck)
 - Improved Python 3 support (via @dannluciano)
 - Added support for VLC (via @kiliankoe)
+- Added doc, ftdetect, ftplugin, indent, syntax directories to vim config
+  (via @feigaochn)
 
 ## Mackup 0.7.4
 

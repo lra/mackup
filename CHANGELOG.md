@@ -64,6 +64,7 @@
 - Added doc, ftdetect, ftplugin, indent, syntax directories to vim config
   (via @feigaochn)
 - Added support of AppCode 3 (via @turygo and @dsiu)
+- Feature: Display error messages in red (via @Timidger)
 
 ## Mackup 0.7.4
 

@@ -1,2 +1,3 @@
 *.pyc
 /mackup.egg-info/
+/dist/

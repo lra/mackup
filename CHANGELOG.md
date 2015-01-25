@@ -55,6 +55,7 @@
 - Fix: Take into account apps specified in .mackup.cfg for the restore and
   uninstall operations
 - Improvement: More explicit file paths displayed (thx @danielcompton)
+- Support for Webstorm 8 (via @webpro)
 
 ## Mackup 0.7.4
 

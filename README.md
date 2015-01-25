@@ -338,7 +338,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Vim](http://www.vim.org/)
   - [Vimperator](http://www.vimperator.org/vimperator)
   - [Viscosity](http://www.sparklabs.com/viscosity/)
-  - [WebStorm 9](https://www.jetbrains.com/webstorm/)
+  - [WebStorm](https://www.jetbrains.com/webstorm/)
   - [Wget](https://www.gnu.org/software/wget/)
   - [Witch](http://manytricks.com/witch/)
   - [X11](http://www.x.org/)

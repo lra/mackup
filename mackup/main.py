@@ -51,7 +51,7 @@ def main():
         # Check the env where the command is being run
         mckp.check_for_usable_restore_env()
 
-        for app_name in app_db.get_app_names():
+        for app_name in mckp.get_apps_to_backup():
             app = ApplicationProfile(mckp, app_db.get_files(app_name))
             app.restore()
 
@@ -64,7 +64,7 @@ def main():
                          " managed by Mackup will be unlinked and moved back"
                          " to their original place, in your home folder.\n"
                          "Are you sure ?"):
-            for app_name in app_db.get_app_names():
+            for app_name in mckp.get_apps_to_backup():
                 app = ApplicationProfile(mckp, app_db.get_files(app_name))
                 app.uninstall()
 

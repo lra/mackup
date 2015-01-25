@@ -43,6 +43,7 @@
 - Support for IPython (via @nrvs)
 - Support for i3 (via @akash0x53)
 - Support for tint2 (via @mr-seiler)
+- Support for Conky (via @mr-seiler)
 
 ## Mackup 0.7.4
 

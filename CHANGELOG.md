@@ -9,6 +9,7 @@
 - Support for Poedit (via @bashu)
 - Support for Max (via @bashu)
 - Support for jrnl (via @huyhong)
+- Support for XtraFinder (via @ethanl)
 - Support for Rubocop (via @iainbeeston)
 - Support for Terminator (via @chr1sbest)
 - Support for Houdini (via @kfinlay)

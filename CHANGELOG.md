@@ -2,7 +2,8 @@
 
 ## WIP
 
-- Limit .gem folder backup for Ruby, including credentials file only (via @ashchan)
+- Limit .gem folder backup for Ruby, including credentials file only (via
+  @ashchan)
 - Support for PostgreSQL (via @bashu)
 - Support for consular (via @bashu)
 - Support for Punto Switcher (via @bashu)
@@ -37,7 +38,8 @@
 - Support for JuliaLang (via @danielsuo)
 - Support for OsX Stickies (via @djabbz)
 - Support for Navicat Database GUI tools (via @tdm00)
-- Sublime Text 3 now only syncs essential files, excluding session and cache folders
+- Sublime Text 3 now only syncs essential files, excluding session and cache
+  folders
 - Support for ProxyChains & ProxyChains NG (via @mttrb)
 - Support for Maven (via @jcgay)
 - Improved support for Apple ColorSync (via @devnulled)
@@ -45,7 +47,8 @@
 - Support for i3 (via @akash0x53)
 - Support for tint2 (via @mr-seiler)
 - Support for Conky (via @mr-seiler)
-- Fix: Custom app config must take precedence over stock app config (thx @Gyran and @jalaziz)
+- Fix: Custom app config must take precedence over stock app config (thx @Gyran
+  and @jalaziz)
 - Support for Ubersicht (via @kfinlay)
 - Added support for npm (via @zheng1)
 - Added support for Microsoft Azure CLI (via @zheng1)
@@ -59,7 +62,8 @@
 - Added support for JSHints .jshintrc
 - Improved support for Slate (via @bradcerasani)
 - Added support for nvpy - a Linux client for SimpleNote (via @hiyer)
-- Atom now only syncs essential files, excluding compiled and cache folders (via @lmartins)
+- Atom now only syncs essential files, excluding compiled and cache folders
+  (via @lmartins)
 - Support for Artistic Style (via @feigaochn)
 - Support for Tig (via @damiankloip)
 - Added bundle directory to vim config (via @alanlamielle)

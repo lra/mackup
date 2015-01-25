@@ -5,14 +5,14 @@ Package used to manage the .mackup.cfg config file
 import os
 import os.path
 
-from constants import (MACKUP_BACKUP_PATH,
+from .constants import (MACKUP_BACKUP_PATH,
                        MACKUP_CONFIG_FILE,
                        ENGINE_DROPBOX,
                        ENGINE_GDRIVE,
                        ENGINE_COPY,
                        ENGINE_FS)
 
-from utils import (error,
+from .utils import (error,
                    get_dropbox_folder_location,
                    get_copy_folder_location,
                    get_google_drive_folder_location)

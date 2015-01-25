@@ -39,6 +39,7 @@
 - Sublime Text 3 now only syncs essential files, excluding session and cache folders
 - Support for ProxyChains & ProxyChains NG (via @mttrb)
 - Support for Maven (via @jcgay)
+- Improved support for Apple ColorSync (via @devnulled)
 
 ## Mackup 0.7.4
 

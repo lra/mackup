@@ -164,6 +164,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Coda 2](http://panic.com/coda/)
   - [Colloquy](http://colloquy.info/)
   - [ColorSchemer Studio 2](http://www.colorschemer.com/osx_info.php)
+  - [ColorSync](http://en.wikipedia.org/wiki/ColorSync)
   - [Composer](https://getcomposer.org/)
   - [Consular](http://www.rubydoc.info/github/achiu/consular/master/file/README.md)
   - [Concentrate](http://www.getconcentrating.com/)

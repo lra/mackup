@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8
+
 - Limit .gem folder backup for Ruby, including credentials file only (via
   @ashchan)
 - Support for PostgreSQL (via @bashu)

@@ -60,6 +60,7 @@
 - Support for Copy sync engine (via @exiva)
 - Improved bash support (via @pkyeck)
 - Improved Python 3 support (via @dannluciano)
+- Added support for VLC (via @kiliankoe)
 
 ## Mackup 0.7.4
 

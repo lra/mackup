@@ -58,6 +58,7 @@
 - Support for Webstorm 8 (via @webpro)
 - Support for dig (via @glaszig)
 - Support for Copy sync engine (via @exiva)
+- Improved bash support (via @pkyeck)
 
 ## Mackup 0.7.4
 

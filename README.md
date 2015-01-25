@@ -168,7 +168,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Composer](https://getcomposer.org/)
   - [Concentrate](http://www.getconcentrating.com/)
   - [Conky](http://conky.sourceforge.net/)
-  - [Consular](http://www.rubydoc.info/github/achiu/consular/master/file/README.md)
+  - [Consular](https://github.com/achiu/consular)
   - [ControlPlane](http://www.controlplaneapp.com/)
   - [CoRD](http://cord.sourceforge.net/)
   - [Cyberduck](http://cyberduck.ch/)

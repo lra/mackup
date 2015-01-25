@@ -265,6 +265,7 @@ def get_google_drive_folder_location():
 
     return googledrive_home
 
+
 def get_copy_folder_location():
     """
     Try to locate the Copy folder
@@ -280,15 +281,20 @@ def get_copy_folder_location():
     if (os.path.isfile(copy_settings)):
         db = sqlite3.connect(copy_settings)
         if db:
-            c = db.cursor()
-            query = ("SELECT value " "FROM config2 "
-                    "WHERE option = 'csmRootPath';")
-            c.execute(query)
-            data = c.fetchone()
-            copy_location = unicode(data[0])
-            c.close()
+            cur = db.cursor()
+            query = ("SELECT value "
+                     "FROM config2 "
+                     "WHERE option = 'csmRootPath';")
+            cur.execute(query)
+            data = cur.fetchone()
+            copy_home = unicode(data[0])
+            cur.close()
 
-    return copy_location
+    if not copy_home:
+        error("Unable to find your Google Drive install =(")
+
+    return copy_home
+
 
 def is_process_running(process_name):
     """

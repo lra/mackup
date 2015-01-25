@@ -165,8 +165,10 @@ class Config(object):
 
         assert isinstance(engine, str)
 
-        if engine not in [ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_COPY,
-                         ENGINE_FS]:
+        if engine not in [ENGINE_DROPBOX,
+                          ENGINE_GDRIVE,
+                          ENGINE_COPY,
+                          ENGINE_FS]:
             raise ConfigError('Unknown storage engine: {}'.format(engine))
 
         return str(engine)

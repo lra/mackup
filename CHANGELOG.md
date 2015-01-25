@@ -41,6 +41,7 @@
 - Support for Maven (via @jcgay)
 - Improved support for Apple ColorSync (via @devnulled)
 - Support for IPython (via @nrvs)
+- Support for i3 (via @akash0x53)
 
 ## Mackup 0.7.4
 

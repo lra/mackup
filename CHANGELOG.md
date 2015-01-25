@@ -44,6 +44,7 @@
 - Support for i3 (via @akash0x53)
 - Support for tint2 (via @mr-seiler)
 - Support for Conky (via @mr-seiler)
+- Fix: Custom app config must take precedence over stock app config (thx @Gyran and @jalaziz)
 
 ## Mackup 0.7.4
 

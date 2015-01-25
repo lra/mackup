@@ -207,6 +207,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [i3wm](http://i3wm.org/)
   - [IntelliJIDEA](http://www.jetbrains.com/idea/)
   - [Irssi](http://www.irssi.org/)
+  - [i3](https://i3wm.org/)
   - [iStat Menus 5](http://bjango.com/mac/istatmenus/)
   - [IPython](http://ipython.org/)
   - [ITerm2](http://www.iterm2.com/)

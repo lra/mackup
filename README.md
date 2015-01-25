@@ -204,6 +204,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Houdini](http://uglyapps.co.uk/houdini/)
   - [Htop](http://htop.sourceforge.net/)
   - [i2cssh](https://github.com/wouterdebie/i2cssh)
+  - [i3wm](http://i3wm.org/)
   - [IntelliJIDEA](http://www.jetbrains.com/idea/)
   - [Irssi](http://www.irssi.org/)
   - [iStat Menus 5](http://bjango.com/mac/istatmenus/)

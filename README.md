@@ -250,6 +250,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [ncmpcpp](http://ncmpcpp.rybczak.net)
   - [newsbeuter](http://newsbeuter.org/)
   - [ngrok](https://ngrok.com/)
+  - [npm](https://www.npmjs.com/)
   - [nvALT](http://brettterpstra.com/projects/nvalt/)
   - [nvpy](https://github.com/cpbotha/nvpy)
   - [Oh My Fish](https://github.com/bpinto/oh-my-fish)

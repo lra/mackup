@@ -47,6 +47,7 @@
 - Support for Conky (via @mr-seiler)
 - Fix: Custom app config must take precedence over stock app config (thx @Gyran and @jalaziz)
 - Support for Ubersicht (via @kfinlay)
+- Added support for npm (via @zheng1)
 
 ## Mackup 0.7.4
 
@@ -79,7 +80,6 @@
 - Improved support for ExpanDrive (via @kfinlay)
 - Added support for Tower 2 (via @mAAdhaTTah)
 - Improved support for Textual (via @oalders)
-- Added support for npm (via @zheng1)
 
 ## Mackup 0.7.3
 

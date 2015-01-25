@@ -37,6 +37,7 @@
 - Support for OsX Stickies (via @djabbz)
 - Support for Navicat Database GUI tools (via @tdm00)
 - Sublime Text 3 now only syncs essential files, excluding session and cache folders
+- Sublime Text 3 syncs installed plugins
 - Support for ProxyChains & ProxyChains NG (via @mttrb)
 
 ## Mackup 0.7.4

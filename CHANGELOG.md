@@ -59,6 +59,7 @@
 - Support for dig (via @glaszig)
 - Support for Copy sync engine (via @exiva)
 - Improved bash support (via @pkyeck)
+- Improved Python 3 support (via @dannluciano)
 
 ## Mackup 0.7.4
 

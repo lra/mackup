@@ -79,6 +79,7 @@
 - Improved support for ExpanDrive (via @kfinlay)
 - Added support for Tower 2 (via @mAAdhaTTah)
 - Improved support for Textual (via @oalders)
+- Added support for npm (via @zheng1)
 
 ## Mackup 0.7.3
 

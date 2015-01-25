@@ -50,7 +50,7 @@
 - Fix: Custom app config must take precedence over stock app config (thx @Gyran
   and @jalaziz)
 - Support for Ubersicht (via @kfinlay)
-- Added support for npm (via @zheng1)
+- Added support for npm (via @zheng1 and @jaxgeller)
 - Added support for Microsoft Azure CLI (via @zheng1)
 - Fix: Take into account apps specified in .mackup.cfg for the restore and
   uninstall operations

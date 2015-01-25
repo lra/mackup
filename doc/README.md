@@ -2,6 +2,11 @@
 
 All the configuration is done into a file named `.mackup.cfg` to store at the root of your home folder.
 
+To configure mackup, create a file named ´.mackup.cfg´ in your home directory.
+```bash
+$ vi ~/.mackup.cfg
+```
+
 ## Storage
 
 ### Dropbox

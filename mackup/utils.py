@@ -265,6 +265,30 @@ def get_google_drive_folder_location():
 
     return googledrive_home
 
+def get_copy_folder_location():
+    """
+    Try to locate the Copy folder
+
+    Returns:
+        (unicode) Full path to the current Copy folder
+    """
+    copy_settings_path = 'Library/Application Support/Copy Agent/config.db'
+    copy_home = None
+
+    copy_settings = os.path.join(os.environ['HOME'], copy_settings_path)
+
+    if (os.path.isfile(copy_settings)):
+        db = sqlite3.connect(copy_settings)
+        if db:
+            c = db.cursor()
+            query = ("SELECT value " "FROM config2 "
+                    "WHERE option = 'csmRootPath';")
+            c.execute(query)
+            data = c.fetchone()
+            copy_location = unicode(data[0])
+            c.close()
+
+    return copy_location
 
 def is_process_running(process_name):
     """

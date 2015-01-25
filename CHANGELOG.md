@@ -57,6 +57,7 @@
 - Improvement: More explicit file paths displayed (thx @danielcompton)
 - Support for Webstorm 8 (via @webpro)
 - Support for dig (via @glaszig)
+- Support for Copy sync engine (via @exiva)
 
 ## Mackup 0.7.4
 

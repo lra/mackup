@@ -13,7 +13,7 @@ $ vi ~/.mackup.cfg
 
 You can specify the storage type Mackup will use to store your configuration
 files.
-For now you have 3 options: `dropbox`, `google_drive` and `file_system`.
+For now you have 4 options: `dropbox`, `google_drive`, `copy` and `file_system`.
 If none is specified, Mackup will try to use the default: `dropbox`.
 With the `dropbox` storage engine, Mackup will automatically figure out your
 Dropbox folder.
@@ -31,6 +31,17 @@ where your Google Drive is and store your configuration files in it.
 ```ini
 [storage]
 engine = google_drive
+```
+
+
+### Copy
+
+If you choose the `copy` storage engine, Mackup will figure out
+where your Copy folder is and store your configuration files in it.
+
+```ini
+[storage]
+engine = copy
 ```
 
 ### File System

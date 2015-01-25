@@ -54,6 +54,7 @@
 - Added support for Microsoft Azure CLI (via @zheng1)
 - Fix: Take into account apps specified in .mackup.cfg for the restore and
   uninstall operations
+- Improvement: More explicit file paths displayed (thx @danielcompton)
 
 ## Mackup 0.7.4
 

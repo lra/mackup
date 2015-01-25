@@ -59,6 +59,9 @@ class ApplicationsDatabase(object):
         Mackup. The files return are absolute fullpath to those files.
         e.g. /usr/lib/mackup/applications/bash.cfg
 
+        Only one config file per application should be returned, custom config
+        having a priority over stock config.
+
         Returns:
             set of strings.
         """
@@ -67,18 +70,28 @@ class ApplicationsDatabase(object):
                                 APPS_DIR)
         custom_apps_dir = os.path.join(os.environ['HOME'], CUSTOM_APPS_DIR)
 
-        # Build the list of stock application config files
+        # List of stock application config files
         config_files = set()
-        for filename in os.listdir(apps_dir):
-            if filename.endswith('.cfg'):
-                config_files.add(os.path.join(apps_dir, filename))
 
-        # Append the list of custom application config files
+        # Temp list of user added app config filenames
+        custom_files = set()
+
+        # Get the list of custom application config files first
         if os.path.isdir(custom_apps_dir):
             for filename in os.listdir(custom_apps_dir):
                 if filename.endswith('.cfg'):
                     config_files.add(os.path.join(custom_apps_dir,
                                                   filename))
+                    # Also add it to the set of custom apps, so that we don't
+                    # add the stock config for the same app too
+                    custom_files.add(filename)
+
+        # Add the default provided app config files, but only if those are not
+        # customized, as we don't want to overwrite custom app config.
+        for filename in os.listdir(apps_dir):
+            if filename.endswith('.cfg') and filename not in custom_files:
+                config_files.add(os.path.join(apps_dir, filename))
+
         return config_files
 
     def get_name(self, name):

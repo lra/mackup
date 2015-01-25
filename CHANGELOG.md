@@ -40,6 +40,7 @@
 - Support for ProxyChains & ProxyChains NG (via @mttrb)
 - Support for Maven (via @jcgay)
 - Improved support for Apple ColorSync (via @devnulled)
+- Support for IPython (via @nrvs)
 
 ## Mackup 0.7.4
 

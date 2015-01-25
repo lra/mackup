@@ -142,7 +142,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [AusKey](https://abr.gov.au/AUSkey/)
   - [Awareness](http://iamfutureproof.com/tools/awareness/)
   - [AWS Command Line Interface](https://aws.amazon.com/cli/)
-  - [Microsoft Azure Command Line interface](https://github.com/Azure/azure-sdk-tools-xplat)
+  - [Microsoft Azure CLI](https://github.com/Azure/azure-xplat-cli)
   - [Bartender](http://www.macbartender.com/)
   - [Bash it](https://github.com/revans/bash-it/)
   - [Bash](http://www.gnu.org/software/bash/)

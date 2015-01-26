@@ -66,7 +66,7 @@ def main():
         # Restore the rest of the app configs, using the restored Mackup config
         app_names = mckp.get_apps_to_backup()
         # Mackup has already been done
-        app_names.remove(MACKUP_APP_NAME)
+        app_names.discard(MACKUP_APP_NAME)
 
         for app_name in app_names:
             app = ApplicationProfile(mckp, app_db.get_files(app_name))
@@ -85,7 +85,7 @@ def main():
             # Uninstall the apps except Mackup, which we'll uninstall last, to
             # keep the settings as long as possible
             app_names = mckp.get_apps_to_backup()
-            app_names.remove(MACKUP_APP_NAME)
+            app_names.discard(MACKUP_APP_NAME)
             for app_name in mckp.get_apps_to_backup():
                 app = ApplicationProfile(mckp, app_db.get_files(app_name))
                 app.uninstall()

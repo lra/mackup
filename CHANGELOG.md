@@ -2,6 +2,12 @@
 
 ## WIP
 
+## Mackup 0.8.1
+
+- Fix: Restore and uninstall the Mackup config before any other application
+  config
+- PEP8 compliance
+
 ## Mackup 0.8
 
 - Limit .gem folder backup for Ruby, including credentials file only (via

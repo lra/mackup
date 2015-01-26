@@ -42,7 +42,6 @@ class ApplicationProfile(object):
                   mv home/file mackup/file
                   link mackup/file home/file
         """
-
         # For each file used by the application
         for filename in self.files:
             # Get the full path of each file
@@ -107,7 +106,6 @@ class ApplicationProfile(object):
               else
                 link mackup/file home/file
         """
-
         # For each file used by the application
         for filename in self.files:
             # Get the full path of each file

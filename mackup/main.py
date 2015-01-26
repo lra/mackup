@@ -58,10 +58,16 @@ def main():
                                         app_db.get_files(MACKUP_APP_NAME))
         mackup_app.restore()
 
+        # Initialize again the apps db, as the Mackup config might have changed
+        # it
+        mckp = Mackup()
+        app_db = ApplicationsDatabase()
+
         # Restore the rest of the app configs, using the restored Mackup config
         app_names = mckp.get_apps_to_backup()
         # Mackup has already been done
         app_names.remove(MACKUP_APP_NAME)
+
         for app_name in app_names:
             app = ApplicationProfile(mckp, app_db.get_files(app_name))
             app.restore()

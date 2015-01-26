@@ -115,13 +115,14 @@ class ApplicationProfile(object):
             # If the file exists and is not already pointing to the mackup file
             # and the folder makes sense on the current platform (Don't sync
             # any subfolder of ~/Library on GNU/Linux)
-            if ((os.path.isfile(mackup_filepath)
-                 or os.path.isdir(mackup_filepath))
-                and not (os.path.islink(home_filepath)
-                         and os.path.samefile(mackup_filepath,
-                                              home_filepath))
-                and utils.can_file_be_synced_on_current_platform(filename)):
+            file_or_dir_exists = (os.path.isfile(mackup_filepath)
+                                  or os.path.isdir(mackup_filepath))
+            pointing_to_mackup = (os.path.islink(home_filepath)
+                                  and os.path.samefile(mackup_filepath,
+                                                       home_filepath))
+            supported = utils.can_file_be_synced_on_current_platform(filename)
 
+            if file_or_dir_exists and not pointing_to_mackup and supported:
                 print("Restoring {} ...".format(home_filepath))
 
                 # Check if there is already a file in the home folder
@@ -168,8 +169,7 @@ class ApplicationProfile(object):
 
             # If the mackup file exists
             if (os.path.isfile(mackup_filepath)
-                or os.path.isdir(mackup_filepath)):
-
+                    or os.path.isdir(mackup_filepath)):
                 # Check if there is a corresponding file in the home folder
                 if os.path.exists(home_filepath):
                     print("Reverting {} ...".format(home_filepath))

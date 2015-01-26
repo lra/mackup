@@ -21,6 +21,9 @@ PLATFORM_LINUX = 'Linux'
 # Directory containing the application configs
 APPS_DIR = 'applications'
 
+# Mackup application name
+MACKUP_APP_NAME = 'mackup'
+
 # Default Mackup backup path where it stores its files in Dropbox
 MACKUP_BACKUP_PATH = 'Mackup'
 

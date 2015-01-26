@@ -24,7 +24,8 @@ from .constants import (BACKUP_MODE,
                         RESTORE_MODE,
                         UNINSTALL_MODE,
                         LIST_MODE,
-                        VERSION)
+                        VERSION,
+                        MACKUP_APP_NAME)
 from .mackup import Mackup
 from . import utils
 
@@ -51,7 +52,17 @@ def main():
         # Check the env where the command is being run
         mckp.check_for_usable_restore_env()
 
-        for app_name in mckp.get_apps_to_backup():
+        # Restore the Mackup config before any other config, as we might need
+        # it to know about custom settings
+        mackup_app = ApplicationProfile(mckp,
+                                        app_db.get_files(MACKUP_APP_NAME))
+        mackup_app.restore()
+
+        # Restore the rest of the app configs, using the restored Mackup config
+        app_names = mckp.get_apps_to_backup()
+        # Mackup has already been done
+        app_names.remove(MACKUP_APP_NAME)
+        for app_name in app_names:
             app = ApplicationProfile(mckp, app_db.get_files(app_name))
             app.restore()
 
@@ -64,9 +75,20 @@ def main():
                          " managed by Mackup will be unlinked and moved back"
                          " to their original place, in your home folder.\n"
                          "Are you sure ?"):
+
+            # Uninstall the apps except Mackup, which we'll uninstall last, to
+            # keep the settings as long as possible
+            app_names = mckp.get_apps_to_backup()
+            app_names.remove(MACKUP_APP_NAME)
             for app_name in mckp.get_apps_to_backup():
                 app = ApplicationProfile(mckp, app_db.get_files(app_name))
                 app.uninstall()
+
+            # Restore the Mackup config before any other config, as we might
+            # need it to know about custom settings
+            mackup_app = ApplicationProfile(mckp,
+                                            app_db.get_files(MACKUP_APP_NAME))
+            mackup_app.uninstall()
 
             # Delete the Mackup folder in Dropbox
             # Don't delete this as there might be other Macs that aren't

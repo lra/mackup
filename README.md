@@ -221,6 +221,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Julia](http://julialang.org)
   - [Kaleidoscope](http://www.kaleidoscopeapp.com/)
   - [Karabiner](https://pqrs.org/osx/karabiner)
+  - [KeePassX](http://www.keepassx.org/)
   - [Keka](http://kekaosx.com/)
   - [Keybase](https://keybase.io/)
   - [Keymo](http://manytricks.com/keymo/)

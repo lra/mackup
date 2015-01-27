@@ -10,7 +10,6 @@
 - Fix: Users with a list of apps to sync were getting an error on restore or
   uninstall
 
-
 ## Mackup 0.8.1
 
 - Fix: Restore and uninstall the Mackup config before any other application

@@ -4,6 +4,7 @@
 
 - Remove the scripts dir from Messages syncing (@vitorgalvao)
 - Added support of AppCode 3.1 (via @morphinewan)
+- Added support for KeePassX (via @TCattd)
 
 ## Mackup 0.8.2
 

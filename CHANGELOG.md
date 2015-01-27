@@ -3,12 +3,12 @@
 ## WIP
 
 - Remove the scripts dir from Messages syncing (@vitorgalvao)
+- Added support of AppCode 3.1 (via @morphinewan)
 
 ## Mackup 0.8.2
 
 - Fix: Users with a list of apps to sync were getting an error on restore or
   uninstall
-- Added support of AppCode 3.1 (via @morphinewan)
 
 
 ## Mackup 0.8.1

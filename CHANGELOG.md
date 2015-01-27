@@ -3,6 +3,7 @@
 ## WIP
 
 - Remove the scripts dir from Messages syncing (@vitorgalvao)
+- Added support of AppCode 3.1 (via @morphinewan)
 
 ## Mackup 0.8.2
 

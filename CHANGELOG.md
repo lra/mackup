@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Remove the scripts dir from Messages syncing (@vitorgalvao)
+
 ## Mackup 0.8.2
 
 - Fix: Users with a list of apps to sync were getting an error on restore or

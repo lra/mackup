@@ -17,7 +17,20 @@ class TestConfig(unittest.TestCase):
         cfg = Config()
 
         # Should should do the same as the default, empty configuration
-        self.test_config_empty()
+        assert isinstance(cfg.engine, str)
+        assert cfg.engine == ENGINE_DROPBOX
+
+        assert isinstance(cfg.path, str)
+        assert cfg.path == u'/home/some_user/Dropbox'
+
+        assert isinstance(cfg.directory, str)
+        assert cfg.directory == u'Mackup'
+
+        assert isinstance(cfg.fullpath, str)
+        assert cfg.fullpath == u'/home/some_user/Dropbox/Mackup'
+
+        assert cfg.apps_to_ignore == set()
+        assert cfg.apps_to_sync == set()
 
     def test_config_empty(self):
         cfg = Config('mackup-empty.cfg')

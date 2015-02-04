@@ -130,7 +130,10 @@ class TestMackup(unittest.TestCase):
         utils.delete(srcfile)
         utils.delete(dstpath)
 
-    def test_copy_dir(self):
+    def test_copy_file_to_dir(self):
+        """
+        Copies a file to a destination folder that already exists
+        """
         # Create a tmp folder
         srcpath = tempfile.mkdtemp()
 

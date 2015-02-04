@@ -275,3 +275,9 @@ class TestMackup(unittest.TestCase):
        # Use an "unsupported file type". In this case, /dev/null
        assert os.path.exists("/dev/null")
        self.assertRaises(ValueError, utils.chmod, "/dev/null")
+
+    def test_error(self):
+        test_string = "Hello World"
+        self.assertRaises(SystemExit,
+                         utils.error,
+                         test_string)

@@ -13,6 +13,12 @@ class TestConfig(unittest.TestCase):
         realpath = os.path.dirname(os.path.realpath(__file__))
         os.environ['HOME'] = os.path.join(realpath, 'fixtures')
 
+    def test_config_no_config(self):
+        cfg = Config()
+
+        # Should should do the same as the default, empty configuration
+        self.test_config_empty()
+
     def test_config_empty(self):
         cfg = Config('mackup-empty.cfg')
 

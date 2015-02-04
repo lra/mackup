@@ -14,6 +14,25 @@ class TestConfig(unittest.TestCase):
         realpath = os.path.dirname(os.path.realpath(__file__))
         os.environ['HOME'] = os.path.join(realpath, 'fixtures')
 
+    def test_config_no_config(self):
+        cfg = Config()
+
+        # Should should do the same as the default, empty configuration
+        assert isinstance(cfg.engine, str)
+        assert cfg.engine == ENGINE_DROPBOX
+
+        assert isinstance(cfg.path, str)
+        assert cfg.path == u'/home/some_user/Dropbox'
+
+        assert isinstance(cfg.directory, str)
+        assert cfg.directory == u'Mackup'
+
+        assert isinstance(cfg.fullpath, str)
+        assert cfg.fullpath == u'/home/some_user/Dropbox/Mackup'
+
+        assert cfg.apps_to_ignore == set()
+        assert cfg.apps_to_sync == set()
+
     def test_config_empty(self):
         cfg = Config('mackup-empty.cfg')
 
@@ -199,3 +218,6 @@ class TestConfig(unittest.TestCase):
                                         'sublime-text-3',
                                         'x11',
                                         'vim'])
+
+    def test_config_old_config(self):
+        self.assertRaises(SystemExit, Config, 'mackup-old-config.cfg')

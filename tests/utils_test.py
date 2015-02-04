@@ -7,6 +7,12 @@ import stat
 
 from mackup import utils
 
+def convert_to_octal(file_name):
+    """
+    Using os.stat, returns file permissions (read, write, execute) as an octal
+    """
+    return oct(os.stat(file_name)[stat.ST_MODE])[-3:]
+
 
 class TestMackup(unittest.TestCase):
 
@@ -233,3 +239,39 @@ class TestMackup(unittest.TestCase):
 
         # Let's clean up
         utils.delete(dstpath)
+
+    def test_chmod_file(self):
+       # Create a tmp file
+       tf = tempfile.NamedTemporaryFile(delete=False)
+       file_name = tf.name
+
+       # Create a tmp directory with a sub folder
+       dir_name = tempfile.mkdtemp()
+       nested_dir = tempfile.mkdtemp(dir=dir_name)
+
+       ## File Tests
+
+       # Change the tmp file stats to S_IWRITE (200), write access only
+       os.chmod(file_name, stat.S_IWRITE)
+       convert_to_octal(file_name) == "200"
+
+       # Check to make sure that utils.chmod changes the bits to 600,
+       # which is read and write access for the owner
+       utils.chmod(file_name)
+       convert_to_octal(file_name) == "600"
+
+       ## Directory Tests
+
+       # Change the tmp folder stats to S_IREAD (400), read access only
+       os.chmod(dir_name, stat.S_IREAD)
+       convert_to_octal(dir_name) == "400"
+
+       # Check to make sure that utils.chmod changes the bits of all directories
+       # to 700, which is read, write, and execute access for the owner
+       utils.chmod(dir_name)
+       convert_to_octal(dir_name) == "700"
+       convert_to_octal(nested_dir) == "700"
+
+       # Use an "unsupported file type". In this case, /dev/null
+       assert os.path.exists("/dev/null")
+       self.assertRaises(ValueError, utils.chmod, "/dev/null")

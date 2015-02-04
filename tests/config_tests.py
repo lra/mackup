@@ -184,3 +184,6 @@ class TestConfig(unittest.TestCase):
                                         'sublime-text-3',
                                         'x11',
                                         'vim'])
+
+    def test_config_old_config(self):
+        self.assertRaises(SystemExit, Config, 'mackup-old-config.cfg')

@@ -304,3 +304,8 @@ class TestMackup(unittest.TestCase):
         assert not os.path.exists(os.path.join(temp_home,
             "Library/Application Support/Copy Agent/config.db"))
         self.assertRaises(SystemExit, utils.get_copy_folder_location)
+
+    def test_is_process_running(self):
+        # A pgrep that has one letter and a wildcard will always return id 1
+        assert utils.is_process_running("a*")
+        assert not utils.is_process_running("some imaginary process")

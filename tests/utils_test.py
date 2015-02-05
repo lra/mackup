@@ -309,3 +309,20 @@ class TestMackup(unittest.TestCase):
         # A pgrep that has one letter and a wildcard will always return id 1
         assert utils.is_process_running("a*")
         assert not utils.is_process_running("some imaginary process")
+
+    def test_can_file_be_synced_on_current_platform(self):
+        # Any file path will do, even if it doesn't exist
+        path = "some/file"
+
+        # Force the Mac OSX Test using lambda magic
+        utils.system = lambda _: utils.constants.PLATFORM_DARWIN
+        assert utils.can_file_be_synced_on_current_platform(path)
+
+        # Force the Linux Test using lambda magic
+        utils.system = lambda _: utils.constants.PLATFORM_LINUX
+        assert utils.can_file_be_synced_on_current_platform(path)
+
+        # Try to use the library path on Linux, which shouldn't work
+        path = os.path.join(os.environ["HOME"], "Library/")
+        print(path)
+        assert not utils.can_file_be_synced_on_current_platform(path)

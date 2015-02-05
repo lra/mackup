@@ -30,6 +30,13 @@ class TestMackup(unittest.TestCase):
         utils.raw_input = custom_raw_input
         assert not utils.confirm('Answer No to this question')
 
+    def test_confirm_python3(self):
+        # Override the raw_input used in utils
+        def custom_raw_input(_):
+            raise NameError
+        # Also override input used in utils, because
+        utils.raw_input = custom_raw_input
+
     def test_confirm_typo(self):
         # Override the raw_input used in utils
         def custom_raw_input(_):
@@ -281,6 +288,21 @@ class TestMackup(unittest.TestCase):
         self.assertRaises(SystemExit,
                          utils.error,
                          test_string)
+
+    def test_parse_cmdline_args(self):
+        modes = [utils.constants.BACKUP_MODE,
+                 utils.constants.RESTORE_MODE,
+                 utils.constants.UNINSTALL_MODE,
+                 utils.constants.LIST_MODE]
+
+        for mode in modes:
+            # Change the command line arguments to contain the correct mode
+            utils.sys.argv = ["the_program", mode]
+            assert str(utils.parse_cmdline_args()) == "Namespace(mode='%s')" %mode
+
+        # Change the command line arguments to have an incorrect mode
+        utils.sys.argv = ["the_program", "some wrong mode"]
+        self.assertRaises(SystemExit, utils.parse_cmdline_args)
 
     def test_failed_backup_location(self):
         """

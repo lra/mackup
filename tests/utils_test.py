@@ -280,8 +280,8 @@ class TestMackup(unittest.TestCase):
        convert_to_octal(nested_dir) == "700"
 
        # Use an "unsupported file type". In this case, /dev/null
-       assert os.path.exists("/dev/null")
-       self.assertRaises(ValueError, utils.chmod, "/dev/null")
+       dev_null = open(os.devnull, 'wb')
+       self.assertRaises(ValueError, utils.chmod, dev_null)
 
     def test_error(self):
         test_string = "Hello World"
@@ -290,6 +290,8 @@ class TestMackup(unittest.TestCase):
                          test_string)
 
     def test_parse_cmdline_args(self):
+        # /dev/null to throwaway the error
+        dev_null = open(os.devnull, 'wb')
         modes = [utils.constants.BACKUP_MODE,
                  utils.constants.RESTORE_MODE,
                  utils.constants.UNINSTALL_MODE,
@@ -302,6 +304,7 @@ class TestMackup(unittest.TestCase):
 
         # Change the command line arguments to have an incorrect mode
         utils.sys.argv = ["the_program", "some wrong mode"]
+        utils.sys.stderr = dev_null
         self.assertRaises(SystemExit, utils.parse_cmdline_args)
 
     def test_failed_backup_location(self):

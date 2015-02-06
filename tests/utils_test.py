@@ -337,14 +337,13 @@ class TestMackup(unittest.TestCase):
         path = "some/file"
 
         # Force the Mac OSX Test using lambda magic
-        utils.system = lambda _: utils.constants.PLATFORM_DARWIN
+        utils.platform.system = lambda *args: utils.constants.PLATFORM_DARWIN
         assert utils.can_file_be_synced_on_current_platform(path)
 
         # Force the Linux Test using lambda magic
-        utils.system = lambda _: utils.constants.PLATFORM_LINUX
+        utils.platform.system = lambda *args: utils.constants.PLATFORM_LINUX
         assert utils.can_file_be_synced_on_current_platform(path)
 
         # Try to use the library path on Linux, which shouldn't work
         path = os.path.join(os.environ["HOME"], "Library/")
-        print(path)
         assert not utils.can_file_be_synced_on_current_platform(path)

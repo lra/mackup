@@ -7,6 +7,12 @@ import stat
 
 from mackup import utils
 
+def convert_to_octal(file_name):
+    """
+    Using os.stat, returns file permissions (read, write, execute) as an octal
+    """
+    return oct(os.stat(file_name)[stat.ST_MODE])[-3:]
+
 
 class TestMackup(unittest.TestCase):
 
@@ -23,6 +29,13 @@ class TestMackup(unittest.TestCase):
             return 'No'
         utils.raw_input = custom_raw_input
         assert not utils.confirm('Answer No to this question')
+
+    def test_confirm_python3(self):
+        # Override the raw_input used in utils
+        def custom_raw_input(_):
+            raise NameError
+        # Also override input used in utils, because
+        utils.raw_input = custom_raw_input
 
     def test_confirm_typo(self):
         # Override the raw_input used in utils
@@ -130,7 +143,10 @@ class TestMackup(unittest.TestCase):
         utils.delete(srcfile)
         utils.delete(dstpath)
 
-    def test_copy_dir(self):
+    def test_copy_file_to_dir(self):
+        """
+        Copies a file to a destination folder that already exists
+        """
         # Create a tmp folder
         srcpath = tempfile.mkdtemp()
 
@@ -166,6 +182,44 @@ class TestMackup(unittest.TestCase):
         utils.delete(srcpath)
         utils.delete(dstpath)
 
+    def test_copy_dir(self):
+        """
+        Copies a directory recursively to the destination path
+        """
+        # Create a tmp folder
+        srcpath = tempfile.mkdtemp()
+
+        # Create a tmp file
+        tf = tempfile.NamedTemporaryFile(delete=False, dir=srcpath)
+        srcfile = tf.name
+        tf.close()
+
+        # Create a tmp folder
+        dstpath = tempfile.mkdtemp()
+
+        # Set the destination filename
+        srcpath_basename = os.path.basename(srcpath)
+        dstfile = os.path.join(dstpath,
+                               srcpath_basename,
+                               os.path.basename(srcfile))
+        # Make sure the source file and destination folder exist and the
+        # destination file doesn't yet exist
+        assert os.path.isdir(srcpath)
+        assert os.path.isfile(srcfile)
+        assert os.path.isdir(dstpath)
+        assert not os.path.exists(dstfile)
+
+        # Check if mackup can copy it
+        utils.copy(srcpath, dstfile)
+        assert os.path.isdir(srcpath)
+        assert os.path.isfile(srcfile)
+        assert os.path.isdir(dstpath)
+        assert os.path.exists(dstfile)
+
+        # Let's clean up
+        utils.delete(srcpath)
+        utils.delete(dstpath)
+
     def test_link_file(self):
         # Create a tmp file
         tf = tempfile.NamedTemporaryFile(delete=False)
@@ -192,3 +246,106 @@ class TestMackup(unittest.TestCase):
 
         # Let's clean up
         utils.delete(dstpath)
+
+    def test_chmod_file(self):
+       # Create a tmp file
+       tf = tempfile.NamedTemporaryFile(delete=False)
+       file_name = tf.name
+
+       # Create a tmp directory with a sub folder
+       dir_name = tempfile.mkdtemp()
+       nested_dir = tempfile.mkdtemp(dir=dir_name)
+
+       ## File Tests
+
+       # Change the tmp file stats to S_IWRITE (200), write access only
+       os.chmod(file_name, stat.S_IWRITE)
+       convert_to_octal(file_name) == "200"
+
+       # Check to make sure that utils.chmod changes the bits to 600,
+       # which is read and write access for the owner
+       utils.chmod(file_name)
+       convert_to_octal(file_name) == "600"
+
+       ## Directory Tests
+
+       # Change the tmp folder stats to S_IREAD (400), read access only
+       os.chmod(dir_name, stat.S_IREAD)
+       convert_to_octal(dir_name) == "400"
+
+       # Check to make sure that utils.chmod changes the bits of all directories
+       # to 700, which is read, write, and execute access for the owner
+       utils.chmod(dir_name)
+       convert_to_octal(dir_name) == "700"
+       convert_to_octal(nested_dir) == "700"
+
+       # Use an "unsupported file type". In this case, /dev/null
+       self.assertRaises(ValueError, utils.chmod, os.devnull)
+
+    def test_error(self):
+        test_string = "Hello World"
+        self.assertRaises(SystemExit,
+                         utils.error,
+                         test_string)
+
+    def test_parse_cmdline_args(self):
+        # /dev/null to throwaway the error
+        dev_null = open(os.devnull, 'wb')
+        modes = [utils.constants.BACKUP_MODE,
+                 utils.constants.RESTORE_MODE,
+                 utils.constants.UNINSTALL_MODE,
+                 utils.constants.LIST_MODE]
+
+        for mode in modes:
+            # Change the command line arguments to contain the correct mode
+            utils.sys.argv = ["the_program", mode]
+            assert str(utils.parse_cmdline_args()) == "Namespace(mode='%s')" %mode
+
+        # Change the command line arguments to have an incorrect mode
+        utils.sys.argv = ["the_program", "some wrong mode"]
+        utils.sys.stderr = dev_null
+        self.assertRaises(SystemExit, utils.parse_cmdline_args)
+
+    def test_failed_backup_location(self):
+        """
+        Tests for the error that should occur if the backup folder cannot be found
+        for Dropbox, Google, and Copy
+        """
+        # Hack to make our home folder some temporary folder
+        temp_home = tempfile.mkdtemp()
+        utils.os.environ['HOME'] = temp_home
+
+        # Check for the missing Dropbox folder
+        assert not os.path.exists(os.path.join(temp_home, ".dropbox/host.db"))
+        self.assertRaises(SystemExit, utils.get_dropbox_folder_location)
+
+        # Check for the missing Google Drive folder
+        assert not os.path.exists(os.path.join(temp_home,
+            "Library/Application Support/Google/Drive/sync_config.db"))
+        self.assertRaises(SystemExit, utils.get_google_drive_folder_location)
+
+        # Check for the missing Copy Folder
+        assert not os.path.exists(os.path.join(temp_home,
+            "Library/Application Support/Copy Agent/config.db"))
+        self.assertRaises(SystemExit, utils.get_copy_folder_location)
+
+    def test_is_process_running(self):
+        # A pgrep that has one letter and a wildcard will always return id 1
+        assert utils.is_process_running("a*")
+        assert not utils.is_process_running("some imaginary process")
+
+    def test_can_file_be_synced_on_current_platform(self):
+        # Any file path will do, even if it doesn't exist
+        path = "some/file"
+
+        # Force the Mac OSX Test using lambda magic
+        utils.platform.system = lambda *args: utils.constants.PLATFORM_DARWIN
+        assert utils.can_file_be_synced_on_current_platform(path)
+
+        # Force the Linux Test using lambda magic
+        utils.platform.system = lambda *args: utils.constants.PLATFORM_LINUX
+        assert utils.can_file_be_synced_on_current_platform(path)
+
+        # Try to use the library path on Linux, which shouldn't work
+        path = os.path.join(os.environ["HOME"], "Library/")
+        assert not utils.can_file_be_synced_on_current_platform(path)

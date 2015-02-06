@@ -280,8 +280,7 @@ class TestMackup(unittest.TestCase):
        convert_to_octal(nested_dir) == "700"
 
        # Use an "unsupported file type". In this case, /dev/null
-       dev_null = open(os.devnull, 'wb')
-       self.assertRaises(ValueError, utils.chmod, dev_null)
+       self.assertRaises(ValueError, utils.chmod, os.devnull)
 
     def test_error(self):
         test_string = "Hello World"

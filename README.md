@@ -332,6 +332,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [tint2](https://code.google.com/p/tint2/)
   - [Tmux](http://tmux.sourceforge.net/)
   - [Tmuxinator](https://github.com/aziz/tmuxinator)
+  - [todo.txt-cli](http://todotxt.com/)
   - [Tower](http://www.git-tower.com/)
   - [Transmission](http://www.transmissionbt.com/)
   - [Transmit](http://panic.com/transmit/)

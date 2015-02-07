@@ -8,6 +8,7 @@
 - Added support for DefaultKeyBinding in OSX (via @adamclerk and @kfinlay)
 - Fix support for the Atom editor (via @damiankloip)
 - Added support for HexChat (via @jubalh)
+- Added support for todo.txt-cli (via @jubalh)
 
 ## Mackup 0.8.2
 

@@ -1,0 +1,5 @@
+test:
+  override:
+    - nosetests --with-coverage --cover-package=mackup
+  post:
+    - coveralls

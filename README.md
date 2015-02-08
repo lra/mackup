@@ -3,7 +3,7 @@
 Keep your application settings in sync.
 
 [![Circle CI](https://circleci.com/gh/lra/mackup.svg?style=shield)](https://circleci.com/gh/lra/mackup)
-[![Coverage Status](https://img.shields.io/coveralls/lra/mackup.svg)](https://coveralls.io/r/lra/mackup?branch=master)
+[![Coverage Status](https://coveralls.io/repos/lra/mackup/badge.svg)](https://coveralls.io/r/lra/mackup)
 [![Code Health](https://landscape.io/github/lra/mackup/master/landscape.png)](https://landscape.io/github/lra/mackup/master)
 
 ## Quickstart

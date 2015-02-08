@@ -16,8 +16,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
-import os
-
 from .appsdb import ApplicationsDatabase
 from .application import ApplicationProfile
 from .constants import (BACKUP_MODE,
@@ -105,8 +103,7 @@ def main():
                   "All your files have been put back into place. You can now"
                   " safely uninstall Mackup.\n"
                   "\n"
-                  "Thanks for using Mackup !"
-                  .format(os.path.abspath(__file__)))
+                  "Thanks for using Mackup !")
 
     elif args.mode == LIST_MODE:
         # Display the list of supported applications

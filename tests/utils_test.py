@@ -7,6 +7,7 @@ import stat
 
 from mackup import utils
 
+
 def convert_to_octal(file_name):
     """
     Using os.stat, returns file permissions (read, write, execute) as an octal
@@ -46,9 +47,9 @@ class TestMackup(unittest.TestCase):
 
     def test_delete_file(self):
         # Create a tmp file
-        tf = tempfile.NamedTemporaryFile(delete=False)
-        tfpath = tf.name
-        tf.close()
+        tfile = tempfile.NamedTemporaryFile(delete=False)
+        tfpath = tfile.name
+        tfile.close()
 
         # Make sure the created file exists
         assert os.path.isfile(tfpath)
@@ -62,17 +63,17 @@ class TestMackup(unittest.TestCase):
         tfpath = tempfile.mkdtemp()
 
         # Let's put a file in it just for fun
-        tf = tempfile.NamedTemporaryFile(dir=tfpath, delete=False)
-        filepath = tf.name
-        tf.close()
+        tfile = tempfile.NamedTemporaryFile(dir=tfpath, delete=False)
+        filepath = tfile.name
+        tfile.close()
 
         # Let's put another folder in it
         subfolder_path = tempfile.mkdtemp(dir=tfpath)
 
         # And a file in the subfolder
-        tf = tempfile.NamedTemporaryFile(dir=subfolder_path, delete=False)
-        subfilepath = tf.name
-        tf.close()
+        tfile = tempfile.NamedTemporaryFile(dir=subfolder_path, delete=False)
+        subfilepath = tfile.name
+        tfile.close()
 
         # Make sure the created files and folders exists
         assert os.path.isdir(tfpath)
@@ -89,9 +90,9 @@ class TestMackup(unittest.TestCase):
 
     def test_copy_file(self):
         # Create a tmp file
-        tf = tempfile.NamedTemporaryFile(delete=False)
-        srcfile = tf.name
-        tf.close()
+        tfile = tempfile.NamedTemporaryFile(delete=False)
+        srcfile = tfile.name
+        tfile.close()
 
         # Create a tmp folder
         dstpath = tempfile.mkdtemp()
@@ -115,9 +116,9 @@ class TestMackup(unittest.TestCase):
 
     def test_copy_fail(self):
         # Create a tmp FIFO file
-        tf = tempfile.NamedTemporaryFile()
-        srcfile = tf.name
-        tf.close()
+        tfile = tempfile.NamedTemporaryFile()
+        srcfile = tfile.name
+        tfile.close()
         os.mkfifo(srcfile)
 
         # Create a tmp folder
@@ -151,9 +152,9 @@ class TestMackup(unittest.TestCase):
         srcpath = tempfile.mkdtemp()
 
         # Create a tmp file
-        tf = tempfile.NamedTemporaryFile(delete=False, dir=srcpath)
-        srcfile = tf.name
-        tf.close()
+        tfile = tempfile.NamedTemporaryFile(delete=False, dir=srcpath)
+        srcfile = tfile.name
+        tfile.close()
 
         # Create a tmp folder
         dstpath = tempfile.mkdtemp()
@@ -190,9 +191,9 @@ class TestMackup(unittest.TestCase):
         srcpath = tempfile.mkdtemp()
 
         # Create a tmp file
-        tf = tempfile.NamedTemporaryFile(delete=False, dir=srcpath)
-        srcfile = tf.name
-        tf.close()
+        tfile = tempfile.NamedTemporaryFile(delete=False, dir=srcpath)
+        srcfile = tfile.name
+        tfile.close()
 
         # Create a tmp folder
         dstpath = tempfile.mkdtemp()
@@ -222,9 +223,9 @@ class TestMackup(unittest.TestCase):
 
     def test_link_file(self):
         # Create a tmp file
-        tf = tempfile.NamedTemporaryFile(delete=False)
-        srcfile = tf.name
-        tf.close()
+        tfile = tempfile.NamedTemporaryFile(delete=False)
+        srcfile = tfile.name
+        tfile.close()
 
         # Create a tmp folder
         dstpath = tempfile.mkdtemp()
@@ -248,45 +249,44 @@ class TestMackup(unittest.TestCase):
         utils.delete(dstpath)
 
     def test_chmod_file(self):
-       # Create a tmp file
-       tf = tempfile.NamedTemporaryFile(delete=False)
-       file_name = tf.name
+        # Create a tmp file
+        tfile = tempfile.NamedTemporaryFile(delete=False)
+        file_name = tfile.name
 
-       # Create a tmp directory with a sub folder
-       dir_name = tempfile.mkdtemp()
-       nested_dir = tempfile.mkdtemp(dir=dir_name)
+        # Create a tmp directory with a sub folder
+        dir_name = tempfile.mkdtemp()
+        nested_dir = tempfile.mkdtemp(dir=dir_name)
 
-       ## File Tests
+        # # File Tests
 
-       # Change the tmp file stats to S_IWRITE (200), write access only
-       os.chmod(file_name, stat.S_IWRITE)
-       convert_to_octal(file_name) == "200"
+        # Change the tmp file stats to S_IWRITE (200), write access only
+        os.chmod(file_name, stat.S_IWRITE)
+        assert convert_to_octal(file_name) == "200"
 
-       # Check to make sure that utils.chmod changes the bits to 600,
-       # which is read and write access for the owner
-       utils.chmod(file_name)
-       convert_to_octal(file_name) == "600"
+        # Check to make sure that utils.chmod changes the bits to 600,
+        # which is read and write access for the owner
+        utils.chmod(file_name)
+        assert convert_to_octal(file_name) == "600"
 
-       ## Directory Tests
+        # # Directory Tests
 
-       # Change the tmp folder stats to S_IREAD (400), read access only
-       os.chmod(dir_name, stat.S_IREAD)
-       convert_to_octal(dir_name) == "400"
+        # Change the tmp folder stats to S_IREAD (400), read access only
+        os.chmod(dir_name, stat.S_IREAD)
+        assert convert_to_octal(dir_name) == "400"
 
-       # Check to make sure that utils.chmod changes the bits of all directories
-       # to 700, which is read, write, and execute access for the owner
-       utils.chmod(dir_name)
-       convert_to_octal(dir_name) == "700"
-       convert_to_octal(nested_dir) == "700"
+        # Check to make sure that utils.chmod changes the bits of all
+        # directories to 700, which is read, write, and execute access for the
+        # owner
+        utils.chmod(dir_name)
+        assert convert_to_octal(dir_name) == "700"
+        assert convert_to_octal(nested_dir) == "700"
 
-       # Use an "unsupported file type". In this case, /dev/null
-       self.assertRaises(ValueError, utils.chmod, os.devnull)
+        # Use an "unsupported file type". In this case, /dev/null
+        self.assertRaises(ValueError, utils.chmod, os.devnull)
 
     def test_error(self):
         test_string = "Hello World"
-        self.assertRaises(SystemExit,
-                         utils.error,
-                         test_string)
+        self.assertRaises(SystemExit, utils.error, test_string)
 
     def test_parse_cmdline_args(self):
         # /dev/null to throwaway the error
@@ -299,7 +299,8 @@ class TestMackup(unittest.TestCase):
         for mode in modes:
             # Change the command line arguments to contain the correct mode
             utils.sys.argv = ["the_program", mode]
-            assert str(utils.parse_cmdline_args()) == "Namespace(mode='%s')" %mode
+            expected_str = "Namespace(mode='{}')".format(mode)
+            assert str(utils.parse_cmdline_args()) == expected_str
 
         # Change the command line arguments to have an incorrect mode
         utils.sys.argv = ["the_program", "some wrong mode"]
@@ -308,8 +309,8 @@ class TestMackup(unittest.TestCase):
 
     def test_failed_backup_location(self):
         """
-        Tests for the error that should occur if the backup folder cannot be found
-        for Dropbox, Google, and Copy
+        Tests for the error that should occur if the backup folder cannot be
+        found for Dropbox, Google, and Copy
         """
         # Hack to make our home folder some temporary folder
         temp_home = tempfile.mkdtemp()
@@ -320,12 +321,14 @@ class TestMackup(unittest.TestCase):
         self.assertRaises(SystemExit, utils.get_dropbox_folder_location)
 
         # Check for the missing Google Drive folder
-        assert not os.path.exists(os.path.join(temp_home,
+        assert not os.path.exists(os.path.join(
+            temp_home,
             "Library/Application Support/Google/Drive/sync_config.db"))
         self.assertRaises(SystemExit, utils.get_google_drive_folder_location)
 
         # Check for the missing Copy Folder
-        assert not os.path.exists(os.path.join(temp_home,
+        assert not os.path.exists(os.path.join(
+            temp_home,
             "Library/Application Support/Copy Agent/config.db"))
         self.assertRaises(SystemExit, utils.get_copy_folder_location)
 

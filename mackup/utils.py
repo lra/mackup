@@ -104,10 +104,10 @@ def copy(src, dst):
     chmod(dst)
 
 
-def link(target, link):
+def link(target, link_to):
     """
     Create a link to a target file or a folder.
-    For simplicity sake, both target and link must be absolute path and must
+    For simplicity sake, both target and link_to must be absolute path and must
     include the filename of the file or folder.
     Also do not include any trailing slash.
 
@@ -118,14 +118,14 @@ def link(target, link):
 
     Args:
         target (str): file or folder the link will point to
-        link (str): Link to create
+        link_to (str): Link to create
     """
     assert isinstance(target, str)
     assert os.path.exists(target)
-    assert isinstance(link, str)
+    assert isinstance(link_to, str)
 
     # Create the path to the link if it does not exists
-    abs_path = os.path.dirname(os.path.abspath(link))
+    abs_path = os.path.dirname(os.path.abspath(link_to))
     if not os.path.isdir(abs_path):
         os.makedirs(abs_path)
 
@@ -133,7 +133,7 @@ def link(target, link):
     chmod(target)
 
     # Create the link to target
-    os.symlink(target, link)
+    os.symlink(target, link_to)
 
 
 def chmod(target):
@@ -256,7 +256,7 @@ def get_google_drive_folder_location():
     googledrive_home = None
 
     gdrive_db = os.path.join(os.environ['HOME'], gdrive_db_path)
-    if (os.path.isfile(gdrive_db)):
+    if os.path.isfile(gdrive_db):
         con = sqlite3.connect(gdrive_db)
         if con:
             cur = con.cursor()
@@ -286,10 +286,10 @@ def get_copy_folder_location():
 
     copy_settings = os.path.join(os.environ['HOME'], copy_settings_path)
 
-    if (os.path.isfile(copy_settings)):
-        db = sqlite3.connect(copy_settings)
-        if db:
-            cur = db.cursor()
+    if os.path.isfile(copy_settings):
+        database = sqlite3.connect(copy_settings)
+        if database:
+            cur = database.cursor()
             query = ("SELECT value "
                      "FROM config2 "
                      "WHERE option = 'csmRootPath';")

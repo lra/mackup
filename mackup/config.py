@@ -145,6 +145,7 @@ class Config(object):
         return parser
 
     def _warn_on_old_config(self):
+        """Warn the user if an old config format is detected."""
         # Is an old setion is in the config file ?
         old_sections = ['Allowed Applications', 'Ignored Applications']
         for old_section in old_sections:
@@ -164,6 +165,8 @@ class Config(object):
 
     def _parse_engine(self):
         """
+        Parse the storage engine in the config.
+
         Returns:
             str
         """
@@ -184,6 +187,8 @@ class Config(object):
 
     def _parse_path(self):
         """
+        Parse the storage path in the config.
+
         Returns:
             str
         """
@@ -205,6 +210,8 @@ class Config(object):
 
     def _parse_directory(self):
         """
+        Parse the storage directory in the config.
+
         Returns:
             str
         """
@@ -217,6 +224,8 @@ class Config(object):
 
     def _parse_apps_to_ignore(self):
         """
+        Parse the applications to ignore in the config.
+
         Returns:
             set
         """
@@ -232,6 +241,8 @@ class Config(object):
 
     def _parse_apps_to_sync(self):
         """
+        Parse the applications to backup in the config.
+
         Returns:
             set
         """
@@ -247,4 +258,7 @@ class Config(object):
 
 
 class ConfigError(Exception):
+
+    """Exception used for handle errors in the configuration."""
+
     pass

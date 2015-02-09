@@ -1,4 +1,4 @@
-"""System static utilities being used by the modules"""
+"""System static utilities being used by the modules."""
 import argparse
 import base64
 import os
@@ -14,7 +14,7 @@ from . import constants
 
 def confirm(question):
     """
-    Ask the user if he really want something to happen
+    Ask the user if he really want something to happen.
 
     Args:
         question(str): What can happen
@@ -43,7 +43,8 @@ def confirm(question):
 def delete(filepath):
     """
     Delete the given file, directory or link.
-    Should support undelete later on.
+
+    It Should support undelete later on.
 
     Args:
         filepath (str): Absolute full path to a file. e.g. /path/to/file
@@ -64,6 +65,7 @@ def delete(filepath):
 def copy(src, dst):
     """
     Copy a file or a folder (recursively) from src to dst.
+
     For simplicity sake, both src and dst must be absolute path and must
     include the filename of the file or folder.
     Also do not include any trailing slash.
@@ -107,6 +109,7 @@ def copy(src, dst):
 def link(target, link_to):
     """
     Create a link to a target file or a folder.
+
     For simplicity sake, both target and link_to must be absolute path and must
     include the filename of the file or folder.
     Also do not include any trailing slash.
@@ -139,6 +142,7 @@ def link(target, link_to):
 def chmod(target):
     """
     Recursively set the chmod for files to 0600 and 0700 for folders.
+
     It's ok unless we need something more specific.
 
     Args:
@@ -185,12 +189,11 @@ def error(message):
 
 def parse_cmdline_args():
     """
-    Setup the engine that's gonna parse the command line arguments
+    Setup the engine that's gonna parse the command line arguments.
 
     Returns:
         (argparse.Namespace)
     """
-
     # Format the description text
     description = ("Mackup {}\n"
                    "Keep your application settings in sync.\n"
@@ -229,7 +232,7 @@ def parse_cmdline_args():
 
 def get_dropbox_folder_location():
     """
-    Try to locate the Dropbox folder
+    Try to locate the Dropbox folder.
 
     Returns:
         (str) Full path to the current Dropbox folder
@@ -247,7 +250,7 @@ def get_dropbox_folder_location():
 
 def get_google_drive_folder_location():
     """
-    Try to locate the Google Drive folder
+    Try to locate the Google Drive folder.
 
     Returns:
         (unicode) Full path to the current Google Drive folder
@@ -276,7 +279,7 @@ def get_google_drive_folder_location():
 
 def get_copy_folder_location():
     """
-    Try to locate the Copy folder
+    Try to locate the Copy folder.
 
     Returns:
         (unicode) Full path to the current Copy folder
@@ -306,7 +309,7 @@ def get_copy_folder_location():
 
 def is_process_running(process_name):
     """
-    Check if a process with the given name is running
+    Check if a process with the given name is running.
 
     Args:
         (str): Process name, e.g. "Sublime Text"
@@ -329,6 +332,7 @@ def is_process_running(process_name):
 def remove_acl(path):
     """
     Remove the ACL of the file or folder located on the given path.
+
     Also remove the ACL of any file and folder below the given one,
     recursively.
 
@@ -347,6 +351,8 @@ def remove_acl(path):
 
 def remove_immutable_attribute(path):
     """
+    Remove the immutable attribute of the given path.
+
     Remove the immutable attribute of the file or folder located on the given
     path. Also remove the immutable attribute of any file and folder below the
     given one, recursively.
@@ -366,6 +372,8 @@ def remove_immutable_attribute(path):
 
 def can_file_be_synced_on_current_platform(path):
     """
+    Chec if the given path can be synced locally.
+
     Check if it makes sens to sync the file at the given path on the current
     platform.
     For now we don't sync any file in the ~/Library folder on GNU/Linux.

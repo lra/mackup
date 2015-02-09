@@ -29,8 +29,7 @@ from . import utils
 
 
 def main():
-    """Main function"""
-
+    """Main function."""
     # Get the command line arg
     args = utils.parse_cmdline_args()
 

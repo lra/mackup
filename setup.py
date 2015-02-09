@@ -1,4 +1,4 @@
-"""Setup file to automate the install of Mackup in the Python environment"""
+"""Setup file to automate the install of Mackup in the Python environment."""
 from setuptools import setup
 from mackup.constants import VERSION
 

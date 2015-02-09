@@ -1,4 +1,4 @@
-"""Constants used in Mackup"""
+"""Constants used in Mackup."""
 # Current version
 VERSION = '0.8.2'
 

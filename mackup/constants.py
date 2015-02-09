@@ -1,6 +1,6 @@
 """Constants used in Mackup."""
 # Current version
-VERSION = '0.8.2'
+VERSION = '0.8.3'
 
 # Mode used to list supported applications
 LIST_MODE = 'list'

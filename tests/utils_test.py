@@ -10,7 +10,7 @@ from mackup import utils
 
 def convert_to_octal(file_name):
     """
-    Using os.stat, returns file permissions (read, write, execute) as an octal
+    Using os.stat, returns file permissions (read, write, execute) as an octal.
     """
     return oct(os.stat(file_name)[stat.ST_MODE])[-3:]
 
@@ -145,9 +145,7 @@ class TestMackup(unittest.TestCase):
         utils.delete(dstpath)
 
     def test_copy_file_to_dir(self):
-        """
-        Copies a file to a destination folder that already exists
-        """
+        """Copies a file to a destination folder that already exists."""
         # Create a tmp folder
         srcpath = tempfile.mkdtemp()
 
@@ -184,9 +182,7 @@ class TestMackup(unittest.TestCase):
         utils.delete(dstpath)
 
     def test_copy_dir(self):
-        """
-        Copies a directory recursively to the destination path
-        """
+        """Copies a directory recursively to the destination path."""
         # Create a tmp folder
         srcpath = tempfile.mkdtemp()
 

@@ -1,6 +1,4 @@
-"""
-Package used to manage the .mackup.cfg config file
-"""
+"""Package used to manage the .mackup.cfg config file."""
 
 import os
 import os.path
@@ -24,8 +22,12 @@ except ImportError:
 
 class Config(object):
 
+    """The Mackup Config class."""
+
     def __init__(self, filename=None):
         """
+        Create a Config instance.
+
         Args:
             filename (str): Optional filename of the config file. If empty,
                             defaults to MACKUP_CONFIG_FILE
@@ -57,6 +59,7 @@ class Config(object):
     def engine(self):
         """
         The engine used by the storage.
+
         ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_COPY or ENGINE_FS.
 
         Returns:
@@ -67,6 +70,8 @@ class Config(object):
     @property
     def path(self):
         """
+        Path to the Mackup configuration files.
+
         The path to the directory where Mackup is gonna create and store his
         directory.
 
@@ -88,6 +93,8 @@ class Config(object):
     @property
     def fullpath(self):
         """
+        Full path to the Mackup configuration files.
+
         The full path to the directory when Mackup is storing the configuration
         files.
 
@@ -118,6 +125,8 @@ class Config(object):
 
     def _setup_parser(self, filename=None):
         """
+        Configure the ConfigParser instance the way we want it.
+
         Args:
             filename (str) or None
 

@@ -1,6 +1,8 @@
 """
+The applications database.
+
 The Applications Database provides an easy to use interface to load application
-data from the Mackup Database (files)
+data from the Mackup Database (files).
 """
 import os
 
@@ -15,12 +17,11 @@ from .constants import CUSTOM_APPS_DIR
 
 
 class ApplicationsDatabase(object):
-    """Database containing all the configured applications"""
+
+    """Database containing all the configured applications."""
 
     def __init__(self):
-        """
-        Create a ApplicationsDatabase instance
-        """
+        """Create a ApplicationsDatabase instance."""
         # Build the dict that will contain the properties of each application
         self.apps = dict()
 
@@ -55,6 +56,8 @@ class ApplicationsDatabase(object):
     @staticmethod
     def get_config_files():
         """
+        Return the application configuraion files.
+
         Return a list of configuration files describing the apps supported by
         Mackup. The files return are absolute fullpath to those files.
         e.g. /usr/lib/mackup/applications/bash.cfg
@@ -96,7 +99,7 @@ class ApplicationsDatabase(object):
 
     def get_name(self, name):
         """
-        Return the fancy name of an application
+        Return the fancy name of an application.
 
         Args:
             name (str)
@@ -108,7 +111,7 @@ class ApplicationsDatabase(object):
 
     def get_files(self, name):
         """
-        Return the list of config files of an application
+        Return the list of config files of an application.
 
         Args:
             name (str)
@@ -120,7 +123,10 @@ class ApplicationsDatabase(object):
 
     def get_app_names(self):
         """
-        Return the list of application names that are available in the database
+        Return application names.
+
+        Return the list of application names that are available in the
+        database.
 
         Returns:
             set of str.
@@ -133,7 +139,7 @@ class ApplicationsDatabase(object):
 
     def get_pretty_app_names(self):
         """
-        Return the list of pretty app names that are available in the database
+        Return the list of pretty app names that are available in the database.
 
         Returns:
             set of str.

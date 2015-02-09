@@ -1,4 +1,6 @@
 """
+Application Profile.
+
 An Application Profile contains all the information about an application in
 Mackup. Name, files, ...
 """
@@ -9,11 +11,12 @@ from . import utils
 
 
 class ApplicationProfile(object):
-    """Instantiate this class with application specific data"""
+
+    """Instantiate this class with application specific data."""
 
     def __init__(self, mackup, files):
         """
-        Create an ApplicationProfile instance
+        Create an ApplicationProfile instance.
 
         Args:
             mackup (Mackup)
@@ -27,7 +30,7 @@ class ApplicationProfile(object):
 
     def backup(self):
         """
-        Backup the application config files
+        Backup the application config files.
 
         Algorithm:
             if exists home/file
@@ -94,7 +97,7 @@ class ApplicationProfile(object):
 
     def restore(self):
         """
-        Restore the application config files
+        Restore the application config files.
 
         Algorithm:
             if exists mackup/file
@@ -150,6 +153,7 @@ class ApplicationProfile(object):
     def uninstall(self):
         """
         Uninstall Mackup.
+
         Restore any file where it was before the 1st Mackup backup.
 
         Algorithm:

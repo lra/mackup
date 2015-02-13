@@ -282,6 +282,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [ProxyChains](http://proxychains.sourceforge.net)
   - [ProxyChains NG](https://sourceforge.net/projects/proxychains-ng)
   - [Punto Switcher](http://punto.yandex.ru/)
+  - [PyCharm 4](https://www.jetbrains.com/pycharm/)
   - [PyPI](https://pypi.python.org/pypi)
   - [Quicksilver](http://qsapp.com/)
   - [Rails](http://rubyonrails.org/)

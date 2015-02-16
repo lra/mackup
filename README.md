@@ -179,6 +179,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Default Folder X](http://www.stclairsoft.com/DefaultFolderX/)
   - [dig](http://en.wikipedia.org/wiki/Dig_(command))
   - [Divvy](http://mizage.com/divvy/)
+  - [Dock](http://support.apple.com/en-us/HT201730)
   - [Dolphin](https://dolphin-emu.org/)
   - [Droplr](https://droplr.com/hello)
   - [Emacs](http://www.gnu.org/software/emacs/)

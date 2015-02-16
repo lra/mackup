@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for PyCharm 4 (via @fcvarela)
+
 ## Mackup 0.8.3
 
 - Remove the scripts dir from Messages syncing (@vitorgalvao)

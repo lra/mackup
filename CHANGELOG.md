@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for PyCharm 4 (via @fcvarela)
+- Added support for Popcorn Time (via @JacopKane)
 
 ## Mackup 0.8.3
 

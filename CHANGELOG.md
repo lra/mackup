@@ -4,6 +4,7 @@
 
 - Added support for PyCharm 4 (via @fcvarela)
 - Added support for Popcorn Time (via @JacopKane)
+- Sublime Text 3 syncs only Packages/User directory on Linux
 
 ## Mackup 0.8.3
 

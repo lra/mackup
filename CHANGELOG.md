@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for Box to store you files (via @ninjabong)
+
 ## Mackup 0.8.4
 
 - Added support for PyCharm 4 (via @fcvarela)

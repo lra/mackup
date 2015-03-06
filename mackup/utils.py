@@ -276,6 +276,21 @@ def get_google_drive_folder_location():
 
     return googledrive_home
 
+def get_box_folder_location():
+    """
+    Try to locate the Box folder.
+
+    Returns:
+        (str) Full path to the current Box folder
+    """
+    box_sync_path = os.path.join(os.environ['HOME'], 'Library/Application Support/Box/Box Sync/sync_root_folder.txt')
+    try:
+        with open(box_sync_path, 'r') as sync_path:
+            box_home = sync_path.read()
+    except IOError:
+        error('Unable to find your Box prefs at ' , sync_path , ' =(')
+
+    return box_home
 
 def get_copy_folder_location():
     """

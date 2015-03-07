@@ -4,6 +4,7 @@ import os.path
 from mackup.constants import (ENGINE_DROPBOX,
                               ENGINE_GDRIVE,
                               ENGINE_COPY,
+                              ENGINE_BOX,
                               ENGINE_FS)
 from mackup.config import Config, ConfigError
 

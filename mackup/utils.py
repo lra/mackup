@@ -288,7 +288,7 @@ def get_box_folder_location():
         with open(box_sync_path, 'r') as sync_path:
             box_home = sync_path.read()
     except IOError:
-        error('Unable to find your Box prefs at =(')
+        error("Unable to find your Box prefs =(")
 
     return box_home
 

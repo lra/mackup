@@ -283,10 +283,14 @@ def get_box_folder_location():
     Returns:
         (str) Full path to the current Box folder
     """
-    box_sync_path = os.path.join(os.environ['HOME'], 'Library/Application Support/Box/Box Sync/sync_root_folder.txt')
+    box_prefs_path = 'Library/Application Support/Box/Box Sync/sync_root_folder.txt'
+    box_home = None
+
+    box_prefs = os.path.join(os.environ['HOME'], box_prefs_path)
     try:
-        with open(box_sync_path, 'r') as sync_path:
-            box_home = sync_path.read()
+        with open(box_prefs, 'r') as sync_path:
+            data = sync_path.read()
+            box_home = data
     except IOError:
         error("Unable to find your Box prefs =(")
 

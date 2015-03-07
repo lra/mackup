@@ -156,13 +156,13 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_BOX
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u'/home/some_user/Box Sync'
+        assert cfg.path == u'/Users/whatever/Box Sync'
 
         assert isinstance(cfg.directory, str)
         assert cfg.directory == u'some_weirder_name'
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u'/home/some_user/Box Sync/some_weirder_name'
+        assert cfg.fullpath == u'/Users/whatever/Box Sync/some_weirder_name'
 
         assert cfg.apps_to_ignore == set()
         assert cfg.apps_to_sync == set()

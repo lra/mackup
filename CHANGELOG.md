@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Support for Z
+
 ## Mackup 0.8.4
 
 - Added support for PyCharm 4 (via @fcvarela)

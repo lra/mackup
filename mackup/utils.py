@@ -374,7 +374,7 @@ def can_file_be_synced_on_current_platform(path):
     """
     Chec if the given path can be synced locally.
 
-    Check if it makes sens to sync the file at the given path on the current
+    Check if it makes sense to sync the file at the given path on the current
     platform.
     For now we don't sync any file in the ~/Library folder on GNU/Linux.
     There might be other exceptions in the future.

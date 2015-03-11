@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for PyCharm 4 (via @fcvarela)
+- Added support for Arm(via @bobwenx)
 
 ## Mackup 0.8.3
 

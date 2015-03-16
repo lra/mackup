@@ -225,6 +225,9 @@ def parse_cmdline_args():
                                  constants.UNINSTALL_MODE,
                                  constants.LIST_MODE],
                         help=help_msg)
+    # Add the optional arg
+    parser.add_argument("-v", "--version", action="version",
+                        version="Mackup {}".format(constants.VERSION))
 
     # Parse the command line and return the parsed options
     return parser.parse_args()

@@ -3,6 +3,7 @@
 ## WIP
 
 - Support for Z
+- Support for GMVault (via @jkaan)
 
 ## Mackup 0.8.4
 

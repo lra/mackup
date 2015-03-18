@@ -200,6 +200,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Git](http://git-scm.com/)
   - [Gitbox](http://gitboxapp.com/)
   - [Gmail Notifr](http://ashchan.com/projects/gmail-notifr)
+  - [GMVault](http://gmvault.org/)
   - [Go2Shell](http://zipzapmac.com/Go2Shell)
   - [GnuPG](http://www.gnupg.org/)
   - [GrandTotal 3](http://www.mediaatelier.com/GrandTotal3/)

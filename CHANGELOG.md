@@ -9,7 +9,7 @@
 - Support for MATLAB (via @danielsuo)
 - Add a --version parameter (via @Timidger)
 - Use docopt for the CLI to prepare for future features
-- Added support for Arm(via @bobwenx)
+- Added support for Arm (via @bobwenx)
 
 ## Mackup 0.8.4
 

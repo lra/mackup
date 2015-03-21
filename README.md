@@ -242,6 +242,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Magic Launch](https://www.oneperiodic.com/products/magiclaunch/)
   - [MagicPrefs](http://magicprefs.com/)
   - [Mailplane](http://mailplaneapp.com/)
+  - [MATLAB](http://www.mathworks.com/products/matlab/)
   - [Maven](http://maven.apache.org)
   - [Max](http://sbooth.org/Max/)
   - [MenuMeters](http://www.ragingmenace.com/software/menumeters/)

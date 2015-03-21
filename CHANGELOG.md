@@ -4,6 +4,7 @@
 
 - Support for Z
 - Support for GMVault (via @jkaan)
+- Support for MATLAB (via @danielsuo)
 
 ## Mackup 0.8.4
 

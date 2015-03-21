@@ -2,18 +2,6 @@
 # Current version
 VERSION = '0.8.4'
 
-# Mode used to list supported applications
-LIST_MODE = 'list'
-
-# Mode used to backup files to Dropbox
-BACKUP_MODE = 'backup'
-
-# Mode used to restore files from Dropbox
-RESTORE_MODE = 'restore'
-
-# Mode used to remove Mackup and reset and config file
-UNINSTALL_MODE = 'uninstall'
-
 # Support platforms
 PLATFORM_DARWIN = 'Darwin'
 PLATFORM_LINUX = 'Linux'

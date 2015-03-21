@@ -284,25 +284,6 @@ class TestMackup(unittest.TestCase):
         test_string = "Hello World"
         self.assertRaises(SystemExit, utils.error, test_string)
 
-    def test_parse_cmdline_args(self):
-        # /dev/null to throwaway the error
-        dev_null = open(os.devnull, 'wb')
-        modes = [utils.constants.BACKUP_MODE,
-                 utils.constants.RESTORE_MODE,
-                 utils.constants.UNINSTALL_MODE,
-                 utils.constants.LIST_MODE]
-
-        for mode in modes:
-            # Change the command line arguments to contain the correct mode
-            utils.sys.argv = ["the_program", mode]
-            expected_str = "Namespace(mode='{}')".format(mode)
-            assert str(utils.parse_cmdline_args()) == expected_str
-
-        # Change the command line arguments to have an incorrect mode
-        utils.sys.argv = ["the_program", "some wrong mode"]
-        utils.sys.stderr = dev_null
-        self.assertRaises(SystemExit, utils.parse_cmdline_args)
-
     def test_failed_backup_location(self):
         """
         Tests for the error that should occur if the backup folder cannot be

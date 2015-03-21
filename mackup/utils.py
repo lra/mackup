@@ -1,5 +1,4 @@
 """System static utilities being used by the modules."""
-import argparse
 import base64
 import os
 import platform
@@ -185,52 +184,6 @@ def error(message):
     fail = '\033[91m'
     end = '\033[0m'
     sys.exit(fail + "Error: {}".format(message) + end)
-
-
-def parse_cmdline_args():
-    """
-    Setup the engine that's gonna parse the command line arguments.
-
-    Returns:
-        (argparse.Namespace)
-    """
-    # Format the description text
-    description = ("Mackup {}\n"
-                   "Keep your application settings in sync.\n"
-                   "Copyright (C) 2013-2014 Laurent Raufaste"
-                   " <http://glop.org/>\n"
-                   .format(constants.VERSION))
-
-    # Format some epilog text
-    epilog = ("Mackup modes of action:\n"
-              " - backup: sync your conf files to your synced storage, use"
-              " this the 1st time you use Mackup.\n"
-              " - restore: link the conf files already in your synced storage"
-              " on your system, use it on any new system you use.\n"
-              " - uninstall: reset everything as it was before using Mackup.\n"
-              " - list: display a list of all supported applications.\n")
-
-    help_msg = "Required action mode for Mackup, see below for details."
-
-    # Setup the global parser
-    parser = argparse.ArgumentParser(
-        description=description,
-        epilog=epilog,
-        formatter_class=argparse.RawDescriptionHelpFormatter)
-
-    # Add the required arg
-    parser.add_argument("mode",
-                        choices=[constants.BACKUP_MODE,
-                                 constants.RESTORE_MODE,
-                                 constants.UNINSTALL_MODE,
-                                 constants.LIST_MODE],
-                        help=help_msg)
-    # Add the optional arg
-    parser.add_argument("-v", "--version", action="version",
-                        version="Mackup {}".format(constants.VERSION))
-
-    # Parse the command line and return the parsed options
-    return parser.parse_args()
 
 
 def get_dropbox_folder_location():

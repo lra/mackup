@@ -2,9 +2,11 @@
 
 ## WIP
 
-- Support for Z
+- Support for Z (via @jkaan)
 - Support for GMVault (via @jkaan)
 - Support for MATLAB (via @danielsuo)
+- Add a --version parameter (via @Timidger)
+- Use docopt for the CLI to prepare for future features
 
 ## Mackup 0.8.4
 

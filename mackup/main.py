@@ -1,29 +1,33 @@
-"""
+"""Mackup.
+
 Keep your application settings in sync.
+Copyright (C) 2013-2015 Laurent Raufaste <http://glop.org/>
 
-Copyright (C) 2013 Laurent Raufaste <http://glop.org/>
+Usage:
+  mackup list
+  mackup backup
+  mackup restore
+  mackup uninstall
+  mackup (-h | --help)
+  mackup --version
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+Options:
+  -h --help     Show this screen.
+  --version     Show version.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+Modes of action:
+ 1. list: display a list of all supported applications.
+ 2. backup: sync your conf files to your synced storage, use this the 1st time
+    you use Mackup.
+ 3. restore: link the conf files already in your synced storage on your system,
+    use it on any new system you use.
+ 4. uninstall: reset everything as it was before using Mackup.
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
+from docopt import docopt
 from .appsdb import ApplicationsDatabase
 from .application import ApplicationProfile
-from .constants import (BACKUP_MODE,
-                        RESTORE_MODE,
-                        UNINSTALL_MODE,
-                        LIST_MODE,
-                        VERSION,
-                        MACKUP_APP_NAME)
+from .constants import MACKUP_APP_NAME, VERSION
 from .mackup import Mackup
 from . import utils
 
@@ -31,12 +35,12 @@ from . import utils
 def main():
     """Main function."""
     # Get the command line arg
-    args = utils.parse_cmdline_args()
+    args = docopt(__doc__, version="Mackup {}".format(VERSION))
 
     mckp = Mackup()
     app_db = ApplicationsDatabase()
 
-    if args.mode == BACKUP_MODE:
+    if args['backup']:
         # Check the env where the command is being run
         mckp.check_for_usable_backup_env()
 
@@ -45,7 +49,7 @@ def main():
             app = ApplicationProfile(mckp, app_db.get_files(app_name))
             app.backup()
 
-    elif args.mode == RESTORE_MODE:
+    elif args['restore']:
         # Check the env where the command is being run
         mckp.check_for_usable_restore_env()
 
@@ -69,7 +73,7 @@ def main():
             app = ApplicationProfile(mckp, app_db.get_files(app_name))
             app.restore()
 
-    elif args.mode == UNINSTALL_MODE:
+    elif args['uninstall']:
         # Check the env where the command is being run
         mckp.check_for_usable_restore_env()
 
@@ -104,7 +108,7 @@ def main():
                   "\n"
                   "Thanks for using Mackup !")
 
-    elif args.mode == LIST_MODE:
+    elif args['list']:
         # Display the list of supported applications
         mckp.check_for_usable_environment()
         output = "Supported applications:\n"
@@ -114,8 +118,6 @@ def main():
         output += ("{} applications supported in Mackup v{}"
                    .format(len(app_db.get_app_names()), VERSION))
         print(output)
-    else:
-        raise ValueError("Unsupported mode: {}".format(args.mode))
 
     # Delete the tmp folder
     mckp.clean_temp_folder()

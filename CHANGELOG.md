@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add toolchains.xml in Maven syncing (via @jcgay)
+
 ## Mackup 0.8.5
 
 - Support for Z (via @jkaan)

@@ -3,6 +3,7 @@
 ## WIP
 
 - Add toolchains.xml in Maven syncing (via @jcgay)
+- Added support of WebStorm 10 (via @morphinewan)
 
 ## Mackup 0.8.5
 

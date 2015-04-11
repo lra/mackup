@@ -176,6 +176,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Consular](https://github.com/achiu/consular)
   - [ControlPlane](http://www.controlplaneapp.com/)
   - [CoRD](http://cord.sourceforge.net/)
+  - [CotEditor](http://coteditor.com/)
   - [Cyberduck](http://cyberduck.ch/)
   - [Dash](http://kapeli.com/dash)
   - [Deal Alert](http://dealalertapp.com/)

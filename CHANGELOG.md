@@ -4,6 +4,7 @@
 
 - Add toolchains.xml in Maven syncing (via @jcgay)
 - Added support of WebStorm 10 (via @morphinewan)
+- Added support of CotEditor (via @usami-k)
 
 ## Mackup 0.8.5
 

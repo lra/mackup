@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added support for Docker (via @carlossg)
 - Add toolchains.xml in Maven syncing (via @jcgay)
 - Added support of WebStorm 10 (via @morphinewan)
 - Added support of Gnome SSH Tunnel Manager (via @skyrocknroll)

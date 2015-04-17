@@ -56,10 +56,10 @@ class ApplicationsDatabase(object):
     @staticmethod
     def get_config_files():
         """
-        Return the application configuraion files.
+        Return the application configuration files.
 
         Return a list of configuration files describing the apps supported by
-        Mackup. The files return are absolute fullpath to those files.
+        Mackup. The files return are absolute full path to those files.
         e.g. /usr/lib/mackup/applications/bash.cfg
 
         Only one config file per application should be returned, custom config
@@ -76,7 +76,7 @@ class ApplicationsDatabase(object):
         # List of stock application config files
         config_files = set()
 
-        # Temp list of user added app config filenames
+        # Temp list of user added app config file names
         custom_files = set()
 
         # Get the list of custom application config files first

@@ -7,6 +7,6 @@ To speed up Pull Request (PR) approval and merger into Mackup, please follow the
 - Sync configurations should follow the follow principles:
   - Syncing should not break the application, and PRs should be tested
   - Syncing should not break any syncing functionality internal to the application
-  - The configuation should sync the minimal set of data, so that syncing happens quickly. Leave large app data out of the sync configuration.
+  - The configuration should sync the minimal set of data, so that syncing happens quickly. Leave large app data out of the sync configuration.
 
 Thank you for your contribution!

@@ -8,7 +8,6 @@
 - Added support of Gnome SSH Tunnel Manager (via @skyrocknroll)
 - Added support for Hammerspoon (via @jkaan)
 - Added support for Bitchx (via @troywilson_)
-- Added support for LSColors (via @troywilson_)
 
 ## Mackup 0.8.5
 

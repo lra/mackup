@@ -45,7 +45,7 @@ mackup restore
 
 Done !
 
-You can find more detailled instructions in [INSTALL.md](INSTALL.md)
+You can find more detailed instructions in [INSTALL.md](INSTALL.md)
 
 ## Usage
 

@@ -1,4 +1,4 @@
-# Detailled install instructions for Mackup
+# Detailed install instructions for Mackup
 
 There are 3 ways to run mackup
 

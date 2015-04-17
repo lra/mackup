@@ -154,7 +154,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [BetterTouchTool](http://blog.boastr.net/)
   - [BibDesk](http://bibdesk.sourceforge.net/)
   - [Billings Pro Server Admin](https://www.marketcircle.com/billingspro/download/billingspro-server/)
-  - [Bitchx](https://github.com/TroyWilson1/)
+  - [Bitchx](https://github.com/BitchX/)
   - [Boto](https://github.com/boto/boto)
   - [Brackets](http://brackets.io/)
   - [Bundler](http://bundler.io)

@@ -242,7 +242,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [LimeChat](http://limechat.net/mac/)
   - [LittleSnitch](http://www.obdev.at/products/littlesnitch/)
   - [Livestreamer](http://livestreamer.tanuki.se/)
-  - [LSColors](https://github.com/TroyWilson1)
+  - [LSColors](https://github.com/trapd00r/LS_COLORS)
   - [MacOSX](http://www.apple.com/osx/)
   - [MacVim](https://code.google.com/p/macvim/)
   - [Magic Launch](https://www.oneperiodic.com/products/magiclaunch/)

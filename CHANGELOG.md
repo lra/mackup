@@ -11,6 +11,7 @@
 - Added support for EditorConfig (via @chadluo)
 - Add com.agilebits.onepassword4.plist in 1Password (via @amatos)
 - Added support for Versions (via @amatos)
+- Added support for Gas Mask (via @zanderzhng)
 
 ## Mackup 0.8.5
 

@@ -352,6 +352,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Übersicht](http://tracesof.net/uebersicht/)
   - [uTorrent](http://www.utorrent.com/)
   - [Ventrilo](http://www.ventrilo.com/)
+  - [Versions](http://www.versionsapp.com)
   - [Vim](http://www.vim.org/)
   - [Vimperator](http://www.vimperator.org/vimperator)
   - [Viscosity](http://www.sparklabs.com/viscosity/)

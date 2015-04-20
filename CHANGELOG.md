@@ -9,6 +9,7 @@
 - Added support for Hammerspoon (via @jkaan)
 - Added support for Bitchx (via @troywilson_)
 - Added support for EditorConfig (via @chadluo)
+- Add com.agilebits.onepassword4.plist in 1Password (via @amatos)
 
 ## Mackup 0.8.5
 

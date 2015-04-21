@@ -12,6 +12,7 @@
 - Add com.agilebits.onepassword4.plist in 1Password (via @amatos)
 - Added support for Versions (via @amatos)
 - Added support for Gas Mask (via @zanderzhng)
+- Removed broken support for Stickies and Z
 
 ## Mackup 0.8.5
 

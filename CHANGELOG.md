@@ -15,6 +15,7 @@
 - Removed broken support for Stickies and Z
 - Add ee.clockwise.gmask.plist in Gas Mask (via @zanderzhng)
 - Add configs for mpv (via @zanderzhng)
+- Added support for Shimo (via @amatos)
 
 ## Mackup 0.8.5
 

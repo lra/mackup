@@ -256,6 +256,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Mercurial](http://mercurial.selenic.com/)
   - [MercuryMover](http://www.heliumfoot.com/mercurymover/)
   - [Messages](http://www.apple.com/osx/apps/#messages)
+  - [Microsoft Lync](http://office.microsoft.com/lync)
   - [MySQL](http://www.mysql.com/)
   - [Moom](http://manytricks.com/moom/)
   - [Mou](http://mouapp.com/)

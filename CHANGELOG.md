@@ -17,6 +17,7 @@
 - Add configs for mpv (via @zanderzhng)
 - Added support for Shimo (via @amatos)
 - Added support for tvnamer (via @ronniemoore)
+- Added support for Royal TSX (via @amatos)
 
 ## Mackup 0.8.5
 

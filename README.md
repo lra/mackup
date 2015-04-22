@@ -144,6 +144,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Aspell](http://aspell.net/)
   - [Atom](https://atom.io/)
   - [AusKey](https://abr.gov.au/AUSkey/)
+  - [Autokey](https://code.google.com/p/autokey)
   - [Awareness](http://iamfutureproof.com/tools/awareness/)
   - [AWS Command Line Interface](https://aws.amazon.com/cli/)
   - [Microsoft Azure CLI](https://github.com/Azure/azure-xplat-cli)

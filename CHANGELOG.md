@@ -16,6 +16,7 @@
 - Add ee.clockwise.gmask.plist in Gas Mask (via @zanderzhng)
 - Add configs for mpv (via @zanderzhng)
 - Added support for Shimo (via @amatos)
+- Added support for tvnamer (via @ronniemoore)
 
 ## Mackup 0.8.5
 

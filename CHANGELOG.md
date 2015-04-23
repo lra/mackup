@@ -19,6 +19,7 @@
 - Added support for Shimo (via @amatos)
 - Added support for tvnamer (via @ronniemoore)
 - Added support for Royal TSX (via @amatos)
+- Added support for CotEditor (via @usami-k)
 
 ## Mackup 0.8.5
 

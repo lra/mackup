@@ -21,6 +21,7 @@
 - Added support for Royal TSX (via @amatos)
 - Added support for CotEditor (via @usami-k)
 - Added support for xbindkeys (via @scottames)
+- Added support for Spacemacs (via @x-ji)
 
 ## Mackup 0.8.5
 

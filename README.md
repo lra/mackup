@@ -330,6 +330,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Slogger](http://brettterpstra.com/projects/slogger/)
   - [Soulver](http://www.acqualia.com/soulver/)
   - [SourceTree](http://sourcetreeapp.com)
+  - [Spacemacs](https://github.com/syl20bnr/spacemacs)
   - [Spark](http://www.shadowlab.org/softwares/spark.php)
   - [Spectrwm](https://opensource.conformal.com/wiki/spectrwm)
   - [Spectacle](http://spectacleapp.com/)

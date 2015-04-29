@@ -22,6 +22,7 @@
 - Added support for CotEditor (via @usami-k)
 - Added support for xbindkeys (via @scottames)
 - Added support for Spacemacs (via @x-ji)
+- Added support for Visual Studio Code (via @luisdemanuel)
 
 ## Mackup 0.8.5
 

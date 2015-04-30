@@ -328,7 +328,7 @@ def remove_immutable_attribute(path):
 
 def can_file_be_synced_on_current_platform(path):
     """
-    Chec if the given path can be synced locally.
+    Check if the given path can be synced locally.
 
     Check if it makes sense to sync the file at the given path on the current
     platform.

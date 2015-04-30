@@ -2,8 +2,27 @@
 
 ## WIP
 
+- Added support for Autokey (via @danielsuo)
+- Added support for Docker (via @carlossg)
 - Add toolchains.xml in Maven syncing (via @jcgay)
 - Added support of WebStorm 10 (via @morphinewan)
+- Added support of Gnome SSH Tunnel Manager (via @skyrocknroll)
+- Added support for Hammerspoon (via @jkaan)
+- Added support for Bitchx (via @troywilson_)
+- Added support for EditorConfig (via @chadluo)
+- Add com.agilebits.onepassword4.plist in 1Password (via @amatos)
+- Added support for Versions (via @amatos)
+- Added support for Gas Mask (via @zanderzhng)
+- Removed broken support for Stickies and Z
+- Add ee.clockwise.gmask.plist in Gas Mask (via @zanderzhng)
+- Add configs for mpv (via @zanderzhng)
+- Added support for Shimo (via @amatos)
+- Added support for tvnamer (via @ronniemoore)
+- Added support for Royal TSX (via @amatos)
+- Added support for CotEditor (via @usami-k)
+- Added support for xbindkeys (via @scottames)
+- Added support for Spacemacs (via @x-ji)
+- Added support for Visual Studio Code (via @luisdemanuel)
 
 ## Mackup 0.8.5
 

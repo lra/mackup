@@ -363,6 +363,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Vimperator](http://www.vimperator.org/vimperator)
   - [Viscosity](http://www.sparklabs.com/viscosity/)
   - [VLC](http://www.videolan.org/)
+  - [Visual Studio Code](https://code.visualstudio.com)
   - [WebStorm](https://www.jetbrains.com/webstorm/)
   - [Wget](https://www.gnu.org/software/wget/)
   - [Witch](http://manytricks.com/witch/)

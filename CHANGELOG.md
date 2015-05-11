@@ -23,6 +23,7 @@
 - Added support for xbindkeys (via @scottames)
 - Added support for Spacemacs (via @x-ji)
 - Added support for Visual Studio Code (via @luisdemanuel)
+- Added support for Gradle (via @jcgay)
 
 ## Mackup 0.8.5
 

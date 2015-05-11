@@ -211,6 +211,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Go2Shell](http://zipzapmac.com/Go2Shell)
   - [GnuPG](http://www.gnupg.org/)
   - [GrandTotal 3](http://www.mediaatelier.com/GrandTotal3/)
+  - [Gradle](http://gradle.org)
   - [Gnome SSH Tunnel Manager](http://sourceforge.net/projects/gstm/)
   - [Hammerspoon](http://www.hammerspoon.org/)
   - [Hands Off!](http://www.oneperiodic.com/products/handsoff/)

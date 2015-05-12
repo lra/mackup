@@ -258,7 +258,7 @@ def get_copy_folder_location():
             cur.close()
 
     if not copy_home:
-        error("Unable to find your Google Drive install =(")
+        error("Unable to find your Copy install =(")
 
     return copy_home
 

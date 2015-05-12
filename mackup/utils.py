@@ -211,7 +211,7 @@ def get_google_drive_folder_location():
     Returns:
         (unicode) Full path to the current Google Drive folder
     """
-    gdrive_db_path = 'Library/Application Support/Google/Drive/sync_config.db'
+    gdrive_db_path = 'Library/Application Support/Google/Drive/user_default/sync_config.db'
     googledrive_home = None
 
     gdrive_db = os.path.join(os.environ['HOME'], gdrive_db_path)

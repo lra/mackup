@@ -242,9 +242,9 @@ def get_copy_folder_location():
     Returns:
         (unicode) Full path to the current Copy folder
     """
-    if platform.system() == CONSTANTS.PLATFORM_DARWIN:
+    if platform.system() == constants.PLATFORM_DARWIN:
         copy_settings_path = 'Library/Application Support/Copy Agent/config.db'
-    elif platform.system() == CONSTANTS.PLATFORM_LINUX:
+    elif platform.system() == constants.PLATFORM_LINUX:
         copy_settings_path = '.copy/config.db'
     copy_home = None
 

@@ -210,6 +210,8 @@ def get_google_drive_folder_location():
 
     Returns:
         (unicode) Full path to the current Google Drive folder
+
+    Still no Google Drive client for Linux so that isn't going to work
     """
     gdrive_db_path = 'Library/Application Support/Google/Drive/sync_config.db'
     googledrive_home = None
@@ -240,7 +242,10 @@ def get_copy_folder_location():
     Returns:
         (unicode) Full path to the current Copy folder
     """
-    copy_settings_path = 'Library/Application Support/Copy Agent/config.db'
+    if platform.system() == CONSTANTS.PLATFORM_DARWIN
+        copy_settings_path = 'Library/Application Support/Copy Agent/config.db'
+    elif platform.system() == CONSTANTS.PLATFORM_LINUX
+        copy_settings_path = '.copy/config.db'
     copy_home = None
 
     copy_settings = os.path.join(os.environ['HOME'], copy_settings_path)

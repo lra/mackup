@@ -22,13 +22,12 @@ def confirm(question):
         (boolean): Confirmed or not
     """
     while True:
-        # Python 3 hack
-        try:
-            input = raw_input
-        except NameError:
-            pass
+        # Python 3 check
+        if sys.version_info[0] < 3:
+            answer = raw_input(question + ' <Yes|No>').lower()
+        else:
+            answer = input(question + ' <Yes|No>').lower()
 
-        answer = input(question + ' <Yes|No>').lower()
         if answer == 'yes' or answer == 'y':
             confirmed = True
             break

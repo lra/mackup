@@ -209,9 +209,11 @@ class Config(object):
 
         # Python 2 and python 3 byte strings are different.
         if sys.version_info[0] < 3:
-            return str(path)
+            path = str(path)
         else:
-            return path.decode("utf-8")
+            path = path.decode("utf-8")
+
+        return path
 
     def _parse_directory(self):
         """

@@ -161,6 +161,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Bundler](http://bundler.io)
   - [Byobu](http://byobu.co/)
   - [Caffeine](http://lightheadsw.com/caffeine/)
+  - [Capture One](http://www.phaseone.com/Imaging-Software/Capture-One.aspx)
   - [Cartographica](http://www.macgis.com)
   - [Charles](http://www.charlesproxy.com)
   - [Chef](http://www.opscode.com/chef/)

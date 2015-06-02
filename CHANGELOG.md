@@ -26,6 +26,7 @@
 - Added support for Gradle (via @jcgay)
 - Added support for Capture One (via @devnulled)
 - Addes support for version 3 of Mailplane (via @roderik)
+- Added support for .gitignore_global (via @TrigonaMinima)
 
 ## Mackup 0.8.5
 

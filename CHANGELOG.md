@@ -25,7 +25,8 @@
 - Added support for Visual Studio Code (via @luisdemanuel)
 - Added support for Gradle (via @jcgay)
 - Added support for Capture One (via @devnulled)
-- Addes support for version 3 of Mailplane (via @roderik)
+- Added support for version 3 of Mailplane (via @roderik)
+- Improved Transmission support (via @TrigonaMinima)
 
 ## Mackup 0.8.5
 

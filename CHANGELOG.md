@@ -27,6 +27,7 @@
 - Added support for Capture One (via @devnulled)
 - Added support for version 3 of Mailplane (via @roderik)
 - Improved Transmission support (via @TrigonaMinima)
+- Added support for Nomacs (via @TrigonaMinima)
 
 ## Mackup 0.8.5
 

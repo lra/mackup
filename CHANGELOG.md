@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added support for Dropzone 3 (via @iansoper)
 - Added support for Autokey (via @danielsuo)
 - Added support for Docker (via @carlossg)
 - Add toolchains.xml in Maven syncing (via @jcgay)

@@ -269,6 +269,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [ncmpcpp](http://ncmpcpp.rybczak.net)
   - [newsbeuter](http://newsbeuter.org/)
   - [ngrok](https://ngrok.com/)
+  - [Nomacs](http://nomacs.org/)
   - [npm](https://www.npmjs.com/)
   - [nvALT](http://brettterpstra.com/projects/nvalt/)
   - [nvpy](https://github.com/cpbotha/nvpy)

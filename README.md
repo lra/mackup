@@ -188,6 +188,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Docker](https://www.docker.com/)
   - [Dolphin](https://dolphin-emu.org/)
   - [Droplr](https://droplr.com/hello)
+  - [Dropzone 3](https://aptonic.com/dropzone3/)
   - [EditorConfig](http://editorconfig.org/)
   - [Emacs](http://www.gnu.org/software/emacs/)
   - [Enjoyable](http://yukkurigames.com/enjoyable/)

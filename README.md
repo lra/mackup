@@ -260,6 +260,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Mercurial](http://mercurial.selenic.com/)
   - [MercuryMover](http://www.heliumfoot.com/mercurymover/)
   - [Messages](http://www.apple.com/osx/apps/#messages)
+  - [Microsoft Remote Desktop](https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12&ls=1)
   - [MySQL](http://www.mysql.com/)
   - [Moom](http://manytricks.com/moom/)
   - [Mou](http://mouapp.com/)

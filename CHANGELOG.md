@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added support for PyRadio (via @joaoponceleao)
 - Added support for Dropzone 3 (via @iansoper)
 - Added support for Autokey (via @danielsuo)
 - Added support for Docker (via @carlossg)

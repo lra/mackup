@@ -30,6 +30,7 @@
 - Added support for version 3 of Mailplane (via @roderik)
 - Improved Transmission support (via @TrigonaMinima)
 - Added support for Nomacs (via @TrigonaMinima)
+- Added .zshrc to Oh My Zsh (@ronniemoore)
 
 ## Mackup 0.8.5
 

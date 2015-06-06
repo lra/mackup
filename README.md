@@ -181,6 +181,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [CotEditor](http://coteditor.com/)
   - [Cyberduck](http://cyberduck.ch/)
   - [Dash](http://kapeli.com/dash)
+  - [DbVisualizer](https://www.dbvis.com/)
   - [Deal Alert](http://dealalertapp.com/)
   - [Default Folder X](http://www.stclairsoft.com/DefaultFolderX/)
   - [dig](http://en.wikipedia.org/wiki/Dig_(command))

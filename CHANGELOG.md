@@ -31,6 +31,7 @@
 - Improved Transmission support (via @TrigonaMinima)
 - Added support for Nomacs (via @TrigonaMinima)
 - Added support for DbVisualizer (via @ronniemoore)
+- Added support for MusicBrainz Picard (via @TrigonaMinima)
 
 ## Mackup 0.8.5
 

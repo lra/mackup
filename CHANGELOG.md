@@ -32,6 +32,7 @@
 - Added support for Nomacs (via @TrigonaMinima)
 - Added support for DbVisualizer (via @ronniemoore)
 - Added support for MusicBrainz Picard (via @TrigonaMinima)
+- Improved Mailplane 3 support (via @TCattd)
 
 ## Mackup 0.8.5
 

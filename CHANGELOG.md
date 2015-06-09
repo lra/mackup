@@ -32,6 +32,7 @@
 - Added support for Nomacs (via @TrigonaMinima)
 - Added support for DbVisualizer (via @ronniemoore)
 - Added support for MusicBrainz Picard (via @TrigonaMinima)
+- Add support for OSX Services Workflows ([Ex.1](http://brettterpstra.com/howtos/install-an-os-x-system-service/), [Ex.2](http://www.mactricksandtips.com/2012/03/right-click-to-upload-images-from-finder-directly-to-imgur.html)) (via @TCattd)
 
 ## Mackup 0.8.5
 

@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.6
+
 - Added support for PyRadio (via @joaoponceleao)
 - Added support for Dropzone 3 (via @iansoper)
 - Added support for Autokey (via @danielsuo)

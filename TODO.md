@@ -21,3 +21,4 @@ Feel free to implement any of those ;)
   in `homebrew`
 - Do not crash on non existing file during uninstall #240
 - Simplify the parameter handling with https://github.com/mitsuhiko/click
+- Dedicated repository for the applcations dabatase, like homebrew, so that we don't need a new mackup release to support new apps

@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add in support for yosemite for google drive (via @seanfreiburg)
+
 ## Mackup 0.8.6
 
 - Added support for PyRadio (via @joaoponceleao)

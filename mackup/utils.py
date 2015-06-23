@@ -211,6 +211,11 @@ def get_google_drive_folder_location():
         (unicode) Full path to the current Google Drive folder
     """
     gdrive_db_path = 'Library/Application Support/Google/Drive/sync_config.db'
+    yosemite_gdrive_db_path = 'Library/Application Support/Google/Drive/user_default/sync_config.db'
+    yosemite_gdrive_db = os.path.join(os.environ['HOME'], yosemite_gdrive_db_path)
+    if os.path.isfile(yosemite_gdrive_db):
+        gdrive_db_path = yosemite_gdrive_db
+
     googledrive_home = None
 
     gdrive_db = os.path.join(os.environ['HOME'], gdrive_db_path)

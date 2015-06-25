@@ -3,6 +3,7 @@
 ## WIP
 
 - Add in support for yosemite for google drive (via @seanfreiburg)
+- Added support for taskwarrior (via @ToostInc)
 
 ## Mackup 0.8.6
 

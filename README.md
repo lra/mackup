@@ -347,6 +347,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Subversion](http://subversion.apache.org/)
   - [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html)
   - [TaskPaper](http://www.hogbaysoftware.com/products/taskpaper)
+  - [Taskwarrior](http://www.taskwarrior.org/)
   - [Teamocil](http://remiprev.github.io/teamocil/)
   - [Terminator](https://launchpad.net/terminator/)
   - [TextMate](http://macromates.com/)

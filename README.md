@@ -203,6 +203,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [FontExplorer X](http://www.fontexplorerx.com/)
   - [ForkLift 2](http://www.binarynights.com/forklift/)
   - [Gas Mask](https://github.com/2ndalpha/gasmask/)
+  - [Gear Player](http://www.gearmusicplayer.com/)
   - [GeekTool](http://projects.tynsoe.org/en/geektool/)
   - [GHCi](http://www.haskell.org/haskellwiki/GHC/GHCi)
   - [Git Hooks](https://github.com/icefox/git-hooks)

@@ -2,6 +2,11 @@
 
 ## WIP
 
+- Add in support for yosemite for google drive (via @seanfreiburg)
+- Added support for taskwarrior (via @ToostInc)
+
+## Mackup 0.8.6
+
 - Added support for PyRadio (via @joaoponceleao)
 - Added support for Dropzone 3 (via @iansoper)
 - Added support for Autokey (via @danielsuo)
@@ -33,6 +38,7 @@
 - Added support for DbVisualizer (via @ronniemoore)
 - Added support for MusicBrainz Picard (via @TrigonaMinima)
 - Extended KeePassX support for v2 (via @TCattd)
+- Improved Mailplane 3 support (via @TCattd)
 
 ## Mackup 0.8.5
 

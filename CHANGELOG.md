@@ -5,6 +5,7 @@
 - Add in support for yosemite for google drive (via @seanfreiburg)
 - Added support for taskwarrior (via @ToostInc)
 - Added support for Gear Music Player (via @TCattd)
+- Added support for Dash 3 (via @Kapeli)
 
 ## Mackup 0.8.6
 

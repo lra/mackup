@@ -7,6 +7,7 @@
 - Added support for Gear Music Player (via @TCattd)
 - Added support for Dash 3 (via @Kapeli)
 - Added support for Yummy FTP (via @TCattd)
+- Added support for PHPStorm 9 (via @suyan)
 
 ## Mackup 0.8.6
 

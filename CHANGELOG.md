@@ -6,6 +6,7 @@
 - Added support for taskwarrior (via @ToostInc)
 - Added support for Gear Music Player (via @TCattd)
 - Added support for Dash 3 (via @Kapeli)
+- Added support for Yummy FTP (via @TCattd)
 
 ## Mackup 0.8.6
 

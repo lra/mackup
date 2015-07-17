@@ -382,6 +382,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [XEmacs](http://www.xemacs.org/)
   - [XLD](http://tmkk.undo.jp/xld/)
   - [XtraFinder](http://www.trankynam.com/xtrafinder/)
+  - [Yummy FTP](http://www.yummysoftware.com/)
   - [Zsh](http://zsh.sourceforge.net/)
   - iTunes Applescripts
 

@@ -327,6 +327,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Seil](https://pqrs.org/macosx/keyremap4macbook/seil.html.en)
   - [Sequel Pro](http://www.sequelpro.com/)
   - [SHSH Blobs](http://en.wikipedia.org/wiki/SHSH_blob)
+  - [ShiftIt](https://github.com/fikovnik/ShiftIt)
   - [Shimo](http://www.chungwasoft.com/shimo/)
   - [Shuttle](http://fitztrev.github.io/shuttle/)
   - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)

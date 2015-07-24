@@ -8,6 +8,7 @@
 - Added support for Dash 3 (via @Kapeli)
 - Added support for Yummy FTP (via @TCattd)
 - Added support for PHPStorm 9 (via @suyan)
+- Added support for ShiftIt (via @hexedpackets)
 
 ## Mackup 0.8.6
 

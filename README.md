@@ -167,6 +167,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Chicken](http://sourceforge.net/projects/chicken/)
   - [Clementine](http://www.clementine-player.org/)
   - [ClipMenu](http://www.clipmenu.com/)
+  - [Clipy](http://clipy-app.com)
   - [CloudApp](http://getcloudapp.com/)
   - [Coda 2](http://panic.com/coda/)
   - [Colloquy](http://colloquy.info/)

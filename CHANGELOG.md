@@ -9,8 +9,12 @@
 - Added support for Yummy FTP (via @TCattd)
 - Added support for PHPStorm 9 (via @suyan)
 - Added support for ShiftIt (via @hexedpackets)
+<<<<<<< HEAD
 - Added support for Android Studio 1.3 (via @usami-k)
 - Added support for Clipy (via @usami-k)
+=======
+- Added support for HyperSwitch (via @usami-k)
+>>>>>>> 58865a348e4d1670478d85f8b7db07c10fde6710
 
 ## Mackup 0.8.6
 

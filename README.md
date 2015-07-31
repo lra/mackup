@@ -377,6 +377,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Wget](https://www.gnu.org/software/wget/)
   - [Witch](http://manytricks.com/witch/)
   - [X11](http://www.x.org/)
+  - [Xamarin Studio](https://xamarin.com/studio)
   - [XBindKeys](http://www.nongnu.org/xbindkeys/)
   - [Xchat](http://www.xchat.org/)
   - [XCode](https://developer.apple.com/xcode/)

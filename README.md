@@ -226,6 +226,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Hexels](http://hexraystudios.com/hexels/)
   - [Houdini](http://uglyapps.co.uk/houdini/)
   - [Htop](http://htop.sourceforge.net/)
+  - [HyperSwitch](https://bahoom.com/hyperswitch)
   - [i2cssh](https://github.com/wouterdebie/i2cssh)
   - [i3wm](http://i3wm.org/)
   - [IntelliJIDEA](http://www.jetbrains.com/idea/)

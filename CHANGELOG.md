@@ -13,6 +13,7 @@
 - Added support for Clipy (via @usami-k)
 - Added support for HyperSwitch (via @usami-k)
 - Added support for Xamarin Studio 5 (via @usami-k)
+- Added support for RStudio (via @kfinlay)
 
 ## Mackup 0.8.6
 

@@ -313,6 +313,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [rTorrent](http://libtorrent.rakshasa.no/)
   - [R](http://www.r-project.org/)
   - [Royal TSX](http://www.royaltsx.com/ts/osx/features)
+  - [RStudio](http://rstudio.com)
   - [Rubocop](https://github.com/bbatsov/rubocop)
   - [Ruby Version](https://gist.github.com/fnichol/1912050)
   - [Ruby](http://ruby-lang.org/)

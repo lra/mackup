@@ -4,6 +4,7 @@ import os.path
 from mackup.constants import (ENGINE_DROPBOX,
                               ENGINE_GDRIVE,
                               ENGINE_COPY,
+                              ENGINE_ICLOUD,
                               ENGINE_FS)
 from mackup.config import Config, ConfigError
 
@@ -142,6 +143,27 @@ class TestConfig(unittest.TestCase):
 
         assert isinstance(cfg.fullpath, str)
         assert cfg.fullpath.endswith(u'/Copy/Mackup')
+
+        assert cfg.apps_to_ignore == set(['subversion',
+                                          'sequel-pro',
+                                          'sabnzbd'])
+        assert cfg.apps_to_sync == set(['sublime-text-3', 'x11', 'sabnzbd'])
+
+    def test_config_engine_icloud(self):
+        cfg = Config('mackup-engine-icloud.cfg')
+
+        assert isinstance(cfg.engine, str)
+        assert cfg.engine == ENGINE_ICLOUD
+
+        assert isinstance(cfg.path, str)
+        assert cfg.path == os.path.expanduser(
+            '~/Library/Mobile Documents/com~apple~CloudDocs/')
+
+        assert isinstance(cfg.directory, str)
+        assert cfg.directory == u'Mackup'
+
+        assert isinstance(cfg.fullpath, str)
+        assert cfg.fullpath.endswith(u'/com~apple~CloudDocs/Mackup')
 
         assert cfg.apps_to_ignore == set(['subversion',
                                           'sequel-pro',

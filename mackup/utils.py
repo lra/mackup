@@ -267,6 +267,23 @@ def get_copy_folder_location():
     return copy_home
 
 
+def get_icloud_folder_location():
+    """
+    Try to locate the iCloud Drive folder.
+
+    Returns:
+        (str) Full path to the iCloud Drive folder.
+    """
+    yosemite_icloud_path = '~/Library/Mobile Documents/com~apple~CloudDocs/'
+
+    icloud_home = os.path.expanduser(yosemite_icloud_path)
+
+    if not os.path.isdir(icloud_home):
+        error('Unable to find your iCloud Drive =(')
+
+    return unicode(icloud_home)
+
+
 def is_process_running(process_name):
     """
     Check if a process with the given name is running.

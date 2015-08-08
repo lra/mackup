@@ -71,7 +71,7 @@ class Mackup(object):
                              " configuration files\n"
                              "Do you want to create it now ? <{}>"
                              .format(self.mackup_folder)):
-                os.mkdir(self.mackup_folder)
+                os.makedirs(self.mackup_folder)
             else:
                 utils.error("Mackup can't do anything without a home =(")
 

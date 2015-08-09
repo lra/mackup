@@ -394,8 +394,9 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Zsh](http://zsh.sourceforge.net/)
   - iTunes Applescripts
 
-You can add your favorite application by forking it and doing a
-[Pull Request](https://help.github.com/articles/using-pull-requests).
+## Can you support application X?
+
+We can [with your help](https://github.com/lra/mackup/tree/master/doc#get-official-support-for-an-application) ;)
 
 ## Why did you do this ?!
 

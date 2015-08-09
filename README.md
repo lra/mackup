@@ -5,8 +5,6 @@ Keep your application settings in sync.
 [![Circle CI](https://circleci.com/gh/lra/mackup.svg?style=shield)](https://circleci.com/gh/lra/mackup)
 [![Coverage Status](https://coveralls.io/repos/lra/mackup/badge.svg)](https://coveralls.io/r/lra/mackup)
 [![Code Health](https://landscape.io/github/lra/mackup/master/landscape.png)](https://landscape.io/github/lra/mackup/master)
-[![Downloads](https://pypip.in/download/mackup/badge.svg?period=month)](https://pypi.python.org/pypi/mackup/)
-[![Latest Version](https://pypip.in/version/mackup/badge.svg?text=version)](https://pypi.python.org/pypi/mackup/)
 
 ## Quickstart
 

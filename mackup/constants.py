@@ -24,6 +24,7 @@ CUSTOM_APPS_DIR = '.mackup'
 # Supported engines
 ENGINE_DROPBOX = 'dropbox'
 ENGINE_GDRIVE = 'google_drive'
+ENGINE_BOX = 'box'
 ENGINE_COPY = 'copy'
 ENGINE_ICLOUD = 'icloud'
 ENGINE_FS = 'file_system'

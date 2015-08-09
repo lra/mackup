@@ -4,6 +4,7 @@
 
 - Added support for syncing over Box (via @ninjabong)
 - Added support for Photoshop CC (via @ponychicken)
+- Removed problematic Lightroom support
 
 ## Mackup 0.8.7
 

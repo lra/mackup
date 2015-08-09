@@ -133,7 +133,6 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Ack](http://beyondgrep.com/)
   - [Adium](http://adium.im/)
   - [Adobe Camera Raw](http://www.adobe.com/products/photoshop/extend.html)
-  - [Adobe Lightroom](http://www.adobe.com/products/photoshop-lightroom.html)
   - [Adobe Photoshop CC](http://www.adobe.com/products/photoshop.html)
   - [Android Studio](https://developer.android.com/sdk/)
   - [AppCode](http://www.jetbrains.com/objc/)

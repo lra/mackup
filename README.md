@@ -123,6 +123,7 @@ folder and destroy the Mackup folder in Dropbox.
  - [Dropbox](https://www.dropbox.com/)
  - [Google Drive](https://drive.google.com/)
  - [Copy](https://www.copy.com/)
+ - [iCloud](http://www.apple.com/icloud/)
  - Anything able to sync a folder (e.g. [Git](http://git-scm.com/))
 
 See the [README](doc/README.md) file in the doc directory for more info.

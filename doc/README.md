@@ -33,6 +33,12 @@ where your Google Drive is and store your configuration files in it.
 engine = google_drive
 ```
 
+### iCloud
+
+```ini
+[storage]
+engine = icloud
+```
 
 ### Copy
 
@@ -81,6 +87,14 @@ directory = backup
 ```
 
 This will store your files in the `~/dotfiles/backup` directory in your home.
+
+You can also select a subfolder:
+
+```ini
+[storage]
+engine = icloud
+directory = .config/mackup
+```
 
 ## Applications
 

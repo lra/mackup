@@ -133,6 +133,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Adium](http://adium.im/)
   - [Adobe Camera Raw](http://www.adobe.com/products/photoshop/extend.html)
   - [Adobe Lightroom](http://www.adobe.com/products/photoshop-lightroom.html)
+  - [Alfred](https://www.alfredapp.com)
   - [Android Studio](https://developer.android.com/sdk/)
   - [AppCode](http://www.jetbrains.com/objc/)
   - [aria2c](http://aria2.sourceforge.net/)

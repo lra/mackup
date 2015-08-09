@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for syncing over Box (via @ninjabong)
+
 ## Mackup 0.8.7
 
 - Add in support for yosemite for google drive (via @seanfreiburg)

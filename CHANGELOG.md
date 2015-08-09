@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.7
+
 - Add in support for yosemite for google drive (via @seanfreiburg)
 - Added support for taskwarrior (via @ToostInc)
 - Added support for Gear Music Player (via @TCattd)

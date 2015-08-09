@@ -18,6 +18,7 @@
 - Added support for RStudio (via @kfinlay)
 - Added support for iCloud as a new storage (via @jlowin)
 - Allow the mackup home to be a subfolder (via @mkwmms)
+- Added support for version 8 of Microsoft Remote Desktop (via @tdm00)
 
 ## Mackup 0.8.6
 

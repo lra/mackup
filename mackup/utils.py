@@ -11,6 +11,11 @@ import sqlite3
 from . import constants
 
 
+# Flag that controls how user confirmation works.
+# If True, the user wants to say "yes" to everything.
+FORCE_YES = False
+
+
 def confirm(question):
     """
     Ask the user if he really want something to happen.
@@ -21,6 +26,9 @@ def confirm(question):
     Returns:
         (boolean): Confirmed or not
     """
+    if FORCE_YES:
+        return True
+
     while True:
         # Python 3 check
         if sys.version_info[0] < 3:

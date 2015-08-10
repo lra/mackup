@@ -13,6 +13,7 @@ Usage:
 
 Options:
   -h --help     Show this screen.
+  -f --force    Force every question asked to be answered with "Yes"
   --version     Show version.
 
 Modes of action:
@@ -46,6 +47,10 @@ def main():
 
     mckp = Mackup()
     app_db = ApplicationsDatabase()
+
+    # If we want to answer mackup with "yes" for each question
+    if args['force']:
+        utils.FORCE_YES = True
 
     if args['backup']:
         # Check the env where the command is being run

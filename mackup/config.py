@@ -53,22 +53,31 @@ def make_config_file(storage_type=ENGINE_DROPBOX, path="",
     if storage_type == ENGINE_FS and path:
         assert os.path.exists(path), (
             "The path {} does not exist!".format(path))
+    else:
+        path = ""
     # Write the configuration file in the home directory
-    configuration = ["[storage]",
-                     "engine = {}".format(storage_type),
-                     ("path = " + (path or "")) if storage_type else "",
-                     "directory = {}".format(directory),
+    # This writes it backwards, so we have to specify it backwards
+    config = configparser.ConfigParser()
 
-                     "[applications_to_sync]",
-                     "\n".join(whitelist),
+    # Applications to NOT sync section
+    config.add_section('applications_to_ignore')
+    for app in blacklist:
+        config.set('applications_to_ignore', app, "")
 
-                     "[applications_to_ignore]",
-                     "\n".join(blacklist)
-                     ]
-    config_path = os.path.join(os.environ['HOME'],
-                               MACKUP_CONFIG_FILE)
+    # Applications to sync section
+    config.add_section('applications_to_sync')
+    for app in whitelist:
+        config.set('applications_to_sync', app, "")
+
+    # Storage Section
+    config.add_section('storage')
+    config.set('storage', 'path', path)
+    ronfig.set('storage', 'directory', directory)
+    config.set('storage', 'engine', storage_type)
+
+    config_path = os.path.join(os.environ['HOME'], MACKUP_CONFIG_FILE)
     with open(config_path, "w") as config_file:
-        config_file.writelines(line + "\n" for line in configuration)
+        config.write(config_file)
 
 
 class Config(object):

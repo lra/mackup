@@ -333,7 +333,9 @@ class Config(object):
     def make_config_file():
         storage_type = choose("What method would you like to use to backup "
                               "your configuration files?",
-                              ["dropbox", "google_drive", "file_system"])[0]
+                              (ENGINE_DROPBOX, ENGINE_FS,
+                               ENGINE_GDRIVE, ENGINE_COPY,
+                               ENGINE_ICLOUD, ENGINE_BOX))[0]
         path = ""
         if storage_type == "file_system":
             path = raw_input("Please enter the path where Mackup will save "
@@ -348,50 +350,57 @@ class Config(object):
         whitelist = ""
         if not confirm("Would you like to sync all applications or "
                               "specify from a list of supported software?"):
-            whitelist = choose("Choose any of the follwing "
+            whitelist = choose("Choose any of the following "
             "deliminated by a space): ",
             appsdb.ApplicationsDatabase().get_pretty_app_names(), True)
 
         blacklist = ""
         if confirm("Would you like to specify any applications you would "
                         "NOT like to sync?"):
-            blacklist = choose("Choose any of the follwing "
+            blacklist = choose("Choose any of the following "
             "deliminated by a space): ",
             appsdb.ApplicationsDatabase().get_pretty_app_names(), True)
 
         custom_apps = {} # {app_name: [config files]}
         if confirm("Now, would you like to add any applications not "
                          "currently supported by Mackup?"):
-            print "Enter nothing to indicate your done"
+            print "Enter nothing to indicate you are done"
             while True:
                 name = raw_input("Application name: ")
                 if not name:
                     break
-                config_files = raw_input("Please enter the names of all the "
-                "configuration files, delemenated by a space").split()
+                print("Please enter a full path name for each configuration "
+                      "file, one per line. Enter nothing to indicate you are "
+                      "done")
+                config_files = []
+                while True:
+                    path = raw_input("> ")
+                    if not path:
+                        break
+                    config_files.append(path)
                 custom_apps.update({name: config_files})
-        with open(os.path.join(os.path.expanduser("~"),
-                   MACKUP_CONFIG_FILE), "w") as config_file:
-            config_file.write("[storage]\n")
-            config_file.write("engine = {}\npath = {}\n".format(
-                                                      storage_type, path))
-            config_file.write("directory = {}\n".format(directory))
-            if whitelist:
-                config_file.write("[applications_to_sync]\n")
-                config_file.write("\n".join(whitelist))
-            if blacklist:
-                config_file.write("[applications_to_ignore]\n")
-                config_file.write("\n".join(blacklist))
+        # Write to the config file now
+        make_config_file(storage_type, path, directory, whitelist, blacklist)
+        # Write the additional custom apps
         if custom_apps:
+            config.read(config_path)
+            for name, config_files in custom_apps.iteritems():
+                config.add_section('application')
+                config.
+
             os.makedirs(os.path.join(os.path.expanduser("~"), CUSTOM_APPS_DIR))
             for name, config_files in custom_apps.iteritems():
-                with open(os.path.join(os.path.expanduser("~"),
-                CUSTOM_APPS_DIR, "-".join(app.name.split())), "w") as (
-                custom_app_file):
-                    custom_app_file.write("[application]\n")
-                    custom_app_file.write("name = {}\n".format(name))
-                    custom_app_file.write("[configuration_files]")
-                    custom_app_file.write("\n".join(config_files))
+                config = configparser.ConfigParser()
+                file_name = os.path.join(os.path.expanduser("~"),
+                        CUSTOM_APPS_DIR, "-".join(app.name.split()))
+                config.read(file_name)
+
+                config.add_section('configuration_files')
+                config.set('configuration_files', "\n".join(config_files), "")
+                config.add_section('application')
+                config.set('application', 'name', name)
+                with open(file_name, "w") as custom_app_file:
+                    config.write(custom_app_file)
 
 class ConfigError(Exception):
 

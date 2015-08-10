@@ -13,6 +13,7 @@ Usage:
 
 Options:
   -h --help     Show this screen.
+  -f --force    Force every question asked to be answered with "Yes"
   --version     Show version.
 
 Modes of action:

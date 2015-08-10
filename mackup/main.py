@@ -5,9 +5,9 @@ Copyright (C) 2013-2015 Laurent Raufaste <http://glop.org/>
 
 Usage:
   mackup list
-  mackup backup
-  mackup restore
-  mackup uninstall
+  mackup [ -f | --force ] backup
+  mackup [ -f | --force ] restore
+  mackup [ -f | --force ] uninstall
   mackup (-h | --help)
   mackup --version
 
@@ -49,7 +49,7 @@ def main():
     app_db = ApplicationsDatabase()
 
     # If we want to answer mackup with "yes" for each question
-    if args['force']:
+    if args['--force']:
         utils.FORCE_YES = True
 
     if args['backup']:

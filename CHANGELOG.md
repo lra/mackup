@@ -6,6 +6,7 @@
 - Added support for Photoshop CC (via @ponychicken)
 - Removed problematic Lightroom support
 - Improved support for ssh, excluding the credential keys (via @nkcfan)
+- Added an option to not have to confirm every action (via @Timidger)
 
 ## Mackup 0.8.7
 

@@ -47,9 +47,10 @@ def make_config_file(storage_type=ENGINE_DROPBOX, path="",
         blacklist = []
     # Make sure the storage_type is correct
     assert storage_type in (ENGINE_DROPBOX, ENGINE_FS,
-                            ENGINE_GDRIVE)
+                            ENGINE_GDRIVE, ENGINE_COPY,
+                            ENGINE_ICLOUD, ENGINE_BOX)
     # If the path is specified, make sure it exists
-    if path:
+    if storage_type == ENGINE_FS and path:
         assert os.path.exists(path), (
             "The path {} does not exist!".format(path))
     # Write the configuration file in the home directory

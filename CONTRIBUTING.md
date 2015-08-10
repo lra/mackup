@@ -1,6 +1,12 @@
 # How to contribute
 
+You can:
+
+- Add or improve the support of an application (Check the [TODO](https://github.com/lra/mackup/labels/TODO) tasks and pick one)
+- Improve the Mackup codebase
+
 To speed up Pull Request (PR) approval and merger into Mackup, please follow these guidelines:
+
 - Keep one application supported per PR
 - Add the application to the list of supported applications in README.md
 - Add your change to the WIP section of CHANGELOG.md

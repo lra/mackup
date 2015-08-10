@@ -2,7 +2,7 @@
 
 You can:
 
-- Add or improve the support of an application (Check the [TODO](https://github.com/lra/mackup/labels/TODO) tasks and pick one)
+- Add or improve the support of an application (Check the [TODO](https://github.com/lra/mackup/labels/TODO) and [TOFIX](https://github.com/lra/mackup/labels/TOFIX) tasks and pick one)
 - Improve the Mackup codebase
 
 To speed up Pull Request (PR) approval and merger into Mackup, please follow these guidelines:

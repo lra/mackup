@@ -464,7 +464,8 @@ def get_storage_config():
     storage_type = choose_one("What method would you like to use to backup "
                               "your configuration files?",
                               [constants.ENGINE_DROPBOX, constants.ENGINE_FS,
-                               constants.ENGINE_GDRIVE],
+                               constants.ENGINE_GDRIVE, constants.ENGINE_BOX,
+                               constants.ENGINE_COPY, constants.ENGINE_ICLOUD],
                               constants.ENGINE_DROPBOX)
     path = None
     if storage_type == "file_system":

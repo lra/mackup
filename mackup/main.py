@@ -8,6 +8,7 @@ Usage:
   mackup backup
   mackup restore
   mackup uninstall
+  mackup configure
   mackup (-h | --help)
   mackup --version
 
@@ -24,6 +25,8 @@ Modes of action:
  3. restore: link the conf files already in your synced storage on your system,
     use it on any new system you use.
  4. uninstall: reset everything as it was before using Mackup.
+ 5. configure: Configure what apps Mackup should backup, recommended for
+    first-time users.
 
 By default, Mackup syncs all application data (including private keys!) via
 Dropbox, but may be configured to exclude applications or use a different
@@ -130,6 +133,15 @@ def main():
         output += ("{} applications supported in Mackup v{}"
                    .format(len(app_db.get_app_names()), VERSION))
         print(output)
+
+    elif args['configure']:
+        # Get the storage-type, path, and directory information
+        storage_type, path, directory = utils.get_storage_config()
+        # Get the list of apps to whitelist and the list of apps to blacklist
+        whitelist, blacklist = utils.get_whitelist_and_blacklist_config()
+        # Make the config file
+        utils.make_config_file(storage_type, path, directory, whitelist,
+                               blacklist)
 
     # Delete the tmp folder
     mckp.clean_temp_folder()

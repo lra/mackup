@@ -5,9 +5,9 @@ Copyright (C) 2013-2015 Laurent Raufaste <http://glop.org/>
 
 Usage:
   mackup list
-  mackup [ -f | --force ] backup
-  mackup [ -f | --force ] restore
-  mackup [ -f | --force ] uninstall
+  mackup backup [ -f | --force ]
+  mackup restore [ -f | --force ]
+  mackup uninstall [ -f | --force ] 
   mackup (-h | --help)
   mackup --version
 

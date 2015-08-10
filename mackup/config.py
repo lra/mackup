@@ -384,11 +384,8 @@ class Config(object):
         # Write the additional custom apps
         if custom_apps:
             config.read(config_path)
-            for name, config_files in custom_apps.iteritems():
-                config.add_section('application')
-                config.
-
             os.makedirs(os.path.join(os.path.expanduser("~"), CUSTOM_APPS_DIR))
+
             for name, config_files in custom_apps.iteritems():
                 config = configparser.ConfigParser()
                 file_name = os.path.join(os.path.expanduser("~"),

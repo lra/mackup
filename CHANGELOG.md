@@ -7,6 +7,7 @@
 - Removed problematic Lightroom support
 - Improved support for ssh, excluding the credential keys (via @nkcfan)
 - Added an option to not have to confirm every action (via @Timidger)
+- Fixed TextMate syncing
 
 ## Mackup 0.8.7
 

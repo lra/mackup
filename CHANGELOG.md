@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for SecureCRT (via @micate)
+
 ## Mackup 0.8.9
 
 - Fixed the 'force' option (via @hiyer)

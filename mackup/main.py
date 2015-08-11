@@ -5,15 +5,17 @@ Copyright (C) 2013-2015 Laurent Raufaste <http://glop.org/>
 
 Usage:
   mackup list
-  mackup backup [ -f | --force ]
-  mackup restore [ -f | --force ]
-  mackup uninstall [ -f | --force ] 
+  mackup backup [ -f | --force ] [ -d | --dry-run] [ -v | --verbose]
+  mackup restore [ -f | --force ] [ -d | --dry-run] [ -v | --verbose]
+  mackup uninstall [ -f | --force ] [ -d | --dry-run] [ -v | --verbose]
   mackup (-h | --help)
   mackup --version
 
 Options:
   -h --help     Show this screen.
-  -f --force    Force every question asked to be answered with "Yes"
+  -f --force    Force every question asked to be answered with "Yes".
+  -d --dry-run  Show steps without executing.
+  -v --verbose  Show additional details.
   --version     Show version.
 
 Modes of action:
@@ -58,26 +60,25 @@ def main():
     mckp = Mackup()
     app_db = ApplicationsDatabase()
 
-    def foreachApp(apps, f):
-        for app_name in apps:
-            if args.verbose: print(("{0} {1} {0}").format(header("---"), bold(app_name)))
-            f(app_name)
-            if args.verbose: print
+    def printAppHeader(app_name):
+        if verbose: print(("\n{0} {1} {0}").format(header("---"), bold(app_name)))
 
     # If we want to answer mackup with "yes" for each question
     if args['--force']:
         utils.FORCE_YES = True
 
+    dry_run = args['--dry-run']
+
+    verbose = args['--verbose']
+
     if args['backup']:
         # Check the env where the command is being run
         mckp.check_for_usable_backup_env()
 
-        def backupApplication(app_name):
-            ApplicationProfile(mckp, app_db.get_files(app_name), args.dry_run, args.verbose).backup()
-
         # Backup each application
         for app_name in mckp.get_apps_to_backup():
-            app = ApplicationProfile(mckp, app_db.get_files(app_name))
+            app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
+            printAppHeader(app_name)
             app.backup()
 
     elif args['restore']:
@@ -87,7 +88,10 @@ def main():
         # Restore the Mackup config before any other config, as we might need
         # it to know about custom settings
         mackup_app = ApplicationProfile(mckp,
-                                        app_db.get_files(MACKUP_APP_NAME))
+                                        app_db.get_files(MACKUP_APP_NAME),
+                                        dry_run,
+                                        verbose)
+        printAppHeader(MACKUP_APP_NAME)
         mackup_app.restore()
 
         # Initialize again the apps db, as the Mackup config might have changed
@@ -101,43 +105,38 @@ def main():
         app_names.discard(MACKUP_APP_NAME)
 
         for app_name in app_names:
-            app = ApplicationProfile(mckp, app_db.get_files(app_name))
+            app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
+            printAppHeader(app_name)
             app.restore()
 
-		def restoreApplication(app_name):
-          ApplicationProfile(mckp, app_db.get_files(app_name), args.dry_run, args.verbose).restore()
-
-        foreachApp(mckp.get_apps_to_backup(), restoreApplication)
-
-    elif args.mode == UNINSTALL_MODE:
+    elif args['uninstall']:
         # Check the env where the command is being run
         mckp.check_for_usable_restore_env()
 
-        if args.dry_run or \
+        if dry_run or (
            utils.confirm("You are going to uninstall Mackup.\n"
                          "Every configuration file, setting and dotfile"
                          " managed by Mackup will be unlinked and moved back"
                          " to their original place, in your home folder.\n"
-                         "Are you sure ?"):
+                         "Are you sure ?")):
 
             # Uninstall the apps except Mackup, which we'll uninstall last, to
             # keep the settings as long as possible
             app_names = mckp.get_apps_to_backup()
             app_names.discard(MACKUP_APP_NAME)
+
             for app_name in mckp.get_apps_to_backup():
-                app = ApplicationProfile(mckp, app_db.get_files(app_name))
+                app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
+                printAppHeader(app_name)
                 app.uninstall()
 
             # Restore the Mackup config before any other config, as we might
             # need it to know about custom settings
             mackup_app = ApplicationProfile(mckp,
-                                            app_db.get_files(MACKUP_APP_NAME))
+                                            app_db.get_files(MACKUP_APP_NAME),
+                                            dry_run,
+                                            verbose)
             mackup_app.uninstall()
-
-			def uninstallApp(app_name):
-                ApplicationProfile(mckp, app_db.get_files(app_name), args.dry_run, args.verbose).uninstall()
-            
-            foreachApp(mckp.get_apps_to_backup(), uninstallApp)
 
             # Delete the Mackup folder in Dropbox
             # Don't delete this as there might be other Macs that aren't

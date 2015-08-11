@@ -12,6 +12,8 @@ from . import utils
 
 class ApplicationProfile(object):
 
+    """Instantiate this class with application specific data."""
+
     def __init__(self, mackup, files, dry_run, verbose):
         """
         Create an ApplicationProfile instance.
@@ -27,7 +29,6 @@ class ApplicationProfile(object):
         self.files = list(files)
         self.dry_run = dry_run
         self.verbose = verbose
-
 
     def getFilepaths(self, filename):
         """
@@ -70,9 +71,11 @@ class ApplicationProfile(object):
                               or os.path.isdir(mackup_filepath))
                          and os.path.samefile(home_filepath, mackup_filepath))):
 
-                print("Backing up {} ...".format("" if self.verbose else filename))
                 if self.verbose:
-                    print("  {}\n  to\n  {}".format(home_filepath, mackup_filepath))
+                    print("Backing up\n  {}\n  to\n  {} ..."
+                        .format(home_filepath, mackup_filepath))
+                else:
+                    print("Backing up {} ...".format(filename))
 
                 if self.dry_run:
                     continue
@@ -112,10 +115,12 @@ class ApplicationProfile(object):
                     # Link the backuped file to its original place
                     utils.link(mackup_filepath, home_filepath)
             elif self.verbose:
-              print("Doing nothing\n  {}\n  {}".format(
-                  home_filepath, 
-                  "is already backed up to\n  " + mackup_filepath
-                      if os.path.exists(home_filepath) else "does not exist"))
+                if os.path.exists(home_filepath):
+                    print("Doing nothing\n  {}\n  is already backed up to\n  {}"
+                        .format(home_filepath, mackup_filepath))
+                else:
+                    print("Doing nothing\n  {}\n  does not exist"
+                        .format(home_filepath))
 
     def restore(self):
         """
@@ -146,9 +151,11 @@ class ApplicationProfile(object):
             supported = utils.can_file_be_synced_on_current_platform(filename)
 
             if file_or_dir_exists and not pointing_to_mackup and supported:
-                print("Restoring {} ...".format("" if self.verbose else filename))
                 if self.verbose:
-                    print("  linking {}\n  to      {}".format(home_filepath, mackup_filepath))
+                    print("Restoring\n  linking {}\n  to      {} ..."
+                        .format(home_filepath, mackup_filepath))
+                else:
+                    print("Restoring {} ...".format(filename))
 
                 if self.dry_run:
                     continue
@@ -175,10 +182,12 @@ class ApplicationProfile(object):
                 else:
                     utils.link(mackup_filepath, home_filepath)
             elif self.verbose:
-                print("Doing nothing\n  {}\n  {}".format(
-                    mackup_filepath,
-                    "already linked by\n  " + home_filepath
-                        if os.path.exists(home_filepath) else "does not exist"))
+                if os.path.exists(home_filepath):
+                    print("Doing nothing\n  {}\n  already linked by\n  {}"
+                        .format(mackup_filepath, home_filepath))
+                else:
+                    print("Doing nothing\n  {}\n  does not exist"
+                        .format(mackup_filepath))
 
     def uninstall(self):
         """
@@ -204,9 +213,11 @@ class ApplicationProfile(object):
                     or os.path.isdir(mackup_filepath)):
                 # Check if there is a corresponding file in the home folder
                 if os.path.exists(home_filepath):
-                    print("Reverting {} ...".format(mackup_filepath if self.verbose else filename))
                     if self.verbose:
-                        print("  at {}".format(home_filepath))
+                        print("Reverting {}\n  at {} ..."
+                            .format(mackup_filepath, home_filepath))
+                    else:
+                        print("Reverting {} ...".format(filename))
 
                     if self.dry_run:
                         continue

@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for SecureCRT (via @micate)
+- Added dry-run and verbose options (via @yastero)
 
 ## Mackup 0.8.9
 

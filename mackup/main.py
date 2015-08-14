@@ -5,16 +5,16 @@ Copyright (C) 2013-2015 Laurent Raufaste <http://glop.org/>
 
 Usage:
   mackup list
-  mackup backup [ -f | --force ] [ -d | --dry-run] [ -v | --verbose]
-  mackup restore [ -f | --force ] [ -d | --dry-run] [ -v | --verbose]
-  mackup uninstall [ -f | --force ] [ -d | --dry-run] [ -v | --verbose]
+  mackup [options] backup
+  mackup [options] restore
+  mackup [options] uninstall
   mackup (-h | --help)
   mackup --version
 
 Options:
   -h --help     Show this screen.
   -f --force    Force every question asked to be answered with "Yes".
-  -d --dry-run  Show steps without executing.
+  -n --dry-run  Show steps without executing.
   -v --verbose  Show additional details.
   --version     Show version.
 

@@ -41,16 +41,20 @@ from .constants import MACKUP_APP_NAME, VERSION
 from .mackup import Mackup
 from . import utils
 
+
 class ColorFormatCodes:
-    BLUE   = '\033[34m'
-    BOLD   = '\033[1m'
+    BLUE = '\033[34m'
+    BOLD = '\033[1m'
     NORMAL = '\033[0m'
+
 
 def header(str):
     return ColorFormatCodes.BLUE + str + ColorFormatCodes.NORMAL
 
+
 def bold(str):
     return ColorFormatCodes.BOLD + str + ColorFormatCodes.NORMAL
+
 
 def main():
     """Main function."""
@@ -61,7 +65,8 @@ def main():
     app_db = ApplicationsDatabase()
 
     def printAppHeader(app_name):
-        if verbose: print(("\n{0} {1} {0}").format(header("---"), bold(app_name)))
+        if verbose:
+            print(("\n{0} {1} {0}").format(header("---"), bold(app_name)))
 
     # If we want to answer mackup with "yes" for each question
     if args['--force']:
@@ -77,7 +82,10 @@ def main():
 
         # Backup each application
         for app_name in mckp.get_apps_to_backup():
-            app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
+            app = ApplicationProfile(mckp,
+                                     app_db.get_files(app_name),
+                                     dry_run,
+                                     verbose)
             printAppHeader(app_name)
             app.backup()
 
@@ -105,7 +113,10 @@ def main():
         app_names.discard(MACKUP_APP_NAME)
 
         for app_name in app_names:
-            app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
+            app = ApplicationProfile(mckp,
+                                     app_db.get_files(app_name),
+                                     dry_run,
+                                     verbose)
             printAppHeader(app_name)
             app.restore()
 
@@ -126,7 +137,10 @@ def main():
             app_names.discard(MACKUP_APP_NAME)
 
             for app_name in mckp.get_apps_to_backup():
-                app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
+                app = ApplicationProfile(mckp,
+                                         app_db.get_files(app_name),
+                                         dry_run,
+                                         verbose)
                 printAppHeader(app_name)
                 app.uninstall()
 

@@ -219,8 +219,10 @@ def get_google_drive_folder_location():
         (unicode) Full path to the current Google Drive folder
     """
     gdrive_db_path = 'Library/Application Support/Google/Drive/sync_config.db'
-    yosemite_gdrive_db_path = 'Library/Application Support/Google/Drive/user_default/sync_config.db'
-    yosemite_gdrive_db = os.path.join(os.environ['HOME'], yosemite_gdrive_db_path)
+    yosemite_gdrive_db_path = ('Library/Application Support/Google/Drive/'
+                               'user_default/sync_config.db')
+    yosemite_gdrive_db = os.path.join(os.environ['HOME'],
+                                      yosemite_gdrive_db_path)
     if os.path.isfile(yosemite_gdrive_db):
         gdrive_db_path = yosemite_gdrive_db
 
@@ -244,6 +246,7 @@ def get_google_drive_folder_location():
 
     return googledrive_home
 
+
 def get_box_folder_location():
     """
     Try to locate the Box folder.
@@ -251,7 +254,8 @@ def get_box_folder_location():
     Returns:
         (str) Full path to the current Box folder
     """
-    box_prefs_path = 'Library/Application Support/Box/Box Sync/sync_root_folder.txt'
+    box_prefs_path = ('Library/Application Support/Box/Box Sync/'
+                      'sync_root_folder.txt')
     box_home = None
 
     box_prefs = os.path.join(os.environ['HOME'], box_prefs_path)
@@ -263,6 +267,7 @@ def get_box_folder_location():
         error("Unable to find your Box prefs =(")
 
     return box_home
+
 
 def get_copy_folder_location():
     """

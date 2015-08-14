@@ -69,11 +69,12 @@ class ApplicationProfile(object):
                 and not (os.path.islink(home_filepath)
                          and (os.path.isfile(mackup_filepath)
                               or os.path.isdir(mackup_filepath))
-                         and os.path.samefile(home_filepath, mackup_filepath))):
+                         and os.path.samefile(home_filepath,
+                                              mackup_filepath))):
 
                 if self.verbose:
                     print("Backing up\n  {}\n  to\n  {} ..."
-                        .format(home_filepath, mackup_filepath))
+                          .format(home_filepath, mackup_filepath))
                 else:
                     print("Backing up {} ...".format(filename))
 
@@ -116,11 +117,12 @@ class ApplicationProfile(object):
                     utils.link(mackup_filepath, home_filepath)
             elif self.verbose:
                 if os.path.exists(home_filepath):
-                    print("Doing nothing\n  {}\n  is already backed up to\n  {}"
-                        .format(home_filepath, mackup_filepath))
+                    print("Doing nothing\n  {}\n  "
+                          "is already backed up to\n  {}"
+                          .format(home_filepath, mackup_filepath))
                 else:
                     print("Doing nothing\n  {}\n  does not exist"
-                        .format(home_filepath))
+                          .format(home_filepath))
 
     def restore(self):
         """
@@ -153,7 +155,7 @@ class ApplicationProfile(object):
             if file_or_dir_exists and not pointing_to_mackup and supported:
                 if self.verbose:
                     print("Restoring\n  linking {}\n  to      {} ..."
-                        .format(home_filepath, mackup_filepath))
+                          .format(home_filepath, mackup_filepath))
                 else:
                     print("Restoring {} ...".format(filename))
 
@@ -184,10 +186,10 @@ class ApplicationProfile(object):
             elif self.verbose:
                 if os.path.exists(home_filepath):
                     print("Doing nothing\n  {}\n  already linked by\n  {}"
-                        .format(mackup_filepath, home_filepath))
+                          .format(mackup_filepath, home_filepath))
                 else:
                     print("Doing nothing\n  {}\n  does not exist"
-                        .format(mackup_filepath))
+                          .format(mackup_filepath))
 
     def uninstall(self):
         """
@@ -215,7 +217,7 @@ class ApplicationProfile(object):
                 if os.path.exists(home_filepath):
                     if self.verbose:
                         print("Reverting {}\n  at {} ..."
-                            .format(mackup_filepath, home_filepath))
+                              .format(mackup_filepath, home_filepath))
                     else:
                         print("Reverting {} ...".format(filename))
 
@@ -229,4 +231,5 @@ class ApplicationProfile(object):
                     # Copy the Dropbox file to the home folder
                     utils.copy(mackup_filepath, home_filepath)
             elif self.verbose:
-                print("Doing nothing, {} does not exist".format(mackup_filepath))
+                print("Doing nothing, {} does not exist"
+                      .format(mackup_filepath))

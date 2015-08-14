@@ -1,4 +1,10 @@
+dependencies:
+  pre:
+    - pip install flake8
+
 test:
+  pre:
+    - flake8
   override:
     - nosetests --with-coverage --cover-package=mackup
   post:

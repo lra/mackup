@@ -53,6 +53,18 @@ class ApplicationsDatabase(object):
                                              .format(path))
                         self.apps[app_name]['configuration_files'].add(path)
 
+                xdg_config_home = os.environ.get('XDG_CONFIG_HOME', False)
+                if xdg_config_home:
+                    # Add the XDG configuration files to sync
+                    if config.has_section('xdg_configuration_files'):
+                        for path in config.options('xdg_configuration_files'):
+                            if path.startswith('/'):
+                                raise ValueError('Unsupported absolute path: {}'
+                                                 .format(path))
+                            path = os.path.join(xdg_config_home, path)
+                            path = path.replace(os.path.expanduser('~/'), '')
+                            self.apps[app_name]['configuration_files'].add(path)
+
     @staticmethod
     def get_config_files():
         """

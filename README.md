@@ -365,6 +365,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [Tmux](http://tmux.sourceforge.net/)
   - [Tmuxinator](https://github.com/aziz/tmuxinator)
   - [Todo.txt CLI](http://todotxt.com/)
+  - [TotalSpaces2](http://totalspaces.binaryage.com/)
   - [Tower](http://www.git-tower.com/)
   - [Transmission](http://www.transmissionbt.com/)
   - [Transmit](http://panic.com/transmit/)

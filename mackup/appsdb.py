@@ -45,29 +45,35 @@ class ApplicationsDatabase(object):
                 self.apps[app_name]['name'] = app_pretty_name
 
                 # Add the configuration files to sync
-                config_section = 'configuration_files'
-                if config.has_section(config_section):
-                    self.apps[app_name][config_section] = set()
-                    for path in config.options(config_section):
+                self.apps[app_name]['configuration_files'] = set()
+                if config.has_section('configuration_files'):
+                    for path in config.options('configuration_files'):
                         if path.startswith('/'):
                             raise ValueError('Unsupported absolute path: {}'
                                              .format(path))
-                        self.apps[app_name][config_section].add(path)
+                        self.apps[app_name]['configuration_files'].add(path)
 
                 # Add the XDG configuration files to sync
-                xdg_config_section = 'xdg_configuration_files'
                 xdg_config_home = os.environ.get('XDG_CONFIG_HOME', False)
-                if config.has_section(xdg_config_section):
-                    self.apps[app_name][xdg_config_section] = set()
-                    if xdg_config_home:
-                        for path in config.options(xdg_config_section):
+                if xdg_config_home:
+                    if not os.path.exists(xdg_config_home):
+                        raise ValueError('$XDG_CONFIG_HOME: {} does not exist'
+                                         .format(xdg_config_home))
+                    home = os.path.expanduser('~/')
+                    if not xdg_config_home.startswith(home):
+                        raise ValueError(
+                            '$XDG_CONFIG_HOME: {0} must be somewhere '
+                            'within your home directory: {1}'
+                            .format(xdg_config_home, home))
+                    if config.has_section('xdg_configuration_files'):
+                        for path in config.options('xdg_configuration_files'):
                             if path.startswith('/'):
                                 raise ValueError(
                                     'Unsupported absolute path: {}'
                                     .format(path))
                             path = os.path.join(xdg_config_home, path)
-                            path = path.replace(os.path.expanduser('~/'), '')
-                            self.apps[app_name][config_section].add(path)
+                            path = path.replace(home, '')
+                            self.apps[app_name]['configuration_files'].add(path)
 
     @staticmethod
     def get_config_files():

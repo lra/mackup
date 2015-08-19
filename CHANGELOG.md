@@ -5,6 +5,7 @@
 - Added support for SecureCRT (via @micate)
 - Added dry-run and verbose options (via @yastero)
 - Removed a git link which was overwritten by GitHub to a file
+- Added support for Mailmate (via @cdransf)
 
 ## Mackup 0.8.9
 

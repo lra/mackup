@@ -257,6 +257,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
   - [MacVim](https://code.google.com/p/macvim/)
   - [Magic Launch](https://www.oneperiodic.com/products/magiclaunch/)
   - [MagicPrefs](http://magicprefs.com/)
+  - [Mailmate](http://freron.com/)
   - [Mailplane](http://mailplaneapp.com/)
   - [MATLAB](http://www.mathworks.com/products/matlab/)
   - [Maven](http://maven.apache.org)

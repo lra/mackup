@@ -6,7 +6,7 @@ root of your home folder.
 To configure mackup, create a file named ´.mackup.cfg´ in your home directory.
 
 ```bash
-$ vi ~/.mackup.cfg
+vi ~/.mackup.cfg
 ```
 
 ## Storage

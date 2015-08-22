@@ -12,6 +12,7 @@ that's super easy.
 
 On OS X, if you want an easy install, you can install
 [Homebrew](http://brew.sh/) and do:
+
 ```bash
 # Install Mackup
 brew install mackup
@@ -21,6 +22,7 @@ mackup backup
 ```
 
 If not running OS X, or you don't like Homebrew, you can use PIP:
+
 ```bash
 # Install Mackup with PIP
 pip install mackup
@@ -32,6 +34,7 @@ mackup backup
 You're all set, and constantly backuped from now on.
 
 Next, on any new workstation, do:
+
 ```bash
 # Install Mackup
 brew install mackup
@@ -66,7 +69,7 @@ Display the list of applications supported by Mackup.
 
 Get some help, obvious...
 
-## What does it do ?
+## What does it do
 
 - Backups your application settings in a safe directory (e.g. Dropbox)
 - Syncs your application settings among all your workstations
@@ -79,7 +82,7 @@ files are transfered).
 It also helps you spend more time doing real cool stuff, and less time setting
 up your environment.
 
-## Bullsh*t, what does it really do to my files ?!
+## Bullsh*t, what does it really do to my files
 
 Let's take `git` as an example. Your settings for `git` are saved in your home
 folder, in the `.gitconfig` file.
@@ -108,10 +111,12 @@ That's it, you got your `git` config setup on your new workstation.
 ### Uninstall
 
 You can revert all your files to their original state.
+
 ```bash
 # Just run this
 mackup uninstall
 ```
+
 This will move back any file from Dropbox to its original place in your home
 folder and destroy the Mackup folder in Dropbox.
 
@@ -394,11 +399,11 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Zsh](http://zsh.sourceforge.net/)
 - iTunes Applescripts
 
-## Can you support application X?
+## Can you support application X
 
-We can [with your help](https://github.com/lra/mackup/tree/master/doc#get-official-support-for-an-application) ;)
+We can [with your help](doc#get-official-support-for-an-application) ;)
 
-## Why did you do this ?!
+## Why did you do this
 
 Yesterday, I had a talk with [Zach Zaro](http://zacharyzaro.com/), complaining
 about the pain it is to reconfigure our Macbook each time we get a new one or
@@ -426,15 +431,15 @@ configs to Dropbox (or Google Drive, or anything).
 
 And it's [GPL](http://www.gnu.org/licenses/gpl.html) of course.
 
-## What platform is supported ?
+## What platform is supported
 
 - OS X
 - GNU/Linux
 
-## What's up with the weird name ?
+## What's up with the weird name
 
 Mackup is just a contraction of Mac and Backup, I suck at naming stuff, ok.
 
-## Where can I find more information ?
+## Where can I find more information
 
 In the [doc](doc) directory.

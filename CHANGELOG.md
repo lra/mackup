@@ -7,6 +7,7 @@
 - Removed a git link which was overwritten by GitHub to a file
 - Added support for Mailmate (via @cdransf)
 - Added support for Xcode plugins (via @bartoszj)
+- XDG support for app configs (via @mkwmms)
 
 ## Mackup 0.8.9
 

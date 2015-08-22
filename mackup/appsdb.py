@@ -74,7 +74,7 @@ class ApplicationsDatabase(object):
                             path = os.path.join(xdg_config_home, path)
                             path = path.replace(home, '')
                             self.apps[app_name]['configuration_files'] \
-                                    .add(path)
+                                .add(path)
 
     @staticmethod
     def get_config_files():

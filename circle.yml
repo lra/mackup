@@ -1,11 +1,10 @@
 dependencies:
   pre:
-    - pip install flake8
+    - pip install flake8 codecov
 
 test:
-  pre:
-    - flake8
   override:
+    - flake8
     - nosetests --with-coverage --cover-package=mackup
   post:
-    - coveralls
+    - codecov

@@ -1,6 +1,7 @@
 # Mackup Changelog
 
 ## WIP
+- Added support for TotalSpaces2 (via @nkgm)
 
 ## Mackup 0.8.11
 

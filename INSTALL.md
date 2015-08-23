@@ -43,7 +43,7 @@ unzip mackup.zip
 
 ## Upgrade
 
-### With Homebrew (OSX only)
+### Upgrade with Homebrew (OSX only)
 
 ```bash
 brew update
@@ -51,7 +51,7 @@ brew upgrade
 mackup -h
 ```
 
-### With Python's PIP
+### Upgrade with Python's PIP
 
 ```bash
 pip install --upgrade mackup
@@ -60,13 +60,13 @@ mackup -h
 
 ## Uninstall
 
-### With Homebrew (OSX only)
+### Uninstall with Homebrew (OSX only)
 
 ```bash
 brew uninstall mackup
 ```
 
-### With Python's PIP
+### Uninstall with Python's PIP
 
 ```bash
 pip uninstall mackup

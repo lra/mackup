@@ -1,11 +1,12 @@
 dependencies:
   pre:
-    - pip install flake8
+    - gem install mdl
 
 test:
-  pre:
-    - flake8
   override:
-    - nosetests --with-coverage --cover-package=mackup
+    - make test
+    - mdl:
+        files:
+          - "**/*.md"
   post:
-    - coveralls
+    - codecov

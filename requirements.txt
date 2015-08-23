@@ -1,4 +1,5 @@
 # Needed to run the tests
-# Run "pip install -r requirements.txt" then "nosetests"
-nose==1.3.4
-coveralls==0.5
+# Run "pip install -r requirements.txt" then "make test"
+nose
+flake8
+codecov

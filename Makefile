@@ -5,7 +5,8 @@ undevelop:
 	python setup.py develop --uninstall
 
 test:
-	nosetests
+	flake8 mackup
+	nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
 
 clean:
 	rm -rf dist/

@@ -6,7 +6,7 @@ undevelop:
 
 test:
 	flake8 mackup
-	nosetests --with-coverage --cover-package=mackup
+	nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
 
 clean:
 	rm -rf dist/

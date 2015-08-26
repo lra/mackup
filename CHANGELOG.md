@@ -2,6 +2,9 @@
 
 ## WIP
 
+- Don't fail if the file is not in the mackup home
+- Verbose mode state when a link is broken
+
 ## Mackup 0.8.11
 
 - Added support for Mailmate (via @cdransf)

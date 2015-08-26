@@ -120,6 +120,10 @@ class ApplicationProfile(object):
                     print("Doing nothing\n  {}\n  "
                           "is already backed up to\n  {}"
                           .format(home_filepath, mackup_filepath))
+                elif os.path.islink(home_filepath):
+                    print("Doing nothing\n  {}\n  "
+                          "is a broken link, you might want to fix it."
+                          .format(home_filepath))
                 else:
                     print("Doing nothing\n  {}\n  does not exist"
                           .format(home_filepath))
@@ -188,6 +192,10 @@ class ApplicationProfile(object):
                 if os.path.exists(home_filepath):
                     print("Doing nothing\n  {}\n  already linked by\n  {}"
                           .format(mackup_filepath, home_filepath))
+                elif os.path.islink(home_filepath):
+                    print("Doing nothing\n  {}\n  "
+                          "is a broken link, you might want to fix it."
+                          .format(home_filepath))
                 else:
                     print("Doing nothing\n  {}\n  does not exist"
                           .format(mackup_filepath))

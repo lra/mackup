@@ -148,6 +148,7 @@ class ApplicationProfile(object):
             file_or_dir_exists = (os.path.isfile(mackup_filepath)
                                   or os.path.isdir(mackup_filepath))
             pointing_to_mackup = (os.path.islink(home_filepath)
+                                  and os.path.exists(mackup_filepath)
                                   and os.path.samefile(mackup_filepath,
                                                        home_filepath))
             supported = utils.can_file_be_synced_on_current_platform(filename)

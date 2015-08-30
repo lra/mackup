@@ -3,6 +3,7 @@
 import os
 import os.path
 import sys
+from . import utils
 
 from .constants import (MACKUP_BACKUP_PATH,
                         MACKUP_CONFIG_FILE,
@@ -146,7 +147,7 @@ class Config(object):
             filename = MACKUP_CONFIG_FILE
 
         parser = configparser.SafeConfigParser(allow_no_value=True)
-        parser.read(os.path.join(os.path.join(os.environ['HOME'], filename)))
+        parser.read(os.path.join(utils.get_mackup_config_home(), filename))
 
         return parser
 

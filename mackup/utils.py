@@ -398,7 +398,6 @@ def can_file_be_synced_on_current_platform(path):
         (bool): True if given file can be synced
     """
     can_be_synced = True
-
     # If the given path is relative, prepend home
     fullpath = os.path.join(os.environ['HOME'], path)
 
@@ -412,3 +411,43 @@ def can_file_be_synced_on_current_platform(path):
             can_be_synced = False
 
     return can_be_synced
+
+
+def get_xdg_config_home():
+    """
+    Get and validate the $XDG_CONFIG_HOME path if set
+
+    Returns:
+        (string|False): $XDG_CONFIG_HOME (if set); else False
+    """
+    xdg_config_home = os.environ.get('XDG_CONFIG_HOME')
+    if xdg_config_home:
+        if not os.path.exists(xdg_config_home):
+            raise ValueError('$XDG_CONFIG_HOME: {} does not exist'
+                             .format(xdg_config_home))
+
+        home = os.path.expanduser('~/')
+        if not xdg_config_home.startswith(home):
+            raise ValueError('$XDG_CONFIG_HOME: {} must be '
+                             'somewhere within your home '
+                             'directory: {}'
+                             .format(xdg_config_home, home))
+
+        return xdg_config_home
+    else:
+        return False
+
+
+def get_mackup_config_home():
+    """
+    Get the full path to the mackup configuration home
+    (where .mackup & .mackup.cfg are stored)
+
+    Returns:
+        (string): $XDG_CONFIG_HOME (if set); else full path of user's home dir
+    """
+    xdg_config_home = get_xdg_config_home()
+    if xdg_config_home:
+        return xdg_config_home
+    else:
+        return os.path.expanduser('~/')

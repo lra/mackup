@@ -4,6 +4,7 @@
 
 - Don't fail if the file is not in the mackup home
 - Verbose mode state when a link is broken
+- Add support for MacDive (via @peschee)
 
 ## Mackup 0.8.11
 

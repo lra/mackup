@@ -5,6 +5,7 @@
 - Don't fail if the file is not in the mackup home
 - Verbose mode state when a link is broken
 - Add support for MacDive (via @peschee)
+- Added support of AppCode 3.2 (via @usami-k)
 
 ## Mackup 0.8.11
 

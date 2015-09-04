@@ -7,6 +7,7 @@
 - Add support for MacDive (via @peschee)
 - Added support of AppCode 3.2 (via @usami-k)
 - Improved support for BetterTouchTool, excluding Sparkle data (via @kfinlay)
+- Improved Ubersicht support, excluding Sparkle data (via @kfinlay)
 
 ## Mackup 0.8.11
 

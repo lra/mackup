@@ -8,6 +8,7 @@
 - Added support of AppCode 3.2 (via @usami-k)
 - Improved support for BetterTouchTool, excluding Sparkle data (via @kfinlay)
 - Improved Ubersicht support, excluding Sparkle data (via @kfinlay)
+- Add support for neovim (via @hiyer)
 
 ## Mackup 0.8.11
 

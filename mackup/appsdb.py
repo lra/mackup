@@ -13,7 +13,7 @@ except ImportError:
 
 
 from .constants import APPS_DIR
-from .constants import CUSTOM_APPS_DIR
+from .constants import (CUSTOM_APPS_DIR, XDG_CUSTOM_APPS_DIR)
 from . import utils
 
 
@@ -57,14 +57,13 @@ class ApplicationsDatabase(object):
                 # Add the XDG configuration files to sync
                 xdg_config_home = utils.get_xdg_config_home()
                 if xdg_config_home:
-                    home = os.path.expanduser('~/')
                     if config.has_section('xdg_configuration_files'):
                         for path in config.options('xdg_configuration_files'):
                             if path.startswith('/'):
                                 raise ValueError('Unsupported absolute path: '
                                                  '{}'.format(path))
                                 path = os.path.join(xdg_config_home, path)
-                            path = path.replace(home, '')
+                            path = path.replace(os.path.expanduser('~/'), '')
                             (self.apps[app_name]['configuration_files']
                                 .add(path))
 
@@ -86,8 +85,12 @@ class ApplicationsDatabase(object):
         # Configure the config parser
         apps_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)),
                                 APPS_DIR)
-        custom_apps_dir = os.path.join(utils.get_mackup_config_home(),
-                                       CUSTOM_APPS_DIR)
+        if os.environ.get('XDG_CONFIG_HOME'):
+            custom_apps_dir = os.path.join(utils.get_mackup_config_home(),
+                                           XDG_CUSTOM_APPS_DIR)
+        else:
+            custom_apps_dir = os.path.join(utils.get_mackup_config_home(),
+                                           CUSTOM_APPS_DIR)
 
         # List of stock application config files
         config_files = set()

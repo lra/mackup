@@ -418,7 +418,7 @@ def get_xdg_config_home():
     Get and validate the $XDG_CONFIG_HOME path if set
 
     Returns:
-        (string|False): $XDG_CONFIG_HOME (if set); else False
+        (string|None): $XDG_CONFIG_HOME (if set); else None
     """
     xdg_config_home = os.environ.get('XDG_CONFIG_HOME')
     if xdg_config_home:
@@ -433,9 +433,7 @@ def get_xdg_config_home():
                              'directory: {}'
                              .format(xdg_config_home, home))
 
-        return xdg_config_home
-    else:
-        return False
+    return xdg_config_home
 
 
 def get_mackup_config_home():
@@ -448,6 +446,8 @@ def get_mackup_config_home():
     """
     xdg_config_home = get_xdg_config_home()
     if xdg_config_home:
-        return xdg_config_home
+        mackup_config_home = xdg_config_home
     else:
-        return os.path.expanduser('~/')
+        mackup_config_home = os.path.expanduser('~/')
+
+    return mackup_config_home

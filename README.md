@@ -281,6 +281,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Nano](http://www.nano-editor.org/)
 - [Navicat](http://navicat.com/)
 - [ncmpcpp](http://ncmpcpp.rybczak.net)
+- [neovim](https://github.com/neovim/neovim)
 - [newsbeuter](http://newsbeuter.org/)
 - [ngrok](https://ngrok.com/)
 - [Nomacs](http://nomacs.org/)

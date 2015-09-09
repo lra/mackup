@@ -213,8 +213,9 @@ You can add and test an application by following these steps:
 - fork this project
 - create a branch _(usually containing the name of the application)_
 - add the appropriate application config file in the `mackup/applications` folder
-- from the top-most folder _(mackup)_ run `make develop` that replaces the currently installed mackup with the local modified one
+- from the top-most folder _(mackup)_ run `make develop` that replaces the
+  currently installed mackup with the local modified one
 - simply run `mackup backup` to test if everything is ok
 - if everything works as expected:
-	- run `make undevelop` to revert to the official version
-	- commit and push the change to your fork and then create the Pulls Request
+    - run `make undevelop` to revert to the official version
+    - commit and push the change to your fork and then create the Pulls Request

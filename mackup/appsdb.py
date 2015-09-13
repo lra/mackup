@@ -62,7 +62,7 @@ class ApplicationsDatabase(object):
                             if path.startswith('/'):
                                 raise ValueError('Unsupported absolute path: '
                                                  '{}'.format(path))
-                                path = os.path.join(xdg_config_home, path)
+                            path = os.path.join(xdg_config_home, path)
                             path = path.replace(os.path.expanduser('~/'), '')
                             (self.apps[app_name]['configuration_files']
                                 .add(path))

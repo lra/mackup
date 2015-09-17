@@ -293,6 +293,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [OmniFocus](http://www.omnigroup.com/products/omnifocus/)
 - [OmniGraffle](http://www.omnigroup.com/omnigraffle/)
 - [OpenSSH](http://www.openssh.org/) (NOTE: includes private keys)
+- [Pandoc](http://pandoc.org)
 - [Pass](http://www.passwordstore.org/)
 - [Pastebot](http://tapbots.com/software/pastebot/)
 - [Path Finder](http://www.cocoatech.com/pathfinder/)

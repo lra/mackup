@@ -12,6 +12,7 @@
 - Add support for Pandoc
 - Add support for PhpStorm 9.5 (via @mnapoli)
 - Improved support for Composer, backup ./composer/composer.json (via @mnapoli)
+- Add support for liquidprompt (via @GochoMugo)
 
 ## Mackup 0.8.11
 

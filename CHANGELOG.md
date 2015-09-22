@@ -10,6 +10,7 @@
 - Improved Ubersicht support, excluding Sparkle data (via @kfinlay)
 - Add support for neovim (via @hiyer)
 - Add support for Pandoc
+- Improved support for Composer, backup ./composer/composer.json (via @mnapoli)
 
 ## Mackup 0.8.11
 

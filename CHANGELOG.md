@@ -11,6 +11,7 @@
 - Add support for neovim (via @hiyer)
 - Add support for Pandoc
 - Add support for PhpStorm 9.5 (via @mnapoli)
+- Improved support for Composer, backup ./composer/composer.json (via @mnapoli)
 
 ## Mackup 0.8.11
 

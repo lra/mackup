@@ -1,9 +1,0 @@
-language: python
-python:
-    - 2.7
-install:
-    - pip install coveralls
-script:
-    - nosetests --with-coverage --cover-package=mackup
-after_success:
-    - coveralls

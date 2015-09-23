@@ -1,18 +1,6 @@
-"""Constants used in Mackup"""
+"""Constants used in Mackup."""
 # Current version
-VERSION = '0.7.4'
-
-# Mode used to list supported applications
-LIST_MODE = 'list'
-
-# Mode used to backup files to Dropbox
-BACKUP_MODE = 'backup'
-
-# Mode used to restore files from Dropbox
-RESTORE_MODE = 'restore'
-
-# Mode used to remove Mackup and reset and config file
-UNINSTALL_MODE = 'uninstall'
+VERSION = '0.8.11'
 
 # Support platforms
 PLATFORM_DARWIN = 'Darwin'
@@ -20,6 +8,9 @@ PLATFORM_LINUX = 'Linux'
 
 # Directory containing the application configs
 APPS_DIR = 'applications'
+
+# Mackup application name
+MACKUP_APP_NAME = 'mackup'
 
 # Default Mackup backup path where it stores its files in Dropbox
 MACKUP_BACKUP_PATH = 'Mackup'
@@ -33,4 +24,7 @@ CUSTOM_APPS_DIR = '.mackup'
 # Supported engines
 ENGINE_DROPBOX = 'dropbox'
 ENGINE_GDRIVE = 'google_drive'
+ENGINE_BOX = 'box'
+ENGINE_COPY = 'copy'
+ENGINE_ICLOUD = 'icloud'
 ENGINE_FS = 'file_system'

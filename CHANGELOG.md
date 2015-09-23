@@ -2,7 +2,196 @@
 
 ## WIP
 
+- Don't fail if the file is not in the mackup home
+- Verbose mode state when a link is broken
+- Add support for MacDive (via @peschee)
+- Added support of AppCode 3.2 (via @usami-k)
+- Improved support for BetterTouchTool, excluding Sparkle data (via @kfinlay)
+- Improved Ubersicht support, excluding Sparkle data (via @kfinlay)
+- Add support for neovim (via @hiyer)
+- Add support for Pandoc
+- Add support for PhpStorm 9.5 (via @mnapoli)
+- Improved support for Composer, backup ./composer/composer.json (via @mnapoli)
+
+## Mackup 0.8.11
+
+- Added support for Mailmate (via @cdransf)
+- Added support for Xcode plugins (via @bartoszj)
+- XDG support for app configs (via @mkwmms)
+
+## Mackup 0.8.10
+
+- Added support for SecureCRT (via @micate)
+- Added dry-run and verbose options (via @yastero)
+- Removed a git link which was overwritten by GitHub to a file
+
+## Mackup 0.8.9
+
+- Fixed the 'force' option (via @hiyer)
+
+## Mackup 0.8.8
+
+- Added support for syncing over Box (via @ninjabong)
+- Added support for Photoshop CC (via @ponychicken)
+- Removed problematic Lightroom support
+- Improved support for ssh, excluding the credential keys (via @nkcfan)
+- Added an option to not have to confirm every action (via @Timidger)
+- Fixed TextMate syncing
+
+## Mackup 0.8.7
+
+- Add in support for yosemite for google drive (via @seanfreiburg)
+- Added support for taskwarrior (via @ToostInc)
+- Added support for Gear Music Player (via @TCattd)
+- Added support for Dash 3 (via @Kapeli)
+- Added support for Yummy FTP (via @TCattd)
+- Added support for PHPStorm 9 (via @suyan)
+- Added support for ShiftIt (via @hexedpackets)
+- Added support for Android Studio 1.3 (via @usami-k)
+- Added support for Clipy (via @usami-k)
+- Added support for HyperSwitch (via @usami-k)
+- Added support for Xamarin Studio 5 (via @usami-k)
+- Added support for RStudio (via @kfinlay)
+- Added support for iCloud as a new storage (via @jlowin)
+- Allow the mackup home to be a subfolder (via @mkwmms)
+- Added support for version 8 of Microsoft Remote Desktop (via @tdm00)
+
+## Mackup 0.8.6
+
+- Added support for PyRadio (via @joaoponceleao)
+- Added support for Dropzone 3 (via @iansoper)
+- Added support for Autokey (via @danielsuo)
+- Added support for Docker (via @carlossg)
+- Add toolchains.xml in Maven syncing (via @jcgay)
+- Added support of WebStorm 10 (via @morphinewan)
+- Added support of Gnome SSH Tunnel Manager (via @skyrocknroll)
+- Added support for Hammerspoon (via @jkaan)
+- Added support for Bitchx (via @troywilson_)
+- Added support for EditorConfig (via @chadluo)
+- Add com.agilebits.onepassword4.plist in 1Password (via @amatos)
+- Added support for Versions (via @amatos)
+- Added support for Gas Mask (via @zanderzhng)
+- Removed broken support for Stickies and Z
+- Add ee.clockwise.gmask.plist in Gas Mask (via @zanderzhng)
+- Add configs for mpv (via @zanderzhng)
+- Added support for Shimo (via @amatos)
+- Added support for tvnamer (via @ronniemoore)
+- Added support for Royal TSX (via @amatos)
+- Added support for CotEditor (via @usami-k)
+- Added support for xbindkeys (via @scottames)
+- Added support for Spacemacs (via @x-ji)
+- Added support for Visual Studio Code (via @luisdemanuel)
+- Added support for Gradle (via @jcgay)
+- Added support for Capture One (via @devnulled)
+- Added support for version 3 of Mailplane (via @roderik)
+- Improved Transmission support (via @TrigonaMinima)
+- Added support for Nomacs (via @TrigonaMinima)
+- Added support for DbVisualizer (via @ronniemoore)
+- Added support for MusicBrainz Picard (via @TrigonaMinima)
+- Extended KeePassX support for v2 (via @TCattd)
+- Improved Mailplane 3 support (via @TCattd)
+
+## Mackup 0.8.5
+
+- Support for Z (via @jkaan)
+- Support for GMVault (via @jkaan)
+- Support for MATLAB (via @danielsuo)
+- Add a --version parameter (via @Timidger)
+- Use docopt for the CLI to prepare for future features
+- Added support for Arm (via @bobwenx)
+
+## Mackup 0.8.4
+
+- Added support for PyCharm 4 (via @fcvarela)
+- Added support for Popcorn Time (via @JacopKane)
+- Sublime Text syncs only Packages/User directory on Linux (via @jnv)
+
+## Mackup 0.8.3
+
+- Remove the scripts dir from Messages syncing (@vitorgalvao)
+- Added support of AppCode 3.1 (via @morphinewan)
+- Added support for KeePassX (via @TCattd)
+- Added support for DefaultKeyBinding in OSX (via @adamclerk and @kfinlay)
+- Fix support for the Atom editor (via @damiankloip)
+- Added support for HexChat (via @jubalh)
+- Added support for Todo.txt CLI (via @jubalh)
+
+## Mackup 0.8.2
+
+- Fix: Users with a list of apps to sync were getting an error on restore or
+  uninstall
+
+## Mackup 0.8.1
+
+- Fix: Restore and uninstall the Mackup config before any other application
+  config
+- PEP8 compliance
+
+## Mackup 0.8
+
+- Limit .gem folder backup for Ruby, including credentials file only (via
+  @ashchan)
+- Support for PostgreSQL (via @bashu)
+- Support for consular (via @bashu)
+- Support for Punto Switcher (via @bashu)
+- Support for Poedit (via @bashu)
+- Support for Max (via @bashu)
+- Support for jrnl (via @huyhong)
+- Support for XtraFinder (via @ethanl)
+- Support for Rubocop (via @iainbeeston)
+- Support for Terminator (via @chr1sbest)
 - Support for Houdini (via @kfinlay)
+- Support for IntelliJ IDEA 13 & 14 (via @dsager)
+- Support for Pass (via @kykim)
+- Support for Composer (via @fayland)
+- Support for GHCi (via @marcosero)
+- Add .gitignore (via @eyadsibai)
+- Support for spectrwm (via @cnodell)
+- Fixed Textual support (via @crkochan)
+- Support for 1Password 4 (via @jverdeyen)
+- Support for GrandTotal 3 (via @jverdeyen)
+- Support for TaskPaper (via @iloveitaly)
+- Support for SequelPro plist (via @iloveitaly)
+- Support for Kaleidoscope (via @iloveitaly)
+- Support for Stay (via @iloveitaly)
+- Support for Screenhero (via @iloveitaly)
+- Support for Scrivener (via @iloveitaly)
+- Support for ColorSchemer Studio 2 (via @iloveitaly)
+- Support for Billings Pro Server Admin (via @iloveitaly)
+- Support for iStat Menus 5 (via @jverdeyen)
+- Support for WebStorm 9 (via @inxilpro)
+- Support for Oh My Fish (via @inxilpro)
+- Support for Scroll Reverser (via @ponychicken)
+- Support for JuliaLang (via @danielsuo)
+- Support for OsX Stickies (via @djabbz)
+- Support for Navicat Database GUI tools (via @tdm00)
+- Sublime Text 3 now only syncs essential files, excluding session and cache
+  folders
+- Support for ProxyChains & ProxyChains NG (via @mttrb)
+- Support for Maven (via @jcgay)
+- Improved support for Apple ColorSync (via @devnulled)
+- Support for IPython (via @nrvs)
+- Support for i3 (via @akash0x53)
+- Support for tint2 (via @mr-seiler)
+- Support for Conky (via @mr-seiler)
+- Fix: Custom app config must take precedence over stock app config (thx @Gyran
+  and @jalaziz)
+- Support for Ubersicht (via @kfinlay)
+- Added support for npm (via @zheng1 and @jaxgeller)
+- Added support for Microsoft Azure CLI (via @zheng1)
+- Fix: Take into account apps specified in .mackup.cfg for the restore and
+  uninstall operations
+- Improvement: More explicit file paths displayed (thx @danielcompton)
+- Support for Webstorm 8 (via @webpro)
+- Support for dig (via @glaszig)
+- Support for Copy sync engine (via @exiva)
+- Improved bash support (via @pkyeck)
+- Improved Python 3 support (via @dannluciano)
+- Added support for VLC (via @kiliankoe)
+- Added doc, ftdetect, ftplugin, indent, syntax directories to vim config
+  (via @feigaochn)
+- Added support of AppCode 3 (via @turygo and @dsiu)
+- Feature: Display error messages in red (via @Timidger)
 
 ## Mackup 0.7.4
 
@@ -11,7 +200,8 @@
 - Added support for JSHints .jshintrc
 - Improved support for Slate (via @bradcerasani)
 - Added support for nvpy - a Linux client for SimpleNote (via @hiyer)
-- Atom now only syncs essential files, excluding compiled and cache folders (via @lmartins)
+- Atom now only syncs essential files, excluding compiled and cache folders
+  (via @lmartins)
 - Support for Artistic Style (via @feigaochn)
 - Support for Tig (via @damiankloip)
 - Added bundle directory to vim config (via @alanlamielle)

@@ -1,6 +1,8 @@
 """
+The applications database.
+
 The Applications Database provides an easy to use interface to load application
-data from the Mackup Database (files)
+data from the Mackup Database (files).
 """
 import os
 
@@ -15,12 +17,11 @@ from .constants import CUSTOM_APPS_DIR
 
 
 class ApplicationsDatabase(object):
-    """Database containing all the configured applications"""
+
+    """Database containing all the configured applications."""
 
     def __init__(self):
-        """
-        Create a ApplicationsDatabase instance
-        """
+        """Create a ApplicationsDatabase instance."""
         # Build the dict that will contain the properties of each application
         self.apps = dict()
 
@@ -52,12 +53,40 @@ class ApplicationsDatabase(object):
                                              .format(path))
                         self.apps[app_name]['configuration_files'].add(path)
 
+                # Add the XDG configuration files to sync
+                xdg_config_home = os.environ.get('XDG_CONFIG_HOME')
+                if xdg_config_home:
+                    if not os.path.exists(xdg_config_home):
+                        raise ValueError('$XDG_CONFIG_HOME: {} does not exist'
+                                         .format(xdg_config_home))
+                    home = os.path.expanduser('~/')
+                    if not xdg_config_home.startswith(home):
+                        raise ValueError('$XDG_CONFIG_HOME: {} must be '
+                                         'somewhere within your home '
+                                         'directory: {}'
+                                         .format(xdg_config_home, home))
+                    if config.has_section('xdg_configuration_files'):
+                        for path in config.options('xdg_configuration_files'):
+                            if path.startswith('/'):
+                                raise ValueError('Unsupported absolute path: '
+                                                 '{}'
+                                                 .format(path))
+                            path = os.path.join(xdg_config_home, path)
+                            path = path.replace(home, '')
+                            (self.apps[app_name]['configuration_files']
+                                .add(path))
+
     @staticmethod
     def get_config_files():
         """
+        Return the application configuration files.
+
         Return a list of configuration files describing the apps supported by
-        Mackup. The files return are absolute fullpath to those files.
+        Mackup. The files return are absolute full path to those files.
         e.g. /usr/lib/mackup/applications/bash.cfg
+
+        Only one config file per application should be returned, custom config
+        having a priority over stock config.
 
         Returns:
             set of strings.
@@ -67,23 +96,33 @@ class ApplicationsDatabase(object):
                                 APPS_DIR)
         custom_apps_dir = os.path.join(os.environ['HOME'], CUSTOM_APPS_DIR)
 
-        # Build the list of stock application config files
+        # List of stock application config files
         config_files = set()
-        for filename in os.listdir(apps_dir):
-            if filename.endswith('.cfg'):
-                config_files.add(os.path.join(apps_dir, filename))
 
-        # Append the list of custom application config files
+        # Temp list of user added app config file names
+        custom_files = set()
+
+        # Get the list of custom application config files first
         if os.path.isdir(custom_apps_dir):
             for filename in os.listdir(custom_apps_dir):
                 if filename.endswith('.cfg'):
                     config_files.add(os.path.join(custom_apps_dir,
                                                   filename))
+                    # Also add it to the set of custom apps, so that we don't
+                    # add the stock config for the same app too
+                    custom_files.add(filename)
+
+        # Add the default provided app config files, but only if those are not
+        # customized, as we don't want to overwrite custom app config.
+        for filename in os.listdir(apps_dir):
+            if filename.endswith('.cfg') and filename not in custom_files:
+                config_files.add(os.path.join(apps_dir, filename))
+
         return config_files
 
     def get_name(self, name):
         """
-        Return the fancy name of an application
+        Return the fancy name of an application.
 
         Args:
             name (str)
@@ -95,7 +134,7 @@ class ApplicationsDatabase(object):
 
     def get_files(self, name):
         """
-        Return the list of config files of an application
+        Return the list of config files of an application.
 
         Args:
             name (str)
@@ -107,7 +146,10 @@ class ApplicationsDatabase(object):
 
     def get_app_names(self):
         """
-        Return the list of application names that are available in the database
+        Return application names.
+
+        Return the list of application names that are available in the
+        database.
 
         Returns:
             set of str.
@@ -120,7 +162,7 @@ class ApplicationsDatabase(object):
 
     def get_pretty_app_names(self):
         """
-        Return the list of pretty app names that are available in the database
+        Return the list of pretty app names that are available in the database.
 
         Returns:
             set of str.

@@ -3,6 +3,9 @@ import os.path
 
 from mackup.constants import (ENGINE_DROPBOX,
                               ENGINE_GDRIVE,
+                              ENGINE_COPY,
+                              ENGINE_ICLOUD,
+                              ENGINE_BOX,
                               ENGINE_FS)
 from mackup.config import Config, ConfigError
 
@@ -12,6 +15,25 @@ class TestConfig(unittest.TestCase):
     def setUp(self):
         realpath = os.path.dirname(os.path.realpath(__file__))
         os.environ['HOME'] = os.path.join(realpath, 'fixtures')
+
+    def test_config_no_config(self):
+        cfg = Config()
+
+        # Should should do the same as the default, empty configuration
+        assert isinstance(cfg.engine, str)
+        assert cfg.engine == ENGINE_DROPBOX
+
+        assert isinstance(cfg.path, str)
+        assert cfg.path == u'/home/some_user/Dropbox'
+
+        assert isinstance(cfg.directory, str)
+        assert cfg.directory == u'Mackup'
+
+        assert isinstance(cfg.fullpath, str)
+        assert cfg.fullpath == u'/home/some_user/Dropbox/Mackup'
+
+        assert cfg.apps_to_ignore == set()
+        assert cfg.apps_to_sync == set()
 
     def test_config_empty(self):
         cfg = Config('mackup-empty.cfg')
@@ -108,6 +130,65 @@ class TestConfig(unittest.TestCase):
                                           'sabnzbd'])
         assert cfg.apps_to_sync == set(['sublime-text-3', 'x11', 'sabnzbd'])
 
+    def test_config_engine_copy(self):
+        cfg = Config('mackup-engine-copy.cfg')
+
+        assert isinstance(cfg.engine, str)
+        assert cfg.engine == ENGINE_COPY
+
+        assert isinstance(cfg.path, str)
+        assert cfg.path == u'/Users/someuser/Copy'
+
+        assert isinstance(cfg.directory, str)
+        assert cfg.directory == u'Mackup'
+
+        assert isinstance(cfg.fullpath, str)
+        assert cfg.fullpath.endswith(u'/Copy/Mackup')
+
+        assert cfg.apps_to_ignore == set(['subversion',
+                                          'sequel-pro',
+                                          'sabnzbd'])
+        assert cfg.apps_to_sync == set(['sublime-text-3', 'x11', 'sabnzbd'])
+
+    def test_config_engine_icloud(self):
+        cfg = Config('mackup-engine-icloud.cfg')
+
+        assert isinstance(cfg.engine, str)
+        assert cfg.engine == ENGINE_ICLOUD
+
+        assert isinstance(cfg.path, str)
+        assert cfg.path == os.path.expanduser(
+            '~/Library/Mobile Documents/com~apple~CloudDocs/')
+
+        assert isinstance(cfg.directory, str)
+        assert cfg.directory == u'Mackup'
+
+        assert isinstance(cfg.fullpath, str)
+        assert cfg.fullpath.endswith(u'/com~apple~CloudDocs/Mackup')
+
+        assert cfg.apps_to_ignore == set(['subversion',
+                                          'sequel-pro',
+                                          'sabnzbd'])
+        assert cfg.apps_to_sync == set(['sublime-text-3', 'x11', 'sabnzbd'])
+
+    def test_config_engine_box(self):
+        cfg = Config('mackup-engine-box.cfg')
+
+        assert isinstance(cfg.engine, str)
+        assert cfg.engine == ENGINE_BOX
+
+        assert isinstance(cfg.path, str)
+        assert cfg.path == u'/Users/whatever/Box Sync'
+
+        assert isinstance(cfg.directory, str)
+        assert cfg.directory == u'some_weirder_name'
+
+        assert isinstance(cfg.fullpath, str)
+        assert cfg.fullpath == u'/Users/whatever/Box Sync/some_weirder_name'
+
+        assert cfg.apps_to_ignore == set()
+        assert cfg.apps_to_sync == set()
+
     def test_config_engine_filesystem_no_path(self):
         with self.assertRaises(ConfigError):
             Config('mackup-engine-file_system-no_path.cfg')
@@ -178,3 +259,6 @@ class TestConfig(unittest.TestCase):
                                         'sublime-text-3',
                                         'x11',
                                         'vim'])
+
+    def test_config_old_config(self):
+        self.assertRaises(SystemExit, Config, 'mackup-old-config.cfg')

@@ -1,1 +1,1 @@
-"""The Mackup Package"""
+"""The Mackup Package."""

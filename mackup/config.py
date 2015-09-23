@@ -1,19 +1,24 @@
-"""
-Package used to manage the .mackup.cfg config file
-"""
+"""Package used to manage the .mackup.cfg config file."""
 
 import os
 import os.path
+import sys
 
-from constants import (MACKUP_BACKUP_PATH,
-                       MACKUP_CONFIG_FILE,
-                       ENGINE_DROPBOX,
-                       ENGINE_GDRIVE,
-                       ENGINE_FS)
+from .constants import (MACKUP_BACKUP_PATH,
+                        MACKUP_CONFIG_FILE,
+                        ENGINE_DROPBOX,
+                        ENGINE_GDRIVE,
+                        ENGINE_COPY,
+                        ENGINE_ICLOUD,
+                        ENGINE_BOX,
+                        ENGINE_FS)
 
-from utils import (error,
-                   get_dropbox_folder_location,
-                   get_google_drive_folder_location)
+from .utils import (error,
+                    get_dropbox_folder_location,
+                    get_copy_folder_location,
+                    get_google_drive_folder_location,
+                    get_icloud_folder_location,
+                    get_box_folder_location)
 try:
     import configparser
 except ImportError:
@@ -22,8 +27,12 @@ except ImportError:
 
 class Config(object):
 
+    """The Mackup Config class."""
+
     def __init__(self, filename=None):
         """
+        Create a Config instance.
+
         Args:
             filename (str): Optional filename of the config file. If empty,
                             defaults to MACKUP_CONFIG_FILE
@@ -55,7 +64,9 @@ class Config(object):
     def engine(self):
         """
         The engine used by the storage.
-        ENGINE_DROPBOX, ENGINE_GDRIVE or ENGINE_FS.
+
+        ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_COPY, ENGINE_ICLOUD, ENGINE_BOX
+        or ENGINE_FS.
 
         Returns:
             str
@@ -65,6 +76,8 @@ class Config(object):
     @property
     def path(self):
         """
+        Path to the Mackup configuration files.
+
         The path to the directory where Mackup is gonna create and store his
         directory.
 
@@ -86,6 +99,8 @@ class Config(object):
     @property
     def fullpath(self):
         """
+        Full path to the Mackup configuration files.
+
         The full path to the directory when Mackup is storing the configuration
         files.
 
@@ -116,6 +131,8 @@ class Config(object):
 
     def _setup_parser(self, filename=None):
         """
+        Configure the ConfigParser instance the way we want it.
+
         Args:
             filename (str) or None
 
@@ -134,6 +151,7 @@ class Config(object):
         return parser
 
     def _warn_on_old_config(self):
+        """Warn the user if an old config format is detected."""
         # Is an old setion is in the config file ?
         old_sections = ['Allowed Applications', 'Ignored Applications']
         for old_section in old_sections:
@@ -153,6 +171,8 @@ class Config(object):
 
     def _parse_engine(self):
         """
+        Parse the storage engine in the config.
+
         Returns:
             str
         """
@@ -163,13 +183,20 @@ class Config(object):
 
         assert isinstance(engine, str)
 
-        if engine not in [ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_FS]:
+        if engine not in [ENGINE_DROPBOX,
+                          ENGINE_GDRIVE,
+                          ENGINE_COPY,
+                          ENGINE_ICLOUD,
+                          ENGINE_BOX,
+                          ENGINE_FS]:
             raise ConfigError('Unknown storage engine: {}'.format(engine))
 
         return str(engine)
 
     def _parse_path(self):
         """
+        Parse the storage path in the config.
+
         Returns:
             str
         """
@@ -177,6 +204,12 @@ class Config(object):
             path = get_dropbox_folder_location()
         elif self.engine == ENGINE_GDRIVE:
             path = get_google_drive_folder_location()
+        elif self.engine == ENGINE_COPY:
+            path = get_copy_folder_location()
+        elif self.engine == ENGINE_ICLOUD:
+            path = get_icloud_folder_location()
+        elif self.engine == ENGINE_BOX:
+            path = get_box_folder_location()
         elif self.engine == ENGINE_FS:
             if self._parser.has_option('storage', 'path'):
                 cfg_path = self._parser.get('storage', 'path')
@@ -185,10 +218,18 @@ class Config(object):
                 raise ConfigError("The required 'path' can't be found while"
                                   " the 'file_system' engine is used.")
 
-        return str(path)
+        # Python 2 and python 3 byte strings are different.
+        if sys.version_info[0] < 3:
+            path = str(path)
+        else:
+            path = path.decode("utf-8")
+
+        return path
 
     def _parse_directory(self):
         """
+        Parse the storage directory in the config.
+
         Returns:
             str
         """
@@ -201,6 +242,8 @@ class Config(object):
 
     def _parse_apps_to_ignore(self):
         """
+        Parse the applications to ignore in the config.
+
         Returns:
             set
         """
@@ -216,6 +259,8 @@ class Config(object):
 
     def _parse_apps_to_sync(self):
         """
+        Parse the applications to backup in the config.
+
         Returns:
             set
         """
@@ -231,4 +276,7 @@ class Config(object):
 
 
 class ConfigError(Exception):
+
+    """Exception used for handle errors in the configuration."""
+
     pass

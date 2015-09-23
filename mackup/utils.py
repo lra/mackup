@@ -1,5 +1,4 @@
-"""System static utilities being used by the modules"""
-import argparse
+"""System static utilities being used by the modules."""
 import base64
 import os
 import platform
@@ -12,9 +11,14 @@ import sqlite3
 from . import constants
 
 
+# Flag that controls how user confirmation works.
+# If True, the user wants to say "yes" to everything.
+FORCE_YES = False
+
+
 def confirm(question):
     """
-    Ask the user if he really want something to happen
+    Ask the user if he really want something to happen.
 
     Args:
         question(str): What can happen
@@ -22,12 +26,20 @@ def confirm(question):
     Returns:
         (boolean): Confirmed or not
     """
+    if FORCE_YES:
+        return True
+
     while True:
-        answer = raw_input(question + ' <Yes|No>')
-        if answer == 'Yes':
+        # Python 3 check
+        if sys.version_info[0] < 3:
+            answer = raw_input(question + ' <Yes|No>').lower()
+        else:
+            answer = input(question + ' <Yes|No>').lower()
+
+        if answer == 'yes' or answer == 'y':
             confirmed = True
             break
-        if answer == 'No':
+        if answer == 'no' or answer == 'n':
             confirmed = False
             break
 
@@ -37,7 +49,8 @@ def confirm(question):
 def delete(filepath):
     """
     Delete the given file, directory or link.
-    Should support undelete later on.
+
+    It Should support undelete later on.
 
     Args:
         filepath (str): Absolute full path to a file. e.g. /path/to/file
@@ -58,6 +71,7 @@ def delete(filepath):
 def copy(src, dst):
     """
     Copy a file or a folder (recursively) from src to dst.
+
     For simplicity sake, both src and dst must be absolute path and must
     include the filename of the file or folder.
     Also do not include any trailing slash.
@@ -98,10 +112,11 @@ def copy(src, dst):
     chmod(dst)
 
 
-def link(target, link):
+def link(target, link_to):
     """
     Create a link to a target file or a folder.
-    For simplicity sake, both target and link must be absolute path and must
+
+    For simplicity sake, both target and link_to must be absolute path and must
     include the filename of the file or folder.
     Also do not include any trailing slash.
 
@@ -112,14 +127,14 @@ def link(target, link):
 
     Args:
         target (str): file or folder the link will point to
-        link (str): Link to create
+        link_to (str): Link to create
     """
     assert isinstance(target, str)
     assert os.path.exists(target)
-    assert isinstance(link, str)
+    assert isinstance(link_to, str)
 
     # Create the path to the link if it does not exists
-    abs_path = os.path.dirname(os.path.abspath(link))
+    abs_path = os.path.dirname(os.path.abspath(link_to))
     if not os.path.isdir(abs_path):
         os.makedirs(abs_path)
 
@@ -127,12 +142,13 @@ def link(target, link):
     chmod(target)
 
     # Create the link to target
-    os.symlink(target, link)
+    os.symlink(target, link_to)
 
 
 def chmod(target):
     """
     Recursively set the chmod for files to 0600 and 0700 for folders.
+
     It's ok unless we need something more specific.
 
     Args:
@@ -172,56 +188,14 @@ def error(message):
     Args:
         message(str): The message to display.
     """
-    sys.exit("Error: {}".format(message))
-
-
-def parse_cmdline_args():
-    """
-    Setup the engine that's gonna parse the command line arguments
-
-    Returns:
-        (argparse.Namespace)
-    """
-
-    # Format the description text
-    description = ("Mackup {}\n"
-                   "Keep your application settings in sync.\n"
-                   "Copyright (C) 2013-2014 Laurent Raufaste"
-                   " <http://glop.org/>\n"
-                   .format(constants.VERSION))
-
-    # Format some epilog text
-    epilog = ("Mackup modes of action:\n"
-              " - backup: sync your conf files to your synced storage, use"
-              " this the 1st time you use Mackup.\n"
-              " - restore: link the conf files already in your synced storage"
-              " on your system, use it on any new system you use.\n"
-              " - uninstall: reset everything as it was before using Mackup.\n"
-              " - list: display a list of all supported applications.\n")
-
-    help_msg = "Required action mode for Mackup, see below for details."
-
-    # Setup the global parser
-    parser = argparse.ArgumentParser(
-        description=description,
-        epilog=epilog,
-        formatter_class=argparse.RawDescriptionHelpFormatter)
-
-    # Add the required arg
-    parser.add_argument("mode",
-                        choices=[constants.BACKUP_MODE,
-                                 constants.RESTORE_MODE,
-                                 constants.UNINSTALL_MODE,
-                                 constants.LIST_MODE],
-                        help=help_msg)
-
-    # Parse the command line and return the parsed options
-    return parser.parse_args()
+    fail = '\033[91m'
+    end = '\033[0m'
+    sys.exit(fail + "Error: {}".format(message) + end)
 
 
 def get_dropbox_folder_location():
     """
-    Try to locate the Dropbox folder
+    Try to locate the Dropbox folder.
 
     Returns:
         (str) Full path to the current Dropbox folder
@@ -239,16 +213,23 @@ def get_dropbox_folder_location():
 
 def get_google_drive_folder_location():
     """
-    Try to locate the Google Drive folder
+    Try to locate the Google Drive folder.
 
     Returns:
         (unicode) Full path to the current Google Drive folder
     """
     gdrive_db_path = 'Library/Application Support/Google/Drive/sync_config.db'
+    yosemite_gdrive_db_path = ('Library/Application Support/Google/Drive/'
+                               'user_default/sync_config.db')
+    yosemite_gdrive_db = os.path.join(os.environ['HOME'],
+                                      yosemite_gdrive_db_path)
+    if os.path.isfile(yosemite_gdrive_db):
+        gdrive_db_path = yosemite_gdrive_db
+
     googledrive_home = None
 
     gdrive_db = os.path.join(os.environ['HOME'], gdrive_db_path)
-    if (os.path.isfile(gdrive_db)):
+    if os.path.isfile(gdrive_db):
         con = sqlite3.connect(gdrive_db)
         if con:
             cur = con.cursor()
@@ -266,9 +247,78 @@ def get_google_drive_folder_location():
     return googledrive_home
 
 
+def get_box_folder_location():
+    """
+    Try to locate the Box folder.
+
+    Returns:
+        (str) Full path to the current Box folder
+    """
+    box_prefs_path = ('Library/Application Support/Box/Box Sync/'
+                      'sync_root_folder.txt')
+    box_home = None
+
+    box_prefs = os.path.join(os.environ['HOME'], box_prefs_path)
+    try:
+        with open(box_prefs, 'r') as sync_path:
+            data = sync_path.read()
+            box_home = data
+    except IOError:
+        error("Unable to find your Box prefs =(")
+
+    return box_home
+
+
+def get_copy_folder_location():
+    """
+    Try to locate the Copy folder.
+
+    Returns:
+        (unicode) Full path to the current Copy folder
+    """
+    copy_settings_path = 'Library/Application Support/Copy Agent/config.db'
+    copy_home = None
+
+    copy_settings = os.path.join(os.environ['HOME'], copy_settings_path)
+
+    if os.path.isfile(copy_settings):
+        database = sqlite3.connect(copy_settings)
+        if database:
+            cur = database.cursor()
+            query = ("SELECT value "
+                     "FROM config2 "
+                     "WHERE option = 'csmRootPath';")
+            cur.execute(query)
+            data = cur.fetchone()
+            copy_home = unicode(data[0])
+            cur.close()
+
+    if not copy_home:
+        error("Unable to find your Copy install =(")
+
+    return copy_home
+
+
+def get_icloud_folder_location():
+    """
+    Try to locate the iCloud Drive folder.
+
+    Returns:
+        (str) Full path to the iCloud Drive folder.
+    """
+    yosemite_icloud_path = '~/Library/Mobile Documents/com~apple~CloudDocs/'
+
+    icloud_home = os.path.expanduser(yosemite_icloud_path)
+
+    if not os.path.isdir(icloud_home):
+        error('Unable to find your iCloud Drive =(')
+
+    return unicode(icloud_home)
+
+
 def is_process_running(process_name):
     """
-    Check if a process with the given name is running
+    Check if a process with the given name is running.
 
     Args:
         (str): Process name, e.g. "Sublime Text"
@@ -291,6 +341,7 @@ def is_process_running(process_name):
 def remove_acl(path):
     """
     Remove the ACL of the file or folder located on the given path.
+
     Also remove the ACL of any file and folder below the given one,
     recursively.
 
@@ -300,15 +351,17 @@ def remove_acl(path):
     """
     # Some files have ACLs, let's remove them recursively
     if (platform.system() == constants.PLATFORM_DARWIN
-        and os.path.isfile('/bin/chmod')):
+            and os.path.isfile('/bin/chmod')):
         subprocess.call(['/bin/chmod', '-R', '-N', path])
     elif ((platform.system() == constants.PLATFORM_LINUX)
-          and os.path.isfile('/bin/setfacl')):
+            and os.path.isfile('/bin/setfacl')):
         subprocess.call(['/bin/setfacl', '-R', '-b', path])
 
 
 def remove_immutable_attribute(path):
     """
+    Remove the immutable attribute of the given path.
+
     Remove the immutable attribute of the file or folder located on the given
     path. Also remove the immutable attribute of any file and folder below the
     given one, recursively.
@@ -319,16 +372,18 @@ def remove_immutable_attribute(path):
     """
     # Some files have ACLs, let's remove them recursively
     if ((platform.system() == constants.PLATFORM_DARWIN)
-        and os.path.isfile('/usr/bin/chflags')):
+            and os.path.isfile('/usr/bin/chflags')):
         subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', path])
     elif (platform.system() == constants.PLATFORM_LINUX
-          and os.path.isfile('/usr/bin/chattr')):
+            and os.path.isfile('/usr/bin/chattr')):
         subprocess.call(['/usr/bin/chattr', '-R', '-i', path])
 
 
 def can_file_be_synced_on_current_platform(path):
     """
-    Check if it makes sens to sync the file at the given path on the current
+    Check if the given path can be synced locally.
+
+    Check if it makes sense to sync the file at the given path on the current
     platform.
     For now we don't sync any file in the ~/Library folder on GNU/Linux.
     There might be other exceptions in the future.

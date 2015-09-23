@@ -160,6 +160,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [BibDesk](http://bibdesk.sourceforge.net/)
 - [Billings Pro Server Admin](https://www.marketcircle.com/billingspro/download/billingspro-server/)
 - [Bitchx](http://www.bitchx.org/)
+- [Blackfire](https://blackfire.io/)
 - [Boto](https://github.com/boto/boto)
 - [Brackets](http://brackets.io/)
 - [Bundler](http://bundler.io)

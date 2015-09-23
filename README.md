@@ -256,6 +256,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Liftoff](http://github.com/thoughtbot/liftoff)
 - [Light Table](http://www.lighttable.com/)
 - [LimeChat](http://limechat.net/mac/)
+- [Liquid Prompt](https://github.com/nojhan/liquidprompt)
 - [LittleSnitch](http://www.obdev.at/products/littlesnitch/)
 - [Livestreamer](http://livestreamer.tanuki.se/)
 - [MacDive](http://www.mac-dive.com/)

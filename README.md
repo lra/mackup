@@ -323,6 +323,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Rails](http://rubyonrails.org/)
 - [rTorrent](http://libtorrent.rakshasa.no/)
 - [R](http://www.r-project.org/)
+- [Redshift](http://jonls.dk/redshift/)
 - [Royal TSX](http://www.royaltsx.com/ts/osx/features)
 - [RStudio](http://rstudio.com)
 - [Rubocop](https://github.com/bbatsov/rubocop)

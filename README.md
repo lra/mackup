@@ -185,6 +185,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Conky](https://github.com/brndnmtthws/conky)
 - [Consular](https://github.com/achiu/consular)
 - [ControlPlane](http://www.controlplaneapp.com/)
+- [CopyQ](https://github.com/hluk/CopyQ)
 - [CoRD](http://cord.sourceforge.net/)
 - [CotEditor](http://coteditor.com/)
 - [Cyberduck](https://cyberduck.io/)

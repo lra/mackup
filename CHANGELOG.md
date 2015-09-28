@@ -40,8 +40,10 @@
 - Improved support for Composer, backup ./composer/composer.json (via @mnapoli)
 - Add support for Blackfire (via @mnapoli)
 - Add support for liquidprompt (via @GochoMugo)
-- Add support for REdshift (via @orschiro)
 - Add support for ShowyEdge (via @zanderzhng)
+- Add support for Redshift (via @orschiro)
+- Add support for CopyQ (via @orschiro)
+
 
 ## Mackup 0.8.11
 

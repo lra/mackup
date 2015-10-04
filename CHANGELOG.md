@@ -15,6 +15,7 @@
 - Add support for Blackfire (via @mnapoli)
 - Add support for liquidprompt (via @GochoMugo)
 - Add support for REdshift (via @orschiro)
+- Add support for 1Password Backups (via @zanderzhng)
 
 ## Mackup 0.8.11
 

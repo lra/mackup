@@ -346,6 +346,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [SHSH Blobs](http://en.wikipedia.org/wiki/SHSH_blob)
 - [ShiftIt](https://github.com/fikovnik/ShiftIt)
 - [Shimo](http://www.chungwasoft.com/shimo/)
+- [ShowyEdge](https://pqrs.org/osx/ShowyEdge/index.html.en)
 - [Shuttle](http://fitztrev.github.io/shuttle/)
 - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
 - [Skim](http://skim-app.sourceforge.net/)

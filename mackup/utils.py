@@ -11,6 +11,11 @@ import sqlite3
 from . import constants
 
 
+# Flag that controls how user confirmation works.
+# If True, the user wants to say "yes" to everything.
+FORCE_YES = False
+
+
 def confirm(question):
     """
     Ask the user if he really want something to happen.
@@ -21,6 +26,9 @@ def confirm(question):
     Returns:
         (boolean): Confirmed or not
     """
+    if FORCE_YES:
+        return True
+
     while True:
         # Python 3 check
         if sys.version_info[0] < 3:
@@ -211,8 +219,10 @@ def get_google_drive_folder_location():
         (unicode) Full path to the current Google Drive folder
     """
     gdrive_db_path = 'Library/Application Support/Google/Drive/sync_config.db'
-    yosemite_gdrive_db_path = 'Library/Application Support/Google/Drive/user_default/sync_config.db'
-    yosemite_gdrive_db = os.path.join(os.environ['HOME'], yosemite_gdrive_db_path)
+    yosemite_gdrive_db_path = ('Library/Application Support/Google/Drive/'
+                               'user_default/sync_config.db')
+    yosemite_gdrive_db = os.path.join(os.environ['HOME'],
+                                      yosemite_gdrive_db_path)
     if os.path.isfile(yosemite_gdrive_db):
         gdrive_db_path = yosemite_gdrive_db
 
@@ -235,6 +245,28 @@ def get_google_drive_folder_location():
         error("Unable to find your Google Drive install =(")
 
     return googledrive_home
+
+
+def get_box_folder_location():
+    """
+    Try to locate the Box folder.
+
+    Returns:
+        (str) Full path to the current Box folder
+    """
+    box_prefs_path = ('Library/Application Support/Box/Box Sync/'
+                      'sync_root_folder.txt')
+    box_home = None
+
+    box_prefs = os.path.join(os.environ['HOME'], box_prefs_path)
+    try:
+        with open(box_prefs, 'r') as sync_path:
+            data = sync_path.read()
+            box_home = data
+    except IOError:
+        error("Unable to find your Box prefs =(")
+
+    return box_home
 
 
 def get_copy_folder_location():
@@ -265,6 +297,23 @@ def get_copy_folder_location():
         error("Unable to find your Copy install =(")
 
     return copy_home
+
+
+def get_icloud_folder_location():
+    """
+    Try to locate the iCloud Drive folder.
+
+    Returns:
+        (str) Full path to the iCloud Drive folder.
+    """
+    yosemite_icloud_path = '~/Library/Mobile Documents/com~apple~CloudDocs/'
+
+    icloud_home = os.path.expanduser(yosemite_icloud_path)
+
+    if not os.path.isdir(icloud_home):
+        error('Unable to find your iCloud Drive =(')
+
+    return unicode(icloud_home)
 
 
 def is_process_running(process_name):

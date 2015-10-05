@@ -9,12 +9,16 @@ from .constants import (MACKUP_BACKUP_PATH,
                         ENGINE_DROPBOX,
                         ENGINE_GDRIVE,
                         ENGINE_COPY,
+                        ENGINE_ICLOUD,
+                        ENGINE_BOX,
                         ENGINE_FS)
 
 from .utils import (error,
                     get_dropbox_folder_location,
                     get_copy_folder_location,
-                    get_google_drive_folder_location)
+                    get_google_drive_folder_location,
+                    get_icloud_folder_location,
+                    get_box_folder_location)
 try:
     import configparser
 except ImportError:
@@ -61,7 +65,8 @@ class Config(object):
         """
         The engine used by the storage.
 
-        ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_COPY or ENGINE_FS.
+        ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_COPY, ENGINE_ICLOUD, ENGINE_BOX
+        or ENGINE_FS.
 
         Returns:
             str
@@ -181,6 +186,8 @@ class Config(object):
         if engine not in [ENGINE_DROPBOX,
                           ENGINE_GDRIVE,
                           ENGINE_COPY,
+                          ENGINE_ICLOUD,
+                          ENGINE_BOX,
                           ENGINE_FS]:
             raise ConfigError('Unknown storage engine: {}'.format(engine))
 
@@ -199,6 +206,10 @@ class Config(object):
             path = get_google_drive_folder_location()
         elif self.engine == ENGINE_COPY:
             path = get_copy_folder_location()
+        elif self.engine == ENGINE_ICLOUD:
+            path = get_icloud_folder_location()
+        elif self.engine == ENGINE_BOX:
+            path = get_box_folder_location()
         elif self.engine == ENGINE_FS:
             if self._parser.has_option('storage', 'path'):
                 cfg_path = self._parser.get('storage', 'path')

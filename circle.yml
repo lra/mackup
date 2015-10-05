@@ -1,5 +1,12 @@
+dependencies:
+  pre:
+    - gem install mdl
+
 test:
   override:
-    - nosetests --with-coverage --cover-package=mackup
+    - make test
+    - mdl:
+        files:
+          - "**/*.md"
   post:
-    - coveralls
+    - codecov

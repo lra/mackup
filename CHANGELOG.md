@@ -3,6 +3,7 @@
 ## WIP
 
 - Add support for Robomongo (via @rbartoli)
+- Add support for Pocket (via @rbartoli)
 
 ## Mackup 0.8.12
 

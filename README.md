@@ -139,6 +139,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Adobe Camera Raw](http://www.adobe.com/products/photoshop/extend.html)
 - [Adobe Photoshop CC](http://www.adobe.com/products/photoshop.html)
 - [Android Studio](https://developer.android.com/sdk/)
+- [AppCleaner](http://www.freemacsoft.net/appcleaner/)
 - [AppCode](http://www.jetbrains.com/objc/)
 - [aria2c](http://aria2.sourceforge.net/)
 - [Arara](http://cereda.github.io/arara/)

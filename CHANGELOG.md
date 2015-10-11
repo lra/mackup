@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add support for Robomongo (via @rbartoli)
+
 ## Mackup 0.8.12
 
 - Don't fail if the file is not in the mackup home

@@ -244,6 +244,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Janus](https://github.com/carlhuda/janus)
 - [jrnl](http://maebert.github.io/jrnl/)
 - [Julia](http://julialang.org)
+- [Jumpcut](http://jumpcut.sourceforge.net/)
 - [Kaleidoscope](http://www.kaleidoscopeapp.com/)
 - [Karabiner](https://pqrs.org/osx/karabiner)
 - [KeePassX](http://www.keepassx.org/)

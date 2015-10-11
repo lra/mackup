@@ -3,6 +3,7 @@
 ## WIP
 
 - Add support for Robomongo (via @rbartoli)
+- Add support for WebStorm 11 (via @rbartoli)
 
 ## Mackup 0.8.12
 

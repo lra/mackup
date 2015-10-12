@@ -9,6 +9,7 @@
 - Add support for TotalSpaces2 (via @rbartoli)
 - Add support for WebStorm 11 (via @rbartoli)
 - Add support for z (via @rbartoli)
+- Add support for Electrum (via @rbartoli)
 
 ## Mackup 0.8.12
 

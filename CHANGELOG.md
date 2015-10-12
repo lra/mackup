@@ -6,6 +6,7 @@
 - Add support for AppCleaner (via @rbartoli)
 - Add support for Doxie (via @rbartoli)
 - Add support for Jumpcut (via @rbartoli)
+- Add support for TotalSpaces2 (via @rbartoli)
 
 ## Mackup 0.8.12
 

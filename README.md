@@ -200,6 +200,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Droplr](https://droplr.com/hello)
 - [Dropzone 3](https://aptonic.com/dropzone3/)
 - [EditorConfig](http://editorconfig.org/)
+- [Electrum](https://electrum.org/#home)
 - [Emacs](http://www.gnu.org/software/emacs/)
 - [Enjoyable](http://yukkurigames.com/enjoyable/)
 - [Exercism](http://exercism.io/)

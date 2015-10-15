@@ -2,6 +2,17 @@
 
 ## WIP
 
+- Add support for Robomongo (via @rbartoli)
+- Add support for AppCleaner (via @rbartoli)
+- Add support for Doxie (via @rbartoli)
+- Add support for Jumpcut (via @rbartoli)
+- Add support for TotalSpaces2 (via @rbartoli)
+- Add support for WebStorm 11 (via @rbartoli)
+- Add support for z (via @rbartoli)
+- Add support for Electrum (via @rbartoli)
+
+## Mackup 0.8.12
+
 - Don't fail if the file is not in the mackup home
 - Verbose mode state when a link is broken
 - Add support for MacDive (via @peschee)

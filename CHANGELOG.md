@@ -11,6 +11,7 @@
 - Add support for z (via @rbartoli)
 - Add support for Electrum (via @rbartoli)
 - Fixed Gear Player Support (via @TCattd)
+- Fixed Mailplane Support (via @TCattd)
 
 ## Mackup 0.8.12
 

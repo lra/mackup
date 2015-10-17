@@ -13,7 +13,7 @@
 - Add support for MPlayerX (via @digglife)
 - Fixed Gear Player Support (via @TCattd)
 - Fixed Mailplane Support (via @TCattd)
-- ADd support for TextExpander (via @cjs)
+- Add support for TextExpander (via @cjs)
 
 ## Mackup 0.8.12
 

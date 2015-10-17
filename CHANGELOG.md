@@ -10,6 +10,7 @@
 - Add support for WebStorm 11 (via @rbartoli)
 - Add support for z (via @rbartoli)
 - Add support for Electrum (via @rbartoli)
+- Add support for MPlayerX (via @digglife)
 - Fixed Gear Player Support (via @TCattd)
 - Fixed Mailplane Support (via @TCattd)
 

@@ -13,6 +13,7 @@
 - Add support for MPlayerX (via @digglife)
 - Add support for Day-O (via @mateusrevoredo)
 - Add support for Smooth Mouse (via @mateusrevoredo)
+- Add support for Spotify Notifications (via @mateusrevoredo)
 - Fixed Gear Player Support (via @TCattd)
 - Fixed Mailplane Support (via @TCattd)
 

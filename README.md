@@ -369,6 +369,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Spectrwm](https://opensource.conformal.com/wiki/spectrwm)
 - [Spectacle](http://spectacleapp.com/)
 - [Spotify](https://www.spotify.com/)
+- [Spotify Notifications](http://spotify-notifications.citruspi.io/)
 - [Stata](http://www.stata.com/)
 - [Stay](https://cordlessdog.com/stay/)
 - [Sublime Text](http://www.sublimetext.com/)

@@ -15,6 +15,12 @@ from . import constants
 # If True, the user wants to say "yes" to everything.
 FORCE_YES = False
 
+# input for py3, raw_input for py2
+try:
+    input = raw_input
+except NameError:
+    pass
+
 
 def confirm(question):
     """
@@ -30,11 +36,8 @@ def confirm(question):
         return True
 
     while True:
-        # Python 3 check
-        if sys.version_info[0] < 3:
-            answer = raw_input(question + ' <Yes|No>').lower()
-        else:
-            answer = input(question + ' <Yes|No>').lower()
+
+        answer = input(question + ' <Yes|No>').lower()
 
         if answer == 'yes' or answer == 'y':
             confirmed = True

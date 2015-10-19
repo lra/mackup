@@ -21,14 +21,14 @@ class TestMackup(unittest.TestCase):
         # Override the raw_input used in utils
         def custom_raw_input(_):
             return 'Yes'
-        utils.raw_input = custom_raw_input
+        utils.input = custom_raw_input
         assert utils.confirm('Answer Yes to this question')
 
     def test_confirm_no(self):
         # Override the raw_input used in utils
         def custom_raw_input(_):
             return 'No'
-        utils.raw_input = custom_raw_input
+        utils.input = custom_raw_input
         assert not utils.confirm('Answer No to this question')
 
     def test_confirm_python3(self):
@@ -42,7 +42,7 @@ class TestMackup(unittest.TestCase):
         # Override the raw_input used in utils
         def custom_raw_input(_):
             return 'No'
-        utils.raw_input = custom_raw_input
+        utils.input = custom_raw_input
         assert not utils.confirm('Answer garbage to this question')
 
     def test_delete_file(self):

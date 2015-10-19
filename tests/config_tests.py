@@ -1,5 +1,6 @@
 import unittest
 import os.path
+import sys
 
 from mackup.constants import (ENGINE_DROPBOX,
                               ENGINE_GDRIVE,
@@ -8,6 +9,11 @@ from mackup.constants import (ENGINE_DROPBOX,
                               ENGINE_BOX,
                               ENGINE_FS)
 from mackup.config import Config, ConfigError
+
+def is_equal_string(src_path, dst_path):
+    if sys.version_info[0] < 3:
+        src_path = src_path.decode('utf8')
+    return src_path == dst_path
 
 
 class TestConfig(unittest.TestCase):
@@ -21,16 +27,16 @@ class TestConfig(unittest.TestCase):
 
         # Should should do the same as the default, empty configuration
         assert isinstance(cfg.engine, str)
-        assert cfg.engine == ENGINE_DROPBOX
+        assert is_equal_string(cfg.engine, ENGINE_DROPBOX)
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u'/home/some_user/Dropbox'
+        assert is_equal_string(cfg.path, u'/home/some_user/Dropbox')
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u'Mackup'
+        assert is_equal_string(cfg.directory, u'Mackup')
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u'/home/some_user/Dropbox/Mackup'
+        assert is_equal_string(cfg.fullpath, u'/home/some_user/Dropbox/Mackup')
 
         assert cfg.apps_to_ignore == set()
         assert cfg.apps_to_sync == set()
@@ -42,13 +48,13 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_DROPBOX
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u'/home/some_user/Dropbox'
+        assert is_equal_string(cfg.path, u'/home/some_user/Dropbox')
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u'Mackup'
+        assert is_equal_string(cfg.directory, u'Mackup')
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u'/home/some_user/Dropbox/Mackup'
+        assert is_equal_string(cfg.fullpath, u'/home/some_user/Dropbox/Mackup')
 
         assert cfg.apps_to_ignore == set()
         assert cfg.apps_to_sync == set()
@@ -60,13 +66,13 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_DROPBOX
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u'/home/some_user/Dropbox'
+        assert is_equal_string(cfg.path, u'/home/some_user/Dropbox')
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u'some_weirld_name'
+        assert is_equal_string(cfg.directory, u'some_weirld_name')
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u'/home/some_user/Dropbox/some_weirld_name'
+        assert is_equal_string(cfg.fullpath, u'/home/some_user/Dropbox/some_weirld_name')
 
         assert cfg.apps_to_ignore == set()
         assert cfg.apps_to_sync == set()
@@ -78,13 +84,13 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_FS
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u'/some/absolute/folder'
+        assert is_equal_string(cfg.path, u'/some/absolute/folder')
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u'custom_folder'
+        assert is_equal_string(cfg.directory, u'custom_folder')
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u'/some/absolute/folder/custom_folder'
+        assert is_equal_string(cfg.fullpath, u'/some/absolute/folder/custom_folder')
 
         assert cfg.apps_to_ignore == set(['subversion', 'sequel-pro'])
         assert cfg.apps_to_sync == set()
@@ -100,7 +106,7 @@ class TestConfig(unittest.TestCase):
                                               u'some/relative/folder'))
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u'Mackup'
+        assert is_equal_string(cfg.directory, u'Mackup')
 
         assert isinstance(cfg.fullpath, str)
         assert cfg.fullpath == os.path.join(os.environ[u'HOME'],
@@ -117,13 +123,13 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_GDRIVE
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u'/Users/whatever/Google Drive'
+        assert is_equal_string(cfg.path, u'/Users/whatever/Google \u4e91\u7aef\u786c\u76d8')
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u'Mackup'
+        assert is_equal_string(cfg.directory, u'Mackup')
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath.endswith(u'/Google Drive/Mackup')
+        assert is_equal_string(cfg.fullpath, u'/Users/whatever/Google \u4e91\u7aef\u786c\u76d8/Mackup')
 
         assert cfg.apps_to_ignore == set(['subversion',
                                           'sequel-pro',
@@ -137,10 +143,10 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_COPY
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u'/Users/someuser/Copy'
+        assert is_equal_string(cfg.path, u'/Users/someuser/Copy')
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u'Mackup'
+        assert is_equal_string(cfg.directory, u'Mackup')
 
         assert isinstance(cfg.fullpath, str)
         assert cfg.fullpath.endswith(u'/Copy/Mackup')
@@ -161,7 +167,7 @@ class TestConfig(unittest.TestCase):
             '~/Library/Mobile Documents/com~apple~CloudDocs/')
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u'Mackup'
+        assert is_equal_string(cfg.directory, u'Mackup')
 
         assert isinstance(cfg.fullpath, str)
         assert cfg.fullpath.endswith(u'/com~apple~CloudDocs/Mackup')
@@ -178,13 +184,13 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_BOX
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u'/Users/whatever/Box Sync'
+        assert is_equal_string(cfg.path, u'/Users/whatever/Box Sync')
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u'some_weirder_name'
+        assert is_equal_string(cfg.directory, u'some_weirder_name')
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u'/Users/whatever/Box Sync/some_weirder_name'
+        assert is_equal_string(cfg.fullpath, u'/Users/whatever/Box Sync/some_weirder_name')
 
         assert cfg.apps_to_ignore == set()
         assert cfg.apps_to_sync == set()
@@ -204,13 +210,13 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_DROPBOX
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u'/home/some_user/Dropbox'
+        assert is_equal_string(cfg.path, u'/home/some_user/Dropbox')
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u'Mackup'
+        assert is_equal_string(cfg.directory, u'Mackup')
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u'/home/some_user/Dropbox/Mackup'
+        assert is_equal_string(cfg.fullpath, u'/home/some_user/Dropbox/Mackup')
 
         assert cfg.apps_to_ignore == set(['subversion',
                                           'sequel-pro',
@@ -224,13 +230,13 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_DROPBOX
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u'/home/some_user/Dropbox'
+        assert is_equal_string(cfg.path, u'/home/some_user/Dropbox')
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u'Mackup'
+        assert is_equal_string(cfg.directory, u'Mackup')
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u'/home/some_user/Dropbox/Mackup'
+        assert is_equal_string(cfg.fullpath, u'/home/some_user/Dropbox/Mackup')
 
         assert cfg.apps_to_ignore == set()
         assert cfg.apps_to_sync == set(['sabnzbd',
@@ -244,13 +250,13 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_DROPBOX
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u'/home/some_user/Dropbox'
+        assert is_equal_string(cfg.path, u'/home/some_user/Dropbox')
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u'Mackup'
+        assert is_equal_string(cfg.directory, u'Mackup')
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u'/home/some_user/Dropbox/Mackup'
+        assert is_equal_string(cfg.fullpath, u'/home/some_user/Dropbox/Mackup')
 
         assert cfg.apps_to_ignore == set(['subversion',
                                           'sequel-pro',

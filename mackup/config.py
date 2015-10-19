@@ -218,11 +218,10 @@ class Config(object):
                 raise ConfigError("The required 'path' can't be found while"
                                   " the 'file_system' engine is used.")
 
-        # Python 2 and python 3 byte strings are different.
+        # For py2, encode the path with utf8 to bytes string because
+        # there might be non-ascii characters in it.
         if sys.version_info[0] < 3:
-            path = str(path)
-        else:
-            path = path.decode("utf-8")
+            path = path.encode('utf8')
 
         return path
 

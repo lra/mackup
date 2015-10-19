@@ -12,6 +12,7 @@
 - Add support for Electrum (via @rbartoli)
 - Add support for MPlayerX (via @digglife)
 - Add support for Day-O (via @mateusrevoredo)
+- Add support for Smooth Mouse (via @mateusrevoredo)
 - Fixed Gear Player Support (via @TCattd)
 - Fixed Mailplane Support (via @TCattd)
 

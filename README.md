@@ -361,6 +361,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Skype](http://www.skype.com/)
 - [Slate](https://github.com/jigish/slate)
 - [Slogger](http://brettterpstra.com/projects/slogger/)
+- [Smooth Mouse](http://smoothmouse.com/)
 - [Soulver](http://www.acqualia.com/soulver/)
 - [SourceTree](http://sourcetreeapp.com)
 - [Spacemacs](https://github.com/syl20bnr/spacemacs)

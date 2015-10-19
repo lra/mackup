@@ -11,6 +11,7 @@
 - Add support for z (via @rbartoli)
 - Add support for Electrum (via @rbartoli)
 - Add support for MPlayerX (via @digglife)
+- Add support for GIMP (via @mateusrevoredo)
 - Fixed Gear Player Support (via @TCattd)
 - Fixed Mailplane Support (via @TCattd)
 

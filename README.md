@@ -265,6 +265,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [LittleSnitch](http://www.obdev.at/products/littlesnitch/)
 - [Livestreamer](http://livestreamer.tanuki.se/)
 - [MacDive](http://www.mac-dive.com/)
+- [MacDown](http://macdown.uranusjr.com/)
 - [MacOSX](http://www.apple.com/osx/)
 - [MacVim](https://code.google.com/p/macvim/)
 - [Magic Launch](https://www.oneperiodic.com/products/magiclaunch/)

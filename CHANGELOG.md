@@ -17,6 +17,7 @@
 - Add support for Spotify Notifications (via @mateusrevoredo)
 - Fixed Gear Player Support (via @TCattd)
 - Fixed Mailplane Support (via @TCattd)
+- Add support for Maid (via @zanderzhng)
 
 ## Mackup 0.8.12
 

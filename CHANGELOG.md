@@ -18,6 +18,7 @@
 - Fixed Gear Player Support (via @TCattd)
 - Fixed Mailplane Support (via @TCattd)
 - Add support for Maid (via @zanderzhng)
+- Add support for Ansible (via @mlrobinson)
 
 ## Mackup 0.8.12
 

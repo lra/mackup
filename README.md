@@ -381,6 +381,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [TaskPaper](http://www.hogbaysoftware.com/products/taskpaper)
 - [Taskwarrior](http://www.taskwarrior.org/)
 - [Teamocil](http://remiprev.github.io/teamocil/)
+- [Terminal](http://www.apple.com/osx/apps/)
 - [Terminator](https://launchpad.net/terminator/)
 - [TextMate](http://macromates.com/)
 - [Textual](http://www.codeux.com/textual/)

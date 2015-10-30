@@ -157,6 +157,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Bartender](http://www.macbartender.com/)
 - [Bash it](https://github.com/revans/bash-it/)
 - [Bash](http://www.gnu.org/software/bash/)
+- [BBEdit](http://www.barebones.com/products/bbedit/)
 - [BetterSnapTool](http://blog.boastr.net/)
 - [BetterTouchTool](http://blog.boastr.net/)
 - [BibDesk](http://bibdesk.sourceforge.net/)

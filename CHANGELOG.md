@@ -19,6 +19,7 @@
 - Fixed Mailplane Support (via @TCattd)
 - Add support for Maid (via @zanderzhng)
 - Add support for Ansible (via @mlrobinson)
+- Add support for BBEdit (via @ryanjbonnell)
 
 ## Mackup 0.8.12
 

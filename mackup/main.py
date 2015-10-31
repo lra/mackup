@@ -81,7 +81,7 @@ def main():
         mckp.check_for_usable_backup_env()
 
         # Backup each application
-        for app_name in mckp.get_apps_to_backup():
+        for app_name in sorted(mckp.get_apps_to_backup()):
             app = ApplicationProfile(mckp,
                                      app_db.get_files(app_name),
                                      dry_run,
@@ -112,7 +112,7 @@ def main():
         # Mackup has already been done
         app_names.discard(MACKUP_APP_NAME)
 
-        for app_name in app_names:
+        for app_name in sorted(app_names):
             app = ApplicationProfile(mckp,
                                      app_db.get_files(app_name),
                                      dry_run,
@@ -136,7 +136,7 @@ def main():
             app_names = mckp.get_apps_to_backup()
             app_names.discard(MACKUP_APP_NAME)
 
-            for app_name in app_names:
+            for app_name in sorted(app_names):
                 app = ApplicationProfile(mckp,
                                          app_db.get_files(app_name),
                                          dry_run,

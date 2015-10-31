@@ -9,10 +9,14 @@ import os
 import os.path
 import shutil
 import tempfile
+import sys
+import platform
 
+from ctypes import Structure, windll, c_ulong, c_ulonglong, c_void_p, byref
 from . import utils
 from . import config
 from . import appsdb
+from . import constants
 
 
 class Mackup(object):
@@ -26,12 +30,81 @@ class Mackup(object):
         self.mackup_folder = self._config.fullpath
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
+
+    def is_link_privilege_enabled(self):
+        """Check if symbolic link creation privilege is enabled."""
+        TOKEN_ALL_ACCESS = c_ulong(0x000f01ff)
+        SE_CREATE_SYMBOLIC_LINK_NAME = 'SeCreateSymbolicLinkPrivilege'
+        class LUID_AND_ATTRIBUTES(Structure):
+             _fields_ = [
+                     ("Luid", c_ulonglong),
+                     ("Attributes", c_ulong)]
+        class PRIVILEGE_SET(Structure):
+            _fields_ = [
+                    ("PrivilegeCount", c_ulong),
+                    ("Control", c_ulong),
+                    ("Privilege", LUID_AND_ATTRIBUTES)]
+
+        try:
+            token = c_void_p(None)
+            ret = windll.advapi32.OpenProcessToken(
+                    windll.kernel32.GetCurrentProcess(),
+                    TOKEN_ALL_ACCESS,
+                    byref(token))
+            if ret == 0:
+                return False
+
+            luid = c_ulonglong(0)
+            ret = windll.advapi32.LookupPrivilegeValueW(
+                    None, SE_CREATE_SYMBOLIC_LINK_NAME, byref(luid))
+            if ret == 0:
+                return False
+
+            enabled = c_ulong(0)
+            priv_set = PRIVILEGE_SET(1, 1, LUID_AND_ATTRIBUTES(luid, 2))
+            ret = windll.advapi32.PrivilegeCheck(
+                    token, byref(priv_set), byref(enabled))
+            return ret != 0 and enabled.value > 0
+
+        except OSError:
+            return false
+
+
+    def check_link_support_on_windows(self):
+        """Check if symbolic links can be created on Windows."""
+        # Symbolic link support was introduced in Windows 6.0
+        if sys.getwindowsversion()[0] < 6:
+            utils.error("Mackup can only run on Windows 6.0 (Vista)"
+                        " or higher.")
+
+        # Added support for Windows symbolic links in version 3.2
+        if sys.version_info[0] < 3 or sys.version_info[1] < 2:
+            utils.error("Mackup need Python version 3.2 or highter.")
+
+        if not self.is_link_privilege_enabled():
+            utils.error("Mackup can not work without the"
+                        " SeCreateSymbolicLinkPrivilege.\n"
+                        "To grant this privilege, you have two choices:\n"
+                        " 1. Log in with an administrator account and"
+                        " launch mackup within a command\n"
+                        "    prompt running as administrator.\n"
+                        " 2. Use a standard account, and assign the"
+                        " SeCreateSymbolicLinkPrivilege to\n"
+                        "    your user or group via the local group policy"
+                        " editor.")
+
+
     def check_for_usable_environment(self):
         """Check if the current env is usable and has everything's required."""
-        # Do not let the user run Mackup as root
-        if os.geteuid() == 0:
-            utils.error("Running Mackup as a superuser is useless and"
-                        " dangerous. Don't do it!")
+
+        if platform.system() == constants.PLATFORM_WINDOWS:
+            # Symbolic link support is silly on Windows, so check it first.
+            self.check_link_support_on_windows()
+        else:
+            # Do not let the user run Mackup as root
+            if os.geteuid() == 0:
+                utils.error("Running Mackup as a superuser is useless and"
+                            " dangerous. Don't do it!")
 
         # Do we have a folder to put the Mackup folder ?
         if not os.path.isdir(self._config.path):

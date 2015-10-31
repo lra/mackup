@@ -30,45 +30,45 @@ class Mackup(object):
         self.mackup_folder = self._config.fullpath
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
-
     def is_link_privilege_enabled(self):
         """Check if symbolic link creation privilege is enabled."""
         TOKEN_ALL_ACCESS = c_ulong(0x000f01ff)
         SE_CREATE_SYMBOLIC_LINK_NAME = 'SeCreateSymbolicLinkPrivilege'
+
         class LUID_AND_ATTRIBUTES(Structure):
-             _fields_ = [
-                     ("Luid", c_ulonglong),
-                     ("Attributes", c_ulong)]
+            _fields_ = [
+                ("Luid", c_ulonglong),
+                ("Attributes", c_ulong)]
+
         class PRIVILEGE_SET(Structure):
             _fields_ = [
-                    ("PrivilegeCount", c_ulong),
-                    ("Control", c_ulong),
-                    ("Privilege", LUID_AND_ATTRIBUTES)]
+                ("PrivilegeCount", c_ulong),
+                ("Control", c_ulong),
+                ("Privilege", LUID_AND_ATTRIBUTES)]
 
         try:
             token = c_void_p(None)
             ret = windll.advapi32.OpenProcessToken(
-                    windll.kernel32.GetCurrentProcess(),
-                    TOKEN_ALL_ACCESS,
-                    byref(token))
+                windll.kernel32.GetCurrentProcess(),
+                TOKEN_ALL_ACCESS,
+                byref(token))
             if ret == 0:
                 return False
 
             luid = c_ulonglong(0)
             ret = windll.advapi32.LookupPrivilegeValueW(
-                    None, SE_CREATE_SYMBOLIC_LINK_NAME, byref(luid))
+                None, SE_CREATE_SYMBOLIC_LINK_NAME, byref(luid))
             if ret == 0:
                 return False
 
             enabled = c_ulong(0)
             priv_set = PRIVILEGE_SET(1, 1, LUID_AND_ATTRIBUTES(luid, 2))
             ret = windll.advapi32.PrivilegeCheck(
-                    token, byref(priv_set), byref(enabled))
+                token, byref(priv_set), byref(enabled))
             return ret != 0 and enabled.value > 0
 
         except OSError:
-            return false
-
+            return False
 
     def check_link_support_on_windows(self):
         """Check if symbolic links can be created on Windows."""
@@ -92,7 +92,6 @@ class Mackup(object):
                         " SeCreateSymbolicLinkPrivilege to\n"
                         "    your user or group via the local group policy"
                         " editor.")
-
 
     def check_for_usable_environment(self):
         """Check if the current env is usable and has everything's required."""

@@ -142,9 +142,13 @@ def link(target, link_to):
     chmod(target)
 
     # Create the link to target
-    # target_is_directory should be specified on Windows,
-    # and is ignored on non-Windows platform
-    os.symlink(target, link_to, target_is_directory=os.path.isdir(target))
+    # target_is_directory should be specified on Windows, and is ignored on
+    # non-Windows platform. This feature is added in Python 3.2
+    if sys.version_info[0] > 3 and sys.version_info[1] > 2:
+        isdir = os.path.isdir(target)
+        os.symlink(target, link_to, target_is_directory=isdir)
+    else:
+        os.symlink(target, link_to)
 
 
 def chmod(target):

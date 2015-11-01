@@ -12,11 +12,14 @@ import tempfile
 import sys
 import platform
 
-from ctypes import Structure, windll, c_ulong, c_ulonglong, c_void_p, byref
 from . import utils
 from . import config
 from . import appsdb
 from . import constants
+
+if platform.system() == constants.PLATFORM_WINDOWS:
+    from ctypes import Structure, c_ulong, c_ulonglong, c_void_p, byref
+    from ctypes import windll
 
 
 class Mackup(object):

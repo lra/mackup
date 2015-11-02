@@ -136,7 +136,7 @@ def main():
             app_names = mckp.get_apps_to_backup()
             app_names.discard(MACKUP_APP_NAME)
 
-            for app_name in mckp.get_apps_to_backup():
+            for app_name in app_names:
                 app = ApplicationProfile(mckp,
                                          app_db.get_files(app_name),
                                          dry_run,

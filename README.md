@@ -333,6 +333,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [rTorrent](http://libtorrent.rakshasa.no/)
 - [R](http://www.r-project.org/)
 - [Redshift](http://jonls.dk/redshift/)
+- [Rime](rime.im)
 - [Robomongo](http://robomongo.org/)
 - [Royal TSX](http://www.royaltsx.com/ts/osx/features)
 - [RStudio](https://www.rstudio.com/)

@@ -5,6 +5,7 @@ Copyright (C) 2013-2015 Laurent Raufaste <http://glop.org/>
 
 Usage:
   mackup list
+  mackup [options] status
   mackup [options] backup
   mackup [options] restore
   mackup [options] uninstall
@@ -20,12 +21,13 @@ Options:
 
 Modes of action:
  1. list: display a list of all supported applications.
- 2. backup: sync your conf files to your synced storage, use this the 1st time
+ 2. status: display current status.
+ 3. backup: sync your conf files to your synced storage, use this the 1st time
     you use Mackup. (Note that by default this will sync private keys used by
     OpenSSH and GnuPG.)
- 3. restore: link the conf files already in your synced storage on your system,
+ 4. restore: link the conf files already in your synced storage on your system,
     use it on any new system you use.
- 4. uninstall: reset everything as it was before using Mackup.
+ 5. uninstall: reset everything as it was before using Mackup.
 
 By default, Mackup syncs all application data (including private keys!) via
 Dropbox, but may be configured to exclude applications or use a different
@@ -35,6 +37,7 @@ See https://github.com/lra/mackup/tree/master/doc for more information.
 
 """
 from docopt import docopt
+from tabulate import tabulate
 from .appsdb import ApplicationsDatabase
 from .application import ApplicationProfile
 from .constants import MACKUP_APP_NAME, VERSION
@@ -173,6 +176,24 @@ def main():
         output += ("{} applications supported in Mackup v{}"
                    .format(len(app_db.get_app_names()), VERSION))
         print(output)
+
+    elif args['status']:
+        # Display current status.
+        status_table = []
+        headers = ["Application", "Status"]
+
+        # Get status of each application.
+        for app_name in sorted(mckp.get_apps_to_backup()):
+            app = ApplicationProfile(mckp,
+                                     app_db.get_files(app_name),
+                                     dry_run,
+                                     verbose)
+            # @todo Get pretty app name for display.
+            status = app.status()
+            if (status):
+                status_table.append([app_name, status])
+
+        print tabulate(status_table, headers, tablefmt="fancy_grid")
 
     # Delete the tmp folder
     mckp.clean_temp_folder()

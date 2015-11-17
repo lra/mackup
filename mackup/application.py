@@ -200,6 +200,48 @@ class ApplicationProfile(object):
                     print("Doing nothing\n  {}\n  does not exist"
                           .format(mackup_filepath))
 
+    def status(self):
+        """
+        Check the status of application config files.
+        """
+        files = 0
+        synced = 0
+        not_synced = 0
+        config_available = 0
+
+        for filename in self.files:
+            files += 1
+            (home_filepath, mackup_filepath) = self.getFilepaths(filename)
+
+            if (os.path.islink(home_filepath)
+                and os.path.exists(mackup_filepath)
+                and os.path.samefile(mackup_filepath, home_filepath)):
+                synced += 1
+                continue
+
+            if (os.path.isfile(mackup_filepath)
+                or os.path.isdir(mackup_filepath)):
+                config_available += 1
+                continue
+
+            if ((os.path.isfile(home_filepath) or os.path.isdir(home_filepath))
+                and not (os.path.islink(home_filepath)
+                         and (os.path.isfile(mackup_filepath)
+                              or os.path.isdir(mackup_filepath))
+                         and os.path.samefile(home_filepath,
+                                              mackup_filepath))):
+                not_synced += 1
+                continue
+
+        if synced == files:
+            return 'Synced'
+        elif config_available == files:
+            return 'Config available'
+        elif not_synced == files:
+            return 'Not synced'
+        elif synced > 0 or config_available > 0 or not_synced > 0:
+            return 'Partially synced'
+
     def uninstall(self):
         """
         Uninstall Mackup.

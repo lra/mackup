@@ -21,6 +21,7 @@
 - Add support for Maid (via @zanderzhng)
 - Add support for Ansible (via @mlrobinson)
 - Add support for Querious (via @ryanjbonnell)
+- Add support for IntelliJ IDEA 15 (via @singles)
 
 ## Mackup 0.8.12
 

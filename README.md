@@ -244,7 +244,6 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [i3](https://i3wm.org/)
 - [iStat Menus 5](https://bjango.com/mac/istatmenus/)
 - [IPython](http://ipython.org/)
-- [ITerm2](http://www.iterm2.com/)
 - [JSHint](http://jshint.com/)
 - [Janus](https://github.com/carlhuda/janus)
 - [jrnl](http://maebert.github.io/jrnl/)

@@ -22,6 +22,7 @@
 - Add support for Ansible (via @mlrobinson)
 - Add support for Querious (via @ryanjbonnell)
 - Add support for IntelliJ IDEA 15 (via @singles)
+- Removed iTerm2 support since iTerm2 overwrites the symlink (via @adamlogic)
 
 ## Mackup 0.8.12
 

@@ -7,8 +7,7 @@ Keep your application settings in sync.
 
 ## Quickstart
 
-If you have Dropbox installed and want to use it to save your config files,
-that's super easy.
+If you have [Dropbox](https://www.dropbox.com) installed and want to use it to save your config files, that's super easy.
 
 On OS X, if you want an easy install, you can install
 [Homebrew](http://brew.sh/) and do:
@@ -21,7 +20,7 @@ brew install mackup
 mackup backup
 ```
 
-If not running OS X, or you don't like Homebrew, you can use PIP:
+If not running OS X, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/):
 
 ```bash
 # Install Mackup with PIP
@@ -31,7 +30,7 @@ pip install mackup
 mackup backup
 ```
 
-You're all set, and constantly backuped from now on.
+You're all set and constantly backuped from now on.
 
 Next, on any new workstation, do:
 
@@ -43,9 +42,9 @@ brew install mackup
 mackup restore
 ```
 
-Done !
+Done!
 
-You can find more detailed instructions in [INSTALL.md](INSTALL.md)
+You can find more detailed instructions in [INSTALL.md](INSTALL.md).
 
 ## Usage
 
@@ -67,36 +66,34 @@ Display the list of applications supported by Mackup.
 
 `mackup -h`
 
-Get some help, obvious...
+Get some help, obviously...
 
-## What does it do
+## What does it do?
 
-- Backups your application settings in a safe directory (e.g. Dropbox)
+- Back ups your application settings in a safe directory (e.g. Dropbox)
 - Syncs your application settings among all your workstations
 - Restores your configuration on any fresh install in one command line
 
 By only tracking pure configuration files, it keeps the crap out of your
-freshly new installed workstation (No cache, temporary and locally specific
+freshly new installed workstation (no cache, temporary and locally specific
 files are transfered).
 
-It also helps you spend more time doing real cool stuff, and less time setting
-up your environment.
+Mackup makes setting up the environment easy and simple, saving time for your family, great ideas, and all the cool stuff you like.  
 
-## Bullsh*t, what does it really do to my files
+## Bullsh*t, what does it really do to my files?
 
 Let's take `git` as an example. Your settings for `git` are saved in your home
 folder, in the `.gitconfig` file.
 
 ### Backup
 
-If you have Dropbox, when you launch `mackup backup`, here's what it's really
-doing:
+If you have Dropbox, these things happen when you launch `mackup backup`:
 
 1. `cp ~/.gitconfig ~/Dropbox/Mackup/.gitconfig`
 1. `rm ~/.gitconfig`
 1. `ln -s ~/Dropbox/Mackup/.gitconfig ~/.gitconfig`
 
-Now your `git` config is always backup and up to date on all your workstations.
+Now your `git` config is always backed up and up to date on all your workstations.
 
 ### Restore
 
@@ -421,7 +418,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Zsh](http://zsh.sourceforge.net/)
 - iTunes Applescripts
 
-## Can you support application X
+## Can you support application X?
 
 We can [with your help](doc#get-official-support-for-an-application) ;)
 
@@ -429,21 +426,18 @@ We can [with your help](doc#get-official-support-for-an-application) ;)
 
 Yesterday, I had a talk with [Zach Zaro](http://zacharyzaro.com/), complaining
 about the pain it is to reconfigure our Macbook each time we get a new one or
-install from scratch. That's a talk we already had months ago.
+install from scratch. That's a talk we have already had months ago.
 
-I change my workstation every X months. Each time I either loose the
-configuration of all the apps I use, or I just waste a bunch of hours getting
-setup like I was on my old box. I also spent a lot of time reconfiguring the
-same stuff again on all my workstations (home, work)
+I change my workstation every X months. Each time I either lose my apps'
+configurations, or I just waste a bunch of hours getting setup like I was on my old box. I also spend a lot of time reconfiguring the same stuff again on all my workstations (home, work).
 
 Boring...
 
 Some people tried to solve the problem on the application layer, like
-[Github's Boxen](https://boxen.github.com/), but I feel like it solves a non
-problem: I don't really spend time installing stuff, mostly downloading: I
-spend time configuring it.
+[Github's Boxen](https://boxen.github.com/), but it solves a different 
+problem, from my point of view. I don't spend a lot of time installing or downloading stuff. I spend time configuring it.
 
-For years, I've used a personnal shell script that was copying known config
+For years, I've used a personal shell script that was copying known config
 files into Subversion, Git or Dropbox, and linked them into my home. But I felt
 a lot of us had the same problem: Making a more generic tool could help others
 and I could get help from others to support more apps in the tool.
@@ -451,17 +445,17 @@ and I could get help from others to support more apps in the tool.
 So here comes Mackup, the little tool that will sync all your application
 configs to Dropbox (or Google Drive, or anything).
 
-And it's [GPL](http://www.gnu.org/licenses/gpl.html) of course.
+And it's [GPL](http://www.gnu.org/licenses/gpl.html), of course.
 
-## What platform is supported
+## What platforms are supported?
 
 - OS X
 - GNU/Linux
 
-## What's up with the weird name
+## What's up with the weird name?
 
-Mackup is just a contraction of Mac and Backup, I suck at naming stuff, ok.
+Mackup is just a contraction of Mac and Backup. It is simple, short, and easy to remember, and it corresponds with the whole idea of Mackup: the simpler – the better! (And I suck at naming stuff, but who doesn't.)
 
-## Where can I find more information
+## Where can I find more information?
 
 In the [doc](doc) directory.

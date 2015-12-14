@@ -258,6 +258,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [KeyRemap4MacBook](https://pqrs.org/osx/karabiner/)
 - [LaTeXiT](http://www.chachatelier.fr/latexit/latexit-home.php?lang=en)
 - [LaunchBar](https://www.obdev.at/products/launchbar/index.html)
+- [Leiningen](http://leiningen.org/)
 - [Liftoff](https://github.com/thoughtbot/liftoff)
 - [Light Table](http://lighttable.com/)
 - [LimeChat](http://limechat.net/mac/)

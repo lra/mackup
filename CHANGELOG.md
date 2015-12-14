@@ -25,6 +25,7 @@
 - Removed iTerm2 support since iTerm2 overwrites the symlink (via @adamlogic)
 - Add support for Rime (via @codefalling)
 - Improved support for R (via @wyf88)
+- Add support for Leiningen (via @thirteen37)
 
 ## Mackup 0.8.12
 

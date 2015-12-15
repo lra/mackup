@@ -7,7 +7,8 @@ Keep your application settings in sync.
 
 ## Quickstart
 
-If you have [Dropbox](https://www.dropbox.com) installed and want to use it to save your config files, that's super easy.
+If you have [Dropbox](https://www.dropbox.com) installed and want to use it to save your config
+files, that's super easy.
 
 On OS X, if you want an easy install, you can install
 [Homebrew](http://brew.sh/) and do:
@@ -78,7 +79,8 @@ By only tracking pure configuration files, it keeps the crap out of your
 freshly new installed workstation (no cache, temporary and locally specific
 files are transfered).
 
-Mackup makes setting up the environment easy and simple, saving time for your family, great ideas, and all the cool stuff you like.  
+Mackup makes setting up the environment easy and simple, saving time for your
+family, great ideas, and all the cool stuff you like.
 
 ## Bullsh*t, what does it really do to my files?
 
@@ -429,13 +431,15 @@ about the pain it is to reconfigure our Macbook each time we get a new one or
 install from scratch. That's a talk we have already had months ago.
 
 I change my workstation every X months. Each time I either lose my apps'
-configurations, or I just waste a bunch of hours getting setup like I was on my old box. I also spend a lot of time reconfiguring the same stuff again on all my workstations (home, work).
+configurations, or I just waste a bunch of hours getting setup like I was on my
+old box. I also spend a lot of time reconfiguring the same stuff again on all my
+workstations (home, work).
 
 Boring...
 
-Some people tried to solve the problem on the application layer, like
-[Github's Boxen](https://boxen.github.com/), but it solves a different 
-problem, from my point of view. I don't spend a lot of time installing or downloading stuff. I spend time configuring it.
+Some people tried to solve the problem on the application layer, like [Github's Boxen](https://boxen.github.com/),
+but it solves a different problem, from my point of view. I don't spend a lot 
+of time installing or downloading stuff. I spend time configuring it.
 
 For years, I've used a personal shell script that was copying known config
 files into Subversion, Git or Dropbox, and linked them into my home. But I felt
@@ -454,7 +458,9 @@ And it's [GPL](http://www.gnu.org/licenses/gpl.html), of course.
 
 ## What's up with the weird name?
 
-Mackup is just a contraction of Mac and Backup. It is simple, short, and easy to remember, and it corresponds with the whole idea of Mackup: the simpler – the better! (And I suck at naming stuff, but who doesn't.)
+Mackup is just a contraction of Mac and Backup. It is simple, short, and easy to
+remember, and it corresponds with the whole idea of Mackup: the simpler – the better!
+(And I suck at naming stuff, but who doesn't.)
 
 ## Where can I find more information?
 

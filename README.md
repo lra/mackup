@@ -7,8 +7,8 @@ Keep your application settings in sync.
 
 ## Quickstart
 
-If you have [Dropbox](https://www.dropbox.com) installed and want to use it to save your config
-files, that's super easy.
+If you have [Dropbox](https://www.dropbox.com) installed and want to use it to
+save your config files, that's super easy.
 
 On OS X, if you want an easy install, you can install
 [Homebrew](http://brew.sh/) and do:
@@ -69,7 +69,7 @@ Display the list of applications supported by Mackup.
 
 Get some help, obviously...
 
-## What does it do?
+## What does it do
 
 - Back ups your application settings in a safe directory (e.g. Dropbox)
 - Syncs your application settings among all your workstations
@@ -82,7 +82,7 @@ files are transfered).
 Mackup makes setting up the environment easy and simple, saving time for your
 family, great ideas, and all the cool stuff you like.
 
-## Bullsh*t, what does it really do to my files?
+## Bullsh*t, what does it really do to my files
 
 Let's take `git` as an example. Your settings for `git` are saved in your home
 folder, in the `.gitconfig` file.
@@ -420,7 +420,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Zsh](http://zsh.sourceforge.net/)
 - iTunes Applescripts
 
-## Can you support application X?
+## Can you support application X
 
 We can [with your help](doc#get-official-support-for-an-application) ;)
 
@@ -438,7 +438,7 @@ workstations (home, work).
 Boring...
 
 Some people tried to solve the problem on the application layer, like [Github's Boxen](https://boxen.github.com/),
-but it solves a different problem, from my point of view. I don't spend a lot 
+but it solves a different problem, from my point of view. I don't spend a lot
 of time installing or downloading stuff. I spend time configuring it.
 
 For years, I've used a personal shell script that was copying known config
@@ -451,17 +451,17 @@ configs to Dropbox (or Google Drive, or anything).
 
 And it's [GPL](http://www.gnu.org/licenses/gpl.html), of course.
 
-## What platforms are supported?
+## What platforms are supported
 
 - OS X
 - GNU/Linux
 
-## What's up with the weird name?
+## What's up with the weird name
 
 Mackup is just a contraction of Mac and Backup. It is simple, short, and easy to
 remember, and it corresponds with the whole idea of Mackup: the simpler – the better!
 (And I suck at naming stuff, but who doesn't.)
 
-## Where can I find more information?
+## Where can I find more information
 
 In the [doc](doc) directory.

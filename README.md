@@ -5,7 +5,7 @@ Keep your application settings in sync.
 [![Circle CI](https://circleci.com/gh/lra/mackup.svg?style=shield)](https://circleci.com/gh/lra/mackup)
 [![codecov.io](https://codecov.io/github/lra/mackup/coverage.svg?branch=master)](http://codecov.io/github/lra/mackup?branch=master)
 
-## Table of content:
+## Table of content
 
 - [Quickstart](#quickstart)
 - [Usage](#usage)

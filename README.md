@@ -5,6 +5,20 @@ Keep your application settings in sync.
 [![Circle CI](https://circleci.com/gh/lra/mackup.svg?style=shield)](https://circleci.com/gh/lra/mackup)
 [![codecov.io](https://codecov.io/github/lra/mackup/coverage.svg?branch=master)](http://codecov.io/github/lra/mackup?branch=master)
 
+**Table of content:**
+
+- [Quickstart](#quickstart)
+- [Usage](#usage)
+- [What does it do](#what-does-it-do)
+- [Bullsh*t, what does it really do to my files](#bullsht-what-does-it-really-do-to-my-files)
+- [Supported Storages](#supported-storages)
+- [Supported Applications](#supported-applications)
+- [Can you support application X](#can-you-support-application-x)
+- [Why did you do this](#why-did-you-do-this)
+- [What platforms are supported](#what-platforms-are-supported)
+- [What's up with the weird name](#what-s-up-with-the-weird-name)
+- [Where can I find more information](#where-can-i-find-more-information)
+
 ## Quickstart
 
 If you have [Dropbox](https://www.dropbox.com) installed and want to use it to

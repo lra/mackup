@@ -5,9 +5,9 @@ Copyright (C) 2013-2015 Laurent Raufaste <http://glop.org/>
 
 Usage:
   mackup list
-  mackup [options] backup
-  mackup [options] restore
-  mackup [options] uninstall
+  mackup [options] backup [--all | <app>...]
+  mackup [options] restore [--all | <app>...]
+  mackup [options] uninstall [--all | <app>...]
   mackup (-h | --help)
   mackup --version
 
@@ -80,8 +80,15 @@ def main():
         # Check the env where the command is being run
         mckp.check_for_usable_backup_env()
 
+        # Get app names from the command line,
+        # otherwise from the configurations
+        if args['<app>']:
+            app_names = args['<app>'];
+        elif args['--all']:
+            app_names = mckp.get_apps_to_backup();
+
         # Backup each application
-        for app_name in sorted(mckp.get_apps_to_backup()):
+        for app_name in sorted(app_names):
             app = ApplicationProfile(mckp,
                                      app_db.get_files(app_name),
                                      dry_run,
@@ -93,24 +100,28 @@ def main():
         # Check the env where the command is being run
         mckp.check_for_usable_restore_env()
 
-        # Restore the Mackup config before any other config, as we might need
-        # it to know about custom settings
-        mackup_app = ApplicationProfile(mckp,
-                                        app_db.get_files(MACKUP_APP_NAME),
-                                        dry_run,
-                                        verbose)
-        printAppHeader(MACKUP_APP_NAME)
-        mackup_app.restore()
+        # Get app names from the command line,
+        # otherwise from the configurations
+        if args['<app>']:
+            app_names = args['<app>'];
+        elif args['--all']:
+            # Restore the Mackup config before any other config, as we might need
+            # it to know about custom settings
+            mackup_app = ApplicationProfile(mckp,
+                                            app_db.get_files(MACKUP_APP_NAME),
+                                            dry_run,
+                                            verbose)
+            printAppHeader(MACKUP_APP_NAME)
+            mackup_app.restore()
 
-        # Initialize again the apps db, as the Mackup config might have changed
-        # it
-        mckp = Mackup()
-        app_db = ApplicationsDatabase()
+            # Initialize the apps db again, the Mackup config might have changed
+            mckp = Mackup()
+            app_db = ApplicationsDatabase()
 
-        # Restore the rest of the app configs, using the restored Mackup config
-        app_names = mckp.get_apps_to_backup()
-        # Mackup has already been done
-        app_names.discard(MACKUP_APP_NAME)
+            # Restore the rest of the app configs, using the restored Mackup config
+            app_names = mckp.get_apps_to_backup()
+            # Mackup has already been done
+            app_names.discard(MACKUP_APP_NAME)
 
         for app_name in sorted(app_names):
             app = ApplicationProfile(mckp,
@@ -125,16 +136,21 @@ def main():
         mckp.check_for_usable_restore_env()
 
         if dry_run or (
-           utils.confirm("You are going to uninstall Mackup.\n"
-                         "Every configuration file, setting and dotfile"
+           utils.confirm("Attempting to uninstall Mackup.\n"
+                         "Configuration files, settings and dotfiles"
                          " managed by Mackup will be unlinked and moved back"
-                         " to their original place, in your home folder.\n"
+                         " to their original locations.\n"
                          "Are you sure ?")):
 
-            # Uninstall the apps except Mackup, which we'll uninstall last, to
-            # keep the settings as long as possible
-            app_names = mckp.get_apps_to_backup()
-            app_names.discard(MACKUP_APP_NAME)
+            # Get app names from the command line,
+            # otherwise from the configurations
+            if args['<app>']:
+                app_names = args['<app>'];
+            elif args['--all']:
+                # Uninstall the apps except Mackup, which we'll uninstall last, to
+                # keep the settings as long as possible
+                app_names = mckp.get_apps_to_backup()
+                app_names.discard(MACKUP_APP_NAME)
 
             for app_name in sorted(app_names):
                 app = ApplicationProfile(mckp,
@@ -144,8 +160,7 @@ def main():
                 printAppHeader(app_name)
                 app.uninstall()
 
-            # Restore the Mackup config before any other config, as we might
-            # need it to know about custom settings
+            # Uninstall the Mackup config last
             mackup_app = ApplicationProfile(mckp,
                                             app_db.get_files(MACKUP_APP_NAME),
                                             dry_run,
@@ -157,11 +172,8 @@ def main():
             # uninstalled yet
             # delete(mckp.mackup_folder)
 
-            print("\n"
-                  "All your files have been put back into place. You can now"
-                  " safely uninstall Mackup.\n"
-                  "\n"
-                  "Thanks for using Mackup !")
+            print("All files have been unlinked into their original locations.\n"
+                  "Mackup can now be safely uninstall.")
 
     elif args['list']:
         # Display the list of supported applications

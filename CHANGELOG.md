@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for Zathura (via @timidger)
 - Add support for PHPStorm 10 (via @welly)
 - Add support for Robomongo (via @rbartoli)
 - Add support for AppCleaner (via @rbartoli)

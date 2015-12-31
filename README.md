@@ -324,6 +324,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [ProxyChains NG](http://sourceforge.net/projects/proxychains-ng/)
 - [Punto Switcher](https://punto.yandex.ru/)
 - [PyCharm 4](https://www.jetbrains.com/pycharm/)
+- [PyCharm 5](https://www.jetbrains.com/pycharm/)
 - [PyPI](https://pypi.python.org/pypi)
 - [PyRadio](http://www.coderholic.com/pyradio/)
 - [Querious](http://www.araelium.com/querious/)

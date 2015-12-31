@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for PyCharm 5, Linux support (via @doubleloop)
 - Add support for PHPStorm 10 (via @welly)
 - Add support for Robomongo (via @rbartoli)
 - Add support for AppCleaner (via @rbartoli)

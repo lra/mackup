@@ -208,6 +208,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [ExpanDrive](http://www.expandrive.com/)
 - [Fantastical](http://flexibits.com/fantastical)
 - [Feeds](http://www.feedsapp.com/)
+- [fasd](https://github.com/clvv/fasd)
 - [Filezilla](https://filezilla-project.org/)
 - [Fish](http://ridiculousfish.com/shell/)
 - [Flux](https://justgetflux.com/)

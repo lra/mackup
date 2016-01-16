@@ -44,7 +44,6 @@
 - Add support for Redshift (via @orschiro)
 - Add support for CopyQ (via @orschiro)
 
-
 ## Mackup 0.8.11
 
 - Added support for Mailmate (via @cdransf)

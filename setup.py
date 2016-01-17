@@ -10,7 +10,7 @@ setup(
     author_email='analogue@glop.org',
     url='https://github.com/lra/mackup',
     description='Keep your application settings in sync (OS X/Linux)',
-    keywords='configuration config dotfiles sync backup dropbox gdrive',
+    keywords='configuration config dotfiles sync backup dropbox gdrive box',
     license='GPLv3',
     packages=['mackup'],
     install_requires=['docopt'],

@@ -2,6 +2,92 @@
 
 ## WIP
 
+- Add support for PHPStorm 10 (via @welly)
+- Add support for Robomongo (via @rbartoli)
+- Add support for AppCleaner (via @rbartoli)
+- Add support for Doxie (via @rbartoli)
+- Add support for Jumpcut (via @rbartoli)
+- Add support for TotalSpaces2 (via @rbartoli)
+- Add support for WebStorm 11 (via @rbartoli)
+- Add support for z (via @rbartoli)
+- Add support for Electrum (via @rbartoli)
+- Add support for MPlayerX (via @digglife)
+- Add support for Day-O (via @mateusrevoredo)
+- Add support for Smooth Mouse (via @mateusrevoredo)
+- Add support for MacDown (via @mateusrevoredo)
+- Add support for Spotify Notifications (via @mateusrevoredo)
+- Fixed Gear Player Support (via @TCattd)
+- Fixed Mailplane Support (via @TCattd)
+- Add support for Maid (via @zanderzhng)
+- Add support for Ansible (via @mlrobinson)
+- Add support for Querious (via @ryanjbonnell)
+- Add support for IntelliJ IDEA 15 (via @singles)
+- Removed iTerm2 support since iTerm2 overwrites the symlink (via @adamlogic)
+- Add support for Rime (via @codefalling)
+- Improved support for R (via @wyf88)
+
+## Mackup 0.8.12
+
+- Don't fail if the file is not in the mackup home
+- Verbose mode state when a link is broken
+- Add support for MacDive (via @peschee)
+- Added support of AppCode 3.2 (via @usami-k)
+- Improved support for BetterTouchTool, excluding Sparkle data (via @kfinlay)
+- Improved Ubersicht support, excluding Sparkle data (via @kfinlay)
+- Add support for neovim (via @hiyer)
+- Add support for Pandoc
+- Add support for PhpStorm 9.5 (via @mnapoli)
+- Improved support for Composer, backup ./composer/composer.json (via @mnapoli)
+- Add support for Blackfire (via @mnapoli)
+- Add support for liquidprompt (via @GochoMugo)
+- Add support for REdshift (via @orschiro)
+- Add support for ShowyEdge (via @zanderzhng)
+
+## Mackup 0.8.11
+
+- Added support for Mailmate (via @cdransf)
+- Added support for Xcode plugins (via @bartoszj)
+- XDG support for app configs (via @mkwmms)
+
+## Mackup 0.8.10
+
+- Added support for SecureCRT (via @micate)
+- Added dry-run and verbose options (via @yastero)
+- Removed a git link which was overwritten by GitHub to a file
+
+## Mackup 0.8.9
+
+- Fixed the 'force' option (via @hiyer)
+
+## Mackup 0.8.8
+
+- Added support for syncing over Box (via @ninjabong)
+- Added support for Photoshop CC (via @ponychicken)
+- Removed problematic Lightroom support
+- Improved support for ssh, excluding the credential keys (via @nkcfan)
+- Added an option to not have to confirm every action (via @Timidger)
+- Fixed TextMate syncing
+
+## Mackup 0.8.7
+
+- Add in support for yosemite for google drive (via @seanfreiburg)
+- Added support for taskwarrior (via @ToostInc)
+- Added support for Gear Music Player (via @TCattd)
+- Added support for Dash 3 (via @Kapeli)
+- Added support for Yummy FTP (via @TCattd)
+- Added support for PHPStorm 9 (via @suyan)
+- Added support for ShiftIt (via @hexedpackets)
+- Added support for Android Studio 1.3 (via @usami-k)
+- Added support for Clipy (via @usami-k)
+- Added support for HyperSwitch (via @usami-k)
+- Added support for Xamarin Studio 5 (via @usami-k)
+- Added support for RStudio (via @kfinlay)
+- Added support for iCloud as a new storage (via @jlowin)
+- Allow the mackup home to be a subfolder (via @mkwmms)
+- Added support for version 8 of Microsoft Remote Desktop (via @tdm00)
+
+## Mackup 0.8.6
+
 - Added support for PyRadio (via @joaoponceleao)
 - Added support for Dropzone 3 (via @iansoper)
 - Added support for Autokey (via @danielsuo)

@@ -1,17 +1,19 @@
-## Tests ?
+# Tests
 
 Tests are put in this folder.
+
 Feel free to add more, the more the better !
 
-## How to run the tests ?
+## How to run the tests
 
 ```bash
-$ cd src/mackup
-$ pip install -r requirements.txt
-$ nosetests
+cd src/mackup
+pip install -r requirements.txt
+nosetests
 ```
 
 And you should see
+
 ```
 .
 ----------------------------------------------------------------------

@@ -1,10 +1,12 @@
 # Configuration
 
-All the configuration is done into a file named `.mackup.cfg` to store at the root of your home folder.
+All the configuration is done into a file named `.mackup.cfg` to store at the
+root of your home folder.
 
 To configure mackup, create a file named ´.mackup.cfg´ in your home directory.
+
 ```bash
-$ vi ~/.mackup.cfg
+vi ~/.mackup.cfg
 ```
 
 ## Storage
@@ -33,6 +35,12 @@ where your Google Drive is and store your configuration files in it.
 engine = google_drive
 ```
 
+### iCloud
+
+```ini
+[storage]
+engine = icloud
+```
 
 ### Copy
 
@@ -82,6 +90,14 @@ directory = backup
 
 This will store your files in the `~/dotfiles/backup` directory in your home.
 
+You can also select a subfolder:
+
+```ini
+[storage]
+engine = icloud
+directory = .config/mackup
+```
+
 ## Applications
 
 ### Only sync one or two application
@@ -100,7 +116,7 @@ A [sample](.mackup.cfg) of this file is available in this folder. Just copy it
 in your home folder:
 
 ```bash
-$ cp mackup/doc/.mackup.cfg ~/
+cp mackup/doc/.mackup.cfg ~/
 ```
 
 ### Don't sync an application
@@ -119,7 +135,7 @@ A [sample](.mackup.cfg) of this file is available in this folder. Just copy it
 in your home folder:
 
 ```bash
-$ cp mackup/doc/.mackup.cfg ~/
+cp mackup/doc/.mackup.cfg ~/
 ```
 
 ### Get official support for an application
@@ -142,9 +158,9 @@ In your home, create a `.mackup` directory and add a config file for the
 application you'd like to support.
 
 ```bash
-$ mkdir ~/.mackup
-$ touch ~/.mackup/nethack.cfg
-$ touch ~/.mackup/my-files.cfg
+mkdir ~/.mackup
+touch ~/.mackup/nethack.cfg
+touch ~/.mackup/my-files.cfg
 ```
 
 Edit those files
@@ -169,6 +185,7 @@ bin
 ```
 
 You can run mackup to see if they are listed
+
 ```bash
 $ mackup list
 Supported applications:
@@ -179,6 +196,7 @@ Supported applications:
 ```
 
 All good, you can now sync your newly configured files:
+
 ```bash
 mackup backup
 ```

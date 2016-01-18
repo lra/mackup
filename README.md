@@ -341,6 +341,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Ruby Version](https://gist.github.com/fnichol/1912050)
 - [Ruby](https://www.ruby-lang.org/)
 - [RubyMine](http://www.jetbrains.com/ruby/)
+- [Rhythmbox](https://wiki.gnome.org/Apps/Rhythmbox)
 - [S3cmd](http://s3tools.org/s3cmd)
 - [SABnzbd](http://sabnzbd.org/)
 - [SBCL](http://www.sbcl.org/)

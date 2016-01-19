@@ -213,6 +213,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Fish](http://ridiculousfish.com/shell/)
 - [Flux](https://justgetflux.com/)
 - [FontExplorer X](http://www.fontexplorerx.com/)
+- [User Fonts](http://www.apple.com/osx)
 - [ForkLift 2](http://www.binarynights.com/forklift/)
 - [Gas Mask](https://github.com/2ndalpha/gasmask/)
 - [Gear Player](https://www.gearmusicplayer.com/)

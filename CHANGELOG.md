@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add support for Tunnelblick (via @sidick)
+- Add support for PHPStorm 10 (via @welly)
 - Add support for Robomongo (via @rbartoli)
 - Add support for AppCleaner (via @rbartoli)
 - Add support for Doxie (via @rbartoli)
@@ -10,6 +12,21 @@
 - Add support for WebStorm 11 (via @rbartoli)
 - Add support for z (via @rbartoli)
 - Add support for Electrum (via @rbartoli)
+- Add support for MPlayerX (via @digglife)
+- Add support for Day-O (via @mateusrevoredo)
+- Add support for Smooth Mouse (via @mateusrevoredo)
+- Add support for MacDown (via @mateusrevoredo)
+- Add support for Spotify Notifications (via @mateusrevoredo)
+- Fixed Gear Player Support (via @TCattd)
+- Fixed Mailplane Support (via @TCattd)
+- Add support for Maid (via @zanderzhng)
+- Add support for Ansible (via @mlrobinson)
+- Add support for Querious (via @ryanjbonnell)
+- Add support for IntelliJ IDEA 15 (via @singles)
+- Removed iTerm2 support since iTerm2 overwrites the symlink (via @adamlogic)
+- Add support for Rime (via @codefalling)
+- Improved support for R (via @wyf88)
+- Add support for Rhythmbox (via @orschiro)
 
 ## Mackup 0.8.12
 
@@ -25,8 +42,9 @@
 - Improved support for Composer, backup ./composer/composer.json (via @mnapoli)
 - Add support for Blackfire (via @mnapoli)
 - Add support for liquidprompt (via @GochoMugo)
-- Add support for REdshift (via @orschiro)
 - Add support for ShowyEdge (via @zanderzhng)
+- Add support for Redshift (via @orschiro)
+- Add support for CopyQ (via @orschiro)
 
 ## Mackup 0.8.11
 

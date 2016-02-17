@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for OpenEmu (via @fantattitude)
 - Add support for Tunnelblick (via @sidick)
 - Add support for PHPStorm 10 (via @welly)
 - Add support for Robomongo (via @rbartoli)

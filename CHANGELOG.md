@@ -27,6 +27,7 @@
 - Add support for Rime (via @codefalling)
 - Improved support for R (via @wyf88)
 - Add support for Rhythmbox (via @orschiro)
+- Add support for MonoDevelop (via @jamessa)
 
 ## Mackup 0.8.12
 

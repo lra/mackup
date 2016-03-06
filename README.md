@@ -254,6 +254,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [KeePassX](http://www.keepassx.org/)
 - [Keka](http://www.kekaosx.com/en/)
 - [Keybase](https://keybase.io/)
+- [Keyboard Layouts](http://www.apple.com/osx)
 - [Keymo](http://manytricks.com/keymo/)
 - [KeyRemap4MacBook](https://pqrs.org/osx/karabiner/)
 - [LaTeXiT](http://www.chachatelier.fr/latexit/latexit-home.php?lang=en)

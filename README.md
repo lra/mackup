@@ -386,6 +386,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Teamocil](http://remiprev.github.io/teamocil/)
 - [Terminator](https://launchpad.net/terminator/)
 - [TextMate](http://macromates.com/)
+- [TextMate 2](http://macromates.com/)
 - [Textual](http://www.codeux.com/textual/)
 - [Tig](https://github.com/jonas/tig)
 - [tint2](https://code.google.com/p/tint2/)

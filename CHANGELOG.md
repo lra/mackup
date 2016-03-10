@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for Textmate 2 (via @wchrisjohnson)
 - Add support for Tunnelblick (via @sidick)
 - Add support for PHPStorm 10 (via @welly)
 - Add support for Robomongo (via @rbartoli)

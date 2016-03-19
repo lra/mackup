@@ -284,6 +284,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [MPlayerX](http://mplayerx.org)
 - [MusicBrainz Picard](https://picard.musicbrainz.org/)
 - [MySQL](http://www.mysql.com/)
+- [MonoDevelop](http://www.monodevelop.com)
 - [Moom](http://manytricks.com/moom/)
 - [Mou](http://25.io/mou/)
 - [mpd](http://www.musicpd.org)

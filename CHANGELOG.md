@@ -33,6 +33,7 @@
 - Fixed Skype Support (via @TCattd)
 - Add support for Name Mangler (via @ryanjbonnell)
 - Add support for Workrave (via @doubleloop)
+- Add support for gdb (via @doubleloop)
 
 ## Mackup 0.8.12
 

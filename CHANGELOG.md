@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add support for PhpStorm 2016.1 (via @driesvints)
+
 ## Mackup 0.8.13
 
 - Add support for OpenEmu (via @fantattitude)
@@ -41,7 +43,6 @@
 - Add support for doublecmd (via @doubleloop)
 - Add support for BBEdit (via @ryanjbonnell)
 - Add support for TextExpander (via @cjs)
-- Add support for PhpStorm 11 (via @driesvints)
 
 ## Mackup 0.8.12
 

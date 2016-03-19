@@ -304,6 +304,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [OmniFocus](https://www.omnigroup.com/omnifocus/)
 - [OmniGraffle](https://www.omnigroup.com/omnigraffle/)
+- [OpenEmu](http://openemu.org)
 - [OpenSSH](http://www.openssh.com/) (NOTE: includes private keys)
 - [Pandoc](http://pandoc.org)
 - [Pass](http://www.passwordstore.org/)

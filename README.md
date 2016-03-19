@@ -408,6 +408,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Taskwarrior](http://taskwarrior.org/)
 - [Teamocil](http://remiprev.github.io/teamocil/)
 - [Terminator](https://launchpad.net/terminator/)
+- [TextExpander](https://smilesoftware.com/textexpander)
 - [TextMate](http://macromates.com/)
 - [Textual](http://www.codeux.com/textual/)
 - [Tig](https://github.com/jonas/tig)

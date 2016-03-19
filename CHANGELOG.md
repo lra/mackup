@@ -38,6 +38,7 @@
 - Add support for fasd (via @doubleloop)
 - Add support for doublecmd (via @doubleloop)
 - Add support for BBEdit (via @ryanjbonnell)
+- Add support for TextExpander (via @cjs)
 
 ## Mackup 0.8.12
 

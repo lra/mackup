@@ -32,6 +32,7 @@
 - Add support for MonoDevelop (via @jamessa)
 - Fixed Skype Support (via @TCattd)
 - Add support for Name Mangler (via @ryanjbonnell)
+- Add support for Workrave (via @doubleloop)
 
 ## Mackup 0.8.12
 

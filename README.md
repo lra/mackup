@@ -116,7 +116,9 @@ You can revert all your files to their original state.
 mackup uninstall
 ```
 
-This will remove the symlinks and copy back the files from the Mackup folder in Dropbox to their original places in your home. The Mackup folder and the files in it stay put, so that any other computer also running Mackup is unaffected.
+This will remove the symlinks and copy back the files from the Mackup folder in
+Dropbox to their original places in your home. The Mackup folder and the files
+in it stay put, so that any other computer also running Mackup is unaffected.
 
 ## Supported Storages
 

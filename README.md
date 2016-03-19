@@ -290,6 +290,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [mpd](http://www.musicpd.org)
 - [MPV](https://mpv.io/)
 - [myrepos](https://github.com/joeyh/myrepos)
+- [Name Mangler](http://manytricks.com/namemangler/)
 - [Nano](http://www.nano-editor.org/)
 - [Navicat](http://navicat.com/)
 - [ncmpcpp](http://rybczak.net/ncmpcpp/)

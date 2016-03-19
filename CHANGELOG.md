@@ -37,6 +37,7 @@
 - Add support for gdb (via @doubleloop)
 - Add support for fasd (via @doubleloop)
 - Add support for doublecmd (via @doubleloop)
+- Add support for BBEdit (via @ryanjbonnell)
 
 ## Mackup 0.8.12
 

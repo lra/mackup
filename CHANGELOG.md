@@ -5,6 +5,7 @@
 - Add support for OpenEmu (via @fantattitude)
 - Add .vim/plugin/settings folder (via @gmpetrov)
 - Add support for Tunnelblick (via @sidick)
+- Add support for Zathura (via @timidger)
 - Add support for PHPStorm 10 (via @welly)
 - Add support for Robomongo (via @rbartoli)
 - Add support for AppCleaner (via @rbartoli)

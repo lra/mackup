@@ -35,6 +35,7 @@
 - Add support for Workrave (via @doubleloop)
 - Add support for gdb (via @doubleloop)
 - Add support for fasd (via @doubleloop)
+- Add support for doublecmd (via @doubleloop)
 
 ## Mackup 0.8.12
 

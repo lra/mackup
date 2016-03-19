@@ -198,6 +198,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Divvy](http://mizage.com/divvy/)
 - [Docker](https://www.docker.com/)
 - [Dolphin](https://dolphin-emu.org/)
+- [Double Commander](http://doublecmd.sourceforge.net/)
 - [Doxie](http://www.getdoxie.com/)
 - [Droplr](https://droplr.com/)
 - [Dropzone 3](https://aptonic.com/dropzone3/)

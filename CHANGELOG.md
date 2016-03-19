@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add support for IntelliJ IDEA 2016.1 (via @jcgay)
+
 ## Mackup 0.8.13
 
 - Add support for OpenEmu (via @fantattitude)

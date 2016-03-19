@@ -428,6 +428,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [XtraFinder](http://www.trankynam.com/xtrafinder/)
 - [Yummy FTP](http://www.yummysoftware.com/)
 - [z](https://github.com/rupa/z)
+- [zathura](https://pwmt.org/projects/zathura/)
 - [Zsh](http://zsh.sourceforge.net/)
 - iTunes Applescripts
 

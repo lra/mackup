@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.13
+
 - Add support for OpenEmu (via @fantattitude)
 - Add .vim/plugin/settings folder (via @gmpetrov)
 - Add support for Tunnelblick (via @sidick)

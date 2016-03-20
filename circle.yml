@@ -1,6 +1,6 @@
 dependencies:
   pre:
-    - gem install mdl
+    - gem install mdl -v0.2.1
 
 test:
   override:

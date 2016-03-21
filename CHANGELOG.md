@@ -33,7 +33,7 @@
 - Improved support for R (via @wyf88)
 - Add support for Rhythmbox (via @orschiro)
 - Add support for MonoDevelop (via @jamessa)
-- Removed Skype Support. See [#768](https://github.com/lra/mackup/pull/768) (via @TCattd)
+- Removed Skype Support. See #768 (via @TCattd)
 - Add support for Name Mangler (via @ryanjbonnell)
 - Add support for Workrave (via @doubleloop)
 - Add support for gdb (via @doubleloop)

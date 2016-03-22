@@ -2,7 +2,17 @@
 
 ## WIP
 
+- Add support for PhpStorm 2016.1 (via @driesvints)
+- Added linux support for Audacious (via @doubleloop)
+- Add support for IntelliJ IDEA 2016.1 (via @jcgay)
+- Removed Skype Support. See #768 (via @TCattd)
+
+## Mackup 0.8.13
+
+- Add support for OpenEmu (via @fantattitude)
+- Add .vim/plugin/settings folder (via @gmpetrov)
 - Add support for Tunnelblick (via @sidick)
+- Add support for Zathura (via @timidger)
 - Add support for PHPStorm 10 (via @welly)
 - Add support for Robomongo (via @rbartoli)
 - Add support for AppCleaner (via @rbartoli)
@@ -27,6 +37,15 @@
 - Add support for Rime (via @codefalling)
 - Improved support for R (via @wyf88)
 - Add support for Rhythmbox (via @orschiro)
+- Add support for MonoDevelop (via @jamessa)
+- Fixed Skype Support (via @TCattd)
+- Add support for Name Mangler (via @ryanjbonnell)
+- Add support for Workrave (via @doubleloop)
+- Add support for gdb (via @doubleloop)
+- Add support for fasd (via @doubleloop)
+- Add support for doublecmd (via @doubleloop)
+- Add support for BBEdit (via @ryanjbonnell)
+- Add support for TextExpander (via @cjs)
 
 ## Mackup 0.8.12
 

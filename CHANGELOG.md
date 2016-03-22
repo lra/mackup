@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add support for PhpStorm 2016.1 (via @driesvints)
+
 ## Mackup 0.8.13
 
 - Add support for OpenEmu (via @fantattitude)

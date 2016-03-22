@@ -4,6 +4,7 @@
 
 - Add support for PhpStorm 2016.1 (via @driesvints)
 - Added linux support for Audacious (via @doubleloop)
+- Add support for IntelliJ IDEA 2016.1 (via @jcgay)
 
 ## Mackup 0.8.13
 

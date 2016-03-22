@@ -163,6 +163,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [asciinema](https://asciinema.org/)
 - [Aspell](http://aspell.net/)
 - [Atom](https://atom.io/)
+- [Audacious](http://audacious-media-player.org/)
 - [AusKey](https://abr.gov.au/AUSkey/)
 - [Autokey](https://code.google.com/p/autokey/)
 - [Awareness](http://iamfutureproof.com/tools/awareness/)

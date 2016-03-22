@@ -5,6 +5,7 @@
 - Add support for PhpStorm 2016.1 (via @driesvints)
 - Added linux support for Audacious (via @doubleloop)
 - Add support for IntelliJ IDEA 2016.1 (via @jcgay)
+- Removed Skype Support. See #768 (via @TCattd)
 
 ## Mackup 0.8.13
 
@@ -37,7 +38,7 @@
 - Improved support for R (via @wyf88)
 - Add support for Rhythmbox (via @orschiro)
 - Add support for MonoDevelop (via @jamessa)
-- Removed Skype Support. See #768 (via @TCattd)
+- Fixed Skype Support (via @TCattd)
 - Add support for Name Mangler (via @ryanjbonnell)
 - Add support for Workrave (via @doubleloop)
 - Add support for gdb (via @doubleloop)

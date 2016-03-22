@@ -388,7 +388,6 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
 - [Skim](http://skim-app.sourceforge.net/)
 - [Skitch](https://evernote.com/skitch/)
-- [Skype](http://www.skype.com/)
 - [Slate](https://github.com/jigish/slate)
 - [Slogger](http://brettterpstra.com/projects/slogger/)
 - [Smooth Mouse](http://smoothmouse.com/)

@@ -7,6 +7,7 @@
 - Add support for IntelliJ IDEA 2016.1 (via @jcgay)
 - Removed Skype Support. See #768 (via @TCattd)
 - Add support for PyCharm 5, Linux support (via @doubleloop)
+- added support for pycharm 6.1 (@doubleloop)
 
 ## Mackup 0.8.13
 

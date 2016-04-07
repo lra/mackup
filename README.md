@@ -217,6 +217,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Double Commander](http://doublecmd.sourceforge.net/)
 - [Doxie](http://www.getdoxie.com/)
 - [Droplr](https://droplr.com/)
+- [Drush](http://www.drush.org/)
 - [Dropzone 3](https://aptonic.com/dropzone3/)
 - [EditorConfig](http://editorconfig.org/)
 - [Electrum](https://electrum.org/#home)

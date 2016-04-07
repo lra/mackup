@@ -8,6 +8,7 @@
 - Removed Skype Support. See #768 (via @TCattd)
 - Add support for PyCharm 5, Linux support (via @doubleloop)
 - added support for pycharm 6.1 (@doubleloop)
+- Added support for Drush (@penance316)
 
 ## Mackup 0.8.13
 

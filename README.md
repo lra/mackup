@@ -309,6 +309,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [mpd](http://www.musicpd.org)
 - [MPlayerX](http://mplayerx.org)
 - [MPV](https://mpv.io/)
+- [MPS Youtube](https://github.com/mps-youtube/mps-youtube)
 - [MusicBrainz Picard](https://picard.musicbrainz.org/)
 - [myrepos](https://github.com/joeyh/myrepos)
 - [MySQL](http://www.mysql.com/)

@@ -438,6 +438,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 - [Wget](https://www.gnu.org/software/wget/)
 - [Witch](http://manytricks.com/witch/)
+- [WordPress WP-CLI](http://wp-cli.org/)
 - [Workrave](http://www.workrave.org/)
 - [X11](http://www.x.org/)
 - [Xamarin Studio](https://xamarin.com/studio)

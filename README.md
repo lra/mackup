@@ -342,6 +342,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [PhpStorm](http://www.jetbrains.com/phpstorm/)
 - [PIP](http://www.pip-installer.org/)
 - [Poedit](http://poedit.net/)
+- [Poet](https://github.com/awendt/poet)
 - [PokerStars](https://www.pokerstars.com/)
 - [PopClip](http://pilotmoon.com/popclip/)
 - [Popcorn-Time](https://popcorntime.io/)

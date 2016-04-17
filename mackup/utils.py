@@ -225,7 +225,7 @@ def get_dropbox_folder_location():
         else:
             print "Multiple Dropbox accounts found!"
             for account in accounts:
-                print account 
+                print account
             select = raw_input('Which account would you like to use? ')
             if select not in accounts:
                 error("That's not a valid account.")

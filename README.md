@@ -383,6 +383,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
 - [SelfControl](http://selfcontrolapp.com/)
 - [Sequel Pro](http://www.sequelpro.com/)
+- [ShadowsocksX](https://github.com/shadowsocks/shadowsocks-iOS/releases)
 - [ShiftIt](https://github.com/fikovnik/ShiftIt)
 - [Shimo](https://www.feingeist.io/shimo/)
 - [ShowyEdge](https://pqrs.org/osx/ShowyEdge/index.html.en)

@@ -1,5 +1,6 @@
 """System static utilities being used by the modules."""
 import base64
+import json
 import os
 import platform
 import shutil
@@ -195,18 +196,41 @@ def error(message):
 
 def get_dropbox_folder_location():
     """
-    Try to locate the Dropbox folder.
+    Try to locate the Dropbox folder. If there are multiple folders, offer the
+    user the choice.
 
     Returns:
         (str) Full path to the current Dropbox folder
     """
-    host_db_path = os.path.join(os.environ['HOME'], '.dropbox/host.db')
+    host_info_path = os.path.join(os.environ['HOME'], '.dropbox/info.json')
     try:
-        with open(host_db_path, 'r') as f_hostdb:
-            data = f_hostdb.read().split()
+        with open(host_info_path, 'r') as f_hostinfo:
+            data = f_hostinfo.read()
+            dropbox_home = False
     except IOError:
-        error("Unable to find your Dropbox install =(")
-    dropbox_home = base64.b64decode(data[1])
+        try:
+            host_db_path = os.path.join(os.environ['HOME'], '.dropbox/host.db')
+            with open(host_db_path, 'r') as f_hostdb:
+                data = f_hostdb.read().split()
+                dropbox_home = base64.b64decode(data[1])
+        except IOError:
+            error("Unable to find your Dropbox install =(")
+
+    if not dropbox_home:
+        json_data = json.loads(data)
+        accounts = json_data.keys()
+
+        if len(accounts) == 1:
+            dropbox_home = json_data[accounts[0]]['path']
+        else:
+            print "Multiple Dropbox accounts found!"
+            for account in accounts:
+                print account 
+            select = raw_input('Which account would you like to use? ')
+            if select not in accounts:
+                error("That's not a valid account.")
+            else:
+                dropbox_home = json_data[select]['path']
 
     return dropbox_home
 

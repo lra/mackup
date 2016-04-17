@@ -16,6 +16,7 @@
 - Add support for liquidprompt (via @GochoMugo)
 - Add support for REdshift (via @orschiro)
 - Add support for ShowyEdge (via @zanderzhng)
+- Add support for multiple linked Dropbox folders on initial config (via @jbz)
 
 ## Mackup 0.8.11
 

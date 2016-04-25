@@ -12,6 +12,7 @@
 - Added support for MPS-Youtube (via @fmartingr)
 - Add support for HandBrake (via @ryanjbonnell)
 - Add support for HyperDock (via @leek)
+- Add support for WordPress WP-CLI (via @ryanjbonnell)
 
 ## Mackup 0.8.13
 

@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add support for Sketch (via @enkia)
+
 ## Mackup 0.8.14
 
 - Add support for PhpStorm 2016.1 (via @driesvints)

@@ -390,6 +390,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [SHSH Blobs](https://en.wikipedia.org/wiki/SHSH_blob)
 - [Shuttle](http://fitztrev.github.io/shuttle/)
 - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
+- [Sketch](http://sketchapp.com/)
 - [Skim](http://skim-app.sourceforge.net/)
 - [Skitch](https://evernote.com/skitch/)
 - [Slate](https://github.com/jigish/slate)

@@ -1,6 +1,7 @@
 # Mackup Changelog
 
 ## WIP
+- Add support for Alfred 2 (via @abrahamvelazquez)
 
 ## Mackup 0.8.14
 

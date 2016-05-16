@@ -156,7 +156,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Ansible](http://www.ansible.com/)
 - [AppCleaner](http://freemacsoft.net/appcleaner/)
 - [AppCode](http://www.jetbrains.com/objc/)
-- [Arara](http://cereda.github.io/arara/)
+- [Arara](https://github.com/cereda/arara)
 - [aria2c](http://aria2.sourceforge.net/)
 - [Arm](https://www.atagar.com/arm/)
 - [Artistic Style](http://astyle.sourceforge.net)

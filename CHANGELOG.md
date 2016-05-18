@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added additional Navicat products to existing support (via @drbyte)
+
 ## Mackup 0.8.14
 
 - Add support for PhpStorm 2016.1 (via @driesvints)

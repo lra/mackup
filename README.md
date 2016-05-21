@@ -444,6 +444,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Vimperator](http://www.vimperator.org/vimperator)
 - [Viscosity](http://www.sparklabs.com/viscosity/)
 - [Visual Studio Code](https://code.visualstudio.com)
+- [Visual Studio Code - Insiders](https://code.visualstudio.com)
 - [VLC](http://www.videolan.org/)
 - [Wakatime](https://wakatime.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)

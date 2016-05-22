@@ -427,6 +427,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Tunnelblick](https://tunnelblick.net)
 - [tvnamer](https://github.com/dbr/tvnamer)
 - [Twitterrific](http://twitterrific.com/)
+- [Typinator](http://www.ergonis.com/products/typinator/)
 - [Übersicht](http://tracesof.net/uebersicht/)
 - [uTorrent](http://www.utorrent.com/)
 - [Ventrilo](http://www.ventrilo.com/)

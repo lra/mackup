@@ -41,6 +41,9 @@ If not running OS X, or you don't like Homebrew, you can use [pip](https://pip.p
 # Install Mackup with PIP
 pip install mackup
 
+# Update an existing version of Mackup with PIP
+pip install -upgrade mackup
+
 # Launch it and back up your files
 mackup backup
 ```

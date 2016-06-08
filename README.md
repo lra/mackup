@@ -39,10 +39,9 @@ If not running OS X, or you don't like Homebrew, you can use [pip](https://pip.p
 
 ```bash
 # Install Mackup with PIP
-pip install mackup
+pip install --upgrade mackup
 
-# Update an existing version of Mackup with PIP
-pip install -upgrade mackup
+Note: If a previous version of Mackup already exists, it will be upgraded to the latest version
 
 # Launch it and back up your files
 mackup backup

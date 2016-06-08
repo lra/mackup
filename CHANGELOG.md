@@ -3,6 +3,7 @@
 ## WIP
 
 - Add support for Wakatime (via @joshmedeski)
+- Add support for Swinsian (via @eramdam)
 
 ## Mackup 0.8.14
 

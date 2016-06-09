@@ -37,7 +37,8 @@ mackup backup
 
 If not running OS X, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/).
 
-> Note: The below command will check if a previous version of Mackup is already installed on your system.
+> Note: The below command will check if a previous version of Mackup
+> is already installed on your system.
 > If this is the case, it will be upgraded to the latest version.
 
 ```bash

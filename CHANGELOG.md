@@ -4,6 +4,7 @@
 
 - Add support for Wakatime (via @joshmedeski)
 - Add support for Kwm (via @neon64)
+- Add support for Slic3r (via @blamh)
 
 ## Mackup 0.8.14
 

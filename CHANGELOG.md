@@ -2,6 +2,9 @@
 
 ## WIP
 
+- Add support for Wakatime (via @joshmedeski)
+- Add support for Kwm (via @neon64)
+
 ## Mackup 0.8.14
 
 - Add support for PhpStorm 2016.1 (via @driesvints)

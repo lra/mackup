@@ -279,6 +279,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Keybase](https://keybase.io/)
 - [Keymo](http://manytricks.com/keymo/)
 - [KeyRemap4MacBook](https://pqrs.org/osx/karabiner/)
+- [Kwm](https://koekeishiya.github.io/kwm/)
 - [LaTeXiT](http://www.chachatelier.fr/latexit/latexit-home.php?lang=en)
 - [LaunchBar](https://www.obdev.at/products/launchbar/index.html)
 - [Liftoff](https://github.com/thoughtbot/liftoff)

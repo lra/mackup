@@ -88,11 +88,8 @@ class Mackup(object):
         app_db = appsdb.ApplicationsDatabase()
 
         # If a list of apps to sync is specify, we only allow those
-        if self._config.apps_to_sync:
-            apps_to_backup = self._config.apps_to_sync
-        else:
-            # We allow every supported app by default
-            apps_to_backup = app_db.get_app_names()
+        # Or we allow every supported app by default
+        apps_to_backup = self._config.apps_to_sync or app_db.get_app_names()
 
         # Remove the specified apps to ignore
         for app_name in self._config.apps_to_ignore:

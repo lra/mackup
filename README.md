@@ -409,6 +409,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Sublime Text](http://www.sublimetext.com/)
 - [Subversion](http://subversion.apache.org/)
 - [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html)
+- [Surge](http://surge.run/manual/)
 - [TaskPaper](http://www.hogbaysoftware.com/products/taskpaper)
 - [Taskwarrior](http://taskwarrior.org/)
 - [Teamocil](http://remiprev.github.io/teamocil/)

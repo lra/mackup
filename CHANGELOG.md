@@ -9,6 +9,7 @@
 - Add support for Kwm (via @neon64)
 - Add support for Surge (via @Altynai)
 - Add support for HyperTerm (via @atipugin)
+- Add support for FlexGet (via @benwa)
 
 ## Mackup 0.8.14
 

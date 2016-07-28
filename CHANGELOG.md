@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add support for Paintbrush 2.1.2 (via @domenicbrosh)
+- Add support for IntelliJ IDEA 2016.2 (via @danielsuo)
 - Add support for WebStorm 2016.1 (via @halhenke)
 - Add support for Wakatime (via @joshmedeski)
 - Add support for Kwm (via @neon64)

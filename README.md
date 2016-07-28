@@ -334,6 +334,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [OmniGraffle](https://www.omnigroup.com/omnigraffle/)
 - [OpenEmu](http://openemu.org)
 - [OpenSSH](http://www.openssh.com/) (NOTE: includes private keys)
+- [Paintbrush](http://paintbrush.sourceforge.net/)
 - [Pandoc](http://pandoc.org)
 - [Pass](http://www.passwordstore.org/)
 - [Pastebot](http://tapbots.com/software/pastebot/)

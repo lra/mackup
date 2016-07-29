@@ -10,6 +10,7 @@
 - Add support for Surge (via @Altynai)
 - Add support for HyperTerm (via @atipugin)
 - Add support for FlexGet (via @benwa)
+- Add support for Ctags (via @joshmedeski)
 
 ## Mackup 0.8.14
 

@@ -204,6 +204,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [CopyQ](https://github.com/hluk/CopyQ)
 - [CoRD](http://cord.sourceforge.net/)
 - [CotEditor](http://coteditor.com/)
+- [Ctags](http://ctags.sourceforge.net/)
 - [Cyberduck](https://cyberduck.io/)
 - [Dash](https://kapeli.com/dash)
 - [Day-O](http://www.shauninman.com/archive/2011/10/20/day_o_mac_menu_bar_clock)

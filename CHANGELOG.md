@@ -11,6 +11,7 @@
 - Add support for HyperTerm (via @atipugin)
 - Add support for FlexGet (via @benwa)
 - Add support for Ctags (via @joshmedeski)
+- Add support for KeepingYouAwake (via @zharmany)
 
 ## Mackup 0.8.14
 

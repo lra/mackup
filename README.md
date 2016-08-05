@@ -278,6 +278,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Kaleidoscope](http://www.kaleidoscopeapp.com/)
 - [Karabiner](https://pqrs.org/osx/karabiner/)
 - [KeePassX](http://www.keepassx.org/)
+- [KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake)
 - [Keka](http://www.kekaosx.com/en/)
 - [Keybase](https://keybase.io/)
 - [Keymo](http://manytricks.com/keymo/)

@@ -152,7 +152,9 @@ class ApplicationProfile(object):
             # any subfolder of ~/Library on GNU/Linux)
             file_or_dir_exists = (os.path.isfile(mackup_filepath) or
                                   os.path.isdir(mackup_filepath))
-            pointing_to_mackup = (os.path.islink(home_filepath) and
+            is_valid_link = (os.path.islink(home_filepath) and
+                             os.path.exists(home_filepath))
+            pointing_to_mackup = (is_valid_link and
                                   os.path.exists(mackup_filepath) and
                                   os.path.samefile(mackup_filepath,
                                                    home_filepath))
@@ -190,14 +192,14 @@ class ApplicationProfile(object):
                 else:
                     utils.link(mackup_filepath, home_filepath)
             elif self.verbose:
-                if os.path.exists(home_filepath):
+                if pointing_to_mackup:
                     print("Doing nothing\n  {}\n  already linked by\n  {}"
                           .format(mackup_filepath, home_filepath))
-                elif os.path.islink(home_filepath):
+                elif not is_valid_link:
                     print("Doing nothing\n  {}\n  "
                           "is a broken link, you might want to fix it."
                           .format(home_filepath))
-                else:
+                else:  # not file_or_dir_exists
                     print("Doing nothing\n  {}\n  does not exist"
                           .format(mackup_filepath))
 

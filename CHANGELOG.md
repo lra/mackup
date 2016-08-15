@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for Telegram for macOS (via @matti)
 - Add support for Paintbrush 2.1.2 (via @domenicbrosh)
 - Add support for IntelliJ IDEA 2016.2 (via @danielsuo)
 - Add support for WebStorm 2016.1 (via @halhenke)

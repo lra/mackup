@@ -13,6 +13,8 @@
 - Add support for FlexGet (via @benwa)
 - Add support for Ctags (via @joshmedeski)
 - Add support for KeepingYouAwake (via @zharmany)
+- Don't fail when the home file is a broken link. (via @zhangfandong)
+- Add tests to cover application restore. (via @zhangfandong)
 
 ## Mackup 0.8.14
 

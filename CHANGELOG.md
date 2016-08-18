@@ -13,6 +13,7 @@
 - Add support for FlexGet (via @benwa)
 - Add support for Ctags (via @joshmedeski)
 - Add support for KeepingYouAwake (via @zharmany)
+- Add support for Terminal (via @ryanjbonnell)
 
 ## Mackup 0.8.14
 

@@ -419,6 +419,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Taskwarrior](http://taskwarrior.org/)
 - [Teamocil](http://remiprev.github.io/teamocil/)
 - [Telegram for macOS](https://macos.telegram.org)
+- [Terminal](http://www.apple.com/osx/apps/)
 - [Terminator](https://launchpad.net/terminator/)
 - [TextExpander](https://smilesoftware.com/textexpander)
 - [TextMate](http://macromates.com/)

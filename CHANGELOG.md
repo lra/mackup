@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add support for PyCharm 2016.2 (via @danielsuo)
+- Add support for Telegram for macOS (via @matti)
 - Add support for Paintbrush 2.1.2 (via @domenicbrosh)
 - Add support for IntelliJ IDEA 2016.2 (via @danielsuo)
 - Add support for WebStorm 2016.1 (via @halhenke)
@@ -12,6 +14,7 @@
 - Add support for FlexGet (via @benwa)
 - Add support for Ctags (via @joshmedeski)
 - Add support for KeepingYouAwake (via @zharmany)
+- Add support for Terminal (via @ryanjbonnell)
 
 ## Mackup 0.8.14
 

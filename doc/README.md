@@ -1,13 +1,24 @@
 # Configuration
 
-All the configuration is done into a file named `.mackup.cfg` to store at the
+All the configuration is done in a file named `.mackup.cfg` stored at the
 root of your home folder.
 
-To configure mackup, create a file named ´.mackup.cfg´ in your home directory.
+To configure Mackup, create a file named ´.mackup.cfg´ in your home directory.
 
 ```bash
 vi ~/.mackup.cfg
 ```
+
+Add personal files to sync by including the `configuration_files` header, e.g.
+
+```ini
+[configuration_files]
+.gitignore_global
+.config/your-custom-file
+```
+
+Note that Mackup assumes the file paths listed here are relative to your home
+directory.
 
 ## Storage
 

@@ -2,6 +2,40 @@
 
 ## WIP
 
+- Add support for PyCharm 2016.2 (via @danielsuo)
+- Add support for Telegram for macOS (via @matti)
+- Add support for Paintbrush 2.1.2 (via @domenicbrosh)
+- Add support for IntelliJ IDEA 2016.2 (via @danielsuo)
+- Add support for WebStorm 2016.1 (via @halhenke)
+- Add support for Wakatime (via @joshmedeski)
+- Add support for Kwm (via @neon64)
+- Add support for Surge (via @Altynai)
+- Add support for HyperTerm (via @atipugin)
+- Add support for FlexGet (via @benwa)
+- Add support for Ctags (via @joshmedeski)
+- Add support for KeepingYouAwake (via @zharmany)
+- Add support for Terminal (via @ryanjbonnell)
+
+## Mackup 0.8.14
+
+- Add support for PhpStorm 2016.1 (via @driesvints)
+- Added linux support for Audacious (via @doubleloop)
+- Add support for IntelliJ IDEA 2016.1 (via @jcgay)
+- Removed Skype Support. See #768 (via @TCattd)
+- Add support for PyCharm 5, Linux support (via @doubleloop)
+- added support for pycharm 6.1 (@doubleloop)
+- Added support for Drush (@penance316)
+- Added support for MPS-Youtube (via @fmartingr)
+- Add support for HandBrake (via @ryanjbonnell)
+- Add support for HyperDock (via @leek)
+- Add support for WordPress WP-CLI (via @ryanjbonnell)
+
+## Mackup 0.8.13
+
+- Add support for OpenEmu (via @fantattitude)
+- Add .vim/plugin/settings folder (via @gmpetrov)
+- Add support for Tunnelblick (via @sidick)
+- Add support for Zathura (via @timidger)
 - Add support for PHPStorm 10 (via @welly)
 - Add support for Robomongo (via @rbartoli)
 - Add support for AppCleaner (via @rbartoli)
@@ -26,6 +60,15 @@
 - Add support for Rime (via @codefalling)
 - Improved support for R (via @wyf88)
 - Add support for Rhythmbox (via @orschiro)
+- Add support for MonoDevelop (via @jamessa)
+- Fixed Skype Support (via @TCattd)
+- Add support for Name Mangler (via @ryanjbonnell)
+- Add support for Workrave (via @doubleloop)
+- Add support for gdb (via @doubleloop)
+- Add support for fasd (via @doubleloop)
+- Add support for doublecmd (via @doubleloop)
+- Add support for BBEdit (via @ryanjbonnell)
+- Add support for TextExpander (via @cjs)
 
 ## Mackup 0.8.12
 

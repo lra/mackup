@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Fix Python3 string conversion (via @wy-z and @MadeOfMagicAndWires)
 - Add support for PyCharm 2016.2 (via @danielsuo)
 - Add support for Telegram for macOS (via @matti)
 - Add support for Paintbrush 2.1.2 (via @domenicbrosh)

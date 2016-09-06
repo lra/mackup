@@ -222,7 +222,7 @@ class Config(object):
         if sys.version_info[0] < 3:
             path = path.encode("utf-8")
         else:
-            path = path.decode("utf-8")
+            path = str(path)
 
         return path
 

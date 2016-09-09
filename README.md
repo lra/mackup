@@ -325,6 +325,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Navicat](http://navicat.com/)
 - [ncmpcpp](http://rybczak.net/ncmpcpp/)
 - [neovim](https://github.com/neovim/neovim)
+- [Nethack](http://www.nethack.org)
 - [newsbeuter](http://newsbeuter.org/)
 - [ngrok](https://ngrok.com/)
 - [Nomacs](http://nomacs.org/)

@@ -15,6 +15,7 @@
 - Add support for Ctags (via @joshmedeski)
 - Add support for KeepingYouAwake (via @zharmany)
 - Add support for Terminal (via @ryanjbonnell)
+- Add support for Factorio (via @icopp)
 
 ## Mackup 0.8.14
 

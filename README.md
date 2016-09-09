@@ -162,6 +162,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Artistic Style](http://astyle.sourceforge.net)
 - [asciinema](https://asciinema.org/)
 - [Aspell](http://aspell.net/)
+- [Atlantis](http://www.riverdark.net/atlantis/)
 - [Atom](https://atom.io/)
 - [Audacious](http://audacious-media-player.org/)
 - [AusKey](https://abr.gov.au/AUSkey/)

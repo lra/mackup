@@ -151,6 +151,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Ack](http://beyondgrep.com/)
 - [Adium](https://adium.im/)
 - [Adobe Camera Raw](http://www.adobe.com/products/photoshop/extend.html)
+- [Adobe Illustrator CC](https://www.adobe.com/products/illustrator.html)
 - [Adobe Photoshop CC](http://www.adobe.com/products/photoshop.html)
 - [Adobe Photoshop Lightroom CC](https://www.adobe.com/products/photoshop-lightroom.html)
 - [Android Studio](https://developer.android.com/sdk/)

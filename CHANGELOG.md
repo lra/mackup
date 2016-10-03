@@ -2,6 +2,23 @@
 
 ## WIP
 
+- Add support for PyCharm 2016.2 (via @danielsuo)
+- Add support for Telegram for macOS (via @matti)
+- Add support for Paintbrush 2.1.2 (via @domenicbrosh)
+- Add support for IntelliJ IDEA 2016.2 (via @danielsuo)
+- Add support for WebStorm 2016.1 (via @halhenke)
+- Add support for Wakatime (via @joshmedeski)
+- Add support for Kwm (via @neon64)
+- Add support for Surge (via @Altynai)
+- Add support for HyperTerm (via @atipugin)
+- Add support for FlexGet (via @benwa)
+- Add support for Ctags (via @joshmedeski)
+- Add support for KeepingYouAwake (via @zharmany)
+- Add support for Terminal (via @ryanjbonnell)
+- Added support for GoShare (@fmartingr)
+
+## Mackup 0.8.14
+
 - Add support for PhpStorm 2016.1 (via @driesvints)
 - Added linux support for Audacious (via @doubleloop)
 - Add support for IntelliJ IDEA 2016.1 (via @jcgay)
@@ -9,7 +26,10 @@
 - Add support for PyCharm 5, Linux support (via @doubleloop)
 - added support for pycharm 6.1 (@doubleloop)
 - Added support for Drush (@penance316)
-- Added support for GoShare (@fmartingr)
+- Added support for MPS-Youtube (via @fmartingr)
+- Add support for HandBrake (via @ryanjbonnell)
+- Add support for HyperDock (via @leek)
+- Add support for WordPress WP-CLI (via @ryanjbonnell)
 
 ## Mackup 0.8.13
 

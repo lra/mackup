@@ -45,7 +45,7 @@ pip install mackup
 mackup backup
 ```
 
-You're all set and constantly backuped from now on.
+You're all set and constantly backed up from now on.
 
 Next, on any new workstation, do:
 

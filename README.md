@@ -282,6 +282,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake)
 - [Keka](http://www.kekaosx.com/en/)
 - [Keybase](https://keybase.io/)
+- [Keyboard Maestro](http://www.keyboardmaestro.com)
 - [Keymo](http://manytricks.com/keymo/)
 - [KeyRemap4MacBook](https://pqrs.org/osx/karabiner/)
 - [Kwm](https://koekeishiya.github.io/kwm/)

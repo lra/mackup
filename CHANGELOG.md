@@ -1,6 +1,7 @@
 # Mackup Changelog
 
 ## WIP
+- Add support for Alfred 2 (via @abrahamvelazquez)
 
 - Add support for PyCharm 2016.2 (via @danielsuo)
 - Add support for Telegram for macOS (via @matti)

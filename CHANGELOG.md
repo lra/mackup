@@ -3,6 +3,7 @@
 ## WIP
 
 - Add support for Boxer (via @icopp)
+- Fixed error with a string conversion in Python 3+ (via @fmartingr)
 
 ## Mackup 0.8.16
 

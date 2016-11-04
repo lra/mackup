@@ -262,3 +262,22 @@ class TestConfig(unittest.TestCase):
 
     def test_config_old_config(self):
         self.assertRaises(SystemExit, Config, 'mackup-old-config.cfg')
+
+    def test_config_generate_for_app(self):
+        cfg = Config.generate_for_app('test app')
+
+        assert cfg is not None
+
+        assert cfg.has_section('application')
+        assert cfg.has_section('configuration_files')
+
+        assert cfg.has_option('application', 'name')
+
+        assert isinstance(cfg.get('application', 'name'), str)
+        assert cfg.get('application', 'name') == u'Test App'
+
+        assert len(cfg.items('configuration_files')) == 3
+        assert cfg.items('configuration_files') == [
+            (u'library/preferences/com.testapp.plist', ''),
+            (u'.config/testapp', ''),
+            (u'.testapp.cfg', '')]

@@ -8,6 +8,7 @@ Usage:
   mackup [options] backup
   mackup [options] restore
   mackup [options] uninstall
+  mackup [options] generate <app>
   mackup (-h | --help)
   mackup --version
 
@@ -26,6 +27,10 @@ Modes of action:
  3. restore: link the conf files already in your synced storage on your system,
     use it on any new system you use.
  4. uninstall: reset everything as it was before using Mackup.
+ 5. generate: generate config file inside .mackup folder for the specified app.
+    The algorithm will try to populate the config with relevant data, but it is
+    not guaranteed that this data will be valid.
+    The file will be named '<appname>.cfg'.
 
 By default, Mackup syncs all application data (including private keys!) via
 Dropbox, but may be configured to exclude applications or use a different
@@ -34,9 +39,13 @@ backend with a .mackup.cfg file.
 See https://github.com/lra/mackup/tree/master/doc for more information.
 
 """
+import os
+import sys
+
 from docopt import docopt
 from .appsdb import ApplicationsDatabase
 from .application import ApplicationProfile
+from .config import Config
 from .constants import MACKUP_APP_NAME, VERSION
 from .mackup import Mackup
 from . import utils
@@ -173,6 +182,20 @@ def main():
         output += ("{} applications supported in Mackup v{}"
                    .format(len(app_db.get_app_names()), VERSION))
         print(output)
+    elif args['generate']:
+        mckp.check_for_usable_custom_config_env()
+        app_name = args['<app>']
+        app_file = os.path.join(mckp.custom_apps_dir, app_name + '.cfg')
+        if not os.path.exists(app_file) or (
+            utils.confirm("{cfg} already exists. "
+                          "Do you want to recreate it?".format(cfg=app_file))):
+            config = Config.generate_for_app(app_name)
+            print("Creating {cfg} "
+                  "with the following data:\n".format(cfg=app_file))
+            config.write(sys.stdout)
+            if not dry_run:
+                with open(app_file, 'wb') as f:
+                    config.write(f)
 
     # Delete the tmp folder
     mckp.clean_temp_folder()

@@ -6,6 +6,8 @@ import sys
 
 from .constants import (MACKUP_BACKUP_PATH,
                         MACKUP_CONFIG_FILE,
+                        MACOS_CONFIG_DIR,
+                        MACOS_PREF_DIR,
                         ENGINE_DROPBOX,
                         ENGINE_GDRIVE,
                         ENGINE_COPY,
@@ -128,6 +130,31 @@ class Config(object):
             set. Set of application names to allow, lowercase
         """
         return set(self._apps_to_sync)
+
+    @staticmethod
+    def generate_for_app(app_name):
+        parser = configparser.SafeConfigParser(allow_no_value=True)
+        parser.add_section('application')
+        parser.add_section('configuration_files')
+        parser.set('application', 'name', app_name.title())
+
+        app_name = app_name.lower().replace(' ', '')
+        paths = [MACOS_PREF_DIR, MACOS_CONFIG_DIR, '']
+
+        for path in paths:
+            fullpath = os.path.join(os.environ['HOME'], path)
+            if not os.path.isdir(fullpath):
+                continue
+
+            for filename in os.listdir(fullpath):
+                is_config = (
+                    app_name in filename.lower() and
+                    (path != '' or filename.startswith('.')))
+                if is_config:
+                    app_file = os.path.join(path, filename)
+                    parser.set('configuration_files', app_file)
+
+        return parser
 
     def _setup_parser(self, filename=None):
         """

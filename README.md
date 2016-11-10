@@ -189,6 +189,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Chef](https://www.chef.io/chef/)
 - [Chicken](http://sourceforge.net/projects/chicken/)
 - [Clementine](https://www.clementine-player.org/)
+- [CLion](https://www.jetbrains.com/clion/)
 - [ClipMenu](http://www.clipmenu.com/)
 - [Clipy](https://clipy-app.com/)
 - [CloudApp](http://getcloudapp.com/)

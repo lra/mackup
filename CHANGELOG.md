@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for CLion 2016.2 (via @danielsuo)
 - Add support for Keyboard Maestro (via @danielsuo)
 - Add support for Karabiner Elements (via @danielsuo)
 - Add support for PyCharm 2016.2 (via @danielsuo)

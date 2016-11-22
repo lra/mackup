@@ -67,7 +67,7 @@ engine = copy
 
 If you want to specify another directory, you can use the `file_system` engine
 and Mackup won't try to detect any path for you: it will store your files where
-you explicitely told him to, using the `path` setting.
+you explicitly told it to, using the `path` setting.
 The `path` can be absolute (from the `/` of your drive) or relative to your
 home directory.
 The `path` setting is mandatory when using the `file_system` engine.

@@ -262,6 +262,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Gnome SSH Tunnel Manager](http://sourceforge.net/projects/gstm/)
 - [GnuPG](https://www.gnupg.org/)  (NOTE: includes private keys)
 - [Go2Shell](http://zipzapmac.com/Go2Shell)
+- [GoShare](https://github.com/dictget/goshare)
 - [Gradle](http://gradle.org)
 - [GrandTotal 3](http://www.mediaatelier.com/GrandTotal4/)
 - [Hammerspoon](http://www.hammerspoon.org/)

@@ -25,6 +25,7 @@
 - Add support for Wireshark 2 (via @tdm00)
 - Add support for Homebridge (via @icopp)
 - Add support for Luftrausers (via @icopp)
+- Add support for Nethack (via @icopp)
 
 ## Mackup 0.8.14
 

@@ -460,6 +460,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Wakatime](https://wakatime.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 - [Wget](https://www.gnu.org/software/wget/)
+- [Wireshark 2](https://www.wireshark.org)
 - [Witch](http://manytricks.com/witch/)
 - [WordPress WP-CLI](http://wp-cli.org/)
 - [Workrave](http://www.workrave.org/)

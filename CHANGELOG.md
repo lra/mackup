@@ -20,6 +20,7 @@
 - Add support for Visual Studio Code - Insiders (via @dannyamey)
 - Add support for Typinator (via @ericpedia)
 - Add support for Swinsian (via @eramdam)
+- Add support for Slic3r (via @blamh)
 
 ## Mackup 0.8.14
 

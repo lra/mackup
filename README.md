@@ -234,7 +234,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Fantastical](http://flexibits.com/fantastical)
 - [fasd](https://github.com/clvv/fasd)
 - [Feeds](http://www.feedsapp.com/)
-- [Filezilla](https://filezilla-project.org/)
+- [FileZilla](https://filezilla-project.org/)
 - [Fish](http://ridiculousfish.com/shell/)
 - [Fisherman](http://fisherman.sh/)
 - [FlexGet](http://flexget.com/)

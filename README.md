@@ -157,6 +157,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Adobe Camera Raw](http://www.adobe.com/products/photoshop/extend.html)
 - [Adobe Photoshop CC](http://www.adobe.com/products/photoshop.html)
 - [Airmail](http://airmailapp.com/)
+- [Ancient Domains of Mystery](http://www.adom.de/home/index.html)
 - [Android Studio](https://developer.android.com/sdk/)
 - [Ansible](http://www.ansible.com/)
 - [AppCleaner](http://freemacsoft.net/appcleaner/)

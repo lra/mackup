@@ -425,6 +425,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Slate](https://github.com/jigish/slate)
 - [Slic3r](http://slic3r.org)
 - [Slogger](http://brettterpstra.com/projects/slogger/)
+- [SmartGit](http://www.syntevo.com/smartgit/)
 - [Smooth Mouse](http://smoothmouse.com/)
 - [Soulver](http://www.acqualia.com/soulver/)
 - [SourceTree](https://www.sourcetreeapp.com/)

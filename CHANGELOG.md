@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add support for SmartGit (via @revolter)
+
 ## Mackup 0.8.15
 
 - Add support for CLion 2016.2 (via @danielsuo)

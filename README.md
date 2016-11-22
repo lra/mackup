@@ -232,6 +232,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Feeds](http://www.feedsapp.com/)
 - [Filezilla](https://filezilla-project.org/)
 - [Fish](http://ridiculousfish.com/shell/)
+- [Fisherman](http://fisherman.sh/)
 - [FlexGet](http://flexget.com/)
 - [Flux](https://justgetflux.com/)
 - [FontExplorer X](http://www.fontexplorerx.com/)

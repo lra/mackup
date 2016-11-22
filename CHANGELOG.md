@@ -17,6 +17,7 @@
 - Add support for Terminal (via @ryanjbonnell)
 - Add support for Sketch (via @enkia)
 - Added additional Navicat products to existing support (via @drbyte)
+- Add support for Visual Studio Code - Insiders (via @dannyamey)
 
 ## Mackup 0.8.14
 

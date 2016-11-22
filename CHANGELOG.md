@@ -16,6 +16,7 @@
 - Add support for KeepingYouAwake (via @zharmany)
 - Add support for Terminal (via @ryanjbonnell)
 - Add support for Sketch (via @enkia)
+- Added additional Navicat products to existing support (via @drbyte)
 
 ## Mackup 0.8.14
 

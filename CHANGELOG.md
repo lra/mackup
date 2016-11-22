@@ -15,6 +15,8 @@
 - Add support for Ctags (via @joshmedeski)
 - Add support for KeepingYouAwake (via @zharmany)
 - Add support for Terminal (via @ryanjbonnell)
+- Add support for Adobe Lightroom CC (via @dpgowan)
+- Add Support for Adobe Illustrator CC (via @dpgowan)
 
 ## Mackup 0.8.14
 

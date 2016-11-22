@@ -3,6 +3,7 @@
 ## WIP
 
 - Add support for SmartGit (via @revolter)
+- Add support for Kdenlive (via @orschiro)
 
 ## Mackup 0.8.15
 

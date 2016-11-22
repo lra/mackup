@@ -297,6 +297,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Kaleidoscope](http://www.kaleidoscopeapp.com/)
 - [Karabiner](https://pqrs.org/osx/karabiner/)
 - [Karabiner Elements](https://github.com/tekezo/Karabiner-Elements)
+- [Kdenlive](https://kdenlive.org/)
 - [KeePassX](http://www.keepassx.org/)
 - [KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake)
 - [Keka](http://www.kekaosx.com/en/)

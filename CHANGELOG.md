@@ -21,6 +21,7 @@
 - Add support for Typinator (via @ericpedia)
 - Add support for Swinsian (via @eramdam)
 - Add support for Slic3r (via @blamh)
+- Add support for Airmail (via @bleen)
 
 ## Mackup 0.8.14
 

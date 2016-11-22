@@ -292,6 +292,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [JSHint](http://jshint.com/)
 - [Julia](http://julialang.org)
 - [Jumpcut](http://jumpcut.sourceforge.net/)
+- [Jupyter](http://jupyter.org/)
 - [Kaleidoscope](http://www.kaleidoscopeapp.com/)
 - [Karabiner](https://pqrs.org/osx/karabiner/)
 - [Karabiner Elements](https://github.com/tekezo/Karabiner-Elements)

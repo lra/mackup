@@ -26,6 +26,7 @@
 - Add support for Homebridge (via @icopp)
 - Add support for Luftrausers (via @icopp)
 - Add support for Nethack (via @icopp)
+- Add support for Factorio (via @icopp)
 
 ## Mackup 0.8.14
 

@@ -31,6 +31,8 @@
 - Add support for Forge (via @icopp)
 - Add support for Ancient Domains of Mystery (via @icopp)
 - Add support for Atlantis (via @icopp)
+- Add support for Adobe Lightroom CC (via @dpgowan)
+- Add Support for Adobe Illustrator CC (via @dpgowan)
 
 ## Mackup 0.8.14
 

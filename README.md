@@ -264,6 +264,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Heroku](https://www.heroku.com/)
 - [HexChat](https://hexchat.github.io/)
 - [Hexels](http://hexraystudios.com/hexels/)
+- [Homebridge](https://github.com/nfarina/homebridge)
 - [Houdini](http://uglyapps.co.uk/houdini/)
 - [Htop](http://htop.sourceforge.net/)
 - [HyperDock](https://bahoom.com/hyperdock)

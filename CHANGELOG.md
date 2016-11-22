@@ -23,6 +23,7 @@
 - Add support for Slic3r (via @blamh)
 - Add support for Airmail (via @bleen)
 - Add support for Wireshark 2 (via @tdm00)
+- Add support for Homebridge (via @icopp)
 
 ## Mackup 0.8.14
 

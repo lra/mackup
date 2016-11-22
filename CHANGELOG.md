@@ -24,6 +24,7 @@
 - Add support for Airmail (via @bleen)
 - Add support for Wireshark 2 (via @tdm00)
 - Add support for Homebridge (via @icopp)
+- Add support for Luftrausers (via @icopp)
 
 ## Mackup 0.8.14
 

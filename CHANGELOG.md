@@ -27,6 +27,7 @@
 - Add support for Luftrausers (via @icopp)
 - Add support for Nethack (via @icopp)
 - Add support for Factorio (via @icopp)
+- Add support for Environmental Station Alpha (via @icopp)
 
 ## Mackup 0.8.14
 

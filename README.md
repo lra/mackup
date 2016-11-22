@@ -243,6 +243,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [FlexGet](http://flexget.com/)
 - [Flux](https://justgetflux.com/)
 - [FontExplorer X](http://www.fontexplorerx.com/)
+- [Forge](http://www.slightlymagic.net/wiki/Forge)
 - [ForkLift 2](http://www.binarynights.com/forklift/)
 - [Gas Mask](https://github.com/2ndalpha/gasmask/)
 - [gdb](https://www.gnu.org/software/gdb/)

@@ -33,6 +33,7 @@
 - Add support for Atlantis (via @icopp)
 - Add support for Adobe Lightroom CC (via @dpgowan)
 - Add Support for Adobe Illustrator CC (via @dpgowan)
+- Added support for GoShare (@fmartingr)
 
 ## Mackup 0.8.14
 

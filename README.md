@@ -293,6 +293,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Jumpcut](http://jumpcut.sourceforge.net/)
 - [Kaleidoscope](http://www.kaleidoscopeapp.com/)
 - [Karabiner](https://pqrs.org/osx/karabiner/)
+- [Kdenlive](https://kdenlive.org/)
 - [KeePassX](http://www.keepassx.org/)
 - [KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake)
 - [Keka](http://www.kekaosx.com/en/)

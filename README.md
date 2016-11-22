@@ -35,17 +35,21 @@ brew install mackup
 mackup backup
 ```
 
-If not running OS X, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/):
+If not running OS X, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/).
+
+> Note: The below command will check if a previous version of Mackup
+> is already installed on your system.
+> If this is the case, it will be upgraded to the latest version.
 
 ```bash
 # Install Mackup with PIP
-pip install mackup
+pip install --upgrade mackup
 
 # Launch it and back up your files
 mackup backup
 ```
 
-You're all set and constantly backuped from now on.
+You're all set and constantly backed up from now on.
 
 Next, on any new workstation, do:
 
@@ -152,6 +156,8 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Adium](https://adium.im/)
 - [Adobe Camera Raw](http://www.adobe.com/products/photoshop/extend.html)
 - [Adobe Photoshop CC](http://www.adobe.com/products/photoshop.html)
+- [Airmail](http://airmailapp.com/)
+- [Ancient Domains of Mystery](http://www.adom.de/home/index.html)
 - [Android Studio](https://developer.android.com/sdk/)
 - [Ansible](http://www.ansible.com/)
 - [AppCleaner](http://freemacsoft.net/appcleaner/)
@@ -162,6 +168,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Artistic Style](http://astyle.sourceforge.net)
 - [asciinema](https://asciinema.org/)
 - [Aspell](http://aspell.net/)
+- [Atlantis](http://www.riverdark.net/atlantis/)
 - [Atom](https://atom.io/)
 - [Audacious](http://audacious-media-player.org/)
 - [AusKey](https://abr.gov.au/AUSkey/)
@@ -211,6 +218,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [DbVisualizer](https://www.dbvis.com/)
 - [Deal Alert](http://dealalertapp.com/)
 - [Default Folder X](http://www.stclairsoft.com/DefaultFolderX/)
+- [Devilspie2](http://www.gusnan.se/devilspie2/)
 - [dig](http://en.wikipedia.org/wiki/Dig_(command))
 - [Divvy](http://mizage.com/divvy/)
 - [Docker](https://www.docker.com/)
@@ -224,16 +232,20 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Electrum](https://electrum.org/#home)
 - [Emacs](http://www.gnu.org/software/emacs/)
 - [Enjoyable](https://yukkurigames.com/enjoyable/)
+- [Environmental Station Alpha](http://www.hempuli.com/esa/)
 - [Exercism](http://exercism.io/)
 - [ExpanDrive](http://www.expandrive.com/)
+- [Factorio](https://www.factorio.com)
 - [Fantastical](http://flexibits.com/fantastical)
 - [fasd](https://github.com/clvv/fasd)
 - [Feeds](http://www.feedsapp.com/)
-- [Filezilla](https://filezilla-project.org/)
+- [FileZilla](https://filezilla-project.org/)
 - [Fish](http://ridiculousfish.com/shell/)
+- [Fisherman](http://fisherman.sh/)
 - [FlexGet](http://flexget.com/)
 - [Flux](https://justgetflux.com/)
 - [FontExplorer X](http://www.fontexplorerx.com/)
+- [Forge](http://www.slightlymagic.net/wiki/Forge)
 - [ForkLift 2](http://www.binarynights.com/forklift/)
 - [Gas Mask](https://github.com/2ndalpha/gasmask/)
 - [gdb](https://www.gnu.org/software/gdb/)
@@ -257,11 +269,12 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Heroku](https://www.heroku.com/)
 - [HexChat](https://hexchat.github.io/)
 - [Hexels](http://hexraystudios.com/hexels/)
+- [Homebridge](https://github.com/nfarina/homebridge)
 - [Houdini](http://uglyapps.co.uk/houdini/)
 - [Htop](http://htop.sourceforge.net/)
 - [HyperDock](https://bahoom.com/hyperdock)
 - [HyperSwitch](https://bahoom.com/hyperswitch)
-- [HyperTerm](https://hyperterm.org)
+- [Hyper](https://hyper.is)
 - [i2cssh](https://github.com/wouterdebie/i2cssh)
 - [i3](https://i3wm.org/)
 - [i3wm](http://i3wm.org/)
@@ -292,6 +305,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Liquid Prompt](https://github.com/nojhan/liquidprompt)
 - [LittleSnitch](http://www.obdev.at/products/littlesnitch/)
 - [Livestreamer](http://livestreamer.tanuki.se/)
+- [Luftrausers](http://luftrausers.com)
 - [MacDive](http://www.mac-dive.com/)
 - [MacDown](http://macdown.uranusjr.com/)
 - [MacOSX](http://www.apple.com/osx/)
@@ -325,6 +339,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Navicat](http://navicat.com/)
 - [ncmpcpp](http://rybczak.net/ncmpcpp/)
 - [neovim](https://github.com/neovim/neovim)
+- [Nethack](http://www.nethack.org)
 - [newsbeuter](http://newsbeuter.org/)
 - [ngrok](https://ngrok.com/)
 - [Nomacs](http://nomacs.org/)
@@ -396,9 +411,11 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [SHSH Blobs](https://en.wikipedia.org/wiki/SHSH_blob)
 - [Shuttle](http://fitztrev.github.io/shuttle/)
 - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
+- [Sketch](http://sketchapp.com/)
 - [Skim](http://skim-app.sourceforge.net/)
 - [Skitch](https://evernote.com/skitch/)
 - [Slate](https://github.com/jigish/slate)
+- [Slic3r](http://slic3r.org)
 - [Slogger](http://brettterpstra.com/projects/slogger/)
 - [Smooth Mouse](http://smoothmouse.com/)
 - [Soulver](http://www.acqualia.com/soulver/)
@@ -415,6 +432,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Subversion](http://subversion.apache.org/)
 - [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html)
 - [Surge](http://surge.run/manual/)
+- [Swinsian](http://swinsian.com/)
 - [TaskPaper](http://www.hogbaysoftware.com/products/taskpaper)
 - [Taskwarrior](http://taskwarrior.org/)
 - [Teamocil](http://remiprev.github.io/teamocil/)
@@ -436,6 +454,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Tunnelblick](https://tunnelblick.net)
 - [tvnamer](https://github.com/dbr/tvnamer)
 - [Twitterrific](http://twitterrific.com/)
+- [Typinator](http://www.ergonis.com/products/typinator/)
 - [Übersicht](http://tracesof.net/uebersicht/)
 - [uTorrent](http://www.utorrent.com/)
 - [Ventrilo](http://www.ventrilo.com/)
@@ -444,10 +463,12 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Vimperator](http://www.vimperator.org/vimperator)
 - [Viscosity](http://www.sparklabs.com/viscosity/)
 - [Visual Studio Code](https://code.visualstudio.com)
+- [Visual Studio Code - Insiders](https://code.visualstudio.com)
 - [VLC](http://www.videolan.org/)
 - [Wakatime](https://wakatime.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 - [Wget](https://www.gnu.org/software/wget/)
+- [Wireshark 2](https://www.wireshark.org)
 - [Witch](http://manytricks.com/witch/)
 - [WordPress WP-CLI](http://wp-cli.org/)
 - [Workrave](http://www.workrave.org/)

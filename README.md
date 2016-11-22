@@ -232,6 +232,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Enjoyable](https://yukkurigames.com/enjoyable/)
 - [Exercism](http://exercism.io/)
 - [ExpanDrive](http://www.expandrive.com/)
+- [Factorio](https://www.factorio.com)
 - [Fantastical](http://flexibits.com/fantastical)
 - [fasd](https://github.com/clvv/fasd)
 - [Feeds](http://www.feedsapp.com/)

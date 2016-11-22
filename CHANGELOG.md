@@ -4,6 +4,7 @@
 
 - Add support for Wakatime (via @joshmedeski)
 - Add support for Kwm (via @neon64)
+- Add support for SmartGit (via @revolter)
 
 ## Mackup 0.8.14
 

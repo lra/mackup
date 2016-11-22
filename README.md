@@ -230,6 +230,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Electrum](https://electrum.org/#home)
 - [Emacs](http://www.gnu.org/software/emacs/)
 - [Enjoyable](https://yukkurigames.com/enjoyable/)
+- [Environmental Station Alpha](http://www.hempuli.com/esa/)
 - [Exercism](http://exercism.io/)
 - [ExpanDrive](http://www.expandrive.com/)
 - [Factorio](https://www.factorio.com)

@@ -211,7 +211,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [DbVisualizer](https://www.dbvis.com/)
 - [Deal Alert](http://dealalertapp.com/)
 - [Default Folder X](http://www.stclairsoft.com/DefaultFolderX/)
-- [Devilspie2](http://www.gusnan.se/devilspie2/manual.php)
+- [Devilspie2](http://www.gusnan.se/devilspie2/)
 - [dig](http://en.wikipedia.org/wiki/Dig_(command))
 - [Divvy](http://mizage.com/divvy/)
 - [Docker](https://www.docker.com/)

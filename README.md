@@ -262,7 +262,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Htop](http://htop.sourceforge.net/)
 - [HyperDock](https://bahoom.com/hyperdock)
 - [HyperSwitch](https://bahoom.com/hyperswitch)
-- [HyperTerm](https://hyperterm.org)
+- [Hyper](https://hyper.is)
 - [i2cssh](https://github.com/wouterdebie/i2cssh)
 - [i3](https://i3wm.org/)
 - [i3wm](http://i3wm.org/)

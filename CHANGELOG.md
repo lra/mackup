@@ -29,6 +29,7 @@
 - Add support for Factorio (via @icopp)
 - Add support for Environmental Station Alpha (via @icopp)
 - Add support for Forge (via @icopp)
+- Add support for Ancient Domains of Mystery (via @icopp)
 
 ## Mackup 0.8.14
 

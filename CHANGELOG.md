@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.15
+
 - Add support for CLion 2016.2 (via @danielsuo)
 - Add support for Keyboard Maestro (via @danielsuo)
 - Add support for Karabiner Elements (via @danielsuo)

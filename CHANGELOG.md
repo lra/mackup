@@ -28,6 +28,7 @@
 - Add support for Nethack (via @icopp)
 - Add support for Factorio (via @icopp)
 - Add support for Environmental Station Alpha (via @icopp)
+- Add support for Forge (via @icopp)
 
 ## Mackup 0.8.14
 

@@ -18,6 +18,7 @@
 - Add support for Sketch (via @enkia)
 - Added additional Navicat products to existing support (via @drbyte)
 - Add support for Visual Studio Code - Insiders (via @dannyamey)
+- Add support for Typinator (via @ericpedia)
 
 ## Mackup 0.8.14
 

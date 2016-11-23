@@ -2,6 +2,16 @@
 
 ## WIP
 
+- Add support for SmartGit (via @revolter)
+- Add support for Kdenlive (via @orschiro)
+- Add support for Hero Lab (via @icopp)
+
+## Mackup 0.8.15
+
+- Add support for CLion 2016.2 (via @danielsuo)
+- Add support for Keyboard Maestro (via @danielsuo)
+- Add support for Karabiner Elements (via @danielsuo)
+- Add support for Jupyter (via @sankichi92)
 - Add support for PyCharm 2016.2 (via @danielsuo)
 - Add support for Telegram for macOS (via @matti)
 - Add support for Paintbrush 2.1.2 (via @domenicbrosh)
@@ -15,7 +25,25 @@
 - Add support for Ctags (via @joshmedeski)
 - Add support for KeepingYouAwake (via @zharmany)
 - Add support for Terminal (via @ryanjbonnell)
-- Add support for Hero Lab (via @icopp)
+- Add support for Sketch (via @enkia)
+- Added additional Navicat products to existing support (via @drbyte)
+- Add support for Visual Studio Code - Insiders (via @dannyamey)
+- Add support for Typinator (via @ericpedia)
+- Add support for Swinsian (via @eramdam)
+- Add support for Slic3r (via @blamh)
+- Add support for Airmail (via @bleen)
+- Add support for Wireshark 2 (via @tdm00)
+- Add support for Homebridge (via @icopp)
+- Add support for Luftrausers (via @icopp)
+- Add support for Nethack (via @icopp)
+- Add support for Factorio (via @icopp)
+- Add support for Environmental Station Alpha (via @icopp)
+- Add support for Forge (via @icopp)
+- Add support for Ancient Domains of Mystery (via @icopp)
+- Add support for Atlantis (via @icopp)
+- Add support for Adobe Lightroom CC (via @dpgowan)
+- Add Support for Adobe Illustrator CC (via @dpgowan)
+- Added support for GoShare (@fmartingr)
 
 ## Mackup 0.8.14
 

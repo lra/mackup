@@ -4,7 +4,7 @@
 
 - Add support for SmartGit (via @revolter)
 - Add support for Kdenlive (via @orschiro)
-
+- Add support for Fontconfig (via @horosgrisa)
 ## Mackup 0.8.15
 
 - Add support for CLion 2016.2 (via @danielsuo)

@@ -3,3 +3,4 @@
 nose
 flake8
 codecov
+docopt

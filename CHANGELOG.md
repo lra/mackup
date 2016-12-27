@@ -5,6 +5,7 @@
 - Add support for SmartGit (via @revolter)
 - Add support for Kdenlive (via @orschiro)
 - Add support for GitKraken (via @mdentinho)
+- Add support for Apptivate (via @sepehr)
 
 ## Mackup 0.8.15
 

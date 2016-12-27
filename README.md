@@ -260,6 +260,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Git Hooks](https://github.com/icefox/git-hooks)
 - [Git](http://git-scm.com/)
 - [Gitbox](http://gitboxapp.com/)
+- [GitKraken](https://www.gitkraken.com)
 - [Gmail Notifr](http://ashchan.com/projects/gmail-notifr)
 - [GMVault](http://gmvault.org/)
 - [Gnome SSH Tunnel Manager](http://sourceforge.net/projects/gstm/)

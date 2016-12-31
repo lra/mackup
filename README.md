@@ -160,6 +160,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Airmail](http://airmailapp.com/)
 - [Ancient Domains of Mystery](http://www.adom.de/home/index.html)
 - [Adobe Photoshop Lightroom CC](https://www.adobe.com/products/photoshop-lightroom.html)
+- [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704)
 - [Android Studio](https://developer.android.com/sdk/)
 - [Ansible](http://www.ansible.com/)
 - [AppCleaner](http://freemacsoft.net/appcleaner/)

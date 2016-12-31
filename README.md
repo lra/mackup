@@ -437,6 +437,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Spark](http://www.shadowlab.org/softwares/spark.php)
 - [Spectacle](https://www.spectacleapp.com/)
 - [Spectrwm](https://github.com/conformal/spectrwm/wiki)
+- [Splice](https://splice.com/)
 - [Spotify Notifications](http://spotify-notifications.citruspi.io/)
 - [Spotify](https://www.spotify.com/)
 - [Stata](http://www.stata.com/)

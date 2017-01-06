@@ -257,6 +257,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Gear Player](https://www.gearmusicplayer.com/)
 - [GeekTool](http://projects.tynsoe.org/en/geektool/)
 - [GHCi](https://wiki.haskell.org/GHC/GHCi)
+  - [Ghostwriter](https://wereturtle.github.io/ghostwriter/)
 - [Git Hooks](https://github.com/icefox/git-hooks)
 - [Git](http://git-scm.com/)
 - [Gitbox](http://gitboxapp.com/)

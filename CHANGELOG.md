@@ -17,6 +17,7 @@
 - Add support for Redshift Scheduler (via @sheriallis)
 - Add support for Lollypop (via @orschiro)
 - Add support for Ghostwriter (via @orschiro)
+- Add support for LibreOffice (via @orschiro)
 - Fix support for Karabiner Elements (via @sepehr)
 
 ## Mackup 0.8.15

@@ -395,6 +395,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [R](http://www.r-project.org/)
 - [Rails](http://rubyonrails.org/)
 - [Redshift](http://jonls.dk/redshift/)
+- [Redshift Scheduler](https://github.com/spantaleev/redshift-scheduler)
 - [Rhythmbox](https://wiki.gnome.org/Apps/Rhythmbox)
 - [Rime](http://rime.im/)
 - [Robomongo](http://robomongo.org/)

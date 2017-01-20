@@ -4,6 +4,7 @@
 
 - Add support for SmartGit (via @revolter)
 - Add support for Kdenlive (via @orschiro)
+- Add support for TinyFugue (via @icopp)
 - Add support for Hero Lab (via @icopp)
 - Add support for Pidgin (via @icopp)
 - Add support for Fontconfig (via @horosgrisa)

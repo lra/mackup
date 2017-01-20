@@ -277,6 +277,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [HandBrake](https://handbrake.fr/)
 - [Hands Off!](http://www.oneperiodic.com/products/handsoff/)
 - [Hazel](http://www.noodlesoft.com/hazel.php)
+- [Hero Lab](http://www.wolflair.com/index.php?context=hero_lab)
 - [Heroku](https://www.heroku.com/)
 - [HexChat](https://hexchat.github.io/)
 - [Hexels](http://hexraystudios.com/hexels/)

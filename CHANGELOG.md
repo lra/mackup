@@ -4,6 +4,7 @@
 
 - Add support for SmartGit (via @revolter)
 - Add support for Kdenlive (via @orschiro)
+- Add support for Hero Lab (via @icopp)
 - Add support for Pidgin (via @icopp)
 - Add support for Fontconfig (via @horosgrisa)
 - Add support for GitKraken (via @mdentinho)

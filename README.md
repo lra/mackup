@@ -319,6 +319,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Liquid Prompt](https://github.com/nojhan/liquidprompt)
 - [LittleSnitch](http://www.obdev.at/products/littlesnitch/)
 - [Livestreamer](http://livestreamer.tanuki.se/)
+- [Lollypop](https://gnumdk.github.io/lollypop-web/)
 - [Luftrausers](http://luftrausers.com)
 - [MacDive](http://www.mac-dive.com/)
 - [MacDown](http://macdown.uranusjr.com/)

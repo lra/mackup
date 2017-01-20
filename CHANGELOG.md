@@ -11,6 +11,7 @@
 - Add support for Beatport Pro (via @mdentinho)
 - Add support for Splice (via @mdentinho)
 - Add support for Redshift Scheduler (via @sheriallis)
+- Add support for Lollypop (via @orschiro)
 - Fix support for Karabiner Elements (via @sepehr)
 
 ## Mackup 0.8.15

@@ -4,6 +4,7 @@
 
 - Add support for SmartGit (via @revolter)
 - Add support for Kdenlive (via @orschiro)
+- Add support for Fontconfig (via @horosgrisa)
 - Add support for GitKraken (via @mdentinho)
 - Add support for Apptivate (via @sepehr)
 - Add support for Qutebrowser (via @sheriallis)

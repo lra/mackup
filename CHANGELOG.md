@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.16
+
 - Add support for SmartGit (via @revolter)
 - Add support for Kdenlive (via @orschiro)
 - Add support for TinyFugue (via @icopp)

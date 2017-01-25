@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add support for Boxer (via @icopp)
+
 ## Mackup 0.8.16
 
 - Add support for SmartGit (via @revolter)

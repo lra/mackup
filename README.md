@@ -191,6 +191,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Bitchx](http://www.bitchx.org/)
 - [Blackfire](https://blackfire.io/)
 - [Boto](https://github.com/boto/boto)
+- [Boxer](http://boxerapp.com)
 - [Brackets](http://brackets.io/)
 - [Bundler](http://bundler.io)
 - [Byobu](http://byobu.co/)

@@ -2,9 +2,27 @@
 
 ## WIP
 
+- Add support for Boxer (via @icopp)
+
+## Mackup 0.8.16
+
 - Add support for SmartGit (via @revolter)
 - Add support for Kdenlive (via @orschiro)
-- Add support for Boxer (via @icopp)
+- Add support for TinyFugue (via @icopp)
+- Add support for Hero Lab (via @icopp)
+- Add support for Pidgin (via @icopp)
+- Add support for Fontconfig (via @horosgrisa)
+- Add support for GitKraken (via @mdentinho)
+- Add support for Apptivate (via @sepehr)
+- Add support for Qutebrowser (via @sheriallis)
+- Add support for Amphetamine (via @mdentinho)
+- Add support for Beatport Pro (via @mdentinho)
+- Add support for Splice (via @mdentinho)
+- Add support for Redshift Scheduler (via @sheriallis)
+- Add support for Lollypop (via @orschiro)
+- Add support for Ghostwriter (via @orschiro)
+- Add support for LibreOffice (via @orschiro)
+- Fix support for Karabiner Elements (via @sepehr)
 
 ## Mackup 0.8.15
 

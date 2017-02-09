@@ -175,7 +175,9 @@ def chmod(target):
             for cur_dir in dirs:
                 os.chmod(os.path.join(root, cur_dir), folder_mode)
             for cur_file in files:
-                os.chmod(os.path.join(root, cur_file), file_mode)
+                fullpath = os.path.join(root, cur_file)
+                if os.path.isfile(fullpath):
+                    os.chmod(fullpath, file_mode)
 
     else:
         raise ValueError("Unsupported file type: {}".format(target))

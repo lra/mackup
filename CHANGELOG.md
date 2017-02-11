@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for Things (via @zharmany)
 - Add support for Boxer (via @icopp)
 
 ## Mackup 0.8.16

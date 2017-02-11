@@ -697,6 +697,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [TextExpander](https://smilesoftware.com/textexpander)
 - [TextMate](http://macromates.com/)
 - [Textual](http://www.codeux.com/textual/)
+- [Things](https://culturedcode.com/things/)
 - [Tig](https://github.com/jonas/tig)
 - [Tiles](https://www.sempliva.com/tiles/)
 - [Tilix](https://github.com/gnunn1/tilix)

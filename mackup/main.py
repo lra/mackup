@@ -21,13 +21,14 @@ Options:
 Modes of action:
  1. list: display a list of all supported applications.
  2. backup: sync your conf files to your synced storage, use this the 1st time
-    you use Mackup. (Note that by default this will sync private keys used by
-    OpenSSH and GnuPG.)
+    you use Mackup. (Note that by default this will not sync private keys used
+    by OpenSSH and GnuPG. See https://github.com/lra/mackup/issues/512 for more
+    information.)
  3. restore: link the conf files already in your synced storage on your system,
     use it on any new system you use.
  4. uninstall: reset everything as it was before using Mackup.
 
-By default, Mackup syncs all application data (including private keys!) via
+By default, Mackup syncs all application data (except private keys!) via
 Dropbox, but may be configured to exclude applications or use a different
 backend with a .mackup.cfg file.
 

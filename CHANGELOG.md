@@ -3,6 +3,7 @@
 ## WIP
 
 - Add support for Boxer (via @icopp)
+- Add additional Spectacle library path (via @iansym)
 
 ## Mackup 0.8.16
 

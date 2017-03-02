@@ -2,12 +2,66 @@
 
 ## WIP
 
+- Add support for Boxer (via @icopp)
+
+## Mackup 0.8.16
+
+- Add support for SmartGit (via @revolter)
+- Add support for Kdenlive (via @orschiro)
+- Add support for TinyFugue (via @icopp)
+- Add support for Hero Lab (via @icopp)
+- Add support for Pidgin (via @icopp)
+- Add support for Fontconfig (via @horosgrisa)
+- Add support for GitKraken (via @mdentinho)
+- Add support for Apptivate (via @sepehr)
+- Add support for Qutebrowser (via @sheriallis)
+- Add support for Amphetamine (via @mdentinho)
+- Add support for Beatport Pro (via @mdentinho)
+- Add support for Splice (via @mdentinho)
+- Add support for Redshift Scheduler (via @sheriallis)
+- Add support for Lollypop (via @orschiro)
+- Add support for Ghostwriter (via @orschiro)
+- Add support for LibreOffice (via @orschiro)
+- Fix support for Karabiner Elements (via @sepehr)
+
+## Mackup 0.8.15
+
+- Add support for CLion 2016.2 (via @danielsuo)
+- Add support for Keyboard Maestro (via @danielsuo)
+- Add support for Karabiner Elements (via @danielsuo)
+- Add support for Jupyter (via @sankichi92)
+- Add support for PyCharm 2016.2 (via @danielsuo)
+- Add support for Telegram for macOS (via @matti)
 - Add support for Paintbrush 2.1.2 (via @domenicbrosh)
 - Add support for IntelliJ IDEA 2016.2 (via @danielsuo)
 - Add support for WebStorm 2016.1 (via @halhenke)
 - Add support for Wakatime (via @joshmedeski)
 - Add support for Kwm (via @neon64)
 - Add support for Surge (via @Altynai)
+- Add support for HyperTerm (via @atipugin)
+- Add support for FlexGet (via @benwa)
+- Add support for Ctags (via @joshmedeski)
+- Add support for KeepingYouAwake (via @zharmany)
+- Add support for Terminal (via @ryanjbonnell)
+- Add support for Sketch (via @enkia)
+- Added additional Navicat products to existing support (via @drbyte)
+- Add support for Visual Studio Code - Insiders (via @dannyamey)
+- Add support for Typinator (via @ericpedia)
+- Add support for Swinsian (via @eramdam)
+- Add support for Slic3r (via @blamh)
+- Add support for Airmail (via @bleen)
+- Add support for Wireshark 2 (via @tdm00)
+- Add support for Homebridge (via @icopp)
+- Add support for Luftrausers (via @icopp)
+- Add support for Nethack (via @icopp)
+- Add support for Factorio (via @icopp)
+- Add support for Environmental Station Alpha (via @icopp)
+- Add support for Forge (via @icopp)
+- Add support for Ancient Domains of Mystery (via @icopp)
+- Add support for Atlantis (via @icopp)
+- Add support for Adobe Lightroom CC (via @dpgowan)
+- Add Support for Adobe Illustrator CC (via @dpgowan)
+- Added support for GoShare (@fmartingr)
 
 ## Mackup 0.8.14
 

@@ -1,13 +1,24 @@
 # Configuration
 
-All the configuration is done into a file named `.mackup.cfg` to store at the
+All the configuration is done in a file named `.mackup.cfg` stored at the
 root of your home folder.
 
-To configure mackup, create a file named ´.mackup.cfg´ in your home directory.
+To configure Mackup, create a file named ´.mackup.cfg´ in your home directory.
 
 ```bash
 vi ~/.mackup.cfg
 ```
+
+Add personal files to sync by including the `configuration_files` header, e.g.
+
+```ini
+[configuration_files]
+.gitignore_global
+.config/your-custom-file
+```
+
+Note that Mackup assumes the file paths listed here are relative to your home
+directory.
 
 ## Storage
 
@@ -56,7 +67,7 @@ engine = copy
 
 If you want to specify another directory, you can use the `file_system` engine
 and Mackup won't try to detect any path for you: it will store your files where
-you explicitely told him to, using the `path` setting.
+you explicitly told it to, using the `path` setting.
 The `path` can be absolute (from the `/` of your drive) or relative to your
 home directory.
 The `path` setting is mandatory when using the `file_system` engine.

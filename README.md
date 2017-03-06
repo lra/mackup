@@ -516,6 +516,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 By default private keys for OpenSSH and GnuPG are NOT sycned. You can sync your private keys if you
 want. For example, to sync your entire OpenSSH `.ssh` directory, create a `~/.mackup/ssh.cfg` file
 with the following content:
+
 ```
 [application]
 name = SSH

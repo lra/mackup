@@ -506,6 +506,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [XEmacs](http://www.xemacs.org/)
 - [XLD](http://tmkk.undo.jp/xld/)
 - [XtraFinder](http://www.trankynam.com/xtrafinder/)
+- [youtube-dl](https://rg3.github.io/youtube-dl/)
 - [Yummy FTP](http://www.yummysoftware.com/)
 - [z](https://github.com/rupa/z)
 - [zathura](https://pwmt.org/projects/zathura/)

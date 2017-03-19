@@ -62,6 +62,7 @@
 - Add support for Adobe Lightroom CC (via @dpgowan)
 - Add Support for Adobe Illustrator CC (via @dpgowan)
 - Added support for GoShare (@fmartingr)
+- Add option to generate custom app config by name (via @alin23)
 
 ## Mackup 0.8.14
 

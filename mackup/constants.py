@@ -21,6 +21,12 @@ MACKUP_CONFIG_FILE = '.mackup.cfg'
 # Directory that can contains user defined app configs
 CUSTOM_APPS_DIR = '.mackup'
 
+# Default MacOS preferences directory
+MACOS_PREF_DIR = 'Library/Preferences'
+
+# Default MacOS config directory
+MACOS_CONFIG_DIR = '.config'
+
 # Supported engines
 ENGINE_DROPBOX = 'dropbox'
 ENGINE_GDRIVE = 'google_drive'

@@ -218,6 +218,10 @@ class Config(object):
                 raise ConfigError("The required 'path' can't be found while"
                                   " the 'file_system' engine is used.")
 
+        # allow an absolute path override
+        if self._parser.has_option('storage', 'abspath'):
+            path = self._parser.get('storage', 'abspath')
+
         # Python 2 and python 3 byte strings are different.
         if sys.version_info[0] < 3:
             path = str(path)

@@ -3,6 +3,7 @@
 ## WIP
 
 - Add support for Boxer (via @icopp)
+- Add support for RubyMine 2017 (via @tleish)
 
 ## Mackup 0.8.16
 

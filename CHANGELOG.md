@@ -3,6 +3,7 @@
 ## WIP
 
 - Add support for Boxer (via @icopp)
+- Add support for IdeaVim (via @x-ji)
 
 ## Mackup 0.8.16
 

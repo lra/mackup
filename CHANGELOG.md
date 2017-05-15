@@ -3,6 +3,7 @@
 ## WIP
 
 - Add support for Boxer (via @icopp)
+- Update support for Pycharm (via @scooby)
 
 ## Mackup 0.8.16
 

@@ -18,6 +18,7 @@
 - Added support for K9s (via @tareksamni)
 - Added support for Powerlevel10k (via @tareksamni)
 - Updated support for aria2 (via @hongqn)
+- Update support for IntelliJ (via @scooby)
 
 ## Mackup 0.8.29
 

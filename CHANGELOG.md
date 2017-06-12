@@ -3,6 +3,7 @@
 ## WIP
 
 - Add support for Boxer (via @icopp)
+- Remove GnuPG keyrings from backup by default (via @jeremygaither)
 
 ## Mackup 0.8.16
 

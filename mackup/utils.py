@@ -402,7 +402,7 @@ def can_file_be_synced_on_current_platform(path):
     # If the given path is relative, prepend home
     fullpath = os.path.join(os.environ['HOME'], path)
 
-    # Compute the ~/Library path on OS X
+    # Compute the ~/Library path on macOS
     # End it with a slash because we are looking for this specific folder and
     # not any file/folder named LibrarySomething
     library_path = os.path.join(os.environ['HOME'], 'Library/')

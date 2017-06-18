@@ -387,7 +387,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [OmniGraffle](https://www.omnigroup.com/omnigraffle/)
 - [Openbox](http://openbox.org)
 - [OpenEmu](http://openemu.org)
-- [OpenSSH](http://www.openssh.com/) (NOTE: includes private keys)
+- [OpenSSH](http://www.openssh.com/)
 - [Paintbrush](http://paintbrush.sourceforge.net/)
 - [Pandoc](http://pandoc.org)
 - [Pass](http://www.passwordstore.org/)

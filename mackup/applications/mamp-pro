@@ -1,0 +1,6 @@
+[application]
+name = MAMP PRO
+
+[configuration_files]
+Library/Application Support/appsolute/MAMP PRO
+Library/Preferences/de.appsolute.mamppro.plist

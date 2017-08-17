@@ -198,6 +198,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Caffeine](http://lightheadsw.com/caffeine/)
 - [Capture One](http://www.phaseone.com/Imaging-Software/Capture-One.aspx)
 - [Cartographica](https://www.macgis.com/)
+- [Cerebro](https://cerebroapp.com/)
 - [Charles](http://www.charlesproxy.com)
 - [Chef](https://www.chef.io/chef/)
 - [Chicken](http://sourceforge.net/projects/chicken/)

@@ -3,6 +3,7 @@
 ## WIP
 
 - Add support for Boxer (via @icopp)
+- Add support for Postico (via @stvhwrd)
 
 ## Mackup 0.8.16
 

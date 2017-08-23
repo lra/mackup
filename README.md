@@ -388,6 +388,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [PopClip](http://pilotmoon.com/popclip/)
 - [Popcorn-Time](https://popcorntime.io/)
 - [PostgreSQL](http://www.postgresql.org/)
+- [Postico](https://eggerapps.at/postico/)
 - [Pow](http://pow.cx/)
 - [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Processing](https://processing.org/)

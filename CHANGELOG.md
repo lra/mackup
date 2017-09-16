@@ -9,6 +9,7 @@
 - Add support for fastlane (via @revolter)
 - Add support for Insomnia (via @browniebroke)
 - Add support for Marked 2 (via @semicolonsnet)
+- Add support for PyCharm 2017.3 (via @cafferata)
 
 ## Mackup 0.8.16
 

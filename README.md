@@ -341,6 +341,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Mercurial](https://www.mercurial-scm.org/)
 - [MercuryMover](http://www.heliumfoot.com/mercurymover/)
 - [Messages](http://www.apple.com/osx/apps/#messages)
+- [Micro](https://github.com/zyedidia/micro)
 - [Microsoft Azure CLI](https://github.com/Azure/azure-xplat-cli)
 - [Microsoft Remote Desktop](https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12&ls=1)
 - [MonoDevelop](http://www.monodevelop.com)

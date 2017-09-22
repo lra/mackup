@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for Micro (via @icopp)
 - Add support for Boxer (via @icopp)
 
 ## Mackup 0.8.16

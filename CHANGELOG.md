@@ -3,6 +3,7 @@
 ## WIP
 
 - Add support for Boxer (via @icopp)
+- Add backing up vscode extensions (via @stephen2m)
 
 ## Mackup 0.8.16
 

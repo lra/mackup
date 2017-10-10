@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for KubeCtl (via @pcostesi)
 - Add support for Boxer (via @icopp)
 
 ## Mackup 0.8.16

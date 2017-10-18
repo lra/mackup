@@ -63,6 +63,16 @@ where your Copy folder is and store your configuration files in it.
 engine = copy
 ```
 
+### Keybase
+
+```ini
+[storage]
+engine = keybase
+username = yourusername
+```
+
+This config will sync files to `/keybase/private/yourusername/Mackup`
+
 ### File System
 
 If you want to specify another directory, you can use the `file_system` engine

@@ -72,6 +72,9 @@ def main():
     if args['--force']:
         utils.FORCE_YES = True
 
+    # Allow utils to make decisions based on config
+    utils.CONFIG = mckp._config
+
     dry_run = args['--dry-run']
 
     verbose = args['--verbose']

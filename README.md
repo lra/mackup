@@ -151,7 +151,8 @@ See the [README](doc/README.md) file in the doc directory for more info.
 
 ## Supported Applications
 
-- [1Password 4](https://agilebits.com/onepassword)
+- [1Password 4](https://1password.com/)
+- [1Password 6](https://1password.com/)
 - [Ack](http://beyondgrep.com/)
 - [Adium](https://adium.im/)
 - [Adobe Camera Raw](http://www.adobe.com/products/photoshop/extend.html)

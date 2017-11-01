@@ -457,6 +457,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html)
 - [Surge](http://surge.run/manual/)
 - [Swinsian](http://swinsian.com/)
+- [T](http://sferik.github.io/t/)
 - [TaskPaper](http://www.hogbaysoftware.com/products/taskpaper)
 - [Taskwarrior](http://taskwarrior.org/)
 - [Teamocil](http://remiprev.github.io/teamocil/)

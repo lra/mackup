@@ -365,6 +365,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [npm](https://www.npmjs.com/)
 - [nvALT](http://brettterpstra.com/projects/nvalt/)
 - [nvpy](https://github.com/cpbotha/nvpy)
+- [Office 2016 for Mac](https://products.office.com/en-us/mac/microsoft-office-for-mac)
 - [Oh My Fish](https://github.com/bpinto/oh-my-fish)
 - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [OmniFocus](https://www.omnigroup.com/omnifocus/)

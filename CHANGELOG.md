@@ -3,6 +3,7 @@
 ## WIP
 
 - Add support for Boxer (via @icopp)
+- Add support for Android Studio 3.0 (via @ned1988)
 
 ## Mackup 0.8.16
 

@@ -500,7 +500,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Xamarin Studio](https://xamarin.com/studio)
 - [XBindKeys](http://www.nongnu.org/xbindkeys/)
 - [Xchat](http://xchat.org/)
-- [XCode](https://developer.apple.com/xcode/)
+- [Xcode](https://developer.apple.com/xcode/)
 - [XEmacs](http://www.xemacs.org/)
 - [XLD](http://tmkk.undo.jp/xld/)
 - [XtraFinder](http://www.trankynam.com/xtrafinder/)

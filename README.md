@@ -246,6 +246,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Factorio](https://www.factorio.com)
 - [Fantastical](http://flexibits.com/fantastical)
 - [fasd](https://github.com/clvv/fasd)
+- [fastlane](https://fastlane.tools)
 - [Feeds](http://www.feedsapp.com/)
 - [FileZilla](https://filezilla-project.org/)
 - [Fish](http://ridiculousfish.com/shell/)

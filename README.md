@@ -557,7 +557,7 @@ And it's [GPL](http://www.gnu.org/licenses/gpl.html), of course.
 
 ## What's up with the weird name
 
-Mackup is just a contraction of Mac and Backup. It is simple, short, and easy to
+Mackup is just a portmanteau of Mac and Backup. It is simple, short, and easy to
 remember, and it corresponds with the whole idea of Mackup: the simpler – the better!
 (And I suck at naming stuff, but who doesn't.)
 

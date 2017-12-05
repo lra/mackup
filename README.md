@@ -145,6 +145,7 @@ in it stay put, so that any other computer also running Mackup is unaffected.
 - [Copy](https://www.copy.com/)
 - [iCloud](http://www.apple.com/icloud/)
 - [Box](https://www.box.com)
+- [Keybase](https://www.keybase.io)
 - Anything able to sync a folder (e.g. [Git](http://git-scm.com/))
 
 See the [README](doc/README.md) file in the doc directory for more info.

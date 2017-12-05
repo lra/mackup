@@ -3,6 +3,7 @@
 ## WIP
 
 - Add support for Boxer (via @icopp)
+- Add Keybase engine (via @jutonz)
 
 ## Mackup 0.8.16
 

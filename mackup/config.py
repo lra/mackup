@@ -11,6 +11,7 @@ from .constants import (MACKUP_BACKUP_PATH,
                         ENGINE_COPY,
                         ENGINE_ICLOUD,
                         ENGINE_BOX,
+                        ENGINE_KEYBASE,
                         ENGINE_FS)
 
 from .utils import (error,
@@ -18,7 +19,8 @@ from .utils import (error,
                     get_copy_folder_location,
                     get_google_drive_folder_location,
                     get_icloud_folder_location,
-                    get_box_folder_location)
+                    get_box_folder_location,
+                    get_keybase_folder_location)
 try:
     import configparser
 except ImportError:
@@ -65,8 +67,8 @@ class Config(object):
         """
         The engine used by the storage.
 
-        ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_COPY, ENGINE_ICLOUD, ENGINE_BOX
-        or ENGINE_FS.
+        ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_COPY, ENGINE_ICLOUD, ENGINE_BOX,
+        ENGINE_KEYBASE, or ENGINE_FS.
 
         Returns:
             str
@@ -188,6 +190,7 @@ class Config(object):
                           ENGINE_COPY,
                           ENGINE_ICLOUD,
                           ENGINE_BOX,
+                          ENGINE_KEYBASE,
                           ENGINE_FS]:
             raise ConfigError('Unknown storage engine: {}'.format(engine))
 
@@ -210,6 +213,12 @@ class Config(object):
             path = get_icloud_folder_location()
         elif self.engine == ENGINE_BOX:
             path = get_box_folder_location()
+        elif self.engine == ENGINE_KEYBASE:
+            if not self._parser.has_option('storage', 'username'):
+                raise ConfigError("Also specify a 'username' key when using"
+                                  " 'engine = keybase')")
+            username = self._parser.get('storage', 'username')
+            path = get_keybase_folder_location(username)
         elif self.engine == ENGINE_FS:
             if self._parser.has_option('storage', 'path'):
                 cfg_path = self._parser.get('storage', 'path')

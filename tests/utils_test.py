@@ -2,8 +2,10 @@ import os
 import tempfile
 import unittest
 import stat
+import subprocess
+import random
 
-# from unittest.mock import patch
+from mock import Mock, patch
 
 from mackup import utils
 
@@ -87,6 +89,27 @@ class TestMackup(unittest.TestCase):
         assert not os.path.exists(filepath)
         assert not os.path.exists(subfolder_path)
         assert not os.path.exists(subfilepath)
+
+    @patch.object(utils, 'can_remove_acl_with_current_engine', Mock(return_value=False))
+    @patch.object(utils, 'remove_acl', Mock())
+    def test_delete_does_not_remove_acl(self):
+        """
+        utils.delete does not strip ACL's if the engine does not support it
+        """
+        # Create a tmp file
+        tfile = tempfile.NamedTemporaryFile(delete=False)
+        tfpath = tfile.name
+        tfile.close()
+
+        # Make sure the created file exists
+        assert os.path.isfile(tfpath)
+
+        # Check if mackup can really delete it
+        utils.delete(tfpath)
+        assert not os.path.exists(tfpath)
+
+        # Make sure we didn't try to strip acl's
+        utils.remove_acl.assert_not_called()
 
     def test_copy_file(self):
         # Create a tmp file
@@ -217,6 +240,50 @@ class TestMackup(unittest.TestCase):
         utils.delete(srcpath)
         utils.delete(dstpath)
 
+    @patch('subprocess.check_output', Mock(return_value=0))
+    @patch.object(utils, 'chmod', Mock(return_value=0))
+    @patch.object(utils, 'CONFIG', Mock())
+    def test_copy_dir_keybase(self):
+        """Use `keybase fs cp` when copying directories into the store"""
+        # Set engine to Keybase
+        utils.CONFIG.engine = 'keybase'
+
+        # Create a temp folder
+        srcpath = tempfile.mkdtemp()
+
+        # Create a temp file
+        tfile = tempfile.NamedTemporaryFile(delete=False, dir=srcpath)
+        srcfile = tfile.name
+        tfile.close()
+
+        # Create a temp folder
+        dstpath = tempfile.mkdtemp(prefix="keybase")
+
+        # Set the destination filename
+        srcpath_basename = os.path.basename(srcpath)
+        dstfile = os.path.join(dstpath,
+                               srcpath_basename,
+                               os.path.basename(srcfile))
+
+        # Make sure the source file and destination folder exist and the
+        # destination file doesn't yet exist
+        assert os.path.isdir(srcpath)
+        assert os.path.isfile(srcfile)
+        assert os.path.isdir(dstpath)
+        assert not os.path.exists(dstfile)
+
+        # Trigger copy, and...
+        utils.copy(srcpath, dstfile)
+
+        # ...expect the Keybase CLI to have been invoked. The call was stubbed
+        # so no files were actually copied.
+        expected_args = ['keybase', 'fs', 'cp', srcpath, dstfile]
+        subprocess.check_output.assert_called_with(expected_args)
+
+        # Let's clean up
+        utils.delete(srcpath)
+        utils.delete(dstpath)
+
     def test_link_file(self):
         # Create a tmp file
         tfile = tempfile.NamedTemporaryFile(delete=False)
@@ -335,3 +402,29 @@ class TestMackup(unittest.TestCase):
         # Try to use the library path on Linux, which shouldn't work
         path = os.path.join(os.environ["HOME"], "Library/")
         assert not utils.can_file_be_synced_on_current_platform(path)
+
+    def test_get_keybase_folder_location(self):
+        username = str(random.randint(0, 10000))
+        actual = utils.get_keybase_folder_location(username)
+        assert actual == '/keybase/private/{}'.format(username)
+
+    @patch.object(utils, 'CONFIG', Mock())
+    def test_can_remove_acl_with_current_engine_with_dropbox(self):
+        utils.CONFIG.engine = 'dropbox'
+        assert utils.can_remove_acl_with_current_engine() == True
+
+    @patch.object(utils, 'CONFIG', Mock())
+    def test_can_remove_acl_with_current_engine_with_keybase(self):
+        utils.CONFIG.engine = 'keybase'
+        assert utils.can_remove_acl_with_current_engine() == False
+
+    @patch.object(utils, 'CONFIG', None)
+    def test_current_engine_no_config(self):
+        """current_engine returns None if no CONFIG is present"""
+        assert utils.current_engine() == None
+
+    @patch.object(utils, 'CONFIG', Mock())
+    def test_current_engine(self):
+        engine = str(random.randint(0, 1000))
+        utils.CONFIG.engine = engine
+        assert utils.current_engine() == engine

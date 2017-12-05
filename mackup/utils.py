@@ -15,6 +15,8 @@ from . import constants
 # If True, the user wants to say "yes" to everything.
 FORCE_YES = False
 
+CONFIG = None  # Overridden once config is read
+
 
 def confirm(question):
     """
@@ -56,7 +58,8 @@ def delete(filepath):
         filepath (str): Absolute full path to a file. e.g. /path/to/file
     """
     # Some files have ACLs, let's remove them recursively
-    remove_acl(filepath)
+    if can_remove_acl_with_current_engine():
+        remove_acl(filepath)
 
     # Some files have immutable attributes, let's remove them recursively
     remove_immutable_attribute(filepath)
@@ -97,12 +100,11 @@ def copy(src, dst):
 
     # We need to copy a single file
     if os.path.isfile(src):
-        # Copy the src file to dst
         shutil.copy(src, dst)
 
     # We need to copy a whole folder
     elif os.path.isdir(src):
-        shutil.copytree(src, dst)
+        _copy_recursive(src, dst)
 
     # What the heck is this ?
     else:
@@ -110,6 +112,22 @@ def copy(src, dst):
 
     # Set the good mode to the file or folder recursively
     chmod(dst)
+
+
+def _copy_recursive(src, dst):
+    """
+    Helper for copy, above.
+
+    Keybase uses a special file system to mount synced directories securely.
+    This file system does not yet allow for directories to be copied into it
+    recursively using `cp`, so in those situations we defer to the Keybase CLI
+    to do the heavy lifting. Note that this only necessary when copying
+    directories into the store--it's okay to use `cp` when copying files out.
+    """
+    if current_engine() == 'keybase' and '/keybase' in dst:
+        subprocess.check_output(['keybase', 'fs', 'cp', src, dst])
+    else:
+        shutil.copytree(src, dst)
 
 
 def link(target, link_to):
@@ -269,6 +287,16 @@ def get_box_folder_location():
     return box_home
 
 
+def get_keybase_folder_location(username):
+    """
+    Try to locate the Keybase folder.
+
+    Returns:
+        (str) Full path to the current Keybase folder.
+    """
+    return '/keybase/private/' + username
+
+
 def get_copy_folder_location():
     """
     Try to locate the Copy folder.
@@ -412,3 +440,15 @@ def can_file_be_synced_on_current_platform(path):
             can_be_synced = False
 
     return can_be_synced
+
+
+def can_remove_acl_with_current_engine():
+    # Keybase doesn't support stripping ACL's (chmod prints an ugly error)
+    return CONFIG and CONFIG.engine != 'keybase'
+
+
+def current_engine():
+    if not CONFIG:
+        return None
+    else:
+        return CONFIG.engine

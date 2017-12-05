@@ -270,6 +270,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [GMVault](http://gmvault.org/)
 - [Gnome SSH Tunnel Manager](http://sourceforge.net/projects/gstm/)
 - [GnuPG](https://www.gnupg.org/)  (NOTE: includes private keys)
+- [GNU Stow](https://www.gnu.org/software/stow/)
 - [Go2Shell](http://zipzapmac.com/Go2Shell)
 - [Gogland](https://www.jetbrains.com/go/)
 - [GoShare](https://github.com/dictget/goshare)

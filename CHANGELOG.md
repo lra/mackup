@@ -4,6 +4,7 @@
 
 - Add support for Boxer (via @icopp)
 - Add support for fastlane (via @revolter)
+- Add support for ledger/ledger (via @paxperscientiam)
 
 ## Mackup 0.8.16
 

@@ -4,6 +4,8 @@
 
 - Add support for Boxer (via @icopp)
 - Add support for Tmuxp (via @infernion)
+- Add support for fastlane (via @revolter)
+
 
 ## Mackup 0.8.16
 

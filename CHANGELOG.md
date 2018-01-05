@@ -6,7 +6,6 @@
 - Add support for Tmuxp (via @infernion)
 - Add support for fastlane (via @revolter)
 
-
 ## Mackup 0.8.16
 
 - Add support for SmartGit (via @revolter)

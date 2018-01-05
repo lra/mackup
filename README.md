@@ -502,7 +502,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Xamarin Studio](https://xamarin.com/studio)
 - [XBindKeys](http://www.nongnu.org/xbindkeys/)
 - [Xchat](http://xchat.org/)
-- [XCode](https://developer.apple.com/xcode/)
+- [Xcode](https://developer.apple.com/xcode/)
 - [XEmacs](http://www.xemacs.org/)
 - [XLD](http://tmkk.undo.jp/xld/)
 - [XtraFinder](http://www.trankynam.com/xtrafinder/)
@@ -559,7 +559,7 @@ And it's [GPL](http://www.gnu.org/licenses/gpl.html), of course.
 
 ## What's up with the weird name
 
-Mackup is just a contraction of Mac and Backup. It is simple, short, and easy to
+Mackup is just a portmanteau of Mac and Backup. It is simple, short, and easy to
 remember, and it corresponds with the whole idea of Mackup: the simpler – the better!
 (And I suck at naming stuff, but who doesn't.)
 

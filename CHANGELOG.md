@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for PyCharm 2016.3 (via @mbaechtold)
 - Add support for Boxer (via @icopp)
 - Add support for fastlane (via @revolter)
 

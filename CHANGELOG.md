@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for Things (via @zharmany)
 - Add support for Boxer (via @icopp)
 - Add support for fastlane (via @revolter)
 

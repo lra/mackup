@@ -467,6 +467,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [TextExpander](https://smilesoftware.com/textexpander)
 - [TextMate](http://macromates.com/)
 - [Textual](http://www.codeux.com/textual/)
+- [Things](https://culturedcode.com/things/)
 - [Tig](https://github.com/jonas/tig)
 - [tint2](https://code.google.com/p/tint2/)
 - [TinyFugue](http://tinyfugue.sourceforge.net)

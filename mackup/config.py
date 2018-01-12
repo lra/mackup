@@ -1,18 +1,11 @@
 """Package used to manage the .mackup.cfg config file."""
 
 import os
-import os.path
 import sys
+import os.path
+import logging
 
-from .constants import (MACKUP_BACKUP_PATH,
-                        MACKUP_CONFIG_FILE,
-                        ENGINE_DROPBOX,
-                        ENGINE_GDRIVE,
-                        ENGINE_COPY,
-                        ENGINE_ICLOUD,
-                        ENGINE_BOX,
-                        ENGINE_FS)
-
+from .constants import *
 from .utils import (error,
                     get_dropbox_folder_location,
                     get_copy_folder_location,
@@ -29,7 +22,7 @@ class Config(object):
 
     """The Mackup Config class."""
 
-    def __init__(self, filename=None):
+    def __init__(self, filename=MACKUP_CONFIG_FILE):
         """
         Create a Config instance.
 
@@ -37,8 +30,11 @@ class Config(object):
             filename (str): Optional filename of the config file. If empty,
                             defaults to MACKUP_CONFIG_FILE
         """
-        assert isinstance(filename, str) or filename is None
 
+        logging.info("Loading config from '%s'" % (filename))
+
+        # TODO: Remove internal initializers? Maybe move them in a single
+        #       _init()? Maybe also make a singleton...
         # Initialize the parser
         self._parser = self._setup_parser(filename)
 
@@ -49,7 +45,7 @@ class Config(object):
         self._engine = self._parse_engine()
 
         # Get the path where the Mackup folder is
-        self._path = self._parse_path()
+        self._path = self._parse_storage_path()
 
         # Get the directory replacing 'Mackup', if any
         self._directory = self._parse_directory()
@@ -59,6 +55,31 @@ class Config(object):
 
         # Get the list of apps to allow
         self._apps_to_sync = self._parse_apps_to_sync()
+
+        # Get Modes
+        self._mode = "link"
+        if self._parser.has_option("general", "mode"):
+            tmp_mode = self._parser.get('general', 'mode')
+            if tmp_mode in ["copy", "link"]:
+                self._mode = tmp_mode
+            else:
+                raise ValueError("Unknown general.mode '%s'" % tmp_mode)
+
+    @property
+    def mode(self):
+        """
+        Return:
+            str Current operation mode
+        """
+        return self._mode
+
+    # NOTE: Maybe these need to move into mackup
+    def is_copy_mode(self):
+        """Return true if in copy mode"""
+        return self._mode == "copy"
+
+    def is_link_mode(self):
+        return not self.isCopyMode()
 
     @property
     def engine(self):
@@ -129,7 +150,7 @@ class Config(object):
         """
         return set(self._apps_to_sync)
 
-    def _setup_parser(self, filename=None):
+    def _setup_parser(self, filename=MACKUP_CONFIG_FILE):
         """
         Configure the ConfigParser instance the way we want it.
 
@@ -139,11 +160,6 @@ class Config(object):
         Returns:
             SafeConfigParser
         """
-        assert isinstance(filename, str) or filename is None
-
-        # If we are not overriding the config filename
-        if not filename:
-            filename = MACKUP_CONFIG_FILE
 
         parser = configparser.SafeConfigParser(allow_no_value=True)
         parser.read(os.path.join(os.path.join(os.environ['HOME'], filename)))
@@ -176,12 +192,10 @@ class Config(object):
         Returns:
             str
         """
+        # This is the default engine
+        engine = ENGINE_DROPBOX
         if self._parser.has_option('storage', 'engine'):
             engine = str(self._parser.get('storage', 'engine'))
-        else:
-            engine = ENGINE_DROPBOX
-
-        assert isinstance(engine, str)
 
         if engine not in [ENGINE_DROPBOX,
                           ENGINE_GDRIVE,
@@ -193,7 +207,7 @@ class Config(object):
 
         return str(engine)
 
-    def _parse_path(self):
+    def _parse_storage_path(self):
         """
         Parse the storage path in the config.
 
@@ -219,10 +233,11 @@ class Config(object):
                                   " the 'file_system' engine is used.")
 
         # Python 2 and python 3 byte strings are different.
-        if sys.version_info[0] < 3:
-            path = str(path)
-        else:
-            path = path.decode("utf-8")
+        if not isinstance(path, str):
+            if sys.version_info[0] < 3:
+                path = str(path)
+            else:
+                path = path.decode("utf-8")
 
         return path
 

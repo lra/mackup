@@ -16,6 +16,7 @@ Options:
   -f --force    Force every question asked to be answered with "Yes".
   -n --dry-run  Show steps without executing.
   -v --verbose  Show additional details.
+  -d --debug    Debug mode.
   --version     Show version.
 
 Modes of action:
@@ -34,12 +35,18 @@ backend with a .mackup.cfg file.
 See https://github.com/lra/mackup/tree/master/doc for more information.
 
 """
+
+
 from docopt import docopt
 from .appsdb import ApplicationsDatabase
 from .application import ApplicationProfile
 from .constants import MACKUP_APP_NAME, VERSION
 from .mackup import Mackup
 from . import utils
+
+import logging
+
+logging.basicConfig(level=logging.INFO)
 
 
 class ColorFormatCodes:
@@ -56,25 +63,41 @@ def bold(str):
     return ColorFormatCodes.BOLD + str + ColorFormatCodes.NORMAL
 
 
+
 def main():
+    """
+    Protect the main function from Ctrl+C. Here we can also handle controlled
+    exceptions if any...
+    """
+    try:
+        _main()
+    except KeyboardInterrupt:
+        print("\n\nAborted by the user... exiting\n")
+
+def _main():
     """Main function."""
     # Get the command line arg
     args = docopt(__doc__, version="Mackup {}".format(VERSION))
+    logging.info("Running with args: %s" % str(args))
 
-    mckp = Mackup()
-    app_db = ApplicationsDatabase()
-
-    def printAppHeader(app_name):
-        if verbose:
-            print(("\n{0} {1} {0}").format(header("---"), bold(app_name)))
 
     # If we want to answer mackup with "yes" for each question
     if args['--force']:
         utils.FORCE_YES = True
 
-    dry_run = args['--dry-run']
+    if args['--debug']:
+        logging.getLogger().setLevel(logging.DEBUG)
 
+    dry_run = args['--dry-run']
     verbose = args['--verbose']
+
+
+    def printAppHeader(app_name):
+        if verbose:
+            print(("\n{0} {1} {0}").format(header("---"), bold(app_name)))
+
+    mckp = Mackup()
+    app_db = ApplicationsDatabase()
 
     if args['backup']:
         # Check the env where the command is being run
@@ -82,12 +105,8 @@ def main():
 
         # Backup each application
         for app_name in sorted(mckp.get_apps_to_backup()):
-            app = ApplicationProfile(mckp,
-                                     app_db.get_files(app_name),
-                                     dry_run,
-                                     verbose)
             printAppHeader(app_name)
-            app.backup()
+            app_db.apps[app_name].backup(mckp, dry_run, verbose)
 
     elif args['restore']:
         # Check the env where the command is being run
@@ -105,7 +124,7 @@ def main():
         # Initialize again the apps db, as the Mackup config might have changed
         # it
         mckp = Mackup()
-        app_db = ApplicationsDatabase()
+        app_db.load()
 
         # Restore the rest of the app configs, using the restored Mackup config
         app_names = mckp.get_apps_to_backup()

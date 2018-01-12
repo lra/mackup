@@ -6,7 +6,6 @@ Mackup. Name, files, ...
 """
 import os
 
-from .mackup import Mackup
 from . import utils
 
 
@@ -14,7 +13,7 @@ class ApplicationProfile(object):
 
     """Instantiate this class with application specific data."""
 
-    def __init__(self, mackup, files, dry_run, verbose):
+    def __init__(self, name):
         """
         Create an ApplicationProfile instance.
 
@@ -22,13 +21,16 @@ class ApplicationProfile(object):
             mackup (Mackup)
             files (list)
         """
-        assert isinstance(mackup, Mackup)
-        assert isinstance(files, set)
+        # assert isinstance(mackup, Mackup)
+        # assert isinstance(files, set)
 
-        self.mackup = mackup
-        self.files = list(files)
-        self.dry_run = dry_run
-        self.verbose = verbose
+        # self.mackup = mackup
+        # self.files = list(files)
+        # self.dry_run = dry_run
+        # self.verbose = verbose
+
+        self.name = name
+        self.files = set()
 
     def getFilepaths(self, filename):
         """
@@ -43,7 +45,7 @@ class ApplicationProfile(object):
         return (os.path.join(os.environ['HOME'], filename),
                 os.path.join(self.mackup.mackup_folder, filename))
 
-    def backup(self):
+    def backup(self, mackup, dry_run, verbose):
         """
         Backup the application config files.
 
@@ -60,6 +62,10 @@ class ApplicationProfile(object):
                   mv home/file mackup/file
                   link mackup/file home/file
         """
+
+        # Set this for later...
+        self.mackup = mackup
+        
         # For each file used by the application
         for filename in self.files:
             (home_filepath, mackup_filepath) = self.getFilepaths(filename)
@@ -73,13 +79,13 @@ class ApplicationProfile(object):
                      os.path.samefile(home_filepath,
                                       mackup_filepath))):
 
-                if self.verbose:
+                if verbose:
                     print("Backing up\n  {}\n  to\n  {} ..."
                           .format(home_filepath, mackup_filepath))
                 else:
                     print("Backing up {} ...".format(filename))
 
-                if self.dry_run:
+                if dry_run:
                     continue
 
                 # Check if we already have a backup
@@ -116,7 +122,7 @@ class ApplicationProfile(object):
                     utils.delete(home_filepath)
                     # Link the backuped file to its original place
                     utils.link(mackup_filepath, home_filepath)
-            elif self.verbose:
+            elif verbose:
                 if os.path.exists(home_filepath):
                     print("Doing nothing\n  {}\n  "
                           "is already backed up to\n  {}"

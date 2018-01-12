@@ -26,6 +26,10 @@ class Mackup(object):
         self.mackup_folder = self._config.fullpath
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
+    @property
+    def config(self):
+        return self.mackup._config
+
     def check_for_usable_environment(self):
         """Check if the current env is usable and has everything's required."""
         # Do not let the user run Mackup as root
@@ -66,14 +70,20 @@ class Mackup(object):
 
     def create_mackup_home(self):
         """If the Mackup home folder does not exist, create it."""
-        if not os.path.isdir(self.mackup_folder):
-            if utils.confirm("Mackup needs a directory to store your"
-                             " configuration files\n"
-                             "Do you want to create it now? <{}>"
-                             .format(self.mackup_folder)):
-                os.makedirs(self.mackup_folder)
-            else:
-                utils.error("Mackup can't do anything without a home =(")
+        if os.path.isdir(self.mackup_folder):
+            return
+
+        if not utils.confirm("Mackup needs a directory to store your"
+                         " configuration files\n"
+                         "Do you want to create it now? <{}>"
+                         .format(self.mackup_folder)):
+            utils.error("Mackup can't do anything without a home =(")
+            return
+
+        # Create it here...
+        os.makedirs(self.mackup_folder)
+
+
 
     def get_apps_to_backup(self):
         """

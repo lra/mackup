@@ -384,6 +384,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [PhpStorm](http://www.jetbrains.com/phpstorm/)
 - [Pidgin](https://www.pidgin.im)
 - [PIP](http://www.pip-installer.org/)
+- [Plover](http://www.openstenoproject.org/plover/)
 - [Poedit](http://poedit.net/)
 - [PokerStars](https://www.pokerstars.com/)
 - [PopClip](http://pilotmoon.com/popclip/)

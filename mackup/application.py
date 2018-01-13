@@ -69,34 +69,34 @@ class ApplicationProfile(object):
                 # TODO: Here add encryption option! (+path)
                 tmp_app.files.add(path)
 
-        # This code seems dead?!
-        # # Add the XDG configuration files to sync
-        # xdg_config_home = os.environ.get('XDG_CONFIG_HOME')
-        # if xdg_config_home and config.has_section('xdg_configuration_files'):
-        #     logging.debug("Config contains XDG Files")
-        #     if not os.path.exists(xdg_config_home):
-        #         raise ValueError('$XDG_CONFIG_HOME: {} does not exist'
-        #                          .format(xdg_config_home))
-        #
-        #     home = os.path.expanduser('~/')
-        #     if not xdg_config_home.startswith(home):
-        #         raise ValueError('$XDG_CONFIG_HOME: {} must be '
-        #                          'somewhere within your home '
-        #                          'directory: {}'
-        #                          .format(xdg_config_home, home))
-        #
-        #
-        #     for path in config.options('xdg_configuration_files'):
-        #         if path.startswith('/'):
-        #             raise ValueError('Unsupported absolute path: '
-        #                              '{}'
-        #                              .format(path))
-        #
-        #         tmp_app.files.add(
-        #             os.path.join(xdg_config_home, path).replace(home, '')
-        #         )
 
-            return tmp_app
+        # Add the XDG configuration files to sync
+        xdg_config_home = os.environ.get('XDG_CONFIG_HOME')
+        if xdg_config_home and config.has_section('xdg_configuration_files'):
+            logging.debug("Config contains XDG Files")
+            if not os.path.exists(xdg_config_home):
+                raise ValueError('$XDG_CONFIG_HOME: {} does not exist'
+                                 .format(xdg_config_home))
+
+            home = os.path.expanduser('~/')
+            if not xdg_config_home.startswith(home):
+                raise ValueError('$XDG_CONFIG_HOME: {} must be '
+                                 'somewhere within your home '
+                                 'directory: {}'
+                                 .format(xdg_config_home, home))
+
+
+            for path in config.options('xdg_configuration_files'):
+                if path.startswith('/'):
+                    raise ValueError('Unsupported absolute path: '
+                                     '{}'
+                                     .format(path))
+
+                tmp_app.files.add(
+                    os.path.join(xdg_config_home, path).replace(home, '')
+                )
+
+        return tmp_app
 
 
     def backup(self, mackup):

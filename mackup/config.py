@@ -5,7 +5,7 @@ import sys
 import os.path
 import logging
 
-from .constants import *
+from .constants import *  # noqa: F405
 from .utils import (error,
                     get_dropbox_folder_location,
                     get_copy_folder_location,

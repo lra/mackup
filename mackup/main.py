@@ -36,18 +36,14 @@ backend with a .mackup.cfg file.
 See https://github.com/lra/mackup/tree/master/doc for more information.
 
 """
+import logging
+logging.basicConfig(level=logging.WARN)
 
 
 from docopt import docopt
-from .appsdb import ApplicationsDatabase
-from .application import ApplicationProfile
 from .constants import MACKUP_APP_NAME, VERSION
 from .mackup import Mackup
 from . import utils
-
-import logging
-
-logging.basicConfig(level=logging.WARN)
 
 
 def main():

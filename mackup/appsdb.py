@@ -34,7 +34,7 @@ class ApplicationsDatabase(object):
         self.apps = {}
 
         for config_file in ApplicationsDatabase.get_config_files():
-            
+
             # Get the filename without the directory name
             filename = os.path.basename(config_file)
             # The app name is the cfg filename with the extension
@@ -116,7 +116,7 @@ class ApplicationsDatabase(object):
         Returns:
             set of str.
         """
-        return self.apps[name]['configuration_files']
+        return self.apps[name].files
 
     def get_app_names(self):
         """

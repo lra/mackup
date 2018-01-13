@@ -15,6 +15,7 @@ from . import utils
 from . import config
 from . import appsdb
 from .constants import *
+from .application import ApplicationProfile
 
 
 class Mackup(object):
@@ -22,7 +23,9 @@ class Mackup(object):
     Main Mackup class.
 
     Use this as a container for the current environment, configuraion options
-    and runtime options. This should idealy provide the main API
+    and runtime options. This should idealy provide the complete mackup API.
+    It also interfaces between the main code, the ApplicationsDatabase and the
+    individual ApplicationProfiles
     """
 
     def __init__(self):
@@ -146,7 +149,6 @@ class Mackup(object):
         # Restore the Mackup config before any other config, as we might need
         # it to know about custom settings
         mackup_app = ApplicationProfile(
-            mckp,
             self.app_db.get_files(MACKUP_APP_NAME)
         )
 
@@ -191,7 +193,6 @@ class Mackup(object):
             # Uninstall the Mackup config last, as we might
             # need it to know about custom settings
             mackup_app = ApplicationProfile(
-                mckp,
                 self.app_db.get_files(MACKUP_APP_NAME)
             )
 

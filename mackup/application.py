@@ -15,8 +15,10 @@ from . import utils
 
 
 class ApplicationProfile(object):
-
-    """Instantiate this class with application specific data."""
+    """
+    Represents an application profile (config file) and contains all the logic
+    to backup and restore applications
+    """
 
     def __init__(self, name):
         """
@@ -96,6 +98,13 @@ class ApplicationProfile(object):
 
 
     def backup(self, mackup):
+        """Public API wrapper to decide the correct method based on the mode"""
+        try:
+            getattr(self, "_backup_%s" % mackup.config.mode)(mackup)
+        except AttributeError as e:
+            utils.error("Not implemented mode '%s'" % mackup.config.mode)
+
+    def _backup_link(self, mackup):
         """
         Backup the application config files.
 
@@ -183,6 +192,13 @@ class ApplicationProfile(object):
                           .format(home_filepath))
 
     def restore(self, mackup):
+        """Public API wrapper to decide the correct method based on the mode"""
+        try:
+            getattr(self, "_restore_%s" % mackup.config.mode)(mackup)
+        except AttributeError as e:
+            utils.error("Not implemented mode '%s'" % mackup.config.mode)
+
+    def _restore_link(self, mackup):
         """
         Restore the application config files.
 
@@ -266,8 +282,14 @@ class ApplicationProfile(object):
                 utils.delete(home_filepath)
                 utils.link(mackup_filepath, home_filepath)
 
-
     def uninstall(self, mackup):
+        """Public API wrapper to decide the correct method based on the mode"""
+        try:
+            getattr(self, "_uninstall_%s" % mackup.config.mode)(mackup)
+        except AttributeError as e:
+            utils.error("Not implemented mode '%s'" % mackup.config.mode)
+
+    def _uninstall_link(self, mackup):
         """
         Uninstall Mackup.
 

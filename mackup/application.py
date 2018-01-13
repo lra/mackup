@@ -356,6 +356,12 @@ class ApplicationProfile(object):
             logging.debug(traceback.format_exc())
             utils.error("Not implemented mode '%s'" % mackup.config.mode)
 
+    def _uninstall_copy(self, mackup):
+        """
+        This doesnt do much... Mackup class handles this one.
+        """
+        pass
+
     def _uninstall_link(self, mackup):
         """
         Uninstall Mackup.

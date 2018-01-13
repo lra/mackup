@@ -183,6 +183,16 @@ class Mackup(object):
 
 
     def uninstall(self):
+
+        if self.config.mode == "copy":
+            print(
+                "You are running Mackup in copy mode and thus uninstall is not\n"
+                "applicable in this case. You can now uninstall Mackup if you\n"
+                "wish to. Your backups are still in:\n\n\t%s\n" % self.mackup_folder
+            )
+            return
+
+
         # Check the env where the command is being run
         self.check_restore_env()
 

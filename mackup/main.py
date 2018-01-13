@@ -4,7 +4,7 @@ Keep your application settings in sync.
 Copyright (C) 2013-2015 Laurent Raufaste <http://glop.org/>
 
 Usage:
-  mackup list
+  mackup [options] list
   mackup [options] backup
   mackup [options] restore
   mackup [options] uninstall

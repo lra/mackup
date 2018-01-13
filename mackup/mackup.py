@@ -152,7 +152,7 @@ class Mackup(object):
         # Backup each application
         for app_name in sorted(self.get_apps_to_backup()):
             self.print_app_header(app_name)
-            self.app_db.apps[app_name].backup(self)
+            self.app_db[app_name].backup(self)
 
     def restore(self):
         # Check the env where the command is being run
@@ -161,7 +161,7 @@ class Mackup(object):
         # Restore the Mackup config before any other config, as we might need
         # it to know about custom settings
         mackup_app = ApplicationProfile(
-            self.app_db.get_files(MACKUP_APP_NAME)
+            self.app_db[MACKUP_APP_NAME].files
         )
 
         self.print_app_header(MACKUP_APP_NAME)
@@ -179,7 +179,7 @@ class Mackup(object):
 
         for app_name in sorted(self.get_apps_to_backup()):
             self.print_app_header(app_name)
-            self.app_db.apps[app_name].restore(self)
+            self.app_db[app_name].restore(self)
 
 
     def uninstall(self):
@@ -210,12 +210,12 @@ class Mackup(object):
 
             for app_name in sorted(self.get_apps_to_backup()):
                 self.print_app_header(app_name)
-                self.app_db.apps[app_name].uninstall(self)
+                self.app_db[app_name].uninstall(self)
 
             # Uninstall the Mackup config last, as we might
             # need it to know about custom settings
             mackup_app = ApplicationProfile(
-                self.app_db.get_files(MACKUP_APP_NAME)
+                self.app_db[MACKUP_APP_NAME].files
             )
 
             self.print_app_header(MACKUP_APP_NAME)

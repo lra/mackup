@@ -94,29 +94,8 @@ class ApplicationsDatabase(object):
 
         return config_files
 
-    def get_name(self, name):
-        """
-        Return the fancy name of an application.
-
-        Args:
-            name (str)
-
-        Returns:
-            str
-        """
-        return self.apps[name]['name']
-
-    def get_files(self, name):
-        """
-        Return the list of config files of an application.
-
-        Args:
-            name (str)
-
-        Returns:
-            set of str.
-        """
-        return self.apps[name].files
+    def __getitem__(self, app_name):
+        return self.apps[app_name]
 
     def get_app_names(self):
         """
@@ -133,16 +112,3 @@ class ApplicationsDatabase(object):
             app_names.add(name)
 
         return app_names
-
-    def get_pretty_app_names(self):
-        """
-        Return the list of pretty app names that are available in the database.
-
-        Returns:
-            set of str.
-        """
-        pretty_app_names = set()
-        for app_name in self.get_app_names():
-            pretty_app_names.add(self.get_name(app_name))
-
-        return pretty_app_names

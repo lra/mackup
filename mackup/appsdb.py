@@ -94,6 +94,33 @@ class ApplicationsDatabase(object):
 
         return config_files
 
+    @staticmethod
+    def get_config(config_name):
+        """
+        Get a single config indicating if it is a core app or a custom one
+        """
+        apps_dir = os.path.join(
+            os.path.dirname(os.path.realpath(__file__)),
+            APPS_DIR,
+            config_name + ".cfg"
+        )
+
+        custom_apps_dir = os.path.join(
+            os.environ['HOME'],
+            CUSTOM_APPS_DIR,
+            config_name + ".cfg"
+        )
+
+        if os.path.exists(custom_apps_dir):
+            with open(custom_apps_dir) as f:
+                return ("custom", f.read())
+        elif os.path.exists(apps_dir):
+            with open(apps_dir) as f:
+                return ("core", f.read())
+        else:
+            utils.error("Unknown application/config '%s'" % config_name)
+
+
     def __getitem__(self, app_name):
         return self.apps[app_name]
 

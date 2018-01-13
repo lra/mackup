@@ -8,6 +8,7 @@ Usage:
   mackup [options] backup
   mackup [options] restore
   mackup [options] uninstall
+  mackup [options] show <app>
   mackup (-h | --help)
   mackup --version
 
@@ -46,7 +47,7 @@ from . import utils
 
 import logging
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.WARN)
 
 
 
@@ -89,6 +90,8 @@ def _main():
         mckp.uninstall()
     elif args['list']:
         mckp.list()
+    elif args['show']:
+        print("\nConfig found in '%s':\n\n%s" % mckp.app_db.get_config(args['<app>']))
 
     # Delete the tmp folder
     mckp.clean_temp_folder()

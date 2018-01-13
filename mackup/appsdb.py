@@ -8,7 +8,7 @@ import os
 import logging
 import traceback
 
-import .utils
+from .utils import error
 from .constants import APPS_DIR
 from .constants import CUSTOM_APPS_DIR
 from .application import ApplicationProfile
@@ -118,7 +118,7 @@ class ApplicationsDatabase(object):
             with open(apps_dir) as f:
                 return ("core", f.read())
         else:
-            utils.error("Unknown application/config '%s'" % config_name)
+            error("Unknown application/config '%s'" % config_name)
 
     def __getitem__(self, app_name):
         return self.apps[app_name]

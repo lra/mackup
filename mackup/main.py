@@ -88,110 +88,18 @@ def _main():
     if args['--debug']:
         logging.getLogger().setLevel(logging.DEBUG)
 
-    dry_run = args['--dry-run']
-    verbose = args['--verbose']
-
-
-    def printAppHeader(app_name):
-        if verbose:
-            print(("\n{0} {1} {0}").format(header("---"), bold(app_name)))
-
     mckp = Mackup()
-    app_db = ApplicationsDatabase()
+    mckp.dry_run = args['--dry-run']
+    mckp.verbose = args['--verbose']
 
     if args['backup']:
-        # Check the env where the command is being run
-        mckp.check_for_usable_backup_env()
-
-        # Backup each application
-        for app_name in sorted(mckp.get_apps_to_backup()):
-            printAppHeader(app_name)
-            app_db.apps[app_name].backup(mckp, dry_run, verbose)
-
+        mckp.backup()
     elif args['restore']:
-        # Check the env where the command is being run
-        mckp.check_for_usable_restore_env()
-
-        # Restore the Mackup config before any other config, as we might need
-        # it to know about custom settings
-        mackup_app = ApplicationProfile(mckp,
-                                        app_db.get_files(MACKUP_APP_NAME),
-                                        dry_run,
-                                        verbose)
-        printAppHeader(MACKUP_APP_NAME)
-        mackup_app.restore()
-
-        # Initialize again the apps db, as the Mackup config might have changed
-        # it
-        mckp = Mackup()
-        app_db.load()
-
-        # Restore the rest of the app configs, using the restored Mackup config
-        app_names = mckp.get_apps_to_backup()
-        # Mackup has already been done
-        app_names.discard(MACKUP_APP_NAME)
-
-        for app_name in sorted(app_names):
-            app = ApplicationProfile(mckp,
-                                     app_db.get_files(app_name),
-                                     dry_run,
-                                     verbose)
-            printAppHeader(app_name)
-            app.restore()
-
+        mckp.restore()
     elif args['uninstall']:
-        # Check the env where the command is being run
-        mckp.check_for_usable_restore_env()
-
-        if dry_run or (
-           utils.confirm("You are going to uninstall Mackup.\n"
-                         "Every configuration file, setting and dotfile"
-                         " managed by Mackup will be unlinked and moved back"
-                         " to their original place, in your home folder.\n"
-                         "Are you sure ?")):
-
-            # Uninstall the apps except Mackup, which we'll uninstall last, to
-            # keep the settings as long as possible
-            app_names = mckp.get_apps_to_backup()
-            app_names.discard(MACKUP_APP_NAME)
-
-            for app_name in sorted(app_names):
-                app = ApplicationProfile(mckp,
-                                         app_db.get_files(app_name),
-                                         dry_run,
-                                         verbose)
-                printAppHeader(app_name)
-                app.uninstall()
-
-            # Restore the Mackup config before any other config, as we might
-            # need it to know about custom settings
-            mackup_app = ApplicationProfile(mckp,
-                                            app_db.get_files(MACKUP_APP_NAME),
-                                            dry_run,
-                                            verbose)
-            mackup_app.uninstall()
-
-            # Delete the Mackup folder in Dropbox
-            # Don't delete this as there might be other Macs that aren't
-            # uninstalled yet
-            # delete(mckp.mackup_folder)
-
-            print("\n"
-                  "All your files have been put back into place. You can now"
-                  " safely uninstall Mackup.\n"
-                  "\n"
-                  "Thanks for using Mackup !")
-
+        mckp.uninstall()
     elif args['list']:
-        # Display the list of supported applications
-        mckp.check_for_usable_environment()
-        output = "Supported applications:\n"
-        for app_name in sorted(app_db.get_app_names()):
-            output += " - {}\n".format(app_name)
-        output += "\n"
-        output += ("{} applications supported in Mackup v{}"
-                   .format(len(app_db.get_app_names()), VERSION))
-        print(output)
+        mckp.list()
 
     # Delete the tmp folder
     mckp.clean_temp_folder()

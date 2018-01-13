@@ -8,11 +8,6 @@ import os
 import logging
 import traceback
 
-try:
-    import configparser
-except ImportError:
-    import ConfigParser as configparser
-
 
 from .constants import APPS_DIR
 from .constants import CUSTOM_APPS_DIR
@@ -25,75 +20,33 @@ class ApplicationsDatabase(object):
 
     def __init__(self):
         """Create a ApplicationsDatabase instance."""
+        self.apps = {}
         self.load()
 
     def load(self):
         """
         Load or reload this App Database
         """
-        # Build the dict that will contain the properties of each application
+        if len(self.apps):
+            logging.info("Reloading application profiles")
+
+        # (Re)Build the dict that will contain the properties of each application
         self.apps = {}
 
         for config_file in ApplicationsDatabase.get_config_files():
-            config = configparser.SafeConfigParser(allow_no_value=True)
-
-            # Needed to not lowercase the configuration_files in the ini files
-            config.optionxform = str
-
-            logging.debug("Reading config from: %s" % config_file)
-            try:
-                config.read(config_file)
-            except Exception as e:
-                logging.warn("Could not read config file: %s\n\tError: %s" % (config_file, str(e)))
-                logging.debug(traceback.format_exc())
-                continue
-
+            
             # Get the filename without the directory name
             filename = os.path.basename(config_file)
             # The app name is the cfg filename with the extension
             app_name = filename[:-len('.cfg')]
 
-            # Start building a dict for this app
-
-            tmp_app = ApplicationProfile(config.get('application', 'name'))
-
-            # Add the configuration files to sync
-            if config.has_section('configuration_files'):
-                for path in config.options('configuration_files'):
-                    if path.startswith('/'):
-                        raise ValueError('Unsupported absolute path: {}'
-                                         .format(path))
-
-                    # TODO: Here add encryption option! (+path)
-                    tmp_app.files.add(path)
-
-            # Add the XDG configuration files to sync
-            xdg_config_home = os.environ.get('XDG_CONFIG_HOME')
-            if xdg_config_home and config.has_section('xdg_configuration_files'):
-                logging.debug("Config contains XDG Files")
-                if not os.path.exists(xdg_config_home):
-                    raise ValueError('$XDG_CONFIG_HOME: {} does not exist'
-                                     .format(xdg_config_home))
-
-                home = os.path.expanduser('~/')
-                if not xdg_config_home.startswith(home):
-                    raise ValueError('$XDG_CONFIG_HOME: {} must be '
-                                     'somewhere within your home '
-                                     'directory: {}'
-                                     .format(xdg_config_home, home))
+            try:
+                self.apps[app_name] = ApplicationProfile.get_from_file(config_file)
+            except Exception as e:
+                logging.warn("Could not read config file: %s\n\tError: %s" % (config_file, str(e)))
+                logging.debug(traceback.format_exc())
 
 
-                for path in config.options('xdg_configuration_files'):
-                    if path.startswith('/'):
-                        raise ValueError('Unsupported absolute path: '
-                                         '{}'
-                                         .format(path))
-
-                    tmp_app.files.add(
-                        os.path.join(xdg_config_home, path).replace(home, '')
-                    )
-
-            self.apps[app_name] = tmp_app
 
     @staticmethod
     def get_config_files():

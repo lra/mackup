@@ -6,7 +6,10 @@ import shutil
 import stat
 import subprocess
 import sys
+import time
 import sqlite3
+import distutils
+from distutils import dir_util
 
 from . import constants
 
@@ -45,6 +48,30 @@ def confirm(question):
 
     return confirmed
 
+def get_file_type(filepath):
+    if os.path.isfile(filepath):
+        return 'file'
+    elif os.path.isdir(filepath):
+        return 'folder'
+    elif os.path.islink(filepath):
+        return 'link'
+    else:
+        raise ValueError("Unsupported file: {}".format(filepath))
+
+def get_creation_time(filepath):
+    stat = os.stat(filepath)
+    try:
+        return stat.st_birthtime
+    except AttributeError:
+        # We're probably on Linux. No easy way to get creation dates here,
+        # so we'll settle for when its content was last modified.
+        return stat.st_mtime
+
+def get_creation_time_str(filename):
+    return time.strftime(
+        '%Y-%m-%d %H:%M:%S',
+        time.localtime(get_creation_time(filename))
+    )
 
 def delete(filepath):
     """
@@ -93,7 +120,11 @@ def copy(src, dst):
     # Create the path to the dst file if it does not exists
     abs_path = os.path.dirname(os.path.abspath(dst))
     if not os.path.isdir(abs_path):
-        os.makedirs(abs_path)
+        try:
+            os.makedirs(abs_path)
+        except FileExistsError as e:
+            pass
+
 
     # We need to copy a single file
     if os.path.isfile(src):
@@ -102,7 +133,7 @@ def copy(src, dst):
 
     # We need to copy a whole folder
     elif os.path.isdir(src):
-        shutil.copytree(src, dst)
+        distutils.dir_util.copy_tree(src, dst, update=1)
 
     # What the heck is this ?
     else:

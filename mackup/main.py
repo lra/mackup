@@ -49,18 +49,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 
-class ColorFormatCodes:
-    BLUE = '\033[34m'
-    BOLD = '\033[1m'
-    NORMAL = '\033[0m'
 
-
-def header(str):
-    return ColorFormatCodes.BLUE + str + ColorFormatCodes.NORMAL
-
-
-def bold(str):
-    return ColorFormatCodes.BOLD + str + ColorFormatCodes.NORMAL
 
 
 

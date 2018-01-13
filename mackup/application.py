@@ -6,6 +6,8 @@ Mackup. Name, files, ...
 """
 import os
 import logging
+import traceback
+
 try:
     import configparser
 except ImportError:
@@ -102,7 +104,45 @@ class ApplicationProfile(object):
         try:
             getattr(self, "_backup_%s" % mackup.config.mode)(mackup)
         except AttributeError as e:
+            logging.debug(traceback.format_exc())
             utils.error("Not implemented mode '%s'" % mackup.config.mode)
+
+    def _backup_copy(self, mackup):
+        """
+        Copy mode backup
+        """
+        # For each file used by the application
+        for filename in self.files:
+            (home_filepath, mackup_filepath) = mackup.get_abs_file_path(filename)
+
+            if not os.path.exists(home_filepath):
+                if mackup.verbose:
+                    print("Doing nothing\n  {}\n  does not exist"
+                          .format(home_filepath))
+                continue
+
+            if mackup.verbose:
+                print("Backing up\n  {}\n  to\n  {} ..."
+                      .format(home_filepath, mackup_filepath))
+            else:
+                print("Backing up {} ...".format(filename))
+
+            if mackup.dry_run:
+                continue
+
+            if os.path.islink(home_filepath):
+                real_path = os.path.realpath(home_filepath)
+                print("WARNING: %s is a link to %s" % (home_filepath, real_path))
+                print("         Copying it either way")
+
+
+            # If normal file/dir, copy it
+            utils.copy(home_filepath, mackup_filepath)
+
+
+
+
+
 
     def _backup_link(self, mackup):
         """
@@ -196,7 +236,41 @@ class ApplicationProfile(object):
         try:
             getattr(self, "_restore_%s" % mackup.config.mode)(mackup)
         except AttributeError as e:
+            logging.debug(traceback.format_exc())
             utils.error("Not implemented mode '%s'" % mackup.config.mode)
+
+
+    def _restore_copy(self, mackup):
+        # For each file used by the application
+        for filename in self.files:
+            (home_filepath, mackup_filepath) = mackup.get_abs_file_path(filename)
+
+            if not os.path.exists(mackup_filepath):
+                if mackup.verbose:
+                    print("Doing nothing\n  {}\n  does not exist"
+                          .format(mackup_filepath))
+                continue
+
+            if mackup.verbose:
+                print("Restoring\n  {}\n  to\n  {} ..."
+                      .format(home_filepath, mackup_filepath))
+            else:
+                print("Restoring {} ...".format(filename))
+
+            if mackup.dry_run:
+                continue
+
+            file_type = utils.get_file_type(home_filepath)
+            if utils.confirm(
+                "You already have a {} named {} in your"
+                " home.\nBackup   {}\nExisting {}\nDo you want to replace it with"
+                " your backup ?".format(
+                    file_type, filename,
+                    utils.get_creation_time_str(mackup_filepath),
+                    utils.get_creation_time_str(home_filepath))):
+
+                 utils.copy(mackup_filepath, home_filepath)
+
 
     def _restore_link(self, mackup):
         """
@@ -265,15 +339,7 @@ class ApplicationProfile(object):
                 continue
 
             # Name it right
-            if os.path.isfile(home_filepath):
-                file_type = 'file'
-            elif os.path.isdir(home_filepath):
-                file_type = 'folder'
-            elif os.path.islink(home_filepath):
-                file_type = 'link'
-            else:
-                raise ValueError("Unsupported file: {}"
-                                 .format(mackup_filepath))
+            file_type = utils.get_file_type(home_filepath)
 
             if utils.confirm("You already have a {} named {} in your"
                              " home.\nDo you want to replace it with"
@@ -287,6 +353,7 @@ class ApplicationProfile(object):
         try:
             getattr(self, "_uninstall_%s" % mackup.config.mode)(mackup)
         except AttributeError as e:
+            logging.debug(traceback.format_exc())
             utils.error("Not implemented mode '%s'" % mackup.config.mode)
 
     def _uninstall_link(self, mackup):

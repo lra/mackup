@@ -17,6 +17,18 @@ from . import appsdb
 from .constants import *
 from .application import ApplicationProfile
 
+class ColorFormatCodes:
+    BLUE = '\033[34m'
+    BOLD = '\033[1m'
+    NORMAL = '\033[0m'
+
+
+def header(str):
+    return ColorFormatCodes.BLUE + str + ColorFormatCodes.NORMAL
+
+
+def bold(str):
+    return ColorFormatCodes.BOLD + str + ColorFormatCodes.NORMAL
 
 class Mackup(object):
     """
@@ -158,7 +170,7 @@ class Mackup(object):
         # Initialize again the apps db, as the Mackup config might have changed
         # it
         mckp = Mackup()
-        app_db.load()
+        self.app_db.load()
 
         # Restore the rest of the app configs, using the restored Mackup config
         app_names = mckp.get_apps_to_backup()

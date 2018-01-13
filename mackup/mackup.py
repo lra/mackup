@@ -17,6 +17,7 @@ from . import appsdb
 from .constants import *
 from .application import ApplicationProfile
 
+
 class ColorFormatCodes:
     BLUE = '\033[34m'
     BOLD = '\033[1m'
@@ -29,6 +30,7 @@ def header(str):
 
 def bold(str):
     return ColorFormatCodes.BOLD + str + ColorFormatCodes.NORMAL
+
 
 class Mackup(object):
     """
@@ -92,9 +94,9 @@ class Mackup(object):
             return
 
         if not utils.confirm("Mackup needs a directory to store your"
-                         " configuration files\n"
-                         "Do you want to create it now? <{}>"
-                         .format(self.mackup_folder)):
+                             " configuration files\n"
+                             "Do you want to create it now? <{}>"
+                             .format(self.mackup_folder)):
             utils.error("Mackup can't do anything without a home =(")
             return
 
@@ -181,7 +183,6 @@ class Mackup(object):
             self.print_app_header(app_name)
             self.app_db[app_name].restore(self)
 
-
     def uninstall(self):
 
         if self.config.mode == "copy":
@@ -191,7 +192,6 @@ class Mackup(object):
                 "wish to. Your backups are still in:\n\n\t%s\n" % self.mackup_folder
             )
             return
-
 
         # Check the env where the command is being run
         self.check_restore_env()
@@ -239,8 +239,8 @@ class Mackup(object):
 
         output = "Supported applications:\n"
         for app_name in sorted(app_names):
-          output += " - {}\n".format(app_name)
+            output += " - {}\n".format(app_name)
         output += "\n"
         output += ("{} applications supported in Mackup v{}"
-                 .format(len(app_names), VERSION))
+                   .format(len(app_names), VERSION))
         print(output)

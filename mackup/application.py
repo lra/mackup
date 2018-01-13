@@ -57,7 +57,6 @@ class ApplicationProfile(object):
                 # TODO: Here add encryption option! (+path)
                 tmp_app.files.add(path)
 
-
         # Add the XDG configuration files to sync
         xdg_config_home = os.environ.get('XDG_CONFIG_HOME')
         if xdg_config_home and config.has_section('xdg_configuration_files'):
@@ -73,7 +72,6 @@ class ApplicationProfile(object):
                                  'directory: {}'
                                  .format(xdg_config_home, home))
 
-
             for path in config.options('xdg_configuration_files'):
                 if path.startswith('/'):
                     raise ValueError('Unsupported absolute path: '
@@ -85,7 +83,6 @@ class ApplicationProfile(object):
                 )
 
         return tmp_app
-
 
     def backup(self, mackup):
         """Public API wrapper to decide the correct method based on the mode"""
@@ -120,17 +117,12 @@ class ApplicationProfile(object):
 
             if os.path.islink(home_filepath):
                 real_path = os.path.realpath(home_filepath)
-                print("WARNING: %s is a link to %s" % (home_filepath, real_path))
+                print("WARNING: %s is a link to %s" %
+                      (home_filepath, real_path))
                 print("         Copying it either way")
-
 
             # If normal file/dir, copy it
             utils.copy(home_filepath, mackup_filepath)
-
-
-
-
-
 
     def _backup_link(self, mackup):
         """
@@ -227,7 +219,6 @@ class ApplicationProfile(object):
             logging.debug(traceback.format_exc())
             utils.error("Not implemented mode '%s'" % mackup.config.mode)
 
-
     def _restore_copy(self, mackup):
         # For each file used by the application
         for filename in self.files:
@@ -257,8 +248,7 @@ class ApplicationProfile(object):
                     utils.get_creation_time_str(mackup_filepath),
                     utils.get_creation_time_str(home_filepath))):
 
-                 utils.copy(mackup_filepath, home_filepath)
-
+                utils.copy(mackup_filepath, home_filepath)
 
     def _restore_link(self, mackup):
         """
@@ -371,7 +361,7 @@ class ApplicationProfile(object):
 
             # If the mackup file exists
             if (not os.path.isfile(mackup_filepath) and
-                not os.path.isdir(mackup_filepath)):
+                    not os.path.isdir(mackup_filepath)):
                 if mackup.verbose:
                     print("Doing nothing, {} does not exist"
                           .format(mackup_filepath))

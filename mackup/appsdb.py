@@ -8,7 +8,7 @@ import os
 import logging
 import traceback
 
-
+import .utils
 from .constants import APPS_DIR
 from .constants import CUSTOM_APPS_DIR
 from .application import ApplicationProfile
@@ -41,12 +41,12 @@ class ApplicationsDatabase(object):
             app_name = filename[:-len('.cfg')]
 
             try:
-                self.apps[app_name] = ApplicationProfile.get_from_file(config_file)
+                self.apps[app_name] = ApplicationProfile.get_from_file(
+                    config_file)
             except Exception as e:
-                logging.warn("Could not read config file: %s\n\tError: %s" % (config_file, str(e)))
+                logging.warn("Could not read config file: %s\n\tError: %s" % (
+                    config_file, str(e)))
                 logging.debug(traceback.format_exc())
-
-
 
     @staticmethod
     def get_config_files():
@@ -119,7 +119,6 @@ class ApplicationsDatabase(object):
                 return ("core", f.read())
         else:
             utils.error("Unknown application/config '%s'" % config_name)
-
 
     def __getitem__(self, app_name):
         return self.apps[app_name]

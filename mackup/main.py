@@ -50,10 +50,6 @@ import logging
 logging.basicConfig(level=logging.WARN)
 
 
-
-
-
-
 def main():
     """
     Protect the main function from Ctrl+C. Here we can also handle controlled
@@ -64,12 +60,12 @@ def main():
     except KeyboardInterrupt:
         print("\n\nAborted by the user... exiting\n")
 
+
 def _main():
     """Main function."""
     # Get the command line arg
     args = docopt(__doc__, version="Mackup {}".format(VERSION))
     logging.info("Running with args: %s" % str(args))
-
 
     # If we want to answer mackup with "yes" for each question
     if args['--force']:
@@ -91,7 +87,8 @@ def _main():
     elif args['list']:
         mckp.list()
     elif args['show']:
-        print("\nConfig found in '%s':\n\n%s" % mckp.app_db.get_config(args['<app>']))
+        print("\nConfig found in '%s':\n\n%s" %
+              mckp.app_db.get_config(args['<app>']))
 
     # Delete the tmp folder
     mckp.clean_temp_folder()

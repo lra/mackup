@@ -48,6 +48,7 @@ def confirm(question):
 
     return confirmed
 
+
 def get_file_type(filepath):
     if os.path.isfile(filepath):
         return 'file'
@@ -58,6 +59,7 @@ def get_file_type(filepath):
     else:
         raise ValueError("Unsupported file: {}".format(filepath))
 
+
 def get_creation_time(filepath):
     stat = os.stat(filepath)
     try:
@@ -67,11 +69,13 @@ def get_creation_time(filepath):
         # so we'll settle for when its content was last modified.
         return stat.st_mtime
 
+
 def get_creation_time_str(filename):
     return time.strftime(
         '%Y-%m-%d %H:%M:%S',
         time.localtime(get_creation_time(filename))
     )
+
 
 def delete(filepath):
     """
@@ -124,7 +128,6 @@ def copy(src, dst):
             os.makedirs(abs_path)
         except FileExistsError as e:
             pass
-
 
     # We need to copy a single file
     if os.path.isfile(src):

@@ -27,17 +27,8 @@ class ApplicationProfile(object):
         Create an ApplicationProfile instance.
 
         Args:
-            mackup (Mackup)
-            files (list)
+            name The appliaction name as in the config's basename
         """
-        # assert isinstance(mackup, Mackup)
-        # assert isinstance(files, set)
-
-        # self.mackup = mackup
-        # self.files = list(files)
-        # mackup.dry_run = dry_run
-        # mackup.verbose = verbose
-
         self.name = name
         self.files = set()
 
@@ -53,10 +44,7 @@ class ApplicationProfile(object):
         logging.debug("Reading config from: %s" % config_file)
         config.read(config_file)
 
-
-
         # Start building a dict for this app
-
         tmp_app = ApplicationProfile(config.get('application', 'name'))
 
         # Add the configuration files to sync

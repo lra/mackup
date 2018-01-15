@@ -298,6 +298,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Irssi](http://www.irssi.org/)
 - [iStat Menus 5](https://bjango.com/mac/istatmenus/)
 - [Janus](https://github.com/carlhuda/janus)
+- [Jitouch](http://www.jitouch.com/)
 - [jrnl](http://maebert.github.io/jrnl/)
 - [JSHint](http://jshint.com/)
 - [Julia](http://julialang.org)

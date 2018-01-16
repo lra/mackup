@@ -98,7 +98,9 @@ class ApplicationProfile(object):
         """
         # For each file used by the application
         for filename in self.files:
-            (home_filepath, mackup_filepath) = mackup.get_abs_file_path(filename)
+            (home_filepath, mackup_filepath) = mackup.get_abs_file_path(
+                filename
+            )
 
             if not os.path.exists(home_filepath):
                 if mackup.verbose:
@@ -144,7 +146,9 @@ class ApplicationProfile(object):
 
         # For each file used by the application
         for filename in self.files:
-            (home_filepath, mackup_filepath) = mackup.get_abs_file_path(filename)
+            (home_filepath, mackup_filepath) = mackup.get_abs_file_path(
+                filename
+            )
 
             # If the file exists and is not already a link pointing to Mackup
             if ((os.path.isfile(home_filepath) or
@@ -222,7 +226,9 @@ class ApplicationProfile(object):
     def _restore_copy(self, mackup):
         # For each file used by the application
         for filename in self.files:
-            (home_filepath, mackup_filepath) = mackup.get_abs_file_path(filename)
+            (home_filepath, mackup_filepath) = mackup.get_abs_file_path(
+                filename
+            )
 
             if not os.path.exists(mackup_filepath):
                 if mackup.verbose:
@@ -242,7 +248,8 @@ class ApplicationProfile(object):
             file_type = utils.get_file_type(home_filepath)
             if utils.confirm(
                 "You already have a {} named {} in your"
-                " home.\nBackup   {}\nExisting {}\nDo you want to replace it with"
+                " home.\nBackup   {}\nExisting {}\n"
+                "Do you want to replace it with"
                 " your backup ?".format(
                     file_type, filename,
                     utils.get_creation_time_str(mackup_filepath),
@@ -266,7 +273,9 @@ class ApplicationProfile(object):
         """
         # For each file used by the application
         for filename in self.files:
-            (home_filepath, mackup_filepath) = mackup.get_abs_file_path(filename)
+            (home_filepath, mackup_filepath) = mackup.get_abs_file_path(
+                filename
+            )
 
             # If the file exists and is not already pointing to the mackup file
             # and the folder makes sense on the current platform (Don't sync
@@ -357,7 +366,9 @@ class ApplicationProfile(object):
         """
         # For each file used by the application
         for filename in self.files:
-            (home_filepath, mackup_filepath) = mackup.get_abs_file_path(filename)
+            (home_filepath, mackup_filepath) = mackup.get_abs_file_path(
+                filename
+            )
 
             # If the mackup file exists
             if (not os.path.isfile(mackup_filepath) and

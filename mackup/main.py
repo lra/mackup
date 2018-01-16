@@ -37,13 +37,14 @@ See https://github.com/lra/mackup/tree/master/doc for more information.
 
 """
 import logging
-logging.basicConfig(level=logging.WARN)
-
 
 from docopt import docopt
-from .constants import MACKUP_APP_NAME, VERSION
+from .constants import VERSION
 from .mackup import Mackup
 from . import utils
+
+
+logging.basicConfig(level=logging.WARN)
 
 
 def main():

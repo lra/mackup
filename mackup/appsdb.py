@@ -30,7 +30,8 @@ class ApplicationsDatabase(object):
         if len(self.apps):
             logging.info("Reloading application profiles")
 
-        # (Re)Build the dict that will contain the properties of each application
+        # (Re)Build the dict that will contain the properties of each
+        # application
         self.apps = {}
 
         for config_file in ApplicationsDatabase.get_config_files():

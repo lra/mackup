@@ -9,7 +9,7 @@ import sys
 import time
 import sqlite3
 import distutils
-from distutils import dir_util
+from distutils import dir_util # noqa
 
 from . import constants
 
@@ -35,9 +35,9 @@ def confirm(question):
     while True:
         # Python 3 check
         if sys.version_info[0] < 3:
-            answer = raw_input(question + ' <Yes|No>').lower()
+            answer = raw_input(question + ' <Yes|No>').lower()  # noqa
         else:
-            answer = input(question + ' <Yes|No>').lower()
+            answer = input(question + ' <Yes|No>').lower()  # noqa
 
         if answer == 'yes' or answer == 'y':
             confirmed = True

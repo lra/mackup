@@ -5,7 +5,16 @@ import sys
 import os.path
 import logging
 
-from .constants import *  # noqa: F405
+from .constants import (
+    MACKUP_CONFIG_FILE,
+    MACKUP_BACKUP_PATH,
+    ENGINE_DROPBOX,
+    ENGINE_GDRIVE,
+    ENGINE_COPY,
+    ENGINE_ICLOUD,
+    ENGINE_BOX,
+    ENGINE_FS)
+
 from .utils import (error,
                     get_dropbox_folder_location,
                     get_copy_folder_location,

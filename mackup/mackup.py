@@ -14,7 +14,7 @@ import logging
 from . import utils
 from . import config
 from . import appsdb
-from .constants import *
+from .constants import MACKUP_APP_NAME, VERSION
 from .application import ApplicationProfile
 
 
@@ -114,7 +114,8 @@ class Mackup(object):
         """
         # If a list of apps to sync is specify, we only allow those
         # Or we allow every supported app by default
-        apps_to_backup = self.config.apps_to_sync or self.app_db.get_app_names()
+        apps_to_backup = self.config.apps_to_sync or \
+            self.app_db.get_app_names()
 
         # Remove the specified apps to ignore
         for app_name in self.config.apps_to_ignore:
@@ -187,10 +188,10 @@ class Mackup(object):
 
         if self.config.mode == "copy":
             print(
-                "You are running Mackup in copy mode and thus uninstall is not\n"
-                "applicable in this case. You can now uninstall Mackup if you\n"
-                "wish to. Your backups are still in:\n\n\t%s\n" % self.mackup_folder
-            )
+                "You are running Mackup in copy mode and thus uninstall is "
+                "not \napplicable in this case. You can now uninstall Mackup "
+                "if you\nwish to. Your backups are still in:\n\n\t%s\n" %
+                self.mackup_folder)
             return
 
         # Check the env where the command is being run

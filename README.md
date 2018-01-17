@@ -335,6 +335,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Maid](https://github.com/benjaminoakes/maid/)
 - [Mailmate](http://freron.com/)
 - [Mailplane](http://mailplaneapp.com/)
+- [Marked 2](http://marked2app.com)
 - [MATLAB](http://www.mathworks.com/products/matlab/)
 - [Maven](http://maven.apache.org)
 - [Max](http://sbooth.org/Max/)

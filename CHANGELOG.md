@@ -6,6 +6,7 @@
 - Add support for Tmuxp (via @infernion)
 - Add support for sferik/t (via @paxperscientiam)
 - Add support for fastlane (via @revolter)
+- Add support for Insomnia (via @browniebroke)
 - Add support for Marked 2 (via @semicolonsnet)
 
 ## Mackup 0.8.16

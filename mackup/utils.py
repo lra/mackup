@@ -124,10 +124,7 @@ def copy(src, dst):
     # Create the path to the dst file if it does not exists
     abs_path = os.path.dirname(os.path.abspath(dst))
     if not os.path.isdir(abs_path):
-        try:
-            os.makedirs(abs_path)
-        except FileExistsError as e:
-            pass
+        os.makedirs(abs_path)
 
     # We need to copy a single file
     if os.path.isfile(src):

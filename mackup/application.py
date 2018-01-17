@@ -88,7 +88,7 @@ class ApplicationProfile(object):
         """Public API wrapper to decide the correct method based on the mode"""
         try:
             getattr(self, "_backup_%s" % mackup.config.mode)(mackup)
-        except AttributeError as e:
+        except AttributeError:
             logging.debug(traceback.format_exc())
             utils.error("Not implemented mode '%s'" % mackup.config.mode)
 
@@ -219,7 +219,7 @@ class ApplicationProfile(object):
         """Public API wrapper to decide the correct method based on the mode"""
         try:
             getattr(self, "_restore_%s" % mackup.config.mode)(mackup)
-        except AttributeError as e:
+        except AttributeError:
             logging.debug(traceback.format_exc())
             utils.error("Not implemented mode '%s'" % mackup.config.mode)
 
@@ -339,7 +339,7 @@ class ApplicationProfile(object):
         """Public API wrapper to decide the correct method based on the mode"""
         try:
             getattr(self, "_uninstall_%s" % mackup.config.mode)(mackup)
-        except AttributeError as e:
+        except AttributeError:
             logging.debug(traceback.format_exc())
             utils.error("Not implemented mode '%s'" % mackup.config.mode)
 

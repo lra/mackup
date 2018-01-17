@@ -9,7 +9,6 @@
 - Add support for Insomnia (via @browniebroke)
 - Add support for Marked 2 (via @semicolonsnet)
 
-
 ## Mackup 0.8.16
 
 - Add support for SmartGit (via @revolter)

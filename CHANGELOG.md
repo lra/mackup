@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for iTerm (via @Sbastien)
 - Add support for Boxer (via @icopp)
 - Add support for Tmuxp (via @infernion)
 - Add support for sferik/t (via @paxperscientiam)

@@ -473,6 +473,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [tint2](https://code.google.com/p/tint2/)
 - [TinyFugue](http://tinyfugue.sourceforge.net)
 - [Tmux](http://tmux.sourceforge.net/)
+- [Tmuxp](https://github.com/tony/tmuxp)
 - [Tmuxinator](https://github.com/tmuxinator/tmuxinator)
 - [Todo.txt CLI](http://todotxt.com/)
 - [TotalSpaces2](http://totalspaces.binaryage.com/)

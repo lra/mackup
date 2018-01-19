@@ -159,6 +159,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Adobe Photoshop CC](http://www.adobe.com/products/photoshop.html)
 - [Adobe Photoshop Lightroom CC](https://www.adobe.com/products/photoshop-lightroom.html)
 - [Airmail](http://airmailapp.com/)
+- [Amethyst](https://ianyh.com/amethyst/)
 - [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704)
 - [Ancient Domains of Mystery](http://www.adom.de/home/index.html)
 - [Android Studio](https://developer.android.com/sdk/)

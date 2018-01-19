@@ -9,6 +9,7 @@
 - Add support for fastlane (via @revolter)
 - Add support for Insomnia (via @browniebroke)
 - Add support for Marked 2 (via @semicolonsnet)
+- Add link to iCloud for clarification (via @JasonMFry)
 
 ## Mackup 0.8.16
 

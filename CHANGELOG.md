@@ -9,6 +9,7 @@
 - Add support for fastlane (via @revolter)
 - Add support for Insomnia (via @browniebroke)
 - Add support for Marked 2 (via @semicolonsnet)
+- Add support for BetterTouchTool data store v2 (via @foray1010)
 
 ## Mackup 0.8.16
 

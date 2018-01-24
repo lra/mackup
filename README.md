@@ -246,6 +246,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Factorio](https://www.factorio.com)
 - [Fantastical](http://flexibits.com/fantastical)
 - [fasd](https://github.com/clvv/fasd)
+- [fastlane](https://fastlane.tools)
 - [Feeds](http://www.feedsapp.com/)
 - [FileZilla](https://filezilla-project.org/)
 - [Fish](http://ridiculousfish.com/shell/)
@@ -292,10 +293,12 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [i2cssh](https://github.com/wouterdebie/i2cssh)
 - [i3](https://i3wm.org/)
 - [i3wm](http://i3wm.org/)
+- [Insomnia](https://insomnia.rest/)
 - [IntelliJIDEA](http://www.jetbrains.com/idea/)
 - [IPython](http://ipython.org/)
 - [Irssi](http://www.irssi.org/)
 - [iStat Menus 5](https://bjango.com/mac/istatmenus/)
+- [iTerm2](https://www.iterm2.com/)
 - [Janus](https://github.com/carlhuda/janus)
 - [jrnl](http://maebert.github.io/jrnl/)
 - [JSHint](http://jshint.com/)
@@ -334,6 +337,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Maid](https://github.com/benjaminoakes/maid/)
 - [Mailmate](http://freron.com/)
 - [Mailplane](http://mailplaneapp.com/)
+- [Marked 2](http://marked2app.com)
 - [MATLAB](http://www.mathworks.com/products/matlab/)
 - [Maven](http://maven.apache.org)
 - [Max](http://sbooth.org/Max/)
@@ -457,6 +461,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html)
 - [Surge](http://surge.run/manual/)
 - [Swinsian](http://swinsian.com/)
+- [T](http://sferik.github.io/t/)
 - [TaskPaper](http://www.hogbaysoftware.com/products/taskpaper)
 - [Taskwarrior](http://taskwarrior.org/)
 - [Teamocil](http://remiprev.github.io/teamocil/)
@@ -470,6 +475,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [tint2](https://code.google.com/p/tint2/)
 - [TinyFugue](http://tinyfugue.sourceforge.net)
 - [Tmux](http://tmux.sourceforge.net/)
+- [Tmuxp](https://github.com/tony/tmuxp)
 - [Tmuxinator](https://github.com/tmuxinator/tmuxinator)
 - [Todo.txt CLI](http://todotxt.com/)
 - [TotalSpaces2](http://totalspaces.binaryage.com/)
@@ -500,7 +506,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Xamarin Studio](https://xamarin.com/studio)
 - [XBindKeys](http://www.nongnu.org/xbindkeys/)
 - [Xchat](http://xchat.org/)
-- [XCode](https://developer.apple.com/xcode/)
+- [Xcode](https://developer.apple.com/xcode/)
 - [XEmacs](http://www.xemacs.org/)
 - [XLD](http://tmkk.undo.jp/xld/)
 - [XtraFinder](http://www.trankynam.com/xtrafinder/)
@@ -557,7 +563,7 @@ And it's [GPL](http://www.gnu.org/licenses/gpl.html), of course.
 
 ## What's up with the weird name
 
-Mackup is just a contraction of Mac and Backup. It is simple, short, and easy to
+Mackup is just a portmanteau of Mac and Backup. It is simple, short, and easy to
 remember, and it corresponds with the whole idea of Mackup: the simpler – the better!
 (And I suck at naming stuff, but who doesn't.)
 

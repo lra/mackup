@@ -299,6 +299,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Irssi](http://www.irssi.org/)
 - [iStat Menus 5](https://bjango.com/mac/istatmenus/)
 - [iTerm2](https://www.iterm2.com/)
+- [iTermocil](https://github.com/TomAnthony/itermocil)
 - [Janus](https://github.com/carlhuda/janus)
 - [jrnl](http://maebert.github.io/jrnl/)
 - [JSHint](http://jshint.com/)

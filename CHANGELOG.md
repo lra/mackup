@@ -9,6 +9,9 @@
 - Add support for fastlane (via @revolter)
 - Add support for Insomnia (via @browniebroke)
 - Add support for Marked 2 (via @semicolonsnet)
+- Add support for WebStorm 2017.1 (via @KrzysztofKarol)
+- Add support for WebStorm 2017.2 (via @KrzysztofKarol)
+- Add support for WebStorm 2017.3 (via @KrzysztofKarol)
 
 ## Mackup 0.8.16
 

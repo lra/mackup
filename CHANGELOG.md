@@ -2,8 +2,14 @@
 
 ## WIP
 
+- Add support for iTerm (via @Sbastien)
 - Add support for Boxer (via @icopp)
 - Add support for Franz (via @stephen2m)
+- Add support for Tmuxp (via @infernion)
+- Add support for sferik/t (via @paxperscientiam)
+- Add support for fastlane (via @revolter)
+- Add support for Insomnia (via @browniebroke)
+- Add support for Marked 2 (via @semicolonsnet)
 
 ## Mackup 0.8.16
 
@@ -535,7 +541,7 @@
 ## Mackup 0.4.2
 
 - Made a method to check if a process is running (not yet)
-- Added support for XCode (via @adeca)
+- Added support for Xcode (via @adeca)
 - Added support for CoRD, Spark, f.lux, BetterTouchTool, BetterSnapTool and
   Coda 2 (via @TimCorcoran)
 - Added support for Mailplane and Gitbox (via @THEY)

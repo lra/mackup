@@ -373,6 +373,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [OmniFocus](https://www.omnigroup.com/omnifocus/)
 - [OmniGraffle](https://www.omnigroup.com/omnigraffle/)
+- [Openbox](http://openbox.org)
 - [OpenEmu](http://openemu.org)
 - [OpenSSH](http://www.openssh.com/) (NOTE: includes private keys)
 - [Paintbrush](http://paintbrush.sourceforge.net/)

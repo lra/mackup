@@ -26,6 +26,7 @@
 - Add support for PHPStorm 2017.3 (via @cafferata)
 - Add support for DaisyDisk (via @cafferata)
 - Add support for MySQLWorkbench (via @cafferata)
+- Add support for Openbox (via @jpfarcy)
 
 ## Mackup 0.8.16
 

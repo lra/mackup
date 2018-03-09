@@ -45,6 +45,7 @@
 - Add support for Ghostwriter (via @orschiro)
 - Add support for LibreOffice (via @orschiro)
 - Fix support for Karabiner Elements (via @sepehr)
+- Add support for iStat Menus 6 (via @cmer)
 
 ## Mackup 0.8.15
 

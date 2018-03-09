@@ -306,7 +306,9 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [IPython](http://ipython.org/)
 - [Irssi](http://www.irssi.org/)
 - [iStat Menus 5](https://bjango.com/mac/istatmenus/)
+- [iStat Menus 6](https://bjango.com/mac/istatmenus/)
 - [iTerm2](https://www.iterm2.com/)
+- iTunes Applescripts
 - [Janus](https://github.com/carlhuda/janus)
 - [Jitouch](http://www.jitouch.com/)
 - [jrnl](http://maebert.github.io/jrnl/)

@@ -10,6 +10,7 @@
 - Add support for Insomnia (via @browniebroke)
 - Add support for Marked 2 (via @semicolonsnet)
 - Add support for GitUp (via @cafferata)
+- Add support for HTTPie (via @Dremora)
 
 ## Mackup 0.8.16
 

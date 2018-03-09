@@ -12,7 +12,6 @@
 - Add support for BetterTouchTool data store v2 (via @foray1010)
 - Add support for HTTPie (via @Dremora)
 
-
 ## Mackup 0.8.16
 
 - Add support for SmartGit (via @revolter)

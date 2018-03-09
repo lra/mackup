@@ -11,6 +11,7 @@
 - Add support for Tmuxp (via @infernion)
 - Add support for sferik/t (via @paxperscientiam)
 - Add support for fastlane (via @revolter)
+- Add support for Blender (via @forby)
 - Add support for Insomnia (via @browniebroke)
 - Add support for Marked 2 (via @semicolonsnet)
 - Add support for BetterTouchTool data store v2 (via @pearlythepirate and @foray1010)

@@ -190,6 +190,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Billings Pro Server Admin](https://www.marketcircle.com/billingspro/download/billingspro-server/)
 - [Bitchx](http://www.bitchx.org/)
 - [Blackfire](https://blackfire.io/)
+- [Blender](https://blender.org/)
 - [Boto](https://github.com/boto/boto)
 - [Boxer](http://boxerapp.com)
 - [Brackets](http://brackets.io/)

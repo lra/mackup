@@ -14,6 +14,7 @@
 - Add support for HTTPie (via @Dremora)
 - Remove GnuPG keyrings from backup by default (via @jeremygaither)
 - Add support for Postico (via @stvhwrd)
+- Add support for PHPStorm 2017.3 (via @cafferata)
 
 ## Mackup 0.8.16
 

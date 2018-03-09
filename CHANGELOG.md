@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for iTermocil (via @godbout)
 - Add support for Amethyst (via @whtsky)
 - Add support for Micro (via @icopp)
 - Add support for Cerebro (via @kelion)

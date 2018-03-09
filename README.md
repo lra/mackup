@@ -295,6 +295,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [i2cssh](https://github.com/wouterdebie/i2cssh)
 - [i3](https://i3wm.org/)
 - [i3wm](http://i3wm.org/)
+- [IdeaVim](https://github.com/JetBrains/ideavim)
 - [Insomnia](https://insomnia.rest/)
 - [IntelliJIDEA](http://www.jetbrains.com/idea/)
 - [IPython](http://ipython.org/)

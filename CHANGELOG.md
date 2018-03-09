@@ -4,7 +4,8 @@
 
 - Add support for iTerm (via @Sbastien)
 - Add support for Boxer (via @icopp)
-- Update support for Pycharm (via @scooby and @cafferata)
+- Update support for Pycharm (via @scooby, wangkezun, and @cafferata)
+- Add support for IdeaVim (via @x-ji)
 - Add support for Tmuxp (via @infernion)
 - Add support for sferik/t (via @paxperscientiam)
 - Add support for fastlane (via @revolter)

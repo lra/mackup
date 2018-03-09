@@ -13,6 +13,7 @@
 - Add support for Marked 2 (via @semicolonsnet)
 - Add support for HTTPie (via @Dremora)
 - Remove GnuPG keyrings from backup by default (via @jeremygaither)
+- Add support for Postico (via @stvhwrd)
 
 ## Mackup 0.8.16
 

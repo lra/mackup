@@ -17,7 +17,6 @@
 - Add support for PHPStorm 2017.3 (via @cafferata)
 - Add support for DaisyDisk (via @cafferata)
 
-
 ## Mackup 0.8.16
 
 - Add support for SmartGit (via @revolter)

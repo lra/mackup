@@ -11,6 +11,7 @@
 - Add support for Insomnia (via @browniebroke)
 - Add support for Marked 2 (via @semicolonsnet)
 - Add support for HTTPie (via @Dremora)
+- Remove GnuPG keyrings from backup by default (via @jeremygaither)
 
 ## Mackup 0.8.16
 

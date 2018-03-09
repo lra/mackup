@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for Amethyst (via @whtsky)
 - Add support for Micro (via @icopp)
 - Add support for Cerebro (via @kelion)
 - Add support for iTerm (via @Sbastien)

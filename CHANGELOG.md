@@ -2,15 +2,19 @@
 
 ## WIP
 
+- Add support for Cerebro (via @kelion)
 - Add support for iTerm (via @Sbastien)
 - Add support for Boxer (via @icopp)
-- Fix support for BetterTouchTool (via @pearlythepirate)
+- Add support for IdeaVim (via @x-ji)
 - Add support for Tmuxp (via @infernion)
 - Add support for sferik/t (via @paxperscientiam)
 - Add support for fastlane (via @revolter)
 - Add support for Insomnia (via @browniebroke)
 - Add support for Marked 2 (via @semicolonsnet)
 - Add support for HTTPie (via @Dremora)
+- Remove GnuPG keyrings from backup by default (via @jeremygaither)
+- Add support for Postico (via @stvhwrd)
+- Fix support for BetterTouchTool (via @pearlythepirate and @foray1010)
 
 ## Mackup 0.8.16
 

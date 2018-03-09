@@ -23,7 +23,6 @@
 - Add support for DaisyDisk (via @cafferata)
 - Add support for MySQLWorkbench (via @cafferata)
 
-
 ## Mackup 0.8.16
 
 - Add support for SmartGit (via @revolter)

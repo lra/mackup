@@ -14,6 +14,9 @@ jobs:
       - run:
           name: run tests
           command: make test
+      - run:
+          name: codecov
+          command: codecov
   "lint":
     docker:
       - image: circleci/ruby:latest-browsers
@@ -28,14 +31,6 @@ jobs:
       - run:
           name: lint markdown
           command: find . -name "*.md" -print0 | xargs -0 mdl
-  "codecov":
-    docker:
-      - image: python:2.7
-    working_directory: ~/repo
-    steps:
-      - run:
-          name: codecov
-          command: codecov
 
 workflows:
   version: 2
@@ -43,4 +38,3 @@ workflows:
     jobs:
       - "python"
       - "lint"
-      - "codecov"

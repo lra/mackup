@@ -360,6 +360,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [MPV](https://mpv.io/)
 - [MusicBrainz Picard](https://picard.musicbrainz.org/)
 - [myrepos](https://github.com/joeyh/myrepos)
+- [MySQL Workbench](https://www.mysql.com/products/workbench/)
 - [MySQL](http://www.mysql.com/)
 - [Name Mangler](http://manytricks.com/namemangler/)
 - [Nano](http://www.nano-editor.org/)

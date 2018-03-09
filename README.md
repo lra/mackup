@@ -287,6 +287,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Homebridge](https://github.com/nfarina/homebridge)
 - [Houdini](http://uglyapps.co.uk/houdini/)
 - [Htop](http://htop.sourceforge.net/)
+- [HTTPie](https://httpie.org/)
 - [Hyper.app](https://hyper.is/)
 - [HyperDock](https://bahoom.com/hyperdock)
 - [HyperSwitch](https://bahoom.com/hyperswitch)

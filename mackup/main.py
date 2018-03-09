@@ -16,6 +16,7 @@ Options:
   -f --force    Force every question asked to be answered with "Yes".
   -n --dry-run  Show steps without executing.
   -v --verbose  Show additional details.
+  --force-no    Force every question asked to be answered with "No".
   --version     Show version.
 
 Modes of action:
@@ -68,6 +69,9 @@ def main():
         if verbose:
             print(("\n{0} {1} {0}").format(header("---"), bold(app_name)))
 
+     # If we want to answer mackup with "no" for each question
+    if args['--force-no']:
+        utils.FORCE_NO = True
     # If we want to answer mackup with "yes" for each question
     if args['--force']:
         utils.FORCE_YES = True

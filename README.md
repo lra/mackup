@@ -221,6 +221,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [CotEditor](http://coteditor.com/)
 - [Ctags](http://ctags.sourceforge.net/)
 - [Cyberduck](https://cyberduck.io/)
+- [DaisyDisk](https://daisydiskapp.com)
 - [Dash](https://kapeli.com/dash)
 - [Day-O](http://www.shauninman.com/archive/2011/10/20/day_o_mac_menu_bar_clock)
 - [DbVisualizer](https://www.dbvis.com/)

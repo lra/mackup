@@ -2,10 +2,10 @@
 
 ## WIP
 
-- Add support for Micro (via @icopp)
 - Add support for Cerebro (via @kelion)
 - Add support for iTerm (via @Sbastien)
 - Add support for Boxer (via @icopp)
+- Add backing up vscode extensions for Visual Studio (via @stephen2m)
 - Add support for IdeaVim (via @x-ji)
 - Add support for Tmuxp (via @infernion)
 - Add support for sferik/t (via @paxperscientiam)

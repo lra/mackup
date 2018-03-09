@@ -13,6 +13,7 @@
 - Add support for fastlane (via @revolter)
 - Add support for Insomnia (via @browniebroke)
 - Add support for Marked 2 (via @semicolonsnet)
+- Add support for BetterTouchTool data store v2 (via @foray1010)
 - Add support for WhatsApp Web (via @cafferata)
 - Add support for GitUp (via @cafferata)
 - Add support for HTTPie (via @Dremora)

@@ -27,6 +27,7 @@
 - Add support for DaisyDisk (via @cafferata)
 - Add support for MySQLWorkbench (via @cafferata)
 - Add support for Openbox (via @jpfarcy)
+- Add support for Visual Studio for Mac (via @ivmirx)
 
 ## Mackup 0.8.16
 

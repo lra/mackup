@@ -3,6 +3,7 @@
 ## WIP
 
 - Add support for Boxer (via @icopp)
+- Add support for IntelliJ IDEA 2017.1 & 2017.2 (via @wicksome)
 
 ## Mackup 0.8.16
 

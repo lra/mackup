@@ -27,7 +27,7 @@
 - Add support for DaisyDisk (via @cafferata)
 - Add support for MySQLWorkbench (via @cafferata)
 - Add support for Openbox (via @jpfarcy)
-- Add support for IntelliJ IDEA 2017.1 & 2017.2 (via @wicksome)
+- Add support for IntelliJ IDEA 2017.1 & 2017.2 & 2017.3 (via @wicksome)
 
 ## Mackup 0.8.16
 

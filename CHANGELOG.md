@@ -2,8 +2,32 @@
 
 ## WIP
 
+- Add support for iTermocil (via @godbout)
+- Add support for Amethyst (via @whtsky)
+- Add support for Micro (via @icopp)
+- Add support for Cerebro (via @kelion)
+- Add support for iTerm (via @Sbastien)
 - Add support for Boxer (via @icopp)
 - Add support for Exercism (via @jordanadams)
+- Add support for Franz (via @stephen2m)
+- Add support for IdeaVim (via @x-ji)
+- Add support for Tmuxp (via @infernion)
+- Add support for sferik/t (via @paxperscientiam)
+- Add support for fastlane (via @revolter)
+- Add support for Jitouch (via @forby)
+- Add support for Blender (via @forby)
+- Add support for Insomnia (via @browniebroke)
+- Add support for Marked 2 (via @semicolonsnet)
+- Add support for BetterTouchTool data store v2 (via @pearlythepirate and @foray1010)
+- Add support for WhatsApp Web (via @cafferata)
+- Add support for GitUp (via @cafferata)
+- Add support for HTTPie (via @Dremora)
+- Remove GnuPG keyrings from backup by default (via @jeremygaither)
+- Add support for Postico (via @stvhwrd)
+- Add support for PHPStorm 2017.3 (via @cafferata)
+- Add support for DaisyDisk (via @cafferata)
+- Add support for MySQLWorkbench (via @cafferata)
+- Add support for Openbox (via @jpfarcy)
 
 ## Mackup 0.8.16
 
@@ -535,7 +559,7 @@
 ## Mackup 0.4.2
 
 - Made a method to check if a process is running (not yet)
-- Added support for XCode (via @adeca)
+- Added support for Xcode (via @adeca)
 - Added support for CoRD, Spark, f.lux, BetterTouchTool, BetterSnapTool and
   Coda 2 (via @TimCorcoran)
 - Added support for Mailplane and Gitbox (via @THEY)

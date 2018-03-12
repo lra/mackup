@@ -27,6 +27,7 @@
 - Add support for DaisyDisk (via @cafferata)
 - Add support for MySQLWorkbench (via @cafferata)
 - Add support for Openbox (via @jpfarcy)
+- Change OS X to macOS to match OS name change (via @samdoran)
 
 ## Mackup 0.8.16
 

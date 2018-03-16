@@ -2,6 +2,10 @@
 
 ## WIP
 
+## Mackup 0.8.17
+
+- Add support for Micro (via @icopp)
+- Add backing up vscode extensions for Visual Studio (via @stephen2m)
 - Add support for iTermocil (via @godbout)
 - Add support for Amethyst (via @whtsky)
 - Add support for Micro (via @icopp)

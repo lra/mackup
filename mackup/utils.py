@@ -6,7 +6,10 @@ import shutil
 import stat
 import subprocess
 import sys
+import time
 import sqlite3
+import distutils
+from distutils import dir_util # noqa
 
 from . import constants
 
@@ -32,9 +35,9 @@ def confirm(question):
     while True:
         # Python 3 check
         if sys.version_info[0] < 3:
-            answer = raw_input(question + ' <Yes|No>').lower()
+            answer = raw_input(question + ' <Yes|No>').lower()  # noqa
         else:
-            answer = input(question + ' <Yes|No>').lower()
+            answer = input(question + ' <Yes|No>').lower()  # noqa
 
         if answer == 'yes' or answer == 'y':
             confirmed = True
@@ -44,6 +47,34 @@ def confirm(question):
             break
 
     return confirmed
+
+
+def get_file_type(filepath):
+    if os.path.isfile(filepath):
+        return 'file'
+    elif os.path.isdir(filepath):
+        return 'folder'
+    elif os.path.islink(filepath):
+        return 'link'
+    else:
+        raise ValueError("Unsupported file: {}".format(filepath))
+
+
+def get_creation_time(filepath):
+    stat = os.stat(filepath)
+    try:
+        return stat.st_birthtime
+    except AttributeError:
+        # We're probably on Linux. No easy way to get creation dates here,
+        # so we'll settle for when its content was last modified.
+        return stat.st_mtime
+
+
+def get_creation_time_str(filename):
+    return time.strftime(
+        '%Y-%m-%d %H:%M:%S',
+        time.localtime(get_creation_time(filename))
+    )
 
 
 def delete(filepath):
@@ -102,7 +133,7 @@ def copy(src, dst):
 
     # We need to copy a whole folder
     elif os.path.isdir(src):
-        shutil.copytree(src, dst)
+        distutils.dir_util.copy_tree(src, dst, update=1)
 
     # What the heck is this ?
     else:
@@ -216,7 +247,7 @@ def get_google_drive_folder_location():
     Try to locate the Google Drive folder.
 
     Returns:
-        (unicode) Full path to the current Google Drive folder
+         Full path to the current Google Drive folder
     """
     gdrive_db_path = 'Library/Application Support/Google/Drive/sync_config.db'
     yosemite_gdrive_db_path = ('Library/Application Support/Google/Drive/'
@@ -238,7 +269,7 @@ def get_google_drive_folder_location():
                      "WHERE entry_key = 'local_sync_root_path';")
             cur.execute(query)
             data = cur.fetchone()
-            googledrive_home = unicode(data[0])
+            googledrive_home = data[0]
             con.close()
 
     if not googledrive_home:
@@ -274,7 +305,7 @@ def get_copy_folder_location():
     Try to locate the Copy folder.
 
     Returns:
-        (unicode) Full path to the current Copy folder
+         Full path to the current Copy folder
     """
     copy_settings_path = 'Library/Application Support/Copy Agent/config.db'
     copy_home = None
@@ -290,7 +321,7 @@ def get_copy_folder_location():
                      "WHERE option = 'csmRootPath';")
             cur.execute(query)
             data = cur.fetchone()
-            copy_home = unicode(data[0])
+            copy_home = data[0]
             cur.close()
 
     if not copy_home:
@@ -313,7 +344,7 @@ def get_icloud_folder_location():
     if not os.path.isdir(icloud_home):
         error('Unable to find your iCloud Drive =(')
 
-    return unicode(icloud_home)
+    return icloud_home
 
 
 def is_process_running(process_name):

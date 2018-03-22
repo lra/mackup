@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Fix BetterTouchTool support
+
 ## Mackup 0.8.17
 
 - Add support for Micro (via @icopp)

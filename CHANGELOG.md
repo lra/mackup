@@ -2,7 +2,9 @@
 
 ## WIP
 
-- Fix BetterTouchTool support
+## Mackup 0.8.18
+
+- Fix crash due to bad BetterTouchTool support
 - Fixed an issue with python3
 
 ## Mackup 0.8.17

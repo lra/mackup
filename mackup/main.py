@@ -12,11 +12,12 @@ Usage:
   mackup --version
 
 Options:
-  -h --help     Show this screen.
-  -f --force    Force every question asked to be answered with "Yes".
-  -n --dry-run  Show steps without executing.
-  -v --verbose  Show additional details.
-  --version     Show version.
+  -h --help               Show this screen.
+  -c FILE --config=FILE   Configuration file to use.
+  -f --force              Force every question asked to be answered with "Yes".
+  -n --dry-run            Show steps without executing.
+  -v --verbose            Show additional details.
+  --version               Show version.
 
 Modes of action:
  1. list: display a list of all supported applications.
@@ -61,7 +62,7 @@ def main():
     # Get the command line arg
     args = docopt(__doc__, version="Mackup {}".format(VERSION))
 
-    mckp = Mackup()
+    mckp = Mackup(args['--config'])
     app_db = ApplicationsDatabase()
 
     def printAppHeader(app_name):

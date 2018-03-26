@@ -2,9 +2,43 @@
 
 ## WIP
 
-- Add support for Boxer (via @icopp)
+- Support for RubyMine 2017.03 (via @kibitan)
 - Add additional Spectacle library path (via @iansym)
+
+## Mackup 0.8.18
+
+- Fix crash due to bad BetterTouchTool support
+- Fixed an issue with python3
+
+## Mackup 0.8.17
+
+- Add support for Micro (via @icopp)
+- Add backing up vscode extensions for Visual Studio (via @stephen2m)
+- Add support for iTermocil (via @godbout)
+- Add support for Amethyst (via @whtsky)
+- Add support for Micro (via @icopp)
+- Add support for Cerebro (via @kelion)
+- Add support for iTerm (via @Sbastien)
+- Add support for Boxer (via @icopp)
+- Add support for Franz (via @stephen2m)
+- Add support for IdeaVim (via @x-ji)
+- Add support for Tmuxp (via @infernion)
+- Add support for sferik/t (via @paxperscientiam)
 - Add support for fastlane (via @revolter)
+- Add support for Jitouch (via @forby)
+- Add support for Blender (via @forby)
+- Add support for Insomnia (via @browniebroke)
+- Add support for Marked 2 (via @semicolonsnet)
+- Add support for BetterTouchTool data store v2 (via @pearlythepirate and @foray1010)
+- Add support for WhatsApp Web (via @cafferata)
+- Add support for GitUp (via @cafferata)
+- Add support for HTTPie (via @Dremora)
+- Remove GnuPG keyrings from backup by default (via @jeremygaither)
+- Add support for Postico (via @stvhwrd)
+- Add support for PHPStorm 2017.3 (via @cafferata)
+- Add support for DaisyDisk (via @cafferata)
+- Add support for MySQLWorkbench (via @cafferata)
+- Add support for Openbox (via @jpfarcy)
 
 ## Mackup 0.8.16
 

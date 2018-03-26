@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Support for RubyMine 2017.03 (via @kibitan)
+
 ## Mackup 0.8.18
 
 - Fix crash due to bad BetterTouchTool support

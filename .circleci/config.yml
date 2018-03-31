@@ -1,17 +1,30 @@
 version: 2
 jobs:
 
-  unit_tests:
+  nose:
     docker:
       - image: python:2.7
     steps:
       - checkout
       - run: pip install -r requirements.txt
-      - run: python setup.py install
       - run: make test
       - run: codecov
 
-  lint_markdown:
+  install:
+    docker:
+      - image: python:2.7
+    steps:
+      - checkout
+      - run: python setup.py install
+
+  flake8:
+    docker:
+      - image: python:2.7
+    steps:
+      - checkout
+      - run: flake8 mackup
+
+  mdl:
     docker:
       - image: rsrchboy/mdl
     steps:
@@ -22,5 +35,7 @@ workflows:
   version: 2
   mackup:
     jobs:
-      - unit_tests
-      - lint_markdown
+      - nose
+      - install
+      - flake8
+      - mdl

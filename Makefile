@@ -4,8 +4,11 @@ develop:
 undevelop:
 	python setup.py develop --uninstall
 
-test:
+lint:
+	mdl .
 	flake8 mackup
+
+test:
 	nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
 
 clean:

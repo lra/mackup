@@ -7,6 +7,3 @@
  1. `git push`
  1. `git push --tags`
  1. `make release`
-
-
-### BADDOC

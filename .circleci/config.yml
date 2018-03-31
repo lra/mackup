@@ -1,7 +1,7 @@
 version: 2
 jobs:
 
-  unit-tests:
+  unit_tests:
     docker:
       - image: python:2.7
     steps:
@@ -11,7 +11,7 @@ jobs:
       - run: command: make test
       - run: command: codecov
 
-  lint-markdown:
+  lint_markdown:
     docker:
       - image: docker pull rsrchboy/mdl
     steps:
@@ -22,5 +22,5 @@ workflows:
   version: 2
   mackup:
     jobs:
-      - unit-tests
-      - lint-markdown
+      - unit_tests
+      - lint_markdown

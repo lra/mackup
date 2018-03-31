@@ -13,7 +13,7 @@ jobs:
 
   lint_markdown:
     docker:
-      - image: docker pull rsrchboy/mdl
+      - image: rsrchboy/mdl
     steps:
       - checkout
       - run: mdl .

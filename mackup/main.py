@@ -8,7 +8,7 @@ Usage:
   mackup [options] backup
   mackup [options] restore
   mackup [options] uninstall
-  mackup (-h | --help)
+  mackup (-h | --help
   mackup --version
 
 Options:

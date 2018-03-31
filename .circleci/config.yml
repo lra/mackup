@@ -8,8 +8,8 @@ jobs:
       - checkout
       - run: pip install -r requirements.txt
       - run: python setup.py install
-      - run: command: make test
-      - run: command: codecov
+      - run: make test
+      - run: codecov
 
   lint_markdown:
     docker:

@@ -3,7 +3,7 @@ jobs:
 
   nose:
     docker:
-      - image: circleci/python:2.7
+      - image: python:2.7
     steps:
       - checkout
       - run: pip install -r requirements.txt
@@ -12,7 +12,7 @@ jobs:
 
   install:
     docker:
-      - image: circleci/python:2.7
+      - image: python:2.7
     steps:
       - checkout
       - run: python setup.py install
@@ -20,7 +20,7 @@ jobs:
 
   flake8:
     docker:
-      - image: circleci/python:2.7
+      - image: python:2.7
     steps:
       - checkout
       - run: pip install flake8

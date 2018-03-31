@@ -1,40 +1,26 @@
 version: 2
 jobs:
-  "python":
+
+  unit-tests:
     docker:
       - image: python:2.7
-    working_directory: ~/repo
     steps:
       - checkout
-      - run:
-          name: install dependencies
-          command: |
-            pip install -r requirements.txt
-            python setup.py install
-      - run:
-          name: run tests
-          command: make test
-      - run:
-          name: codecov
-          command: codecov
-  "lint":
+      - run: pip install -r requirements.txt
+      - run: python setup.py install
+      - run: command: make test
+      - run: command: codecov
+
+  lint-markdown:
     docker:
-      - image: circleci/ruby:latest-browsers
-    working_directory: ~/repo
+      - image: docker pull rsrchboy/mdl
     steps:
       - checkout
-      - run:
-          name: install dependencies
-          command: |
-            apt-get update && apt-get install rubygems -y
-            gem install mdl
-      - run:
-          name: lint markdown
-          command: find . -name "*.md" -print0 | xargs -0 mdl
+      - run: mdl .
 
 workflows:
   version: 2
   build:
     jobs:
-      - "python"
-      - "lint"
+      - unit-tests
+      - lint-markdown

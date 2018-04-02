@@ -276,7 +276,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Gmail Notifr](http://ashchan.com/projects/gmail-notifr)
 - [GMVault](http://gmvault.org/)
 - [Gnome SSH Tunnel Manager](http://sourceforge.net/projects/gstm/)
-- [GnuPG](https://www.gnupg.org/)  (NOTE: includes private keys)
+- [GnuPG](https://www.gnupg.org/)  (NOTE: private keys NOT synced by default)
 - [Go2Shell](http://zipzapmac.com/Go2Shell)
 - [Gogland](https://www.jetbrains.com/go/)
 - [GoShare](https://github.com/dictget/goshare)
@@ -387,7 +387,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [OmniGraffle](https://www.omnigroup.com/omnigraffle/)
 - [Openbox](http://openbox.org)
 - [OpenEmu](http://openemu.org)
-- [OpenSSH](http://www.openssh.com/) (NOTE: includes private keys)
+- [OpenSSH](http://www.openssh.com/) (NOTE: private keys NOT synced by default)
 - [Paintbrush](http://paintbrush.sourceforge.net/)
 - [Pandoc](http://pandoc.org)
 - [Pass](http://www.passwordstore.org/)
@@ -531,6 +531,20 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Zsh](http://zsh.sourceforge.net/)
 - [Übersicht](http://tracesof.net/uebersicht/)
 - iTunes Applescripts
+
+## Syncing private keys
+
+By default private keys for OpenSSH and GnuPG are NOT sycned. You can sync your private keys if you
+want. For example, to sync your entire OpenSSH `.ssh` directory, create a `~/.mackup/ssh.cfg` file
+with the following content:
+
+```
+[application]
+name = SSH
+
+[configuration_files]
+.ssh
+```
 
 ## Can you support application X
 

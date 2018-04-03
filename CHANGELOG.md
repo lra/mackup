@@ -4,6 +4,7 @@
 
 - Support for RubyMine 2017.03 (via @kibitan)
 - Add additional Spectacle library path (via @iansym)
+- Only sync init.vim for neovim (via @foray1010)
 
 ## Mackup 0.8.18
 

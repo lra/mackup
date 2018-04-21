@@ -22,12 +22,14 @@ directory.
 
 ## Storage
 
+You can specify the storage type Mackup will use to store your configuration
+files. For now you have 7 options: `dropbox`, `box`, `google_drive`,
+`google_filestream`, `icloud`, `copy`, and `file_system`.
+
+If none is specified, Mackup will try to use the default: `dropbox`.
+
 ### Dropbox
 
-You can specify the storage type Mackup will use to store your configuration
-files.
-For now you have 4 options: `dropbox`, `google_drive`, `copy` and `file_system`.
-If none is specified, Mackup will try to use the default: `dropbox`.
 With the `dropbox` storage engine, Mackup will automatically figure out your
 Dropbox folder.
 
@@ -36,14 +38,36 @@ Dropbox folder.
 engine = dropbox
 ```
 
+### Box
+
+With the `box` storage engine, Mackup will automatically figure out your Box
+Sync folder.
+
+```ini
+[storage]
+engine = box
+```
+
 ### Google Drive
 
-If you choose the `google_drive` storage engine instead, Mackup will figure out
-where your Google Drive is and store your configuration files in it.
+The Google Drive application has been replaced by Google Backup and Sync and
+Google Drive File Stream. Different engines are provided for each.
+
+If you choose the `google_drive` storage engine, Mackup will figure out where
+your Google Drive (via Google Backup and Sync) is and store your configuration
+files in it.
 
 ```ini
 [storage]
 engine = google_drive
+```
+
+If you choose the `google_filestream` storage engine instead, Mackup will store
+your configuration files in `$HOME/Google Drive File Stream/My Drive`.
+
+```ini
+[storage]
+engine = google_filestream
 ```
 
 ### iCloud

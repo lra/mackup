@@ -8,6 +8,7 @@ from .constants import (MACKUP_BACKUP_PATH,
                         MACKUP_CONFIG_FILE,
                         ENGINE_DROPBOX,
                         ENGINE_GDRIVE,
+                        ENGINE_GDRIVEFS,
                         ENGINE_COPY,
                         ENGINE_ICLOUD,
                         ENGINE_BOX,
@@ -17,6 +18,7 @@ from .utils import (error,
                     get_dropbox_folder_location,
                     get_copy_folder_location,
                     get_google_drive_folder_location,
+                    get_google_filestream_folder_location,
                     get_icloud_folder_location,
                     get_box_folder_location)
 try:
@@ -65,8 +67,8 @@ class Config(object):
         """
         The engine used by the storage.
 
-        ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_COPY, ENGINE_ICLOUD, ENGINE_BOX
-        or ENGINE_FS.
+        ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_GDRIVEFS, ENGINE_COPY,
+        ENGINE_ICLOUD, ENGINE_BOX, or ENGINE_FS.
 
         Returns:
             str
@@ -185,6 +187,7 @@ class Config(object):
 
         if engine not in [ENGINE_DROPBOX,
                           ENGINE_GDRIVE,
+                          ENGINE_GDRIVEFS,
                           ENGINE_COPY,
                           ENGINE_ICLOUD,
                           ENGINE_BOX,
@@ -204,6 +207,8 @@ class Config(object):
             path = get_dropbox_folder_location()
         elif self.engine == ENGINE_GDRIVE:
             path = get_google_drive_folder_location()
+        elif self.engine == ENGINE_GDRIVEFS:
+            path = get_google_filestream_folder_location()
         elif self.engine == ENGINE_COPY:
             path = get_copy_folder_location()
         elif self.engine == ENGINE_ICLOUD:

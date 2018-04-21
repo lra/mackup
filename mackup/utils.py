@@ -247,6 +247,19 @@ def get_google_drive_folder_location():
     return googledrive_home
 
 
+def get_google_filestream_folder_location():
+    """
+    Returns the default Google Drive File Stream 'My Drive' folder.
+    The location and name of 'My Drive' do not currently appear to be
+    customizable.
+
+    Returns:
+        (unicode) Full path to the 'My Drive' folder in Google DriveFS
+    """
+    return os.path.join(os.environ['HOME'],
+                        u'Google Drive File Stream/My Drive')
+
+
 def get_box_folder_location():
     """
     Try to locate the Box folder.

@@ -154,7 +154,7 @@ class ApplicationsDatabase(object):
         Returns:
             set of str.
         """
-        
+
         return set(self.apps)
 
     def get_pretty_app_names(self):

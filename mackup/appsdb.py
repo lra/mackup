@@ -154,11 +154,8 @@ class ApplicationsDatabase(object):
         Returns:
             set of str.
         """
-        app_names = set()
-        for name in self.apps:
-            app_names.add(name)
-
-        return app_names
+        
+        return set(self.apps)
 
     def get_pretty_app_names(self):
         """
@@ -167,8 +164,4 @@ class ApplicationsDatabase(object):
         Returns:
             set of str.
         """
-        pretty_app_names = set()
-        for app_name in self.get_app_names():
-            pretty_app_names.add(self.get_name(app_name))
-
-        return pretty_app_names
+        return {self.get_name(name) for name in self.get_app_names()}

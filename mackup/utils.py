@@ -208,6 +208,10 @@ def get_dropbox_folder_location():
         error("Unable to find your Dropbox install =(")
     dropbox_home = base64.b64decode(data[1])
 
+    # Need to convert to str if Python3
+    if sys.version_info[0] >= 3:
+        dropbox_home = dropbox_home.decode()
+
     return dropbox_home
 
 

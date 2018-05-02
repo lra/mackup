@@ -1,9 +1,8 @@
+import base64
 import os
+import stat
 import tempfile
 import unittest
-import stat
-
-# from unittest.mock import patch
 
 from mackup import utils
 
@@ -283,6 +282,22 @@ class TestMackup(unittest.TestCase):
     def test_error(self):
         test_string = "Hello World"
         self.assertRaises(SystemExit, utils.error, test_string)
+
+    def test_get_dropbox_folder_location(self):
+        temp_dir = tempfile.mkdtemp()
+        os.environ['HOME'] = temp_dir
+
+        os.makedirs(os.path.join(temp_dir, '.dropbox'))
+
+        # Generate a .dropbox/host.db file
+        with open(os.path.join(temp_dir, '.dropbox', 'host.db'), 'w+') as f:
+            f.write(' '.join([
+                "ignore",
+                base64.b64encode(b"test dropbox path").decode()
+            ]))
+
+        dropbox_folder = utils.get_dropbox_folder_location()
+        assert dropbox_folder == "test dropbox path"
 
     def test_failed_backup_location(self):
         """

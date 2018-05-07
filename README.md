@@ -16,7 +16,7 @@ Keep your application settings in sync.
 - [Can you support application X](#can-you-support-application-x)
 - [Why did you do this](#why-did-you-do-this)
 - [What platforms are supported](#what-platforms-are-supported)
-- [What's up with the weird name](#what-s-up-with-the-weird-name)
+- [What's up with the weird name](#whats-up-with-the-weird-name)
 - [Where can I find more information](#where-can-i-find-more-information)
 
 ## Quickstart

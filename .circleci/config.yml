@@ -1,40 +1,43 @@
 version: 2
 jobs:
-  "python":
+
+  nose:
     docker:
       - image: python:2.7
-    working_directory: ~/repo
     steps:
       - checkout
-      - run:
-          name: install dependencies
-          command: |
-            pip install -r requirements.txt
-            python setup.py install
-      - run:
-          name: run tests
-          command: make test
-      - run:
-          name: codecov
-          command: codecov
-  "lint":
+      - run: pip install -r requirements.txt
+      - run: make test
+      - run: codecov
+
+  install:
     docker:
-      - image: circleci/ruby:latest-browsers
-    working_directory: ~/repo
+      - image: python:2.7
     steps:
       - checkout
-      - run:
-          name: install dependencies
-          command: |
-            apt-get update && apt-get install rubygems -y
-            gem install mdl
-      - run:
-          name: lint markdown
-          command: find . -name "*.md" -print0 | xargs -0 mdl
+      - run: python setup.py install
+      - run: mackup --help
+
+  flake8:
+    docker:
+      - image: python:2.7
+    steps:
+      - checkout
+      - run: pip install flake8
+      - run: flake8 mackup
+
+  mdl:
+    docker:
+      - image: rsrchboy/mdl
+    steps:
+      - checkout
+      - run: mdl .
 
 workflows:
   version: 2
-  build:
+  mackup:
     jobs:
-      - "python"
-      - "lint"
+      - nose
+      - install
+      - flake8
+      - mdl

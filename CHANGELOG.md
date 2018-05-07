@@ -2,6 +2,20 @@
 
 ## WIP
 
+- Support for RubyMine 2017.03 (via @kibitan)
+- Add additional Spectacle library path (via @iansym)
+- Only sync init.vim for neovim (via @foray1010)
+- Support for RubyMine 2018.01 (via @kibitan)
+
+## Mackup 0.8.18
+
+- Fix crash due to bad BetterTouchTool support
+- Fixed an issue with python3
+
+## Mackup 0.8.17
+
+- Add support for Micro (via @icopp)
+- Add backing up vscode extensions for Visual Studio (via @stephen2m)
 - Add support for iTermocil (via @godbout)
 - Add support for Amethyst (via @whtsky)
 - Add support for Micro (via @icopp)

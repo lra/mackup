@@ -4,36 +4,15 @@ workflows:
   version: 2
   mackup:
     jobs:
-      - nose-2.7
-      - install-2.7
-      - flake8-2.7
+      - nose-py2
+      - install-py2
+      - flake8-py2
+      - nose-py3
+      - install-py3
+      - flake8-py3
       - mdl
 
 jobs:
-  nose-2.7:
-    docker:
-      - image: python:2.7
-    steps:
-      - checkout
-      - run: pip install -r requirements.txt
-      - run: make test
-      - run: codecov
-
-  install-2.7:
-    docker:
-      - image: python:2.7
-    steps:
-      - checkout
-      - run: python setup.py install
-      - run: mackup --help
-
-  flake8-2.7:
-    docker:
-      - image: python:2.7
-    steps:
-      - checkout
-      - run: pip install flake8
-      - run: flake8 mackup
 
   mdl:
     docker:
@@ -41,3 +20,53 @@ jobs:
     steps:
       - checkout
       - run: mdl .
+
+  nose-py2:
+    docker:
+      - image: python:2
+    steps:
+      - checkout
+      - run: pip install -r requirements.txt
+      - run: make test
+      - run: codecov
+
+  install-py2:
+    docker:
+      - image: python:2
+    steps:
+      - checkout
+      - run: python setup.py install
+      - run: mackup --help
+
+  flake8-py2:
+    docker:
+      - image: python:2
+    steps:
+      - checkout
+      - run: pip install flake8
+      - run: flake8 mackup
+
+  nose-py3:
+    docker:
+      - image: python:3
+    steps:
+      - checkout
+      - run: pip install -r requirements.txt
+      - run: make test
+      - run: codecov
+
+  install-py3:
+    docker:
+      - image: python:3
+    steps:
+      - checkout
+      - run: python setup.py install
+      - run: mackup --help
+
+  flake8-py3:
+    docker:
+      - image: python:3
+    steps:
+      - checkout
+      - run: pip install flake8
+      - run: flake8 mackup

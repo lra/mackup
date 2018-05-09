@@ -1,7 +1,16 @@
 version: 2
-jobs:
 
-  nose:
+workflows:
+  version: 2
+  mackup:
+    jobs:
+      - nose-2.7
+      - install-2.7
+      - flake8-2.7
+      - mdl
+
+jobs:
+  nose-2.7:
     docker:
       - image: python:2.7
     steps:
@@ -10,7 +19,7 @@ jobs:
       - run: make test
       - run: codecov
 
-  install:
+  install-2.7:
     docker:
       - image: python:2.7
     steps:
@@ -18,7 +27,7 @@ jobs:
       - run: python setup.py install
       - run: mackup --help
 
-  flake8:
+  flake8-2.7:
     docker:
       - image: python:2.7
     steps:
@@ -32,12 +41,3 @@ jobs:
     steps:
       - checkout
       - run: mdl .
-
-workflows:
-  version: 2
-  mackup:
-    jobs:
-      - nose
-      - install
-      - flake8
-      - mdl

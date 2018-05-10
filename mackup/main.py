@@ -22,7 +22,7 @@ Modes of action:
  1. list: display a list of all supported applications.
  2. backup: sync your conf files to your synced storage, use this the 1st time
     you use Mackup. (Note that by default this will sync private keys used by
-    and GnuPG.)
+    GnuPG.)
  3. restore: link the conf files already in your synced storage on your system,
     use it on any new system you use.
  4. uninstall: reset everything as it was before using Mackup.

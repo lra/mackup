@@ -1,6 +1,6 @@
 """Constants used in Mackup."""
 # Current version
-VERSION = '0.8.16'
+VERSION = '0.8.18'
 
 # Support platforms
 PLATFORM_DARWIN = 'Darwin'
@@ -22,9 +22,9 @@ MACKUP_CONFIG_FILE = '.mackup.cfg'
 CUSTOM_APPS_DIR = '.mackup'
 
 # Supported engines
-ENGINE_DROPBOX = 'dropbox'
-ENGINE_GDRIVE = 'google_drive'
 ENGINE_BOX = 'box'
 ENGINE_COPY = 'copy'
-ENGINE_ICLOUD = 'icloud'
+ENGINE_DROPBOX = 'dropbox'
 ENGINE_FS = 'file_system'
+ENGINE_GDRIVE = 'google_drive'
+ENGINE_ICLOUD = 'icloud'

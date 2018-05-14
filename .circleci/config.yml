@@ -1,0 +1,43 @@
+version: 2
+jobs:
+
+  nose:
+    docker:
+      - image: python:2.7
+    steps:
+      - checkout
+      - run: pip install -r requirements.txt
+      - run: make test
+      - run: codecov
+
+  install:
+    docker:
+      - image: python:2.7
+    steps:
+      - checkout
+      - run: python setup.py install
+      - run: mackup --help
+
+  flake8:
+    docker:
+      - image: python:2.7
+    steps:
+      - checkout
+      - run: pip install flake8
+      - run: flake8 mackup
+
+  mdl:
+    docker:
+      - image: rsrchboy/mdl
+    steps:
+      - checkout
+      - run: mdl .
+
+workflows:
+  version: 2
+  mackup:
+    jobs:
+      - nose
+      - install
+      - flake8
+      - mdl

@@ -179,7 +179,15 @@ class Config(object):
         if self._parser.has_option('storage', 'engine'):
             engine = str(self._parser.get('storage', 'engine'))
         else:
-            engine = ENGINE_DROPBOX
+            icloud_config_path = os.path.expanduser(os.path.join(
+                '~/Library/Mobile Documents/com~apple~CloudDocs',
+                MACKUP_BACKUP_PATH,
+                MACKUP_CONFIG_FILE))
+
+            if os.path.exists(icloud_config_path):
+                engine = ENGINE_ICLOUD
+            else:
+                engine = ENGINE_DROPBOX
 
         assert isinstance(engine, str)
 

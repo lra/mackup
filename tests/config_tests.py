@@ -35,6 +35,26 @@ class TestConfig(unittest.TestCase):
         assert cfg.apps_to_ignore == set()
         assert cfg.apps_to_sync == set()
 
+    def test_config_icloud_config_present(self):
+        realpath = os.path.dirname(os.path.realpath(__file__))
+        os.environ['HOME'] = os.path.join(realpath, 'fixtures/default-to-icloud')
+
+        cfg = Config()
+
+        # Should should do the same as the a standard iCloud configuration
+        assert isinstance(cfg.engine, str)
+        assert cfg.engine == ENGINE_ICLOUD
+
+        assert isinstance(cfg.path, str)
+        assert cfg.path == os.path.expanduser(
+            '~/Library/Mobile Documents/com~apple~CloudDocs/')
+
+        assert isinstance(cfg.directory, str)
+        assert cfg.directory == u'Mackup'
+
+        assert isinstance(cfg.fullpath, str)
+        assert cfg.fullpath.endswith(u'/com~apple~CloudDocs/Mackup')
+
     def test_config_empty(self):
         cfg = Config('mackup-empty.cfg')
 

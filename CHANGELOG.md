@@ -9,6 +9,7 @@
 - Support for IntelliJ Idea 2017.1, 2017.2, 2017.3, and 2018.1 (via @cool00geek)
 - Remove references to OpenSSH private key syncing - removed in dcb26ba (via @njdancer)
 - Add support for hub (via @usami-k)
+- Add support for Tower 3 (via @diego-vieira)
 
 ## Mackup 0.8.18
 

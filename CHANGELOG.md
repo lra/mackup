@@ -10,6 +10,7 @@
 - Remove references to OpenSSH private key syncing - removed in dcb26ba (via @njdancer)
 - Add support for hub (via @usami-k)
 - Remove references for Visual Studio Code extensions syncing (via @MTalalAnwar)
+- Add support for ledger/ledger (via @paxperscientiam)
 
 ## Mackup 0.8.18
 
@@ -31,7 +32,6 @@
 - Add support for Tmuxp (via @infernion)
 - Add support for sferik/t (via @paxperscientiam)
 - Add support for fastlane (via @revolter)
-- Add support for ledger/ledger (via @paxperscientiam)
 - Add support for Jitouch (via @forby)
 - Add support for Blender (via @forby)
 - Add support for Insomnia (via @browniebroke)

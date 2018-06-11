@@ -10,6 +10,7 @@
 - Remove references to OpenSSH private key syncing - removed in dcb26ba (via @njdancer)
 - Add support for hub (via @usami-k)
 - Remove references for Visual Studio Code extensions syncing (via @MTalalAnwar)
+- Support for Itsycal (via @paxperscientiam, @sfsam, nitrocode)
 
 ## Mackup 0.8.18
 

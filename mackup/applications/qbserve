@@ -1,0 +1,6 @@
+[application]
+name = Qbserve
+
+[configuration_files]
+Library/Preferences/com.QotoQot.Qbserve.plist
+Library/Application Support/Qbserve/UserDatabase.sqlite

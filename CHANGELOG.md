@@ -11,6 +11,7 @@
 - Add support for hub (via @usami-k)
 - Remove references for Visual Studio Code extensions syncing (via @MTalalAnwar)
 - Add support for Qbserve (via @fullmetalsheep)
+- Add support for Alfred 3 (via @fullmetalsheep)
 
 ## Mackup 0.8.18
 

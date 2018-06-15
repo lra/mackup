@@ -12,7 +12,6 @@
 - Remove references for Visual Studio Code extensions syncing (via @MTalalAnwar)
 - Add support for Qbserve (via @fullmetalsheep)
 
-
 ## Mackup 0.8.18
 
 - Fix crash due to bad BetterTouchTool support

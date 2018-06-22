@@ -111,6 +111,55 @@ def copy(src, dst):
     # Set the good mode to the file or folder recursively
     chmod(dst)
 
+def sync(src, dst):
+    """
+    Copy a file or a folder (recursively) from src to dst.
+
+    For simplicity sake, both src and dst must be absolute path and must
+    include the filename of the file or folder.
+    Also do not include any trailing slash.
+
+    e.g. copy('/path/to/src_file', '/path/to/dst_file')
+    or copy('/path/to/src_folder', '/path/to/dst_folder')
+
+    But not: copy('/path/to/src_file', 'path/to/')
+    or copy('/path/to/src_folder/', '/path/to/dst_folder')
+
+    Args:
+        src (str): Source file or folder
+        dst (str): Destination file or folder
+    """
+    assert isinstance(src, str)
+    assert os.path.exists(src)
+    assert isinstance(dst, str)
+
+    # Create the path to the dst file if it does not exists
+    abs_path = os.path.dirname(os.path.abspath(dst))
+    if not os.path.isdir(abs_path):
+        os.makedirs(abs_path)
+
+    # We need to copy a single file
+    if os.path.isfile(src):
+        # Copy the src file to dst
+        # shutil.copy(src, dst)
+        command = (['rsync',src,dst])
+        result = subprocess.Popen(command)
+        result.communicate()
+
+    # We need to copy a whole folder
+    elif os.path.isdir(src):
+        # shutil.copytree(src, dst)
+        command = (['rsync','-r',src,dst])
+        result = subprocess.Popen(command)
+        result.communicate()
+
+    # What the heck is this ?
+    else:
+        raise ValueError("Unsupported file: {}".format(src))
+
+    # Set the good mode to the file or folder recursively
+    chmod(dst)
+
 
 def link(target, link_to):
     """

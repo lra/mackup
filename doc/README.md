@@ -79,6 +79,14 @@ path = some/folder/in/your/home
 # or path = /some/folder/in/your/root
 ```
 
+Note: you don't need to escape spaces or wrap the path in quotes.
+For example, the following paths are valid :
+
+```ini
+path = some/path in your/home
+path = /some path/in/your/root
+```
+
 ### Custom Directory Name
 
 You can customize the directory name in which Mackup stores your file. By

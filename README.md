@@ -316,7 +316,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Keyboard Maestro](http://www.keyboardmaestro.com)
 - [Keymo](http://manytricks.com/keymo/)
 - [KeyRemap4MacBook](https://pqrs.org/osx/karabiner/)
-- [KubeCtl](https://github.com/kubernetes/kubernetes/tree/master/pkg/kubectl)
+- [Kubectl](https://kubernetes.io/docs/reference/kubectl/overview/)
 - [Kwm](https://koekeishiya.github.io/kwm/)
 - [LaTeXiT](http://www.chachatelier.fr/latexit/latexit-home.php?lang=en)
 - [LaunchBar](https://www.obdev.at/products/launchbar/index.html)

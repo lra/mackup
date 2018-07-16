@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for kubectl (via @pcostesi)
 - Support for RubyMine 2017.03 (via @kibitan)
 - Add additional Spectacle library path (via @iansym)
 - Only sync init.vim for neovim (via @foray1010)

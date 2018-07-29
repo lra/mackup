@@ -454,6 +454,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Shuttle](http://fitztrev.github.io/shuttle/)
 - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
 - [Sketch](http://sketchapp.com/)
+- [skhd](https://github.com/koekeishiya/skhd/)
 - [Skim](http://skim-app.sourceforge.net/)
 - [Skitch](https://evernote.com/skitch/)
 - [Slate](https://github.com/jigish/slate)

@@ -202,6 +202,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Cartographica](https://www.macgis.com/)
 - [Cerebro](https://cerebroapp.com/)
 - [Charles](http://www.charlesproxy.com)
+- [Cheat](https://github.com/chrisallenlane/cheat)
 - [Chef](https://www.chef.io/chef/)
 - [Chicken](http://sourceforge.net/projects/chicken/)
 - [Clementine](https://www.clementine-player.org/)

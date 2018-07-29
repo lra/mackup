@@ -11,6 +11,7 @@
 - Remove references to OpenSSH private key syncing - removed in dcb26ba (via @njdancer)
 - Add support for hub (via @usami-k)
 - Remove references for Visual Studio Code extensions syncing (via @MTalalAnwar)
+- Add support for cVim (via @sh78)
 
 ## Mackup 0.8.18
 

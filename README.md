@@ -431,6 +431,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [RStudio](https://www.rstudio.com/)
 - [rTorrent](http://libtorrent.rakshasa.no/)
 - [Rubocop](https://github.com/bbatsov/rubocop)
+- [Ruby Version Manager](https://rvm.io/)
 - [Ruby Version](https://gist.github.com/fnichol/1912050)
 - [Ruby](https://www.ruby-lang.org/)
 - [RubyMine](http://www.jetbrains.com/ruby/)

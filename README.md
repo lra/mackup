@@ -172,6 +172,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Arm](https://www.atagar.com/arm/)
 - [Artistic Style](http://astyle.sourceforge.net)
 - [asciinema](https://asciinema.org/)
+- [asdf version manager](https://github.com/asdf-vm/asdf)
 - [Aspell](http://aspell.net/)
 - [Atlantis](http://www.riverdark.net/atlantis/)
 - [Atom](https://atom.io/)

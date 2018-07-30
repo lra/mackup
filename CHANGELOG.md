@@ -11,6 +11,7 @@
 - Remove references to OpenSSH private key syncing - removed in dcb26ba (via @njdancer)
 - Add support for hub (via @usami-k)
 - Remove references for Visual Studio Code extensions syncing (via @MTalalAnwar)
+- Support for skhd (via @sh78)
 - Add support for ranger (via @sh78)
 - Add support for Cheat (via @sh78)
 - Support latest qutebrowser version config paths (via @sh78)

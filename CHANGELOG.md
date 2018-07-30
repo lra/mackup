@@ -20,6 +20,7 @@
 - Include Karabiner Elements complex modifications (via @sh78)
 - Add support for chunkwm (via @sh78)
 - Add support for cVim (via @sh78)
+- Add support for ESLint (via @sh78)
 
 ## Mackup 0.8.18
 

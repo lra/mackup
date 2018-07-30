@@ -249,6 +249,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Emacs](http://www.gnu.org/software/emacs/)
 - [Enjoyable](https://yukkurigames.com/enjoyable/)
 - [Environmental Station Alpha](http://www.hempuli.com/esa/)
+- [ESLint](https://eslint.org/)
 - [Exercism](http://exercism.io/)
 - [ExpanDrive](http://www.expandrive.com/)
 - [Factorio](https://www.factorio.com)

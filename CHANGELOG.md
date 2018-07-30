@@ -11,6 +11,15 @@
 - Remove references to OpenSSH private key syncing - removed in dcb26ba (via @njdancer)
 - Add support for hub (via @usami-k)
 - Remove references for Visual Studio Code extensions syncing (via @MTalalAnwar)
+- Add support for Ruby Version Manager (via @sh78)
+- Support for Khd (via @sh78)
+- Support for skhd (via @sh78)
+- Add support for ranger (via @sh78)
+- Add support for Cheat (via @sh78)
+- Support latest qutebrowser version config paths (via @sh78)
+- Include Karabiner Elements complex modifications (via @sh78)
+- Add support for chunkwm (via @sh78)
+- Add support for cVim (via @sh78)
 
 ## Mackup 0.8.18
 

@@ -426,6 +426,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Qutebrowser](http://qutebrowser.org/)
 - [R](http://www.r-project.org/)
 - [Rails](http://rubyonrails.org/)
+- [Ranger](https://ranger.github.io/)
 - [Redshift Scheduler](https://github.com/spantaleev/redshift-scheduler)
 - [Redshift](http://jonls.dk/redshift/)
 - [Rhythmbox](https://wiki.gnome.org/Apps/Rhythmbox)

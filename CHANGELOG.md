@@ -23,6 +23,7 @@
 - Add support for cVim (via @sh78)
 - Add support for ESLint (via @sh78)
 - Improve coverage for macOS/OS X Automator files (via @sh78)
+- Add support for PhoneView (via @dnicolson)
 
 ## Mackup 0.8.18
 

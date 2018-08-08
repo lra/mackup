@@ -13,7 +13,8 @@ except ImportError:
 
 
 from .constants import APPS_DIR
-from .constants import CUSTOM_APPS_DIR
+from .constants import (CUSTOM_APPS_DIR, XDG_CUSTOM_APPS_DIR)
+from . import utils
 
 
 class ApplicationsDatabase(object):
@@ -54,25 +55,15 @@ class ApplicationsDatabase(object):
                         self.apps[app_name]['configuration_files'].add(path)
 
                 # Add the XDG configuration files to sync
-                xdg_config_home = os.environ.get('XDG_CONFIG_HOME')
+                xdg_config_home = utils.get_xdg_config_home()
                 if xdg_config_home:
-                    if not os.path.exists(xdg_config_home):
-                        raise ValueError('$XDG_CONFIG_HOME: {} does not exist'
-                                         .format(xdg_config_home))
-                    home = os.path.expanduser('~/')
-                    if not xdg_config_home.startswith(home):
-                        raise ValueError('$XDG_CONFIG_HOME: {} must be '
-                                         'somewhere within your home '
-                                         'directory: {}'
-                                         .format(xdg_config_home, home))
                     if config.has_section('xdg_configuration_files'):
                         for path in config.options('xdg_configuration_files'):
                             if path.startswith('/'):
                                 raise ValueError('Unsupported absolute path: '
-                                                 '{}'
-                                                 .format(path))
+                                                 '{}'.format(path))
                             path = os.path.join(xdg_config_home, path)
-                            path = path.replace(home, '')
+                            path = path.replace(os.path.expanduser('~/'), '')
                             (self.apps[app_name]['configuration_files']
                                 .add(path))
 
@@ -94,7 +85,12 @@ class ApplicationsDatabase(object):
         # Configure the config parser
         apps_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)),
                                 APPS_DIR)
-        custom_apps_dir = os.path.join(os.environ['HOME'], CUSTOM_APPS_DIR)
+        if os.environ.get('XDG_CONFIG_HOME'):
+            custom_apps_dir = os.path.join(utils.get_mackup_config_home(),
+                                           XDG_CUSTOM_APPS_DIR)
+        else:
+            custom_apps_dir = os.path.join(utils.get_mackup_config_home(),
+                                           CUSTOM_APPS_DIR)
 
         # List of stock application config files
         config_files = set()

@@ -15,11 +15,15 @@ MACKUP_APP_NAME = 'mackup'
 # Default Mackup backup path where it stores its files in Dropbox
 MACKUP_BACKUP_PATH = 'Mackup'
 
-# Mackup config file
+# Mackup config file for non XDG users
 MACKUP_CONFIG_FILE = '.mackup.cfg'
-
-# Directory that can contains user defined app configs
+# Directory that can contains user defined app configs; for non XDG users
 CUSTOM_APPS_DIR = '.mackup'
+
+# Mackup config file; for XDG users
+XDG_MACKUP_CONFIG_FILE = 'mackup.cfg'
+# Directory that can contains user defined app configs; for XDG users
+XDG_CUSTOM_APPS_DIR = 'mackup'
 
 # Supported engines
 ENGINE_BOX = 'box'

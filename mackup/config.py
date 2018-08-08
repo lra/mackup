@@ -3,9 +3,11 @@
 import os
 import os.path
 import sys
+from . import utils
 
 from .constants import (MACKUP_BACKUP_PATH,
                         MACKUP_CONFIG_FILE,
+                        XDG_MACKUP_CONFIG_FILE,
                         ENGINE_DROPBOX,
                         ENGINE_GDRIVE,
                         ENGINE_COPY,
@@ -143,10 +145,13 @@ class Config(object):
 
         # If we are not overriding the config filename
         if not filename:
-            filename = MACKUP_CONFIG_FILE
+            if os.environ.get('XDG_CONFIG_HOME'):
+                filename = XDG_MACKUP_CONFIG_FILE
+            else:
+                filename = MACKUP_CONFIG_FILE
 
         parser = configparser.SafeConfigParser(allow_no_value=True)
-        parser.read(os.path.join(os.path.join(os.environ['HOME'], filename)))
+        parser.read(os.path.join(utils.get_mackup_config_home(), filename))
 
         return parser
 

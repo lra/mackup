@@ -13,6 +13,7 @@ import tempfile
 from . import utils
 from . import config
 from . import appsdb
+from .constants import CUSTOM_APPS_DIR
 
 
 class Mackup(object):
@@ -25,6 +26,8 @@ class Mackup(object):
 
         self.mackup_folder = self._config.fullpath
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
+        self.custom_apps_dir = os.path.join(
+            os.environ['HOME'], CUSTOM_APPS_DIR)
 
     def check_for_usable_environment(self):
         """Check if the current env is usable and has everything's required."""
@@ -60,6 +63,11 @@ class Mackup(object):
                         " storage directory synced first."
                         .format(self.mackup_folder))
 
+    def check_for_usable_custom_config_env(self):
+        """Check if the current env can be used to create custom configs."""
+        self.check_for_usable_environment()
+        self.create_mackup_custom_dir()
+
     def clean_temp_folder(self):
         """Delete the temp folder and files created while running."""
         shutil.rmtree(self.temp_folder)
@@ -74,6 +82,17 @@ class Mackup(object):
                 os.makedirs(self.mackup_folder)
             else:
                 utils.error("Mackup can't do anything without a home =(")
+
+    def create_mackup_custom_dir(self):
+        """If the Mackup custom config folder does not exist, create it."""
+        if not os.path.isdir(self.custom_apps_dir):
+            if utils.confirm("Mackup needs a directory to store your"
+                             " custom configuration files\n"
+                             "Do you want to create it now? <{}>"
+                             .format(self.custom_apps_dir)):
+                os.makedirs(self.custom_apps_dir)
+            else:
+                utils.error("Mackup can't create the config anywhere else =(")
 
     def get_apps_to_backup(self):
         """

@@ -1,5 +1,5 @@
 """System static utilities being used by the modules."""
-import base64
+import json
 import os
 import platform
 import shutil
@@ -44,6 +44,40 @@ def confirm(question):
             break
 
     return confirmed
+
+
+def choose(question, candidates):
+    """
+    Ask the user which one to be chosen
+
+    Args:
+        question(str): What can happen
+        candidates(list): Candidates to be chosen
+
+    Returns:
+        (str) chosen candidate
+    """
+
+    length = len(candidates)
+    while True:
+        print('{} (1-{})'.format(question, length))
+
+        for i, candidate in enumerate(candidates):
+            print('{}: {}'.format(i + 1, candidate))
+
+        if sys.version_info[0] < 3:
+            answer = raw_input()
+        else:
+            answer = input()
+
+        if not answer.isdigit():
+            continue
+
+        answer = int(answer)
+        if answer in range(1, length + 1):
+            break
+
+    return candidates[answer - 1]
 
 
 def delete(filepath):
@@ -200,13 +234,18 @@ def get_dropbox_folder_location():
     Returns:
         (str) Full path to the current Dropbox folder
     """
-    host_db_path = os.path.join(os.environ['HOME'], '.dropbox/host.db')
+    info_json_path = os.path.join(os.environ['HOME'], '.dropbox/info.json')
     try:
-        with open(host_db_path, 'r') as f_hostdb:
-            data = f_hostdb.read().split()
+        with open(info_json_path, 'r') as f_info_json:
+            data = json.loads(f_info_json.read())
+            if len(data) == 1:
+                dropbox_home = list(data.values())[0]['path']
+            else:
+                account = choose("Choose Dropbox account", data.keys())
+                dropbox_home = data[account]['path']
+
     except IOError:
         error("Unable to find your Dropbox install =(")
-    dropbox_home = base64.b64decode(data[1])
 
     return dropbox_home
 

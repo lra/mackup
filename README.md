@@ -20,7 +20,6 @@ Keep your application settings in sync.
 - [Where can I find more information](#where-can-i-find-more-information)
 
 ## Quickstart
-
 Instructions for three common use cases are below.
 * Scenario 1: is the quickest and easiest but gives you no control over
 which applications are shared out for syncing
@@ -117,7 +116,8 @@ replacing one machine's configuration with another. If so, just follow scenario 
 2 above.
 
 Otherwise, if you want to keep configuration settings from two or more
-different machines, we have provided [a guide in our documentation](doc/configuration_merge_guide.md)
+different machines, we have provided
+[a guide in our documentation](doc/configuration_merge_guide.md)
 
 ## Usage
 

@@ -23,21 +23,17 @@ It will probably save you some pain in the long run.
 First, pick the app you wish to keep in sync. Then
 determine which configuration files will be synced for that application by doing
 the following:
-
 1. [Install Mackup](INSTALL.md)
 1. Create a `.mackup.cfg` file in your home directory
 1. Add the following two lines to `.mackup.cfg`:
-
 ```
 [applications_to_sync]
 <replace_this_line_the_name_of_the_app>
 ```
 
 You can get a list of supported apps by running `mackup list`.
-
 1. Save the file
 1. Run the following command:
-
 `mackup --dry-run --verbose backup`
 
 This command will let you see what mackup will do behind the scenes when
@@ -58,7 +54,6 @@ you have a machine that is very close to working the way you want and just need
 some minor tweaks from other machines.
 
 ### Method 1: Backup/Merge/Push Approach
-
 1. Create a backup of each machine's configuration files for the app you wish to
 sync.
 1. Choose a machine that will serve as the initial "master". It doesn't really
@@ -66,17 +61,13 @@ matter which one.
 1. For each configuration file you wish to sync, create a new file that represents
 the ideal version of the file you wish to distribute out to your other machines.
 1. Replace the files on the master with the configuration files created in step 2.
-
 ### Method 2: Backup/Push/Merge Approach
-
 1. Choose a machine that will serve as the initial "master". You'll probably
 want to use choose the machine you use most and like its configuration
 settings the best.
 1. For each machine that aren't the "master" (i.e. "slaves"), back up all the configuration
 files for each app that you want to sync.
-
 That's it for now. However, there will be more work for you later.
-
 ## Step 3: Push Out the Configuration Files with Mackup
 
 Now you are ready to use Mackup to push out the changes. You should have Mackup already

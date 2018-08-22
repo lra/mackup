@@ -61,13 +61,10 @@ some minor tweaks from other machines.
 
 1. Create a backup of each machine's configuration files for the app you wish to
 sync.
-
 1. Choose a machine that will serve as the initial "master". It doesn't really
 matter which one.
-
 1. For each configuration file you wish to sync, create a new file that represents
 the ideal version of the file you wish to distribute out to your other machines.
-
 1. Replace the files on the master with the configuration files created in step 2.
 
 ### Method 2: Backup/Push/Merge Approach
@@ -75,7 +72,6 @@ the ideal version of the file you wish to distribute out to your other machines.
 1. Choose a machine that will serve as the initial "master". You'll probably
 want to use choose the machine you use most and like its configuration
 settings the best.
-
 1. For each machine that aren't the "master" (i.e. "slaves"), back up all the configuration
 files for each app that you want to sync.
 That's it for now. However, there will be more work for you later.

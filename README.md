@@ -10,7 +10,7 @@ Keep your application settings in sync.
 - [Quickstart](#quickstart)
 - [Usage](#usage)
 - [What does it do](#what-does-it-do)
-- [Bullsh*t, what does it really do to my files](#bullsht-what-does-it-really-do-to-my-files)
+- [Bullsh\*t, what does it really do to my files](#bullsht-what-does-it-really-do-to-my-files)
 - [Supported Storages](#supported-storages)
 - [Supported Applications](#supported-applications)
 - [Can you support application X](#can-you-support-application-x)
@@ -23,11 +23,11 @@ Keep your application settings in sync.
 
 Instructions for three common use cases are below.
 
-* Scenario 1: is the quickest and easiest but gives you no control over
-  which applications are shared out for syncing
-* Scenario 2: is also quick and easy and gives you control over which
-  applications are shared out for syncing
-* Scenario 3: is for the many unfortunate souls that never bothered to sync
+- **Scenario 1** is the quickest and easiest but gives you no control over
+  which applications are shared out for syncing.
+- **Scenario 2** is also quick and easy and gives you control over which
+  applications are shared out for syncing.
+- **Scenario 3** is for the many unfortunate souls that never bothered to sync
   the configurations files on the different machines they work on and are
   ready for Mackup to end their misery.
 
@@ -654,4 +654,4 @@ remember, and it corresponds with the whole idea of Mackup: the simpler – the 
 
 ## Where can I find more information
 
-In the [doc](doc) directory.
+I

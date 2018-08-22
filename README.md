@@ -22,17 +22,15 @@ Keep your application settings in sync.
 ## Quickstart
 
 Instructions for three common use cases are below.
-
-* **Scenario 1** is the quickest and easiest but gives you no control over
+* Scenario 1: is the quickest and easiest but gives you no control over
 which applications are shared out for syncing
-* **Scenario 2** is also quick and easy and gives you control over which applications
+* Scenario 2: is also quick and easy and gives you control over which applications
 are shared out for syncing
-* **Scenario 3** is for the many unfortunate souls that never bothered to sync
+* Scenario 3: is for the many unfortunate souls that never bothered to sync
 the configurations files on the different machines they work on and are ready
 for Mackup to end their misery.
-
 **Scenario 1:** You want to push **all** configuration settings from **all**
-supported applications from one machine out to your other machines: 
+supported applications from one machine out to your other machines:
 
 If you have [Dropbox](https://www.dropbox.com) installed and want to use it to
 save your config files, that's super easy.
@@ -111,11 +109,12 @@ Machine B. But you also have settings on Machine B that you want to
 move over to Machine A.
 
 The problem is that if you use Mackup to send Machine A's bash configuration settings
-to  Machine B, you will permanently lose any configurations that were on 
+to  Machine B, you will permanently lose any configurations that were on
 Machine B but not on Machine A.
 
-You might decide you don't care about merging app configurations and can live with replacing
-one machine's configuration with another. If so, just follow scenario 1 or 2 above.
+You might decide you don't care about merging app configurations and can live with
+replacing one machine's configuration with another. If so, just follow scenario 1 or
+2 above.
 
 Otherwise, if you want to keep configuration settings from two or more
 different machines, we have provided [a guide in our documentation](doc/configuration_merge_guide.md)

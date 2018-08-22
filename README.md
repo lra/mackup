@@ -20,7 +20,9 @@ Keep your application settings in sync.
 - [Where can I find more information](#where-can-i-find-more-information)
 
 ## Quickstart
+
 Instructions for three common use cases are below.
+
 * Scenario 1: is the quickest and easiest but gives you no control over
 which applications are shared out for syncing
 * Scenario 2: is also quick and easy and gives you control over which applications
@@ -28,8 +30,9 @@ are shared out for syncing
 * Scenario 3: is for the many unfortunate souls that never bothered to sync
 the configurations files on the different machines they work on and are ready
 for Mackup to end their misery.
+
 **Scenario 1:** You want to push **all** configuration settings from **all**
-supported applications from one machine out to your other machines:
+supported applications to get synced:
 
 If you have [Dropbox](https://www.dropbox.com) installed and want to use it to
 save your config files, that's super easy.
@@ -76,7 +79,7 @@ Done!
 You can find more detailed installation instructions in [INSTALL.md](INSTALL.md).
 
 **Scenario 2:** You want to push configuration settings from **some** applications
-from one machine to your other machines.
+from one machine to others for syncing.
 
 Let's say you want to share just your bash configuration files with
 your other machines. Simply create a file in your home directory
@@ -112,8 +115,8 @@ to  Machine B, you will permanently lose any configurations that were on
 Machine B but not on Machine A.
 
 You might decide you don't care about merging app configurations and can live with
-replacing one machine's configuration with another. If so, just follow scenario 1 or
-2 above.
+replacing one machine's configuration with another. If so, just follow scenario
+1 or 2 above.
 
 Otherwise, if you want to keep configuration settings from two or more
 different machines, we have provided

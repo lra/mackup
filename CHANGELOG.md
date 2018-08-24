@@ -32,6 +32,7 @@
 - Add support for PixelSnap (via @dnicolson)
 - Add support for Cider (via @renews)
 - Add support for Typora (via @allenlsy)
+- Improve support for oh-my-zsh (via @H--o-l)
 
 ## Mackup 0.8.18
 

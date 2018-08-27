@@ -10,6 +10,7 @@
 - Support for IntelliJ Idea 2017.1, 2017.2, 2017.3, and 2018.1 (via @cool00geek)
 - Remove references to OpenSSH private key syncing - removed in dcb26ba (via @njdancer)
 - Add support for hub (via @usami-k)
+- Add support for Tower 3 (via @diego-vieira)
 - Remove references for Visual Studio Code extensions syncing (via @MTalalAnwar)
 - Add support for ledger/ledger (via @paxperscientiam)
 - Support for Itsycal (via @paxperscientiam, @sfsam, nitrocode)

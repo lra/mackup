@@ -11,6 +11,7 @@
 - Remove references to OpenSSH private key syncing - removed in dcb26ba (via @njdancer)
 - Add support for hub (via @usami-k)
 - Remove references for Visual Studio Code extensions syncing (via @MTalalAnwar)
+- Add support for ledger/ledger (via @paxperscientiam)
 - Support for Itsycal (via @paxperscientiam, @sfsam, nitrocode)
 - Add support for Ruby Version Manager (via @sh78)
 - Support for Khd (via @sh78)

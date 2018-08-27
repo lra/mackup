@@ -51,7 +51,7 @@ jobs:
 
   install-3.4:
     docker:
-      - image: python:2.7
+      - image: python:3.4
     steps:
       - checkout
       - run: python setup.py install
@@ -59,7 +59,7 @@ jobs:
 
   install-3.5:
     docker:
-      - image: python:2.7
+      - image: python:3.5
     steps:
       - checkout
       - run: python setup.py install
@@ -67,7 +67,7 @@ jobs:
 
   install-3.6:
     docker:
-      - image: python:2.7
+      - image: python:3.6
     steps:
       - checkout
       - run: python setup.py install
@@ -91,7 +91,7 @@ jobs:
 
   flake8-3.4:
     docker:
-      - image: python:2.7
+      - image: python:3.4
     steps:
       - checkout
       - run: pip install flake8
@@ -99,7 +99,7 @@ jobs:
 
   flake8-3.5:
     docker:
-      - image: python:2.7
+      - image: python:3.5
     steps:
       - checkout
       - run: pip install flake8
@@ -107,7 +107,7 @@ jobs:
 
   flake8-3.6:
     docker:
-      - image: python:2.7
+      - image: python:3.6
     steps:
       - checkout
       - run: pip install flake8

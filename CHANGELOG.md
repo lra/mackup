@@ -2,6 +2,9 @@
 
 ## WIP
 
+## Mackup 0.8.19
+
+- Add support for Python 3.4 3.5 3.6 and 3.7
 - Add support for kubectl (via @pcostesi)
 - Support for RubyMine 2017.03 (via @kibitan)
 - Add additional Spectacle library path (via @iansym)
@@ -10,7 +13,9 @@
 - Support for IntelliJ Idea 2017.1, 2017.2, 2017.3, and 2018.1 (via @cool00geek)
 - Remove references to OpenSSH private key syncing - removed in dcb26ba (via @njdancer)
 - Add support for hub (via @usami-k)
+- Add support for Tower 3 (via @diego-vieira)
 - Remove references for Visual Studio Code extensions syncing (via @MTalalAnwar)
+- Add support for ledger/ledger (via @paxperscientiam)
 - Support for Itsycal (via @paxperscientiam, @sfsam, nitrocode)
 - Add support for Ruby Version Manager (via @sh78)
 - Support for Khd (via @sh78)
@@ -25,6 +30,9 @@
 - Improve coverage for macOS/OS X Automator files (via @sh78)
 - Add support for PhoneView (via @dnicolson)
 - Include global gitignore (via @SamuelNitsche)
+- Add support for PixelSnap (via @dnicolson)
+- Add support for Cider (via @renews)
+- Add support for Typora (via @allenlsy)
 
 ## Mackup 0.8.18
 

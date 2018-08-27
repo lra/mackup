@@ -25,6 +25,8 @@
 - Improve coverage for macOS/OS X Automator files (via @sh78)
 - Add support for PhoneView (via @dnicolson)
 - Add support for PixelSnap (via @dnicolson)
+- Add support for Cider (via @renews)
+- Add support for Typora (via @allenlsy)
 
 ## Mackup 0.8.18
 

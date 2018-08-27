@@ -10,7 +10,7 @@ Keep your application settings in sync.
 - [Quickstart](#quickstart)
 - [Usage](#usage)
 - [What does it do](#what-does-it-do)
-- [Bullsh*t, what does it really do to my files](#bullsht-what-does-it-really-do-to-my-files)
+- [Bullsh\*t, what does it really do to my files](#bullsht-what-does-it-really-do-to-my-files)
 - [Supported Storages](#supported-storages)
 - [Supported Applications](#supported-applications)
 - [Can you support application X](#can-you-support-application-x)
@@ -100,7 +100,7 @@ files are transfered).
 Mackup makes setting up the environment easy and simple, saving time for your
 family, great ideas, and all the cool stuff you like.
 
-## Bullsh*t, what does it really do to my files
+## Bullsh\*t, what does it really do to my files
 
 Let's take `git` as an example. Your settings for `git` are saved in your home
 folder, in the `.gitconfig` file.
@@ -207,6 +207,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Chef](https://www.chef.io/chef/)
 - [Chicken](http://sourceforge.net/projects/chicken/)
 - [chunkwm](https://github.com/koekeishiya/chunkwm)
+- [Cider](https://github.com/msanders/cider)
 - [Clementine](https://www.clementine-player.org/)
 - [CLion](https://www.jetbrains.com/clion/)
 - [ClipMenu](http://www.clipmenu.com/)
@@ -234,8 +235,8 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Deal Alert](http://dealalertapp.com/)
 - [Default Folder X](http://www.stclairsoft.com/DefaultFolderX/)
 - [Devil's Pie 2](http://www.gusnan.se/devilspie2/)
-- [Devil's Pie](https://en.wikipedia.org/wiki/Devil's_Pie_(software))
-- [dig](http://en.wikipedia.org/wiki/Dig_(command))
+- [Devil's Pie](<https://en.wikipedia.org/wiki/Devil's_Pie_(software)>)
+- [dig](<http://en.wikipedia.org/wiki/Dig_(command)>)
 - [Divvy](http://mizage.com/divvy/)
 - [Docker](https://www.docker.com/)
 - [Dolphin](https://dolphin-emu.org/)
@@ -281,7 +282,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Gmail Notifr](http://ashchan.com/projects/gmail-notifr)
 - [GMVault](http://gmvault.org/)
 - [Gnome SSH Tunnel Manager](http://sourceforge.net/projects/gstm/)
-- [GnuPG](https://www.gnupg.org/)  (NOTE: includes private keys)
+- [GnuPG](https://www.gnupg.org/) (NOTE: includes private keys)
 - [Go2Shell](http://zipzapmac.com/Go2Shell)
 - [Gogland](https://www.jetbrains.com/go/)
 - [GoShare](https://github.com/dictget/goshare)
@@ -514,6 +515,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [tvnamer](https://github.com/dbr/tvnamer)
 - [Twitterrific](http://twitterrific.com/)
 - [Typinator](http://www.ergonis.com/products/typinator/)
+- [Typora](https://typora.io)
 - [uTorrent](http://www.utorrent.com/)
 - [Ventrilo](http://www.ventrilo.com/)
 - [Versions](http://www.versionsapp.com)

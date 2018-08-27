@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.19
+
 - Add support for Python 3.4 3.5 3.6 and 3.7
 - Add support for kubectl (via @pcostesi)
 - Support for RubyMine 2017.03 (via @kibitan)

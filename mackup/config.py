@@ -2,7 +2,6 @@
 
 import os
 import os.path
-import sys
 
 from .constants import (MACKUP_BACKUP_PATH,
                         MACKUP_CONFIG_FILE,

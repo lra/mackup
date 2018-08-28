@@ -3,6 +3,8 @@
 ## WIP
 
 - Add support for inkscape (via @paxperscientiam)
+- Add default path for `XDG_CONFIG_HOME`. (via @HlubyLuk)
+- Add tig `xdg_configuration_files` to config. (via @HlubyLuk)
 
 ## Mackup 0.8.19
 

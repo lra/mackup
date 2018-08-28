@@ -10,3 +10,6 @@
 
 .idea/
 .pytest_cache/
+
+# Used by pyenv
+/.python-version

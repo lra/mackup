@@ -1,6 +1,7 @@
 import unittest
 from mackup import main
 
+
 class TestMain(unittest.TestCase):
 
     def test_main_header(self):

@@ -7,6 +7,7 @@ import stat
 import subprocess
 import sys
 import sqlite3
+from six.moves import input
 
 from . import constants
 
@@ -30,11 +31,7 @@ def confirm(question):
         return True
 
     while True:
-        # Python 3 check
-        if sys.version_info[0] < 3:
-            answer = raw_input(question + ' <Yes|No>').lower()
-        else:
-            answer = input(question + ' <Yes|No>').lower()
+        answer = input(question + ' <Yes|No>').lower()
 
         if answer == 'yes' or answer == 'y':
             confirmed = True
@@ -206,7 +203,7 @@ def get_dropbox_folder_location():
             data = f_hostdb.read().split()
     except IOError:
         error("Unable to find your Dropbox install =(")
-    dropbox_home = base64.b64decode(data[1])
+    dropbox_home = base64.b64decode(data[1]).decode()
 
     # Need to convert to str if Python3
     if sys.version_info[0] >= 3:
@@ -220,7 +217,7 @@ def get_google_drive_folder_location():
     Try to locate the Google Drive folder.
 
     Returns:
-        (unicode) Full path to the current Google Drive folder
+        (str) Full path to the current Google Drive folder
     """
     gdrive_db_path = 'Library/Application Support/Google/Drive/sync_config.db'
     yosemite_gdrive_db_path = ('Library/Application Support/Google/Drive/'
@@ -242,7 +239,7 @@ def get_google_drive_folder_location():
                      "WHERE entry_key = 'local_sync_root_path';")
             cur.execute(query)
             data = cur.fetchone()
-            googledrive_home = unicode(data[0])
+            googledrive_home = str(data[0])
             con.close()
 
     if not googledrive_home:
@@ -278,7 +275,7 @@ def get_copy_folder_location():
     Try to locate the Copy folder.
 
     Returns:
-        (unicode) Full path to the current Copy folder
+        (str) Full path to the current Copy folder
     """
     copy_settings_path = 'Library/Application Support/Copy Agent/config.db'
     copy_home = None
@@ -294,7 +291,7 @@ def get_copy_folder_location():
                      "WHERE option = 'csmRootPath';")
             cur.execute(query)
             data = cur.fetchone()
-            copy_home = unicode(data[0])
+            copy_home = str(data[0])
             cur.close()
 
     if not copy_home:
@@ -317,7 +314,7 @@ def get_icloud_folder_location():
     if not os.path.isdir(icloud_home):
         error('Unable to find your iCloud Drive =(')
 
-    return unicode(icloud_home)
+    return str(icloud_home)
 
 
 def is_process_running(process_name):

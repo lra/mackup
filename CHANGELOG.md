@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add support for inkscape (via @paxperscientiam)
+
 ## Mackup 0.8.19
 
 - Add support for Python 3.4 3.5 3.6 and 3.7

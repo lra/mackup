@@ -3,6 +3,8 @@
 ## WIP
 
 - Add support for inkscape (via @paxperscientiam)
+- Add default path for `XDG_CONFIG_HOME`. (via @HlubyLuk)
+- Add tig `xdg_configuration_files` to config. (via @HlubyLuk)
 
 ## Mackup 0.8.19
 
@@ -35,8 +37,6 @@
 - Add support for Cider (via @renews)
 - Add support for Typora (via @allenlsy)
 - Improve support for oh-my-zsh (via @H--o-l)
-- Add default path for `XDG_CONFIG_HOME`. (via @HlubyLuk)
-- Add tig `xdg_configuration_files` to config. (via @HlubyLuk)
 
 ## Mackup 0.8.18
 

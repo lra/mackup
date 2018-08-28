@@ -54,12 +54,13 @@ class ApplicationsDatabase(object):
                         self.apps[app_name]['configuration_files'].add(path)
 
                 # Add the XDG configuration files to sync
-                xdg_config_home = os.environ.get('XDG_CONFIG_HOME')
+                home = os.path.expanduser('~/')
+                failobj = "{}.config".format(home)
+                xdg_config_home = os.environ.get('XDG_CONFIG_HOME', failobj)
                 if xdg_config_home:
                     if not os.path.exists(xdg_config_home):
                         raise ValueError('$XDG_CONFIG_HOME: {} does not exist'
                                          .format(xdg_config_home))
-                    home = os.path.expanduser('~/')
                     if not xdg_config_home.startswith(home):
                         raise ValueError('$XDG_CONFIG_HOME: {} must be '
                                          'somewhere within your home '

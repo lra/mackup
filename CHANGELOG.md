@@ -1,6 +1,7 @@
 # Mackup Changelog
 
 ## WIP
+
 - Add support for b-ryan/powerline-shell (via @paxperscientiam)
 
 ## Mackup 0.8.19

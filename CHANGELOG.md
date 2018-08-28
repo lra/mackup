@@ -1,6 +1,7 @@
 # Mackup Changelog
 
 ## WIP
+- Add support for inkscape (via @paxperscientiam)
 
 ## Mackup 0.8.19
 

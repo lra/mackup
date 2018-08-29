@@ -5,6 +5,7 @@
 - Add support for inkscape (via @paxperscientiam)
 - Add default path for `XDG_CONFIG_HOME`. (via @HlubyLuk)
 - Add tig `xdg_configuration_files` to config. (via @HlubyLuk)
+- Add support for Visual Studio for Mac (via @ivmirx)
 
 ## Mackup 0.8.19
 
@@ -72,7 +73,6 @@
 - Add support for DaisyDisk (via @cafferata)
 - Add support for MySQLWorkbench (via @cafferata)
 - Add support for Openbox (via @jpfarcy)
-- Add support for Visual Studio for Mac (via @ivmirx)
 
 ## Mackup 0.8.16
 

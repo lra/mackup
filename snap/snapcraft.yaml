@@ -1,0 +1,21 @@
+name: mackup
+version: git
+version-script: "git describe --tags"
+summary: Keep your application settings in sync
+description: |
+  Back ups your application settings in a safe directory (e.g. Dropbox).
+  Syncs your application settings among all your workstations.
+  Restores your configuration on any fresh install in one command line.
+
+grade: stable
+confinement: classic
+
+apps:
+  mackup:
+    command: bin/mackup
+
+parts:
+  mackup:
+    plugin: python
+    python-version: python3
+    source: .

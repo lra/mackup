@@ -69,7 +69,7 @@ from other machines.
 1. Edit your configuration files on the master machine so that they
    represent the ideal version of the file you wish to distribute out to your
    other machines.
-   
+
 #### Method 1 Example
 
 Let's say we have two machines, A and B and that we want to sync our bash configuration
@@ -78,7 +78,8 @@ across the machines. We decide that Machine A will serve as our master.
 First, backup the bash configuration files (there are a few of them)
 for your application on all machines.
 
-**Sample backup commands for Machine A**
+##### Sample backup commands for Machine A**
+
 ```
 mkdir ~/bash_backup
 cp ~/.bash_profile ~/bash_backup/bash_profile.bak
@@ -86,7 +87,9 @@ cp ~/.bash_login ~/bash_backup/bash_login.bak
 
 ...plus any other bash config files you want to keep
 ```
-**Sample backup commands for Machine B**
+
+##### Sample backup commands for Machine B
+
 ```
 mkdir ~/bash_backup
 cp ~/.bash_profile ~/bash_backup/bash_profile.bak
@@ -96,11 +99,12 @@ cp ~/.bash_login ~/bash_backup/bash_login.bak
 ```
 
 Machine A will be our master so we now edit the existing configuration files
-on Machine A. We will use the vim text editor to do this for each of our 
+on Machine A. We will use the vim text editor to do this for each of our
 configuration files:
+
 ```
-vim .bash_profile    
-vim .bash_login 
+vim .bash_profile
+vim .bash_login
 ```
 
 When editing these configuration files on Machine A, copy and and paste the settings
@@ -117,15 +121,17 @@ the master machine.
 1. For each machine that aren't the "master" (i.e. "slaves"), back up all the
    configuration files for each app that you want to sync. That's it for now.
    However, there will be more work for you later.
-   
+
 #### Method 2 Example
 
 Let's say we have two machines, A and B and that we want to sync our bash configuration
 across the machines. We decide that Machine A will serve as our master.
 
-Since A is our master, we only need to backup the bash configuration files on Machine B:
+Since A is our master, we only need to backup the bash configuration files on
+Machine B:
 
-**Sample backup commands for Machine B**
+##### Sample backup commands for Machine B**
+
 ```
 mkdir ~/bash_backup
 cp ~/.bash_profile ~/bash_backup/bash_profile.bak

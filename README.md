@@ -23,15 +23,17 @@ Keep your application settings in sync.
 
 Instructions for three common use cases are below.
 
-- **Scenario 1** is the quickest and easiest but gives you no control over
+- [**Scenario 1**](#Scenario-1) is the quickest and easiest but gives you no control over
   which applications are shared out for syncing.
-- **Scenario 2** is also quick and easy and gives you control over which
+- [**Scenario 2**](#Scenario-2) is also quick and easy and gives you control over which
   applications are shared out for syncing.
-- **Scenario 3** is for the many unfortunate souls that never bothered to sync
+- [**Scenario 3**](#Scenario-3) is for the many unfortunate souls that never bothered to sync
   the configurations files on the different machines they work on and are
   ready for Mackup to end their misery.
 
-**Scenario 1:** You want to push **all** configuration settings from **all**
+### Scenario 1
+
+You want to push **all** configuration settings from **all**
 supported applications to get synced:
 
 If you have [Dropbox](https://www.dropbox.com) installed and want to use it to
@@ -78,7 +80,9 @@ Done!
 
 You can find more detailed installation instructions in [INSTALL.md](INSTALL.md).
 
-**Scenario 2:** You want to push configuration settings from **some** applications
+### Scenario 2
+
+You want to push configuration settings from **some** applications
 from one machine to others for syncing.
 
 Let's say you want to share just your bash configuration files with
@@ -92,7 +96,7 @@ bash
 ```
 
 Save the file and then run the same commands given in Scenario 1
-above to install andsync your apps. Done!
+above to install and sync your apps. Done!
 
 As you get more comfortable with Mackup and want to add new
 applications to sync, simply add the name of the supported application
@@ -101,7 +105,9 @@ You can also easily add unsupported applications as well.
 
 Learn more about modifying and customizing Mackup in [the documentation](doc/README.md).
 
-**Scenario 3:** You want to merge the configuration settings of two or
+### Scenario 3
+
+You want to merge the configuration settings of two or
 more machines.
 
 For example, let's say your bash configuration on Machine A is different
@@ -654,4 +660,4 @@ remember, and it corresponds with the whole idea of Mackup: the simpler – the 
 
 ## Where can I find more information
 
-I
+In the [doc](doc) directory.

@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Remove support for Amphetamine as it's containerized
 - Add support for inkscape (via @paxperscientiam)
 - Add default path for `XDG_CONFIG_HOME`. (via @HlubyLuk)
 - Add tig `xdg_configuration_files` to config. (via @HlubyLuk)

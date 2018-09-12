@@ -9,6 +9,7 @@
 - Add tig `xdg_configuration_files` to config. (via @HlubyLuk)
 - Add support for Visual Studio for Mac (via @ivmirx)
 - Add support for snapcraft (thx @guilhem)
+- Add support for GoLand and renamed Gogland to GoLand (via @rayrutjes)
 
 ## Mackup 0.8.19
 

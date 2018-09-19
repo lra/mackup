@@ -541,6 +541,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Xcode](https://developer.apple.com/xcode/)
 - [XEmacs](http://www.xemacs.org/)
 - [XLD](http://tmkk.undo.jp/xld/)
+- [Xonsh](https://xon.sh)
 - [XtraFinder](http://www.trankynam.com/xtrafinder/)
 - [Yummy FTP](http://www.yummysoftware.com/)
 - [zathura](https://pwmt.org/projects/zathura/)

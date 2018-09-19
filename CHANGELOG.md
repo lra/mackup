@@ -10,6 +10,7 @@
 - Add support for Visual Studio for Mac (via @ivmirx)
 - Add support for snapcraft (thx @guilhem)
 - Add support for GoLand and renamed Gogland to GoLand (via @rayrutjes)
+- Add support for xonsh (via @kmcm0)
 
 ## Mackup 0.8.19
 

@@ -4,8 +4,12 @@ develop:
 undevelop:
 	python setup.py develop --uninstall
 
+lint:
+	# Install mdl with "gem install mdl"
+	mdl .
+	flake8
+
 test:
-	flake8 mackup
 	nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
 
 clean:

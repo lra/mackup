@@ -67,8 +67,7 @@ class ApplicationProfile(object):
             # If the file exists and is not already a link pointing to Mackup
             if ((os.path.isfile(home_filepath) or
                  os.path.isdir(home_filepath)) and
-                not (os.path.islink(home_filepath) and
-                     (os.path.isfile(mackup_filepath) or
+                not ((os.path.isfile(mackup_filepath) or
                       os.path.isdir(mackup_filepath)) and
                      os.path.samefile(home_filepath,
                                       mackup_filepath))):

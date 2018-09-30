@@ -13,7 +13,7 @@ setup(
     keywords='configuration config dotfiles sync backup dropbox gdrive box',
     license='GPLv3',
     packages=['mackup'],
-    install_requires=['docopt'],
+    install_requires=['docopt', 'six'],
     entry_points={
         'console_scripts': [
             'mackup=mackup.main:main',

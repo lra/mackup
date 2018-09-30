@@ -18,31 +18,24 @@ def convert_to_octal(file_name):
 class TestMackup(unittest.TestCase):
 
     def test_confirm_yes(self):
-        # Override the raw_input used in utils
-        def custom_raw_input(_):
+        # Override the input used in utils
+        def custom_input(_):
             return 'Yes'
-        utils.raw_input = custom_raw_input
+        utils.input = custom_input
         assert utils.confirm('Answer Yes to this question')
 
     def test_confirm_no(self):
-        # Override the raw_input used in utils
-        def custom_raw_input(_):
+        # Override the input used in utils
+        def custom_input(_):
             return 'No'
-        utils.raw_input = custom_raw_input
+        utils.input = custom_input
         assert not utils.confirm('Answer No to this question')
 
-    def test_confirm_python3(self):
-        # Override the raw_input used in utils
-        def custom_raw_input(_):
-            raise NameError
-        # Also override input used in utils, because
-        utils.raw_input = custom_raw_input
-
     def test_confirm_typo(self):
-        # Override the raw_input used in utils
-        def custom_raw_input(_):
+        # Override the input used in utils
+        def custom_input(_):
             return 'No'
-        utils.raw_input = custom_raw_input
+        utils.input = custom_input
         assert not utils.confirm('Answer garbage to this question')
 
     def test_delete_file(self):

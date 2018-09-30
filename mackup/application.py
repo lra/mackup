@@ -35,7 +35,7 @@ class ApplicationProfile(object):
         Get home and mackup filepaths for given file
 
         Args:
-            filepath (str)
+            filename (str)
 
         Returns:
             home_filepath, mackup_filepath (str, str)
@@ -103,19 +103,9 @@ class ApplicationProfile(object):
                                      .format(file_type, mackup_filepath)):
                         # Delete the file in Mackup
                         utils.delete(mackup_filepath)
-                        # Copy the file
-                        utils.copy(home_filepath, mackup_filepath)
-                        # Delete the file in the home
-                        utils.delete(home_filepath)
-                        # Link the backuped file to its original place
-                        utils.link(mackup_filepath, home_filepath)
+                        utils.link(home_filepath, mackup_filepath, physical=True)
                 else:
-                    # Copy the file
-                    utils.copy(home_filepath, mackup_filepath)
-                    # Delete the file in the home
-                    utils.delete(home_filepath)
-                    # Link the backuped file to its original place
-                    utils.link(mackup_filepath, home_filepath)
+                    utils.link(home_filepath, mackup_filepath, physical=True)
             elif self.verbose:
                 if os.path.exists(home_filepath):
                     print("Doing nothing\n  {}\n  "
@@ -186,9 +176,9 @@ class ApplicationProfile(object):
                                      " your backup ?"
                                      .format(file_type, filename)):
                         utils.delete(home_filepath)
-                        utils.link(mackup_filepath, home_filepath)
+                        utils.link(mackup_filepath, home_filepath, physical=True)
                 else:
-                    utils.link(mackup_filepath, home_filepath)
+                    utils.link(mackup_filepath, home_filepath, physical=True)
             elif self.verbose:
                 if os.path.exists(home_filepath):
                     print("Doing nothing\n  {}\n  already linked by\n  {}"
@@ -202,44 +192,4 @@ class ApplicationProfile(object):
                           .format(mackup_filepath))
 
     def uninstall(self):
-        """
-        Uninstall Mackup.
-
-        Restore any file where it was before the 1st Mackup backup.
-
-        Algorithm:
-            for each file in config
-                if mackup/file exists
-                    if home/file exists
-                        delete home/file
-                    copy mackup/file home/file
-            delete the mackup folder
-            print how to delete mackup
-        """
-        # For each file used by the application
-        for filename in self.files:
-            (home_filepath, mackup_filepath) = self.getFilepaths(filename)
-
-            # If the mackup file exists
-            if (os.path.isfile(mackup_filepath) or
-                    os.path.isdir(mackup_filepath)):
-                # Check if there is a corresponding file in the home folder
-                if os.path.exists(home_filepath):
-                    if self.verbose:
-                        print("Reverting {}\n  at {} ..."
-                              .format(mackup_filepath, home_filepath))
-                    else:
-                        print("Reverting {} ...".format(filename))
-
-                    if self.dry_run:
-                        continue
-
-                    # If there is, delete it as we are gonna copy the Dropbox
-                    # one there
-                    utils.delete(home_filepath)
-
-                    # Copy the Dropbox file to the home folder
-                    utils.copy(mackup_filepath, home_filepath)
-            elif self.verbose:
-                print("Doing nothing, {} does not exist"
-                      .format(mackup_filepath))
+        pass

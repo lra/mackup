@@ -11,6 +11,7 @@
 - Add support for snapcraft (thx @guilhem)
 - Add support for GoLand and renamed Gogland to GoLand (via @rayrutjes)
 - Add support for xonsh (via @kmcm0)
+- Add support for Alacritty
 
 ## Mackup 0.8.19
 

@@ -6,3 +6,4 @@ six
 coverage
 pytest
 pytest-cov
+mypy

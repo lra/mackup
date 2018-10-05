@@ -10,3 +10,9 @@
 
 # Used by pyenv
 /.python-version
+
+.idea/
+.mypy_cache/
+annotations.json
+build/
+venv/

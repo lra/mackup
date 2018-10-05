@@ -10,7 +10,7 @@ lint:
 	flake8
 
 test:
-	nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
+	python -m pytest --cov-branch --cov=mackup
 
 clean:
 	rm -rf dist/

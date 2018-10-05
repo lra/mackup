@@ -19,9 +19,9 @@ from .utils import (error,
                     get_icloud_folder_location,
                     get_box_folder_location)
 try:
-    import configparser
+    from configparser import ConfigParser
 except ImportError:
-    import ConfigParser as configparser
+    from ConfigParser import SafeConfigParser as ConfigParser
 
 
 class Config(object):
@@ -136,7 +136,7 @@ class Config(object):
             filename (str) or None
 
         Returns:
-            SafeConfigParser
+            ConfigParser
         """
         assert isinstance(filename, str) or filename is None
 
@@ -144,7 +144,7 @@ class Config(object):
         if not filename:
             filename = MACKUP_CONFIG_FILE
 
-        parser = configparser.SafeConfigParser(allow_no_value=True)
+        parser = ConfigParser(allow_no_value=True)
         parser.read(os.path.join(os.path.join(os.environ['HOME'], filename)))
 
         return parser

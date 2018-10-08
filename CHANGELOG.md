@@ -12,6 +12,7 @@
 - Add support for GoLand and renamed Gogland to GoLand (via @rayrutjes)
 - Add support for xonsh (via @kmcm0)
 - Add support for Alacritty
+- Add support for WebStorm 2017.1, 2017.2, 2017.3, 2018.1, 2018.2 (via @KrzysztofKarol)
 
 ## Mackup 0.8.19
 

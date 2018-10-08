@@ -2,5 +2,6 @@
 # Run "pip install -r requirements.txt" then "make test"
 nose
 flake8
-codecov
 docopt
+six
+coverage

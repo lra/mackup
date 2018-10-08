@@ -2,16 +2,84 @@
 
 ## WIP
 
+- Remove support for Z as the link is being overwritten by the application
+- Remove support for Amphetamine as it's containerized
+- Add support for inkscape (via @paxperscientiam)
+- Add default path for `XDG_CONFIG_HOME`. (via @HlubyLuk)
+- Add tig `xdg_configuration_files` to config. (via @HlubyLuk)
+- Add support for Visual Studio for Mac (via @ivmirx)
+- Add support for snapcraft (thx @guilhem)
+- Add support for GoLand and renamed Gogland to GoLand (via @rayrutjes)
+- Add support for xonsh (via @kmcm0)
+- Add support for Alacritty
+- Add support for WebStorm 2017.1, 2017.2, 2017.3 (via @KrzysztofKarol)
+
+## Mackup 0.8.19
+
+- Add support for Python 3.4 3.5 3.6 and 3.7
+- Add support for kubectl (via @pcostesi)
+- Support for RubyMine 2017.03 (via @kibitan)
+- Add additional Spectacle library path (via @iansym)
+- Only sync init.vim for neovim (via @foray1010)
+- Support for RubyMine 2018.01 (via @kibitan)
+- Support for IntelliJ Idea 2017.1, 2017.2, 2017.3, and 2018.1 (via @cool00geek)
+- Remove references to OpenSSH private key syncing - removed in dcb26ba (via @njdancer)
+- Add support for hub (via @usami-k)
+- Add support for Tower 3 (via @diego-vieira)
+- Remove references for Visual Studio Code extensions syncing (via @MTalalAnwar)
+- Add support for ledger/ledger (via @paxperscientiam)
+- Support for Itsycal (via @paxperscientiam, @sfsam, nitrocode)
+- Add support for Ruby Version Manager (via @sh78)
+- Support for Khd (via @sh78)
+- Support for skhd (via @sh78)
+- Add support for ranger (via @sh78)
+- Add support for Cheat (via @sh78)
+- Support latest qutebrowser version config paths (via @sh78)
+- Include Karabiner Elements complex modifications (via @sh78)
+- Add support for chunkwm (via @sh78)
+- Add support for cVim (via @sh78)
+- Add support for ESLint (via @sh78)
+- Improve coverage for macOS/OS X Automator files (via @sh78)
+- Add support for PhoneView (via @dnicolson)
+- Add support for PixelSnap (via @dnicolson)
+- Add support for Cider (via @renews)
+- Add support for Typora (via @allenlsy)
+- Improve support for oh-my-zsh (via @H--o-l)
+
+## Mackup 0.8.18
+
+- Fix crash due to bad BetterTouchTool support
+- Fixed an issue with python3
+
+## Mackup 0.8.17
+
+- Add support for Micro (via @icopp)
+- Add backing up vscode extensions for Visual Studio (via @stephen2m)
+- Add support for iTermocil (via @godbout)
+- Add support for Amethyst (via @whtsky)
+- Add support for Micro (via @icopp)
+- Add support for Cerebro (via @kelion)
 - Add support for iTerm (via @Sbastien)
 - Add support for Boxer (via @icopp)
+- Add support for Franz (via @stephen2m)
+- Add support for IdeaVim (via @x-ji)
 - Add support for Tmuxp (via @infernion)
 - Add support for sferik/t (via @paxperscientiam)
 - Add support for fastlane (via @revolter)
+- Add support for Jitouch (via @forby)
+- Add support for Blender (via @forby)
 - Add support for Insomnia (via @browniebroke)
 - Add support for Marked 2 (via @semicolonsnet)
-- Add support for WebStorm 2017.1 (via @KrzysztofKarol)
-- Add support for WebStorm 2017.2 (via @KrzysztofKarol)
-- Add support for WebStorm 2017.3 (via @KrzysztofKarol)
+- Add support for BetterTouchTool data store v2 (via @pearlythepirate and @foray1010)
+- Add support for WhatsApp Web (via @cafferata)
+- Add support for GitUp (via @cafferata)
+- Add support for HTTPie (via @Dremora)
+- Remove GnuPG keyrings from backup by default (via @jeremygaither)
+- Add support for Postico (via @stvhwrd)
+- Add support for PHPStorm 2017.3 (via @cafferata)
+- Add support for DaisyDisk (via @cafferata)
+- Add support for MySQLWorkbench (via @cafferata)
+- Add support for Openbox (via @jpfarcy)
 
 ## Mackup 0.8.16
 

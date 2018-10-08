@@ -35,7 +35,7 @@ class ApplicationProfile(object):
         Get home and mackup filepaths for given file
 
         Args:
-            filepath (str)
+            filename (str)
 
         Returns:
             home_filepath, mackup_filepath (str, str)

@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.20
+
 - Remove support for Z as the link is being overwritten by the application
 - Remove support for Amphetamine as it's containerized
 - Add support for inkscape (via @paxperscientiam)

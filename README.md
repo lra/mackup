@@ -198,6 +198,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Bundler](http://bundler.io)
 - [Byobu](http://byobu.co/)
 - [Caffeine](http://lightheadsw.com/caffeine/)
+- [Calibre](https://calibre-ebook.com/)
 - [Capture One](http://www.phaseone.com/Imaging-Software/Capture-One.aspx)
 - [Cartographica](https://www.macgis.com/)
 - [Cerebro](https://cerebroapp.com/)

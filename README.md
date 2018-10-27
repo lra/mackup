@@ -470,6 +470,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [skhd](https://github.com/koekeishiya/skhd/)
 - [Skim](http://skim-app.sourceforge.net/)
 - [Skitch](https://evernote.com/skitch/)
+- [Slack](https://slack.com/)
 - [Slate](https://github.com/jigish/slate)
 - [Slic3r](http://slic3r.org)
 - [Slogger](http://brettterpstra.com/projects/slogger/)

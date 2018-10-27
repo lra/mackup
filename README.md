@@ -521,6 +521,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Ventrilo](http://www.ventrilo.com/)
 - [Versions](http://www.versionsapp.com)
 - [Vim](http://www.vim.org/)
+- [Vivaldi](https://vivaldi.com/)
 - [Vimperator](http://www.vimperator.org/vimperator)
 - [Viscosity](http://www.sparklabs.com/viscosity/)
 - [Visual Studio Code - Insiders](https://code.visualstudio.com/insiders)

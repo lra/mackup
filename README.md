@@ -297,6 +297,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Hexels](http://hexraystudios.com/hexels/)
 - [Homebridge](https://github.com/nfarina/homebridge)
 - [Houdini](http://uglyapps.co.uk/houdini/)
+- [Hstr](https://github.com/dvorka/hstr)
 - [Htop](http://htop.sourceforge.net/)
 - [HTTPie](https://httpie.org/)
 - [hub](https://hub.github.com)

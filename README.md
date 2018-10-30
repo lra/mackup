@@ -184,6 +184,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Bash it](https://github.com/Bash-it/bash-it)
 - [Bash](http://www.gnu.org/software/bash/)
 - [BBEdit](http://www.barebones.com/products/bbedit/)
+- [Bc](https://www.gnu.org/software/bc/)
 - [Beatport Pro](https://www.beatport.com/desktop)
 - [BetterSnapTool](http://www.boastr.net/)
 - [BetterTouchTool](http://www.boastr.net/)

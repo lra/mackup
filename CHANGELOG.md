@@ -2,6 +2,8 @@
 
 ## WIP
 
+Add support for hstr (via @paxperscientiam)
+
 ## Mackup 0.8.20
 
 - Remove support for Z as the link is being overwritten by the application

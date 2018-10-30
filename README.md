@@ -423,6 +423,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [PostgreSQL](http://www.postgresql.org/)
 - [Postico](https://eggerapps.at/postico/)
 - [Pow](http://pow.cx/)
+- [Powerline-shell](https://github.com/b-ryan/powerline-shell)
 - [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Processing](https://processing.org/)
 - [ProxyChains NG](http://sourceforge.net/projects/proxychains-ng/)

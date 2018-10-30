@@ -4,3 +4,4 @@ nose
 flake8
 docopt
 six
+coverage

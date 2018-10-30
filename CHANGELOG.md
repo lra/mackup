@@ -3,6 +3,22 @@
 ## WIP
 
 - Add support for b-ryan/powerline-shell (via @paxperscientiam)
+- Add support for Google clasp (via @paxperscientiam)
+- Add support for hstr (via @paxperscientiam)
+
+## Mackup 0.8.20
+
+- Remove support for Z as the link is being overwritten by the application
+- Remove support for Amphetamine as it's containerized
+- Add support for inkscape (via @paxperscientiam)
+- Add default path for `XDG_CONFIG_HOME`. (via @HlubyLuk)
+- Add tig `xdg_configuration_files` to config. (via @HlubyLuk)
+- Add support for Visual Studio for Mac (via @ivmirx)
+- Add support for snapcraft (thx @guilhem)
+- Add support for GoLand and renamed Gogland to GoLand (via @rayrutjes)
+- Add support for xonsh (via @kmcm0)
+- Add support for Alacritty
+- Add support for WebStorm 2017.1, 2017.2, 2017.3, 2018.1, 2018.2 (via @KrzysztofKarol)
 
 ## Mackup 0.8.19
 
@@ -34,6 +50,7 @@
 - Add support for PixelSnap (via @dnicolson)
 - Add support for Cider (via @renews)
 - Add support for Typora (via @allenlsy)
+- Improve support for oh-my-zsh (via @H--o-l)
 
 ## Mackup 0.8.18
 

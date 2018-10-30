@@ -2,9 +2,10 @@
 
 ## WIP
 
-- Add support for b-ryan/powerline-shell (via @paxperscientiam)
+- Add support for bc (via @paxperscientiam)
 - Add support for Google clasp (via @paxperscientiam)
 - Add support for hstr (via @paxperscientiam)
+- Add support for b-ryan/powerline-shell (via @paxperscientiam)
 
 ## Mackup 0.8.20
 

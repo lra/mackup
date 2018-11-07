@@ -6,6 +6,7 @@
 - Add support for Google clasp (via @paxperscientiam)
 - Add support for hstr (via @paxperscientiam)
 - Add support for b-ryan/powerline-shell (via @paxperscientiam)
+- Add support for kovidgoyal/kitty (via @foray1010)
 
 ## Mackup 0.8.20
 

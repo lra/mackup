@@ -36,9 +36,9 @@ class Config(object):
             filename (str): Optional filename of the config file. If empty,
                             defaults to MACKUP_CONFIG_FILE
         """
-        assert isinstance(filename, str) or filename is None
 
         # Initialize the parser
+        filename = self._validate_config_path(filename)
         self._parser = self._setup_parser(filename)
 
         # Do we have an old config file ?
@@ -128,7 +128,18 @@ class Config(object):
         """
         return set(self._apps_to_sync)
 
-    def _setup_parser(self, filename=None):
+    def _validate_config_path(self, filename):
+        """
+        Validate the (optional) user-supplied path to a Mackup config file. If
+        none supplied, defaults to returning MACKUP_CONFIG_FILE.
+        """
+        if filename is None:
+            return MACKUP_CONFIG_FILE
+
+        assert isinstance(filename, str)
+        return filename
+
+    def _setup_parser(self, filename):
         """
         Configure the ConfigParser instance the way we want it.
 
@@ -138,12 +149,6 @@ class Config(object):
         Returns:
             SafeConfigParser
         """
-        assert isinstance(filename, str) or filename is None
-
-        # If we are not overriding the config filename
-        if not filename:
-            filename = MACKUP_CONFIG_FILE
-
         parser = configparser.SafeConfigParser(allow_no_value=True)
         parser.read(os.path.join(os.path.join(os.environ['HOME'], filename)))
 

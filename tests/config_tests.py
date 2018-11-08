@@ -292,11 +292,12 @@ class TestConfig(unittest.TestCase):
             assert resolved_path == config_file.name
 
     def test_resolves_absolute_config_path(self):
-        with tempfile.TemporaryDirectory(dir=os.getcwd()) as tmp_dir:
-            with tempfile.NamedTemporaryFile(dir=tmp_dir) as config_file:
-                resolved_path = Config._resolve_config_path(config_file.name)
+        base_dir = os.getcwd()
 
-                assert resolved_path == config_file.name
+        with tempfile.NamedTemporaryFile(dir=base_dir) as config_file:
+            resolved_path = Config._resolve_config_path(config_file.name)
+
+            assert resolved_path == config_file.name
 
     def test_raises_file_not_found_for_nonexistent_config_path(self):
         self.assertRaises(RuntimeError,

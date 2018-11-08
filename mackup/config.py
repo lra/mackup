@@ -143,8 +143,8 @@ class Config(object):
             if os.path.exists(config_path):
                 return config_path
 
-        message = "Couldn't find Mackup config {filename} in {base_dirs}"
-        raise RuntimeError(message.format_map(locals()))
+        message = "Couldn't find {} in {}".format(filename, base_dirs)
+        raise FileNotFoundError(message)
 
     def _setup_parser(self, config_path):
         """

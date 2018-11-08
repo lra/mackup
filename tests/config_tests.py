@@ -1,5 +1,6 @@
 import unittest
 import os.path
+import tempfile
 
 from mackup.constants import (ENGINE_DROPBOX,
                               ENGINE_GDRIVE,
@@ -268,16 +269,31 @@ class TestConfig(unittest.TestCase):
     def test_default_config_path_returned_if_none_supplied(self):
         default_config_path = os.path.join(os.environ['HOME'],
                                            MACKUP_CONFIG_FILE)
-        resolved_config_path = Config._resolve_config_path(None)
+        resolved_path = Config._resolve_config_path(None)
 
-        assert resolved_config_path == default_config_path
+        assert resolved_path == default_config_path
 
     def test_resolves_config_path_relative_to_home_dir(self):
-        pass
+        base_dir = os.environ['HOME']
+
+        with tempfile.NamedTemporaryFile(dir=base_dir) as config_file:
+            relative_path = os.path.basename(config_file.name)
+            resolved_path = Config._resolve_config_path(relative_path)
+
+            assert resolved_path == config_file.name
 
     def test_resolves_config_path_relative_to_cwd(self):
-        pass
+        base_dir = os.getcwd()
+
+        with tempfile.NamedTemporaryFile(dir=base_dir) as config_file:
+            relative_path = os.path.basename(config_file.name)
+            resolved_path = Config._resolve_config_path(relative_path)
+
+            assert resolved_path == config_file.name
 
     def test_resolves_absolute_config_path(self):
-        pass
+        with tempfile.TemporaryDirectory(dir=os.getcwd()) as tmp_dir:
+            with tempfile.NamedTemporaryFile(dir=tmp_dir) as config_file:
+                resolved_path = Config._resolve_config_path(config_file.name)
 
+                assert resolved_path == config_file.name

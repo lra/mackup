@@ -144,7 +144,7 @@ class Config(object):
                 return config_path
 
         message = "Couldn't find {} in {}".format(filename, base_dirs)
-        raise FileNotFoundError(message)
+        raise RuntimeError(message)
 
     def _setup_parser(self, config_path):
         """

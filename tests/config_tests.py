@@ -299,4 +299,6 @@ class TestConfig(unittest.TestCase):
                 assert resolved_path == config_file.name
 
     def test_raises_file_not_found_for_nonexistent_config_path(self):
-        self.assertRaises(FileNotFoundError, Config._resolve_config_path, '/foo/bar')
+        self.assertRaises(FileNotFoundError,
+                          Config._resolve_config_path,
+                          '/foo/bar')

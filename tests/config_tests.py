@@ -6,7 +6,8 @@ from mackup.constants import (ENGINE_DROPBOX,
                               ENGINE_COPY,
                               ENGINE_ICLOUD,
                               ENGINE_BOX,
-                              ENGINE_FS)
+                              ENGINE_FS,
+                              MACKUP_CONFIG_FILE)
 from mackup.config import Config, ConfigError
 
 
@@ -263,3 +264,20 @@ class TestConfig(unittest.TestCase):
 
     def test_config_old_config(self):
         self.assertRaises(SystemExit, Config, 'mackup-old-config.cfg')
+
+    def test_default_config_path_returned_if_none_supplied(self):
+        default_config_path = os.path.join(os.environ['HOME'],
+                                           MACKUP_CONFIG_FILE)
+        resolved_config_path = Config._resolve_config_path(None)
+
+        assert resolved_config_path == default_config_path
+
+    def test_resolves_config_path_relative_to_home_dir(self):
+        pass
+
+    def test_resolves_config_path_relative_to_cwd(self):
+        pass
+
+    def test_resolves_absolute_config_path(self):
+        pass
+

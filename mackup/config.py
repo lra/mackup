@@ -38,8 +38,8 @@ class Config(object):
         """
 
         # Initialize the parser
-        filename = self._validate_config_path(filename)
-        self._parser = self._setup_parser(filename)
+        config_path = self._resolve_config_path(filename)
+        self._parser = self._setup_parser(config_path)
 
         # Do we have an old config file ?
         self._warn_on_old_config()
@@ -128,29 +128,36 @@ class Config(object):
         """
         return set(self._apps_to_sync)
 
-    def _validate_config_path(self, filename):
+    @classmethod
+    def _resolve_config_path(cls, filename):
         """
-        Validate the (optional) user-supplied path to a Mackup config file. If
+        Resolve the optional, user-supplied path to a Mackup config file. If
         none supplied, defaults to returning MACKUP_CONFIG_FILE.
         """
         if filename is None:
-            return MACKUP_CONFIG_FILE
+            return os.path.join(os.environ["HOME"], MACKUP_CONFIG_FILE)
 
-        assert isinstance(filename, str)
-        return filename
+        base_dirs = (os.environ["HOME"], os.getcwd(), "/")
+        for base_dir in base_dirs:
+            config_path = os.path.join(base_dir, filename)
+            if os.path.exists(config_path):
+                return config_path
 
-    def _setup_parser(self, filename):
+        message = "Couldn't find Mackup config {filename} in {base_dirs}"
+        raise RuntimeError(message.format_map(locals()))
+
+    def _setup_parser(self, config_path):
         """
         Configure the ConfigParser instance the way we want it.
 
         Args:
-            filename (str) or None
+            config_path (str)
 
         Returns:
             SafeConfigParser
         """
         parser = configparser.SafeConfigParser(allow_no_value=True)
-        parser.read(os.path.join(os.path.join(os.environ['HOME'], filename)))
+        parser.read(config_path)
 
         return parser
 

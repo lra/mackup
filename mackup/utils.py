@@ -266,36 +266,6 @@ def get_box_folder_location():
     return box_home
 
 
-def get_copy_folder_location():
-    """
-    Try to locate the Copy folder.
-
-    Returns:
-        (str) Full path to the current Copy folder
-    """
-    copy_settings_path = 'Library/Application Support/Copy Agent/config.db'
-    copy_home = None
-
-    copy_settings = os.path.join(os.environ['HOME'], copy_settings_path)
-
-    if os.path.isfile(copy_settings):
-        database = sqlite3.connect(copy_settings)
-        if database:
-            cur = database.cursor()
-            query = ("SELECT value "
-                     "FROM config2 "
-                     "WHERE option = 'csmRootPath';")
-            cur.execute(query)
-            data = cur.fetchone()
-            copy_home = str(data[0])
-            cur.close()
-
-    if not copy_home:
-        error("Unable to find your Copy install =(")
-
-    return copy_home
-
-
 def get_icloud_folder_location():
     """
     Try to locate the iCloud Drive folder.

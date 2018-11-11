@@ -7,6 +7,7 @@
 - Add support for hstr (via @paxperscientiam)
 - Add support for b-ryan/powerline-shell (via @paxperscientiam)
 - Add support for kovidgoyal/kitty (via @foray1010)
+- Remove support for Copy engine as the service has been discontinued (via @sonnyp)
 
 ## Mackup 0.8.20
 

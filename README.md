@@ -141,7 +141,6 @@ in it stay put, so that any other computer also running Mackup is unaffected.
 
 - [Dropbox](https://www.dropbox.com/)
 - [Google Drive](https://drive.google.com/)
-- [Copy](https://www.copy.com/)
 - [iCloud](http://www.apple.com/icloud/)
 - [Box](https://www.box.com)
 - Anything able to sync a folder (e.g. [Git](http://git-scm.com/))

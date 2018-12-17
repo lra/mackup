@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Update support for i3 (@KyleWJohnston)
 - Add support for bc (via @paxperscientiam)
 - Add support for Google clasp (via @paxperscientiam)
 - Add support for hstr (via @paxperscientiam)

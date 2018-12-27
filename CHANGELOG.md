@@ -9,6 +9,7 @@
 - Add support for b-ryan/powerline-shell (via @paxperscientiam)
 - Add support for kovidgoyal/kitty (via @foray1010)
 - Add support for PhpStorm 2018.2 (via @j13k)
+- Add support for IntelliJIdea2018.3 (via @utegental)
 
 ## Mackup 0.8.20
 

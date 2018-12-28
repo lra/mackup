@@ -11,6 +11,7 @@
 - Add support for PhpStorm 2018.2 (via @j13k)
 - Fix support for Karabiner Elements (via @mrymtsk)
 - Add support for IntelliJIdea2018.3 (via @utegental)
+- Add support for alternative config path for Alacritty (via @foray1010)
 
 ## Mackup 0.8.20
 

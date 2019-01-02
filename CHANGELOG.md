@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.21
+
 - Update support for i3 (@KyleWJohnston)
 - Add support for bc (via @paxperscientiam)
 - Add support for Google clasp (via @paxperscientiam)

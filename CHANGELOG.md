@@ -7,6 +7,7 @@
 - Add support for alternative config path for Alacritty (via @foray1010)
 - Add support for WebStorm 2018.3 (via @KrzysztofKarol)
 - Removed support for BBEdit
+- Add support for IntelliJIDEA 2018.3 (via @nysos3)
 
 ## Mackup 0.8.21
 

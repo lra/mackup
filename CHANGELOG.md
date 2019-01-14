@@ -36,6 +36,7 @@
 - Add support for xonsh (via @kmcm0)
 - Add support for Alacritty
 - Add support for WebStorm 2017.1, 2017.2, 2017.3, 2018.1, 2018.2 (via @KrzysztofKarol)
+- Add support for Adobe Illustrator CC2019 (v23)
 
 ## Mackup 0.8.19
 

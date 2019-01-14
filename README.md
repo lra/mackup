@@ -40,12 +40,6 @@ If not running OS X, or you don't like Homebrew, you can use [pip](https://pip.p
 > is already installed on your system.
 > If this is the case, it will be upgraded to the latest version.
 
-> On **Ubuntu**, pip will install to the current user's home
-> directory rather than system-wide. Because of this, when
-> installing pip on **Ubuntu** you will need to run `pip install`
-> with the `--system` flag as well (on other platforms this is not
-> needed)
-
 ```bash
 # Install Mackup with PIP
 pip install --upgrade mackup
@@ -53,6 +47,12 @@ pip install --upgrade mackup
 # Launch it and back up your files
 mackup backup
 ```
+
+> On **Ubuntu**, pip will install to the current user's home
+> directory rather than system-wide. Because of this, when
+> installing pip on **Ubuntu** you will need to run `pip install`
+> with the `--system` flag as well (on other platforms this is not
+> needed)
 
 You're all set and constantly backed up from now on.
 

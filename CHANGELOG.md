@@ -2,13 +2,26 @@
 
 ## WIP
 
+- Add support for DataGrip 2017.3, 2018.1, 2018.2, 2018.3 (via @utegental)
+- Add support for Volt (via @mrymtsk)
+- Add support for alternative config path for Alacritty (via @foray1010)
+- Add support for WebStorm 2018.3 (via @KrzysztofKarol)
+- Removed support for BBEdit
+- Add support for IntelliJIDEA 2018.3 (via @nysos3)
+- Add support for GoLand 2018.3 (via @rayrutjes)
+
+## Mackup 0.8.21
+
+- Update support for i3 (@KyleWJohnston)
 - Add support for bc (via @paxperscientiam)
 - Add support for Google clasp (via @paxperscientiam)
 - Add support for hstr (via @paxperscientiam)
 - Add support for b-ryan/powerline-shell (via @paxperscientiam)
 - Add support for kovidgoyal/kitty (via @foray1010)
 - Add support for PhpStorm 2018.2 (via @j13k)
-- Add support for GoLand 2018.3 (via @rayrutjes)
+- Add support for Oh My Tmux (via @solarknight)
+- Fix support for Karabiner Elements (via @mrymtsk)
+- Add support for IntelliJIdea2018.3 (via @utegental)
 
 ## Mackup 0.8.20
 

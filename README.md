@@ -183,7 +183,6 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Bartender](http://www.macbartender.com/)
 - [Bash it](https://github.com/Bash-it/bash-it)
 - [Bash](http://www.gnu.org/software/bash/)
-- [BBEdit](http://www.barebones.com/products/bbedit/)
 - [Bc](https://www.gnu.org/software/bc/)
 - [Beatport Pro](https://www.beatport.com/desktop)
 - [BetterSnapTool](http://www.boastr.net/)
@@ -230,6 +229,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [cVim](https://github.com/1995eaton/chromium-vim)
 - [Cyberduck](https://cyberduck.io/)
 - [DaisyDisk](https://daisydiskapp.com)
+- [DataGrip](https://www.jetbrains.com/datagrip/)
 - [Dash](https://kapeli.com/dash)
 - [Day-O](http://www.shauninman.com/archive/2011/10/20/day_o_mac_menu_bar_clock)
 - [DbVisualizer](https://www.dbvis.com/)
@@ -308,7 +308,6 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [HyperSwitch](https://bahoom.com/hyperswitch)
 - [i2cssh](https://github.com/wouterdebie/i2cssh)
 - [i3](https://i3wm.org/)
-- [i3wm](http://i3wm.org/)
 - [IdeaVim](https://github.com/JetBrains/ideavim)
 - [Inkscape](https://inkscape.org/)
 - [Insomnia](https://insomnia.rest/)
@@ -397,6 +396,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [nvALT](http://brettterpstra.com/projects/nvalt/)
 - [nvpy](https://github.com/cpbotha/nvpy)
 - [Oh My Fish](https://github.com/bpinto/oh-my-fish)
+- [Oh My Tmux](https://github.com/gpakosz/.tmux)
 - [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [OmniFocus](https://www.omnigroup.com/omnifocus/)
 - [OmniGraffle](https://www.omnigroup.com/omnigraffle/)
@@ -532,6 +532,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Visual Studio Code](https://code.visualstudio.com)
 - [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
 - [VLC](http://www.videolan.org/)
+- [Volt](https://github.com/vim-volt/volt)
 - [Wakatime](https://wakatime.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 - [Wget](https://www.gnu.org/software/wget/)
@@ -564,7 +565,6 @@ We can [with your help](doc#get-official-support-for-an-application) ;)
 Have an application that shouldn't be generally supported but that you use?
 Or a cool file you want to sync?
 
-- Use a `~/.mackup.cfg` to [sync a single file](doc#configuration) (e.g. `~/.gitignore`)
 - Create a `~/.mackup` directory to [sync an application or any file or directory](doc#add-support-for-an-application-or-any-file-or-directory)
 
 ## Why did you do this

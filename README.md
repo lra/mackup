@@ -230,6 +230,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [cVim](https://github.com/1995eaton/chromium-vim)
 - [Cyberduck](https://cyberduck.io/)
 - [DaisyDisk](https://daisydiskapp.com)
+- [DataGrip](https://www.jetbrains.com/datagrip/)
 - [Dash](https://kapeli.com/dash)
 - [Day-O](http://www.shauninman.com/archive/2011/10/20/day_o_mac_menu_bar_clock)
 - [DbVisualizer](https://www.dbvis.com/)

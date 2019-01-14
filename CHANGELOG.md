@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for DataGrip 2017.3, 2018.1, 2018.2, 2018.3 (via @utegental)
 - Add support for Volt (via @mrymtsk)
 
 ## Mackup 0.8.21

@@ -6,6 +6,7 @@
 - Add support for Volt (via @mrymtsk)
 - Add support for alternative config path for Alacritty (via @foray1010)
 - Add support for WebStorm 2018.3 (via @KrzysztofKarol)
+- Removed support for BBEdit
 
 ## Mackup 0.8.21
 

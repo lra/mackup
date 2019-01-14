@@ -8,6 +8,7 @@
 - Add support for WebStorm 2018.3 (via @KrzysztofKarol)
 - Removed support for BBEdit
 - Add support for IntelliJIDEA 2018.3 (via @nysos3)
+- Add support for GoLand 2018.3 (via @rayrutjes)
 
 ## Mackup 0.8.21
 

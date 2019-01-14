@@ -533,6 +533,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Visual Studio Code](https://code.visualstudio.com)
 - [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
 - [VLC](http://www.videolan.org/)
+- [Volt](https://github.com/vim-volt/volt)
 - [Wakatime](https://wakatime.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 - [Wget](https://www.gnu.org/software/wget/)

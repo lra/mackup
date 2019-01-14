@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add support for Volt (via @mrymtsk)
+
 ## Mackup 0.8.21
 
 - Update support for i3 (@KyleWJohnston)

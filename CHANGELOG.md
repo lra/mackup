@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.22
+
 - Add support for DataGrip 2017.3, 2018.1, 2018.2, 2018.3 (via @utegental)
 - Add support for Volt (via @mrymtsk)
 - Add support for alternative config path for Alacritty (via @foray1010)
@@ -9,6 +11,7 @@
 - Removed support for BBEdit
 - Add support for IntelliJIDEA 2018.3 (via @nysos3)
 - Add support for GoLand 2018.3 (via @rayrutjes)
+- Fix an issue for users without a `~/.config/` folder.
 
 ## Mackup 0.8.21
 

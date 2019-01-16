@@ -62,13 +62,15 @@ mackup restore
 
 Done!
 
-**Warning Mackup won't backup private data by default (ssh keys, bitcoin wallets)**
+** Mackup won't backup private data by default (ssh keys, bitcoin wallets)**
 
-To backup sensitive data, create a config file for that application
+To backup sensitive data, create a config file for that application.
 
 ```
-touch ~/.mackup/ssh.config
+touch ~/.mackup/ssh.cfg
 ```
+
+Define what to backup in the config file
 ```
 [application]
 name = SSH

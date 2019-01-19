@@ -497,6 +497,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Spotify](https://www.spotify.com/)
 - [Stata](http://www.stata.com/)
 - [Stay](https://cordlessdog.com/stay/)
+- [Storyist - Home](http://storyist.com/)
 - [Sublime Text](http://www.sublimetext.com/)
 - [Subversion](http://subversion.apache.org/)
 - [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html)

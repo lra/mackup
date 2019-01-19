@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for Storyist 3 writing software (via @mutantant)
 - Add support for WordGrinder (via @mutantant)
 
 ## Mackup 0.8.22

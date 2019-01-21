@@ -4,6 +4,7 @@
 
 - Add support for Storyist 3 writing software (via @mutantant)
 - Add support for WordGrinder (via @mutantant)
+- Fix support for Adobe Illustrator CC2019 (v23)
 
 ## Mackup 0.8.22
 

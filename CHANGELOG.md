@@ -5,6 +5,7 @@
 - Add support for Storyist 3 writing software (via @mutantant)
 - Add support for WordGrinder (via @mutantant)
 - Fix support for Adobe Illustrator CC2019 (v23)
+- remove `bundle` directory from vim config (via @cocobear)
 
 ## Mackup 0.8.22
 

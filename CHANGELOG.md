@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Improve support for TextMate (via @egze)
 - Add support for Storyist 3 writing software (via @mutantant)
 - Add support for WordGrinder (via @mutantant)
 - Fix support for Adobe Illustrator CC2019 (v23)

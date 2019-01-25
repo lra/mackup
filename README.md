@@ -510,6 +510,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [tint2](https://code.google.com/p/tint2/)
 - [TinyFugue](http://tinyfugue.sourceforge.net)
 - [Tmux](http://tmux.sourceforge.net/)
+- [Tilix](https://github.com/gnunn1/tilix)
 - [Tmuxp](https://github.com/tony/tmuxp)
 - [Tmuxinator](https://github.com/tmuxinator/tmuxinator)
 - [Todo.txt CLI](http://todotxt.com/)

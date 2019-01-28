@@ -531,6 +531,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Typinator](http://www.ergonis.com/products/typinator/)
 - [Typora](https://typora.io)
 - [uTorrent](http://www.utorrent.com/)
+- [ulauncher](https://ulauncher.io/)
 - [Ventrilo](http://www.ventrilo.com/)
 - [Versions](http://www.versionsapp.com)
 - [Vim](http://www.vim.org/)

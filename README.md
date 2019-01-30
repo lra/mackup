@@ -240,6 +240,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Day-O](http://www.shauninman.com/archive/2011/10/20/day_o_mac_menu_bar_clock)
 - [DbVisualizer](https://www.dbvis.com/)
 - [Deal Alert](http://dealalertapp.com/)
+- [Deepin-dde-dock](https://github.com/linuxdeepin/dde-dock)
 - [Deepin-Terminal](https://github.com/linuxdeepin/deepin-terminal)
 - [Default Folder X](http://www.stclairsoft.com/DefaultFolderX/)
 - [Devil's Pie 2](http://www.gusnan.se/devilspie2/)

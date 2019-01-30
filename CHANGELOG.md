@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for Deepin-dde-dock (via @sUyMur)
 - Add support for deepin-terminal (via @sUyMur)
 - Add support for grsync (via @sUyMur)
 - Add support for ulauncher (via @sUyMur)

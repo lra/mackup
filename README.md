@@ -295,6 +295,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [GoShare](https://github.com/dictget/goshare)
 - [Gradle](http://gradle.org)
 - [GrandTotal 3](http://www.mediaatelier.com/GrandTotal4/)
+- [grsync](http://www.opbyte.it/grsync/)
 - [Hammerspoon](http://www.hammerspoon.org/)
 - [HandBrake](https://handbrake.fr/)
 - [Hands Off!](http://www.oneperiodic.com/products/handsoff/)

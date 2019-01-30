@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for deepin-terminal (via @sUyMur)
 - Add support for grsync (via @sUyMur)
 - Add support for ulauncher (via @sUyMur)
 - Add support for Tilix (via @pat-s)

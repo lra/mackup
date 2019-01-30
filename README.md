@@ -241,6 +241,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [DbVisualizer](https://www.dbvis.com/)
 - [Deal Alert](http://dealalertapp.com/)
 - [Deepin-dde-dock](https://github.com/linuxdeepin/dde-dock)
+- [Deepin-dde-file-manager](https://www.deepin.org/en/original/dde-file-manager/)
 - [Deepin-Terminal](https://github.com/linuxdeepin/deepin-terminal)
 - [Default Folder X](http://www.stclairsoft.com/DefaultFolderX/)
 - [Devil's Pie 2](http://www.gusnan.se/devilspie2/)

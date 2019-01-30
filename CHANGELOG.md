@@ -8,7 +8,6 @@
 - Add support for WordGrinder (via @mutantant)
 - Fix support for Adobe Illustrator CC2019 (v23)
 - remove `bundle` directory from vim config (via @cocobear)
-- Add support for Sublime Merge (via @krupenja)
 
 ## Mackup 0.8.22
 

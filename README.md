@@ -295,6 +295,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [GnuPG](https://www.gnupg.org/) (NOTE: includes private keys)
 - [Go2Shell](http://zipzapmac.com/Go2Shell)
 - [GoLand](https://www.jetbrains.com/go/)
+- [Goldendict](http://goldendict.org/)
 - [GoShare](https://github.com/dictget/goshare)
 - [Gradle](http://gradle.org)
 - [GrandTotal 3](http://www.mediaatelier.com/GrandTotal4/)

@@ -16,6 +16,7 @@
 - Remove iTunes Scripts (via @dnicolson)
 - Add support for Sublime Merge (via @krupenja)
 - Add support for Marta (via @krupenja)
+- Add support for Goldendict (via @krupenja)
 
 ## Mackup 0.8.22
 

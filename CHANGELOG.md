@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for rofi (via @pat-s)
 - Add support for deepin-dde-file-manager (via @sUyMur)
 - Add support for Deepin-dde-dock (via @sUyMur)
 - Add support for deepin-terminal (via @sUyMur)

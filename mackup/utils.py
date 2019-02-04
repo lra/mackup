@@ -190,6 +190,25 @@ def error(message):
     sys.exit(fail + "Error: {}".format(message) + end)
 
 
+def get_config_file_location():
+    """
+    Locate configure file.
+
+    Returns:
+        (str) Full path to the current configure file
+    """
+
+    xdg_cfg_path = os.getenv("XDG_CONFIG_HOME",
+                             os.path.join(os.environ["HOME"], ".config"))
+    xdg_cfg_file = os.path.join(xdg_cfg_path, constants.MACKUP_XDG_CONFIG_FILE)
+    home_cfg_file = os.path.join(os.environ["HOME"],
+                                 constants.MACKUP_CONFIG_FILE)
+    if os.path.isfile(xdg_cfg_file):
+        return xdg_cfg_file
+    else:
+        return home_cfg_file
+
+
 def get_dropbox_folder_location():
     """
     Try to locate the Dropbox folder.

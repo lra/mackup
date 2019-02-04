@@ -19,9 +19,12 @@ class Mackup(object):
 
     """Main Mackup class."""
 
-    def __init__(self):
+    def __init__(self, filename=None):
         """Mackup Constructor."""
-        self._config = config.Config()
+        if filename is not None:
+            self._config = config.Config(filename)
+        else:
+            self._config = config.Config()
 
         self.mackup_folder = self._config.fullpath
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")

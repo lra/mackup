@@ -20,6 +20,7 @@
 - Add support for Goldendict (via @krupenja)
 - Add support for IINA (via @krupenja)
 - Improve support for fish (via @whtsky)
+- Improve support for weget (via @paxperscientiam)
 
 ## Mackup 0.8.22
 

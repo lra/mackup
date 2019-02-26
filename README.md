@@ -570,6 +570,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Xonsh](https://xon.sh)
 - [XtraFinder](http://www.trankynam.com/xtrafinder/)
 - [Yummy FTP](http://www.yummysoftware.com/)
+- [zabbix-cli](https://github.com/usit-gd/zabbix-cli)
 - [zathura](https://pwmt.org/projects/zathura/)
 - [Zsh](http://zsh.sourceforge.net/)
 - [Übersicht](http://tracesof.net/uebersicht/)

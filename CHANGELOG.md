@@ -22,6 +22,7 @@
 - Improve support for fish (via @whtsky)
 - Improve support for weget (via @paxperscientiam)
 - Add support for zabbix-cli (via @dzogrim)
+- Add support for ForkLift 3 (via @lukeaskew)
 
 ## Mackup 0.8.22
 

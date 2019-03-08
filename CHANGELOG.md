@@ -24,6 +24,7 @@
 - Add support for zabbix-cli (via @dzogrim)
 - Add support for ForkLift 3 (via @lukeaskew)
 - Add support for eqMac2 (via @lukeaskew)
+- Add support for Fisher (via @nashirox)
 
 ## Mackup 0.8.22
 

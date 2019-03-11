@@ -26,6 +26,7 @@
 - Add support for ForkLift 3 (via @lukeaskew)
 - Add support for eqMac2 (via @lukeaskew)
 - Add support for Fisher (via @nashirox)
+- Add support for PhpStorm 2018.3 (via @baijunyao)
 
 ## Mackup 0.8.22
 

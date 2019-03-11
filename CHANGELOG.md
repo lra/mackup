@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Improve support for Vim, add .vim/after directory
 - Remove problematic com.macromates.textmate.plist file for TextMate (via @egze)
 - Add support for rofi (via @pat-s)
 - Add support for deepin-dde-file-manager (via @sUyMur)

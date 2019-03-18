@@ -108,7 +108,7 @@ directory = .config/mackup
 
 ## Applications
 
-### Only sync one or two application
+### Only sync one or two applications
 
 In your home folder, create a file named `.mackup.cfg` and add the application
 names to allow in the `[applications_to_sync]` section, one by line.

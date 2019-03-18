@@ -274,6 +274,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Fisher](https://github.com/jorgebucaran/fisher)
 - [FlexGet](http://flexget.com/)
 - [Flux](https://justgetflux.com/)
+- [Focus](https://heyfocus.com)
 - [Fontconfig](https://www.freedesktop.org/wiki/Software/fontconfig/)
 - [FontExplorer X](http://www.fontexplorerx.com/)
 - [Forge](http://www.slightlymagic.net/wiki/Forge)

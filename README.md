@@ -211,6 +211,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Cheat](https://github.com/chrisallenlane/cheat)
 - [Chef](https://www.chef.io/chef/)
 - [Chicken](http://sourceforge.net/projects/chicken/)
+- [Choosy](https://www.choosyosx.com/)
 - [chunkwm](https://github.com/koekeishiya/chunkwm)
 - [Cider](https://github.com/msanders/cider)
 - [Clasp](https://github.com/google/clasp)

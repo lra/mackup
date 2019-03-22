@@ -29,6 +29,7 @@
 - Add support for Fisher (via @nashirox)
 - Add support for PhpStorm 2018.3 (via @baijunyao)
 - Add support for Focus (via @atipugin)
+- Add support for Choosy (via @markchitty)
 
 ## Mackup 0.8.22
 

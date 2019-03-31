@@ -30,6 +30,7 @@
 - Add support for PhpStorm 2018.3 (via @baijunyao)
 - Add support for Focus (via @atipugin)
 - Add support for Choosy (via @markchitty)
+- Add support for iStat-Menus-6 (via @Dj3ross)
 
 ## Mackup 0.8.22
 

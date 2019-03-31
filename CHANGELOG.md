@@ -30,6 +30,7 @@
 - Add support for PhpStorm 2018.3 (via @baijunyao)
 - Add support for Focus (via @atipugin)
 - Add support for Choosy (via @markchitty)
+- Update support for Microsoft Remote Desktop 10
 
 ## Mackup 0.8.22
 

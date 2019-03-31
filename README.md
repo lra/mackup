@@ -387,7 +387,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Messages](http://www.apple.com/osx/apps/#messages)
 - [Micro](https://github.com/zyedidia/micro)
 - [Microsoft Azure CLI](https://github.com/Azure/azure-xplat-cli)
-- [Microsoft Remote Desktop](https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12&ls=1)
+- [Microsoft Remote Desktop](https://itunes.apple.com/us/app/microsoft-remote-desktop-10/id1295203466)
 - [MonoDevelop](http://www.monodevelop.com)
 - [Moom](http://manytricks.com/moom/)
 - [Mou](http://25.io/mou/)

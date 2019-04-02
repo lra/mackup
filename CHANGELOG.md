@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.23
+
 - Improve support for Vim, add .vim/after directory
 - Remove problematic com.macromates.textmate.plist file for TextMate (via @egze)
 - Add support for rofi (via @pat-s)

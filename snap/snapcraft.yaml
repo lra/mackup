@@ -1,6 +1,6 @@
 name: mackup
 version: git
-version-script: "git describe --tags"
+version-script: "python -c \"from mackup.constants import VERSION; print(VERSION)\""
 summary: Keep your application settings in sync
 description: |
   Back ups your application settings in a safe directory (e.g. Dropbox).

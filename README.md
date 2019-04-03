@@ -3,6 +3,7 @@
 Keep your application settings in sync.
 
 [![Circle CI](https://circleci.com/gh/lra/mackup.svg?style=shield)](https://circleci.com/gh/lra/mackup)
+[![snapcraft](https://snapcraft.io/mackup/badge.svg)](https://snapcraft.io/mackup)
 
 ## Table of content
 

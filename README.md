@@ -579,6 +579,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [zathura](https://pwmt.org/projects/zathura/)
 - [Zsh](http://zsh.sourceforge.net/)
 - [Übersicht](http://tracesof.net/uebersicht/)
+- iTunes Applescripts
 
 ## Can you support application X
 

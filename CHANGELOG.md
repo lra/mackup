@@ -18,7 +18,6 @@
 - Add support for WordGrinder (via @mutantant)
 - Fix support for Adobe Illustrator CC2019 (v23)
 - remove `bundle` directory from vim config (via @cocobear)
-- Remove iTunes Scripts (via @dnicolson)
 - Add support for Sublime Merge (via @krupenja)
 - Add support for Marta (via @krupenja)
 - Add support for Goldendict (via @krupenja)

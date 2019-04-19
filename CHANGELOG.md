@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.23
+
 - Improve support for Vim, add .vim/after directory
 - Remove problematic com.macromates.textmate.plist file for TextMate (via @egze)
 - Add support for rofi (via @pat-s)
@@ -16,7 +18,6 @@
 - Add support for WordGrinder (via @mutantant)
 - Fix support for Adobe Illustrator CC2019 (v23)
 - remove `bundle` directory from vim config (via @cocobear)
-- Remove iTunes Scripts (via @dnicolson)
 - Add support for Sublime Merge (via @krupenja)
 - Add support for Marta (via @krupenja)
 - Add support for Goldendict (via @krupenja)
@@ -30,6 +31,9 @@
 - Add support for PhpStorm 2018.3 (via @baijunyao)
 - Add support for Focus (via @atipugin)
 - Add support for Choosy (via @markchitty)
+- Update support for Microsoft Remote Desktop 10
+- Add support for PhpStorm 2019.1 (via @baijunyao)
+- Add support for IntelijIdea2019.1 (via @utegental)
 
 ## Mackup 0.8.22
 

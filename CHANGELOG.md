@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add support for Trizen (via @cilenco)
+
 ## Mackup 0.8.23
 
 - Improve support for Vim, add .vim/after directory

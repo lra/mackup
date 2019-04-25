@@ -34,6 +34,8 @@
 - Update support for Microsoft Remote Desktop 10
 - Add support for PhpStorm 2019.1 (via @baijunyao)
 - Add support for IntelijIdea2019.1 (via @utegental)
+- Add support for clashx (via @tanpengsccd)
+- Add support for SpaceLaucher (via @tanpengsccd)
 
 ## Mackup 0.8.22
 

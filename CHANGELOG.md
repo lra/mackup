@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Prevent users to use Mackup's storage directory to store their files.
+
 ## Mackup 0.8.23
 
 - Improve support for Vim, add .vim/after directory

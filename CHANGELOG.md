@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.24
+
 - Prevent users to use Mackup's storage directory to store their files.
 - Fix a few broken application support.
 

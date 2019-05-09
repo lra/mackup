@@ -2,6 +2,9 @@
 
 ## WIP
 
+- Added support for git ignore file
+- Added default ignore file for eslint
+
 ## Mackup 0.8.24
 
 - Prevent users to use Mackup's storage directory to store their files.

@@ -3,7 +3,8 @@
 import os
 import os.path
 
-from .constants import (MACKUP_BACKUP_PATH,
+from .constants import (CUSTOM_APPS_DIR,
+                        MACKUP_BACKUP_PATH,
                         MACKUP_CONFIG_FILE,
                         ENGINE_DROPBOX,
                         ENGINE_GDRIVE,
@@ -228,6 +229,10 @@ class Config(object):
         """
         if self._parser.has_option('storage', 'directory'):
             directory = self._parser.get('storage', 'directory')
+            # Don't allow CUSTOM_APPS_DIR as a storage directory
+            if directory == CUSTOM_APPS_DIR:
+                raise ConfigError("{} cannot be used as a storage directory."
+                                  .format(CUSTOM_APPS_DIR))
         else:
             directory = MACKUP_BACKUP_PATH
 

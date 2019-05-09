@@ -2,6 +2,70 @@
 
 ## WIP
 
+## Mackup 0.8.24
+
+- Prevent users to use Mackup's storage directory to store their files.
+- Fix a few broken application support.
+
+## Mackup 0.8.23
+
+- Improve support for Vim, add .vim/after directory
+- Remove problematic com.macromates.textmate.plist file for TextMate (via @egze)
+- Add support for rofi (via @pat-s)
+- Add support for deepin-dde-file-manager (via @sUyMur)
+- Add support for Deepin-dde-dock (via @sUyMur)
+- Add support for deepin-terminal (via @sUyMur)
+- Add support for grsync (via @sUyMur)
+- Add support for ulauncher (via @sUyMur)
+- Add support for Tilix (via @pat-s)
+- Improve support for TextMate (via @egze)
+- Add support for Storyist 3 writing software (via @mutantant)
+- Add support for WordGrinder (via @mutantant)
+- Fix support for Adobe Illustrator CC2019 (v23)
+- remove `bundle` directory from vim config (via @cocobear)
+- Add support for Sublime Merge (via @krupenja)
+- Add support for Marta (via @krupenja)
+- Add support for Goldendict (via @krupenja)
+- Add support for IINA (via @krupenja)
+- Improve support for fish (via @whtsky)
+- Improve support for weget (via @paxperscientiam)
+- Add support for zabbix-cli (via @dzogrim)
+- Add support for ForkLift 3 (via @lukeaskew)
+- Add support for eqMac2 (via @lukeaskew)
+- Add support for Fisher (via @nashirox)
+- Add support for PhpStorm 2018.3 (via @baijunyao)
+- Add support for Focus (via @atipugin)
+- Add support for Choosy (via @markchitty)
+- Update support for Microsoft Remote Desktop 10
+- Add support for PhpStorm 2019.1 (via @baijunyao)
+- Add support for IntelijIdea2019.1 (via @utegental)
+
+## Mackup 0.8.22
+
+- Add support for DataGrip 2017.3, 2018.1, 2018.2, 2018.3 (via @utegental)
+- Add support for Volt (via @mrymtsk)
+- Add support for alternative config path for Alacritty (via @foray1010)
+- Add support for WebStorm 2018.3 (via @KrzysztofKarol)
+- Removed support for BBEdit
+- Add support for IntelliJIDEA 2018.3 (via @nysos3)
+- Add support for GoLand 2018.3 (via @rayrutjes)
+- Fix an issue for users without a `~/.config/` folder.
+
+## Mackup 0.8.21
+
+- Update support for i3 (@KyleWJohnston)
+- Add support for bc (via @paxperscientiam)
+- Add support for Google clasp (via @paxperscientiam)
+- Add support for hstr (via @paxperscientiam)
+- Add support for b-ryan/powerline-shell (via @paxperscientiam)
+- Add support for kovidgoyal/kitty (via @foray1010)
+- Add support for PhpStorm 2018.2 (via @j13k)
+- Add support for Oh My Tmux (via @solarknight)
+- Fix support for Karabiner Elements (via @mrymtsk)
+- Add support for IntelliJIdea2018.3 (via @utegental)
+
+## Mackup 0.8.20
+
 - Remove support for Z as the link is being overwritten by the application
 - Remove support for Amphetamine as it's containerized
 - Add support for inkscape (via @paxperscientiam)
@@ -11,6 +75,9 @@
 - Add support for snapcraft (thx @guilhem)
 - Add support for GoLand and renamed Gogland to GoLand (via @rayrutjes)
 - Add support for xonsh (via @kmcm0)
+- Add support for Alacritty
+- Add support for WebStorm 2017.1, 2017.2, 2017.3, 2018.1, 2018.2 (via @KrzysztofKarol)
+- Add support for Adobe Illustrator CC2019 (v23)
 
 ## Mackup 0.8.19
 

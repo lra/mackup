@@ -27,8 +27,8 @@ Modes of action:
     use it on any new system you use.
  4. uninstall: reset everything as it was before using Mackup.
 
-By default, Mackup syncs all application data (including some private keys!)
-via Dropbox, but may be configured to exclude applications or use a different
+By default, Mackup syncs all application data (except for private keys) via
+Dropbox, but may be configured to exclude applications or use a different
 backend with a .mackup.cfg file.
 
 See https://github.com/lra/mackup/tree/master/doc for more information.

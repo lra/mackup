@@ -76,7 +76,10 @@ class ApplicationProfile(object):
                 mack_is_f = os.path.isfile(mackup_filepath)
                 mack_is_d = os.path.isdir(mackup_filepath)
                 mack_is_l = os.path.islink(mackup_filepath)
-                mack_same = os.path.samefile(home_filepath, mackup_filepath)
+                if home_is_f or home_is_d or home_is_l:
+                    mack_same = os.path.samefile(home_filepath, mackup_filepath)
+                else:
+                    mack_same = False
             else:
                 mack_is_f = mack_is_d = mack_is_l = mack_same = False
 

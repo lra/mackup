@@ -29,7 +29,7 @@ class ApplicationsDatabase(object):
             config = configparser.SafeConfigParser(allow_no_value=True)
 
             # Needed to not lowercase the configuration_files in the ini files
-            config.optionxform = lambda u: u.encode('utf-8')
+            # config.optionxform = lambda u: u.encode('utf-8')
 
             if config.read(config_file):
                 # Get the filename without the directory name

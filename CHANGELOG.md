@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Improve support for Little Snitch (via @lorenzofanchi)
+
 ## Mackup 0.8.24
 
 - Prevent users to use Mackup's storage directory to store their files.

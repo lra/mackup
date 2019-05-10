@@ -3,6 +3,8 @@
 ## WIP
 
 - Improve support for Little Snitch (via @lorenzofanchi)
+- Added support for git ignore file
+- Added default ignore file for eslint
 
 ## Mackup 0.8.24
 

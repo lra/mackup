@@ -4,6 +4,7 @@
 
 - Added support for git ignore file
 - Added default ignore file for eslint
+- Improve support for Vim, add .vim/spell folder
 
 ## Mackup 0.8.24
 

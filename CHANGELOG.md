@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Improve support for Little Snitch (via @lorenzofanchi)
 - Added support for git ignore file
 - Added default ignore file for eslint
 - Improve support for Vim, add .vim/spell folder

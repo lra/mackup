@@ -5,6 +5,7 @@
 - Improve support for Little Snitch (via @lorenzofanchi)
 - Added support for git ignore file
 - Added default ignore file for eslint
+- Added support for global git ignore file (via @lorenzofanchi)
 - Improve support for Vim, add .vim/spell folder
 
 ## Mackup 0.8.24

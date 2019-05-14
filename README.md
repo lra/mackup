@@ -484,6 +484,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [SelfControl](http://selfcontrolapp.com/)
 - [Sequel Pro](http://www.sequelpro.com/)
 - [ShiftIt](https://github.com/fikovnik/ShiftIt)
+- [Shifty](https://shifty.natethompson.io/)
 - [Shimo](https://www.feingeist.io/shimo/)
 - [ShowyEdge](https://pqrs.org/osx/ShowyEdge/index.html.en)
 - [SHSH Blobs](https://en.wikipedia.org/wiki/SHSH_blob)

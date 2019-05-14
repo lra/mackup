@@ -4,6 +4,7 @@
 
 - Improve support for Little Snitch (via @lorenzofanchi)
 - Add support for Shifty (via @lorenzofanchi)
+- Add support for Pock (via @lorenzofanchi)
 - Add support for Multitouch (via @lorenzofanchi)
 - Add support for Magnet (via @lorenzofanchi)
 - Added support for git ignore file

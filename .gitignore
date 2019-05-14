@@ -1,3 +1,6 @@
+# General ignores
+.DS_Store
+
 # Generated when running Mackup
 *.pyc
 

@@ -158,6 +158,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 ## Supported Applications
 
 - [1Password 4](https://agilebits.com/onepassword)
+- [2Do](http://www.2doapp.com/)
 - [Ack](http://beyondgrep.com/)
 - [Adium](https://adium.im/)
 - [Adobe Camera Raw](http://www.adobe.com/products/photoshop/extend.html)
@@ -573,6 +574,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [WordPress WP-CLI](http://wp-cli.org/)
 - [Workrave](http://www.workrave.org/)
 - [X11](http://www.x.org/)
+- [Xee](https://theunarchiver.com/xee)
 - [Xamarin Studio](https://xamarin.com/studio)
 - [XBindKeys](http://www.nongnu.org/xbindkeys/)
 - [Xchat](http://xchat.org/)

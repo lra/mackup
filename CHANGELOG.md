@@ -3,6 +3,7 @@
 ## WIP
 
 - Improve support for Little Snitch (via @lorenzofanchi)
+- Add support for Xee (via @lorenzofanchi)
 - Add support for 2Do (via @lorenzofanchi)
 - Add support for Shifty (via @lorenzofanchi)
 - Add support for Pock (via @lorenzofanchi)

@@ -568,6 +568,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [WordPress WP-CLI](http://wp-cli.org/)
 - [Workrave](http://www.workrave.org/)
 - [X11](http://www.x.org/)
+- [Xee](https://theunarchiver.com/xee)
 - [Xamarin Studio](https://xamarin.com/studio)
 - [XBindKeys](http://www.nongnu.org/xbindkeys/)
 - [Xchat](http://xchat.org/)

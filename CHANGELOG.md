@@ -3,6 +3,7 @@
 ## WIP
 
 - Improve support for Little Snitch (via @lorenzofanchi)
+- Improve support for Photoshop CC 2019 (via @lorenzofanchi)
 - Add support for ColorSlurp (via @lorenzofanchi)
 - Add support for Secure Pipes (via @lorenzofanchi)
 - Add support for Xee (via @lorenzofanchi)

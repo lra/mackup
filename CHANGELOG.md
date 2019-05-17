@@ -3,6 +3,7 @@
 ## WIP
 
 - Improve support for Little Snitch (via @lorenzofanchi)
+- Add support for ColorSlurp (via @lorenzofanchi)
 - Add support for Secure Pipes (via @lorenzofanchi)
 - Add support for Xee (via @lorenzofanchi)
 - Add support for 2Do (via @lorenzofanchi)

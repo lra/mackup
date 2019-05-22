@@ -438,6 +438,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Pidgin](https://www.pidgin.im)
 - [PIP](http://www.pip-installer.org/)
 - [PixelSnap](https://getpixelsnap.com/)
+- [PixelSnap 2](https://getpixelsnap.com/)
 - [Pock](https://pock.pigigaldi.com)
 - [Poedit](http://poedit.net/)
 - [PokerStars](https://www.pokerstars.com/)

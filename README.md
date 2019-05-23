@@ -361,6 +361,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [LaTeXiT](http://www.chachatelier.fr/latexit/latexit-home.php?lang=en)
 - [LaunchBar](https://www.obdev.at/products/launchbar/index.html)
 - [Ledger](http://ledger-cli.org)
+- [lftp](http://lftp.yar.ru/)
 - [LibreOffice](https://www.libreoffice.org/)
 - [Liftoff](https://github.com/thoughtbot/liftoff)
 - [Light Table](http://lighttable.com/)

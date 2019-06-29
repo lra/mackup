@@ -16,6 +16,7 @@
 - Added default ignore file for eslint
 - Improve support for Vim, add .vim/spell folder
 - Add support for PixelSnap 2 (via @dnicolson)
+- Add support for PDFjam (via @paxperscientiam)
 
 ## Mackup 0.8.24
 

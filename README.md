@@ -429,6 +429,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Pass](http://www.passwordstore.org/)
 - [Pastebot](http://tapbots.com/software/pastebot/)
 - [Path Finder](http://www.cocoatech.com/pathfinder/)
+- [PDFjam](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/firth/software/pdfjam/)
 - [Pear](http://pear.php.net/)
 - [Pentadactyl](http://5digits.org/pentadactyl/)
 - [Perl](https://www.perl.org/)

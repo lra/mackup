@@ -401,6 +401,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [MPV](https://mpv.io/)
 - [Multitouch](https://multitouch.app/)
 - [MusicBrainz Picard](https://picard.musicbrainz.org/)
+- [mycli](https://www.mycli.net/)
 - [myrepos](https://github.com/joeyh/myrepos)
 - [MySQL Workbench](https://www.mysql.com/products/workbench/)
 - [MySQL](http://www.mysql.com/)

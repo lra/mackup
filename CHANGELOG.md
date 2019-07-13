@@ -16,6 +16,7 @@
 - Added support for git ignore file
 - Added default ignore file for eslint
 - Improve support for Vim, add .vim/spell folder
+- Add support for mycli
 - Add support for PixelSnap 2 (via @dnicolson)
 - Add support for PDFjam (via @paxperscientiam)
 

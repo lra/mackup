@@ -336,6 +336,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Itsycal](https://github.com/sfsam/Itsycal)
 - [iTerm2](https://www.iterm2.com/)
 - [iTermocil](https://github.com/TomAnthony/itermocil)
+- [iTunes Scripts](https://www.apple.com/)
 - [Janus](https://github.com/carlhuda/janus)
 - [Jitouch](http://www.jitouch.com/)
 - [jrnl](http://maebert.github.io/jrnl/)
@@ -593,7 +594,6 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [zathura](https://pwmt.org/projects/zathura/)
 - [Zsh](http://zsh.sourceforge.net/)
 - [Übersicht](http://tracesof.net/uebersicht/)
-- iTunes Applescripts
 
 ## Can you support application X
 

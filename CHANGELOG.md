@@ -2,11 +2,23 @@
 
 ## WIP
 
+- Add support for yabai (via @mbdmbd)
 - Improve support for Little Snitch (via @lorenzofanchi)
+- Improve support for Photoshop CC 2019 (via @lorenzofanchi)
+- Add support for ColorSlurp (via @lorenzofanchi)
+- Add support for Secure Pipes (via @lorenzofanchi)
+- Add support for Xee (via @lorenzofanchi)
+- Add support for 2Do (via @lorenzofanchi)
+- Add support for Shifty (via @lorenzofanchi)
+- Add support for Pock (via @lorenzofanchi)
+- Add support for Multitouch (via @lorenzofanchi)
+- Add support for Magnet (via @lorenzofanchi)
 - Added support for git ignore file
 - Added default ignore file for eslint
 - Improve support for Vim, add .vim/spell folder
 - Add support for mycli
+- Add support for PixelSnap 2 (via @dnicolson)
+- Add support for PDFjam (via @paxperscientiam)
 
 ## Mackup 0.8.24
 

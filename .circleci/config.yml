@@ -1,6 +1,5 @@
-version: 2
+version: 2.1
 jobs:
-
   nose-2.7:
     docker:
       - image: python:2.7
@@ -33,9 +32,9 @@ jobs:
       - run: pip install -r requirements.txt
       - run: make test
 
-  nose:
+  nose-3.7:
     docker:
-      - image: python
+      - image: python:3.7
     steps:
       - checkout
       - run: pip install -r requirements.txt
@@ -73,9 +72,9 @@ jobs:
       - run: python setup.py install
       - run: mackup --help
 
-  install:
+  install-3.7:
     docker:
-      - image: python
+      - image: python:3.7
     steps:
       - checkout
       - run: python setup.py install
@@ -113,9 +112,9 @@ jobs:
       - run: pip install flake8
       - run: flake8
 
-  flake8:
+  flake8-3.7:
     docker:
-      - image: python
+      - image: python:3.7
     steps:
       - checkout
       - run: pip install flake8
@@ -136,15 +135,15 @@ workflows:
       - nose-3.4
       - nose-3.5
       - nose-3.6
-      - nose
+      - nose-3.7
       - install-2.7
       - install-3.4
       - install-3.5
       - install-3.6
-      - install
+      - install-3.7
       - flake8-2.7
       - flake8-3.4
       - flake8-3.5
       - flake8-3.6
-      - flake8
+      - flake8-3.7
       - mdl

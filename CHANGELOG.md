@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.25
+
 - Add support for yabai (via @mbdmbd)
 - Improve support for Little Snitch (via @lorenzofanchi)
 - Improve support for Photoshop CC 2019 (via @lorenzofanchi)

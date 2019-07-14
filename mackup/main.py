@@ -1,12 +1,13 @@
 """Mackup.
 
 Keep your application settings in sync.
-Copyright (C) 2013-2015 Laurent Raufaste <http://glop.org/>
+Copyright (C) 2013-2019 Laurent Raufaste <http://glop.org/>
 
 Usage:
   mackup list
   mackup [options] backup
   mackup [options] restore
+  mackup show <application>
   mackup [options] uninstall
   mackup (-h | --help)
   mackup --version
@@ -21,13 +22,12 @@ Options:
 Modes of action:
  1. list: display a list of all supported applications.
  2. backup: sync your conf files to your synced storage, use this the 1st time
-    you use Mackup. (Note that by default this will sync private keys used by
-    GnuPG.)
+    you use Mackup.
  3. restore: link the conf files already in your synced storage on your system,
     use it on any new system you use.
  4. uninstall: reset everything as it was before using Mackup.
 
-By default, Mackup syncs all application data (except for private keys) via
+By default, Mackup syncs all application data via
 Dropbox, but may be configured to exclude applications or use a different
 backend with a .mackup.cfg file.
 
@@ -40,6 +40,7 @@ from .application import ApplicationProfile
 from .constants import MACKUP_APP_NAME, VERSION
 from .mackup import Mackup
 from . import utils
+import sys
 
 
 class ColorFormatCodes:
@@ -173,6 +174,18 @@ def main():
         output += ("{} applications supported in Mackup v{}"
                    .format(len(app_db.get_app_names()), VERSION))
         print(output)
+
+    elif args['show']:
+        mckp.check_for_usable_environment()
+        app_name = args['<application>']
+
+        # Make sure the app exists
+        if app_name not in app_db.get_app_names():
+            sys.exit("Unsupported application: {}".format(app_name))
+        print("Name: {}".format(app_db.get_name(app_name)))
+        print("Configuration files:")
+        for file in app_db.get_files(app_name):
+            print(" - {}".format(file))
 
     # Delete the tmp folder
     mckp.clean_temp_folder()

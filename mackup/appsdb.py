@@ -79,7 +79,7 @@ class ApplicationsDatabase(object):
         Return the application configuration files.
 
         Return a list of configuration files describing the apps supported by
-        Mackup. The files return are absolute full path to those files.
+        Mackup. The files returned are absolute full path to those files.
         e.g. /usr/lib/mackup/applications/bash.cfg
 
         Only one config file per application should be returned, custom config
@@ -139,7 +139,7 @@ class ApplicationsDatabase(object):
         Returns:
             set of str.
         """
-        return self.apps[name]['configuration_files']
+        return sorted(self.apps[name]['configuration_files'])
 
     def get_app_names(self):
         """

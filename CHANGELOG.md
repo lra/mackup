@@ -21,6 +21,7 @@
 - Add support for mycli
 - Add support for PixelSnap 2 (via @dnicolson)
 - Add support for PDFjam (via @paxperscientiam)
+- Added support for Dejal Time Out
 
 ## Mackup 0.8.24
 

@@ -539,6 +539,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Textual](http://www.codeux.com/textual/)
 - [Tig](https://github.com/jonas/tig)
 - [Tilix](https://github.com/gnunn1/tilix)
+- [Timeout](https://www.dejal.com/timeout/)
 - [tint2](https://code.google.com/p/tint2/)
 - [TinyFugue](http://tinyfugue.sourceforge.net)
 - [Tmux](http://tmux.sourceforge.net/)

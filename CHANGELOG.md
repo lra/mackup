@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Fix broken backup/restore command
+
 ## Mackup 0.8.25
 
 - Add support for yabai (via @mbdmbd)

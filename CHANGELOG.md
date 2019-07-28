@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Hotfix, Mackup could not run in most scenarios
+
 ## Mackup 0.8.25
 
 - Add support for yabai (via @mbdmbd)

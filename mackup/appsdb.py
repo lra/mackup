@@ -139,7 +139,7 @@ class ApplicationsDatabase(object):
         Returns:
             set of str.
         """
-        return sorted(self.apps[name]['configuration_files'])
+        return self.apps[name]['configuration_files']
 
     def get_app_names(self):
         """

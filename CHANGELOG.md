@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.26
+
 - Hotfix, Mackup could not run in most scenarios
 
 ## Mackup 0.8.25

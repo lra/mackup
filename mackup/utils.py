@@ -139,7 +139,13 @@ def link(target, link_to):
     chmod(target)
 
     # Create the link to target
-    os.symlink(target, link_to)
+    # target_is_directory should be specified on Windows, and is ignored on
+    # non-Windows platform. This feature is added in Python 3.2
+    if sys.version_info[0] > 3 and sys.version_info[1] > 2:
+        isdir = os.path.isdir(target)
+        os.symlink(target, link_to, target_is_directory=isdir)
+    else:
+        os.symlink(target, link_to)
 
 
 def chmod(target):
@@ -197,7 +203,12 @@ def get_dropbox_folder_location():
     Returns:
         (str) Full path to the current Dropbox folder
     """
-    host_db_path = os.path.join(os.environ['HOME'], '.dropbox/host.db')
+    host_db_path = os.path.expanduser('~/.dropbox/host.db')
+    if (not os.path.isfile(host_db_path)
+            and platform.system() == constants.PLATFORM_WINDOWS):
+        roaming = os.path.expanduser('~/AppData/Roaming/Dropbox/host.db')
+        local = os.path.expanduser('~/AppData/Local/Dropbox/host.db')
+        host_db_path = local if os.path.isfile(local) else roaming
     try:
         with open(host_db_path, 'r') as f_hostdb:
             data = f_hostdb.read().split()
@@ -374,6 +385,13 @@ def remove_immutable_attribute(path):
     elif (platform.system() == constants.PLATFORM_LINUX and
             os.path.isfile('/usr/bin/chattr')):
         subprocess.call(['/usr/bin/chattr', '-R', '-i', path])
+    elif platform.system() == constants.PLATFORM_WINDOWS:
+        # It's impossible to process a nonempty folder
+        # and its children all at once
+        subprocess.call(['attrib', '-H', '-R', path])
+        if os.path.isdir(path) and os.listdir(path):
+            subprocess.call([
+                'attrib', '-H', '-R', os.path.join(path, '*'), '/S', '/D'])
 
 
 def can_file_be_synced_on_current_platform(path):
@@ -382,7 +400,7 @@ def can_file_be_synced_on_current_platform(path):
 
     Check if it makes sense to sync the file at the given path on the current
     platform.
-    For now we don't sync any file in the ~/Library folder on GNU/Linux.
+    For now we only sync files in the ~/Library folder on OS X.
     There might be other exceptions in the future.
 
     Args:
@@ -404,7 +422,7 @@ def can_file_be_synced_on_current_platform(path):
     # not any file/folder named LibrarySomething
     library_path = os.path.join(os.environ['HOME'], 'Library/')
 
-    if platform.system() == constants.PLATFORM_LINUX:
+    if platform.system() != constants.PLATFORM_DARWIN:
         if fullpath.startswith(library_path):
             can_be_synced = False
 

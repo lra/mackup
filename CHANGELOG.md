@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add support for PhpStorm 2019.2
+
 ## Mackup 0.8.26
 
 - Hotfix, Mackup could not run in most scenarios

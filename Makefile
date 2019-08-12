@@ -19,3 +19,6 @@ clean:
 release: clean
 	python setup.py sdist
 	twine upload dist/*
+
+black:
+	black --target-version py27 .

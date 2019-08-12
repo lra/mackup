@@ -16,27 +16,29 @@ def convert_to_octal(file_name):
 
 
 class TestMackup(unittest.TestCase):
-
     def test_confirm_yes(self):
         # Override the input used in utils
         def custom_input(_):
-            return 'Yes'
+            return "Yes"
+
         utils.input = custom_input
-        assert utils.confirm('Answer Yes to this question')
+        assert utils.confirm("Answer Yes to this question")
 
     def test_confirm_no(self):
         # Override the input used in utils
         def custom_input(_):
-            return 'No'
+            return "No"
+
         utils.input = custom_input
-        assert not utils.confirm('Answer No to this question')
+        assert not utils.confirm("Answer No to this question")
 
     def test_confirm_typo(self):
         # Override the input used in utils
         def custom_input(_):
-            return 'No'
+            return "No"
+
         utils.input = custom_input
-        assert not utils.confirm('Answer garbage to this question')
+        assert not utils.confirm("Answer garbage to this question")
 
     def test_delete_file(self):
         # Create a tmp file
@@ -152,10 +154,9 @@ class TestMackup(unittest.TestCase):
 
         # Set the destination filename
         srcpath_basename = os.path.basename(srcpath)
-        dstfile = os.path.join(dstpath,
-                               'subfolder',
-                               srcpath_basename,
-                               os.path.basename(srcfile))
+        dstfile = os.path.join(
+            dstpath, "subfolder", srcpath_basename, os.path.basename(srcfile)
+        )
         # Make sure the source file and destination folder exist and the
         # destination file doesn't yet exist
         assert os.path.isdir(srcpath)
@@ -189,9 +190,7 @@ class TestMackup(unittest.TestCase):
 
         # Set the destination filename
         srcpath_basename = os.path.basename(srcpath)
-        dstfile = os.path.join(dstpath,
-                               srcpath_basename,
-                               os.path.basename(srcfile))
+        dstfile = os.path.join(dstpath, srcpath_basename, os.path.basename(srcfile))
         # Make sure the source file and destination folder exist and the
         # destination file doesn't yet exist
         assert os.path.isdir(srcpath)
@@ -284,28 +283,33 @@ class TestMackup(unittest.TestCase):
         """
         # Hack to make our home folder some temporary folder
         temp_home = tempfile.mkdtemp()
-        utils.os.environ['HOME'] = temp_home
+        utils.os.environ["HOME"] = temp_home
 
         # Check for the missing Dropbox folder
         assert not os.path.exists(os.path.join(temp_home, ".dropbox/host.db"))
         self.assertRaises(SystemExit, utils.get_dropbox_folder_location)
 
         # Check for the missing Google Drive folder
-        assert not os.path.exists(os.path.join(
-            temp_home,
-            "Library/Application Support/Google/Drive/sync_config.db"))
+        assert not os.path.exists(
+            os.path.join(
+                temp_home, "Library/Application Support/Google/Drive/sync_config.db"
+            )
+        )
         self.assertRaises(SystemExit, utils.get_google_drive_folder_location)
 
         # Check for the missing Box folder
-        assert not os.path.exists(os.path.join(
-            temp_home,
-            "Library/Application Support/Box/Box Sync/sync_root_folder.txt"))
+        assert not os.path.exists(
+            os.path.join(
+                temp_home,
+                "Library/Application Support/Box/Box Sync/sync_root_folder.txt",
+            )
+        )
         self.assertRaises(SystemExit, utils.get_box_folder_location)
 
         # Check for the missing Copy Folder
-        assert not os.path.exists(os.path.join(
-            temp_home,
-            "Library/Application Support/Copy Agent/config.db"))
+        assert not os.path.exists(
+            os.path.join(temp_home, "Library/Application Support/Copy Agent/config.db")
+        )
         self.assertRaises(SystemExit, utils.get_copy_folder_location)
 
     def test_is_process_running(self):

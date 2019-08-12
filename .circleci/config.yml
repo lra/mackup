@@ -110,6 +110,14 @@ jobs:
       - checkout
       - run: mdl .
 
+  black:
+    docker:
+      - image: python
+    steps:
+      - checkout
+      - run: pip install black
+      - run: black --check --target-version py27 .
+
 workflows:
   version: 2
   mackup:
@@ -127,3 +135,4 @@ workflows:
       - flake8-3_6
       - flake8-3_7
       - mdl
+      - black

@@ -7,7 +7,6 @@ undevelop:
 lint:
 	# Install mdl with "gem install mdl"
 	mdl .
-	flake8
 
 test:
 	nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
@@ -19,3 +18,6 @@ clean:
 release: clean
 	python setup.py sdist
 	twine upload dist/*
+
+black:
+	black --target-version py27 .

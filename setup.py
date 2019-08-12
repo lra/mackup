@@ -4,31 +4,29 @@ from mackup.constants import VERSION
 
 
 setup(
-    name='mackup',
+    name="mackup",
     version=VERSION,
-    author='Laurent Raufaste',
-    author_email='analogue@glop.org',
-    url='https://github.com/lra/mackup',
-    description='Keep your application settings in sync (OS X/Linux)',
-    keywords='configuration config dotfiles sync backup dropbox gdrive box',
-    license='GPLv3',
-    packages=['mackup'],
-    install_requires=['docopt', 'six'],
-    entry_points={
-        'console_scripts': [
-            'mackup=mackup.main:main',
-        ],
-    },
-    package_data={'mackup': ['applications/*.cfg']},
+    author="Laurent Raufaste",
+    author_email="analogue@glop.org",
+    url="https://github.com/lra/mackup",
+    description="Keep your application settings in sync (OS X/Linux)",
+    keywords="configuration config dotfiles sync backup dropbox gdrive box",
+    license="GPLv3",
+    packages=["mackup"],
+    install_requires=["docopt", "six"],
+    entry_points={"console_scripts": ["mackup=mackup.main:main"]},
+    package_data={"mackup": ["applications/*.cfg"]},
     classifiers=[
-        'Development Status :: 4 - Beta',
-        'Environment :: Console',
-        'Intended Audience :: End Users/Desktop',
-        ('License :: OSI Approved :: '
-         'GNU General Public License v3 or later (GPLv3+)'),
-        'Natural Language :: English',
-        'Operating System :: POSIX',
-        'Programming Language :: Python',
-        'Topic :: Utilities',
+        "Development Status :: 4 - Beta",
+        "Environment :: Console",
+        "Intended Audience :: End Users/Desktop",
+        (
+            "License :: OSI Approved :: "
+            "GNU General Public License v3 or later (GPLv3+)"
+        ),
+        "Natural Language :: English",
+        "Operating System :: POSIX",
+        "Programming Language :: Python",
+        "Topic :: Utilities",
     ],
 )

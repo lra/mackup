@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added support for Bat (via @joshmedeski)
 - Added support for Dejal Time Out
 - Add support for PhpStorm 2019.2
 - Migrated build system to pipenv

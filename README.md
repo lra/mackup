@@ -442,6 +442,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [PIP](http://www.pip-installer.org/)
 - [PixelSnap](https://getpixelsnap.com/)
 - [PixelSnap 2](https://getpixelsnap.com/)
+- [Pnpm](https://pnpm.js.org/)
 - [Pock](https://pock.pigigaldi.com)
 - [Poedit](http://poedit.net/)
 - [PokerStars](https://www.pokerstars.com/)

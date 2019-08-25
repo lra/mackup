@@ -1,22 +1,22 @@
 develop:
-	python setup.py develop
+	pipenv run python setup.py develop
 
 undevelop:
-	python setup.py develop --uninstall
+	pipenv run python setup.py develop --uninstall
 
 lint:
 	# Install mdl with "gem install mdl"
 	mdl .
 
 test:
-	nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
+	pipenv run nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
 
 clean:
 	rm -rf dist/
 	rm -rf Mackup.egg-info/
 
 release: clean
-	python setup.py sdist
+	pipenv run python setup.py sdist
 	pipenv run twine upload dist/*
 
 black:

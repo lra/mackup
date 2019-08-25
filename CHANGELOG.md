@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.27
+
 - Added support for SpaceLauncher (via @joshmedeski)
 - Added support for Dejal Time Out
 - Add support for PhpStorm 2019.2

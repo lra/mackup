@@ -6,6 +6,7 @@
 - Add support for PhpStorm 2019.2
 - Migrated build system to pipenv
 - Replaced flake8 with black to enforce code formatting
+- Added support for pnpm (@via paxperscientiam)
 - Added partial support for Gimp (via @paxperscientiam)
 
 ## Mackup 0.8.26

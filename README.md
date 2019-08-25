@@ -290,6 +290,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [GeekTool](http://projects.tynsoe.org/en/geektool/)
 - [GHCi](https://wiki.haskell.org/GHC/GHCi)
 - [Ghostwriter](https://wereturtle.github.io/ghostwriter/)
+- [Gimp](https://www.gimp.org/)
 - [Git Hooks](https://github.com/icefox/git-hooks)
 - [Git](http://git-scm.com/)
 - [Gitbox](http://gitboxapp.com/)

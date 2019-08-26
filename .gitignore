@@ -10,3 +10,6 @@
 
 # Used by pyenv
 /.python-version
+
+# PyCharm or IntelliJ
+.idea

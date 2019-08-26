@@ -455,6 +455,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Powerline-shell](https://github.com/b-ryan/powerline-shell)
 - [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Processing](https://processing.org/)
+- [Proselint](https://github.com/amperser/proselint)
 - [ProxyChains NG](http://sourceforge.net/projects/proxychains-ng/)
 - [ProxyChains](http://proxychains.sourceforge.net)
 - [Punto Switcher](https://punto.yandex.ru/)

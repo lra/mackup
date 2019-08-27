@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for Bat (via @joshmedeski)
+
 ## Mackup 0.8.27
 
 - Added support for SpaceLauncher (via @joshmedeski)

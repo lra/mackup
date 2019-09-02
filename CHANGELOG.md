@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Added support for Robo 3T (via @captnswing)
 
 ## Mackup 0.8.27
 

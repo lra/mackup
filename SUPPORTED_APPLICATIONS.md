@@ -1,4 +1,4 @@
-## Supported Applications (454)
+# Supported Applications (454)
 
 - [1Password 4](https://agilebits.com/onepassword)
 - [2Do](http://www.2doapp.com)
@@ -145,7 +145,7 @@
 - [GitUp](http://gitup.co)
 - [Gmail Notifr](http://ashchan.com/projects/gmail-notifr)
 - [GMVault](http://gmvault.org)
-- [GnuPG](https://www.gnupg.org/ (NOTE: includes private keys)
+- [GnuPG](https://www.gnupg.org)
 - [Go2Shell](http://zipzapmac.com/Go2Shell)
 - [GoLand](https://www.jetbrains.com/go)
 - [Goldendict](http://goldendict.org)

@@ -8,12 +8,18 @@ root = os.path.abspath(os.path.dirname(__file__))
 
 if __name__ == "__main__":
     mdfilename = os.path.join(root, "../SUPPORTED_APPLICATIONS.md")
-    with open(mdfilename, 'w+') as mdfile:
+    with open(mdfilename, "w+") as mdfile:
         applications = sorted(glob.glob("applications/*cfg"))
-        mdfile.write(f"## Supported Applications ({len(applications)})\n\n")
+        mdfile.write("# Supported Applications ({})\n\n".format(len(applications)))
         for cfg_file in applications:
             # https://stackoverflow.com/a/52306763
-            config = configparser.ConfigParser(comment_prefixes='/', allow_no_value=True)
+            config = configparser.ConfigParser(
+                comment_prefixes="/", allow_no_value=True
+            )
             config.optionxform = str
             config.read(cfg_file)
-            mdfile.write(f"- [{config['application']['name']}]({config['application']['homepage']})\n")
+            mdfile.write(
+                "- [{}]({})\n".format(
+                    config["application"]["name"], config["application"]["homepage"]
+                )
+            )

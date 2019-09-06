@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Added support for Starship (via @foray1010)
 
 ## Mackup 0.8.27
 

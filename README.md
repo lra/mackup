@@ -408,6 +408,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [myrepos](https://github.com/joeyh/myrepos)
 - [MySQL Workbench](https://www.mysql.com/products/workbench/)
 - [MySQL](http://www.mysql.com/)
+- [Music](https://www.apple.com/)
 - [Name Mangler](http://manytricks.com/namemangler/)
 - [Nano](http://www.nano-editor.org/)
 - [Navicat](http://navicat.com/)

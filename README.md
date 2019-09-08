@@ -204,6 +204,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Boto](https://github.com/boto/boto)
 - [Boxer](http://boxerapp.com)
 - [Brackets](http://brackets.io/)
+- [Bump](https://github.com/fabiospampinato/bump)
 - [Bundler](http://bundler.io)
 - [Byobu](http://byobu.co/)
 - [Caffeine](http://lightheadsw.com/caffeine/)

@@ -473,6 +473,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Redshift](http://jonls.dk/redshift/)
 - [Rhythmbox](https://wiki.gnome.org/Apps/Rhythmbox)
 - [Rime](http://rime.im/)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [Robomongo](http://robomongo.org/)
 - [Rofi](https://github.com/DaveDavenport/rofi)
 - [Royal TSX](http://www.royaltsx.com/ts/osx/features)

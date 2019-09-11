@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Add support for asdf .default-npm-packages
 
 ## Mackup 0.8.27
 

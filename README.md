@@ -342,6 +342,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Janus](https://github.com/carlhuda/janus)
 - [Jitouch](http://www.jitouch.com/)
 - [jrnl](http://maebert.github.io/jrnl/)
+- [JS Beautifier](https://github.com/beautify-web/js-beautify)
 - [JSHint](http://jshint.com/)
 - [Julia](http://julialang.org)
 - [Jumpcut](http://jumpcut.sourceforge.net/)

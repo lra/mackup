@@ -5,6 +5,7 @@ An Application Profile contains all the information about an application in
 Mackup. Name, files, ...
 """
 import os
+import subprocess
 import sys
 
 from .mackup import Mackup
@@ -60,7 +61,7 @@ class ApplicationProfile(object):
         """
         return (
             domain,
-            os.path.join(self.mackup.mackup_folder, domain + ".plist"),
+            os.path.join(self.mackup.defaults_folder, domain + ".plist"),
         )
 
     def backup(self):
@@ -170,7 +171,8 @@ class ApplicationProfile(object):
         for domain in self.domains:
             (domain_name, defaults_filepath) = self.getDomainpaths(domain)
             try:
-                p = os.subprocess.run(["defaults", "export", domain_name, defaults_filepath], capture_output=True)
+                print("Exporting defaults to ", defaults_filepath)
+                p = subprocess.run(["defaults", "export", domain_name, defaults_filepath], capture_output=True)
                 if p.returncode != 0:
                     print("Defaults Export returned ", p.returncode, file=sys.stderr)
                     print("Output was: ", p.stderr, file=sys.stderr)
@@ -281,7 +283,7 @@ class ApplicationProfile(object):
 
             if plist_file__exists:
                 try:
-                    p = os.subprocess.run(["defaults", "import", domain_name, defaults_filepath], capture_output=True)
+                    p = subprocess.run(["defaults", "import", domain_name, defaults_filepath], capture_output=True)
                     if p.returncode != 0:
                         print("Defaults Import returned ", p.returncode, file=sys.stderr)
                         print("Output was: ", p.stderr, file=sys.stderr)

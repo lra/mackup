@@ -106,9 +106,9 @@ engine = icloud
 directory = .config/mackup
 ```
 
-You can also customize the directory name in which Mackup stores your "defaults" settings. By
-default, if not specified, Mackup creates a `Defaults` directory in the storage
-engine you chose, e.g. `~/Dropbox/Defaults`.
+You can also customize the directory name in which Mackup stores your "defaults"
+settings. By default, if not specified, Mackup creates a `Defaults` directory in
+the storage engine you chose, e.g. `~/Dropbox/Defaults`.
 
 ```ini
 [storage]
@@ -133,7 +133,6 @@ You can also select a subfolder:
 engine = icloud
 defaults_directory = .config/defaults
 ```
-
 
 ## Applications
 

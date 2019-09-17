@@ -7,6 +7,8 @@ Mackup. Name, files, ...
 import os
 import subprocess
 import sys
+import platform
+from . import constants
 
 from .mackup import Mackup
 from . import utils
@@ -167,6 +169,10 @@ class ApplicationProfile(object):
             defaults export domain mackup/file
 
         """
+        # This will not work on Linux as it has no concept of defaults
+        if platform.system() != constants.PLATFORM_DARWIN:
+            return
+
         # For each file used by the application
         for domain in self.domains:
             (domain_name, defaults_filepath) = self.getDomainpaths(domain)
@@ -275,6 +281,11 @@ class ApplicationProfile(object):
                 defaults import domain mackup/file
 
         """
+
+        # This will not work on Linux as it has no concept of defaults
+        if platform.system() != constants.PLATFORM_DARWIN:
+            return
+
         # For each file used by the application
         for domain in self.domains:
             (domain_name, defaults_filepath) = self.getDomainpaths(domain)

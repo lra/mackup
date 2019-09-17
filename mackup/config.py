@@ -13,7 +13,7 @@ from .constants import (
     ENGINE_ICLOUD,
     ENGINE_BOX,
     ENGINE_FS,
-)
+    MACKUP_DEFAULTS_BACKUP_PATH)
 
 from .utils import (
     error,
@@ -59,6 +59,9 @@ class Config(object):
         # Get the directory replacing 'Mackup', if any
         self._directory = self._parse_directory()
 
+        # Get the defaults directory, replacing "Defaults" if necessary
+        self._defaults_directory = self._parse_defaults_directory()
+
         # Get the list of apps to ignore
         self._apps_to_ignore = self._parse_apps_to_ignore()
 
@@ -102,6 +105,16 @@ class Config(object):
         return str(self._directory)
 
     @property
+    def defaults_directory(self):
+        """
+        The name of the Defaults directory, named Defaults by default.
+
+        Returns:
+            str
+        """
+        return str(self._defaults_directory)
+
+    @property
     def fullpath(self):
         """
         Full path to the Mackup configuration files.
@@ -113,6 +126,19 @@ class Config(object):
             str
         """
         return str(os.path.join(self.path, self.directory))
+
+    @property
+    def defaults_fullpath(self):
+        """
+        Full path to the Defaults configuration files.
+
+        The full path to the directory when Mackup is storing the Defaults
+        files.
+
+        Returns:
+            str
+        """
+        return str(os.path.join(self.path, self.defaults_directory))
 
     @property
     def apps_to_ignore(self):
@@ -248,6 +274,26 @@ class Config(object):
             directory = MACKUP_BACKUP_PATH
 
         return str(directory)
+
+    def _parse_defaults_directory(self):
+        """
+        Parse the defaults storage directory in the config.
+
+        Returns:
+            str
+        """
+        if self._parser.has_option("storage", "defaults_directory"):
+            directory = self._parser.get("storage", "defaults_directory")
+            # Don't allow CUSTOM_APPS_DIR as a defaults storage directory
+            if directory == CUSTOM_APPS_DIR:
+                raise ConfigError(
+                    "{} cannot be used as a defaults storage directory.".format(CUSTOM_APPS_DIR)
+                )
+        else:
+            directory = MACKUP_DEFAULTS_BACKUP_PATH
+
+        return str(directory)
+
 
     def _parse_apps_to_ignore(self):
         """

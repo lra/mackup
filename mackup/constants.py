@@ -1,6 +1,6 @@
 """Constants used in Mackup."""
 # Current version
-VERSION = "0.8.27"
+VERSION = "0.8.27-with-defaults"
 
 # Support platforms
 PLATFORM_DARWIN = "Darwin"
@@ -14,6 +14,7 @@ MACKUP_APP_NAME = "mackup"
 
 # Default Mackup backup path where it stores its files in Dropbox
 MACKUP_BACKUP_PATH = "Mackup"
+MACKUP_DEFAULTS_BACKUP_PATH = "Defaults"
 
 # Mackup config file
 MACKUP_CONFIG_FILE = ".mackup.cfg"

@@ -5,6 +5,7 @@ An Application Profile contains all the information about an application in
 Mackup. Name, files, ...
 """
 import os
+import sys
 
 from .mackup import Mackup
 from . import utils
@@ -14,7 +15,7 @@ class ApplicationProfile(object):
 
     """Instantiate this class with application specific data."""
 
-    def __init__(self, mackup, files, dry_run, verbose):
+    def __init__(self, mackup, files, domains, dry_run, verbose):
         """
         Create an ApplicationProfile instance.
 
@@ -24,9 +25,11 @@ class ApplicationProfile(object):
         """
         assert isinstance(mackup, Mackup)
         assert isinstance(files, set)
+        assert isinstance(domains, set)
 
         self.mackup = mackup
         self.files = list(files)
+        self.domains = list(domains)
         self.dry_run = dry_run
         self.verbose = verbose
 
@@ -45,6 +48,21 @@ class ApplicationProfile(object):
             os.path.join(self.mackup.mackup_folder, filename),
         )
 
+    def getDomainpaths(self, domain):
+        """
+        Get name and mackup filepaths for given domain settings
+
+        Args:
+            domain (str)
+
+        Returns:
+            domain, mackup_filepath (str, str)
+        """
+        return (
+            domain,
+            os.path.join(self.mackup.mackup_folder, domain + ".plist"),
+        )
+
     def backup(self):
         """
         Backup the application config files.
@@ -61,6 +79,7 @@ class ApplicationProfile(object):
                 else
                   mv home/file mackup/file
                   link mackup/file home/file
+
         """
         # For each file used by the application
         for filename in self.files:
@@ -139,6 +158,26 @@ class ApplicationProfile(object):
                         "Doing nothing\n  {}\n  does not exist".format(home_filepath)
                     )
 
+    def backup_defaults(self):
+        """
+        Backup the application defaults.
+
+        Algorithm:
+            defaults export domain mackup/file
+
+        """
+        # For each file used by the application
+        for domain in self.domains:
+            (domain_name, defaults_filepath) = self.getDomainpaths(domain)
+            try:
+                p = os.subprocess.run(["defaults", "export", domain_name, defaults_filepath], capture_output=True)
+                if p.returncode != 0:
+                    print("Defaults Export returned ", p.returncode, file=sys.stderr)
+                    print("Output was: ", p.stderr, file=sys.stderr)
+            except OSError as e:
+                print("Defaults Export Execution failed:", e, file=sys.stderr)
+
+
     def restore(self):
         """
         Restore the application config files.
@@ -150,8 +189,10 @@ class ApplicationProfile(object):
                 if sure
                   rm home/file
                   link mackup/file home/file
+                  restore defaults
               else
                 link mackup/file home/file
+                restore defaults
         """
         # For each file used by the application
         for filename in self.files:
@@ -222,6 +263,30 @@ class ApplicationProfile(object):
                     print (
                         "Doing nothing\n  {}\n  does not exist".format(mackup_filepath)
                     )
+
+    def restore_defaults(self):
+        """
+        Restore the application defaults.
+
+        Algorithm:
+            if mackup/file for domain exists
+                defaults import domain mackup/file
+
+        """
+        # For each file used by the application
+        for domain in self.domains:
+            (domain_name, defaults_filepath) = self.getDomainpaths(domain)
+
+            plist_file__exists = os.path.isfile(defaults_filepath)
+
+            if plist_file__exists:
+                try:
+                    p = os.subprocess.run(["defaults", "import", domain_name, defaults_filepath], capture_output=True)
+                    if p.returncode != 0:
+                        print("Defaults Import returned ", p.returncode, file=sys.stderr)
+                        print("Output was: ", p.stderr, file=sys.stderr)
+                except OSError as e:
+                    print("Defaults Import Execution failed:", e, file=sys.stderr)
 
     def uninstall(self):
         """

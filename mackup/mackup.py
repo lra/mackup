@@ -24,6 +24,8 @@ class Mackup(object):
         self._config = config.Config()
 
         self.mackup_folder = self._config.fullpath
+        self.defaults_folder = self._config.defaults_fullpath
+
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
     def check_for_usable_environment(self):
@@ -64,6 +66,13 @@ class Mackup(object):
                 " storage directory synced first.".format(self.mackup_folder)
             )
 
+        if not os.path.isdir(self.defaults_folder):
+            utils.error(
+                "Unable to find the Defaults folder: {}\n"
+                "You might want to back up some files or get your"
+                " storage directory synced first.".format(self.defaults_folder)
+            )
+
     def clean_temp_folder(self):
         """Delete the temp folder and files created while running."""
         shutil.rmtree(self.temp_folder)
@@ -79,6 +88,16 @@ class Mackup(object):
                 os.makedirs(self.mackup_folder)
             else:
                 utils.error("Mackup can't do anything without a home =(")
+
+        if not os.path.isdir(self.defaults_folder):
+            if utils.confirm(
+                "Mackup needs a directory to store your"
+                " defaults files\n"
+                "Do you want to create it now? <{}>".format(self.defaults_folder)
+            ):
+                os.makedirs(self.defaults_folder)
+            else:
+                utils.error("Mackup can't do anything without a defaults home =(")
 
     def get_apps_to_backup(self):
         """

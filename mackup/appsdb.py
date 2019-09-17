@@ -44,6 +44,12 @@ class ApplicationsDatabase(object):
                 app_pretty_name = config.get("application", "name")
                 self.apps[app_name]["name"] = app_pretty_name
 
+                # Add the defaults domains to sync
+                self.apps[app_name]["defaults_domains"] = set()
+                if config.has_section("defaults_domains"):
+                    for domain in config.options("defaults_domains"):
+                        self.apps[app_name]["defaults_domains"].add(domain)
+
                 # Add the configuration files to sync
                 self.apps[app_name]["configuration_files"] = set()
                 if config.has_section("configuration_files"):
@@ -139,6 +145,18 @@ class ApplicationsDatabase(object):
             set of str.
         """
         return self.apps[name]["configuration_files"]
+
+    def get_domains(self, name):
+        """
+        Return the list of defaults domains of an application.
+
+        Args:
+            name (str)
+
+        Returns:
+            set of str.
+        """
+        return self.apps[name]["defaults_domains"]
 
     def get_app_names(self):
         """

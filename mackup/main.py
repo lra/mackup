@@ -83,9 +83,10 @@ def main():
 
         # Backup each application
         for app_name in sorted(mckp.get_apps_to_backup()):
-            app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
+            app = ApplicationProfile(mckp, app_db.get_files(app_name), app_db.get_domains(app_name), dry_run, verbose)
             printAppHeader(app_name)
             app.backup()
+            app.backup_defaults()
 
     elif args["restore"]:
         # Check the env where the command is being run
@@ -94,7 +95,7 @@ def main():
         # Restore the Mackup config before any other config, as we might need
         # it to know about custom settings
         mackup_app = ApplicationProfile(
-            mckp, app_db.get_files(MACKUP_APP_NAME), dry_run, verbose
+            mckp, app_db.get_files(MACKUP_APP_NAME), app_db.get_domains(MACKUP_APP_NAME), dry_run, verbose
         )
         printAppHeader(MACKUP_APP_NAME)
         mackup_app.restore()
@@ -110,9 +111,10 @@ def main():
         app_names.discard(MACKUP_APP_NAME)
 
         for app_name in sorted(app_names):
-            app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
+            app = ApplicationProfile(mckp, app_db.get_files(app_name), app_db.get_domains(app_name), dry_run, verbose)
             printAppHeader(app_name)
             app.restore()
+            app.restore_defaults()
 
     elif args["uninstall"]:
         # Check the env where the command is being run
@@ -135,7 +137,7 @@ def main():
 
             for app_name in sorted(app_names):
                 app = ApplicationProfile(
-                    mckp, app_db.get_files(app_name), dry_run, verbose
+                    mckp, app_db.get_files(app_name), app_db.get_domains(app_name), dry_run, verbose
                 )
                 printAppHeader(app_name)
                 app.uninstall()
@@ -143,7 +145,7 @@ def main():
             # Restore the Mackup config before any other config, as we might
             # need it to know about custom settings
             mackup_app = ApplicationProfile(
-                mckp, app_db.get_files(MACKUP_APP_NAME), dry_run, verbose
+                mckp, app_db.get_files(MACKUP_APP_NAME), app_db.get_domains(app_name), dry_run, verbose
             )
             mackup_app.uninstall()
 
@@ -183,6 +185,9 @@ def main():
         print ("Configuration files:")
         for file in app_db.get_files(app_name):
             print (" - {}".format(file))
+        print ("Defaults domains:")
+        for domain in app_db.get_domains(app_name):
+            print (" - {}".format(domain))
 
     # Delete the tmp folder
     mckp.clean_temp_folder()

@@ -76,7 +76,7 @@ path = some/path in your/home
 path = /some path/in/your/root
 ```
 
-### Custom Directory Name
+### Custom Directory Names
 
 You can customize the directory name in which Mackup stores your file. By
 default, if not specified, Mackup creates a `Mackup` directory in the storage
@@ -105,6 +105,35 @@ You can also select a subfolder:
 engine = icloud
 directory = .config/mackup
 ```
+
+You can also customize the directory name in which Mackup stores your "defaults" settings. By
+default, if not specified, Mackup creates a `Defaults` directory in the storage
+engine you chose, e.g. `~/Dropbox/Defaults`.
+
+```ini
+[storage]
+defaults_directory = Defaults
+```
+
+For example:
+
+```ini
+[storage]
+engine = file_system
+path = dotfiles
+defaults_directory = defaults
+```
+
+This will store your files in the `~/dotfiles/defaults` directory in your home.
+
+You can also select a subfolder:
+
+```ini
+[storage]
+engine = icloud
+defaults_directory = .config/defaults
+```
+
 
 ## Applications
 
@@ -185,11 +214,15 @@ name = Nethack
 ```bash
 $ cat ~/.mackup/my-files.cfg
 [application]
-name = My personal synced files and dirs
+name = My personal synced files, dirs, and defaults settings
 
 [configuration_files]
 bin
 .hidden
+
+[defaults_domains]
+nl.stickybits.OTP-Manager
+
 ```
 
 You can run mackup to see if they are listed

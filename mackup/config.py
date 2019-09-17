@@ -6,6 +6,7 @@ import os.path
 from .constants import (
     CUSTOM_APPS_DIR,
     MACKUP_BACKUP_PATH,
+    MACKUP_DEFAULTS_BACKUP_PATH,
     MACKUP_CONFIG_FILE,
     ENGINE_DROPBOX,
     ENGINE_GDRIVE,
@@ -13,7 +14,7 @@ from .constants import (
     ENGINE_ICLOUD,
     ENGINE_BOX,
     ENGINE_FS,
-    MACKUP_DEFAULTS_BACKUP_PATH)
+)
 
 from .utils import (
     error,

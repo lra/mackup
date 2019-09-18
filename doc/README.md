@@ -3,7 +3,7 @@
 All the configuration is done in a file named `.mackup.cfg` stored at the
 root of your home folder.
 
-To configure Mackup, create a file named ´.mackup.cfg´ in your home directory.
+To configure Mackup, create a file named `.mackup.cfg` in your home directory.
 
 ```bash
 vi ~/.mackup.cfg

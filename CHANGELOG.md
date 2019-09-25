@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Add support for GoLand 2019.2 (via @carlossg)
 
 ## Mackup 0.8.27
 

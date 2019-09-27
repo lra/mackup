@@ -586,6 +586,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Witch](http://manytricks.com/witch/)
 - [WordGrinder](https://cowlark.com/wordgrinder/)
 - [WordPress WP-CLI](http://wp-cli.org/)
+- [WTF](https://wtfutil.com/)
 - [Workrave](http://www.workrave.org/)
 - [X11](http://www.x.org/)
 - [Xee](https://theunarchiver.com/xee)

@@ -513,6 +513,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Slogger](http://brettterpstra.com/projects/slogger/)
 - [SmartGit](http://www.syntevo.com/smartgit/)
 - [Smooth Mouse](http://smoothmouse.com/)
+- [Snipaste](https://www.snipaste.com)
 - [Soulver](http://www.acqualia.com/soulver/)
 - [SourceTree](https://www.sourcetreeapp.com/)
 - [SpaceLauncher](https://spacelauncherapp.com/)

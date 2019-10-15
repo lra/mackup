@@ -1,6 +1,7 @@
 # Mackup Changelog
 
 ## WIP
+
 - Added support for Snipaste (via @liuyinz)
 - Added support for Bat (via @joshmedeski)
 

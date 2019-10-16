@@ -357,7 +357,8 @@ def remove_acl(path):
     if (platform.system() == constants.PLATFORM_DARWIN and
             os.path.isfile('/bin/chmod')):
         subprocess.call(['/bin/chmod', '-R', '-N', path])
-    elif ((platform.system() == constants.PLATFORM_LINUX) and os.path.isfile('/bin/setfacl')):
+    elif ((platform.system() == constants.PLATFORM_LINUX) and
+            os.path.isfile('/bin/setfacl')):
         subprocess.call(['/bin/setfacl', '-R', '-b', path])
 
 
@@ -377,7 +378,8 @@ def remove_immutable_attribute(path):
     if ((platform.system() == constants.PLATFORM_DARWIN) and
             os.path.isfile('/usr/bin/chflags')):
         subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', path])
-    elif (platform.system() == constants.PLATFORM_LINUX and os.path.isfile('/usr/bin/chattr')):
+    elif (platform.system() == constants.PLATFORM_LINUX and
+            os.path.isfile('/usr/bin/chattr')):
         subprocess.call(['/usr/bin/chattr', '-R', '-i', path])
 
 

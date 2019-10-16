@@ -2,6 +2,29 @@
 
 ## WIP
 
+- Added support for Bat (via @joshmedeski)
+
+## Mackup 0.8.27
+
+- Added support for SpaceLauncher (via @joshmedeski)
+- Added support for Dejal Time Out
+- Add support for PhpStorm 2019.2
+- Migrated build system to pipenv
+- Replaced flake8 with black to enforce code formatting
+- Add support for proselint (via @paxperscienitam)
+- Add support for ToothFairy scripts (via @dnicolson)
+- Add support for TablePlus (via @alekseyp)
+- Add support for Startupizer2 (via @narze)
+- Added support for pnpm (@via paxperscientiam)
+- Added partial support for Gimp (via @paxperscientiam)
+
+## Mackup 0.8.26
+
+- Hotfix, Mackup could not run in most scenarios
+
+## Mackup 0.8.25
+
+- Add support for yabai (via @mbdmbd)
 - Improve support for Little Snitch (via @lorenzofanchi)
 - Improve support for Photoshop CC 2019 (via @lorenzofanchi)
 - Add support for ColorSlurp (via @lorenzofanchi)
@@ -15,7 +38,9 @@
 - Added support for git ignore file
 - Added default ignore file for eslint
 - Improve support for Vim, add .vim/spell folder
+- Add support for mycli
 - Add support for PixelSnap 2 (via @dnicolson)
+- Add support for PDFjam (via @paxperscientiam)
 
 ## Mackup 0.8.24
 

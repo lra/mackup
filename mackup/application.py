@@ -84,7 +84,7 @@ class ApplicationProfile(object):
                 mack_is_f = mack_is_d = mack_is_l = mack_same = False
 
             # If the file exists and is not already a link pointing to Mackup
-            if (home_is_f or home_is_d) and not ((mack_is_f or mack_is_d) and mack_same):
+            if (home_is_f or home_is_d) and not (home_is_l and (mack_is_f or mack_is_d) and mack_same):
                 if self.verbose:
                     print("Backing up {} to {} ...".format(home_filepath, mackup_filepath))
                 else:

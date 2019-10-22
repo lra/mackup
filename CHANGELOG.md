@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Added support for WebStorm versions 2019.1 and 2019.2
 
 ## Mackup 0.8.27
 

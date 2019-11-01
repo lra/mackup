@@ -25,7 +25,7 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_DROPBOX
 
         assert isinstance(cfg.path, str)
-        print (cfg.path)
+        print(cfg.path)
         assert cfg.path == "/home/some_user/Dropbox"
 
         assert isinstance(cfg.directory, str)

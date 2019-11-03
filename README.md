@@ -172,6 +172,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Android Studio](https://developer.android.com/sdk/)
 - [Ansible](http://www.ansible.com/)
 - [AppCleaner](http://freemacsoft.net/appcleaner/)
+- [Hocus Focus](http://hocusfoc.us/)
 - [AppCode](http://www.jetbrains.com/objc/)
 - [Apptivate](http://www.apptivateapp.com/)
 - [Arara](https://github.com/cereda/arara)

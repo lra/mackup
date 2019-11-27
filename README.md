@@ -341,7 +341,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [iTunes Scripts](https://www.apple.com/)
 - [Janus](https://github.com/carlhuda/janus)
 - [Jitouch](http://www.jitouch.com/)
-- [jrnl](http://maebert.github.io/jrnl/)
+- [jrnl](https://jrnl.sh)
 - [JSHint](http://jshint.com/)
 - [Julia](http://julialang.org)
 - [Jumpcut](http://jumpcut.sourceforge.net/)

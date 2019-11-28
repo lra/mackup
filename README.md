@@ -395,6 +395,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Micro](https://github.com/zyedidia/micro)
 - [Microsoft Azure CLI](https://github.com/Azure/azure-xplat-cli)
 - [Microsoft Remote Desktop](https://itunes.apple.com/us/app/microsoft-remote-desktop-10/id1295203466)
+- [mitmproxy](https://mitmproxy.org/)
 - [MonoDevelop](http://www.monodevelop.com)
 - [Moom](http://manytricks.com/moom/)
 - [Mou](http://25.io/mou/)

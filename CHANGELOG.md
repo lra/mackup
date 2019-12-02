@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Added support for FiloSottile/mkcert (via @paxperscientiam)
 
 ## Mackup 0.8.27
 

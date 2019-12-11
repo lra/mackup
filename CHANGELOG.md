@@ -3,7 +3,8 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
-- Added support for WebStorm versions 2019.1 and 2019.2
+- Added support for WebStorm versions 2019.1, 2019.2 and 2019.3
+- Added support for WebStorm versions 2020.1, 2020.2 and 2020.3 (assuming they use the same directory structure as previous editions)
 
 ## Mackup 0.8.27
 

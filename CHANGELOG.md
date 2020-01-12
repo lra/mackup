@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Updated support for Marta to capture new config files in 0.6.1 (via @petrbouchal)
 
 ## Mackup 0.8.27
 

@@ -437,6 +437,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Pear](http://pear.php.net/)
 - [Pentadactyl](http://5digits.org/pentadactyl/)
 - [Perl](https://www.perl.org/)
+- [Pet](https://github.com/knqyf263/pet)
 - [Phoenix](https://github.com/kasper/phoenix)
 - [PhoneView](https://www.ecamm.com/mac/phoneview/)
 - [PhpStorm](http://www.jetbrains.com/phpstorm/)

@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Added support for Rectangle (via @arvindch)
 
 ## Mackup 0.8.27
 

@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Improve support for AWS CLI, only sync config and exclude credentials (via @halilim)
 - Added support for Bat (via @joshmedeski)
 
 ## Mackup 0.8.27

@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Added support for NoSQLBooster for MongoDB (via @ivan-ha)
 
 ## Mackup 0.8.27
 

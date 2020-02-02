@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Updated support for RStudio, config stored in JSON as of v1.3.776 (via @petrbouchal)
 
 ## Mackup 0.8.27
 

@@ -69,6 +69,23 @@ mackup restore
 
 Done!
 
+** Mackup won't backup private data by default (ssh keys, bitcoin wallets)**
+
+To backup sensitive data, create a config file for that application.
+
+```
+touch ~/.mackup/ssh.cfg
+```
+
+Define what to backup in the config file
+```
+[application]
+name = SSH
+
+[configuration_files]
+.ssh
+```
+
 You can find more detailed instructions in [INSTALL.md](INSTALL.md).
 
 ## Usage
@@ -198,7 +215,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [BetterTouchTool](http://www.boastr.net/)
 - [BibDesk](http://bibdesk.sourceforge.net/)
 - [Billings Pro Server Admin](https://www.marketcircle.com/billingspro/download/billingspro-server/)
-- [Bitchx](http://www.bitchx.org/)
+- [Jerkx](http://www.jerkx.org/)
 - [Blackfire](https://blackfire.io/)
 - [Blender](https://blender.org/)
 - [Boto](https://github.com/boto/boto)

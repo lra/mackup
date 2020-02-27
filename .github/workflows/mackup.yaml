@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: sudo gem install mdl
+      - uses: actions/checkout@v2
       - run: mdl .

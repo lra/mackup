@@ -1,3 +1,4 @@
+name: Mackup
 on: push
 
 jobs:

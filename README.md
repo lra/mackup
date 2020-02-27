@@ -478,6 +478,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Rails](http://rubyonrails.org/)
 - [Ranger](https://ranger.github.io/)
 - [Rclone](https://rclone.org/)
+- [Rectangle](https://rectangleapp.com/)
 - [Redshift Scheduler](https://github.com/spantaleev/redshift-scheduler)
 - [Redshift](http://jonls.dk/redshift/)
 - [Rhythmbox](https://wiki.gnome.org/Apps/Rhythmbox)

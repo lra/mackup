@@ -56,7 +56,7 @@ jobs:
     runs-on: ubuntu-latest
     container: python:2.7
     steps:
-      - checkout
+      - uses: actions/checkout@v2
       - run: python setup.py install
       - run: mackup --help
 
@@ -64,7 +64,7 @@ jobs:
     runs-on: ubuntu-latest
     container: python:3.6
     steps:
-      - checkout
+      - uses: actions/checkout@v2
       - run: python setup.py install
       - run: mackup --help
 
@@ -72,7 +72,7 @@ jobs:
     runs-on: ubuntu-latest
     container: python:3.7
     steps:
-      - checkout
+      - uses: actions/checkout@v2
       - run: python setup.py install
       - run: mackup --help
 
@@ -80,6 +80,6 @@ jobs:
     runs-on: ubuntu-latest
     container: python:3.8
     steps:
-      - checkout
+      - uses: actions/checkout@v2
       - run: python setup.py install
       - run: mackup --help

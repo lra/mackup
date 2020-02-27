@@ -352,7 +352,7 @@ def remove_immutable_attribute(path):
     elif platform.system() == constants.PLATFORM_LINUX and os.path.isfile(
         "/usr/bin/chattr"
     ):
-        subprocess.call(["/usr/bin/chattr", "-R", "-i", path])
+        subprocess.call(["/usr/bin/chattr", "-R", "-f", "-i", path])
 
 
 def can_file_be_synced_on_current_platform(path):

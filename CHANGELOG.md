@@ -8,6 +8,7 @@
 - Vulnerability fix
 - Removed support for Python 3.5
 - Removed support for the Box storage
+- Fix: suppress errors when handling symlinks (via @doubleloop)
 
 ## Mackup 0.8.27
 

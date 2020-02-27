@@ -6,7 +6,6 @@ from mackup.constants import (
     ENGINE_GDRIVE,
     ENGINE_COPY,
     ENGINE_ICLOUD,
-    ENGINE_BOX,
     ENGINE_FS,
 )
 from mackup.config import Config, ConfigError
@@ -168,24 +167,6 @@ class TestConfig(unittest.TestCase):
 
         assert cfg.apps_to_ignore == set(["subversion", "sequel-pro", "sabnzbd"])
         assert cfg.apps_to_sync == set(["sublime-text-3", "x11", "sabnzbd"])
-
-    def test_config_engine_box(self):
-        cfg = Config("mackup-engine-box.cfg")
-
-        assert isinstance(cfg.engine, str)
-        assert cfg.engine == ENGINE_BOX
-
-        assert isinstance(cfg.path, str)
-        assert cfg.path == u"/Users/whatever/Box Sync"
-
-        assert isinstance(cfg.directory, str)
-        assert cfg.directory == u"some_weirder_name"
-
-        assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u"/Users/whatever/Box Sync/some_weirder_name"
-
-        assert cfg.apps_to_ignore == set()
-        assert cfg.apps_to_sync == set()
 
     def test_config_engine_filesystem_no_path(self):
         with self.assertRaises(ConfigError):

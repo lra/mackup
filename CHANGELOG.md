@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for Calibre (via @ttuygun @bodak)
+
 ## Mackup 0.8.28
 
 - Added support for Bat (via @joshmedeski)

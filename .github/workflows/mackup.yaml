@@ -1,7 +1,4 @@
-on:
-  push:
-    paths:
-      - '**.md'
+on: push
 
 jobs:
   mdl:

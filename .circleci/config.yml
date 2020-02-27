@@ -68,13 +68,6 @@ jobs:
       - run: python setup.py install
       - run: mackup --help
 
-  mdl:
-    docker:
-      - image: rsrchboy/mdl
-    steps:
-      - checkout
-      - run: mdl .
-
   black:
     docker:
       - image: python
@@ -95,5 +88,4 @@ workflows:
       - install-3_6
       - install-3_7
       - install-3_8
-      - mdl
       - black

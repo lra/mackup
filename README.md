@@ -150,10 +150,14 @@ in it stay put, so that any other computer also running Mackup is unaffected.
 - [Google Drive](https://drive.google.com/)
 - [Copy](https://www.copy.com/)
 - [iCloud](http://www.apple.com/icloud/)
-- [Box](https://www.box.com)
 - Anything able to sync a folder (e.g. [Git](http://git-scm.com/))
 
 See the [README](doc/README.md) file in the doc directory for more info.
+
+## Unsupported Storages
+
+- [Box](https://www.box.com): No longer supported is it ignores dotfiles, see
+  <https://github.com/lra/mackup/issues/807>.
 
 ## Supported Applications
 
@@ -417,6 +421,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [newsbeuter](http://newsbeuter.org/)
 - [ngrok](https://ngrok.com/)
 - [Nomacs](http://nomacs.org/)
+- [NoSQLBooster for MongoDB](https://www.nosqlbooster.com/)
 - [npm](https://www.npmjs.com/)
 - [nvALT](http://brettterpstra.com/projects/nvalt/)
 - [nvpy](https://github.com/cpbotha/nvpy)

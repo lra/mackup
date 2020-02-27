@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.28
+
 - Added support for Bat (via @joshmedeski)
 - Added support for newer versions of WebStorm
 - Updated support for Marta to capture new config files in 0.6.1 (via @petrbouchal)

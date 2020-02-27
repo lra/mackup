@@ -74,13 +74,13 @@ class ApplicationProfile(object):
             ):
 
                 if self.verbose:
-                    print (
+                    print(
                         "Backing up\n  {}\n  to\n  {} ...".format(
                             home_filepath, mackup_filepath
                         )
                     )
                 else:
-                    print ("Backing up {} ...".format(filename))
+                    print("Backing up {} ...".format(filename))
 
                 if self.dry_run:
                     continue
@@ -121,23 +121,21 @@ class ApplicationProfile(object):
                     utils.link(mackup_filepath, home_filepath)
             elif self.verbose:
                 if os.path.exists(home_filepath):
-                    print (
+                    print(
                         "Doing nothing\n  {}\n  "
                         "is already backed up to\n  {}".format(
                             home_filepath, mackup_filepath
                         )
                     )
                 elif os.path.islink(home_filepath):
-                    print (
+                    print(
                         "Doing nothing\n  {}\n  "
                         "is a broken link, you might want to fix it.".format(
                             home_filepath
                         )
                     )
                 else:
-                    print (
-                        "Doing nothing\n  {}\n  does not exist".format(home_filepath)
-                    )
+                    print("Doing nothing\n  {}\n  does not exist".format(home_filepath))
 
     def restore(self):
         """
@@ -172,13 +170,13 @@ class ApplicationProfile(object):
 
             if file_or_dir_exists and not pointing_to_mackup and supported:
                 if self.verbose:
-                    print (
+                    print(
                         "Restoring\n  linking {}\n  to      {} ...".format(
                             home_filepath, mackup_filepath
                         )
                     )
                 else:
-                    print ("Restoring {} ...".format(filename))
+                    print("Restoring {} ...".format(filename))
 
                 if self.dry_run:
                     continue
@@ -206,20 +204,20 @@ class ApplicationProfile(object):
                     utils.link(mackup_filepath, home_filepath)
             elif self.verbose:
                 if os.path.exists(home_filepath):
-                    print (
+                    print(
                         "Doing nothing\n  {}\n  already linked by\n  {}".format(
                             mackup_filepath, home_filepath
                         )
                     )
                 elif os.path.islink(home_filepath):
-                    print (
+                    print(
                         "Doing nothing\n  {}\n  "
                         "is a broken link, you might want to fix it.".format(
                             home_filepath
                         )
                     )
                 else:
-                    print (
+                    print(
                         "Doing nothing\n  {}\n  does not exist".format(mackup_filepath)
                     )
 
@@ -247,13 +245,13 @@ class ApplicationProfile(object):
                 # Check if there is a corresponding file in the home folder
                 if os.path.exists(home_filepath):
                     if self.verbose:
-                        print (
+                        print(
                             "Reverting {}\n  at {} ...".format(
                                 mackup_filepath, home_filepath
                             )
                         )
                     else:
-                        print ("Reverting {} ...".format(filename))
+                        print("Reverting {} ...".format(filename))
 
                     if self.dry_run:
                         continue
@@ -265,4 +263,4 @@ class ApplicationProfile(object):
                     # Copy the Dropbox file to the home folder
                     utils.copy(mackup_filepath, home_filepath)
             elif self.verbose:
-                print ("Doing nothing, {} does not exist".format(mackup_filepath))
+                print("Doing nothing, {} does not exist".format(mackup_filepath))

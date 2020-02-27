@@ -177,6 +177,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Ansible](http://www.ansible.com/)
 - [AppCleaner](http://freemacsoft.net/appcleaner/)
 - [AppCode](http://www.jetbrains.com/objc/)
+- [Apple Music](https://www.apple.com/apple-music/)
 - [Apptivate](http://www.apptivateapp.com/)
 - [Arara](https://github.com/cereda/arara)
 - [aria2c](http://aria2.sourceforge.net/)

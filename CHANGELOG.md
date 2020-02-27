@@ -4,6 +4,7 @@
 
 - Added support for Calibre (via @ttuygun @bodak)
 - Added support for Poetry (via @ryoppippi)
+- Added support for Music (via @dnicolson)
 
 ## Mackup 0.8.28
 

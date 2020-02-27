@@ -7,5 +7,5 @@ jobs:
   mdl:
     runs-on: ubuntu-latest
     steps:
-      - uses: docker://rsrchboy/mdl
+      - run: gem install mdl
       - run: mdl .

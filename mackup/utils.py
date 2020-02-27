@@ -16,6 +16,9 @@ from . import constants
 # If True, the user wants to say "yes" to everything.
 FORCE_YES = False
 
+# Flag that control if mackup can be run as root
+CAN_RUN_AS_ROOT = False
+
 
 def confirm(question):
     """

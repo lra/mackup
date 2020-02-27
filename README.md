@@ -2,7 +2,7 @@
 
 Keep your application settings in sync.
 
-[![Circle CI](https://circleci.com/gh/lra/mackup.svg?style=shield)](https://circleci.com/gh/lra/mackup)
+[![Status](https://github.com/lra/mackup/workflows/Mackup/badge.svg)](https://github.com/lra/mackup/actions)
 [![snapcraft](https://snapcraft.io/mackup/badge.svg)](https://snapcraft.io/mackup)
 
 ## Table of content

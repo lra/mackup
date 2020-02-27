@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Added support for NoSQLBooster for MongoDB (via @ivan-ha)
 - Updated support for RStudio, config stored in JSON as of v1.3.776 (via @petrbouchal)
 - Vulnerability fix
 - Removed support for Python 3.5

@@ -202,6 +202,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [BetterTouchTool](http://www.boastr.net/)
 - [BibDesk](http://bibdesk.sourceforge.net/)
 - [Billings Pro Server Admin](https://www.marketcircle.com/billingspro/download/billingspro-server/)
+- [BitBar](https://getbitbar.com/)
 - [Bitchx](http://www.bitchx.org/)
 - [Blackfire](https://blackfire.io/)
 - [Blender](https://blender.org/)

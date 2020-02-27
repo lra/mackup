@@ -9,15 +9,6 @@ jobs:
       - run: pip install docopt six nose
       - run: nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
 
-  nose-3_5:
-    docker:
-      - image: python:3.5
-    steps:
-      - checkout
-      - run: pip install pipenv
-      - run: pipenv install -d
-      - run: make test
-
   nose-3_6:
     docker:
       - image: python:3.6
@@ -39,14 +30,6 @@ jobs:
   install-2_7:
     docker:
       - image: python:2.7
-    steps:
-      - checkout
-      - run: python setup.py install
-      - run: mackup --help
-
-  install-3_5:
-    docker:
-      - image: python:3.5
     steps:
       - checkout
       - run: python setup.py install
@@ -88,11 +71,9 @@ workflows:
   mackup:
     jobs:
       - nose-2_7
-      - nose-3_5
       - nose-3_6
       - nose-3_7
       - install-2_7
-      - install-3_5
       - install-3_6
       - install-3_7
       - mdl

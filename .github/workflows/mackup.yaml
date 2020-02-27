@@ -7,3 +7,9 @@ jobs:
       - run: sudo gem install mdl
       - uses: actions/checkout@v2
       - run: mdl .
+  mdl2:
+    runs-on: ubuntu-latest
+    container: rsrchboy/mdl
+    steps:
+      - uses: actions/checkout@v2
+      - run: mdl .

@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Added support for Poetry (via @ryoppippi)
 
 ## Mackup 0.8.27
 

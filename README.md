@@ -456,6 +456,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Pnpm](https://pnpm.js.org/)
 - [Pock](https://pock.pigigaldi.com)
 - [Poedit](http://poedit.net/)
+- [Poetry](https://python-poetry.org)
 - [PokerStars](https://www.pokerstars.com/)
 - [PopClip](http://pilotmoon.com/popclip/)
 - [Popcorn-Time](https://popcorntime.io/)

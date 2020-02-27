@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Calibre (via @ttuygun @bodak)
+- Added support for Poetry (via @ryoppippi)
 
 ## Mackup 0.8.28
 

@@ -17,6 +17,7 @@
 - Removed support for Python 3.5
 - Removed support for the Box storage
 - Fix: suppress errors when handling symlinks (via @doubleloop)
+- Migrated all config files to the XDG format
 
 ## Mackup 0.8.27
 

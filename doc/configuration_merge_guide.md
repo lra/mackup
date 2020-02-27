@@ -22,7 +22,7 @@ It will probably save you some pain in the long run.
 First, pick the app you wish to keep in sync. Then determine which
 configuration files will be synced for that application by doing the following:
 
-1. [Install Mackup](INSTALL.md)
+1. [Install Mackup](./../INSTALL.md)
 1. Create a `.mackup.cfg` file in your home directory
 1. Add the following two lines to `.mackup.cfg`. Replace **bash**
    in the example below with the name of your application.

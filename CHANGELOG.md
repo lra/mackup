@@ -3,8 +3,20 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
-- Added support for WebStorm versions 2019.1, 2019.2 and 2019.3
-- Added support for WebStorm versions 2020.1, 2020.2 and 2020.3 (assuming they use the same directory structure as previous editions)
+- Added support for newer versions of WebStorm
+- Updated support for Marta to capture new config files in 0.6.1 (via @petrbouchal)
+- Added support for Rectangle (via @arvindch)
+- Added support for BitBar (via @dnicolson)
+- Added support for JS Beautifier (via @dnicolson)
+- Added support for ripgrep (via @dnicolson)
+- Added support for Bump (via @dnicolson)
+- Added support for rclone (via @dnicolson)
+- Added support for NoSQLBooster for MongoDB (via @ivan-ha)
+- Updated support for RStudio, config stored in JSON as of v1.3.776 (via @petrbouchal)
+- Vulnerability fix
+- Removed support for Python 3.5
+- Removed support for the Box storage
+- Fix: suppress errors when handling symlinks (via @doubleloop)
 
 ## Mackup 0.8.27
 

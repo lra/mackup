@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Updated support for Marta to capture new config files in 0.6.1 (via @petrbouchal)
 - Added support for Rectangle (via @arvindch)
 - Added support for BitBar (via @dnicolson)
 - Added support for JS Beautifier (via @dnicolson)

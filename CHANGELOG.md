@@ -2,6 +2,169 @@
 
 ## WIP
 
+- Added support for Bat (via @joshmedeski)
+- Added support for NoSQLBooster for MongoDB (via @ivan-ha)
+- Updated support for RStudio, config stored in JSON as of v1.3.776 (via @petrbouchal)
+- Vulnerability fix
+- Removed support for Python 3.5
+- Removed support for the Box storage
+
+## Mackup 0.8.27
+
+- Added support for SpaceLauncher (via @joshmedeski)
+- Added support for Dejal Time Out
+- Add support for PhpStorm 2019.2
+- Migrated build system to pipenv
+- Replaced flake8 with black to enforce code formatting
+- Add support for proselint (via @paxperscienitam)
+- Add support for ToothFairy scripts (via @dnicolson)
+- Add support for TablePlus (via @alekseyp)
+- Add support for Startupizer2 (via @narze)
+- Added support for pnpm (@via paxperscientiam)
+- Added partial support for Gimp (via @paxperscientiam)
+
+## Mackup 0.8.26
+
+- Hotfix, Mackup could not run in most scenarios
+
+## Mackup 0.8.25
+
+- Add support for yabai (via @mbdmbd)
+- Improve support for Little Snitch (via @lorenzofanchi)
+- Improve support for Photoshop CC 2019 (via @lorenzofanchi)
+- Add support for ColorSlurp (via @lorenzofanchi)
+- Add support for Secure Pipes (via @lorenzofanchi)
+- Add support for Xee (via @lorenzofanchi)
+- Add support for 2Do (via @lorenzofanchi)
+- Add support for Shifty (via @lorenzofanchi)
+- Add support for Pock (via @lorenzofanchi)
+- Add support for Multitouch (via @lorenzofanchi)
+- Add support for Magnet (via @lorenzofanchi)
+- Added support for git ignore file
+- Added default ignore file for eslint
+- Improve support for Vim, add .vim/spell folder
+- Add support for mycli
+- Add support for PixelSnap 2 (via @dnicolson)
+- Add support for PDFjam (via @paxperscientiam)
+
+## Mackup 0.8.24
+
+- Prevent users to use Mackup's storage directory to store their files.
+- Fix a few broken application support.
+
+## Mackup 0.8.23
+
+- Improve support for Vim, add .vim/after directory
+- Remove problematic com.macromates.textmate.plist file for TextMate (via @egze)
+- Add support for rofi (via @pat-s)
+- Add support for deepin-dde-file-manager (via @sUyMur)
+- Add support for Deepin-dde-dock (via @sUyMur)
+- Add support for deepin-terminal (via @sUyMur)
+- Add support for grsync (via @sUyMur)
+- Add support for ulauncher (via @sUyMur)
+- Add support for Tilix (via @pat-s)
+- Improve support for TextMate (via @egze)
+- Add support for Storyist 3 writing software (via @mutantant)
+- Add support for WordGrinder (via @mutantant)
+- Fix support for Adobe Illustrator CC2019 (v23)
+- remove `bundle` directory from vim config (via @cocobear)
+- Add support for Sublime Merge (via @krupenja)
+- Add support for Marta (via @krupenja)
+- Add support for Goldendict (via @krupenja)
+- Add support for IINA (via @krupenja)
+- Improve support for fish (via @whtsky)
+- Improve support for weget (via @paxperscientiam)
+- Add support for zabbix-cli (via @dzogrim)
+- Add support for ForkLift 3 (via @lukeaskew)
+- Add support for eqMac2 (via @lukeaskew)
+- Add support for Fisher (via @nashirox)
+- Add support for PhpStorm 2018.3 (via @baijunyao)
+- Add support for Focus (via @atipugin)
+- Add support for Choosy (via @markchitty)
+- Update support for Microsoft Remote Desktop 10
+- Add support for PhpStorm 2019.1 (via @baijunyao)
+- Add support for IntelijIdea2019.1 (via @utegental)
+
+## Mackup 0.8.22
+
+- Add support for DataGrip 2017.3, 2018.1, 2018.2, 2018.3 (via @utegental)
+- Add support for Volt (via @mrymtsk)
+- Add support for alternative config path for Alacritty (via @foray1010)
+- Add support for WebStorm 2018.3 (via @KrzysztofKarol)
+- Removed support for BBEdit
+- Add support for IntelliJIDEA 2018.3 (via @nysos3)
+- Add support for GoLand 2018.3 (via @rayrutjes)
+- Fix an issue for users without a `~/.config/` folder.
+
+## Mackup 0.8.21
+
+- Update support for i3 (@KyleWJohnston)
+- Add support for bc (via @paxperscientiam)
+- Add support for Google clasp (via @paxperscientiam)
+- Add support for hstr (via @paxperscientiam)
+- Add support for b-ryan/powerline-shell (via @paxperscientiam)
+- Add support for kovidgoyal/kitty (via @foray1010)
+- Add support for PhpStorm 2018.2 (via @j13k)
+- Add support for Oh My Tmux (via @solarknight)
+- Fix support for Karabiner Elements (via @mrymtsk)
+- Add support for IntelliJIdea2018.3 (via @utegental)
+
+## Mackup 0.8.20
+
+- Remove support for Z as the link is being overwritten by the application
+- Remove support for Amphetamine as it's containerized
+- Add support for inkscape (via @paxperscientiam)
+- Add default path for `XDG_CONFIG_HOME`. (via @HlubyLuk)
+- Add tig `xdg_configuration_files` to config. (via @HlubyLuk)
+- Add support for Visual Studio for Mac (via @ivmirx)
+- Add support for snapcraft (thx @guilhem)
+- Add support for GoLand and renamed Gogland to GoLand (via @rayrutjes)
+- Add support for xonsh (via @kmcm0)
+- Add support for Alacritty
+- Add support for WebStorm 2017.1, 2017.2, 2017.3, 2018.1, 2018.2 (via @KrzysztofKarol)
+- Add support for Adobe Illustrator CC2019 (v23)
+
+## Mackup 0.8.19
+
+- Add support for Python 3.4 3.5 3.6 and 3.7
+- Add support for kubectl (via @pcostesi)
+- Support for RubyMine 2017.03 (via @kibitan)
+- Add additional Spectacle library path (via @iansym)
+- Only sync init.vim for neovim (via @foray1010)
+- Support for RubyMine 2018.01 (via @kibitan)
+- Support for IntelliJ Idea 2017.1, 2017.2, 2017.3, and 2018.1 (via @cool00geek)
+- Remove references to OpenSSH private key syncing - removed in dcb26ba (via @njdancer)
+- Add support for hub (via @usami-k)
+- Add support for Tower 3 (via @diego-vieira)
+- Remove references for Visual Studio Code extensions syncing (via @MTalalAnwar)
+- Add support for ledger/ledger (via @paxperscientiam)
+- Support for Itsycal (via @paxperscientiam, @sfsam, nitrocode)
+- Add support for Ruby Version Manager (via @sh78)
+- Support for Khd (via @sh78)
+- Support for skhd (via @sh78)
+- Add support for ranger (via @sh78)
+- Add support for Cheat (via @sh78)
+- Support latest qutebrowser version config paths (via @sh78)
+- Include Karabiner Elements complex modifications (via @sh78)
+- Add support for chunkwm (via @sh78)
+- Add support for cVim (via @sh78)
+- Add support for ESLint (via @sh78)
+- Improve coverage for macOS/OS X Automator files (via @sh78)
+- Add support for PhoneView (via @dnicolson)
+- Add support for PixelSnap (via @dnicolson)
+- Add support for Cider (via @renews)
+- Add support for Typora (via @allenlsy)
+- Improve support for oh-my-zsh (via @H--o-l)
+
+## Mackup 0.8.18
+
+- Fix crash due to bad BetterTouchTool support
+- Fixed an issue with python3
+
+## Mackup 0.8.17
+
+- Add support for Micro (via @icopp)
+- Add backing up vscode extensions for Visual Studio (via @stephen2m)
 - Add support for iTermocil (via @godbout)
 - Add support for Amethyst (via @whtsky)
 - Add support for Micro (via @icopp)

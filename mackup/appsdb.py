@@ -35,46 +35,44 @@ class ApplicationsDatabase(object):
                 # Get the filename without the directory name
                 filename = os.path.basename(config_file)
                 # The app name is the cfg filename with the extension
-                app_name = filename[:-len('.cfg')]
+                app_name = filename[: -len(".cfg")]
 
                 # Start building a dict for this app
                 self.apps[app_name] = dict()
 
                 # Add the fancy name for the app, for display purpose
-                app_pretty_name = config.get('application', 'name')
-                self.apps[app_name]['name'] = app_pretty_name
+                app_pretty_name = config.get("application", "name")
+                self.apps[app_name]["name"] = app_pretty_name
 
                 # Add the configuration files to sync
-                self.apps[app_name]['configuration_files'] = set()
-                if config.has_section('configuration_files'):
-                    for path in config.options('configuration_files'):
-                        if path.startswith('/'):
-                            raise ValueError('Unsupported absolute path: {}'
-                                             .format(path))
-                        self.apps[app_name]['configuration_files'].add(path)
+                self.apps[app_name]["configuration_files"] = set()
+                if config.has_section("configuration_files"):
+                    for path in config.options("configuration_files"):
+                        if path.startswith("/"):
+                            raise ValueError(
+                                "Unsupported absolute path: {}".format(path)
+                            )
+                        self.apps[app_name]["configuration_files"].add(path)
 
                 # Add the XDG configuration files to sync
-                xdg_config_home = os.environ.get('XDG_CONFIG_HOME')
-                if xdg_config_home:
-                    if not os.path.exists(xdg_config_home):
-                        raise ValueError('$XDG_CONFIG_HOME: {} does not exist'
-                                         .format(xdg_config_home))
-                    home = os.path.expanduser('~/')
-                    if not xdg_config_home.startswith(home):
-                        raise ValueError('$XDG_CONFIG_HOME: {} must be '
-                                         'somewhere within your home '
-                                         'directory: {}'
-                                         .format(xdg_config_home, home))
-                    if config.has_section('xdg_configuration_files'):
-                        for path in config.options('xdg_configuration_files'):
-                            if path.startswith('/'):
-                                raise ValueError('Unsupported absolute path: '
-                                                 '{}'
-                                                 .format(path))
-                            path = os.path.join(xdg_config_home, path)
-                            path = path.replace(home, '')
-                            (self.apps[app_name]['configuration_files']
-                                .add(path))
+                home = os.path.expanduser("~/")
+                failobj = "{}.config".format(home)
+                xdg_config_home = os.environ.get("XDG_CONFIG_HOME", failobj)
+                if not xdg_config_home.startswith(home):
+                    raise ValueError(
+                        "$XDG_CONFIG_HOME: {} must be "
+                        "somewhere within your home "
+                        "directory: {}".format(xdg_config_home, home)
+                    )
+                if config.has_section("xdg_configuration_files"):
+                    for path in config.options("xdg_configuration_files"):
+                        if path.startswith("/"):
+                            raise ValueError(
+                                "Unsupported absolute path: " "{}".format(path)
+                            )
+                        path = os.path.join(xdg_config_home, path)
+                        path = path.replace(home, "")
+                        (self.apps[app_name]["configuration_files"].add(path))
 
     @staticmethod
     def get_config_files():
@@ -82,7 +80,7 @@ class ApplicationsDatabase(object):
         Return the application configuration files.
 
         Return a list of configuration files describing the apps supported by
-        Mackup. The files return are absolute full path to those files.
+        Mackup. The files returned are absolute full path to those files.
         e.g. /usr/lib/mackup/applications/bash.cfg
 
         Only one config file per application should be returned, custom config
@@ -92,9 +90,8 @@ class ApplicationsDatabase(object):
             set of strings.
         """
         # Configure the config parser
-        apps_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)),
-                                APPS_DIR)
-        custom_apps_dir = os.path.join(os.environ['HOME'], CUSTOM_APPS_DIR)
+        apps_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), APPS_DIR)
+        custom_apps_dir = os.path.join(os.environ["HOME"], CUSTOM_APPS_DIR)
 
         # List of stock application config files
         config_files = set()
@@ -105,9 +102,8 @@ class ApplicationsDatabase(object):
         # Get the list of custom application config files first
         if os.path.isdir(custom_apps_dir):
             for filename in os.listdir(custom_apps_dir):
-                if filename.endswith('.cfg'):
-                    config_files.add(os.path.join(custom_apps_dir,
-                                                  filename))
+                if filename.endswith(".cfg"):
+                    config_files.add(os.path.join(custom_apps_dir, filename))
                     # Also add it to the set of custom apps, so that we don't
                     # add the stock config for the same app too
                     custom_files.add(filename)
@@ -115,7 +111,7 @@ class ApplicationsDatabase(object):
         # Add the default provided app config files, but only if those are not
         # customized, as we don't want to overwrite custom app config.
         for filename in os.listdir(apps_dir):
-            if filename.endswith('.cfg') and filename not in custom_files:
+            if filename.endswith(".cfg") and filename not in custom_files:
                 config_files.add(os.path.join(apps_dir, filename))
 
         return config_files
@@ -130,7 +126,7 @@ class ApplicationsDatabase(object):
         Returns:
             str
         """
-        return self.apps[name]['name']
+        return self.apps[name]["name"]
 
     def get_files(self, name):
         """
@@ -142,7 +138,7 @@ class ApplicationsDatabase(object):
         Returns:
             set of str.
         """
-        return self.apps[name]['configuration_files']
+        return self.apps[name]["configuration_files"]
 
     def get_app_names(self):
         """

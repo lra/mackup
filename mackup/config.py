@@ -2,23 +2,26 @@
 
 import os
 import os.path
-import sys
 
-from .constants import (MACKUP_BACKUP_PATH,
-                        MACKUP_CONFIG_FILE,
-                        ENGINE_DROPBOX,
-                        ENGINE_GDRIVE,
-                        ENGINE_COPY,
-                        ENGINE_ICLOUD,
-                        ENGINE_BOX,
-                        ENGINE_FS)
+from .constants import (
+    CUSTOM_APPS_DIR,
+    MACKUP_BACKUP_PATH,
+    MACKUP_CONFIG_FILE,
+    ENGINE_DROPBOX,
+    ENGINE_GDRIVE,
+    ENGINE_COPY,
+    ENGINE_ICLOUD,
+    ENGINE_FS,
+)
 
-from .utils import (error,
-                    get_dropbox_folder_location,
-                    get_copy_folder_location,
-                    get_google_drive_folder_location,
-                    get_icloud_folder_location,
-                    get_box_folder_location)
+from .utils import (
+    error,
+    get_dropbox_folder_location,
+    get_copy_folder_location,
+    get_google_drive_folder_location,
+    get_icloud_folder_location,
+)
+
 try:
     import configparser
 except ImportError:
@@ -65,8 +68,7 @@ class Config(object):
         """
         The engine used by the storage.
 
-        ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_COPY, ENGINE_ICLOUD, ENGINE_BOX
-        or ENGINE_FS.
+        ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_COPY, ENGINE_ICLOUD or ENGINE_FS.
 
         Returns:
             str
@@ -146,28 +148,29 @@ class Config(object):
             filename = MACKUP_CONFIG_FILE
 
         parser = configparser.SafeConfigParser(allow_no_value=True)
-        parser.read(os.path.join(os.path.join(os.environ['HOME'], filename)))
+        parser.read(os.path.join(os.path.join(os.environ["HOME"], filename)))
 
         return parser
 
     def _warn_on_old_config(self):
         """Warn the user if an old config format is detected."""
         # Is an old setion is in the config file ?
-        old_sections = ['Allowed Applications', 'Ignored Applications']
+        old_sections = ["Allowed Applications", "Ignored Applications"]
         for old_section in old_sections:
             if self._parser.has_section(old_section):
-                error("Old config file detected. Aborting.\n"
-                      "\n"
-                      "An old section (e.g. [Allowed Applications]"
-                      " or [Ignored Applications] has been detected"
-                      " in your {} file.\n"
-                      "I'd rather do nothing than do something you"
-                      " do not want me to do.\n"
-                      "\n"
-                      "Please read the up to date documentation on"
-                      " <https://github.com/lra/mackup> and migrate"
-                      " your configuration file."
-                      .format(MACKUP_CONFIG_FILE))
+                error(
+                    "Old config file detected. Aborting.\n"
+                    "\n"
+                    "An old section (e.g. [Allowed Applications]"
+                    " or [Ignored Applications] has been detected"
+                    " in your {} file.\n"
+                    "I'd rather do nothing than do something you"
+                    " do not want me to do.\n"
+                    "\n"
+                    "Please read the up to date documentation on"
+                    " <https://github.com/lra/mackup> and migrate"
+                    " your configuration file.".format(MACKUP_CONFIG_FILE)
+                )
 
     def _parse_engine(self):
         """
@@ -176,20 +179,21 @@ class Config(object):
         Returns:
             str
         """
-        if self._parser.has_option('storage', 'engine'):
-            engine = str(self._parser.get('storage', 'engine'))
+        if self._parser.has_option("storage", "engine"):
+            engine = str(self._parser.get("storage", "engine"))
         else:
             engine = ENGINE_DROPBOX
 
         assert isinstance(engine, str)
 
-        if engine not in [ENGINE_DROPBOX,
-                          ENGINE_GDRIVE,
-                          ENGINE_COPY,
-                          ENGINE_ICLOUD,
-                          ENGINE_BOX,
-                          ENGINE_FS]:
-            raise ConfigError('Unknown storage engine: {}'.format(engine))
+        if engine not in [
+            ENGINE_DROPBOX,
+            ENGINE_GDRIVE,
+            ENGINE_COPY,
+            ENGINE_ICLOUD,
+            ENGINE_FS,
+        ]:
+            raise ConfigError("Unknown storage engine: {}".format(engine))
 
         return str(engine)
 
@@ -208,23 +212,17 @@ class Config(object):
             path = get_copy_folder_location()
         elif self.engine == ENGINE_ICLOUD:
             path = get_icloud_folder_location()
-        elif self.engine == ENGINE_BOX:
-            path = get_box_folder_location()
         elif self.engine == ENGINE_FS:
-            if self._parser.has_option('storage', 'path'):
-                cfg_path = self._parser.get('storage', 'path')
-                path = os.path.join(os.environ['HOME'], cfg_path)
+            if self._parser.has_option("storage", "path"):
+                cfg_path = self._parser.get("storage", "path")
+                path = os.path.join(os.environ["HOME"], cfg_path)
             else:
-                raise ConfigError("The required 'path' can't be found while"
-                                  " the 'file_system' engine is used.")
+                raise ConfigError(
+                    "The required 'path' can't be found while"
+                    " the 'file_system' engine is used."
+                )
 
-        # Python 2 and python 3 byte strings are different.
-        if sys.version_info[0] < 3:
-            path = str(path)
-        else:
-            path = path.decode("utf-8")
-
-        return path
+        return str(path)
 
     def _parse_directory(self):
         """
@@ -233,8 +231,13 @@ class Config(object):
         Returns:
             str
         """
-        if self._parser.has_option('storage', 'directory'):
-            directory = self._parser.get('storage', 'directory')
+        if self._parser.has_option("storage", "directory"):
+            directory = self._parser.get("storage", "directory")
+            # Don't allow CUSTOM_APPS_DIR as a storage directory
+            if directory == CUSTOM_APPS_DIR:
+                raise ConfigError(
+                    "{} cannot be used as a storage directory.".format(CUSTOM_APPS_DIR)
+                )
         else:
             directory = MACKUP_BACKUP_PATH
 
@@ -251,7 +254,7 @@ class Config(object):
         apps_to_ignore = set()
 
         # Is the "[applications_to_ignore]" in the cfg file ?
-        section_title = 'applications_to_ignore'
+        section_title = "applications_to_ignore"
         if self._parser.has_section(section_title):
             apps_to_ignore = set(self._parser.options(section_title))
 
@@ -268,7 +271,7 @@ class Config(object):
         apps_to_sync = set()
 
         # Is the "[applications_to_sync]" section in the cfg file ?
-        section_title = 'applications_to_sync'
+        section_title = "applications_to_sync"
         if self._parser.has_section(section_title):
             apps_to_sync = set(self._parser.options(section_title))
 

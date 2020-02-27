@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Added support for JS Beautifier (via @dnicolson)
 - Added support for ripgrep (via @dnicolson)
 - Added support for Bump (via @dnicolson)
 - Added support for rclone (via @dnicolson)

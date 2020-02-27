@@ -525,6 +525,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Spotify](https://www.spotify.com/)
 - [Startupizer2](http://appledoc.gentlebytes.com/startupizer/)
 - [Stata](http://www.stata.com/)
+- [Station](https://getstation.com)
 - [Stay](https://cordlessdog.com/stay/)
 - [Storyist](http://storyist.com/)
 - [Sublime Merge](https://www.sublimemerge.com/)

@@ -2,7 +2,7 @@
 
 Keep your application settings in sync.
 
-![](https://github.com/lra/mackup/workflows/.github/workflows/mackup.yml/badge.svg)
+![](https://github.com/lra/mackup/workflows/.github/workflows/mackup.yaml/badge.svg)
 [![snapcraft](https://snapcraft.io/mackup/badge.svg)](https://snapcraft.io/mackup)
 
 ## Table of content

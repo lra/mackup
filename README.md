@@ -472,7 +472,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Quicksilver](http://qsapp.com/)
 - [Qutebrowser](http://qutebrowser.org/)
 - [R](http://www.r-project.org/)
-- [rclone](https://rclone.org)
+- [rclone](https://rclone.org/)
 - [Rails](http://rubyonrails.org/)
 - [Ranger](https://ranger.github.io/)
 - [Redshift Scheduler](https://github.com/spantaleev/redshift-scheduler)

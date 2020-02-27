@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Updated support for RStudio, config stored in JSON as of v1.3.776 (via @petrbouchal)
 - Vulnerability fix
 - Removed support for Python 3.5
 - Removed support for the Box storage

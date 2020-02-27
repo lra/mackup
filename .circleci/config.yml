@@ -68,14 +68,6 @@ jobs:
       - run: python setup.py install
       - run: mackup --help
 
-  black:
-    docker:
-      - image: python
-    steps:
-      - checkout
-      - run: pip install black
-      - run: black --check --target-version py27 .
-
 workflows:
   version: 2
   mackup:
@@ -88,4 +80,3 @@ workflows:
       - install-3_6
       - install-3_7
       - install-3_8
-      - black

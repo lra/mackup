@@ -7,7 +7,6 @@ Keep your application settings in sync.
 
 ## Table of content
 
-
 - [Quickstart](#quickstart)
 - [Usage](#usage)
 - [What does it do](#what-does-it-do)

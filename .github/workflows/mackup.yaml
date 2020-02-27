@@ -1,14 +1,18 @@
 on: push
 
 jobs:
+
   mdl:
     runs-on: ubuntu-latest
-    steps:
-      - run: sudo gem install mdl
-      - uses: actions/checkout@v2
-      - run: mdl .
-  mdl2:
     container: rsrchboy/mdl
     steps:
       - uses: actions/checkout@v2
       - run: mdl .
+
+  black:
+    runs-on: ubuntu-latest
+    container: python
+    steps:
+      - run: pip install black
+      - uses: actions/checkout@v2
+      - run: black --check --target-version py27 .

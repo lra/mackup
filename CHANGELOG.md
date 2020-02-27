@@ -5,6 +5,7 @@
 - Added support for Bat (via @joshmedeski)
 - Vulnerability fix
 - Removed support for Python 3.5
+- Removed support for the Box storage
 
 ## Mackup 0.8.27
 

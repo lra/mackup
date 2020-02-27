@@ -3,6 +3,8 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Vulnerability fix
+- Removed support for Python 3.5
 
 ## Mackup 0.8.27
 

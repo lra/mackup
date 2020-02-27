@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Bat (via @joshmedeski)
+- Added support for newer versions of WebStorm
 - Updated support for Marta to capture new config files in 0.6.1 (via @petrbouchal)
 - Added support for Rectangle (via @arvindch)
 - Added support for BitBar (via @dnicolson)

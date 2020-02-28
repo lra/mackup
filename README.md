@@ -2,7 +2,7 @@
 
 Keep your application settings in sync.
 
-[![Circle CI](https://circleci.com/gh/lra/mackup.svg?style=shield)](https://circleci.com/gh/lra/mackup)
+[![Status](https://github.com/lra/mackup/workflows/Mackup/badge.svg)](https://github.com/lra/mackup/actions)
 [![snapcraft](https://snapcraft.io/mackup/badge.svg)](https://snapcraft.io/mackup)
 
 ## Table of content
@@ -150,10 +150,14 @@ in it stay put, so that any other computer also running Mackup is unaffected.
 - [Google Drive](https://drive.google.com/)
 - [Copy](https://www.copy.com/)
 - [iCloud](http://www.apple.com/icloud/)
-- [Box](https://www.box.com)
 - Anything able to sync a folder (e.g. [Git](http://git-scm.com/))
 
 See the [README](doc/README.md) file in the doc directory for more info.
+
+## Unsupported Storages
+
+- [Box](https://www.box.com): No longer supported is it ignores dotfiles, see
+  <https://github.com/lra/mackup/issues/807>.
 
 ## Supported Applications
 
@@ -173,6 +177,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Ansible](http://www.ansible.com/)
 - [AppCleaner](http://freemacsoft.net/appcleaner/)
 - [AppCode](http://www.jetbrains.com/objc/)
+- [Apple Music](https://www.apple.com/apple-music/)
 - [Apptivate](http://www.apptivateapp.com/)
 - [Arara](https://github.com/cereda/arara)
 - [aria2c](http://aria2.sourceforge.net/)
@@ -198,15 +203,18 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [BetterTouchTool](http://www.boastr.net/)
 - [BibDesk](http://bibdesk.sourceforge.net/)
 - [Billings Pro Server Admin](https://www.marketcircle.com/billingspro/download/billingspro-server/)
+- [BitBar](https://getbitbar.com/)
 - [Bitchx](http://www.bitchx.org/)
 - [Blackfire](https://blackfire.io/)
 - [Blender](https://blender.org/)
 - [Boto](https://github.com/boto/boto)
 - [Boxer](http://boxerapp.com)
 - [Brackets](http://brackets.io/)
+- [Bump](https://github.com/fabiospampinato/bump)
 - [Bundler](http://bundler.io)
 - [Byobu](http://byobu.co/)
 - [Caffeine](http://lightheadsw.com/caffeine/)
+- [Calibre](https://calibre-ebook.com/)
 - [Capture One](http://www.phaseone.com/Imaging-Software/Capture-One.aspx)
 - [Cartographica](https://www.macgis.com/)
 - [Cerebro](https://cerebroapp.com/)
@@ -342,6 +350,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Janus](https://github.com/carlhuda/janus)
 - [Jitouch](http://www.jitouch.com/)
 - [jrnl](http://maebert.github.io/jrnl/)
+- [JS Beautifier](https://github.com/beautify-web/js-beautify)
 - [JSHint](http://jshint.com/)
 - [Julia](http://julialang.org)
 - [Jumpcut](http://jumpcut.sourceforge.net/)
@@ -418,6 +427,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [newsbeuter](http://newsbeuter.org/)
 - [ngrok](https://ngrok.com/)
 - [Nomacs](http://nomacs.org/)
+- [NoSQLBooster for MongoDB](https://www.nosqlbooster.com/)
 - [npm](https://www.npmjs.com/)
 - [nvALT](http://brettterpstra.com/projects/nvalt/)
 - [nvpy](https://github.com/cpbotha/nvpy)
@@ -448,6 +458,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Pnpm](https://pnpm.js.org/)
 - [Pock](https://pock.pigigaldi.com)
 - [Poedit](http://poedit.net/)
+- [Poetry](https://python-poetry.org)
 - [PokerStars](https://www.pokerstars.com/)
 - [PopClip](http://pilotmoon.com/popclip/)
 - [Popcorn-Time](https://popcorntime.io/)
@@ -470,10 +481,13 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [R](http://www.r-project.org/)
 - [Rails](http://rubyonrails.org/)
 - [Ranger](https://ranger.github.io/)
+- [Rclone](https://rclone.org/)
+- [Rectangle](https://rectangleapp.com/)
 - [Redshift Scheduler](https://github.com/spantaleev/redshift-scheduler)
 - [Redshift](http://jonls.dk/redshift/)
 - [Rhythmbox](https://wiki.gnome.org/Apps/Rhythmbox)
 - [Rime](http://rime.im/)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [Robomongo](http://robomongo.org/)
 - [Rofi](https://github.com/DaveDavenport/rofi)
 - [Royal TSX](http://www.royaltsx.com/ts/osx/features)

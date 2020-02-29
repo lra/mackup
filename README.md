@@ -312,6 +312,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Go2Shell](http://zipzapmac.com/Go2Shell)
 - [GoLand](https://www.jetbrains.com/go/)
 - [Goldendict](http://goldendict.org/)
+- [GoodSync](https://goodsync.com/)
 - [GoShare](https://github.com/dictget/goshare)
 - [Gradle](http://gradle.org)
 - [GrandTotal 3](http://www.mediaatelier.com/GrandTotal4/)

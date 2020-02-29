@@ -11,7 +11,6 @@ from .constants import (
     ENGINE_GDRIVE,
     ENGINE_COPY,
     ENGINE_ICLOUD,
-    ENGINE_BOX,
     ENGINE_FS,
 )
 
@@ -21,7 +20,6 @@ from .utils import (
     get_copy_folder_location,
     get_google_drive_folder_location,
     get_icloud_folder_location,
-    get_box_folder_location,
 )
 
 try:
@@ -70,8 +68,7 @@ class Config(object):
         """
         The engine used by the storage.
 
-        ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_COPY, ENGINE_ICLOUD, ENGINE_BOX
-        or ENGINE_FS.
+        ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_COPY, ENGINE_ICLOUD or ENGINE_FS.
 
         Returns:
             str
@@ -194,7 +191,6 @@ class Config(object):
             ENGINE_GDRIVE,
             ENGINE_COPY,
             ENGINE_ICLOUD,
-            ENGINE_BOX,
             ENGINE_FS,
         ]:
             raise ConfigError("Unknown storage engine: {}".format(engine))
@@ -216,8 +212,6 @@ class Config(object):
             path = get_copy_folder_location()
         elif self.engine == ENGINE_ICLOUD:
             path = get_icloud_folder_location()
-        elif self.engine == ENGINE_BOX:
-            path = get_box_folder_location()
         elif self.engine == ENGINE_FS:
             if self._parser.has_option("storage", "path"):
                 cfg_path = self._parser.get("storage", "path")

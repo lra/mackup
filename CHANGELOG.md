@@ -6,6 +6,7 @@
 - Added support for Poetry (via @ryoppippi)
 - Added support for Music (via @dnicolson)
 - Added support for Kaggle (via @ryoppippi)
+- Added support for SBT 1.0 (via @austek)
 
 ## Mackup 0.8.28
 

@@ -11,6 +11,7 @@
 - Added support for GoodSync (via @cereallarceny)
 - Added support for mitmproxy (via @etiennelb)
 - Added support for Hocus Focus (via @jrolfs)
+- Added support for TripMode (via @ttuygun)
 
 ## Mackup 0.8.28
 

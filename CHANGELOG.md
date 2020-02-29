@@ -9,6 +9,7 @@
 - Added support for SBT 1.0 (via @austek)
 - Added support for FiloSottile/mkcert (via @paxperscientiam)
 - Added support for GoodSync (via @cereallarceny)
+- Added support for mitmproxy (via @etiennelb)
 
 ## Mackup 0.8.28
 

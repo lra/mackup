@@ -12,6 +12,7 @@
 - Added support for mitmproxy (via @etiennelb)
 - Added support for Hocus Focus (via @jrolfs)
 - Added support for TripMode (via @ttuygun)
+- Added support for Starship (via @callummr)
 
 ## Mackup 0.8.28
 

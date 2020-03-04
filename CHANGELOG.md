@@ -9,6 +9,7 @@
 - Added support for SBT 1.0 (via @austek)
 - Added support for FiloSottile/mkcert (via @paxperscientiam)
 - Added support for GoodSync (via @cereallarceny)
+- Improve support for Git, sync gitignore (via @ryoppippi)
 - Added support for mitmproxy (via @etiennelb)
 - Added support for Hocus Focus (via @jrolfs)
 - Added support for TripMode (via @ttuygun)

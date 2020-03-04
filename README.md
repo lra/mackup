@@ -284,6 +284,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [fastlane](https://fastlane.tools)
 - [Feeds](http://www.feedsapp.com/)
 - [FileZilla](https://filezilla-project.org/)
+- [Finicky](https://github.com/johnste/finicky)
 - [Fish](http://fishshell.com/)
 - [Fisher](https://github.com/jorgebucaran/fisher)
 - [FlexGet](http://flexget.com/)

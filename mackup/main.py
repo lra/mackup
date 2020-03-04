@@ -15,6 +15,7 @@ Usage:
 Options:
   -h --help     Show this screen.
   -f --force    Force every question asked to be answered with "Yes".
+  -r --root     Allow mackup to be run as superuser.
   -n --dry-run  Show steps without executing.
   -v --verbose  Show additional details.
   --version     Show version.
@@ -72,6 +73,10 @@ def main():
     # If we want to answer mackup with "yes" for each question
     if args["--force"]:
         utils.FORCE_YES = True
+
+    # Allow mackup to be run as root
+    if args["--root"]:
+        utils.CAN_RUN_AS_ROOT = True
 
     dry_run = args["--dry-run"]
 

@@ -28,11 +28,12 @@ class Mackup(object):
 
     def check_for_usable_environment(self):
         """Check if the current env is usable and has everything's required."""
-        # Do not let the user run Mackup as root
-        if os.geteuid() == 0:
+        # Allow only explicit superuser usage
+        if os.geteuid() == 0 and not utils.CAN_RUN_AS_ROOT:
             utils.error(
-                "Running Mackup as a superuser is useless and"
-                " dangerous. Don't do it!"
+                "Running Mackup as superuser can be dangerous."
+                " Don't do it unless you know what you're doing!"
+                " Run mackup --help for guidance."
             )
 
         # Do we have a folder to put the Mackup folder ?

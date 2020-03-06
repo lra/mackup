@@ -15,6 +15,7 @@
 - Added support for TripMode (via @ttuygun)
 - Added support for Starship (via @callummr)
 - Added the `--root` command line option
+- Removed support for Sketch
 
 ## Mackup 0.8.28
 

@@ -352,6 +352,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [iTunes Scripts](https://www.apple.com/)
 - [Janus](https://github.com/carlhuda/janus)
 - [Jitouch](http://www.jitouch.com/)
+- [Joplin](https://joplinapp.org/)
 - [jrnl](https://jrnl.sh)
 - [JS Beautifier](https://github.com/beautify-web/js-beautify)
 - [JSHint](http://jshint.com/)

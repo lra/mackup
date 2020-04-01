@@ -556,7 +556,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Swinsian](http://swinsian.com/)
 - [T](http://sferik.github.io/t/)
 - [TablePlus](https://tableplus.io)
-- [TaskPaper](http://www.hogbaysoftware.com/products/taskpaper)
+- [TaskPaper](https://www.taskpaper.com)
 - [Taskwarrior](http://taskwarrior.org/)
 - [Teamocil](http://remiprev.github.io/teamocil/)
 - [Telegram for macOS](https://macos.telegram.org)

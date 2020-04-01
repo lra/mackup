@@ -200,6 +200,7 @@
 - Add support for Cerebro (via @kelion)
 - Add support for iTerm (via @Sbastien)
 - Add support for Boxer (via @icopp)
+- Add support for Exercism (via @jordanadams)
 - Add support for Franz (via @stephen2m)
 - Add support for IdeaVim (via @x-ji)
 - Add support for Tmuxp (via @infernion)

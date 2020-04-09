@@ -14,6 +14,7 @@
 - Added support for Hocus Focus (via @jrolfs)
 - Added support for TripMode (via @ttuygun)
 - Added support for Starship (via @callummr)
+- Added support for SpamSieve (via @michaelgrossklos)
 - Added the `--root` command line option
 - Removed support for Sketch
 

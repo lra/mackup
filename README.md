@@ -537,6 +537,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [SpaceLauncher](https://spacelauncherapp.com/)
 - [Spacemacs](https://github.com/syl20bnr/spacemacs)
 - [Spark](http://www.shadowlab.org/softwares/spark.php)
+- [SpamSieve](https://www.application-systems.de/spamsieve/)
 - [Spectacle](https://www.spectacleapp.com/)
 - [Spectrwm](https://github.com/conformal/spectrwm/wiki)
 - [Splice](https://splice.com/)

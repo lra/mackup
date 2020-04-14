@@ -17,6 +17,7 @@
 - Added support for Joplin (via @geekrainy)
 - Added the `--root` command line option
 - Removed support for Sketch
+- Add support for PyCharm 2020.1 (via @ameyuuno)
 
 ## Mackup 0.8.28
 

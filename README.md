@@ -264,6 +264,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Divvy](http://mizage.com/divvy/)
 - [Docker](https://www.docker.com/)
 - [Dolphin](https://dolphin-emu.org/)
+- [Doom Emacs](https://github.com/hlissner/doom-emacs)
 - [Double Commander](http://doublecmd.sourceforge.net/)
 - [Doxie](http://www.getdoxie.com/)
 - [Droplr](https://droplr.com/)

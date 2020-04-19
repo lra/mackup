@@ -18,6 +18,7 @@
 - Added the `--root` command line option
 - Removed support for Sketch
 - Add support for PyCharm 2020.1 (via @ameyuuno)
+- Add support for Powerline (via @ho-oto)
 
 ## Mackup 0.8.28
 

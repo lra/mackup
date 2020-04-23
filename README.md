@@ -398,6 +398,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Maid](https://github.com/benjaminoakes/maid/)
 - [Mailmate](http://freron.com/)
 - [Mailplane](http://mailplaneapp.com/)
+- [mako](https://wayland.emersion.fr/mako/)
 - [Marked 2](http://marked2app.com)
 - [Marta](https://marta.yanex.org/)
 - [MATLAB](http://www.mathworks.com/products/matlab/)

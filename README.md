@@ -564,6 +564,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Telegram for macOS](https://macos.telegram.org)
 - [Terminal](http://www.apple.com/osx/apps/)
 - [Terminator](https://launchpad.net/terminator/)
+- [termite](https://github.com/thestinger/termite)
 - [TextExpander](https://smilesoftware.com/textexpander)
 - [TextMate](http://macromates.com/)
 - [Textual](http://www.codeux.com/textual/)

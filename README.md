@@ -622,6 +622,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Xonsh](https://xon.sh)
 - [XtraFinder](http://www.trankynam.com/xtrafinder/)
 - [yabai](https://github.com/koekeishiya/yabai)
+- [yarn](https://yarnpkg.com)
 - [Yummy FTP](http://www.yummysoftware.com/)
 - [zabbix-cli](https://github.com/usit-gd/zabbix-cli)
 - [zathura](https://pwmt.org/projects/zathura/)

@@ -15,9 +15,11 @@
 - Added support for TripMode (via @ttuygun)
 - Added support for Starship (via @callummr)
 - Added support for Joplin (via @geekrainy)
+- Added support for iStat Menus 6 and unified config files (via @lumaxis)
 - Added the `--root` command line option
 - Removed support for Sketch
 - Add support for PyCharm 2020.1 (via @ameyuuno)
+- Add support for Powerline (via @ho-oto)
 
 ## Mackup 0.8.28
 

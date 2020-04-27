@@ -18,8 +18,9 @@
 - Added support for iStat Menus 6 and unified config files (via @lumaxis)
 - Added the `--root` command line option
 - Removed support for Sketch
-- Add support for PyCharm 2020.1 (via @ameyuuno)
-- Add support for Powerline (via @ho-oto)
+- Added support for PyCharm 2020.1 (via @ameyuuno)
+- Added support for Powerline (via @ho-oto)
+- Added support for Yarn (via @dhb52)
 
 ## Mackup 0.8.28
 

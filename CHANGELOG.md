@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for waybar (via @mk-atlassian)
+- Added support for termite (via @mk-atlassian)
 - Added support for Calibre (via @ttuygun @bodak)
 - Added support for Poetry (via @ryoppippi)
 - Added support for Music (via @dnicolson)

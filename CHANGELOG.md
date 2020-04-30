@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added support for waybar (via @mk-atlassian)
 - Added support for mako (via @mk-atlassian)
 - Added support for Swaywm (via @mk-atlassian)
 - Added support for termite (via @mk-atlassian)

@@ -556,6 +556,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Subversion](http://subversion.apache.org/)
 - [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html)
 - [Surge](http://surge.run/manual/)
+- [Sway](https://swaywm.org/)
 - [Swinsian](http://swinsian.com/)
 - [T](http://sferik.github.io/t/)
 - [TablePlus](https://tableplus.io)

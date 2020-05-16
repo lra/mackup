@@ -16,6 +16,9 @@ from . import constants
 # If True, the user wants to say "yes" to everything.
 FORCE_YES = False
 
+# Flag that control if mackup can be run as root
+CAN_RUN_AS_ROOT = False
+
 
 def confirm(question):
     """
@@ -246,27 +249,6 @@ def get_google_drive_folder_location():
     return googledrive_home
 
 
-def get_box_folder_location():
-    """
-    Try to locate the Box folder.
-
-    Returns:
-        (str) Full path to the current Box folder
-    """
-    box_prefs_path = "Library/Application Support/Box/Box Sync/" "sync_root_folder.txt"
-    box_home = None
-
-    box_prefs = os.path.join(os.environ["HOME"], box_prefs_path)
-    try:
-        with open(box_prefs, "r") as sync_path:
-            data = sync_path.read()
-            box_home = data
-    except IOError:
-        error("Unable to find your Box prefs =(")
-
-    return box_home
-
-
 def get_copy_folder_location():
     """
     Try to locate the Copy folder.
@@ -373,7 +355,7 @@ def remove_immutable_attribute(path):
     elif platform.system() == constants.PLATFORM_LINUX and os.path.isfile(
         "/usr/bin/chattr"
     ):
-        subprocess.call(["/usr/bin/chattr", "-R", "-i", path])
+        subprocess.call(["/usr/bin/chattr", "-R", "-f", "-i", path])
 
 
 def can_file_be_synced_on_current_platform(path):

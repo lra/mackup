@@ -11,14 +11,15 @@ vi ~/.mackup.cfg
 
 ## Storage
 
-### Dropbox
-
 You can specify the storage type Mackup will use to store your configuration
 files.
-For now you have 4 options: `dropbox`, `google_drive`, `copy` and `file_system`.
+For now you have 4 options: `dropbox`, `google_drive`, `icloud`, `copy` and `file_system`.
+
 If none is specified, Mackup will try to use the default: `dropbox`.
 With the `dropbox` storage engine, Mackup will automatically figure out your
 Dropbox folder.
+
+### Dropbox
 
 ```ini
 [storage]
@@ -227,3 +228,46 @@ You can add and test an application by following these steps:
 - if everything works as expected:
   - run `make undevelop` to revert to the official version
   - commit and push the change to your fork and then create the Pulls Request
+
+### Add support for an application using the XDG directory
+
+For application storing their configuration under the `~/.config` folder, you
+should not hardcode it. The `.config` folder is the default location but it can
+be named differently on other users' systems by setting the `XDG_CONFIG_HOME`
+environment variable.
+
+See <https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html>
+
+Mackup supports this mechanism and provide a dedicated `xdg_configuration_files`
+section for those applications.
+
+If any path starts with `.config`, remove the `.config` part and move the path
+to a dedicated `xdg_configuration_files` section.
+
+Instead of:
+
+```ini
+[application]
+name = Git
+
+[configuration_files]
+.gitconfig
+.config/git/config
+.config/git/ignore
+.config/git/attributes
+```
+
+Use this:
+
+```ini
+[application]
+name = Git
+
+[configuration_files]
+.gitconfig
+
+[xdg_configuration_files]
+git/config
+git/ignore
+git/attributes
+```

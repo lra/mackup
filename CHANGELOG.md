@@ -2,7 +2,49 @@
 
 ## WIP
 
+- Added support for waybar (via @mk-atlassian)
+- Added support for mako (via @mk-atlassian)
+- Added support for Swaywm (via @mk-atlassian)
+- Added support for termite (via @mk-atlassian)
+- Added support for Calibre (via @ttuygun @bodak)
+- Added support for Poetry (via @ryoppippi)
+- Added support for Music (via @dnicolson)
+- Added support for Kaggle (via @ryoppippi)
+- Added support for SBT 1.0 (via @austek)
+- Added support for FiloSottile/mkcert (via @paxperscientiam)
+- Added support for Finicky (via @ryoppippi)
+- Added support for GoodSync (via @cereallarceny)
+- Added support for mitmproxy (via @etiennelb)
+- Added support for Hocus Focus (via @jrolfs)
+- Added support for TripMode (via @ttuygun)
+- Added support for Starship (via @callummr)
+- Added support for Joplin (via @geekrainy)
+- Added support for iStat Menus 6 and unified config files (via @lumaxis)
+- Added the `--root` command line option
+- Removed support for Sketch
+- Added support for PyCharm 2020.1 (via @ameyuuno)
+- Added support for Powerline (via @ho-oto)
+- Added support for Yarn (via @dhb52)
+
+## Mackup 0.8.28
+
 - Added support for Bat (via @joshmedeski)
+- Added support for newer versions of WebStorm
+- Updated support for Marta to capture new config files in 0.6.1 (via @petrbouchal)
+- Added support for Rectangle (via @arvindch)
+- Added support for BitBar (via @dnicolson)
+- Added support for JS Beautifier (via @dnicolson)
+- Added support for ripgrep (via @dnicolson)
+- Added support for Bump (via @dnicolson)
+- Added support for rclone (via @dnicolson)
+- Added support for NoSQLBooster for MongoDB (via @ivan-ha)
+- Updated support for RStudio, config stored in JSON as of v1.3.776 (via @petrbouchal)
+- Vulnerability fix
+- Removed support for Python 3.5
+- Removed support for the Box storage
+- Fix: suppress errors when handling symlinks (via @doubleloop)
+- Migrated all config files to the XDG format
+- Add support for Python 3.8
 
 ## Mackup 0.8.27
 

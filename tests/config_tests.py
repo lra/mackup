@@ -24,7 +24,6 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_DROPBOX
 
         assert isinstance(cfg.path, str)
-        print(cfg.path)
         assert cfg.path == "/home/some_user/Dropbox"
 
         assert isinstance(cfg.directory, str)
@@ -232,3 +231,23 @@ class TestConfig(unittest.TestCase):
 
     def test_config_old_config(self):
         self.assertRaises(SystemExit, Config, "mackup-old-config.cfg")
+
+    def test_config_xdg_config(self):
+        os.environ["XDG_CONFIG_HOME"] = os.environ["HOME"]
+        cfg = Config()
+
+        # Should should do the same as the default, empty configuration
+        assert isinstance(cfg.engine, str)
+        assert cfg.engine == ENGINE_DROPBOX
+
+        assert isinstance(cfg.path, str)
+        assert cfg.path == "/home/some_user/Dropbox"
+
+        assert isinstance(cfg.directory, str)
+        assert cfg.directory == u"Mackup"
+
+        assert isinstance(cfg.fullpath, str)
+        assert cfg.fullpath == u"/home/some_user/Dropbox/Mackup"
+
+        assert cfg.apps_to_ignore == set()
+        assert cfg.apps_to_sync == set()

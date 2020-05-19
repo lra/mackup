@@ -6,7 +6,6 @@ import os.path
 from .constants import (
     CUSTOM_APPS_DIR,
     MACKUP_BACKUP_PATH,
-    MACKUP_CONFIG_FILE,
     ENGINE_DROPBOX,
     ENGINE_GDRIVE,
     ENGINE_COPY,
@@ -16,6 +15,7 @@ from .constants import (
 
 from .utils import (
     error,
+    get_config_file_location,
     get_dropbox_folder_location,
     get_copy_folder_location,
     get_google_drive_folder_location,
@@ -145,10 +145,12 @@ class Config(object):
 
         # If we are not overriding the config filename
         if not filename:
-            filename = MACKUP_CONFIG_FILE
+            filename = get_config_file_location()
+        else:
+            filename = os.path.join(os.environ["HOME"], filename)
 
         parser = configparser.SafeConfigParser(allow_no_value=True)
-        parser.read(os.path.join(os.path.join(os.environ["HOME"], filename)))
+        parser.read(filename)
 
         return parser
 
@@ -169,7 +171,7 @@ class Config(object):
                     "\n"
                     "Please read the up to date documentation on"
                     " <https://github.com/lra/mackup> and migrate"
-                    " your configuration file.".format(MACKUP_CONFIG_FILE)
+                    " your configuration file.".format(get_config_file_location())
                 )
 
     def _parse_engine(self):

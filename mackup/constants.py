@@ -18,6 +18,9 @@ MACKUP_BACKUP_PATH = "Mackup"
 # Mackup config file
 MACKUP_CONFIG_FILE = ".mackup.cfg"
 
+# Mackup XDG config file
+MACKUP_XDG_CONFIG_FILE = "mackup/config"
+
 # Directory that can contains user defined app configs
 CUSTOM_APPS_DIR = ".mackup"
 

@@ -11,7 +11,9 @@ try:
 except ImportError:
     import ConfigParser as configparser
 
+from .utils import get_xdg_cfg_home, get_custom_apps_dir
 
+from .constants import MACKUP_XDG_CONFIG_FILE
 from .constants import APPS_DIR
 from .constants import CUSTOM_APPS_DIR
 
@@ -54,15 +56,14 @@ class ApplicationsDatabase(object):
                             )
                         self.apps[app_name]["configuration_files"].add(path)
 
-                # Add the XDG configuration files to sync
                 home = os.path.expanduser("~/")
-                failobj = "{}.config".format(home)
-                xdg_config_home = os.environ.get("XDG_CONFIG_HOME", failobj)
-                if not xdg_config_home.startswith(home):
+                # Add the XDG configuration files to sync
+                xdg_cfg_home = get_xdg_cfg_home()
+                if not xdg_cfg_home.startswith(home):
                     raise ValueError(
                         "$XDG_CONFIG_HOME: {} must be "
                         "somewhere within your home "
-                        "directory: {}".format(xdg_config_home, home)
+                        "directory: {}".format(xdg_cfg_home, home)
                     )
                 if config.has_section("xdg_configuration_files"):
                     for path in config.options("xdg_configuration_files"):
@@ -70,7 +71,7 @@ class ApplicationsDatabase(object):
                             raise ValueError(
                                 "Unsupported absolute path: " "{}".format(path)
                             )
-                        path = os.path.join(xdg_config_home, path)
+                        path = os.path.join(xdg_cfg_home, path)
                         path = path.replace(home, "")
                         (self.apps[app_name]["configuration_files"].add(path))
 
@@ -91,7 +92,7 @@ class ApplicationsDatabase(object):
         """
         # Configure the config parser
         apps_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), APPS_DIR)
-        custom_apps_dir = os.path.join(os.environ["HOME"], CUSTOM_APPS_DIR)
+        custom_apps_dir = get_custom_apps_dir()
 
         # List of stock application config files
         config_files = set()
@@ -102,7 +103,7 @@ class ApplicationsDatabase(object):
         # Get the list of custom application config files first
         if os.path.isdir(custom_apps_dir):
             for filename in os.listdir(custom_apps_dir):
-                if filename.endswith(".cfg"):
+                if filename.endswith(".cfg") and filename != MACKUP_XDG_CONFIG_FILE:
                     config_files.add(os.path.join(custom_apps_dir, filename))
                     # Also add it to the set of custom apps, so that we don't
                     # add the stock config for the same app too
@@ -111,7 +112,11 @@ class ApplicationsDatabase(object):
         # Add the default provided app config files, but only if those are not
         # customized, as we don't want to overwrite custom app config.
         for filename in os.listdir(apps_dir):
-            if filename.endswith(".cfg") and filename not in custom_files:
+            if (
+                filename.endswith(".cfg")
+                and filename != MACKUP_XDG_CONFIG_FILE
+                and filename not in custom_files
+            ):
                 config_files.add(os.path.join(apps_dir, filename))
 
         return config_files

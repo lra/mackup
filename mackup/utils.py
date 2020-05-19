@@ -193,23 +193,61 @@ def error(message):
     sys.exit(fail + "Error: {}".format(message) + end)
 
 
+def get_xdg_cfg_home():
+    """
+    Locate XDG config home directory.
+
+    Returns:
+        (str): Full path to the XDG config home directory
+    """
+    xdg_cfg_home = os.getenv(
+        "XDG_CONFIG_HOME", os.path.join(os.environ["HOME"], ".config")
+    )
+    return xdg_cfg_home
+
+
+def get_xdg_cfg_dir():
+    """
+    Locate the XDG config directory.
+
+    Returns:
+        (str): Full path to the XDG config directory
+    """
+    xdg_cfg_dir = os.path.join(get_xdg_cfg_home(), constants.MACKUP_XDG_DIR_NAME)
+    return xdg_cfg_dir
+
+
 def get_config_file_location():
     """
     Locate configure file.
 
     Returns:
-        (str) Full path to the current configure file
+        (str): Full path to the current configure file
     """
 
-    xdg_cfg_path = os.getenv(
-        "XDG_CONFIG_HOME", os.path.join(os.environ["HOME"], ".config")
-    )
-    xdg_cfg_file = os.path.join(xdg_cfg_path, constants.MACKUP_XDG_CONFIG_FILE)
+    xdg_cfg_dir = get_xdg_cfg_dir()
+    xdg_cfg_file = os.path.join(xdg_cfg_dir, constants.MACKUP_XDG_CONFIG_FILE)
     home_cfg_file = os.path.join(os.environ["HOME"], constants.MACKUP_CONFIG_FILE)
+    # If we have both, we fallback to the XDG one
     if os.path.isfile(xdg_cfg_file):
         return xdg_cfg_file
     else:
         return home_cfg_file
+
+
+def get_custom_apps_dir():
+    """
+    Locate the custom apps directory.
+
+    Returns:
+        (str): Full path to the custom app directory
+    """
+    xdg_cfg_dir = get_xdg_cfg_dir()
+    home_custom_apps_dir = os.path.join(os.environ["HOME"], constants.CUSTOM_APPS_DIR)
+    if os.path.isdir(xdg_cfg_dir):
+        return xdg_cfg_dir
+    else:
+        return home_custom_apps_dir
 
 
 def get_dropbox_folder_location():

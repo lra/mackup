@@ -171,10 +171,9 @@ class ApplicationsDatabase(object):
         return pretty_app_names
 
     def _add_path(self, app_name, path, config):
-        if config.getboolean('options', 'enable_glob', fallback=False):
+        if config.getboolean("options", "enable_glob", fallback=False):
             expanded_paths = glob.glob(path)
         else:
             expanded_paths = [path]
         for expanded_path in expanded_paths:
             self.apps[app_name]["configuration_files"].add(expanded_path)
-

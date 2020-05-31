@@ -156,6 +156,9 @@ fork Mackup and open a
 [Pull Request](https://help.github.com/articles/using-pull-requests).
 The stock application configs are in the `mackup/applications` directory.
 
+Remember to follow the guidelines in [CONTRIBUTING.md](https://github.com/lra/mackup/blob/master/.github/CONTRIBUTING.md)
+to get your Pull Request merged faster.
+
 ### Add support for an application or any file or directory
 
 You can customize the Mackup engine and add support for unsupported

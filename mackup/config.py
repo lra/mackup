@@ -63,6 +63,9 @@ class Config(object):
         # Get the list of apps to allow
         self._apps_to_sync = self._parse_apps_to_sync()
 
+        # Get colors for cli
+        self._cli_colors = self._parse_cli_colors()
+
     @property
     def engine(self):
         """
@@ -276,6 +279,54 @@ class Config(object):
             apps_to_sync = set(self._parser.options(section_title))
 
         return apps_to_sync
+
+    def _parse_cli_colors(self):
+        colors = {
+            "text": "[1;33m",
+            "filename": "[1;34m",
+            "filename_path_separator": "[1;35m",
+            "name": "[1;34m",
+            "item_bullet": "[1;32m",
+            "item_header": "[1;36m",
+            "header_app_name": "[1;34m",
+            "reset": "[0m",
+        }
+
+        if self._parser.has_section("colors"):
+            if self._parser.has_option("colors", "text"):
+                colors["text"] = "[" + str(self._parser.get("colors", "text")) + "m"
+
+            if self._parser.has_option("colors", "filename"):
+                colors["filename"] = (
+                    "[" + str(self._parser.get("colors", "filename")) + "m"
+                )
+
+            if self._parser.has_option("colors", "filename_path_separator"):
+                colors["filename_path_separator"] = (
+                    "["
+                    + str(self._parser.get("colors", "filename_path_separator"))
+                    + "m"
+                )
+
+            if self._parser.has_option("colors", "name"):
+                colors["name"] = "[" + str(self._parser.get("colors", "name")) + "m"
+
+            if self._parser.has_option("colors", "item_bullet"):
+                colors["item_bullet"] = (
+                    "[" + str(self._parser.get("colors", "item_bullet")) + "m"
+                )
+
+            if self._parser.has_option("colors", "item_header"):
+                colors["item_header"] = (
+                    "[" + str(self._parser.get("colors", "item_header")) + "m"
+                )
+
+            if self._parser.has_option("colors", "header_app_name"):
+                colors["header_app_name"] = (
+                    "[" + str(self._parser.get("colors", "header_app_name")) + "m"
+                )
+
+        return colors
 
 
 class ConfigError(Exception):

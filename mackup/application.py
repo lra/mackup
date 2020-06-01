@@ -8,6 +8,7 @@ import os
 
 from .mackup import Mackup
 from . import utils
+from mackup.colorize import colorize_text, colorize_filename
 
 
 class ApplicationProfile(object):
@@ -75,12 +76,25 @@ class ApplicationProfile(object):
 
                 if self.verbose:
                     print(
-                        "Backing up\n  {}\n  to\n  {} ...".format(
-                            home_filepath, mackup_filepath
+                        (
+                            colorize_text("Backing up")
+                            + "\n  "
+                            + colorize_filename(home_filepath)
+                            + "\n  "
+                            + colorize_text("to")
+                            + "\n  "
+                            + colorize_filename(mackup_filepath)
+                            + colorize_text(" ...")
                         )
                     )
                 else:
-                    print("Backing up {} ...".format(filename))
+                    print(
+                        (
+                            colorize_text("Backing up ")
+                            + colorize_filename(filename)
+                            + colorize_text(" ...")
+                        )
+                    )
 
                 if self.dry_run:
                     continue
@@ -122,20 +136,30 @@ class ApplicationProfile(object):
             elif self.verbose:
                 if os.path.exists(home_filepath):
                     print(
-                        "Doing nothing\n  {}\n  "
-                        "is already backed up to\n  {}".format(
-                            home_filepath, mackup_filepath
-                        )
+                        colorize_text("Doing nothing")
+                        + "\n  "
+                        + colorize_filename(home_filepath)
+                        + "\n  "
+                        + colorize_text("is already backed up to")
+                        + "\n  "
+                        + colorize_filename(mackup_filepath)
                     )
                 elif os.path.islink(home_filepath):
                     print(
-                        "Doing nothing\n  {}\n  "
-                        "is a broken link, you might want to fix it.".format(
-                            home_filepath
-                        )
+                        colorize_text("Doing nothing")
+                        + "\n  "
+                        + colorize_filename(home_filepath)
+                        + "\n  "
+                        + colorize_text("is a broken link, you might want to fix it.")
                     )
                 else:
-                    print("Doing nothing\n  {}\n  does not exist".format(home_filepath))
+                    print(
+                        colorize_text("Doing nothing")
+                        + "\n  "
+                        + colorize_filename(home_filepath)
+                        + "\n"
+                        + colorize_text("does not exist")
+                    )
 
     def restore(self):
         """
@@ -171,12 +195,19 @@ class ApplicationProfile(object):
             if file_or_dir_exists and not pointing_to_mackup and supported:
                 if self.verbose:
                     print(
-                        "Restoring\n  linking {}\n  to      {} ...".format(
-                            home_filepath, mackup_filepath
-                        )
+                        colorize_text("Restoring\n  linking ")
+                        + colorize_filename(home_filepath)
+                        + "\n  "
+                        + colorize_text("to      ")
+                        + colorize_filename(mackup_filepath)
+                        + colorize_text(" ...")
                     )
                 else:
-                    print("Restoring {} ...".format(filename))
+                    print(
+                        colorize_text("Restoring ")
+                        + colorize_filename(filename)
+                        + colorize_text(" ...")
+                    )
 
                 if self.dry_run:
                     continue
@@ -205,20 +236,29 @@ class ApplicationProfile(object):
             elif self.verbose:
                 if os.path.exists(home_filepath):
                     print(
-                        "Doing nothing\n  {}\n  already linked by\n  {}".format(
-                            mackup_filepath, home_filepath
-                        )
+                        colorize_text("Doing nothing")
+                        + "\n  "
+                        + colorize_filename(mackup_filepath)
+                        + "\n  "
+                        + colorize_text("already linked by")
+                        + "\n  "
+                        + colorize_filename(home_filepath)
                     )
                 elif os.path.islink(home_filepath):
                     print(
-                        "Doing nothing\n  {}\n  "
-                        "is a broken link, you might want to fix it.".format(
-                            home_filepath
-                        )
+                        colorize_text("Doing nothing")
+                        + "\n  "
+                        + colorize_filename(home_filepath)
+                        + "\n  "
+                        + colorize_text("is a broken link, you might want to fix it.")
                     )
                 else:
                     print(
-                        "Doing nothing\n  {}\n  does not exist".format(mackup_filepath)
+                        colorize_text("Doing nothing")
+                        + "\n  "
+                        + colorize_filename(mackup_filepath)
+                        + "\n"
+                        + colorize_text("does not exist")
                     )
 
     def uninstall(self):
@@ -246,12 +286,19 @@ class ApplicationProfile(object):
                 if os.path.exists(home_filepath):
                     if self.verbose:
                         print(
-                            "Reverting {}\n  at {} ...".format(
-                                mackup_filepath, home_filepath
-                            )
+                            colorize_text("Reverting ")
+                            + colorize_filename(mackup_filepath)
+                            + "\n  "
+                            + colorize_text("at ")
+                            + colorize_filename(home_filepath)
+                            + colorize_text(" ...")
                         )
                     else:
-                        print("Reverting {} ...".format(filename))
+                        print(
+                            colorize_text("Reverting ")
+                            + colorize_filename(filename)
+                            + colorize_text(" ...")
+                        )
 
                     if self.dry_run:
                         continue
@@ -263,4 +310,8 @@ class ApplicationProfile(object):
                     # Copy the Dropbox file to the home folder
                     utils.copy(mackup_filepath, home_filepath)
             elif self.verbose:
-                print("Doing nothing, {} does not exist".format(mackup_filepath))
+                print(
+                    colorize_text("Doing nothing, ")
+                    + colorize_filename(mackup_filepath)
+                    + colorize_text(" does not exist")
+                )

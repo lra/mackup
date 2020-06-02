@@ -326,6 +326,27 @@ class Config(object):
                     "[" + str(self._parser.get("colors", "header_app_name")) + "m"
                 )
 
+        lsc = os.environ["MACKUP_COLORS"]
+        for setting in lsc.split(":"):
+            if not setting:
+                continue  # skip empty
+
+            key, code = setting.split("=")
+
+            if not key or not code:
+                continue  # skip empty
+
+            if key in [
+                "text",
+                "filename",
+                "filename_path_separator",
+                "name",
+                "item_bullet",
+                "item_header",
+                "header_app_name",
+            ]:
+                colors[key] = "[" + code + "m"
+
         return colors
 
 

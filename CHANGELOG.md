@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.29
+
 - Added support for waybar (via @mk-atlassian)
 - Added support for mako (via @mk-atlassian)
 - Added support for Swaywm (via @mk-atlassian)
@@ -25,6 +27,7 @@
 - Added support for PyCharm 2020.1 (via @ameyuuno)
 - Added support for Powerline (via @ho-oto)
 - Added support for Yarn (via @dhb52)
+- Add support for Quitter (via @guillaumealgis)
 
 ## Mackup 0.8.28
 

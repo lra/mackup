@@ -25,6 +25,7 @@
 - Added support for PyCharm 2020.1 (via @ameyuuno)
 - Added support for Powerline (via @ho-oto)
 - Added support for Yarn (via @dhb52)
+- Add support for Quitter (via @guillaumealgis)
 
 ## Mackup 0.8.28
 

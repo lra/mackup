@@ -288,6 +288,7 @@ class Config(object):
             "name": "[1;34m",
             "item_bullet": "[1;32m",
             "item_header": "[1;36m",
+            "header": "[1;35m",
             "header_app_name": "[1;34m",
             "reset": "[0m",
         }
@@ -319,6 +320,11 @@ class Config(object):
             if self._parser.has_option("colors", "item_header"):
                 colors["item_header"] = (
                     "[" + str(self._parser.get("colors", "item_header")) + "m"
+                )
+
+            if self._parser.has_option("colors", "header"):
+                colors["header"] = (
+                    "[" + str(self._parser.get("colors", "header")) + "m"
                 )
 
             if self._parser.has_option("colors", "header_app_name"):

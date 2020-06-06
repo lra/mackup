@@ -8,9 +8,7 @@ colors = mckp._config._cli_colors
 colorize = True
 
 if "CLICOLOR" in os.environ:
-    if os.environ["CLICOLOR"] == "1":
-        colorize = True
-    elif os.environ["CLICOLOR"] == "0":
+    if os.environ["CLICOLOR"] == "0":
         colorize = False
 
 colorize = False if "NO_COLOR" in os.environ else colorize

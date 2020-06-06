@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.29
+
 - Added support for waybar (via @mk-atlassian)
 - Added support for mako (via @mk-atlassian)
 - Added support for Swaywm (via @mk-atlassian)

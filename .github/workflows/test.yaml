@@ -5,7 +5,7 @@ on:
 
 jobs:
 
-  nose-2.7:
+  nose-2_7:
     runs-on: ubuntu-latest
     container: python:2.7
     steps:

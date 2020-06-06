@@ -486,6 +486,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [PyRadio](http://www.coderholic.com/pyradio/)
 - [Querious](http://www.araelium.com/querious/)
 - [Quicksilver](http://qsapp.com/)
+- [Quitter](https://marco.org/apps)
 - [Qutebrowser](http://qutebrowser.org/)
 - [R](http://www.r-project.org/)
 - [Rails](http://rubyonrails.org/)

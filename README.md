@@ -311,7 +311,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Gmail Notifr](http://ashchan.com/projects/gmail-notifr)
 - [GMVault](http://gmvault.org/)
 - [Gnome SSH Tunnel Manager](http://sourceforge.net/projects/gstm/)
-- [GnuPG](https://www.gnupg.org/) (NOTE: includes private keys)
+- [GnuPG](https://www.gnupg.org/)
 - [Go2Shell](http://zipzapmac.com/Go2Shell)
 - [GoLand](https://www.jetbrains.com/go/)
 - [Goldendict](http://goldendict.org/)

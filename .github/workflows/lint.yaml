@@ -1,16 +1,9 @@
-name: Mackup
+name: Lint Python
 on:
   - pull_request
   - push
 
 jobs:
-
-  mdl:
-    runs-on: ubuntu-latest
-    container: rsrchboy/mdl
-    steps:
-      - uses: actions/checkout@v2
-      - run: mdl .
 
   black:
     runs-on: ubuntu-latest

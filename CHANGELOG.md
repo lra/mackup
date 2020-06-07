@@ -1,6 +1,7 @@
 # Mackup Changelog
 
 ## WIP
+
 - Added support for clashX (via @awkj)
 
 ## Mackup 0.8.29

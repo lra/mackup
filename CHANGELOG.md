@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for clashX (via @awkj)
+
 ## Mackup 0.8.29
 
 - Added support for waybar (via @mk-atlassian)

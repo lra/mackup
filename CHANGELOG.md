@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for clashX (via @awkj)
+- Added support for Brave (via @cbenv)
 
 ## Mackup 0.8.29
 

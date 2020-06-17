@@ -40,7 +40,10 @@ class ApplicationProfile(object):
         Returns:
             home_filepath, mackup_filepath (str, str)
         """
-        return os.path.join(os.environ['HOME'], filename), os.path.join(self.mackup.mackup_folder, filename)
+        return (
+            os.path.join(os.environ['HOME'], filename),
+            os.path.join(self.mackup.mackup_folder, filename),
+        )
 
     def backup(self):
         """

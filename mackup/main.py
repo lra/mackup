@@ -15,6 +15,7 @@ Usage:
 Options:
   -h --help     Show this screen.
   -f --force    Force every question asked to be answered with "Yes".
+  -r --root     Allow mackup to be run as superuser.
   -n --dry-run  Show steps without executing.
   -v --verbose  Show additional details.
   --version     Show version.
@@ -67,11 +68,15 @@ def main():
 
     def printAppHeader(app_name):
         if verbose:
-            print (("\n{0} {1} {0}").format(header("---"), bold(app_name)))
+            print(("\n{0} {1} {0}").format(header("---"), bold(app_name)))
 
     # If we want to answer mackup with "yes" for each question
     if args["--force"]:
         utils.FORCE_YES = True
+
+    # Allow mackup to be run as root
+    if args["--root"]:
+        utils.CAN_RUN_AS_ROOT = True
 
     dry_run = args["--dry-run"]
 
@@ -152,7 +157,7 @@ def main():
             # uninstalled yet
             # delete(mckp.mackup_folder)
 
-            print (
+            print(
                 "\n"
                 "All your files have been put back into place. You can now"
                 " safely uninstall Mackup.\n"
@@ -170,7 +175,7 @@ def main():
         output += "{} applications supported in Mackup v{}".format(
             len(app_db.get_app_names()), VERSION
         )
-        print (output)
+        print(output)
 
     elif args["show"]:
         mckp.check_for_usable_environment()
@@ -179,10 +184,10 @@ def main():
         # Make sure the app exists
         if app_name not in app_db.get_app_names():
             sys.exit("Unsupported application: {}".format(app_name))
-        print ("Name: {}".format(app_db.get_name(app_name)))
-        print ("Configuration files:")
+        print("Name: {}".format(app_db.get_name(app_name)))
+        print("Configuration files:")
         for file in app_db.get_files(app_name):
-            print (" - {}".format(file))
+            print(" - {}".format(file))
 
     # Delete the tmp folder
     mckp.clean_temp_folder()

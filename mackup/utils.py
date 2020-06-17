@@ -335,11 +335,11 @@ def remove_acl(path):
                     recursively.
     """
     # Some files have ACLs, let's remove them recursively
-    if (platform.system() == constants.PLATFORM_DARWIN and
-            os.path.isfile('/bin/chmod')):
+    if platform.system() == constants.PLATFORM_DARWIN and \
+            os.path.isfile('/bin/chmod'):
         subprocess.call(['/bin/chmod', '-R', '-N', path])
-    elif ((platform.system() == constants.PLATFORM_LINUX) and
-            os.path.isfile('/bin/setfacl')):
+    elif platform.system() == constants.PLATFORM_LINUX and \
+            os.path.isfile('/bin/setfacl'):
         subprocess.call(['/bin/setfacl', '-R', '-b', path])
 
 
@@ -356,10 +356,10 @@ def remove_immutable_attribute(path):
                     attribute for, recursively.
     """
     # Some files have ACLs, let's remove them recursively
-    if platform.system() == constants.PLATFORM_DARWIN and
+    if platform.system() == constants.PLATFORM_DARWIN and \
             os.path.isfile('/usr/bin/chflags'):
         subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', path])
-    elif platform.system() == constants.PLATFORM_LINUX and
+    elif platform.system() == constants.PLATFORM_LINUX and \
             os.path.isfile('/usr/bin/chattr'):
         subprocess.call(['/usr/bin/chattr', '-R', '-f', '-i', path])
 

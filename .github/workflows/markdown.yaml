@@ -1,0 +1,13 @@
+name: Lint Markdown
+on:
+  - pull_request
+  - push
+
+jobs:
+
+  mdl:
+    runs-on: ubuntu-latest
+    container: rsrchboy/mdl
+    steps:
+      - uses: actions/checkout@v2
+      - run: mdl .

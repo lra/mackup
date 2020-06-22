@@ -4,6 +4,7 @@
 
 - Added support for clashX (via @awkj)
 - Added support for Brave (via @cbenv)
+- Added support for Nushell (via @leesiongchan)
 
 ## Mackup 0.8.29
 

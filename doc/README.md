@@ -157,10 +157,12 @@ The stock application configs are in the `mackup/applications` directory.
 Remember to follow the guidelines in [CONTRIBUTING.md](https://github.com/lra/mackup/blob/master/.github/CONTRIBUTING.md)
 to get your Pull Request merged faster.
 
-### Add support for an application or any file or directory
+### Add support for an application or (almost) any file or directory
 
 You can customize the Mackup engine and add support for unsupported
 applications or just custom files and directories you'd like to sync.
+
+NOTE: Files and directory to be synced should be rooted at $HOME.
 
 Let's say that you'd like to add support for Nethack (config file:
 `.nethackrc`) and for the `bin` and `.hidden` directories you keep in your

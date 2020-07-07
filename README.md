@@ -169,6 +169,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Adobe Illustrator CC](https://www.adobe.com/products/illustrator.html)
 - [Adobe Photoshop CC](http://www.adobe.com/products/photoshop.html)
 - [Adobe Photoshop Lightroom CC](https://www.adobe.com/products/photoshop-lightroom.html)
+- [aerc](https://aerc-mail.org/)
 - [Airmail](http://airmailapp.com/)
 - [Alacritty](https://github.com/jwilm/alacritty)
 - [Amethyst](https://ianyh.com/amethyst/)

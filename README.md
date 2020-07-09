@@ -525,6 +525,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Secure Pipes](http://www.opoet.com/)
 - [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
 - [SelfControl](http://selfcontrolapp.com/)
+- [Sequel Ace](https://github.com/Sequel-Ace/Sequel-Ace)
 - [Sequel Pro](http://www.sequelpro.com/)
 - [ShiftIt](https://github.com/fikovnik/ShiftIt)
 - [Shifty](https://shifty.natethompson.io/)

@@ -7,6 +7,7 @@
 - Added support for Nushell (via @leesiongchan)
 - Updated support for Clipy (via @jclerc)
 - Added support for aerc (via @Crocmagnon)
+- Added support for Sequel Pro (via @fly2279)
 
 ## Mackup 0.8.29
 

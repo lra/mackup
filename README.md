@@ -546,6 +546,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [SourceTree](https://www.sourcetreeapp.com/)
 - [SpaceLauncher](https://spacelauncherapp.com/)
 - [Spacemacs](https://github.com/syl20bnr/spacemacs)
+- [SpaceVim](https://github.com/SpaceVim/SpaceVim)
 - [Spark](http://www.shadowlab.org/softwares/spark.php)
 - [Spectacle](https://www.spectacleapp.com/)
 - [Spectrwm](https://github.com/conformal/spectrwm/wiki)

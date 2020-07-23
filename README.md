@@ -280,6 +280,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Environmental Station Alpha](http://www.hempuli.com/esa/)
 - [eqMac2](https://bitgapp.com/eqmac/)
 - [ESLint](https://eslint.org/)
+- [espanso](https://espanso.org)
 - [Exercism](http://exercism.io/)
 - [ExpanDrive](http://www.expandrive.com/)
 - [Factorio](https://www.factorio.com)

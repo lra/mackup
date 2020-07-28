@@ -370,6 +370,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Karabiner](https://pqrs.org/osx/karabiner/)
 - [Kdenlive](https://kdenlive.org/)
 - [KeePassX](http://www.keepassx.org/)
+- [KeePassXC](https://keepassxc.org/)
 - [KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake)
 - [Keka](http://www.kekaosx.com/en/)
 - [Keybase](https://keybase.io/)

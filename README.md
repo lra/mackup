@@ -364,6 +364,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Julia](http://julialang.org)
 - [Jumpcut](http://jumpcut.sourceforge.net/)
 - [Jupyter](http://jupyter.org/)
+- [k9s](http://k9scli.io/)
 - [Kaggle](https://kaggle.com/)
 - [Kaleidoscope](http://www.kaleidoscopeapp.com/)
 - [Karabiner Elements](https://github.com/tekezo/Karabiner-Elements)

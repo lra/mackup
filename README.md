@@ -496,6 +496,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [R](http://www.r-project.org/)
 - [Rails](http://rubyonrails.org/)
 - [Ranger](https://ranger.github.io/)
+- [Rbenv](https://www.github.com/rbenv/rbenv)
 - [Rclone](https://rclone.org/)
 - [Rectangle](https://rectangleapp.com/)
 - [Redshift Scheduler](https://github.com/spantaleev/redshift-scheduler)

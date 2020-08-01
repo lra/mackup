@@ -1,7 +1,8 @@
 """Package used to manage the .mackup.cfg config file."""
 
-import os
+import logging
 import os.path
+import pathlib
 
 from .constants import (
     CUSTOM_APPS_DIR,
@@ -28,21 +29,23 @@ except ImportError:
     import ConfigParser as configparser
 
 
+
+logger = logging.getLogger(__name__)
+
+
 class Config(object):
 
     """The Mackup Config class."""
 
-    def __init__(self, filename=None):
+    def __init__(self, config_path=None):
         """
         Create a Config instance.
 
         Args:
-            filename (str): Optional filename of the config file. If empty,
-                            defaults to MACKUP_CONFIG_FILE
+            config_path (str): Optional path to a mackup config file.
         """
 
         # Initialize the parser
-        config_path = self._resolve_config_path(filename)
         self._parser = self._setup_parser(config_path)
 
         # Do we have an old config file ?
@@ -132,35 +135,52 @@ class Config(object):
         return set(self._apps_to_sync)
 
     @classmethod
-    def _resolve_config_path(cls, filename):
+    def _resolve_config_path(cls, filename=None):
         """
         Resolve the optional, user-supplied path to a Mackup config file. If
-        none supplied, defaults to returning MACKUP_CONFIG_FILE.
+        none supplied, defaults to looking for MACKUP_CONFIG_FILE in the user's
+        home directory.
+
+        Returns:
+            str, or None if filename doesn't exist
         """
+        file_exists = lambda p: os.path.isfile(p)
+
         if filename is None:
-            return os.path.join(os.environ["HOME"], MACKUP_CONFIG_FILE)
+            # use $HOME, instead of pathlib.Path.home, to preserve existing behavior
+            # (some unit tests rely on monkeypatching that value)
+            path = os.path.join(os.environ["HOME"], MACKUP_CONFIG_FILE)
+            if file_exists(path):
+                return os.path.abspath(path)
+            else:
+                logger.warning(f"Default config file {path} not found, and no alternative filename given.")
+                return None
 
-        base_dirs = (os.environ["HOME"], os.getcwd(), "/")
-        for base_dir in base_dirs:
-            config_path = os.path.join(base_dir, filename)
-            if os.path.exists(config_path):
-                return config_path
+        possible_paths = [
+            os.path.expanduser(filename),
+            os.path.join(os.environ["HOME"], filename),
+            os.path.join(os.getcwd(), filename)
+        ]
+        path = next(filter(file_exists, possible_paths), None)
+        if path:
+            return os.path.abspath(path)
+        else:
+            logger.warning(f"Config file {filename} not found! Tried paths: {possible_paths}")
+            return None
 
-        message = "Couldn't find {} in {}".format(filename, base_dirs)
-        raise RuntimeError(message)
-
-    def _setup_parser(self, config_path):
+    def _setup_parser(self, config_path=None):
         """
         Configure the ConfigParser instance the way we want it.
 
         Args:
-            config_path (str)
-
+            config_path (str): Optional path to a mackup config file.
         Returns:
             SafeConfigParser
         """
         parser = configparser.SafeConfigParser(allow_no_value=True)
-        parser.read(config_path)
+        # call will return None if config_path doesn't exist
+        path = self._resolve_config_path(config_path) or ""
+        parser.read(path)
 
         return parser
 

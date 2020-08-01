@@ -1,5 +1,6 @@
 import unittest
 import os.path
+import pathlib
 import tempfile
 
 from mackup.constants import (
@@ -16,7 +17,7 @@ from mackup.config import Config, ConfigError
 class TestConfig(unittest.TestCase):
     def setUp(self):
         realpath = os.path.dirname(os.path.realpath(__file__))
-        os.environ["HOME"] = os.path.join(realpath, "fixtures")
+        self.mock_home = os.environ["HOME"] = os.path.join(realpath, "fixtures")
 
     def test_config_no_config(self):
         cfg = Config()
@@ -235,40 +236,34 @@ class TestConfig(unittest.TestCase):
     def test_config_old_config(self):
         self.assertRaises(SystemExit, Config, "mackup-old-config.cfg")
 
-    def test_default_config_path_returned_if_none_supplied(self):
-        default_config_path = os.path.join(os.environ["HOME"],
-                                           MACKUP_CONFIG_FILE)
-        resolved_path = Config._resolve_config_path(None)
+    def test_resolve_config_path_returns_default_path_if_file_exists(self):
+        pass
 
-        assert resolved_path == default_config_path
+    def test_resolve_config_path_returns_none_if_default_config_file_nonexistent(self):
+        resolved_path = Config._resolve_config_path()
 
-    def test_resolves_config_path_relative_to_home_dir(self):
-        base_dir = os.environ["HOME"]
+        assert resolved_path is None
 
-        with tempfile.NamedTemporaryFile(dir=base_dir) as config_file:
-            relative_path = os.path.basename(config_file.name)
-            resolved_path = Config._resolve_config_path(relative_path)
+    def test_resolve_config_path_performs_tilde_expansion(self):
+        with tempfile.NamedTemporaryFile(dir=pathlib.Path.home()) as mock_cfg_file:
+            mock_filename = os.path.basename(mock_cfg_file.name)
+            filename = os.path.join("~", mock_filename)
+            resolved_path = Config._resolve_config_path(filename)
 
-            assert resolved_path == config_file.name
+            assert resolved_path == mock_cfg_file.name
+
+    def test_resolve_config_path_relative_to_home_dir(self):
+        with tempfile.NamedTemporaryFile(dir=self.mock_home) as mock_cfg_file:
+            mock_filename = os.path.basename(mock_cfg_file.name)
+            resolved_path = Config._resolve_config_path(mock_filename)
+
+            assert resolved_path == mock_cfg_file.name
 
     def test_resolves_config_path_relative_to_cwd(self):
-        base_dir = os.getcwd()
+        cwd = os.getcwd()
+        with tempfile.NamedTemporaryFile(dir=cwd) as mock_cfg_file:
+            mock_path = mock_cfg_file.name
+            mock_filename = os.path.basename(mock_cfg_file.name)
+            resolved_path = Config._resolve_config_path(mock_filename)
 
-        with tempfile.NamedTemporaryFile(dir=base_dir) as config_file:
-            relative_path = os.path.basename(config_file.name)
-            resolved_path = Config._resolve_config_path(relative_path)
-
-            assert resolved_path == config_file.name
-
-    def test_resolves_absolute_config_path(self):
-        base_dir = os.getcwd()
-
-        with tempfile.NamedTemporaryFile(dir=base_dir) as config_file:
-            resolved_path = Config._resolve_config_path(config_file.name)
-
-            assert resolved_path == config_file.name
-
-    def test_raises_file_not_found_for_nonexistent_config_path(self):
-        self.assertRaises(RuntimeError,
-                          Config._resolve_config_path,
-                          "/foo/bar")
+            assert resolved_path == mock_path

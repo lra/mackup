@@ -64,7 +64,7 @@ def main():
     # Get the command line arg
     args = docopt(__doc__, version="Mackup {}".format(VERSION))
 
-    mckp = Mackup(args['--config'])
+    mckp = Mackup(args["--config"])
     app_db = ApplicationsDatabase()
 
     def printAppHeader(app_name):

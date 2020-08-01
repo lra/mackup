@@ -29,7 +29,6 @@ except ImportError:
     import ConfigParser as configparser
 
 
-
 logger = logging.getLogger(__name__)
 
 
@@ -153,19 +152,23 @@ class Config(object):
             if file_exists(path):
                 return os.path.abspath(path)
             else:
-                logger.warning(f"Default config file {path} not found, and no alternative filename given.")
+                logger.warning(
+                    f"Default config file {path} not found, and no alternative filename given."
+                )
                 return None
 
         possible_paths = [
             os.path.expanduser(filename),
             os.path.join(os.environ["HOME"], filename),
-            os.path.join(os.getcwd(), filename)
+            os.path.join(os.getcwd(), filename),
         ]
         path = next(filter(file_exists, possible_paths), None)
         if path:
             return os.path.abspath(path)
         else:
-            logger.warning(f"Config file {filename} not found! Tried paths: {possible_paths}")
+            logger.warning(
+                f"Config file {filename} not found! Tried paths: {possible_paths}"
+            )
             return None
 
     def _setup_parser(self, config_path=None):

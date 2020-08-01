@@ -152,7 +152,9 @@ class Config(object):
                 return path
             else:
                 logger.warning(
-                    "Default config file {} not found, and no alternative filename given.".format(path)
+                    "Default config file {} not found, and no alternative filename given.".format(
+                        path
+                    )
                 )
                 return None
 
@@ -166,7 +168,9 @@ class Config(object):
             return path
         else:
             logger.warning(
-                "Config file {} not found! Tried paths: {}".format(filename, possible_paths)
+                "Config file {} not found! Tried paths: {}".format(
+                    filename, possible_paths
+                )
             )
             return None
 

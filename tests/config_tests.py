@@ -1,6 +1,5 @@
 import unittest
 import os.path
-import pathlib
 import tempfile
 
 from mackup.constants import (
@@ -245,7 +244,7 @@ class TestConfig(unittest.TestCase):
         assert resolved_path is None
 
     def test_resolve_config_path_performs_tilde_expansion(self):
-        with tempfile.NamedTemporaryFile(dir=pathlib.Path.home()) as mock_cfg_file:
+        with tempfile.NamedTemporaryFile(dir=os.path.expanduser("~")) as mock_cfg_file:
             mock_filename = os.path.basename(mock_cfg_file.name)
             filename = os.path.join("~", mock_filename)
             resolved_path = Config._resolve_config_path(filename)

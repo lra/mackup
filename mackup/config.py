@@ -2,7 +2,6 @@
 
 import logging
 import os.path
-import pathlib
 
 from .constants import (
     CUSTOM_APPS_DIR,

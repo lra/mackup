@@ -147,12 +147,12 @@ class Config(object):
         if filename is None:
             # use $HOME, instead of pathlib.Path.home, to preserve existing behavior
             # (some unit tests rely on monkeypatching that value)
-            path = os.path.join(os.environ["HOME"], MACKUP_CONFIG_FILE)
+            path = os.path.abspath(os.path.join(os.environ["HOME"], MACKUP_CONFIG_FILE))
             if file_exists(path):
-                return os.path.abspath(path)
+                return path
             else:
                 logger.warning(
-                    f"Default config file {path} not found, and no alternative filename given."
+                    "Default config file {} not found, and no alternative filename given.".format(path)
                 )
                 return None
 
@@ -161,12 +161,12 @@ class Config(object):
             os.path.join(os.environ["HOME"], filename),
             os.path.join(os.getcwd(), filename),
         ]
-        path = next(filter(file_exists, possible_paths), None)
+        path = os.path.abspath(next(filter(file_exists, possible_paths), None))
         if path:
-            return os.path.abspath(path)
+            return path
         else:
             logger.warning(
-                f"Config file {filename} not found! Tried paths: {possible_paths}"
+                "Config file {} not found! Tried paths: {}".format(filename, possible_paths)
             )
             return None
 

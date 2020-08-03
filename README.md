@@ -408,6 +408,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [MATLAB](http://www.mathworks.com/products/matlab/)
 - [Maven](http://maven.apache.org)
 - [Max](http://sbooth.org/Max/)
+- [Mendeley Desktop](https://www.mendeley.com)
 - [MenuMeters](http://www.ragingmenace.com/software/menumeters/)
 - [Mercurial](https://www.mercurial-scm.org/)
 - [MercuryMover](http://www.heliumfoot.com/mercurymover/)

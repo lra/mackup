@@ -201,6 +201,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Bat](https://github.com/sharkdp/bat)
 - [Bc](https://www.gnu.org/software/bc/)
 - [Beatport Pro](https://www.beatport.com/desktop)
+- [Beets](http://beets.io/)
 - [BetterSnapTool](http://www.boastr.net/)
 - [BetterTouchTool](http://www.boastr.net/)
 - [BibDesk](http://bibdesk.sourceforge.net/)

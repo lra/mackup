@@ -228,6 +228,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Choosy](https://www.choosyosx.com/)
 - [chunkwm](https://github.com/koekeishiya/chunkwm)
 - [Cider](https://github.com/msanders/cider)
+- [Clash](https://github.com/Dreamacro/clash)
 - [ClashX](https://github.com/yichengchen/clashX)
 - [Clasp](https://github.com/google/clasp)
 - [Clementine](https://www.clementine-player.org/)

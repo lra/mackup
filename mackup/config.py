@@ -163,7 +163,8 @@ class Config(object):
             os.path.join(os.environ["HOME"], filename),
             os.path.join(os.getcwd(), filename),
         ]
-        path = os.path.abspath(next(filter(file_exists, possible_paths), None))
+        # iter() call for Python2 compatibility (filter() returns a list in Python2)
+        path = os.path.abspath(next(iter(filter(file_exists, possible_paths)), None))
         if path:
             return path
         else:

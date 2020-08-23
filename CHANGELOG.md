@@ -2,11 +2,15 @@
 
 ## WIP
 
+- Added support for SpaceVim (via @ionlights)
 - Added support for clashX (via @awkj)
 - Added support for Brave (via @cbenv)
 - Added support for Nushell (via @leesiongchan)
 - Updated support for Clipy (via @jclerc)
 - Added support for aerc (via @Crocmagnon)
+- Added support for espanso (via @maxandersen)
+- Added support for WebStorm versions 2019.4, 2020.2, 2020.3, 2020.4 (via @bdcarr)
+- Added support for Beets (via @publicarray)
 
 ## Mackup 0.8.29
 

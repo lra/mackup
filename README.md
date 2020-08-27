@@ -379,6 +379,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [KeyRemap4MacBook](https://pqrs.org/osx/karabiner/)
 - [Khd](https://github.com/koekeishiya/khd/)
 - [kitty](https://sw.kovidgoyal.net/kitty/)
+- [Krew](https://github.com/kubernetes-sigs/krew)
 - [Kubectl](https://kubernetes.io/docs/reference/kubectl/overview/)
 - [Kwm](https://koekeishiya.github.io/kwm/)
 - [LaTeXiT](http://www.chachatelier.fr/latexit/latexit-home.php?lang=en)

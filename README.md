@@ -334,6 +334,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [HexChat](https://hexchat.github.io/)
 - [Hexels](http://hexraystudios.com/hexels/)
 - [Homebridge](https://github.com/nfarina/homebridge)
+- [Homebrew](https://brew.sh)
 - [Houdini](http://uglyapps.co.uk/houdini/)
 - [Hstr](https://github.com/dvorka/hstr)
 - [Htop](http://htop.sourceforge.net/)

@@ -11,6 +11,9 @@
 - Added support for aerc (via @Crocmagnon)
 - Added support for espanso (via @maxandersen)
 - Added support for WebStorm versions 2019.4, 2020.2, 2020.3, 2020.4 (via @bdcarr)
+- Added support for Beets (via @publicarray)
+- Added support for Krew (via @exherb)
+- Added support for Homebrew (via @exherb)
 
 ## Mackup 0.8.29
 

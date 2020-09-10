@@ -13,6 +13,7 @@
 - Added support for Beets (via @publicarray)
 - Added support for Krew (via @exherb)
 - Added support for Homebrew (via @exherb)
+- Fixed support for poetry (via @ameyuuno)
 
 ## Mackup 0.8.29
 

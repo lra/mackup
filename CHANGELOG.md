@@ -14,6 +14,7 @@
 - Added support for Krew (via @exherb)
 - Added support for Homebrew (via @exherb)
 - Fixed support for poetry (via @ameyuuno)
+- Added support for Netlify (via @pgilad)
 
 ## Mackup 0.8.29
 

@@ -366,6 +366,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Julia](http://julialang.org)
 - [Jumpcut](http://jumpcut.sourceforge.net/)
 - [Jupyter](http://jupyter.org/)
+- [K9s](https://github.com/derailed/k9s)
 - [Kaggle](https://kaggle.com/)
 - [Kaleidoscope](http://www.kaleidoscopeapp.com/)
 - [Karabiner Elements](https://github.com/tekezo/Karabiner-Elements)
@@ -482,6 +483,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [PostgreSQL](http://www.postgresql.org/)
 - [Postico](https://eggerapps.at/postico/)
 - [Pow](http://pow.cx/)
+- [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [Powerline](https://github.com/powerline/powerline)
 - [Powerline-shell](https://github.com/b-ryan/powerline-shell)
 - [Prezto](https://github.com/sorin-ionescu/prezto)
@@ -643,8 +645,6 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [zathura](https://pwmt.org/projects/zathura/)
 - [Zsh](http://zsh.sourceforge.net/)
 - [Übersicht](http://tracesof.net/uebersicht/)
-- [K9s](https://github.com/derailed/k9s)
-- [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
 ## Can you support application X
 

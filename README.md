@@ -643,6 +643,8 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [zathura](https://pwmt.org/projects/zathura/)
 - [Zsh](http://zsh.sourceforge.net/)
 - [Übersicht](http://tracesof.net/uebersicht/)
+- [K9s](https://github.com/derailed/k9s)
+- [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
 ## Can you support application X
 

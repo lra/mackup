@@ -15,6 +15,8 @@
 - Added support for Homebrew (via @exherb)
 - Fixed support for poetry (via @ameyuuno)
 - Added support for Netlify (via @pgilad)
+- Added support for K9s (via @tareksamni)
+- Added support for Powerlevel10k (via @tareksamni)
 
 ## Mackup 0.8.29
 

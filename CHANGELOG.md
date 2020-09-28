@@ -13,6 +13,7 @@
 - Added support for Beets (via @publicarray)
 - Added support for Krew (via @exherb)
 - Added support for Homebrew (via @exherb)
+- Added support for PyCharm versions 2020.2, 2020.3, 2020.4 (via @ameyuuno)
 - Added support for Netlify (via @pgilad)
 - Added support for K9s (via @tareksamni)
 - Added support for Powerlevel10k (via @tareksamni)

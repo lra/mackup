@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added support for Hidden Bar (via @tddschn)
 - Added support for SpaceVim (via @ionlights)
 - Added support for clashX (via @awkj)
 - Added support for Brave (via @cbenv)

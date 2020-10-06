@@ -333,6 +333,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Heroku](https://www.heroku.com/)
 - [HexChat](https://hexchat.github.io/)
 - [Hexels](http://hexraystudios.com/hexels/)
+- [Hidden Bar](https://github.com/dwarvesf/hidden/)
 - [Homebridge](https://github.com/nfarina/homebridge)
 - [Homebrew](https://brew.sh)
 - [Houdini](http://uglyapps.co.uk/houdini/)

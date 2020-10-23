@@ -17,14 +17,14 @@ brew install mackup
 mackup -h
 ```
 
-### Want to install latest master releases instead of waiting on homebrew package version?
+### Want to install latest master releases instead of waiting on homebrew package version
 
 [Homebrew reference](https://docs.brew.sh/Manpage#install-options-formulacask)
 
 ```bash
-# 
+# Install master
 brew install --HEAD
-# 
+# Check if are using the master or stale package
 brew switch mackup <HEAD-XXXX>
 
 mackup -h

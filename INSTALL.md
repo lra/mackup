@@ -19,8 +19,8 @@ mackup -h
 
 ### Want to install latest master releases instead of waiting on homebrew package version?
 
-
 [Homebrew reference](https://docs.brew.sh/Manpage#install-options-formulacask)
+
 ```bash
 # 
 brew install --HEAD

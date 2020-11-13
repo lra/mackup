@@ -439,6 +439,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Nano](http://www.nano-editor.org/)
 - [Navicat](http://navicat.com/)
 - [ncmpcpp](http://rybczak.net/ncmpcpp/)
+- [Neofetch](https://github.com/dylanaraps/neofetch)
 - [neovim](https://github.com/neovim/neovim)
 - [Nethack](http://www.nethack.org)
 - [Netlify](https://www.netlify.com/)

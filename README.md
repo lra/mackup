@@ -500,6 +500,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Quicksilver](http://qsapp.com/)
 - [Quitter](https://marco.org/apps)
 - [Qutebrowser](http://qutebrowser.org/)
+- [Qv2ray](https://qv2ray.net/)
 - [R](http://www.r-project.org/)
 - [Rails](http://rubyonrails.org/)
 - [Ranger](https://ranger.github.io/)

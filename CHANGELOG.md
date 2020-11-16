@@ -19,7 +19,6 @@
 - Added support for Powerlevel10k (via @tareksamni)
 - Added support for rubiTrack 5 (via @otherguy)
 
-
 ## Mackup 0.8.29
 
 - Added support for waybar (via @mk-atlassian)

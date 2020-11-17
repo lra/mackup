@@ -447,6 +447,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Nomacs](http://nomacs.org/)
 - [NoSQLBooster for MongoDB](https://www.nosqlbooster.com/)
 - [npm](https://www.npmjs.com/)
+- [npmrc](https://github.com/deoxxa/npmrc/)
 - [Nushell](https://www.nushell.sh/)
 - [nvALT](http://brettterpstra.com/projects/nvalt/)
 - [nvpy](https://github.com/cpbotha/nvpy)

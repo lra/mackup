@@ -389,6 +389,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [LaunchBar](https://www.obdev.at/products/launchbar/index.html)
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [Ledger](http://ledger-cli.org)
+- [lf](https://github.com/gokcehan/lf)
 - [LibreOffice](https://www.libreoffice.org/)
 - [Liftoff](https://github.com/thoughtbot/liftoff)
 - [Light Table](http://lighttable.com/)

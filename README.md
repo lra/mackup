@@ -453,7 +453,6 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [nvpy](https://github.com/cpbotha/nvpy)
 - [Oh My Fish](https://github.com/bpinto/oh-my-fish)
 - [Oh My Tmux](https://github.com/gpakosz/.tmux)
-- [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [OmniFocus](https://www.omnigroup.com/omnifocus/)
 - [OmniGraffle](https://www.omnigroup.com/omnigraffle/)
 - [Openbox](http://openbox.org)
@@ -504,6 +503,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [R](http://www.r-project.org/)
 - [Rails](http://rubyonrails.org/)
 - [Ranger](https://ranger.github.io/)
+- [Raycast](https://raycast.com/)
 - [Rclone](https://rclone.org/)
 - [Rectangle](https://rectangleapp.com/)
 - [Redshift Scheduler](https://github.com/spantaleev/redshift-scheduler)
@@ -645,6 +645,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Yummy FTP](http://www.yummysoftware.com/)
 - [zabbix-cli](https://github.com/usit-gd/zabbix-cli)
 - [zathura](https://pwmt.org/projects/zathura/)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [Zsh](http://zsh.sourceforge.net/)
 - [Übersicht](http://tracesof.net/uebersicht/)
 

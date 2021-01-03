@@ -284,6 +284,9 @@ def get_icloud_folder_location():
     Returns:
         (str) Full path to the iCloud Drive folder.
     """
+    if platform.system() != 'Darwin':
+        error("iCloud is only supported on macOS")
+        
     yosemite_icloud_path = "~/Library/Mobile Documents/com~apple~CloudDocs/"
 
     icloud_home = os.path.expanduser(yosemite_icloud_path)

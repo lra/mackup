@@ -9,15 +9,21 @@
 - Updated support for Clipy (via @jclerc)
 - Added support for aerc (via @Crocmagnon)
 - Added support for espanso (via @maxandersen)
+- Added support for lazygit (via @joshmedeski)
 - Added support for WebStorm versions 2019.4, 2020.2, 2020.3, 2020.4 (via @bdcarr)
 - Added support for draft (via @dfang)
 - Added support for lf (via @joshmedeski)
 - Added support for Beets (via @publicarray)
 - Added support for Krew (via @exherb)
 - Added support for Homebrew (via @exherb)
+- Added support for PyCharm versions 2020.2, 2020.3, 2020.4 (via @ameyuuno)
 - Added support for Netlify (via @pgilad)
 - Added support for K9s (via @tareksamni)
 - Added support for Powerlevel10k (via @tareksamni)
+- Updated support for aria2 (via @hongqn)
+- Update support for IntelliJ (via @scooby)
+- Added support for zoxide (via @kidonng)
+- Added support for Raycast (via @janniks)
 
 ## Mackup 0.8.29
 

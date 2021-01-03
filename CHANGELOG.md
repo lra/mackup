@@ -17,6 +17,9 @@
 - Added support for Netlify (via @pgilad)
 - Added support for K9s (via @tareksamni)
 - Added support for Powerlevel10k (via @tareksamni)
+- Updated support for aria2 (via @hongqn)
+- Update support for IntelliJ (via @scooby)
+- Added support for zoxide (via @kidonng)
 
 ## Mackup 0.8.29
 

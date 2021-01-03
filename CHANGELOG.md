@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.30
+
 - Added support for SpaceVim (via @ionlights)
 - Added support for clashX (via @awkj)
 - Added support for Brave (via @cbenv)

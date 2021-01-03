@@ -2,6 +2,10 @@
 
 ## WIP
 
+## Mackup 0.8.31
+
+- Fixed an issue due to a duplicate entry in the webstorm config
+
 ## Mackup 0.8.30
 
 - Added support for SpaceVim (via @ionlights)

@@ -20,6 +20,7 @@
 - Updated support for aria2 (via @hongqn)
 - Update support for IntelliJ (via @scooby)
 - Added support for zoxide (via @kidonng)
+- Added support for Raycast (via @janniks)
 
 ## Mackup 0.8.29
 

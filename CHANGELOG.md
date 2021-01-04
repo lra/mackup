@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Fixed support for poetry (via @ameyuuno)
+
 ## Mackup 0.8.32
 
 - Fixed an issue due to a duplicate entry in the intellijidea config

@@ -3,6 +3,7 @@
 ## WIP
 
 - Fixed support for poetry (via @ameyuuno)
+- Added support for npm package npmrc (via @jdvivar)
 
 ## Mackup 0.8.32
 

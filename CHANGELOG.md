@@ -2,6 +2,11 @@
 
 ## WIP
 
+## Mackup 0.8.32
+
+- Fixed an issue due to a duplicate entry in the intellijidea config
+- Added support for Visual Studio for Mac version 8 (via @Qythyx)
+
 ## Mackup 0.8.31
 
 - Fixed an issue due to a duplicate entry in the webstorm config

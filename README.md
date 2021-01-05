@@ -518,6 +518,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Royal TSX](http://www.royaltsx.com/ts/osx/features)
 - [RStudio](https://www.rstudio.com/)
 - [rTorrent](http://libtorrent.rakshasa.no/)
+- [rubiTrack 5](https://www.rubitrack.com)
 - [Rubocop](https://github.com/bbatsov/rubocop)
 - [Ruby Version Manager](https://rvm.io/)
 - [Ruby Version](https://gist.github.com/fnichol/1912050)

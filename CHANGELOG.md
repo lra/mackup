@@ -5,6 +5,7 @@
 - Fixed support for poetry (via @ameyuuno)
 - Added support for npm package npmrc (via @jdvivar)
 - Added support for rubiTrack 5 (via @otherguy)
+- Updated support for Fisher (via @kidonng)
 
 ## Mackup 0.8.32
 

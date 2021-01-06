@@ -6,6 +6,7 @@
 - Added support for npm package npmrc (via @jdvivar)
 - Added support for rubiTrack 5 (via @otherguy)
 - Updated support for Fisher (via @kidonng)
+- Added support for Qv2ray (via @kidonng)
 
 ## Mackup 0.8.32
 

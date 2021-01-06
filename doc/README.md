@@ -121,6 +121,9 @@ ssh
 adium
 ```
 
+Use `mackup list` to get a list of valid application names. Don't use fancy
+names (with spaces) here.
+
 A [sample](.mackup.cfg) of this file is available in this folder. Just copy it
 in your home folder:
 
@@ -139,6 +142,9 @@ names to ignore in the `[applications_to_ignore]` section, one by line.
 ssh
 adium
 ```
+
+Use `mackup list` to get a list of valid application names. Don't use fancy
+names (with spaces) here.
 
 A [sample](.mackup.cfg) of this file is available in this folder. Just copy it
 in your home folder:

@@ -8,6 +8,7 @@
 - Updated support for Fisher (via @kidonng)
 - Added support for Qv2ray (via @kidonng)
 - Added support for Neofetch (via @kidonng)
+- Added support for PsySH (via @nesk)
 
 ## Mackup 0.8.32
 

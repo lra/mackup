@@ -156,7 +156,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 
 ## Unsupported Storages
 
-- [Box](https://www.box.com): No longer supported is it ignores dotfiles, see
+- [Box](https://www.box.com): No longer supported as it ignores dotfiles, see
   <https://github.com/lra/mackup/issues/807>.
 
 ## Supported Applications

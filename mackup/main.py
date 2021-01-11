@@ -42,20 +42,14 @@ from .constants import MACKUP_APP_NAME, VERSION
 from .mackup import Mackup
 from . import utils
 import sys
-
-
-class ColorFormatCodes:
-    BLUE = "\033[34m"
-    BOLD = "\033[1m"
-    NORMAL = "\033[0m"
-
-
-def header(str):
-    return ColorFormatCodes.BLUE + str + ColorFormatCodes.NORMAL
-
-
-def bold(str):
-    return ColorFormatCodes.BOLD + str + ColorFormatCodes.NORMAL
+from mackup.colorize import (
+    colorize_text,
+    colorize_filename,
+    colorize_name,
+    colorize_item_bullet,
+    colorize_header,
+    colorize_header_app_name,
+)
 
 
 def main():
@@ -68,7 +62,14 @@ def main():
 
     def printAppHeader(app_name):
         if verbose:
-            print(("\n{0} {1} {0}").format(header("---"), bold(app_name)))
+            print(
+                "\n"
+                + colorize_header("---")
+                + " "
+                + colorize_header_app_name(app_name)
+                + " "
+                + colorize_header("---")
+            )
 
     # If we want to answer mackup with "yes" for each question
     if args["--force"]:
@@ -125,11 +126,13 @@ def main():
 
         if dry_run or (
             utils.confirm(
-                "You are going to uninstall Mackup.\n"
-                "Every configuration file, setting and dotfile"
-                " managed by Mackup will be unlinked and moved back"
-                " to their original place, in your home folder.\n"
-                "Are you sure ?"
+                colorize_text(
+                    "You are going to uninstall Mackup.\n"
+                    "Every configuration file, setting and dotfile"
+                    " managed by Mackup will be unlinked and moved back"
+                    " to their original place, in your home folder.\n"
+                    "Are you sure ?"
+                )
             )
         ):
 
@@ -158,22 +161,26 @@ def main():
             # delete(mckp.mackup_folder)
 
             print(
-                "\n"
-                "All your files have been put back into place. You can now"
-                " safely uninstall Mackup.\n"
-                "\n"
-                "Thanks for using Mackup !"
+                colorize_text(
+                    "\n"
+                    "All your files have been put back into place. You can now"
+                    " safely uninstall Mackup.\n"
+                    "\n"
+                    "Thanks for using Mackup !"
+                )
             )
 
     elif args["list"]:
         # Display the list of supported applications
         mckp.check_for_usable_environment()
-        output = "Supported applications:\n"
+        output = colorize_text("Supported applications:") + "\n"
         for app_name in sorted(app_db.get_app_names()):
-            output += " - {}\n".format(app_name)
+            output += colorize_item_bullet(" - ") + colorize_filename(app_name) + "\n"
         output += "\n"
-        output += "{} applications supported in Mackup v{}".format(
-            len(app_db.get_app_names()), VERSION
+        output += colorize_text(
+            "{} applications supported in Mackup v{}".format(
+                len(app_db.get_app_names()), VERSION
+            )
         )
         print(output)
 
@@ -184,10 +191,10 @@ def main():
         # Make sure the app exists
         if app_name not in app_db.get_app_names():
             sys.exit("Unsupported application: {}".format(app_name))
-        print("Name: {}".format(app_db.get_name(app_name)))
-        print("Configuration files:")
+        print(colorize_text("Name: ") + colorize_name(app_db.get_name(app_name)))
+        print(colorize_text("Configuration files:"))
         for file in app_db.get_files(app_name):
-            print(" - {}".format(file))
+            print(colorize_item_bullet(" - ") + colorize_filename(file))
 
     # Delete the tmp folder
     mckp.clean_temp_folder()

@@ -212,7 +212,7 @@ def get_dropbox_folder_location():
         with open(host_db_path, 'r') as f_hostdb:
             data = f_hostdb.read().split()
     except IOError:
-        error("Unable to find your Dropbox install =(")
+        error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="Dropbox install"))
     dropbox_home = base64.b64decode(data[1]).decode()
 
     return dropbox_home
@@ -249,7 +249,11 @@ def get_google_drive_folder_location():
             con.close()
 
     if not googledrive_home:
-        error("Unable to find your Google Drive install =(")
+        error(
+            constants.ERROR_UNABLE_TO_FIND_STORAGE.format(
+                provider="Google Drive install"
+            )
+        )
 
     return googledrive_home
 
@@ -279,7 +283,7 @@ def get_copy_folder_location():
             cur.close()
 
     if not copy_home:
-        error("Unable to find your Copy install =(")
+        error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="Copy install"))
 
     return copy_home
 
@@ -296,7 +300,7 @@ def get_icloud_folder_location():
     icloud_home = os.path.expanduser(yosemite_icloud_path)
 
     if not os.path.isdir(icloud_home):
-        error('Unable to find your iCloud Drive =(')
+        error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="iCloud Drive"))
 
     return str(icloud_home)
 

@@ -9,6 +9,7 @@
 - Added support for Qv2ray (via @kidonng)
 - Added support for Neofetch (via @kidonng)
 - Added support for PsySH (via @nesk)
+- Added support for polybar(via @jneo8)
 
 ## Mackup 0.8.32
 

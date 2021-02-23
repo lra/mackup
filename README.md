@@ -294,6 +294,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Finicky](https://github.com/johnste/finicky)
 - [Fish](http://fishshell.com/)
 - [Fisher](https://github.com/jorgebucaran/fisher)
+- [Flake8](https://flake8.pycqa.org/)
 - [FlexGet](http://flexget.com/)
 - [Flux](https://justgetflux.com/)
 - [Focus](https://heyfocus.com)

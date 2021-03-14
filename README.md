@@ -592,6 +592,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [TextMate](http://macromates.com/)
 - [Textual](http://www.codeux.com/textual/)
 - [Tig](https://github.com/jonas/tig)
+- [Tiles](https://www.sempliva.com/tiles/)
 - [Tilix](https://github.com/gnunn1/tilix)
 - [Timeout](https://www.dejal.com/timeout/)
 - [tint2](https://code.google.com/p/tint2/)

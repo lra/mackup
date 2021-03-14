@@ -9,6 +9,8 @@
 - Added support for Qv2ray (via @kidonng)
 - Added support for Neofetch (via @kidonng)
 - Added support for PsySH (via @nesk)
+- Added support for MacOSX Saved Searches (via @damianoamatruda)
+- Added support for MacOSX Screen Capture (via @damianoamatruda)
 
 ## Mackup 0.8.32
 

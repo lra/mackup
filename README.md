@@ -346,6 +346,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [HyperSwitch](https://bahoom.com/hyperswitch)
 - [i2cssh](https://github.com/wouterdebie/i2cssh)
 - [i3](https://i3wm.org/)
+- [IDA Pro](https://www.hex-rays.com/products/ida/)
 - [IdeaVim](https://github.com/JetBrains/ideavim)
 - [IINA](https://iina.io)
 - [Inkscape](https://inkscape.org/)

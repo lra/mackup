@@ -398,6 +398,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [LittleSnitch](http://www.obdev.at/products/littlesnitch/)
 - [Livestreamer](http://livestreamer.tanuki.se/)
 - [Lollypop](https://gnumdk.github.io/lollypop-web/)
+- [Loopback](https://rogueamoeba.com/loopback/)
 - [Luftrausers](http://luftrausers.com)
 - [MacDive](http://www.mac-dive.com/)
 - [MacDown](http://macdown.uranusjr.com/)

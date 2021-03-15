@@ -275,6 +275,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Droplr](https://droplr.com/)
 - [Dropzone 3](https://aptonic.com/dropzone3/)
 - [Drush](http://www.drush.org/)
+- [Eagle (ogdesign)](https://eagle.cool/)
 - [EditorConfig](http://editorconfig.org/)
 - [Electrum](https://electrum.org/#home)
 - [Emacs](http://www.gnu.org/software/emacs/)

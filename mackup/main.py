@@ -127,7 +127,7 @@ def main():
             utils.confirm(
                 "You are going to uninstall Mackup.\n"
                 "Every configuration file, setting and dotfile"
-                " managed by Mackup will be unlinked and moved back"
+                " managed by Mackup will be unlinked and copied back"
                 " to their original place, in your home folder.\n"
                 "Are you sure ?"
             )

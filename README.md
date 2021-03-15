@@ -426,6 +426,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [mkcert](https://github.com/FiloSottile/mkcert)
 - [MonoDevelop](http://www.monodevelop.com)
 - [Moom](http://manytricks.com/moom/)
+- [Mosaic](https://lightpillar.com/mosaic.html)
 - [Mou](http://25.io/mou/)
 - [mpd](http://www.musicpd.org)
 - [MPlayerX](http://mplayerx.org)

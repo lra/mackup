@@ -454,6 +454,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Nushell](https://www.nushell.sh/)
 - [nvALT](http://brettterpstra.com/projects/nvalt/)
 - [nvpy](https://github.com/cpbotha/nvpy)
+- [OBS](https://obsproject.com)
 - [Oh My Fish](https://github.com/bpinto/oh-my-fish)
 - [Oh My Tmux](https://github.com/gpakosz/.tmux)
 - [OmniFocus](https://www.omnigroup.com/omnifocus/)

@@ -9,8 +9,7 @@
 - Added support for Qv2ray (via @kidonng)
 - Added support for Neofetch (via @kidonng)
 - Added support for PsySH (via @nesk)
-- Update uninstall prompt to say that Mackup is actually 
-copying the files back not moving them. (via @soneji)
+- Update uninstall prompt for accuracy (via @soneji)
 
 ## Mackup 0.8.32
 

@@ -129,7 +129,7 @@ def main():
                 "Every configuration file, setting and dotfile"
                 " managed by Mackup will be unlinked and moved back"
                 " to their original place, in your home folder.\n"
-                "Are you sure ?"
+                "Are you sure?"
             )
         ):
 
@@ -162,7 +162,7 @@ def main():
                 "All your files have been put back into place. You can now"
                 " safely uninstall Mackup.\n"
                 "\n"
-                "Thanks for using Mackup !"
+                "Thanks for using Mackup!"
             )
 
     elif args["list"]:

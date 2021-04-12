@@ -36,7 +36,7 @@ class Mackup(object):
                 " Run mackup --help for guidance."
             )
 
-        # Do we have a folder to put Mackup into?
+        # Do we have a folder set to save Mackup content into?
         if not os.path.isdir(self._config.path):
             utils.error(
                 "Unable to find the storage folder: {}".format(self._config.path)

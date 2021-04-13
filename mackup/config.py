@@ -45,7 +45,7 @@ class Config(object):
         # Initialize the parser
         self._parser = self._setup_parser(filename)
 
-        # Do we have an old config file ?
+        # Do we have an old config file?
         self._warn_on_old_config()
 
         # Get the storage engine
@@ -154,7 +154,7 @@ class Config(object):
 
     def _warn_on_old_config(self):
         """Warn the user if an old config format is detected."""
-        # Is an old setion is in the config file ?
+        # Is an old section in the config file?
         old_sections = ["Allowed Applications", "Ignored Applications"]
         for old_section in old_sections:
             if self._parser.has_section(old_section):
@@ -253,7 +253,7 @@ class Config(object):
         # We ignore nothing by default
         apps_to_ignore = set()
 
-        # Is the "[applications_to_ignore]" in the cfg file ?
+        # Is the "[applications_to_ignore]" in the cfg file?
         section_title = "applications_to_ignore"
         if self._parser.has_section(section_title):
             apps_to_ignore = set(self._parser.options(section_title))
@@ -270,7 +270,7 @@ class Config(object):
         # We allow nothing by default
         apps_to_sync = set()
 
-        # Is the "[applications_to_sync]" section in the cfg file ?
+        # Is the "[applications_to_sync]" section in the cfg file?
         section_title = "applications_to_sync"
         if self._parser.has_section(section_title):
             apps_to_sync = set(self._parser.options(section_title))

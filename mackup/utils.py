@@ -34,7 +34,7 @@ def confirm(question):
         return True
 
     while True:
-        answer = input(question + " <Yes|No>").lower()
+        answer = input(question + " <Yes|No> ").lower()
 
         if answer == "yes" or answer == "y":
             confirmed = True
@@ -104,7 +104,7 @@ def copy(src, dst):
     elif os.path.isdir(src):
         shutil.copytree(src, dst)
 
-    # What the heck is this ?
+    # What the heck is this?
     else:
         raise ValueError("Unsupported file: {}".format(src))
 

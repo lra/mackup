@@ -10,6 +10,7 @@
 - Added support for Neofetch (via @kidonng)
 - Added support for PsySH (via @nesk)
 - Added support for Sublime Text 4 (via @TCattd)
+- Added support for MTMR (via @dec0dOS)
 
 ## Mackup 0.8.32
 

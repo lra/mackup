@@ -431,6 +431,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [MPlayerX](http://mplayerx.org)
 - [MPS Youtube](https://github.com/mps-youtube/mps-youtube)
 - [MPV](https://mpv.io/)
+- [MTMR](https://github.com/Toxblh/MTMR)
 - [Multitouch](https://multitouch.app/)
 - [MusicBrainz Picard](https://picard.musicbrainz.org/)
 - [mycli](https://www.mycli.net/)

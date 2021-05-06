@@ -3,6 +3,26 @@
 ## WIP
 
 - Added support for KeePassXC (via @harens)
+- Fixed support for poetry (via @ameyuuno)
+- Added support for npm package npmrc (via @jdvivar)
+- Added support for rubiTrack 5 (via @otherguy)
+- Updated support for Fisher (via @kidonng)
+- Added support for Qv2ray (via @kidonng)
+- Added support for Neofetch (via @kidonng)
+- Added support for PsySH (via @nesk)
+- Added support for Sublime Text 4 (via @TCattd)
+
+## Mackup 0.8.32
+
+- Fixed an issue due to a duplicate entry in the intellijidea config
+- Added support for Visual Studio for Mac version 8 (via @Qythyx)
+
+## Mackup 0.8.31
+
+- Fixed an issue due to a duplicate entry in the webstorm config
+
+## Mackup 0.8.30
+
 - Added support for SpaceVim (via @ionlights)
 - Added support for clashX (via @awkj)
 - Added support for Brave (via @cbenv)
@@ -10,13 +30,21 @@
 - Updated support for Clipy (via @jclerc)
 - Added support for aerc (via @Crocmagnon)
 - Added support for espanso (via @maxandersen)
+- Added support for lazygit (via @joshmedeski)
 - Added support for WebStorm versions 2019.4, 2020.2, 2020.3, 2020.4 (via @bdcarr)
+- Added support for draft (via @dfang)
+- Added support for lf (via @joshmedeski)
 - Added support for Beets (via @publicarray)
 - Added support for Krew (via @exherb)
 - Added support for Homebrew (via @exherb)
+- Added support for PyCharm versions 2020.2, 2020.3, 2020.4 (via @ameyuuno)
 - Added support for Netlify (via @pgilad)
 - Added support for K9s (via @tareksamni)
 - Added support for Powerlevel10k (via @tareksamni)
+- Updated support for aria2 (via @hongqn)
+- Update support for IntelliJ (via @scooby)
+- Added support for zoxide (via @kidonng)
+- Added support for Raycast (via @janniks)
 
 ## Mackup 0.8.29
 
@@ -246,6 +274,7 @@
 - Add support for DaisyDisk (via @cafferata)
 - Add support for MySQLWorkbench (via @cafferata)
 - Add support for Openbox (via @jpfarcy)
+- Change OS X to macOS to match OS name change (via @samdoran)
 
 ## Mackup 0.8.16
 

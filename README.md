@@ -24,7 +24,7 @@ Keep your application settings in sync.
 If you have [Dropbox](https://www.dropbox.com) installed and want to use it to
 save your config files, that's super easy.
 
-On OS X, if you want an easy install, you can install
+On macOS, if you want an easy install, you can install
 [Homebrew](http://brew.sh/) and do:
 
 ```bash
@@ -35,7 +35,7 @@ brew install mackup
 mackup backup
 ```
 
-If not running OS X, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/).
+If not running macOS, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/).
 
 > Note: The below command will check if a previous version of Mackup
 > is already installed on your system.
@@ -156,7 +156,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 
 ## Unsupported Storages
 
-- [Box](https://www.box.com): No longer supported is it ignores dotfiles, see
+- [Box](https://www.box.com): No longer supported as it ignores dotfiles, see
   <https://github.com/lra/mackup/issues/807>.
 
 ## Supported Applications
@@ -271,6 +271,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Doom Emacs](https://github.com/hlissner/doom-emacs)
 - [Double Commander](http://doublecmd.sourceforge.net/)
 - [Doxie](http://www.getdoxie.com/)
+- [Draft](https://draft.sh/)
 - [Droplr](https://droplr.com/)
 - [Dropzone 3](https://aptonic.com/dropzone3/)
 - [Drush](http://www.drush.org/)
@@ -387,7 +388,9 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Kwm](https://koekeishiya.github.io/kwm/)
 - [LaTeXiT](http://www.chachatelier.fr/latexit/latexit-home.php?lang=en)
 - [LaunchBar](https://www.obdev.at/products/launchbar/index.html)
+- [lazygit](https://github.com/jesseduffield/lazygit)
 - [Ledger](http://ledger-cli.org)
+- [lf](https://github.com/gokcehan/lf)
 - [LibreOffice](https://www.libreoffice.org/)
 - [Liftoff](https://github.com/thoughtbot/liftoff)
 - [Light Table](http://lighttable.com/)
@@ -439,6 +442,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Nano](http://www.nano-editor.org/)
 - [Navicat](http://navicat.com/)
 - [ncmpcpp](http://rybczak.net/ncmpcpp/)
+- [Neofetch](https://github.com/dylanaraps/neofetch)
 - [neovim](https://github.com/neovim/neovim)
 - [Nethack](http://www.nethack.org)
 - [Netlify](https://www.netlify.com/)
@@ -447,12 +451,12 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Nomacs](http://nomacs.org/)
 - [NoSQLBooster for MongoDB](https://www.nosqlbooster.com/)
 - [npm](https://www.npmjs.com/)
+- [npmrc](https://github.com/deoxxa/npmrc/)
 - [Nushell](https://www.nushell.sh/)
 - [nvALT](http://brettterpstra.com/projects/nvalt/)
 - [nvpy](https://github.com/cpbotha/nvpy)
 - [Oh My Fish](https://github.com/bpinto/oh-my-fish)
 - [Oh My Tmux](https://github.com/gpakosz/.tmux)
-- [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [OmniFocus](https://www.omnigroup.com/omnifocus/)
 - [OmniGraffle](https://www.omnigroup.com/omnigraffle/)
 - [Openbox](http://openbox.org)
@@ -492,6 +496,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Proselint](https://github.com/amperser/proselint)
 - [ProxyChains NG](http://sourceforge.net/projects/proxychains-ng/)
 - [ProxyChains](http://proxychains.sourceforge.net)
+- [PsySH](https://psysh.org/)
 - [Punto Switcher](https://punto.yandex.ru/)
 - [PyCharm](https://www.jetbrains.com/pycharm/)
 - [PyPI](https://pypi.python.org/pypi)
@@ -500,9 +505,11 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Quicksilver](http://qsapp.com/)
 - [Quitter](https://marco.org/apps)
 - [Qutebrowser](http://qutebrowser.org/)
+- [Qv2ray](https://qv2ray.net/)
 - [R](http://www.r-project.org/)
 - [Rails](http://rubyonrails.org/)
 - [Ranger](https://ranger.github.io/)
+- [Raycast](https://raycast.com/)
 - [Rclone](https://rclone.org/)
 - [Rectangle](https://rectangleapp.com/)
 - [Redshift Scheduler](https://github.com/spantaleev/redshift-scheduler)
@@ -515,6 +522,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Royal TSX](http://www.royaltsx.com/ts/osx/features)
 - [RStudio](https://www.rstudio.com/)
 - [rTorrent](http://libtorrent.rakshasa.no/)
+- [rubiTrack 5](https://www.rubitrack.com)
 - [Rubocop](https://github.com/bbatsov/rubocop)
 - [Ruby Version Manager](https://rvm.io/)
 - [Ruby Version](https://gist.github.com/fnichol/1912050)
@@ -644,6 +652,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Yummy FTP](http://www.yummysoftware.com/)
 - [zabbix-cli](https://github.com/usit-gd/zabbix-cli)
 - [zathura](https://pwmt.org/projects/zathura/)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [Zsh](http://zsh.sourceforge.net/)
 - [Übersicht](http://tracesof.net/uebersicht/)
 
@@ -687,7 +696,7 @@ And it's [GPL](http://www.gnu.org/licenses/gpl.html), of course.
 
 ## What platforms are supported
 
-- OS X
+- macOS
 - GNU/Linux
 
 ## What's up with the weird name

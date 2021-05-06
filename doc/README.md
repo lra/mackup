@@ -3,33 +3,23 @@
 All the configuration is done in a file named `.mackup.cfg` stored at the
 root of your home folder.
 
-To configure Mackup, create a file named ´.mackup.cfg´ in your home directory.
+To configure Mackup, create a file named `.mackup.cfg` in your home directory.
 
 ```bash
 vi ~/.mackup.cfg
 ```
 
-Add personal files to sync by including the `configuration_files` header, e.g.
-
-```ini
-[configuration_files]
-.gitignore_global
-.config/your-custom-file
-```
-
-Note that Mackup assumes the file paths listed here are relative to your home
-directory.
-
 ## Storage
-
-### Dropbox
 
 You can specify the storage type Mackup will use to store your configuration
 files.
-For now you have 4 options: `dropbox`, `google_drive`, `copy` and `file_system`.
+For now you have 4 options: `dropbox`, `google_drive`, `icloud`, `copy` and `file_system`.
+
 If none is specified, Mackup will try to use the default: `dropbox`.
 With the `dropbox` storage engine, Mackup will automatically figure out your
 Dropbox folder.
+
+### Dropbox
 
 ```ini
 [storage]
@@ -79,6 +69,14 @@ path = some/folder/in/your/home
 # or path = /some/folder/in/your/root
 ```
 
+Note: you don't need to escape spaces or wrap the path in quotes.
+For example, the following paths are valid :
+
+```ini
+path = some/path in your/home
+path = /some path/in/your/root
+```
+
 ### Custom Directory Name
 
 You can customize the directory name in which Mackup stores your file. By
@@ -111,7 +109,7 @@ directory = .config/mackup
 
 ## Applications
 
-### Only sync one or two application
+### Only sync one or two applications
 
 In your home folder, create a file named `.mackup.cfg` and add the application
 names to allow in the `[applications_to_sync]` section, one by line.
@@ -122,6 +120,9 @@ names to allow in the `[applications_to_sync]` section, one by line.
 ssh
 adium
 ```
+
+Use `mackup list` to get a list of valid application names. Don't use fancy
+names (with spaces) here.
 
 A [sample](.mackup.cfg) of this file is available in this folder. Just copy it
 in your home folder:
@@ -142,6 +143,9 @@ ssh
 adium
 ```
 
+Use `mackup list` to get a list of valid application names. Don't use fancy
+names (with spaces) here.
+
 A [sample](.mackup.cfg) of this file is available in this folder. Just copy it
 in your home folder:
 
@@ -155,6 +159,9 @@ Open a [new issue](https://github.com/lra/mackup/issues) and ask for it, or
 fork Mackup and open a
 [Pull Request](https://help.github.com/articles/using-pull-requests).
 The stock application configs are in the `mackup/applications` directory.
+
+Remember to follow the guidelines in [CONTRIBUTING.md](https://github.com/lra/mackup/blob/master/.github/CONTRIBUTING.md)
+to get your Pull Request merged faster.
 
 ### Add support for an application or any file or directory
 
@@ -230,3 +237,46 @@ You can add and test an application by following these steps:
 - if everything works as expected:
   - run `make undevelop` to revert to the official version
   - commit and push the change to your fork and then create the Pulls Request
+
+### Add support for an application using the XDG directory
+
+For application storing their configuration under the `~/.config` folder, you
+should not hardcode it. The `.config` folder is the default location but it can
+be named differently on other users' systems by setting the `XDG_CONFIG_HOME`
+environment variable.
+
+See <https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html>
+
+Mackup supports this mechanism and provide a dedicated `xdg_configuration_files`
+section for those applications.
+
+If any path starts with `.config`, remove the `.config` part and move the path
+to a dedicated `xdg_configuration_files` section.
+
+Instead of:
+
+```ini
+[application]
+name = Git
+
+[configuration_files]
+.gitconfig
+.config/git/config
+.config/git/ignore
+.config/git/attributes
+```
+
+Use this:
+
+```ini
+[application]
+name = Git
+
+[configuration_files]
+.gitconfig
+
+[xdg_configuration_files]
+git/config
+git/ignore
+git/attributes
+```

@@ -1,0 +1,15 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+docopt = "*"
+six = "*"
+
+[dev-packages]
+# Black is still a pre-release. Replaced with `brew install black` for now.
+# black = "*"
+coverage = "*"
+nose = "*"
+twine = "*"

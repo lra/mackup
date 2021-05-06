@@ -1,0 +1,21 @@
+name: Test installs
+on:
+  - pull_request
+  - push
+
+jobs:
+
+  install:
+    strategy:
+      matrix:
+        python-version:
+          - 2.7
+          - 3.6
+          - 3.7
+          - 3.8
+    runs-on: ubuntu-latest
+    container: python:${{ matrix.python-version }}
+    steps:
+      - uses: actions/checkout@v2
+      - run: python setup.py install
+      - run: mackup --help

@@ -7,6 +7,7 @@ import stat
 import subprocess
 import sys
 import sqlite3
+from six.moves import input
 
 from . import constants
 
@@ -14,6 +15,9 @@ from . import constants
 # Flag that controls how user confirmation works.
 # If True, the user wants to say "yes" to everything.
 FORCE_YES = False
+
+# Flag that control if mackup can be run as root
+CAN_RUN_AS_ROOT = False
 
 
 def confirm(question):
@@ -30,16 +34,12 @@ def confirm(question):
         return True
 
     while True:
-        # Python 3 check
-        if sys.version_info[0] < 3:
-            answer = raw_input(question + ' <Yes|No>').lower()
-        else:
-            answer = input(question + ' <Yes|No>').lower()
+        answer = input(question + " <Yes|No> ").lower()
 
-        if answer == 'yes' or answer == 'y':
+        if answer == "yes" or answer == "y":
             confirmed = True
             break
-        if answer == 'no' or answer == 'n':
+        if answer == "no" or answer == "n":
             confirmed = False
             break
 
@@ -104,7 +104,7 @@ def copy(src, dst):
     elif os.path.isdir(src):
         shutil.copytree(src, dst)
 
-    # What the heck is this ?
+    # What the heck is this?
     else:
         raise ValueError("Unsupported file: {}".format(src))
 
@@ -188,8 +188,8 @@ def error(message):
     Args:
         message(str): The message to display.
     """
-    fail = '\033[91m'
-    end = '\033[0m'
+    fail = "\033[91m"
+    end = "\033[0m"
     sys.exit(fail + "Error: {}".format(message) + end)
 
 
@@ -200,13 +200,13 @@ def get_dropbox_folder_location():
     Returns:
         (str) Full path to the current Dropbox folder
     """
-    host_db_path = os.path.join(os.environ['HOME'], '.dropbox/host.db')
+    host_db_path = os.path.join(os.environ["HOME"], ".dropbox/host.db")
     try:
-        with open(host_db_path, 'r') as f_hostdb:
+        with open(host_db_path, "r") as f_hostdb:
             data = f_hostdb.read().split()
     except IOError:
-        error("Unable to find your Dropbox install =(")
-    dropbox_home = base64.b64decode(data[1])
+        error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="Dropbox install"))
+    dropbox_home = base64.b64decode(data[1]).decode()
 
     return dropbox_home
 
@@ -216,57 +216,41 @@ def get_google_drive_folder_location():
     Try to locate the Google Drive folder.
 
     Returns:
-        (unicode) Full path to the current Google Drive folder
+        (str) Full path to the current Google Drive folder
     """
-    gdrive_db_path = 'Library/Application Support/Google/Drive/sync_config.db'
-    yosemite_gdrive_db_path = ('Library/Application Support/Google/Drive/'
-                               'user_default/sync_config.db')
-    yosemite_gdrive_db = os.path.join(os.environ['HOME'],
-                                      yosemite_gdrive_db_path)
+    gdrive_db_path = "Library/Application Support/Google/Drive/sync_config.db"
+    yosemite_gdrive_db_path = (
+        "Library/Application Support/Google/Drive/" "user_default/sync_config.db"
+    )
+    yosemite_gdrive_db = os.path.join(os.environ["HOME"], yosemite_gdrive_db_path)
     if os.path.isfile(yosemite_gdrive_db):
         gdrive_db_path = yosemite_gdrive_db
 
     googledrive_home = None
 
-    gdrive_db = os.path.join(os.environ['HOME'], gdrive_db_path)
+    gdrive_db = os.path.join(os.environ["HOME"], gdrive_db_path)
     if os.path.isfile(gdrive_db):
         con = sqlite3.connect(gdrive_db)
         if con:
             cur = con.cursor()
-            query = ("SELECT data_value "
-                     "FROM data "
-                     "WHERE entry_key = 'local_sync_root_path';")
+            query = (
+                "SELECT data_value "
+                "FROM data "
+                "WHERE entry_key = 'local_sync_root_path';"
+            )
             cur.execute(query)
             data = cur.fetchone()
-            googledrive_home = unicode(data[0])
+            googledrive_home = str(data[0])
             con.close()
 
     if not googledrive_home:
-        error("Unable to find your Google Drive install =(")
+        error(
+            constants.ERROR_UNABLE_TO_FIND_STORAGE.format(
+                provider="Google Drive install"
+            )
+        )
 
     return googledrive_home
-
-
-def get_box_folder_location():
-    """
-    Try to locate the Box folder.
-
-    Returns:
-        (str) Full path to the current Box folder
-    """
-    box_prefs_path = ('Library/Application Support/Box/Box Sync/'
-                      'sync_root_folder.txt')
-    box_home = None
-
-    box_prefs = os.path.join(os.environ['HOME'], box_prefs_path)
-    try:
-        with open(box_prefs, 'r') as sync_path:
-            data = sync_path.read()
-            box_home = data
-    except IOError:
-        error("Unable to find your Box prefs =(")
-
-    return box_home
 
 
 def get_copy_folder_location():
@@ -274,27 +258,25 @@ def get_copy_folder_location():
     Try to locate the Copy folder.
 
     Returns:
-        (unicode) Full path to the current Copy folder
+        (str) Full path to the current Copy folder
     """
-    copy_settings_path = 'Library/Application Support/Copy Agent/config.db'
+    copy_settings_path = "Library/Application Support/Copy Agent/config.db"
     copy_home = None
 
-    copy_settings = os.path.join(os.environ['HOME'], copy_settings_path)
+    copy_settings = os.path.join(os.environ["HOME"], copy_settings_path)
 
     if os.path.isfile(copy_settings):
         database = sqlite3.connect(copy_settings)
         if database:
             cur = database.cursor()
-            query = ("SELECT value "
-                     "FROM config2 "
-                     "WHERE option = 'csmRootPath';")
+            query = "SELECT value " "FROM config2 " "WHERE option = 'csmRootPath';"
             cur.execute(query)
             data = cur.fetchone()
-            copy_home = unicode(data[0])
+            copy_home = str(data[0])
             cur.close()
 
     if not copy_home:
-        error("Unable to find your Copy install =(")
+        error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="Copy install"))
 
     return copy_home
 
@@ -306,14 +288,14 @@ def get_icloud_folder_location():
     Returns:
         (str) Full path to the iCloud Drive folder.
     """
-    yosemite_icloud_path = '~/Library/Mobile Documents/com~apple~CloudDocs/'
+    yosemite_icloud_path = "~/Library/Mobile Documents/com~apple~CloudDocs/"
 
     icloud_home = os.path.expanduser(yosemite_icloud_path)
 
     if not os.path.isdir(icloud_home):
-        error('Unable to find your iCloud Drive =(')
+        error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="iCloud Drive"))
 
-    return unicode(icloud_home)
+    return str(icloud_home)
 
 
 def is_process_running(process_name):
@@ -329,10 +311,9 @@ def is_process_running(process_name):
     is_running = False
 
     # On systems with pgrep, check if the given process is running
-    if os.path.isfile('/usr/bin/pgrep'):
-        dev_null = open(os.devnull, 'wb')
-        returncode = subprocess.call(['/usr/bin/pgrep', process_name],
-                                     stdout=dev_null)
+    if os.path.isfile("/usr/bin/pgrep"):
+        dev_null = open(os.devnull, "wb")
+        returncode = subprocess.call(["/usr/bin/pgrep", process_name], stdout=dev_null)
         is_running = bool(returncode == 0)
 
     return is_running
@@ -350,12 +331,12 @@ def remove_acl(path):
                     recursively.
     """
     # Some files have ACLs, let's remove them recursively
-    if (platform.system() == constants.PLATFORM_DARWIN and
-            os.path.isfile('/bin/chmod')):
-        subprocess.call(['/bin/chmod', '-R', '-N', path])
-    elif ((platform.system() == constants.PLATFORM_LINUX) and
-            os.path.isfile('/bin/setfacl')):
-        subprocess.call(['/bin/setfacl', '-R', '-b', path])
+    if platform.system() == constants.PLATFORM_DARWIN and os.path.isfile("/bin/chmod"):
+        subprocess.call(["/bin/chmod", "-R", "-N", path])
+    elif (platform.system() == constants.PLATFORM_LINUX) and os.path.isfile(
+        "/bin/setfacl"
+    ):
+        subprocess.call(["/bin/setfacl", "-R", "-b", path])
 
 
 def remove_immutable_attribute(path):
@@ -371,12 +352,14 @@ def remove_immutable_attribute(path):
                     attribute for, recursively.
     """
     # Some files have ACLs, let's remove them recursively
-    if ((platform.system() == constants.PLATFORM_DARWIN) and
-            os.path.isfile('/usr/bin/chflags')):
-        subprocess.call(['/usr/bin/chflags', '-R', 'nouchg', path])
-    elif (platform.system() == constants.PLATFORM_LINUX and
-            os.path.isfile('/usr/bin/chattr')):
-        subprocess.call(['/usr/bin/chattr', '-R', '-i', path])
+    if (platform.system() == constants.PLATFORM_DARWIN) and os.path.isfile(
+        "/usr/bin/chflags"
+    ):
+        subprocess.call(["/usr/bin/chflags", "-R", "nouchg", path])
+    elif platform.system() == constants.PLATFORM_LINUX and os.path.isfile(
+        "/usr/bin/chattr"
+    ):
+        subprocess.call(["/usr/bin/chattr", "-R", "-f", "-i", path])
 
 
 def can_file_be_synced_on_current_platform(path):
@@ -400,12 +383,12 @@ def can_file_be_synced_on_current_platform(path):
     can_be_synced = True
 
     # If the given path is relative, prepend home
-    fullpath = os.path.join(os.environ['HOME'], path)
+    fullpath = os.path.join(os.environ["HOME"], path)
 
     # Compute the ~/Library path on macOS
     # End it with a slash because we are looking for this specific folder and
     # not any file/folder named LibrarySomething
-    library_path = os.path.join(os.environ['HOME'], 'Library/')
+    library_path = os.path.join(os.environ["HOME"], "Library/")
 
     if platform.system() == constants.PLATFORM_LINUX:
         if fullpath.startswith(library_path):

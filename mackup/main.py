@@ -1,7 +1,7 @@
 """Mackup.
 
 Keep your application settings in sync.
-Copyright (C) 2013-2019 Laurent Raufaste <http://glop.org/>
+Copyright (C) 2013-2021 Laurent Raufaste <http://glop.org/>
 
 Usage:
   mackup list

@@ -24,7 +24,7 @@ Keep your application settings in sync.
 If you have [Dropbox](https://www.dropbox.com) installed and want to use it to
 save your config files, that's super easy.
 
-On OS X, if you want an easy install, you can install
+On macOS, if you want an easy install, you can install
 [Homebrew](http://brew.sh/) and do:
 
 ```bash
@@ -35,7 +35,7 @@ brew install mackup
 mackup backup
 ```
 
-If not running OS X, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/).
+If not running macOS, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/).
 
 > Note: The below command will check if a previous version of Mackup
 > is already installed on your system.
@@ -695,7 +695,7 @@ And it's [GPL](http://www.gnu.org/licenses/gpl.html), of course.
 
 ## What platforms are supported
 
-- OS X
+- macOS
 - GNU/Linux
 
 ## What's up with the weird name

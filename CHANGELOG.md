@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added support for KeePassXC (via @harens)
 - Fixed support for poetry (via @ameyuuno)
 - Added support for npm package npmrc (via @jdvivar)
 - Added support for rubiTrack 5 (via @otherguy)
@@ -9,6 +10,7 @@
 - Added support for Qv2ray (via @kidonng)
 - Added support for Neofetch (via @kidonng)
 - Added support for PsySH (via @nesk)
+- Added support for Sublime Text 4 (via @TCattd)
 
 ## Mackup 0.8.32
 
@@ -272,6 +274,7 @@
 - Add support for DaisyDisk (via @cafferata)
 - Add support for MySQLWorkbench (via @cafferata)
 - Add support for Openbox (via @jpfarcy)
+- Change OS X to macOS to match OS name change (via @samdoran)
 
 ## Mackup 0.8.16
 

@@ -11,6 +11,7 @@
 - Added support for Neofetch (via @kidonng)
 - Added support for PsySH (via @nesk)
 - Added support for Sublime Text 4 (via @TCattd)
+- Added support for AltTab (via @aiotter)
 
 ## Mackup 0.8.32
 

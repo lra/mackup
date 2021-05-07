@@ -172,6 +172,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [aerc](https://aerc-mail.org/)
 - [Airmail](http://airmailapp.com/)
 - [Alacritty](https://github.com/jwilm/alacritty)
+- [AltTab](https://alt-tab-macos.netlify.app/)
 - [Amethyst](https://ianyh.com/amethyst/)
 - [Ancient Domains of Mystery](http://www.adom.de/home/index.html)
 - [Android Studio](https://developer.android.com/sdk/)

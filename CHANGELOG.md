@@ -12,6 +12,7 @@
 - Added support for PsySH (via @nesk)
 - Added support for Sublime Text 4 (via @TCattd)
 - Added support for AltTab (via @aiotter)
+- Added support for Akamai CLI (via @anirudhbagri)
 
 ## Mackup 0.8.32
 

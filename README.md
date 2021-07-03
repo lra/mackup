@@ -320,6 +320,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Gnome SSH Tunnel Manager](http://sourceforge.net/projects/gstm/)
 - [GnuPG](https://www.gnupg.org/)
 - [Go2Shell](http://zipzapmac.com/Go2Shell)
+- [Goku](https://github.com/yqrashawn/GokuRakuJoudo)
 - [GoLand](https://www.jetbrains.com/go/)
 - [Goldendict](http://goldendict.org/)
 - [GoodSync](https://goodsync.com/)

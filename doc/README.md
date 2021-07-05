@@ -184,7 +184,7 @@ touch ~/.mackup/my-files.cfg
 Edit those files
 
 ```bash
-$ cat ~/.mackup/nethack.cfg
+$ nano ~/.mackup/nethack.cfg
 [application]
 name = Nethack
 
@@ -193,7 +193,7 @@ name = Nethack
 ```
 
 ```bash
-$ cat ~/.mackup/my-files.cfg
+$ nano ~/.mackup/my-files.cfg
 [application]
 name = My personal synced files and dirs
 

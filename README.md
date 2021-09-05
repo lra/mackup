@@ -586,6 +586,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Surge](http://surge.run/manual/)
 - [Sway](https://swaywm.org/)
 - [Swinsian](http://swinsian.com/)
+- [Swish](https://highlyopinionated.co/swish/)
 - [T](http://sferik.github.io/t/)
 - [TablePlus](https://tableplus.io)
 - [TaskPaper](http://www.hogbaysoftware.com/products/taskpaper)

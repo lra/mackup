@@ -12,6 +12,7 @@
 - Added support for PsySH (via @nesk)
 - Updated support for IntelliJIdea version 2021.1 (via @steffenmalisi)
 - Added support for Sublime Text 4 (via @TCattd)
+- Added support for Swish (via @antoni-k)
 - Added support for AltTab (via @aiotter)
 - Added support for Akamai CLI (via @anirudhbagri)
 - Added support for FastScripts (via @darrenbkl)

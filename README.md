@@ -174,6 +174,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Affinity Photo](https://affinity.serif.com/photo)
 - [Affinity Publisher](https://affinity.serif.com/publisher)
 - [Airmail](http://airmailapp.com/)
+- [Akamai-CLI](https://developer.akamai.com/cli)
 - [Alacritty](https://github.com/jwilm/alacritty)
 - [AltTab](https://alt-tab-macos.netlify.app/)
 - [Amethyst](https://ianyh.com/amethyst/)

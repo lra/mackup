@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added support for KeePassXC (via @harens)
 - Fixed support for poetry (via @ameyuuno)
 - Added support for npm package npmrc (via @jdvivar)
 - Added support for rubiTrack 5 (via @otherguy)
@@ -9,8 +10,15 @@
 - Added support for Qv2ray (via @kidonng)
 - Added support for Neofetch (via @kidonng)
 - Added support for PsySH (via @nesk)
+- Updated support for IntelliJIdea version 2021.1 (via @steffenmalisi)
 - Added support for Sublime Text 4 (via @TCattd)
 - Added support for Swish (via @antoni-k)
+- Added support for AltTab (via @aiotter)
+- Added support for Akamai CLI (via @anirudhbagri)
+- Added support for FastScripts (via @darrenbkl)
+- Added support for Affinity Designer (via @EpicKris)
+- Added support for Affinity Photo (via @EpicKris)
+- Added support for Affinity Publisher (via @EpicKris)
 
 ## Mackup 0.8.32
 
@@ -274,6 +282,7 @@
 - Add support for DaisyDisk (via @cafferata)
 - Add support for MySQLWorkbench (via @cafferata)
 - Add support for Openbox (via @jpfarcy)
+- Change OS X to macOS to match OS name change (via @samdoran)
 
 ## Mackup 0.8.16
 

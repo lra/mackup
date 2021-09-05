@@ -20,6 +20,7 @@
 - Added support for Affinity Designer (via @EpicKris)
 - Added support for Affinity Photo (via @EpicKris)
 - Added support for Affinity Publisher (via @EpicKris)
+- Added support for MTMR (via @dec0dOS)
 
 ## Mackup 0.8.32
 

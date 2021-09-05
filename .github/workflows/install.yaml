@@ -25,6 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: python setup.py install
+      - run: ls -l /usr/local/bin
       - run: mackup --help
 
   install-macos-11:

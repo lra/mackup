@@ -10,6 +10,7 @@
 - Added support for Qv2ray (via @kidonng)
 - Added support for Neofetch (via @kidonng)
 - Added support for PsySH (via @nesk)
+- Updated support for IntelliJIdea version 2021.1 (via @steffenmalisi)
 - Added support for Sublime Text 4 (via @TCattd)
 - Added support for AltTab (via @aiotter)
 - Added support for Affinity Designer (via @EpicKris)

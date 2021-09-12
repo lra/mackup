@@ -15,6 +15,7 @@
 - Added support for Contexts (via @antoni-k)
 - Added support for Swish (via @antoni-k)
 - Added support for AltTab (via @aiotter)
+- Added support for Goku (via @thebengeu)
 - Added support for Akamai CLI (via @anirudhbagri)
 - Added support for FastScripts (via @darrenbkl)
 - Added support for Affinity Designer (via @EpicKris)

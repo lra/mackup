@@ -110,12 +110,13 @@ directory = .config/mackup
 
 ### Switching Storage
 
-If you ever change your mind and switch storage solutions after Mackup is already setup (ex: from `dropbox` to `icloud`), complete the following steps.
+If you ever change your mind and switch storage solutions after Mackup is
+already setup (ex: from `dropbox` to `icloud`), complete the following steps.
 
 1. Run `mackup uninstall` on all computers
-2. Copy your Mackup files to the new storage location
-3. Change the storage provider details in your `.mackup.cfg` file (see above)
-4. Run `mackup backup` on the main computer and `mackup restore` on all others
+1. Copy your Mackup files to the new storage location
+1. Change the storage provider details in your `.mackup.cfg` file (see above)
+1. Run `mackup backup` on the main computer and `mackup restore` on all others
 
 ## Applications
 

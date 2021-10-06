@@ -6,6 +6,7 @@ from mackup.constants import (
     ENGINE_GDRIVE,
     ENGINE_COPY,
     ENGINE_ICLOUD,
+    ENGINE_SYNC,
     ENGINE_FS,
 )
 from mackup.config import Config, ConfigError
@@ -164,6 +165,26 @@ class TestConfig(unittest.TestCase):
 
         assert isinstance(cfg.fullpath, str)
         assert cfg.fullpath.endswith(u"/com~apple~CloudDocs/Mackup")
+
+        assert cfg.apps_to_ignore == set(["subversion", "sequel-pro", "sabnzbd"])
+        assert cfg.apps_to_sync == set(["sublime-text-3", "x11", "sabnzbd"])
+
+    def test_config_engine_sync(self):
+        cfg = Config("mackup-engine-sync.cfg")
+
+        assert isinstance(cfg.engine, str)
+        assert cfg.engine == ENGINE_SYNC
+
+        assert isinstance(cfg.path, str)
+        assert cfg.path == os.path.expanduser("~/Sync")
+
+        assert isinstance(cfg.directory, str)
+        assert cfg.directory == u"Mackup"
+
+        assert isinstance(cfg.fullpath, str)
+        assert cfg.fullpath == os.path.join(
+            os.environ[u"HOME"], u"sync", u"Mackup"
+        )
 
         assert cfg.apps_to_ignore == set(["subversion", "sequel-pro", "sabnzbd"])
         assert cfg.apps_to_sync == set(["sublime-text-3", "x11", "sabnzbd"])

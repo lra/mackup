@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added support for Sync.com as a new storage (via @JasonMFry)
 - Added support for KeePassXC (via @harens)
 - Fixed support for poetry (via @ameyuuno)
 - Added support for npm package npmrc (via @jdvivar)
@@ -471,7 +472,7 @@
 - Added support of WebStorm 10 (via @morphinewan)
 - Added support of Gnome SSH Tunnel Manager (via @skyrocknroll)
 - Added support for Hammerspoon (via @jkaan)
-- Added support for Bitchx (via @troywilson_)
+- Added support for Bitchx (via @troywilson\_)
 - Added support for EditorConfig (via @chadluo)
 - Add com.agilebits.onepassword4.plist in 1Password (via @amatos)
 - Added support for Versions (via @amatos)
@@ -781,7 +782,7 @@
 - Added support for Ack (via @adamlogic)
 - Added support for Stata and SelfControl (via @kfinlay)
 - Added support for LaTeXiT (via @twsh)
-- Do not link ~/Library/* files on GNU/Linux, should fix #104
+- Do not link ~/Library/\* files on GNU/Linux, should fix #104
 
 ## Mackup 0.5
 

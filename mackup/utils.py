@@ -297,6 +297,22 @@ def get_icloud_folder_location():
 
     return str(icloud_home)
 
+def get_sync_folder_location():
+    """
+    Try to locate the Sync.com folder. It defaults to ~/Sync but the user can
+    change it.
+
+    Returns:
+        (str) Full path to the Sync.com folder.
+    """
+    default_path = "~/Sync"
+
+    default_home = os.path.expanduser(default_path)
+
+    if not os.path.isdir(default_home):
+        error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="Sync.com"))
+
+    return str(default_home)
 
 def is_process_running(process_name):
     """

@@ -53,7 +53,7 @@ class ApplicationProfile(object):
             if exists home/file
               if home/file is a real file
                 if exists mackup/file
-                  are you sure ?
+                  are you sure?
                   if sure
                     rm mackup/file
                     mv home/file mackup/file
@@ -131,7 +131,7 @@ class ApplicationProfile(object):
         Algorithm:
             if exists mackup/file
               if exists home/file
-                are you sure ?
+                are you sure?
                 if sure
                   rm home/file
                   link mackup/file home/file

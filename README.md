@@ -24,7 +24,7 @@ Keep your application settings in sync.
 If you have [Dropbox](https://www.dropbox.com) installed and want to use it to
 save your config files, that's super easy.
 
-On OS X, if you want an easy install, you can install
+On macOS, if you want an easy install, you can install
 [Homebrew](http://brew.sh/) and do:
 
 ```bash
@@ -35,7 +35,7 @@ brew install mackup
 mackup backup
 ```
 
-If not running OS X, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/).
+If not running macOS, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/).
 
 > Note: The below command will check if a previous version of Mackup
 > is already installed on your system.
@@ -170,8 +170,13 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Adobe Photoshop CC](http://www.adobe.com/products/photoshop.html)
 - [Adobe Photoshop Lightroom CC](https://www.adobe.com/products/photoshop-lightroom.html)
 - [aerc](https://aerc-mail.org/)
+- [Affinity Designer](https://affinity.serif.com/designer)
+- [Affinity Photo](https://affinity.serif.com/photo)
+- [Affinity Publisher](https://affinity.serif.com/publisher)
 - [Airmail](http://airmailapp.com/)
+- [Akamai-CLI](https://developer.akamai.com/cli)
 - [Alacritty](https://github.com/jwilm/alacritty)
+- [AltTab](https://alt-tab-macos.netlify.app/)
 - [Amethyst](https://ianyh.com/amethyst/)
 - [Ancient Domains of Mystery](http://www.adom.de/home/index.html)
 - [Android Studio](https://developer.android.com/sdk/)
@@ -245,6 +250,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Concentrate](http://www.getconcentrating.com/)
 - [Conky](https://github.com/brndnmtthws/conky)
 - [Consular](https://github.com/achiu/consular)
+- [Contexts](https://contexts.co)
 - [ControlPlane](http://www.controlplaneapp.com/)
 - [CopyQ](https://github.com/hluk/CopyQ)
 - [CoRD](http://cord.sourceforge.net/)
@@ -289,6 +295,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Fantastical](http://flexibits.com/fantastical)
 - [fasd](https://github.com/clvv/fasd)
 - [fastlane](https://fastlane.tools)
+- [FastScripts](https://redsweater.com/fastscripts/)
 - [Feeds](http://www.feedsapp.com/)
 - [FileZilla](https://filezilla-project.org/)
 - [Finicky](https://github.com/johnste/finicky)
@@ -319,6 +326,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Gnome SSH Tunnel Manager](http://sourceforge.net/projects/gstm/)
 - [GnuPG](https://www.gnupg.org/)
 - [Go2Shell](http://zipzapmac.com/Go2Shell)
+- [Goku](https://github.com/yqrashawn/GokuRakuJoudo)
 - [GoLand](https://www.jetbrains.com/go/)
 - [Goldendict](http://goldendict.org/)
 - [GoodSync](https://goodsync.com/)
@@ -374,6 +382,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Karabiner](https://pqrs.org/osx/karabiner/)
 - [Kdenlive](https://kdenlive.org/)
 - [KeePassX](http://www.keepassx.org/)
+- [KeePassXC](https://keepassxc.org/)
 - [KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake)
 - [Keka](http://www.kekaosx.com/en/)
 - [Keybase](https://keybase.io/)
@@ -431,6 +440,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [MPlayerX](http://mplayerx.org)
 - [MPS Youtube](https://github.com/mps-youtube/mps-youtube)
 - [MPV](https://mpv.io/)
+- [MTMR](https://github.com/Toxblh/MTMR)
 - [Multitouch](https://multitouch.app/)
 - [MusicBrainz Picard](https://picard.musicbrainz.org/)
 - [mycli](https://www.mycli.net/)
@@ -579,6 +589,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Surge](http://surge.run/manual/)
 - [Sway](https://swaywm.org/)
 - [Swinsian](http://swinsian.com/)
+- [Swish](https://highlyopinionated.co/swish/)
 - [T](http://sferik.github.io/t/)
 - [TablePlus](https://tableplus.io)
 - [TaskPaper](http://www.hogbaysoftware.com/products/taskpaper)
@@ -695,7 +706,7 @@ And it's [GPL](http://www.gnu.org/licenses/gpl.html), of course.
 
 ## What platforms are supported
 
-- OS X
+- macOS
 - GNU/Linux
 
 ## What's up with the weird name

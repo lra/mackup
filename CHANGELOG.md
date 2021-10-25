@@ -22,6 +22,7 @@
 - Added support for Affinity Photo (via @EpicKris)
 - Added support for Affinity Publisher (via @EpicKris)
 - Added support for MTMR (via @dec0dOS)
+- Fixed support for asciinema (via @revolter)
 
 ## Mackup 0.8.32
 

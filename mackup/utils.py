@@ -34,7 +34,7 @@ def confirm(question):
         return True
 
     while True:
-        answer = input(question + " <Yes|No>").lower()
+        answer = input(question + " <Yes|No> ").lower()
 
         if answer == "yes" or answer == "y":
             confirmed = True
@@ -104,7 +104,7 @@ def copy(src, dst):
     elif os.path.isdir(src):
         shutil.copytree(src, dst)
 
-    # What the heck is this ?
+    # What the heck is this?
     else:
         raise ValueError("Unsupported file: {}".format(src))
 
@@ -385,7 +385,7 @@ def can_file_be_synced_on_current_platform(path):
     # If the given path is relative, prepend home
     fullpath = os.path.join(os.environ["HOME"], path)
 
-    # Compute the ~/Library path on OS X
+    # Compute the ~/Library path on macOS
     # End it with a slash because we are looking for this specific folder and
     # not any file/folder named LibrarySomething
     library_path = os.path.join(os.environ["HOME"], "Library/")

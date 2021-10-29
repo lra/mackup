@@ -9,7 +9,7 @@ setup(
     author="Laurent Raufaste",
     author_email="analogue@glop.org",
     url="https://github.com/lra/mackup",
-    description="Keep your application settings in sync (OS X/Linux)",
+    description="Keep your application settings in sync (macOS/Linux)",
     keywords="configuration config dotfiles sync backup dropbox gdrive box",
     license="GPLv3",
     packages=["mackup"],

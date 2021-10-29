@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for Lightroom Classic (via @treee111)
+- Fixed support for Hocus Focus (via @jrolfs)
 - Added support for KeePassXC (via @harens)
 - Fixed support for poetry (via @ameyuuno)
 - Added support for npm package npmrc (via @jdvivar)
@@ -10,6 +12,9 @@
 - Added support for Qv2ray (via @kidonng)
 - Added support for Neofetch (via @kidonng)
 - Added support for PsySH (via @nesk)
+- Added support for OBS (via @damianoamatruda)
+- Update uninstall prompt for accuracy (via @soneji)
+- Added support for Proxyman (via @NghiaTranUIT)
 - Updated support for IntelliJIdea version 2021.1 (via @steffenmalisi)
 - Added support for Sublime Text 4 (via @TCattd)
 - Added support for Contexts (via @antoni-k)

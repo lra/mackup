@@ -12,6 +12,7 @@
 - Added support for Qv2ray (via @kidonng)
 - Added support for Neofetch (via @kidonng)
 - Added support for PsySH (via @nesk)
+- Added support for polybar(via @jneo8)
 - Added support for Tiles (via @damianoamatruda)
 - Added support for Flake8 (via @hongqn)
 - Fixed support for HandBrake (via @damianoamatruda)

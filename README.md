@@ -24,7 +24,7 @@ Keep your application settings in sync.
 If you have [Dropbox](https://www.dropbox.com) installed and want to use it to
 save your config files, that's super easy.
 
-On OS X, if you want an easy install, you can install
+On macOS, if you want an easy install, you can install
 [Homebrew](http://brew.sh/) and do:
 
 ```bash
@@ -35,7 +35,7 @@ brew install mackup
 mackup backup
 ```
 
-If not running OS X, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/).
+If not running macOS, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/).
 
 > Note: The below command will check if a previous version of Mackup
 > is already installed on your system.
@@ -156,7 +156,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 
 ## Unsupported Storages
 
-- [Box](https://www.box.com): No longer supported is it ignores dotfiles, see
+- [Box](https://www.box.com): No longer supported as it ignores dotfiles, see
   <https://github.com/lra/mackup/issues/807>.
 
 ## Supported Applications
@@ -169,15 +169,20 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Adobe Illustrator CC](https://www.adobe.com/products/illustrator.html)
 - [Adobe Photoshop CC](http://www.adobe.com/products/photoshop.html)
 - [Adobe Photoshop Lightroom CC](https://www.adobe.com/products/photoshop-lightroom.html)
+- [Adobe Photoshop Lightroom Classic](https://www.adobe.com/de/products/photoshop-lightroom-classic.html)
 - [aerc](https://aerc-mail.org/)
+- [Affinity Designer](https://affinity.serif.com/designer)
+- [Affinity Photo](https://affinity.serif.com/photo)
+- [Affinity Publisher](https://affinity.serif.com/publisher)
 - [Airmail](http://airmailapp.com/)
+- [Akamai-CLI](https://developer.akamai.com/cli)
 - [Alacritty](https://github.com/jwilm/alacritty)
+- [AltTab](https://alt-tab-macos.netlify.app/)
 - [Amethyst](https://ianyh.com/amethyst/)
 - [Ancient Domains of Mystery](http://www.adom.de/home/index.html)
 - [Android Studio](https://developer.android.com/sdk/)
 - [Ansible](http://www.ansible.com/)
 - [AppCleaner](http://freemacsoft.net/appcleaner/)
-- [Hocus Focus](http://hocusfoc.us/)
 - [AppCode](http://www.jetbrains.com/objc/)
 - [Apple Music](https://www.apple.com/apple-music/)
 - [Apptivate](http://www.apptivateapp.com/)
@@ -245,6 +250,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Concentrate](http://www.getconcentrating.com/)
 - [Conky](https://github.com/brndnmtthws/conky)
 - [Consular](https://github.com/achiu/consular)
+- [Contexts](https://contexts.co)
 - [ControlPlane](http://www.controlplaneapp.com/)
 - [CopyQ](https://github.com/hluk/CopyQ)
 - [CoRD](http://cord.sourceforge.net/)
@@ -271,6 +277,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Doom Emacs](https://github.com/hlissner/doom-emacs)
 - [Double Commander](http://doublecmd.sourceforge.net/)
 - [Doxie](http://www.getdoxie.com/)
+- [Draft](https://draft.sh/)
 - [Droplr](https://droplr.com/)
 - [Dropzone 3](https://aptonic.com/dropzone3/)
 - [Drush](http://www.drush.org/)
@@ -288,11 +295,13 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Fantastical](http://flexibits.com/fantastical)
 - [fasd](https://github.com/clvv/fasd)
 - [fastlane](https://fastlane.tools)
+- [FastScripts](https://redsweater.com/fastscripts/)
 - [Feeds](http://www.feedsapp.com/)
 - [FileZilla](https://filezilla-project.org/)
 - [Finicky](https://github.com/johnste/finicky)
 - [Fish](http://fishshell.com/)
 - [Fisher](https://github.com/jorgebucaran/fisher)
+- [Flake8](https://flake8.pycqa.org/)
 - [FlexGet](http://flexget.com/)
 - [Flux](https://justgetflux.com/)
 - [Focus](https://heyfocus.com)
@@ -306,9 +315,10 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Gear Player](https://www.gearmusicplayer.com/)
 - [GeekTool](http://projects.tynsoe.org/en/geektool/)
 - [GHCi](https://wiki.haskell.org/GHC/GHCi)
+- [Ghidra](https://ghidra-sre.org)
 - [Ghostwriter](https://wereturtle.github.io/ghostwriter/)
 - [Gimp](https://www.gimp.org/)
-- [Git Hooks](https://github.com/icefox/git-hooks)
+- [Git Hooks](https://github.com/git-hooks/git-hooks)
 - [Git](http://git-scm.com/)
 - [Gitbox](http://gitboxapp.com/)
 - [GitKraken](https://www.gitkraken.com)
@@ -318,6 +328,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Gnome SSH Tunnel Manager](http://sourceforge.net/projects/gstm/)
 - [GnuPG](https://www.gnupg.org/)
 - [Go2Shell](http://zipzapmac.com/Go2Shell)
+- [Goku](https://github.com/yqrashawn/GokuRakuJoudo)
 - [GoLand](https://www.jetbrains.com/go/)
 - [Goldendict](http://goldendict.org/)
 - [GoodSync](https://goodsync.com/)
@@ -333,6 +344,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Heroku](https://www.heroku.com/)
 - [HexChat](https://hexchat.github.io/)
 - [Hexels](http://hexraystudios.com/hexels/)
+- [Hocus Focus](http://hocusfoc.us/)
 - [Homebridge](https://github.com/nfarina/homebridge)
 - [Homebrew](https://brew.sh)
 - [Houdini](http://uglyapps.co.uk/houdini/)
@@ -345,6 +357,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [HyperSwitch](https://bahoom.com/hyperswitch)
 - [i2cssh](https://github.com/wouterdebie/i2cssh)
 - [i3](https://i3wm.org/)
+- [IDA Pro](https://www.hex-rays.com/products/ida/)
 - [IdeaVim](https://github.com/JetBrains/ideavim)
 - [IINA](https://iina.io)
 - [Inkscape](https://inkscape.org/)
@@ -373,6 +386,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Karabiner](https://pqrs.org/osx/karabiner/)
 - [Kdenlive](https://kdenlive.org/)
 - [KeePassX](http://www.keepassx.org/)
+- [KeePassXC](https://keepassxc.org/)
 - [KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake)
 - [Keka](http://www.kekaosx.com/en/)
 - [Keybase](https://keybase.io/)
@@ -386,7 +400,9 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Kwm](https://koekeishiya.github.io/kwm/)
 - [LaTeXiT](http://www.chachatelier.fr/latexit/latexit-home.php?lang=en)
 - [LaunchBar](https://www.obdev.at/products/launchbar/index.html)
+- [lazygit](https://github.com/jesseduffield/lazygit)
 - [Ledger](http://ledger-cli.org)
+- [lf](https://github.com/gokcehan/lf)
 - [LibreOffice](https://www.libreoffice.org/)
 - [Liftoff](https://github.com/thoughtbot/liftoff)
 - [Light Table](http://lighttable.com/)
@@ -394,7 +410,9 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Liquid Prompt](https://github.com/nojhan/liquidprompt)
 - [LittleSnitch](http://www.obdev.at/products/littlesnitch/)
 - [Livestreamer](http://livestreamer.tanuki.se/)
+- [Logitech Options](https://www.logitech.com/en-us/product/options)
 - [Lollypop](https://gnumdk.github.io/lollypop-web/)
+- [Loopback](https://rogueamoeba.com/loopback/)
 - [Luftrausers](http://luftrausers.com)
 - [MacDive](http://www.mac-dive.com/)
 - [MacDown](http://macdown.uranusjr.com/)
@@ -428,8 +446,10 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [MPlayerX](http://mplayerx.org)
 - [MPS Youtube](https://github.com/mps-youtube/mps-youtube)
 - [MPV](https://mpv.io/)
+- [MTMR](https://github.com/Toxblh/MTMR)
 - [Multitouch](https://multitouch.app/)
 - [MusicBrainz Picard](https://picard.musicbrainz.org/)
+- [MuteSpotifyAds](https://github.com/simonmeusel/MuteSpotifyAds)
 - [mycli](https://www.mycli.net/)
 - [myrepos](https://github.com/joeyh/myrepos)
 - [MySQL Workbench](https://www.mysql.com/products/workbench/)
@@ -438,6 +458,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Nano](http://www.nano-editor.org/)
 - [Navicat](http://navicat.com/)
 - [ncmpcpp](http://rybczak.net/ncmpcpp/)
+- [Neofetch](https://github.com/dylanaraps/neofetch)
 - [neovim](https://github.com/neovim/neovim)
 - [Nethack](http://www.nethack.org)
 - [Netlify](https://www.netlify.com/)
@@ -446,12 +467,13 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Nomacs](http://nomacs.org/)
 - [NoSQLBooster for MongoDB](https://www.nosqlbooster.com/)
 - [npm](https://www.npmjs.com/)
+- [npmrc](https://github.com/deoxxa/npmrc/)
 - [Nushell](https://www.nushell.sh/)
 - [nvALT](http://brettterpstra.com/projects/nvalt/)
 - [nvpy](https://github.com/cpbotha/nvpy)
+- [OBS](https://obsproject.com)
 - [Oh My Fish](https://github.com/bpinto/oh-my-fish)
 - [Oh My Tmux](https://github.com/gpakosz/.tmux)
-- [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [OmniFocus](https://www.omnigroup.com/omnifocus/)
 - [OmniGraffle](https://www.omnigroup.com/omnigraffle/)
 - [Openbox](http://openbox.org)
@@ -478,6 +500,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Poedit](http://poedit.net/)
 - [Poetry](https://python-poetry.org)
 - [PokerStars](https://www.pokerstars.com/)
+- [Polybar](https://polybar.github.io/)
 - [PopClip](http://pilotmoon.com/popclip/)
 - [Popcorn-Time](https://popcorntime.io/)
 - [PostgreSQL](http://www.postgresql.org/)
@@ -491,6 +514,8 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Proselint](https://github.com/amperser/proselint)
 - [ProxyChains NG](http://sourceforge.net/projects/proxychains-ng/)
 - [ProxyChains](http://proxychains.sourceforge.net)
+- [Proxyman](https://proxyman.io)
+- [PsySH](https://psysh.org/)
 - [Punto Switcher](https://punto.yandex.ru/)
 - [PyCharm](https://www.jetbrains.com/pycharm/)
 - [PyPI](https://pypi.python.org/pypi)
@@ -499,9 +524,11 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Quicksilver](http://qsapp.com/)
 - [Quitter](https://marco.org/apps)
 - [Qutebrowser](http://qutebrowser.org/)
+- [Qv2ray](https://qv2ray.net/)
 - [R](http://www.r-project.org/)
 - [Rails](http://rubyonrails.org/)
 - [Ranger](https://ranger.github.io/)
+- [Raycast](https://raycast.com/)
 - [Rclone](https://rclone.org/)
 - [Rectangle](https://rectangleapp.com/)
 - [Redshift Scheduler](https://github.com/spantaleev/redshift-scheduler)
@@ -510,10 +537,12 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Rime](http://rime.im/)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [Robomongo](http://robomongo.org/)
+- [Rocket](https://matthewpalmer.net/rocket/)
 - [Rofi](https://github.com/DaveDavenport/rofi)
 - [Royal TSX](http://www.royaltsx.com/ts/osx/features)
 - [RStudio](https://www.rstudio.com/)
 - [rTorrent](http://libtorrent.rakshasa.no/)
+- [rubiTrack 5](https://www.rubitrack.com)
 - [Rubocop](https://github.com/bbatsov/rubocop)
 - [Ruby Version Manager](https://rvm.io/)
 - [Ruby Version](https://gist.github.com/fnichol/1912050)
@@ -571,6 +600,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Surge](http://surge.run/manual/)
 - [Sway](https://swaywm.org/)
 - [Swinsian](http://swinsian.com/)
+- [Swish](https://highlyopinionated.co/swish/)
 - [T](http://sferik.github.io/t/)
 - [TablePlus](https://tableplus.io)
 - [TaskPaper](http://www.hogbaysoftware.com/products/taskpaper)
@@ -584,6 +614,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [TextMate](http://macromates.com/)
 - [Textual](http://www.codeux.com/textual/)
 - [Tig](https://github.com/jonas/tig)
+- [Tiles](https://www.sempliva.com/tiles/)
 - [Tilix](https://github.com/gnunn1/tilix)
 - [Timeout](https://www.dejal.com/timeout/)
 - [tint2](https://code.google.com/p/tint2/)
@@ -643,6 +674,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Yummy FTP](http://www.yummysoftware.com/)
 - [zabbix-cli](https://github.com/usit-gd/zabbix-cli)
 - [zathura](https://pwmt.org/projects/zathura/)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [Zsh](http://zsh.sourceforge.net/)
 - [Übersicht](http://tracesof.net/uebersicht/)
 
@@ -686,7 +718,7 @@ And it's [GPL](http://www.gnu.org/licenses/gpl.html), of course.
 
 ## What platforms are supported
 
-- OS X
+- macOS
 - GNU/Linux
 
 ## What's up with the weird name

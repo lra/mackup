@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added support for Lightroom Classic (via @treee111)
 - Fixed support for Hocus Focus (via @jrolfs)
 - Added support for KeePassXC (via @harens)
 - Fixed support for poetry (via @ameyuuno)

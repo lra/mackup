@@ -169,6 +169,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Adobe Illustrator CC](https://www.adobe.com/products/illustrator.html)
 - [Adobe Photoshop CC](http://www.adobe.com/products/photoshop.html)
 - [Adobe Photoshop Lightroom CC](https://www.adobe.com/products/photoshop-lightroom.html)
+- [Adobe Photoshop Lightroom Classic](https://www.adobe.com/de/products/photoshop-lightroom-classic.html)
 - [aerc](https://aerc-mail.org/)
 - [Affinity Designer](https://affinity.serif.com/designer)
 - [Affinity Photo](https://affinity.serif.com/photo)

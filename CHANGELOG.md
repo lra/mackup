@@ -12,6 +12,7 @@
 - Added support for Qv2ray (via @kidonng)
 - Added support for Neofetch (via @kidonng)
 - Added support for PsySH (via @nesk)
+- Added support for IDA Pro (via @damianoamatruda)
 - Added support for MuteSpotifyAds (via @damianoamatruda)
 - Added support for Ghidra (via @damianoamatruda)
 - Added support for Logitech Options (via @damianoamatruda)

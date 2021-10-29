@@ -39,6 +39,7 @@
 - Added support for Rocket (via @revolter)
 - Updated support for BetterTouchTool (via @grapswiz)
 - Updated support for k9s (via @dfang)
+- Added support for Mendeley Desktop (via @aiotter)
 
 ## Mackup 0.8.32
 

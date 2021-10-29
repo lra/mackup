@@ -411,6 +411,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Livestreamer](http://livestreamer.tanuki.se/)
 - [Logitech Options](https://www.logitech.com/en-us/product/options)
 - [Lollypop](https://gnumdk.github.io/lollypop-web/)
+- [Loopback](https://rogueamoeba.com/loopback/)
 - [Luftrausers](http://luftrausers.com)
 - [MacDive](http://www.mac-dive.com/)
 - [MacDown](http://macdown.uranusjr.com/)

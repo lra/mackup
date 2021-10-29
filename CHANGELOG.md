@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Fixed support for Hocus Focus (via @jrolfs)
 - Added support for KeePassXC (via @harens)
 - Fixed support for poetry (via @ameyuuno)
 - Added support for npm package npmrc (via @jdvivar)
@@ -15,12 +16,14 @@
 - Added support for Contexts (via @antoni-k)
 - Added support for Swish (via @antoni-k)
 - Added support for AltTab (via @aiotter)
+- Added support for Goku (via @thebengeu)
 - Added support for Akamai CLI (via @anirudhbagri)
 - Added support for FastScripts (via @darrenbkl)
 - Added support for Affinity Designer (via @EpicKris)
 - Added support for Affinity Photo (via @EpicKris)
 - Added support for Affinity Publisher (via @EpicKris)
 - Added support for MTMR (via @dec0dOS)
+- Added support for Rocket (via @revolter)
 
 ## Mackup 0.8.32
 

@@ -13,6 +13,7 @@
 - Added support for Neofetch (via @kidonng)
 - Added support for PsySH (via @nesk)
 - Added support for Ghidra (via @damianoamatruda)
+- Added support for Logitech Options (via @damianoamatruda)
 - Added support for OBS (via @damianoamatruda)
 - Update uninstall prompt for accuracy (via @soneji)
 - Added support for Proxyman (via @NghiaTranUIT)

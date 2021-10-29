@@ -447,6 +447,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [MTMR](https://github.com/Toxblh/MTMR)
 - [Multitouch](https://multitouch.app/)
 - [MusicBrainz Picard](https://picard.musicbrainz.org/)
+- [MuteSpotifyAds](https://github.com/simonmeusel/MuteSpotifyAds)
 - [mycli](https://www.mycli.net/)
 - [myrepos](https://github.com/joeyh/myrepos)
 - [MySQL Workbench](https://www.mysql.com/products/workbench/)

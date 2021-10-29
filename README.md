@@ -527,6 +527,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Rime](http://rime.im/)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [Robomongo](http://robomongo.org/)
+- [Rocket](https://matthewpalmer.net/rocket/)
 - [Rofi](https://github.com/DaveDavenport/rofi)
 - [Royal TSX](http://www.royaltsx.com/ts/osx/features)
 - [RStudio](https://www.rstudio.com/)

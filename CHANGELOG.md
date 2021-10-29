@@ -37,6 +37,7 @@
 - Added support for Affinity Publisher (via @EpicKris)
 - Added support for MTMR (via @dec0dOS)
 - Added support for Rocket (via @revolter)
+- Updated support for k9s (via @dfang)
 
 ## Mackup 0.8.32
 

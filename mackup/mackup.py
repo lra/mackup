@@ -36,13 +36,13 @@ class Mackup(object):
                 " Run mackup --help for guidance."
             )
 
-        # Do we have a folder to put the Mackup folder ?
+        # Do we have a folder set to save Mackup content into?
         if not os.path.isdir(self._config.path):
             utils.error(
                 "Unable to find the storage folder: {}".format(self._config.path)
             )
 
-        # Is Sublime Text running ?
+        # Is Sublime Text running?
         # if is_process_running('Sublime Text'):
         #    error("Sublime Text is running. It is known to cause problems"
         #          " when Sublime Text is running while I backup or restore"

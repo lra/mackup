@@ -13,6 +13,8 @@
 - Added support for Neofetch (via @kidonng)
 - Added support for PsySH (via @nesk)
 - Added support for Tiles (via @damianoamatruda)
+- Added support for Flake8 (via @hongqn)
+- Fixed support for HandBrake (via @damianoamatruda)
 - Added support for Loopback (via @damianoamatruda)
 - Added support for IDA Pro (via @damianoamatruda)
 - Added support for MuteSpotifyAds (via @damianoamatruda)

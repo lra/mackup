@@ -37,6 +37,7 @@
 - Added support for Affinity Publisher (via @EpicKris)
 - Added support for MTMR (via @dec0dOS)
 - Added support for Rocket (via @revolter)
+- Added support for mbsync (via @tricon and @visika)
 
 ## Mackup 0.8.32
 

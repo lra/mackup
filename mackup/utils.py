@@ -34,7 +34,7 @@ def confirm(question):
         return True
 
     while True:
-        answer = input(question + " <Yes|No>").lower()
+        answer = input(question + " <Yes|No> ").lower()
 
         if answer == "yes" or answer == "y":
             confirmed = True
@@ -104,7 +104,7 @@ def copy(src, dst):
     elif os.path.isdir(src):
         shutil.copytree(src, dst)
 
-    # What the heck is this ?
+    # What the heck is this?
     else:
         raise ValueError("Unsupported file: {}".format(src))
 
@@ -205,7 +205,7 @@ def get_dropbox_folder_location():
         with open(host_db_path, "r") as f_hostdb:
             data = f_hostdb.read().split()
     except IOError:
-        error("Unable to find your Dropbox install =(")
+        error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="Dropbox install"))
     dropbox_home = base64.b64decode(data[1]).decode()
 
     return dropbox_home
@@ -244,7 +244,11 @@ def get_google_drive_folder_location():
             con.close()
 
     if not googledrive_home:
-        error("Unable to find your Google Drive install =(")
+        error(
+            constants.ERROR_UNABLE_TO_FIND_STORAGE.format(
+                provider="Google Drive install"
+            )
+        )
 
     return googledrive_home
 
@@ -272,7 +276,7 @@ def get_copy_folder_location():
             cur.close()
 
     if not copy_home:
-        error("Unable to find your Copy install =(")
+        error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="Copy install"))
 
     return copy_home
 
@@ -289,7 +293,7 @@ def get_icloud_folder_location():
     icloud_home = os.path.expanduser(yosemite_icloud_path)
 
     if not os.path.isdir(icloud_home):
-        error("Unable to find your iCloud Drive =(")
+        error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="iCloud Drive"))
 
     return str(icloud_home)
 
@@ -381,7 +385,7 @@ def can_file_be_synced_on_current_platform(path):
     # If the given path is relative, prepend home
     fullpath = os.path.join(os.environ["HOME"], path)
 
-    # Compute the ~/Library path on OS X
+    # Compute the ~/Library path on macOS
     # End it with a slash because we are looking for this specific folder and
     # not any file/folder named LibrarySomething
     library_path = os.path.join(os.environ["HOME"], "Library/")

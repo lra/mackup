@@ -482,7 +482,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Poedit](http://poedit.net/)
 - [Poetry](https://python-poetry.org)
 - [PokerStars](https://www.pokerstars.com/)
-- [Polybar](https://github.com/polybar/polybar)
+- [Polybar](https://polybar.github.io/)
 - [PopClip](http://pilotmoon.com/popclip/)
 - [Popcorn-Time](https://popcorntime.io/)
 - [PostgreSQL](http://www.postgresql.org/)

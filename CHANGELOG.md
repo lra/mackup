@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Fixed support for Hocus Focus (via @jrolfs)
 - Added support for KeePassXC (via @harens)
 - Fixed support for poetry (via @ameyuuno)
 - Added support for npm package npmrc (via @jdvivar)

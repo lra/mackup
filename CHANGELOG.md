@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.33
+
 - Added support for Lightroom Classic (via @treee111)
 - Fixed support for Hocus Focus (via @jrolfs)
 - Added support for KeePassXC (via @harens)

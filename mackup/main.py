@@ -1,7 +1,7 @@
 """Mackup.
 
 Keep your application settings in sync.
-Copyright (C) 2013-2019 Laurent Raufaste <http://glop.org/>
+Copyright (C) 2013-2021 Laurent Raufaste <http://glop.org/>
 
 Usage:
   mackup list
@@ -127,9 +127,9 @@ def main():
             utils.confirm(
                 "You are going to uninstall Mackup.\n"
                 "Every configuration file, setting and dotfile"
-                " managed by Mackup will be unlinked and moved back"
+                " managed by Mackup will be unlinked and copied back"
                 " to their original place, in your home folder.\n"
-                "Are you sure ?"
+                "Are you sure?"
             )
         ):
 
@@ -162,7 +162,7 @@ def main():
                 "All your files have been put back into place. You can now"
                 " safely uninstall Mackup.\n"
                 "\n"
-                "Thanks for using Mackup !"
+                "Thanks for using Mackup!"
             )
 
     elif args["list"]:

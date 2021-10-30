@@ -40,6 +40,7 @@
 - Updated support for BetterTouchTool (via @grapswiz)
 - Updated support for k9s (via @dfang)
 - Added support for Mendeley Desktop (via @aiotter)
+- Added support for CleanShot, Mosaic, Eagle and Nuget (via @ye4241)
 
 ## Mackup 0.8.32
 

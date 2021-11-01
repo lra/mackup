@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Updated support for Maven: include settings-security.xml (via @stevenodb)
+
 ## Mackup 0.8.33
 
 - Added support for Lightroom Classic (via @treee111)

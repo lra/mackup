@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for Remote Desktop Manager (via @jpmat296)
+
 ## Mackup 0.8.33
 
 - Added support for Lightroom Classic (via @treee111)

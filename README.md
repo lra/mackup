@@ -539,6 +539,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Rectangle](https://rectangleapp.com/)
 - [Redshift Scheduler](https://github.com/spantaleev/redshift-scheduler)
 - [Redshift](http://jonls.dk/redshift/)
+- [Remote Desktop Manager](https://remotedesktopmanager.com/)
 - [Rhythmbox](https://wiki.gnome.org/Apps/Rhythmbox)
 - [Rime](http://rime.im/)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)

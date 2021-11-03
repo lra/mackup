@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for Remote Desktop Manager (via @jpmat296)
+- Fixed support for asciinema (via @revolter)
 
 ## Mackup 0.8.33
 

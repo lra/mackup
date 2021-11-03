@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.33
+
 - Added support for Lightroom Classic (via @treee111)
 - Fixed support for Hocus Focus (via @jrolfs)
 - Added support for KeePassXC (via @harens)
@@ -37,6 +39,10 @@
 - Added support for Affinity Publisher (via @EpicKris)
 - Added support for MTMR (via @dec0dOS)
 - Added support for Rocket (via @revolter)
+- Updated support for BetterTouchTool (via @grapswiz)
+- Updated support for k9s (via @dfang)
+- Added support for Mendeley Desktop (via @aiotter)
+- Added support for CleanShot, Mosaic, Eagle and Nuget (via @ye4241)
 
 ## Mackup 0.8.32
 
@@ -58,6 +64,7 @@
 - Added support for espanso (via @maxandersen)
 - Added support for lazygit (via @joshmedeski)
 - Added support for WebStorm versions 2019.4, 2020.2, 2020.3, 2020.4 (via @bdcarr)
+- Added support for rbenv (via @dfang)
 - Added support for draft (via @dfang)
 - Added support for lf (via @joshmedeski)
 - Added support for Beets (via @publicarray)

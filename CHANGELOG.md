@@ -4,6 +4,7 @@
 
 - Added support for Remote Desktop Manager (via @jpmat296)
 - Fixed support for asciinema (via @revolter)
+- Added support for Mumu (via @fharper)
 
 ## Mackup 0.8.33
 

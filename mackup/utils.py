@@ -119,7 +119,7 @@ def islink(filename):
     Args:
         filename (str): filename to check
     """
-    return os.stat(filename).st_nlink > 1 or os.path.islink(filename)
+    return (os.path.exists(filename) and os.stat(filename).st_nlink > 1) or os.path.islink(filename)
 
 
 def link(target, link_to, hardlink=False):

@@ -14,7 +14,6 @@ except ImportError:
 
 from .constants import APPS_DIR
 from .constants import CUSTOM_APPS_DIR
-from .enums import parse_sync_mode
 
 
 class ApplicationsDatabase(object):
@@ -45,10 +44,6 @@ class ApplicationsDatabase(object):
                 app_pretty_name = config.get("application", "name")
                 self.apps[app_name]["name"] = app_pretty_name
 
-                # Add the mode on how to sync the app
-                link_mode = config.get("application", "mode", fallback="softlink")
-                self.apps[app_name]["mode"] = link_mode
-
                 # Add the configuration files to sync
                 self.apps[app_name]["configuration_files"] = set()
                 if config.has_section("configuration_files"):
@@ -58,6 +53,22 @@ class ApplicationsDatabase(object):
                                 "Unsupported absolute path: {}".format(path)
                             )
                         self.apps[app_name]["configuration_files"].add(path)
+
+                # Add the configuration files to hardlink
+                self.apps[app_name]["configuration_files_hardlink"] = set()
+                if config.has_section("configuration_files_hardlink"):
+                    for path in config.options("configuration_files_hardlink"):
+                        # Directly filter out potential directories
+                        if path.endswith("/"):
+                            raise ValueError(
+                                "Unsupported dir target for hardlink: {}".format(path)
+                            )
+
+                        if path.startswith("/"):
+                            raise ValueError(
+                                "Unsupported absolute path: {}".format(path)
+                            )
+                        self.apps[app_name]["configuration_files_hardlink"].add(path)
 
                 # Add the XDG configuration files to sync
                 home = os.path.expanduser("~/")
@@ -121,17 +132,17 @@ class ApplicationsDatabase(object):
 
         return config_files
 
-    def get_mode(self, name):
+    def get_hardlink_files(self, name):
         """
-        Return the sync mode of the app
+        Return the list of config files of an application to be hardlinked.
 
         Args:
             name (str)
 
         Returns:
-            SyncMode
+            set of str.
         """
-        return parse_sync_mode(self.apps[name]["mode"])
+        return self.apps[name]["configuration_files_hardlink"]
 
     def get_name(self, name):
         """

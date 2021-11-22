@@ -8,14 +8,13 @@ import os
 
 from .mackup import Mackup
 from . import utils
-from .enums import SyncMode
 
 
 class ApplicationProfile(object):
 
     """Instantiate this class with application specific data."""
 
-    def __init__(self, mackup, files, sync_mode, dry_run, verbose):
+    def __init__(self, mackup, files, hardlink_files, dry_run, verbose):
         """
         Create an ApplicationProfile instance.
 
@@ -28,9 +27,9 @@ class ApplicationProfile(object):
 
         self.mackup = mackup
         self.files = list(files)
+        self.hardlink_files = list(hardlink_files)
         self.dry_run = dry_run
         self.verbose = verbose
-        self.sync_mode = sync_mode
 
     def getFilepaths(self, filename):
         """
@@ -65,8 +64,9 @@ class ApplicationProfile(object):
                   link mackup/file home/file
         """
         # For each file used by the application
-        for filename in self.files:
+        for filename in (self.files + self.hardlink_files):
             (home_filepath, mackup_filepath) = self.getFilepaths(filename)
+            use_hardlink = filename in self.hardlink_files
 
             # If the file exists and is not already a link pointing to Mackup
             if (os.path.isfile(home_filepath) or os.path.isdir(home_filepath)) and not (
@@ -74,15 +74,22 @@ class ApplicationProfile(object):
                 and (os.path.isfile(mackup_filepath) or os.path.isdir(mackup_filepath))
                 and os.path.samefile(home_filepath, mackup_filepath)
             ):
-                link_mode = "hardlink" if self.sync_mode == SyncMode.HARDLINK else "softlink"
+                # Deny hardlinking to directories
+                if use_hardlink and os.path.isdir(home_filepath):
+                    print(
+                        "Unable to hardlink {0} (is a directory)".format(home_filepath)
+                    )
+                    continue
+
+                hardlink_text = " (hardlink)" if use_hardlink else ""
                 if self.verbose:
                     print(
-                        "Backing up\n  {}\n  to\n  {} ({})...".format(
-                            home_filepath, mackup_filepath, link_mode
+                        "Backing up\n  {}\n  to\n  {}{}...".format(
+                            home_filepath, mackup_filepath, hardlink_text
                         )
                     )
                 else:
-                    print("Backing up {} ({})...".format(filename, link_mode))
+                    print("Backing up {}{}...".format(filename, hardlink_text))
 
                 if self.dry_run:
                     continue
@@ -113,14 +120,14 @@ class ApplicationProfile(object):
                         # Delete the file in the home
                         utils.delete(home_filepath)
                         # Link the backuped file to its original place
-                        utils.link(mackup_filepath, home_filepath, self.sync_mode == SyncMode.HARDLINK)
+                        utils.link(mackup_filepath, home_filepath, use_hardlink)
                 else:
                     # Copy the file
                     utils.copy(home_filepath, mackup_filepath)
                     # Delete the file in the home
                     utils.delete(home_filepath)
                     # Link the backuped file to its original place
-                    utils.link(mackup_filepath, home_filepath, self.sync_mode == SyncMode.HARDLINK)
+                    utils.link(mackup_filepath, home_filepath, use_hardlink)
             elif self.verbose:
                 if os.path.exists(home_filepath):
                     print(
@@ -154,8 +161,9 @@ class ApplicationProfile(object):
                 link mackup/file home/file
         """
         # For each file used by the application
-        for filename in self.files:
+        for filename in (self.files + self.hardlink_files):
             (home_filepath, mackup_filepath) = self.getFilepaths(filename)
+            use_hardlink = filename in self.hardlink_files
 
             # If the file exists and is not already pointing to the mackup file
             # and the folder makes sense on the current platform (Don't sync
@@ -169,6 +177,13 @@ class ApplicationProfile(object):
                 and os.path.samefile(mackup_filepath, home_filepath)
             )
             supported = utils.can_file_be_synced_on_current_platform(filename)
+
+            # Deny hardlinking to directories
+            if use_hardlink and os.path.isdir(mackup_filepath):
+                print(
+                    "Unable to hardlink {0} (is a directory)".format(home_filepath)
+                )
+                continue
 
             if file_or_dir_exists and not pointing_to_mackup and supported:
                 if self.verbose:
@@ -201,9 +216,9 @@ class ApplicationProfile(object):
                         " your backup?".format(file_type, filename)
                     ):
                         utils.delete(home_filepath)
-                        utils.link(mackup_filepath, home_filepath, self.sync_mode == SyncMode.HARDLINK)
+                        utils.link(mackup_filepath, home_filepath, use_hardlink)
                 else:
-                    utils.link(mackup_filepath, home_filepath, self.sync_mode == SyncMode.HARDLINK)
+                    utils.link(mackup_filepath, home_filepath, use_hardlink)
             elif self.verbose:
                 if os.path.exists(home_filepath):
                     print(

@@ -112,7 +112,17 @@ def copy(src, dst):
     chmod(dst)
 
 
-def link(target, link_to):
+def islink(filename):
+    """
+    Checks if a file is either a softlink or a hardlink
+
+    Args:
+        filename (str): filename to check
+    """
+    return os.stat(filename).st_nlink > 1 or os.path.islink(filename)
+
+
+def link(target, link_to, hardlink=False):
     """
     Create a link to a target file or a folder.
 
@@ -128,6 +138,7 @@ def link(target, link_to):
     Args:
         target (str): file or folder the link will point to
         link_to (str): Link to create
+        hardlink (bool): Use a hardlink instead of a softlink
     """
     assert isinstance(target, str)
     assert os.path.exists(target)
@@ -141,8 +152,11 @@ def link(target, link_to):
     # Make sure the file or folder recursively has the good mode
     chmod(target)
 
-    # Create the link to target
-    os.symlink(target, link_to)
+    # Create the link to target, but only if target is not a dir (hardlink doesn't play nicely with dirs)
+    if hardlink and not os.path.isdir(target):
+        os.link(target, link_to)
+    else:
+        os.symlink(target, link_to)
 
 
 def chmod(target):

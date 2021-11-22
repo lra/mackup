@@ -14,6 +14,7 @@ except ImportError:
 
 from .constants import APPS_DIR
 from .constants import CUSTOM_APPS_DIR
+from .enums import parse_sync_mode
 
 
 class ApplicationsDatabase(object):
@@ -43,6 +44,10 @@ class ApplicationsDatabase(object):
                 # Add the fancy name for the app, for display purpose
                 app_pretty_name = config.get("application", "name")
                 self.apps[app_name]["name"] = app_pretty_name
+
+                # Add the mode on how to sync the app
+                link_mode = config.get("application", "mode", fallback="softlink")
+                self.apps[app_name]["mode"] = link_mode
 
                 # Add the configuration files to sync
                 self.apps[app_name]["configuration_files"] = set()
@@ -115,6 +120,18 @@ class ApplicationsDatabase(object):
                 config_files.add(os.path.join(apps_dir, filename))
 
         return config_files
+
+    def get_mode(self, name):
+        """
+        Return the sync mode of the app
+
+        Args:
+            name (str)
+
+        Returns:
+            SyncMode
+        """
+        return parse_sync_mode(self.apps[name]["mode"])
 
     def get_name(self, name):
         """

@@ -8,13 +8,14 @@ import os
 
 from .mackup import Mackup
 from . import utils
+from .enums import SyncMode
 
 
 class ApplicationProfile(object):
 
     """Instantiate this class with application specific data."""
 
-    def __init__(self, mackup, files, dry_run, verbose):
+    def __init__(self, mackup, files, sync_mode, dry_run, verbose):
         """
         Create an ApplicationProfile instance.
 
@@ -29,6 +30,7 @@ class ApplicationProfile(object):
         self.files = list(files)
         self.dry_run = dry_run
         self.verbose = verbose
+        self.sync_mode = sync_mode
 
     def getFilepaths(self, filename):
         """
@@ -68,19 +70,19 @@ class ApplicationProfile(object):
 
             # If the file exists and is not already a link pointing to Mackup
             if (os.path.isfile(home_filepath) or os.path.isdir(home_filepath)) and not (
-                os.path.islink(home_filepath)
+                utils.islink(home_filepath)
                 and (os.path.isfile(mackup_filepath) or os.path.isdir(mackup_filepath))
                 and os.path.samefile(home_filepath, mackup_filepath)
             ):
-
+                link_mode = "hardlink" if self.sync_mode == SyncMode.HARDLINK else "softlink"
                 if self.verbose:
                     print(
-                        "Backing up\n  {}\n  to\n  {} ...".format(
-                            home_filepath, mackup_filepath
+                        "Backing up\n  {}\n  to\n  {} ({})...".format(
+                            home_filepath, mackup_filepath, link_mode
                         )
                     )
                 else:
-                    print("Backing up {} ...".format(filename))
+                    print("Backing up {} ({})...".format(filename, link_mode))
 
                 if self.dry_run:
                     continue
@@ -93,7 +95,7 @@ class ApplicationProfile(object):
                         file_type = "file"
                     elif os.path.isdir(mackup_filepath):
                         file_type = "folder"
-                    elif os.path.islink(mackup_filepath):
+                    elif utils.islink(mackup_filepath):
                         file_type = "link"
                     else:
                         raise ValueError("Unsupported file: {}".format(mackup_filepath))
@@ -111,14 +113,14 @@ class ApplicationProfile(object):
                         # Delete the file in the home
                         utils.delete(home_filepath)
                         # Link the backuped file to its original place
-                        utils.link(mackup_filepath, home_filepath)
+                        utils.link(mackup_filepath, home_filepath, self.sync_mode == SyncMode.HARDLINK)
                 else:
                     # Copy the file
                     utils.copy(home_filepath, mackup_filepath)
                     # Delete the file in the home
                     utils.delete(home_filepath)
                     # Link the backuped file to its original place
-                    utils.link(mackup_filepath, home_filepath)
+                    utils.link(mackup_filepath, home_filepath, self.sync_mode == SyncMode.HARDLINK)
             elif self.verbose:
                 if os.path.exists(home_filepath):
                     print(
@@ -127,7 +129,7 @@ class ApplicationProfile(object):
                             home_filepath, mackup_filepath
                         )
                     )
-                elif os.path.islink(home_filepath):
+                elif utils.islink(home_filepath):
                     print(
                         "Doing nothing\n  {}\n  "
                         "is a broken link, you might want to fix it.".format(
@@ -162,7 +164,7 @@ class ApplicationProfile(object):
                 mackup_filepath
             )
             pointing_to_mackup = (
-                os.path.islink(home_filepath)
+                utils.islink(home_filepath)
                 and os.path.exists(mackup_filepath)
                 and os.path.samefile(mackup_filepath, home_filepath)
             )
@@ -188,7 +190,7 @@ class ApplicationProfile(object):
                         file_type = "file"
                     elif os.path.isdir(home_filepath):
                         file_type = "folder"
-                    elif os.path.islink(home_filepath):
+                    elif utils.islink(home_filepath):
                         file_type = "link"
                     else:
                         raise ValueError("Unsupported file: {}".format(mackup_filepath))
@@ -199,9 +201,9 @@ class ApplicationProfile(object):
                         " your backup?".format(file_type, filename)
                     ):
                         utils.delete(home_filepath)
-                        utils.link(mackup_filepath, home_filepath)
+                        utils.link(mackup_filepath, home_filepath, self.sync_mode == SyncMode.HARDLINK)
                 else:
-                    utils.link(mackup_filepath, home_filepath)
+                    utils.link(mackup_filepath, home_filepath, self.sync_mode == SyncMode.HARDLINK)
             elif self.verbose:
                 if os.path.exists(home_filepath):
                     print(
@@ -209,7 +211,7 @@ class ApplicationProfile(object):
                             mackup_filepath, home_filepath
                         )
                     )
-                elif os.path.islink(home_filepath):
+                elif utils.islink(home_filepath):
                     print(
                         "Doing nothing\n  {}\n  "
                         "is a broken link, you might want to fix it.".format(

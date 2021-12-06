@@ -6,6 +6,7 @@
 - Fixed support for asciinema (via @revolter)
 - Added support for Mumu (via @fharper)
 - Updated support for fasd (via @doubleloop)
+- Added support for Nova (via @guillaumealgis)
 
 ## Mackup 0.8.33
 

@@ -471,6 +471,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [ngrok](https://ngrok.com/)
 - [Nomacs](http://nomacs.org/)
 - [NoSQLBooster for MongoDB](https://www.nosqlbooster.com/)
+- [Nova](https://www.nova.app/)
 - [npm](https://www.npmjs.com/)
 - [npmrc](https://github.com/deoxxa/npmrc/)
 - [nuget](https://www.nuget.org/)

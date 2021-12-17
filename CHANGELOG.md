@@ -7,6 +7,7 @@
 - Added support for Mumu (via @fharper)
 - Updated support for fasd (via @doubleloop)
 - Added support for Nova (via @guillaumealgis)
+- Added support for PicGo (via @SSBun)
 
 ## Mackup 0.8.33
 

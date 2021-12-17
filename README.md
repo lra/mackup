@@ -498,6 +498,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Phoenix](https://github.com/kasper/phoenix)
 - [PhoneView](https://www.ecamm.com/mac/phoneview/)
 - [PhpStorm](http://www.jetbrains.com/phpstorm/)
+- [PicGo](https://github.com/Molunerfinn/PicGo)
 - [Pidgin](https://www.pidgin.im)
 - [PIP](http://www.pip-installer.org/)
 - [PixelSnap](https://getpixelsnap.com/)
@@ -686,7 +687,6 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [Zsh](http://zsh.sourceforge.net/)
 - [Übersicht](http://tracesof.net/uebersicht/)
-- [PicGo](https://github.com/Molunerfinn/PicGo)
 
 ## Can you support application X
 

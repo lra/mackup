@@ -8,6 +8,7 @@
 - Updated support for fasd (via @doubleloop)
 - Added support for Nova (via @guillaumealgis)
 - Added support for PicGo (via @SSBun)
+- Updated support for vim (via @iarchean)
 
 ## Mackup 0.8.33
 

@@ -8,6 +8,7 @@
 - Updated support for fasd (via @doubleloop)
 - Added support for Nova (via @guillaumealgis)
 - Added support for PicGo (via @SSBun)
+- Added support for Planner (via @spawnedc)
 
 ## Mackup 0.8.33
 
@@ -500,7 +501,7 @@
 - Added support of WebStorm 10 (via @morphinewan)
 - Added support of Gnome SSH Tunnel Manager (via @skyrocknroll)
 - Added support for Hammerspoon (via @jkaan)
-- Added support for Bitchx (via @troywilson_)
+- Added support for Bitchx (via @troywilson\_)
 - Added support for EditorConfig (via @chadluo)
 - Add com.agilebits.onepassword4.plist in 1Password (via @amatos)
 - Added support for Versions (via @amatos)
@@ -810,7 +811,7 @@
 - Added support for Ack (via @adamlogic)
 - Added support for Stata and SelfControl (via @kfinlay)
 - Added support for LaTeXiT (via @twsh)
-- Do not link ~/Library/* files on GNU/Linux, should fix #104
+- Do not link ~/Library/\* files on GNU/Linux, should fix #104
 
 ## Mackup 0.5
 

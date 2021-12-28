@@ -21,6 +21,21 @@ Keep your application settings in sync.
 
 ## Quickstart
 
+Instructions for three common use cases are below.
+
+- [**Scenario 1**](#Scenario-1) is the quickest and easiest but gives
+  you no control over which applications are shared out for syncing.
+- [**Scenario 2**](#Scenario-2) is also quick and easy and gives
+  you control over which applications are shared out for syncing.
+- [**Scenario 3**](#Scenario-3) is for the many unfortunate souls
+  that never bothered to sync the configurations files on the different
+  machines they work on and are ready for Mackup to end their misery.
+
+### Scenario 1
+
+You want to push **all** configuration settings from **all**
+supported applications to get synced:
+
 If you have [Dropbox](https://www.dropbox.com) installed and want to use it to
 save your config files, that's super easy.
 
@@ -69,7 +84,55 @@ mackup restore
 
 Done!
 
-You can find more detailed instructions in [INSTALL.md](INSTALL.md).
+You can find more detailed installation instructions in [INSTALL.md](INSTALL.md).
+
+### Scenario 2
+
+You want to push configuration settings from **some** applications
+from one machine to others for syncing.
+
+Let's say you want to share just your bash configuration files with
+your other machines. Simply create a file in your home directory
+named `.mackup.cfg` and add the following two lines to it with your
+favorite text editor:
+
+```
+[applications_to_sync]
+bash
+```
+
+Save the file and then run the same commands given in Scenario 1
+above to install and sync your apps. Done!
+
+As you get more comfortable with Mackup and want to add new
+applications to sync, simply add the name of the supported application
+to the `.mackup.cfg` to the end of the file on a new line by itself.
+You can also easily add unsupported applications as well.
+
+Learn more about modifying and customizing Mackup in [the documentation](doc/README.md).
+
+### Scenario 3
+
+You want to merge the configuration settings of two or
+more machines.
+
+For example, let's say your bash configuration on Machine A is different
+than the bash configuration on Machine B. You have some bash settings
+on Machine A (like useful aliases) that you want to move over to
+Machine B. But you also have settings on Machine B that you want to
+move over to Machine A.
+
+The problem is that if you use Mackup to send Machine A's bash configuration settings
+to  Machine B, you will permanently lose any configurations that were on
+Machine B but not on Machine A.
+
+You might decide you don't care about merging app configurations and can live with
+replacing one machine's configuration with another. If so, just follow scenario
+1 or 2 above.
+
+Otherwise, if you want to keep configuration settings from two or more
+different machines, we have provided
+[a guide in our documentation](doc/configuration_merge_guide.md)
 
 ## Usage
 

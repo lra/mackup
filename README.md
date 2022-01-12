@@ -7,17 +7,24 @@ Keep your application settings in sync.
 
 ## Table of content
 
-- [Quickstart](#quickstart)
-- [Usage](#usage)
-- [What does it do](#what-does-it-do)
-- [Bullsh\*t, what does it really do to my files](#bullsht-what-does-it-really-do-to-my-files)
-- [Supported Storages](#supported-storages)
-- [Supported Applications](#supported-applications)
-- [Can you support application X](#can-you-support-application-x)
-- [Why did you do this](#why-did-you-do-this)
-- [What platforms are supported](#what-platforms-are-supported)
-- [What's up with the weird name](#whats-up-with-the-weird-name)
-- [Where can I find more information](#where-can-i-find-more-information)
+- [Mackup](#mackup)
+  - [Table of content](#table-of-content)
+  - [Quickstart](#quickstart)
+  - [Usage](#usage)
+  - [What does it do](#what-does-it-do)
+  - [Bullsh\*t, what does it really do to my files](#bullsht-what-does-it-really-do-to-my-files)
+    - [Backup](#backup)
+    - [Restore](#restore)
+    - [Uninstall](#uninstall)
+  - [Supported Storages](#supported-storages)
+  - [Unsupported Storages](#unsupported-storages)
+  - [Supported Applications](#supported-applications)
+  - [Can you support application X](#can-you-support-application-x)
+  - [Personalization & configuration](#personalization--configuration)
+  - [Why did you do this](#why-did-you-do-this)
+  - [What platforms are supported](#what-platforms-are-supported)
+  - [What's up with the weird name](#whats-up-with-the-weird-name)
+  - [Where can I find more information](#where-can-i-find-more-information)
 
 ## Quickstart
 
@@ -486,6 +493,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Openbox](http://openbox.org)
 - [OpenEmu](http://openemu.org)
 - [OpenSSH](http://www.openssh.com/)
+- [Oracle Cloud Infrastructure CLI](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
 - [Paintbrush](http://paintbrush.sourceforge.net/)
 - [Pandoc](http://pandoc.org)
 - [Pass](http://www.passwordstore.org/)

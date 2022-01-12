@@ -10,6 +10,7 @@
 - Added support for Oracle Cloud Infrastructure CLI (via @Djelibeybi)
 - Added support for PicGo (via @SSBun)
 - Added support for Planner (via @spawnedc)
+- Fixed support for k9s (via @gamussa)
 
 ## Mackup 0.8.33
 

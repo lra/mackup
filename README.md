@@ -669,6 +669,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
 - [VLC](http://www.videolan.org/)
 - [Volt](https://github.com/vim-volt/volt)
+- [Wake-on-Lan - Prezto Module](https://github.com/sorin-ionescu/prezto/tree/master/modules/wakeonlan)
 - [Wakatime](https://wakatime.com/)
 - [waybar](https://github.com/Alexays/Waybar)
 - [WebStorm](https://www.jetbrains.com/webstorm/)

@@ -12,6 +12,7 @@
 - Added support for Planner (via @spawnedc)
 - Fixed support for k9s (via @gamussa)
 - Added support for notion-enhancer (via @fharper)
+- Added support for GitFox (via @L3K0V)
 
 ## Mackup 0.8.33
 

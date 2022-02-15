@@ -1,0 +1,6 @@
+[application]
+name = GitFox
+
+[configuration_files]
+Library/Preferences/com.bytieful.Gitfox.plist
+Library/Preferences/com.bytieful.Gitfox-setapp.plist

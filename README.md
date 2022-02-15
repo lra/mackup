@@ -330,6 +330,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Git Hooks](https://github.com/git-hooks/git-hooks)
 - [Git](http://git-scm.com/)
 - [Gitbox](http://gitboxapp.com/)
+- [GitFox](https://www.gitfox.app)
 - [GitKraken](https://www.gitkraken.com)
 - [GitUp](http://gitup.co/)
 - [Gmail Notifr](http://ashchan.com/projects/gmail-notifr)

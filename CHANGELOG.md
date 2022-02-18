@@ -11,6 +11,7 @@
 - Added support for PicGo (via @SSBun)
 - Added support for Planner (via @spawnedc)
 - Fixed support for k9s (via @gamussa)
+- Added support for act (via @fharper)
 - Added support for notion-enhancer (via @fharper)
 - Added support for GitFox (via @L3K0V)
 

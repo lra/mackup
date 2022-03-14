@@ -8,8 +8,7 @@ docopt = "*"
 six = "*"
 
 [dev-packages]
-# Black is still a pre-release. Replaced with `brew install black` for now.
-# black = "*"
+black = "*"
 coverage = "*"
 nose = "*"
 twine = "*"

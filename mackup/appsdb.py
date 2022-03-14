@@ -6,6 +6,7 @@ data from the Mackup Database (files).
 """
 import glob
 import os
+from pathlib import Path
 
 try:
     import configparser
@@ -35,25 +36,27 @@ class ApplicationsDatabase(object):
             if config.read(config_file):
                 # Get the filename without the directory name
                 filename = os.path.basename(config_file)
-                # The app name is the cfg filename with the extension
+                # The app name is the cfg filename without the extension
                 app_name = filename[: -len(".cfg")]
 
                 # Start building a dict for this app
-                self.apps[app_name] = dict()
+                app = dict()
 
                 # Add the fancy name for the app, for display purpose
                 app_pretty_name = config.get("application", "name")
-                self.apps[app_name]["name"] = app_pretty_name
+                app["name"] = app_pretty_name
 
                 # Add the configuration files to sync
-                self.apps[app_name]["configuration_files"] = set()
+                app["configuration_files"] = set()
                 if config.has_section("configuration_files"):
                     for path in config.options("configuration_files"):
                         if path.startswith("/"):
                             raise ValueError(
                                 "Unsupported absolute path: {}".format(path)
                             )
-                        self._add_path(app_name, path, config)
+                        app["configuration_files"] |= self.get_resolves_paths(
+                            path, config
+                        )
 
                 # Add the XDG configuration files to sync
                 home = os.path.expanduser("~/")
@@ -73,7 +76,11 @@ class ApplicationsDatabase(object):
                             )
                         path = os.path.join(xdg_config_home, path)
                         path = path.replace(home, "")
-                        self._add_path(app_name, path, config)
+                        app["configuration_files"] |= self.get_resolves_paths(
+                            path, config
+                        )
+
+                self.apps[app_name] = app
 
     @staticmethod
     def get_config_files():
@@ -170,10 +177,11 @@ class ApplicationsDatabase(object):
 
         return pretty_app_names
 
-    def _add_path(self, app_name, path, config):
+    def get_resolves_paths(self, path, config):
         if config.getboolean("options", "enable_glob", fallback=False):
-            expanded_paths = glob.glob(path)
+            return {
+                str(p.relative_to(os.environ["HOME"]))
+                for p in Path(os.environ["HOME"]).glob(path)
+            }
         else:
-            expanded_paths = [path]
-        for expanded_path in expanded_paths:
-            self.apps[app_name]["configuration_files"].add(expanded_path)
+            return set([path])

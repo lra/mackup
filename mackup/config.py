@@ -148,7 +148,7 @@ class Config(object):
             filename = MACKUP_CONFIG_FILE
 
         parser = configparser.SafeConfigParser(allow_no_value=True)
-        parser.read(os.path.join(os.path.join(os.environ["HOME"], filename)))
+        parser.read(os.path.join(os.environ["HOME"], filename))
 
         return parser
 

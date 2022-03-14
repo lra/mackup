@@ -7,9 +7,8 @@ Feel free to add more, the more the better!
 ## How to run the tests
 
 ```bash
-cd src/mackup
-pip install -r requirements.txt
-nosetests
+pipenv install --dev
+make test
 ```
 
 And you should see

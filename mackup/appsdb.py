@@ -6,7 +6,6 @@ data from the Mackup Database (files).
 """
 import glob
 import os
-from pathlib import Path
 
 try:
     import configparser
@@ -180,8 +179,8 @@ class ApplicationsDatabase(object):
     def get_resolves_paths(self, path, config):
         if config.getboolean("options", "enable_glob", fallback=False):
             return {
-                str(p.relative_to(os.environ["HOME"]))
-                for p in Path(os.environ["HOME"]).glob(path)
+                os.path.relpath(resolved_path, start=os.environ["HOME"])
+                for resolved_path in glob.glob(os.path.join(os.environ["HOME"], path))
             }
         else:
             return set([path])

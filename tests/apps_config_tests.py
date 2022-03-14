@@ -24,7 +24,7 @@ class TestMackup(unittest.TestCase):
     def setUp(self):
         os.environ["HOME"] = FIXTURES_DIR
 
-        with open(self.config_file_path, "w") as config_file:
+        with open(self.config_file_path, "wb") as config_file:
             config_file.write(
                 "\n".join(
                     [
@@ -37,7 +37,7 @@ class TestMackup(unittest.TestCase):
                         "[configuration_files]",
                         "Library/Application Support/Test App/*/data.txt",
                     ]
-                )
+                ).encode("ascii")
             )
 
     def tearDown(self):
@@ -63,10 +63,10 @@ class TestMackup(unittest.TestCase):
             app_db = ApplicationsDatabase()
             app_db.get_config_files = lambda *args, **kwargs: [self.config_file_path]
             self.assertEqual(
-                    app_db.get_files("test-app"),
-                    {
-                        "Library/Application Support/Test App/2020/data.txt",
-                        "Library/Application Support/Test App/2021/data.txt",
-                        "Library/Application Support/Test App/2022/data.txt",
-                    },
-                )
+                app_db.get_files("test-app"),
+                {
+                    "Library/Application Support/Test App/2020/data.txt",
+                    "Library/Application Support/Test App/2021/data.txt",
+                    "Library/Application Support/Test App/2022/data.txt",
+                },
+            )

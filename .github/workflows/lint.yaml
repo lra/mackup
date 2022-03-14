@@ -11,4 +11,4 @@ jobs:
     steps:
       - run: pip install black
       - uses: actions/checkout@v2
-      - run: black --check --target-version py27 .
+      - run: black --check --target-version py34 .

@@ -24,7 +24,7 @@ class TestMackup(unittest.TestCase):
     def setUp(self):
         os.environ["HOME"] = FIXTURES_DIR
 
-        with open(self.config_file_path, "w", encoding='utf-8') as config_file:
+        with open(self.config_file_path, "wb") as config_file:
             config_file.write(
                 "\n".join(
                     [
@@ -37,7 +37,7 @@ class TestMackup(unittest.TestCase):
                         "[configuration_files]",
                         "Library/Application Support/Test App/*/data.txt",
                     ]
-                )
+                ).encode("utf-8")
             )
 
     def tearDown(self):

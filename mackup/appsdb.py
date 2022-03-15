@@ -4,6 +4,7 @@ The applications database.
 The Applications Database provides an easy to use interface to load application
 data from the Mackup Database (files).
 """
+import codecs
 import glob
 import os
 
@@ -35,7 +36,7 @@ class ApplicationsDatabase(object):
             try:
                 valid_config = config.read(config_file)
             except UnicodeEncodeError:
-                with open(config_file, "r", "utf8") as fp:
+                with codecs.open(config_file, "r", "utf8") as fp:
                     valid_config = config.readfp(fp)
 
             if valid_config:

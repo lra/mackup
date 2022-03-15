@@ -1,3 +1,5 @@
+.PHONY: develop undevelop lint test clean release black prepare
+
 develop:
 	pipenv run python setup.py develop
 
@@ -21,3 +23,6 @@ release: clean
 
 black:
 	pipenv run black --target-version py34 .
+
+prepare: black test
+

@@ -32,7 +32,13 @@ class ApplicationsDatabase(object):
             # Needed to not lowercase the configuration_files in the ini files
             config.optionxform = str
 
-            if config.read(config_file):
+            try:
+                valid_config = config.read(config_file)
+            except UnicodeEncodeError:
+                with open(config_file, "r", "utf8") as fp:
+                    valid_config = config.readfp(fp)
+
+            if valid_config:
                 # Get the filename without the directory name
                 filename = os.path.basename(config_file)
                 # The app name is the cfg filename without the extension

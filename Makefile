@@ -1,4 +1,4 @@
-.PHONY: develop undevelop lint test clean release black prepare
+.PHONY: develop undevelop lint test clean release black
 
 develop:
 	pipenv run python setup.py develop

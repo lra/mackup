@@ -22,7 +22,4 @@ release: clean
 	pipenv run twine upload dist/*
 
 black:
-	pipenv run black --target-version py34 .
-
-prepare: black test
-
+	black --target-version py310 .

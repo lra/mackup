@@ -217,6 +217,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Beets](http://beets.io/)
 - [BetterSnapTool](http://www.boastr.net/)
 - [BetterTouchTool](http://www.boastr.net/)
+- [BeyondCompare](https://scootersoftware.com/)
 - [BibDesk](http://bibdesk.sourceforge.net/)
 - [Billings Pro Server Admin](https://www.marketcircle.com/billingspro/download/billingspro-server/)
 - [BitBar](https://getbitbar.com/)

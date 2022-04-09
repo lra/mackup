@@ -133,6 +133,7 @@ def link(target, link_to, physical=False):
     assert isinstance(target, str)
     assert os.path.exists(target)
     assert isinstance(link_to, str)
+    # print("Linking {} to {}...".format(target, link_to))
 
     # Create the path to the link if it does not exists
     abs_path = os.path.dirname(os.path.abspath(link_to))

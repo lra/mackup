@@ -2,6 +2,24 @@
 
 ## WIP
 
+- Added support for Remote Desktop Manager (via @jpmat296)
+- Fixed support for asciinema (via @revolter)
+- Added support for Mumu (via @fharper)
+- Updated support for fasd (via @doubleloop)
+- Added support for Nova (via @guillaumealgis)
+- Added support for Oracle Cloud Infrastructure CLI (via @Djelibeybi)
+- Added support for PicGo (via @SSBun)
+- Added support for Planner (via @spawnedc)
+- Fixed support for k9s (via @gamussa)
+- Added support for act (via @fharper)
+- Added support for notion-enhancer (via @fharper)
+- Added support for GitFox (via @L3K0V)
+- Updated support for Bartender through SetApp (via @dbhagen)
+
+## Mackup 0.8.33
+
+- Added support for Lightroom Classic (via @treee111)
+- Fixed support for Hocus Focus (via @jrolfs)
 - Added support for KeePassXC (via @harens)
 - Fixed support for poetry (via @ameyuuno)
 - Added support for npm package npmrc (via @jdvivar)
@@ -10,6 +28,18 @@
 - Added support for Qv2ray (via @kidonng)
 - Added support for Neofetch (via @kidonng)
 - Added support for PsySH (via @nesk)
+- Added support for polybar(via @jneo8)
+- Added support for Tiles (via @damianoamatruda)
+- Added support for Flake8 (via @hongqn)
+- Fixed support for HandBrake (via @damianoamatruda)
+- Added support for Loopback (via @damianoamatruda)
+- Added support for IDA Pro (via @damianoamatruda)
+- Added support for MuteSpotifyAds (via @damianoamatruda)
+- Added support for Ghidra (via @damianoamatruda)
+- Added support for Logitech Options (via @damianoamatruda)
+- Added support for OBS (via @damianoamatruda)
+- Update uninstall prompt for accuracy (via @soneji)
+- Added support for Proxyman (via @NghiaTranUIT)
 - Updated support for IntelliJIdea version 2021.1 (via @steffenmalisi)
 - Added support for Sublime Text 4 (via @TCattd)
 - Added support for Contexts (via @antoni-k)
@@ -22,6 +52,11 @@
 - Added support for Affinity Photo (via @EpicKris)
 - Added support for Affinity Publisher (via @EpicKris)
 - Added support for MTMR (via @dec0dOS)
+- Added support for Rocket (via @revolter)
+- Updated support for BetterTouchTool (via @grapswiz)
+- Updated support for k9s (via @dfang)
+- Added support for Mendeley Desktop (via @aiotter)
+- Added support for CleanShot, Mosaic, Eagle and Nuget (via @ye4241)
 
 ## Mackup 0.8.32
 
@@ -43,6 +78,7 @@
 - Added support for espanso (via @maxandersen)
 - Added support for lazygit (via @joshmedeski)
 - Added support for WebStorm versions 2019.4, 2020.2, 2020.3, 2020.4 (via @bdcarr)
+- Added support for rbenv (via @dfang)
 - Added support for draft (via @dfang)
 - Added support for lf (via @joshmedeski)
 - Added support for Beets (via @publicarray)
@@ -471,7 +507,7 @@
 - Added support of WebStorm 10 (via @morphinewan)
 - Added support of Gnome SSH Tunnel Manager (via @skyrocknroll)
 - Added support for Hammerspoon (via @jkaan)
-- Added support for Bitchx (via @troywilson_)
+- Added support for Bitchx (via @troywilson\_)
 - Added support for EditorConfig (via @chadluo)
 - Add com.agilebits.onepassword4.plist in 1Password (via @amatos)
 - Added support for Versions (via @amatos)
@@ -781,7 +817,7 @@
 - Added support for Ack (via @adamlogic)
 - Added support for Stata and SelfControl (via @kfinlay)
 - Added support for LaTeXiT (via @twsh)
-- Do not link ~/Library/* files on GNU/Linux, should fix #104
+- Do not link ~/Library/\* files on GNU/Linux, should fix #104
 
 ## Mackup 0.5
 

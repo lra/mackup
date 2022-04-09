@@ -60,7 +60,7 @@ class ApplicationsDatabase(object):
                             raise ValueError(
                                 "Unsupported absolute path: {}".format(path)
                             )
-                        app["configuration_files"] |= self.get_resolves_paths(
+                        app["configuration_files"] |= self.get_resolved_paths(
                             path, config
                         )
 
@@ -82,7 +82,7 @@ class ApplicationsDatabase(object):
                             )
                         path = os.path.join(xdg_config_home, path)
                         path = path.replace(home, "")
-                        app["configuration_files"] |= self.get_resolves_paths(
+                        app["configuration_files"] |= self.get_resolved_paths(
                             path, config
                         )
 
@@ -183,7 +183,7 @@ class ApplicationsDatabase(object):
 
         return pretty_app_names
 
-    def get_resolves_paths(self, path, config):
+    def get_resolved_paths(self, path, config):
         if config.getboolean("options", "enable_glob", fallback=False):
             return {
                 os.path.relpath(resolved_path, start=os.environ["HOME"])

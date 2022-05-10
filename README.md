@@ -433,6 +433,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [MagicPrefs](http://magicprefs.com/)
 - [Magnet](https://magnet.crowdcafe.com/)
 - [Maid](https://github.com/benjaminoakes/maid/)
+- [Mail](https://support.apple.com/guide/mail/welcome/mac)
 - [Mailmate](http://freron.com/)
 - [Mailplane](http://mailplaneapp.com/)
 - [mako](https://wayland.emersion.fr/mako/)

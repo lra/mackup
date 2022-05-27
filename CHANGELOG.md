@@ -15,7 +15,7 @@
 - Added support for notion-enhancer (via @fharper)
 - Added support for GitFox (via @L3K0V)
 - Updated support for Bartender through SetApp (via @dbhagen)
-- Adde support for Amphetamine (via @ronnie)
+- Added support for Amphetamine (via @ronnie)
 
 ## Mackup 0.8.33
 

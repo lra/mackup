@@ -6,6 +6,7 @@
 - Fixed support for asciinema (via @revolter)
 - Added support for Mumu (via @fharper)
 - Updated support for fasd (via @doubleloop)
+- Updated support for lazygit (via @joshmedeski)
 - Added support for Nova (via @guillaumealgis)
 - Added support for Oracle Cloud Infrastructure CLI (via @Djelibeybi)
 - Added support for PicGo (via @SSBun)

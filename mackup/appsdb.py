@@ -4,6 +4,8 @@ The applications database.
 The Applications Database provides an easy to use interface to load application
 data from the Mackup Database (files).
 """
+import codecs
+import glob
 import os
 
 try:
@@ -31,28 +33,36 @@ class ApplicationsDatabase(object):
             # Needed to not lowercase the configuration_files in the ini files
             config.optionxform = str
 
-            if config.read(config_file):
+            try:
+                valid_config = config.read(config_file)
+            except UnicodeEncodeError:
+                with codecs.open(config_file, "r", "utf8") as fp:
+                    valid_config = config.readfp(fp)
+
+            if valid_config:
                 # Get the filename without the directory name
                 filename = os.path.basename(config_file)
-                # The app name is the cfg filename with the extension
+                # The app name is the cfg filename without the extension
                 app_name = filename[: -len(".cfg")]
 
                 # Start building a dict for this app
-                self.apps[app_name] = dict()
+                app = dict()
 
                 # Add the fancy name for the app, for display purpose
                 app_pretty_name = config.get("application", "name")
-                self.apps[app_name]["name"] = app_pretty_name
+                app["name"] = app_pretty_name
 
                 # Add the configuration files to sync
-                self.apps[app_name]["configuration_files"] = set()
+                app["configuration_files"] = set()
                 if config.has_section("configuration_files"):
                     for path in config.options("configuration_files"):
                         if path.startswith("/"):
                             raise ValueError(
                                 "Unsupported absolute path: {}".format(path)
                             )
-                        self.apps[app_name]["configuration_files"].add(path)
+                        app["configuration_files"] |= self.get_resolved_paths(
+                            path, config
+                        )
 
                 # Add the XDG configuration files to sync
                 home = os.path.expanduser("~/")
@@ -72,7 +82,11 @@ class ApplicationsDatabase(object):
                             )
                         path = os.path.join(xdg_config_home, path)
                         path = path.replace(home, "")
-                        (self.apps[app_name]["configuration_files"].add(path))
+                        app["configuration_files"] |= self.get_resolved_paths(
+                            path, config
+                        )
+
+                self.apps[app_name] = app
 
     @staticmethod
     def get_config_files():
@@ -168,3 +182,12 @@ class ApplicationsDatabase(object):
             pretty_app_names.add(self.get_name(app_name))
 
         return pretty_app_names
+
+    def get_resolved_paths(self, path, config):
+        if config.getboolean("options", "enable_glob", fallback=False):
+            return {
+                os.path.relpath(resolved_path, start=os.environ["HOME"])
+                for resolved_path in glob.glob(os.path.join(os.environ["HOME"], path))
+            }
+        else:
+            return set([path])

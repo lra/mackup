@@ -20,6 +20,7 @@ from .utils import (
     get_copy_folder_location,
     get_google_drive_folder_location,
     get_icloud_folder_location,
+    get_options
 )
 
 try:
@@ -256,7 +257,7 @@ class Config(object):
         # Is the "[applications_to_ignore]" in the cfg file?
         section_title = "applications_to_ignore"
         if self._parser.has_section(section_title):
-            apps_to_ignore = set(self._parser.options(section_title))
+            apps_to_ignore = get_options(self, section_title)
 
         return apps_to_ignore
 
@@ -273,7 +274,7 @@ class Config(object):
         # Is the "[applications_to_sync]" section in the cfg file?
         section_title = "applications_to_sync"
         if self._parser.has_section(section_title):
-            apps_to_sync = set(self._parser.options(section_title))
+            apps_to_sync = get_options(self, section_title)
 
         return apps_to_sync
 

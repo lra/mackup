@@ -396,6 +396,7 @@ def can_file_be_synced_on_current_platform(path):
 
     return can_be_synced
 
+
 def get_options(self, section_title):
     """
     Return a list of option names for the given section name.
@@ -403,7 +404,7 @@ def get_options(self, section_title):
     Removes inline comments and ignores comment lines.
 
     Args:
-        (str): Name of the section to get the options for. 
+        (str): Name of the section to get the options for.
 
     Returns:
         (set): options without comments
@@ -411,11 +412,10 @@ def get_options(self, section_title):
     options = set(self._parser.options(section_title))
     trimmed_options = set()
     for line in options:
-        line = line.split('#',1)[0].strip()
+        line = line.split("#", 1)[0].strip()
         if not line:
             continue
         else:
             trimmed_options.add(line)
     print(trimmed_options)
     return trimmed_options
-

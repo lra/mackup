@@ -20,7 +20,7 @@ from .utils import (
     get_copy_folder_location,
     get_google_drive_folder_location,
     get_icloud_folder_location,
-    get_options
+    get_options,
 )
 
 try:

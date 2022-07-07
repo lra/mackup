@@ -406,6 +406,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Keymo](http://manytricks.com/keymo/)
 - [KeyRemap4MacBook](https://pqrs.org/osx/karabiner/)
 - [Khd](https://github.com/koekeishiya/khd/)
+- [kindaVim](https://kindavim.app)
 - [kitty](https://sw.kovidgoyal.net/kitty/)
 - [Krew](https://github.com/kubernetes-sigs/krew)
 - [Kubectl](https://kubernetes.io/docs/reference/kubectl/overview/)

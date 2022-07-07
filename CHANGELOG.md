@@ -17,6 +17,7 @@
 - Added support for notion-enhancer (via @fharper)
 - Added support for GitFox (via @L3K0V)
 - Updated support for Bartender through SetApp (via @dbhagen)
+- Added support for kindaVim (via @godbout)
 
 ## Mackup 0.8.33
 

@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Updated support for iTerm2 (via @michielgerritsen)
+
 ## Mackup 0.8.34
 
 - Updated support for Bash it (via @jacopkane)

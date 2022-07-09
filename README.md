@@ -688,6 +688,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [X11](http://www.x.org/)
 - [Xee](https://theunarchiver.com/xee)
 - [Xamarin Studio](https://xamarin.com/studio)
+- [xbar](https://xbarapp.com/)
 - [XBindKeys](http://www.nongnu.org/xbindkeys/)
 - [Xchat](http://xchat.org/)
 - [Xcode](https://developer.apple.com/xcode/)

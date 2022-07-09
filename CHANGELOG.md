@@ -18,6 +18,7 @@
 - Added support for notion-enhancer (via @fharper)
 - Added support for GitFox (via @L3K0V)
 - Updated support for Bartender through SetApp (via @dbhagen)
+- Added support for xbar (via @dnicolson)
 - Added support for Beyond Compare (via @mgraham)
 - Added support for kindaVim (via @godbout)
 

@@ -1,0 +1,4 @@
+rules:
+  ignore:
+    - tests/fixtures/Library/Application Support/Box/Box Sync/sync_root_folder.txt
+    - tests/fixtures/Library/Mobile Documents/com~apple~CloudDocs/_blank_.md

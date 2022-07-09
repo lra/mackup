@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.34
+
 - Updated support for Bash it (via @jacopkane)
 - Added support for Remote Desktop Manager (via @jpmat296)
 - Fixed support for asciinema (via @revolter)

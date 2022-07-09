@@ -6,15 +6,18 @@
 - Fixed support for asciinema (via @revolter)
 - Added support for Mumu (via @fharper)
 - Updated support for fasd (via @doubleloop)
+- Updated support for lazygit (via @joshmedeski)
 - Added support for Nova (via @guillaumealgis)
 - Added support for Oracle Cloud Infrastructure CLI (via @Djelibeybi)
 - Added support for PicGo (via @SSBun)
+- Added support for Flameshot (via @joshmedeski)
 - Added support for Planner (via @spawnedc)
 - Fixed support for k9s (via @gamussa)
 - Added support for act (via @fharper)
 - Added support for notion-enhancer (via @fharper)
 - Added support for GitFox (via @L3K0V)
 - Updated support for Bartender through SetApp (via @dbhagen)
+- Added support for kindaVim (via @godbout)
 
 ## Mackup 0.8.33
 

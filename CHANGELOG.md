@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Updated support for Bash it (via @jacopkane)
 - Added support for Remote Desktop Manager (via @jpmat296)
 - Fixed support for asciinema (via @revolter)
 - Added support for Mumu (via @fharper)

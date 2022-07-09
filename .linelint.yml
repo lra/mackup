@@ -1,4 +1,15 @@
 rules:
+  # checks if file ends in a newline character
+  end-of-file:
+    # set to true to enable this rule
+    enable: true
+
+    # set to true to disable autofix (if enabled globally)
+    disable-autofix: false
+
+    # if true also checks if file ends in a single newline character
+    single-new-line: true
+
   ignore:
     - tests/fixtures/Library/Application Support/Box/Box Sync/sync_root_folder.txt
     - tests/fixtures/Library/Mobile Documents/com~apple~CloudDocs/_blank_.md

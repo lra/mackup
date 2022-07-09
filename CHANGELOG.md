@@ -2,6 +2,11 @@
 
 ## WIP
 
+- Updated support for iTerm2 (via @michielgerritsen)
+
+## Mackup 0.8.34
+
+- Updated support for Bash it (via @jacopkane)
 - Added support for Remote Desktop Manager (via @jpmat296)
 - Fixed support for asciinema (via @revolter)
 - Added support for Mumu (via @fharper)
@@ -17,7 +22,10 @@
 - Added support for notion-enhancer (via @fharper)
 - Added support for GitFox (via @L3K0V)
 - Updated support for Bartender through SetApp (via @dbhagen)
-- Updated support for iTerm2 (via @michielgerritsen)
+- Updated support for Xonsh (via @wy-z)
+- Added support for TablePlus history (via @annuh)
+- Added support for xbar (via @dnicolson)
+- Added support for Beyond Compare (via @mgraham)
 - Added support for kindaVim (via @godbout)
 
 ## Mackup 0.8.33

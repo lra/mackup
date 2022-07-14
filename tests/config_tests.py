@@ -1,5 +1,6 @@
 import unittest
 import os.path
+import tempfile
 
 from mackup.constants import (
     ENGINE_DROPBOX,
@@ -7,6 +8,7 @@ from mackup.constants import (
     ENGINE_COPY,
     ENGINE_ICLOUD,
     ENGINE_FS,
+    MACKUP_CONFIG_FILE,
 )
 from mackup.config import Config, ConfigError
 
@@ -14,7 +16,7 @@ from mackup.config import Config, ConfigError
 class TestConfig(unittest.TestCase):
     def setUp(self):
         realpath = os.path.dirname(os.path.realpath(__file__))
-        os.environ["HOME"] = os.path.join(realpath, "fixtures")
+        self.mock_home = os.environ["HOME"] = os.path.join(realpath, "fixtures")
 
     def test_config_no_config(self):
         cfg = Config()
@@ -232,3 +234,35 @@ class TestConfig(unittest.TestCase):
 
     def test_config_old_config(self):
         self.assertRaises(SystemExit, Config, "mackup-old-config.cfg")
+
+    def test_resolve_config_path_returns_default_path_if_file_exists(self):
+        pass
+
+    def test_resolve_config_path_returns_none_if_default_config_file_nonexistent(self):
+        resolved_path = Config._resolve_config_path()
+
+        assert resolved_path is None
+
+    def test_resolve_config_path_performs_tilde_expansion(self):
+        with tempfile.NamedTemporaryFile(dir=os.path.expanduser("~")) as mock_cfg_file:
+            mock_filename = os.path.basename(mock_cfg_file.name)
+            filename = os.path.join("~", mock_filename)
+            resolved_path = Config._resolve_config_path(filename)
+
+            assert resolved_path == mock_cfg_file.name
+
+    def test_resolve_config_path_relative_to_home_dir(self):
+        with tempfile.NamedTemporaryFile(dir=self.mock_home) as mock_cfg_file:
+            mock_filename = os.path.basename(mock_cfg_file.name)
+            resolved_path = Config._resolve_config_path(mock_filename)
+
+            assert resolved_path == mock_cfg_file.name
+
+    def test_resolves_config_path_relative_to_cwd(self):
+        cwd = os.getcwd()
+        with tempfile.NamedTemporaryFile(dir=cwd) as mock_cfg_file:
+            mock_path = mock_cfg_file.name
+            mock_filename = os.path.basename(mock_cfg_file.name)
+            resolved_path = Config._resolve_config_path(mock_filename)
+
+            assert resolved_path == mock_path

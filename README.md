@@ -488,6 +488,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Nova](https://www.nova.app/)
 - [npm](https://www.npmjs.com/)
 - [npmrc](https://github.com/deoxxa/npmrc/)
+- [NSLogger](https://github.com/fpillet/NSLogger)
 - [nuget](https://www.nuget.org/)
 - [Nushell](https://www.nushell.sh/)
 - [nvALT](http://brettterpstra.com/projects/nvalt/)

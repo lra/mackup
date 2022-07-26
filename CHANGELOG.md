@@ -5,6 +5,7 @@
 - Updated support for iTerm2 (via @michielgerritsen)
 - Added support for NSLogger (via @lavareX)
 - Added support for Fork (via @lavareX)
+- Updated support for Proxymann Setapp version (via @JanC)
 
 ## Mackup 0.8.34
 

@@ -7,6 +7,7 @@
 - Added support for Fork (via @lavareX)
 - Updated support for Proxymann Setapp version (via @JanC)
 - Added support for Btop (via @Mersid)
+- Updated support for Nushell (via @maradude)
 
 ## Mackup 0.8.34
 

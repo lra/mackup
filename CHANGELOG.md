@@ -9,6 +9,7 @@
 - Added support for Btop (via @Mersid)
 - Updated support for Nushell (via @maradude)
 - Updated support for CleanShot (via @timfee)
+- Added backwards-compatibility support for Espanso (via @joshmedeski)
 
 ## Mackup 0.8.34
 

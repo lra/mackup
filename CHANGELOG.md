@@ -8,6 +8,7 @@
 - Updated support for Proxymann Setapp version (via @JanC)
 - Added support for Btop (via @Mersid)
 - Updated support for Nushell (via @maradude)
+- Updated support for CleanShot (via @timfee)
 
 ## Mackup 0.8.34
 

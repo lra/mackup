@@ -672,6 +672,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Vimperator](http://www.vimperator.org/vimperator)
 - [Viscosity](http://www.sparklabs.com/viscosity/)
 - [Visual Studio Code](https://code.visualstudio.com/)
+- [Visual Studio Code - Extensions](https://code.visualstudio.com/)
 - [Visual Studio Code - Insiders](https://code.visualstudio.com/insiders)
 - [Visual Studio Code - OSS](https://github.com/Microsoft/vscode)
 - [VSCodium](https://vscodium.com/)

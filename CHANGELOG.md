@@ -8,6 +8,7 @@
 - Updated support for Proxymann Setapp version (via @JanC)
 - Added support for Btop (via @Mersid)
 - Updated support for Nushell (via @maradude)
+- Added support for VSCode Extensions (via @nyshk97)
 
 ## Mackup 0.8.34
 

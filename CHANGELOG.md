@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Updated support for yabai (via @Liu233w)
+
 ## Mackup 0.8.35
 
 - Updated support for iTerm2 (via @michielgerritsen)

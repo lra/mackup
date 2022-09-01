@@ -3,6 +3,7 @@
 ## WIP
 
 - Updated support for yabai (via @Liu233w)
+- Updated suport for skhd (via @jonasdiemer)
 
 ## Mackup 0.8.35
 

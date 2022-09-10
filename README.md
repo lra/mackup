@@ -598,6 +598,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [SHSH Blobs](https://en.wikipedia.org/wiki/SHSH_blob)
 - [Shuttle](http://fitztrev.github.io/shuttle/)
 - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
+- [Sizzy](https://sizzy.co/)
 - [skhd](https://github.com/koekeishiya/skhd/)
 - [Skim](http://skim-app.sourceforge.net/)
 - [Skitch](https://evernote.com/skitch/)

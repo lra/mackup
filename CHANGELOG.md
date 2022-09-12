@@ -4,6 +4,7 @@
 
 - Updated support for yabai (via @Liu233w)
 - Updated suport for skhd (via @jonasdiemer)
+- updated poetry config location (via @syphar)
 
 ## Mackup 0.8.35
 

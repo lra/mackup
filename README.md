@@ -634,7 +634,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [TablePlus](https://tableplus.io)
 - [TaskPaper](https://www.taskpaper.com)
 - [Taskwarrior](http://taskwarrior.org/)
-- [Teamocil](http://remiprev.github.io/teamocil/)
+- [Teamocil](https://github.com/remi/teamocil)
 - [Telegram for macOS](https://macos.telegram.org)
 - [Terminal](http://www.apple.com/osx/apps/)
 - [Terminator](https://launchpad.net/terminator/)

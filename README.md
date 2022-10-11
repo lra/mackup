@@ -182,6 +182,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Affinity Designer](https://affinity.serif.com/designer)
 - [Affinity Photo](https://affinity.serif.com/photo)
 - [Affinity Publisher](https://affinity.serif.com/publisher)
+- [Airflow](https://airflowapp.com/)
 - [Airmail](http://airmailapp.com/)
 - [Akamai-CLI](https://developer.akamai.com/cli)
 - [Alacritty](https://github.com/jwilm/alacritty)

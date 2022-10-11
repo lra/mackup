@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added support for Airflow (via @Evertt)
 - Updated support for yabai (via @Liu233w)
 - Updated suport for skhd (via @jonasdiemer)
 - Added support for Sizzy (via @driftingly)

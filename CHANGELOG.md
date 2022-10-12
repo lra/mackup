@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added support for LunarVim (via @YiGeon)
 - Added support for Airflow (via @Evertt)
 - Updated support for yabai (via @Liu233w)
 - Updated suport for skhd (via @jonasdiemer)

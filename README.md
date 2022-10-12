@@ -431,6 +431,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Lollypop](https://gnumdk.github.io/lollypop-web/)
 - [Loopback](https://rogueamoeba.com/loopback/)
 - [Luftrausers](http://luftrausers.com)
+- [LunarVim](https://www.lunarvim.org/)
 - [MacDive](http://www.mac-dive.com/)
 - [MacDown](http://macdown.uranusjr.com/)
 - [MacOSX](http://www.apple.com/osx/)

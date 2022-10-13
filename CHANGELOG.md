@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Fixed support for LunarVim (via @YiGeon)
+
 ## Mackup 0.8.36
 
 - Added support for LunarVim (via @YiGeon)

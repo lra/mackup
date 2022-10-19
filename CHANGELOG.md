@@ -2,9 +2,16 @@
 
 ## WIP
 
+- Fixed support for LunarVim (via @YiGeon)
+- Updated support for iTerm2 (via @LucasLarson)
+
+## Mackup 0.8.36
+
+- Added support for LunarVim (via @YiGeon)
+- Added support for Airflow (via @Evertt)
 - Updated support for yabai (via @Liu233w)
 - Updated suport for skhd (via @jonasdiemer)
-- Updated support for iTerm2 (via @LucasLarson)
+- Added support for Sizzy (via @driftingly)
 
 ## Mackup 0.8.35
 

@@ -23,11 +23,11 @@ First, pick the app you wish to keep in sync. Then determine which
 configuration files will be synced for that application by doing the following:
 
 1. [Install Mackup](./../INSTALL.md)
-1. Create a `.mackup.cfg` file in your home directory
-1. Add the following two lines to `.mackup.cfg`. Replace **bash**
+2. Create a `.mackup.cfg` file in your home directory
+3. Add the following two lines to `.mackup.cfg`. Replace **bash**
    in the example below with the name of your application.
 
-```
+```text
 [applications_to_sync]
 bash
 ```
@@ -35,7 +35,7 @@ bash
 You can get a list of supported apps by running `mackup list`.
 
 1. Save the file
-1. Run the following command:
+2. Run the following command:
 
 `mackup --dry-run --verbose backup`
 
@@ -64,9 +64,9 @@ from other machines.
 
 1. Create a backup of each machine's configuration files for the app you wish
    to sync.
-1. Choose a machine that will serve as the initial "master". It doesn't really
+2. Choose a machine that will serve as the initial "master". It doesn't really
    matter which one.
-1. Edit your configuration files on the master machine so that they
+3. Edit your configuration files on the master machine so that they
    represent the ideal version of the file you wish to distribute out to your
    other machines.
 
@@ -80,7 +80,7 @@ for your application on all machines.
 
 ##### Sample backup commands for Machine A**
 
-```
+```bash
 mkdir ~/bash_backup
 cp ~/.bash_profile ~/bash_backup/bash_profile.bak
 cp ~/.bash_login ~/bash_backup/bash_login.bak
@@ -90,7 +90,7 @@ cp ~/.bash_login ~/bash_backup/bash_login.bak
 
 ##### Sample backup commands for Machine B
 
-```
+```bash
 mkdir ~/bash_backup
 cp ~/.bash_profile ~/bash_backup/bash_profile.bak
 cp ~/.bash_login ~/bash_backup/bash_login.bak
@@ -102,7 +102,7 @@ Machine A will be our master so we now edit the existing configuration files
 on Machine A. We will use the vim text editor to do this for each of our
 configuration files:
 
-```
+```bash
 vim .bash_profile
 vim .bash_login
 ```
@@ -118,7 +118,7 @@ from the master machine.
 1. Choose a machine that will serve as the initial "master". You'll probably
    want to use choose the machine you use most and like its configuration
    settings the best.
-1. For each machine that aren't the "master" (i.e. "slaves"), back up all the
+2. For each machine that aren't the "master" (i.e. "slaves"), back up all the
    configuration files for each app that you want to sync. That's it for now.
    However, there will be more work for you later.
 
@@ -132,7 +132,7 @@ Machine B:
 
 ##### Sample backup commands for Machine B**
 
-```
+```bash
 mkdir ~/bash_backup
 cp ~/.bash_profile ~/bash_backup/bash_profile.bak
 cp ~/.bash_login ~/bash_backup/bash_login.bak

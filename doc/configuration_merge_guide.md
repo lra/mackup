@@ -10,8 +10,8 @@ Machine B that you would live to move over to Machine A.
 The problem is that if you use Mackup to send Machine A's bash configuration
 settings to Machine B, you will permanently lose any configurations on Machine
 B that you wanted to keep. Mackup obviously has no idea which features you want
-to keep and which ones you don't so you'll have to do a little bit of work to
-merge the different configuration files yourself before using Mackup.
+to keep and which ones you don't, so you'll have to do a bit of work to merge
+the different configuration files yourself before using Mackup.
 
 ## Step 0: Read Through This Entire Guide First
 
@@ -107,11 +107,11 @@ vim .bash_profile
 vim .bash_login
 ```
 
-When editing these configuration files on Machine A, copy and and paste the settings
+When editing these configuration files on Machine A, copy and paste the settings
 from Machine B that you want to keep. In essence, you are manually merging the
-configuratoin files together. Once you are satisfied the configuration files
-have all the settings you want and need, you are ready to push out your changes from
-the master machine.
+configuration files together. Once you are satisfied the configuration files
+have all the settings you want and need, you are ready to push out your changes
+from the master machine.
 
 ### Method 2: Backup Push-Merge Approach
 
@@ -160,7 +160,7 @@ If you used Method 1 in Step 2 above, you are done. You may you discover
 that you didn't quite merge the files exactly the way you wanted but don't
 worry, that's why you created the configuration file backups. You can grab
 snippets from these backup configuration files and add them in to the live
-configuraton files and then easily push the changes out to all your
+configuration files and then easily push the changes out to all your
 machines using mackup.
 
 If you used Method 2, you'll need to merge in new features over time. As you

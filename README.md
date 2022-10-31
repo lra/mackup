@@ -123,8 +123,8 @@ folder, in the `.gitconfig` file.
 If you have Dropbox, these things happen when you launch `mackup backup`:
 
 1. `cp ~/.gitconfig ~/Dropbox/Mackup/.gitconfig`
-1. `rm ~/.gitconfig`
-1. `ln -s ~/Dropbox/Mackup/.gitconfig ~/.gitconfig`
+2. `rm ~/.gitconfig`
+3. `ln -s ~/Dropbox/Mackup/.gitconfig ~/.gitconfig`
 
 Now your `git` config is always backed up and up to date on all your workstations.
 

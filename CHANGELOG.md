@@ -2,10 +2,50 @@
 
 ## WIP
 
+- Fixed support for LunarVim (via @YiGeon)
+
+## Mackup 0.8.36
+
+- Added support for LunarVim (via @YiGeon)
+- Added support for Airflow (via @Evertt)
+- Updated support for yabai (via @Liu233w)
+- Updated suport for skhd (via @jonasdiemer)
+- Added support for Sizzy (via @driftingly)
+
+## Mackup 0.8.35
+
+- Updated support for iTerm2 (via @michielgerritsen)
+- Added support for NSLogger (via @lavareX)
+- Added support for Fork (via @lavareX)
+- Updated support for Proxymann Setapp version (via @JanC)
+- Added support for Btop (via @Mersid)
+- Updated support for Nushell (via @maradude)
+- Updated support for CleanShot (via @timfee)
+- Added backwards-compatibility support for Espanso (via @joshmedeski)
+
+## Mackup 0.8.34
+
+- Updated support for Bash it (via @jacopkane)
 - Added support for Remote Desktop Manager (via @jpmat296)
 - Fixed support for asciinema (via @revolter)
 - Added support for Mumu (via @fharper)
 - Updated support for fasd (via @doubleloop)
+- Updated support for lazygit (via @joshmedeski)
+- Added support for Nova (via @guillaumealgis)
+- Added support for Oracle Cloud Infrastructure CLI (via @Djelibeybi)
+- Added support for PicGo (via @SSBun)
+- Added support for Flameshot (via @joshmedeski)
+- Added support for Planner (via @spawnedc)
+- Fixed support for k9s (via @gamussa)
+- Added support for act (via @fharper)
+- Added support for notion-enhancer (via @fharper)
+- Added support for GitFox (via @L3K0V)
+- Updated support for Bartender through SetApp (via @dbhagen)
+- Updated support for Xonsh (via @wy-z)
+- Added support for TablePlus history (via @annuh)
+- Added support for xbar (via @dnicolson)
+- Added support for Beyond Compare (via @mgraham)
+- Added support for kindaVim (via @godbout)
 
 ## Mackup 0.8.33
 
@@ -498,7 +538,7 @@
 - Added support of WebStorm 10 (via @morphinewan)
 - Added support of Gnome SSH Tunnel Manager (via @skyrocknroll)
 - Added support for Hammerspoon (via @jkaan)
-- Added support for Bitchx (via @troywilson_)
+- Added support for Bitchx (via @troywilson\_)
 - Added support for EditorConfig (via @chadluo)
 - Add com.agilebits.onepassword4.plist in 1Password (via @amatos)
 - Added support for Versions (via @amatos)
@@ -808,7 +848,7 @@
 - Added support for Ack (via @adamlogic)
 - Added support for Stata and SelfControl (via @kfinlay)
 - Added support for LaTeXiT (via @twsh)
-- Do not link ~/Library/* files on GNU/Linux, should fix #104
+- Do not link ~/Library/\* files on GNU/Linux, should fix #104
 
 ## Mackup 0.5
 

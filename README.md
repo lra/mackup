@@ -428,6 +428,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [LittleSnitch](http://www.obdev.at/products/littlesnitch/)
 - [Livestreamer](http://livestreamer.tanuki.se/)
 - [Logitech Options](https://www.logitech.com/en-us/product/options)
+- [Logseq](https://logseq.com/)
 - [Lollypop](https://gnumdk.github.io/lollypop-web/)
 - [Loopback](https://rogueamoeba.com/loopback/)
 - [Luftrausers](http://luftrausers.com)

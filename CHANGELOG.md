@@ -3,6 +3,7 @@
 ## WIP
 
 - Fixed support for LunarVim (via @YiGeon)
+- Added support for PrusaSlicer (via @visika)
 - Added support for Logseq (via @visika)
 - Updated support for iTerm2 (via @LucasLarson)
 

@@ -545,6 +545,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [ProxyChains NG](http://sourceforge.net/projects/proxychains-ng/)
 - [ProxyChains](http://proxychains.sourceforge.net)
 - [Proxyman](https://proxyman.io)
+- [PrusaSlicer](https://www.prusa3d.com/prusaslicer/)
 - [PsySH](https://psysh.org/)
 - [Punto Switcher](https://punto.yandex.ru/)
 - [PyCharm](https://www.jetbrains.com/pycharm/)

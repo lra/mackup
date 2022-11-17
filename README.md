@@ -635,6 +635,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Sway](https://swaywm.org/)
 - [Swinsian](http://swinsian.com/)
 - [Swish](https://highlyopinionated.co/swish/)
+- [SwitchHosts](https://github.com/oldj/SwitchHosts)
 - [T](http://sferik.github.io/t/)
 - [TablePlus](https://tableplus.io)
 - [TaskPaper](https://www.taskpaper.com)

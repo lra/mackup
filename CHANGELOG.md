@@ -3,6 +3,7 @@
 ## WIP
 
 - Fixed support for LunarVim (via @YiGeon)
+- Updated support for Caffeine (via @joshmedeski)
 
 ## Mackup 0.8.36
 

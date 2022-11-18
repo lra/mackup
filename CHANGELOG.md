@@ -6,6 +6,7 @@
 - Updated support for Caffeine (via @joshmedeski)
 - Added support for PrusaSlicer (via @visika)
 - Added support for Logseq (via @visika)
+- Added support for SwitchHosts (via @zxjlm)
 
 ## Mackup 0.8.36
 

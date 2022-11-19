@@ -292,6 +292,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Double Commander](http://doublecmd.sourceforge.net/)
 - [Doxie](http://www.getdoxie.com/)
 - [Draft](https://draft.sh/)
+- [Dozer](https://github.com/Mortennn/Dozer)
 - [Droplr](https://droplr.com/)
 - [Dropzone 3](https://aptonic.com/dropzone3/)
 - [Drush](http://www.drush.org/)

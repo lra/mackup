@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for macOS Preview (via @iloveitaly)
 - Fixed support for LunarVim (via @YiGeon)
 - Updated support for Caffeine (via @joshmedeski)
 - Added support for PrusaSlicer (via @visika)

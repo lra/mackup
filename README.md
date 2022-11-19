@@ -626,6 +626,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Startupizer2](http://appledoc.gentlebytes.com/startupizer/)
 - [Stata](http://www.stata.com/)
 - [Stay](https://cordlessdog.com/stay/)
+- [Stats](https://github.com/exelban/stats)
 - [Storyist](http://storyist.com/)
 - [Sublime Merge](https://www.sublimemerge.com/)
 - [Sublime Text](http://www.sublimetext.com/)

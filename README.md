@@ -715,6 +715,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [zathura](https://pwmt.org/projects/zathura/)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [Zsh](http://zsh.sourceforge.net/)
+- [Zoom](http://zoom.com/)
 - [Übersicht](http://tracesof.net/uebersicht/)
 
 ## Can you support application X

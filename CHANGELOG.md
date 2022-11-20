@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Fixed support for LunarVim 1.2 (via @secsaba)
 - Fixed support for LunarVim (via @YiGeon)
 - Updated support for Caffeine (via @joshmedeski)
 - Added support for PrusaSlicer (via @visika)

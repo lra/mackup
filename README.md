@@ -213,6 +213,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Bartender](http://www.macbartender.com/)
 - [Bash it](https://github.com/Bash-it/bash-it)
 - [Bash](http://www.gnu.org/software/bash/)
+- [Base](https://menial.co.uk/base/)
 - [Bat](https://github.com/sharkdp/bat)
 - [Bc](https://www.gnu.org/software/bc/)
 - [Beatport Pro](https://www.beatport.com/desktop)

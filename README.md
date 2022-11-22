@@ -209,6 +209,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Autokey](https://code.google.com/p/autokey/)
 - [Awareness](http://iamfutureproof.com/tools/awareness/)
 - [AWS Command Line Interface](https://aws.amazon.com/cli/)
+- [ActivityWatch](http://activitywatch.net/)
 - [Bartender](http://www.macbartender.com/)
 - [Bash it](https://github.com/Bash-it/bash-it)
 - [Bash](http://www.gnu.org/software/bash/)

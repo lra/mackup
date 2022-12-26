@@ -713,9 +713,9 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Yummy FTP](http://www.yummysoftware.com/)
 - [zabbix-cli](https://github.com/usit-gd/zabbix-cli)
 - [zathura](https://pwmt.org/projects/zathura/)
+- [Zoom](http://zoom.com/)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [Zsh](http://zsh.sourceforge.net/)
-- [Zoom](http://zoom.com/)
 - [Übersicht](http://tracesof.net/uebersicht/)
 
 ## Can you support application X

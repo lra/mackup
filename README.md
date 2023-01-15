@@ -688,6 +688,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [VLC](http://www.videolan.org/)
 - [Volt](https://github.com/vim-volt/volt)
 - [Wakatime](https://wakatime.com/)
+- [Warp](https://www.warp.dev)
 - [waybar](https://github.com/Alexays/Waybar)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 - [Wget](https://www.gnu.org/software/wget/)

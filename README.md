@@ -694,6 +694,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [WhatsApp Web](https://web.whatsapp.com/)
 - [Wireshark 2](https://www.wireshark.org)
 - [Witch](http://manytricks.com/witch/)
+- [Wooshy](https://wooshy.app)
 - [WordGrinder](https://cowlark.com/wordgrinder/)
 - [WordPress WP-CLI](http://wp-cli.org/)
 - [Workrave](http://www.workrave.org/)

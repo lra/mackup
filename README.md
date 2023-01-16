@@ -592,6 +592,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Screenhero](https://screenhero.com)
 - [Scrivener](http://www.literatureandlatte.com/scrivener.php)
 - [Scroll Reverser](https://pilotmoon.com/scrollreverser/)
+- [Scrolla](https://scrolla.app)
 - [SecureCRT](https://www.vandyke.com/products/securecrt/)
 - [Secure Pipes](http://www.opoet.com/)
 - [Seil](https://pqrs.org/osx/karabiner/seil.html.en)

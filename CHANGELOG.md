@@ -11,6 +11,7 @@
 - Added support for PrusaSlicer (via @visika)
 - Added support for Logseq (via @visika)
 - Added support for SwitchHosts (via @zxjlm)
+- Update support for Amethyst (via @max-sixty)
 
 ## Mackup 0.8.36
 

@@ -298,6 +298,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Eagle (ogdesign)](https://eagle.cool/)
 - [EditorConfig](http://editorconfig.org/)
 - [Electrum](https://electrum.org/#home)
+- [Elgato StreamDeck](https://www.elgato.com/en/welcome-to-stream-deck)
 - [Emacs](http://www.gnu.org/software/emacs/)
 - [Enjoyable](https://yukkurigames.com/enjoyable/)
 - [Environmental Station Alpha](http://www.hempuli.com/esa/)

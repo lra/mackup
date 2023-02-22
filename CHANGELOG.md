@@ -11,6 +11,7 @@
 - Added support for PrusaSlicer (via @visika)
 - Added support for Logseq (via @visika)
 - Added support for SwitchHosts (via @zxjlm)
+- Add support for ni (via @wxh16144)
 
 ## Mackup 0.8.36
 

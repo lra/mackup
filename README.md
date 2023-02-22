@@ -489,6 +489,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Netlify](https://www.netlify.com/)
 - [newsbeuter](http://newsbeuter.org/)
 - [ngrok](https://ngrok.com/)
+- [ni](https://github.com/antfu/ni/)
 - [Nomacs](http://nomacs.org/)
 - [NoSQLBooster for MongoDB](https://www.nosqlbooster.com/)
 - [notion-enhancer](https://notion-enhancer.github.io/)

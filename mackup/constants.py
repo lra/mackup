@@ -27,6 +27,7 @@ ENGINE_DROPBOX = "dropbox"
 ENGINE_FS = "file_system"
 ENGINE_GDRIVE = "google_drive"
 ENGINE_ICLOUD = "icloud"
+ENGINE_MSONEDRIVE = "microsoft_onedrive"
 
 DOCUMENTATION_URL = "https://github.com/lra/mackup/blob/master/doc/README.md"
 

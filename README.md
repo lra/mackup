@@ -157,6 +157,7 @@ in it stay put, so that any other computer also running Mackup is unaffected.
 - [Google Drive](https://drive.google.com/)
 - [Copy](https://www.copy.com/)
 - [iCloud](http://www.apple.com/icloud/)
+- [Microsoft OneDrive](https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage/)
 - Anything able to sync a folder (e.g. [Git](http://git-scm.com/))
 
 See the [README](doc/README.md) file in the doc directory for more info.

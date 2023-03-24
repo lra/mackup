@@ -14,7 +14,7 @@ pipenv run make test
 
 And you should see
 
-```
+```text
 .
 ----------------------------------------------------------------------
 Ran 1 test in 0.016s

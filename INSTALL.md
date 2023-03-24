@@ -3,7 +3,7 @@
 There are 2 ways to run mackup
 
 1. Install it with Homebrew (OSX only)
-1. Install it with PIP (OSX and GNU/Linux)
+2. Install it with PIP (OSX and GNU/Linux)
 
 ## Install
 

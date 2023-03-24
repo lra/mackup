@@ -502,7 +502,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Soulver](http://www.acqualia.com/soulver/)
 - [SourceTree](https://www.sourcetreeapp.com/)
 - [Spacemacs](https://github.com/syl20bnr/spacemacs)
-- [SpaceLaucher](https://spacelauncherapp.com)
+- [SpaceLauncher](https://spacelauncherapp.com)
 - [Spark](http://www.shadowlab.org/softwares/spark.php)
 - [Spectacle](https://www.spectacleapp.com/)
 - [Spectrwm](https://github.com/conformal/spectrwm/wiki)

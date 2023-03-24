@@ -2,8 +2,197 @@
 
 ## WIP
 
+- Added support for macOS Preview (via @iloveitaly)
+- Fixed support for Bat (via @grigorii-horos)
+- Added support for Rust (via @grigorii-horos)
+- Added support for Termux (via @grigorii-horos)
+- Added support for Stats (via @iloveitaly)
+- Fixed support for LunarVim 1.2 (via @secsaba)
+- Fixed support for Base (via @iloveitaly)
+- Added support for ActivityWatch (via @YiGeon)
+- Added support for dozer (via @iloveitaly)
+- Added support for Zoom (via @iloveitaly)
+- Fixed support for LunarVim (via @YiGeon)
+- Updated support for Caffeine (via @joshmedeski)
+- Added support for PrusaSlicer (via @visika)
+- Added support for Logseq (via @visika)
+- Updated support for iTerm2 (via @LucasLarson)
+- Added support for SwitchHosts (via @zxjlm)
+- Added support for Warp (via @drallas)
+- Added support for Wooshy (via @godbout)
+- Added support for Scrolla (via @godbout)
+- Updated support for Amethyst (via @max-sixty)
+- Added support for Elgato StreamDeck (via @fharper)
+- Added support for ni (via @wxh16144)
+- Added support for TablePlus Favorites (via @pesonn)
+- Added support for asdf .default-npm-packages
+
+## Mackup 0.8.36
+
+- Added support for LunarVim (via @YiGeon)
+- Added support for Airflow (via @Evertt)
+- Updated support for yabai (via @Liu233w)
+- Updated suport for skhd (via @jonasdiemer)
+- Added support for Sizzy (via @driftingly)
+
+## Mackup 0.8.35
+
+- Updated support for iTerm2 (via @michielgerritsen)
+- Added support for NSLogger (via @lavareX)
+- Added support for Fork (via @lavareX)
+- Updated support for Proxymann Setapp version (via @JanC)
+- Added support for Btop (via @Mersid)
+- Updated support for Nushell (via @maradude)
+- Updated support for CleanShot (via @timfee)
+- Added backwards-compatibility support for Espanso (via @joshmedeski)
+
+## Mackup 0.8.34
+
+- Updated support for Bash it (via @jacopkane)
+- Added support for Remote Desktop Manager (via @jpmat296)
+- Fixed support for asciinema (via @revolter)
+- Added support for Mumu (via @fharper)
+- Updated support for fasd (via @doubleloop)
+- Updated support for lazygit (via @joshmedeski)
+- Added support for Nova (via @guillaumealgis)
+- Added support for Oracle Cloud Infrastructure CLI (via @Djelibeybi)
+- Added support for PicGo (via @SSBun)
+- Added support for Flameshot (via @joshmedeski)
+- Added support for Planner (via @spawnedc)
+- Fixed support for k9s (via @gamussa)
+- Added support for act (via @fharper)
+- Added support for notion-enhancer (via @fharper)
+- Added support for GitFox (via @L3K0V)
+- Updated support for Bartender through SetApp (via @dbhagen)
+- Updated support for Xonsh (via @wy-z)
+- Added support for TablePlus history (via @annuh)
+- Added support for xbar (via @dnicolson)
+- Added support for Beyond Compare (via @mgraham)
+- Added support for kindaVim (via @godbout)
+
+## Mackup 0.8.33
+
+- Added support for Lightroom Classic (via @treee111)
+- Fixed support for Hocus Focus (via @jrolfs)
+- Added support for KeePassXC (via @harens)
+- Fixed support for poetry (via @ameyuuno)
+- Added support for npm package npmrc (via @jdvivar)
+- Added support for rubiTrack 5 (via @otherguy)
+- Updated support for Fisher (via @kidonng)
+- Added support for Qv2ray (via @kidonng)
+- Added support for Neofetch (via @kidonng)
+- Added support for PsySH (via @nesk)
+- Added support for polybar(via @jneo8)
+- Added support for Tiles (via @damianoamatruda)
+- Added support for Flake8 (via @hongqn)
+- Fixed support for HandBrake (via @damianoamatruda)
+- Added support for Loopback (via @damianoamatruda)
+- Added support for IDA Pro (via @damianoamatruda)
+- Added support for MuteSpotifyAds (via @damianoamatruda)
+- Added support for Ghidra (via @damianoamatruda)
+- Added support for Logitech Options (via @damianoamatruda)
+- Added support for OBS (via @damianoamatruda)
+- Update uninstall prompt for accuracy (via @soneji)
+- Added support for Proxyman (via @NghiaTranUIT)
+- Updated support for IntelliJIdea version 2021.1 (via @steffenmalisi)
+- Added support for Sublime Text 4 (via @TCattd)
+- Added support for Contexts (via @antoni-k)
+- Added support for Swish (via @antoni-k)
+- Added support for AltTab (via @aiotter)
+- Added support for Goku (via @thebengeu)
+- Added support for Akamai CLI (via @anirudhbagri)
+- Added support for FastScripts (via @darrenbkl)
+- Added support for Affinity Designer (via @EpicKris)
+- Added support for Affinity Photo (via @EpicKris)
+- Added support for Affinity Publisher (via @EpicKris)
+- Added support for MTMR (via @dec0dOS)
+- Added support for Rocket (via @revolter)
+- Updated support for BetterTouchTool (via @grapswiz)
+- Updated support for k9s (via @dfang)
+- Added support for Mendeley Desktop (via @aiotter)
+- Added support for CleanShot, Mosaic, Eagle and Nuget (via @ye4241)
+
+## Mackup 0.8.32
+
+- Fixed an issue due to a duplicate entry in the intellijidea config
+- Added support for Visual Studio for Mac version 8 (via @Qythyx)
+
+## Mackup 0.8.31
+
+- Fixed an issue due to a duplicate entry in the webstorm config
+
+## Mackup 0.8.30
+
+- Added support for SpaceVim (via @ionlights)
+- Added support for clashX (via @awkj)
+- Added support for Brave (via @cbenv)
+- Added support for Nushell (via @leesiongchan)
+- Updated support for Clipy (via @jclerc)
+- Added support for aerc (via @Crocmagnon)
+- Added support for espanso (via @maxandersen)
+- Added support for lazygit (via @joshmedeski)
+- Added support for WebStorm versions 2019.4, 2020.2, 2020.3, 2020.4 (via @bdcarr)
+- Added support for rbenv (via @dfang)
+- Added support for draft (via @dfang)
+- Added support for lf (via @joshmedeski)
+- Added support for Beets (via @publicarray)
+- Added support for Krew (via @exherb)
+- Added support for Homebrew (via @exherb)
+- Added support for PyCharm versions 2020.2, 2020.3, 2020.4 (via @ameyuuno)
+- Added support for Netlify (via @pgilad)
+- Added support for K9s (via @tareksamni)
+- Added support for Powerlevel10k (via @tareksamni)
+- Updated support for aria2 (via @hongqn)
+- Update support for IntelliJ (via @scooby)
+- Added support for zoxide (via @kidonng)
+- Added support for Raycast (via @janniks)
+
+## Mackup 0.8.29
+
+- Added support for waybar (via @mk-atlassian)
+- Added support for mako (via @mk-atlassian)
+- Added support for Swaywm (via @mk-atlassian)
+- Added support for termite (via @mk-atlassian)
+- Added support for Calibre (via @ttuygun @bodak)
+- Added support for Poetry (via @ryoppippi)
+- Added support for Music (via @dnicolson)
+- Added support for Kaggle (via @ryoppippi)
+- Added support for SBT 1.0 (via @austek)
+- Added support for FiloSottile/mkcert (via @paxperscientiam)
+- Added support for Finicky (via @ryoppippi)
+- Added support for GoodSync (via @cereallarceny)
+- Added support for mitmproxy (via @etiennelb)
+- Added support for Hocus Focus (via @jrolfs)
+- Added support for TripMode (via @ttuygun)
+- Added support for Starship (via @callummr)
+- Added support for Joplin (via @geekrainy)
+- Added support for iStat Menus 6 and unified config files (via @lumaxis)
+- Added the `--root` command line option
+- Removed support for Sketch
+- Added support for PyCharm 2020.1 (via @ameyuuno)
+- Added support for Powerline (via @ho-oto)
+- Added support for Yarn (via @dhb52)
+- Add support for Quitter (via @guillaumealgis)
+
+## Mackup 0.8.28
+
 - Added support for Bat (via @joshmedeski)
-- Add support for asdf .default-npm-packages
+- Added support for newer versions of WebStorm
+- Updated support for Marta to capture new config files in 0.6.1 (via @petrbouchal)
+- Added support for Rectangle (via @arvindch)
+- Added support for BitBar (via @dnicolson)
+- Added support for JS Beautifier (via @dnicolson)
+- Added support for ripgrep (via @dnicolson)
+- Added support for Bump (via @dnicolson)
+- Added support for rclone (via @dnicolson)
+- Added support for NoSQLBooster for MongoDB (via @ivan-ha)
+- Updated support for RStudio, config stored in JSON as of v1.3.776 (via @petrbouchal)
+- Vulnerability fix
+- Removed support for Python 3.5
+- Removed support for the Box storage
+- Fix: suppress errors when handling symlinks (via @doubleloop)
+- Migrated all config files to the XDG format
+- Add support for Python 3.8
 
 ## Mackup 0.8.27
 
@@ -186,6 +375,7 @@
 - Add support for DaisyDisk (via @cafferata)
 - Add support for MySQLWorkbench (via @cafferata)
 - Add support for Openbox (via @jpfarcy)
+- Change OS X to macOS to match OS name change (via @samdoran)
 
 ## Mackup 0.8.16
 
@@ -371,7 +561,7 @@
 - Added support of WebStorm 10 (via @morphinewan)
 - Added support of Gnome SSH Tunnel Manager (via @skyrocknroll)
 - Added support for Hammerspoon (via @jkaan)
-- Added support for Bitchx (via @troywilson_)
+- Added support for Bitchx (via @troywilson\_)
 - Added support for EditorConfig (via @chadluo)
 - Add com.agilebits.onepassword4.plist in 1Password (via @amatos)
 - Added support for Versions (via @amatos)
@@ -681,7 +871,7 @@
 - Added support for Ack (via @adamlogic)
 - Added support for Stata and SelfControl (via @kfinlay)
 - Added support for LaTeXiT (via @twsh)
-- Do not link ~/Library/* files on GNU/Linux, should fix #104
+- Do not link ~/Library/\* files on GNU/Linux, should fix #104
 
 ## Mackup 0.5
 

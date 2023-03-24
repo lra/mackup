@@ -1,7 +1,7 @@
 """Mackup.
 
 Keep your application settings in sync.
-Copyright (C) 2013-2019 Laurent Raufaste <http://glop.org/>
+Copyright (C) 2013-2021 Laurent Raufaste <http://glop.org/>
 
 Usage:
   mackup list
@@ -15,6 +15,7 @@ Usage:
 Options:
   -h --help     Show this screen.
   -f --force    Force every question asked to be answered with "Yes".
+  -r --root     Allow mackup to be run as superuser.
   -n --dry-run  Show steps without executing.
   -v --verbose  Show additional details.
   --version     Show version.
@@ -67,11 +68,15 @@ def main():
 
     def printAppHeader(app_name):
         if verbose:
-            print (("\n{0} {1} {0}").format(header("---"), bold(app_name)))
+            print(("\n{0} {1} {0}").format(header("---"), bold(app_name)))
 
     # If we want to answer mackup with "yes" for each question
     if args["--force"]:
         utils.FORCE_YES = True
+
+    # Allow mackup to be run as root
+    if args["--root"]:
+        utils.CAN_RUN_AS_ROOT = True
 
     dry_run = args["--dry-run"]
 
@@ -122,12 +127,11 @@ def main():
             utils.confirm(
                 "You are going to uninstall Mackup.\n"
                 "Every configuration file, setting and dotfile"
-                " managed by Mackup will be unlinked and moved back"
+                " managed by Mackup will be unlinked and copied back"
                 " to their original place, in your home folder.\n"
-                "Are you sure ?"
+                "Are you sure?"
             )
         ):
-
             # Uninstall the apps except Mackup, which we'll uninstall last, to
             # keep the settings as long as possible
             app_names = mckp.get_apps_to_backup()
@@ -152,12 +156,12 @@ def main():
             # uninstalled yet
             # delete(mckp.mackup_folder)
 
-            print (
+            print(
                 "\n"
                 "All your files have been put back into place. You can now"
                 " safely uninstall Mackup.\n"
                 "\n"
-                "Thanks for using Mackup !"
+                "Thanks for using Mackup!"
             )
 
     elif args["list"]:
@@ -170,7 +174,7 @@ def main():
         output += "{} applications supported in Mackup v{}".format(
             len(app_db.get_app_names()), VERSION
         )
-        print (output)
+        print(output)
 
     elif args["show"]:
         mckp.check_for_usable_environment()
@@ -179,10 +183,10 @@ def main():
         # Make sure the app exists
         if app_name not in app_db.get_app_names():
             sys.exit("Unsupported application: {}".format(app_name))
-        print ("Name: {}".format(app_db.get_name(app_name)))
-        print ("Configuration files:")
+        print("Name: {}".format(app_db.get_name(app_name)))
+        print("Configuration files:")
         for file in app_db.get_files(app_name):
-            print (" - {}".format(file))
+            print(" - {}".format(file))
 
     # Delete the tmp folder
     mckp.clean_temp_folder()

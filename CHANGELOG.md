@@ -35,7 +35,7 @@
 - Add support for PhpStorm 2019.1 (via @baijunyao)
 - Add support for IntelijIdea2019.1 (via @utegental)
 - Add support for clashx (via @tanpengsccd)
-- Add support for SpaceLaucher (via @tanpengsccd)
+- Add support for SpaceLauncher (via @tanpengsccd)
 
 ## Mackup 0.8.22
 

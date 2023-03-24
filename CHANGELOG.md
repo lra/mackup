@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.37
+
 - Added support for macOS Preview (via @iloveitaly)
 - Fixed support for Bat (via @grigorii-horos)
 - Added support for Rust (via @grigorii-horos)

@@ -7,14 +7,14 @@ Feel free to add more, the more the better!
 ## How to run the tests
 
 ```bash
-cd src/mackup
-pip install -r requirements.txt
-nosetests
+pip install pipenv
+pipenv install -d
+pipenv run make test
 ```
 
 And you should see
 
-```
+```text
 .
 ----------------------------------------------------------------------
 Ran 1 test in 0.016s

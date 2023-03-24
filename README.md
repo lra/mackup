@@ -621,7 +621,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Smooth Mouse](http://smoothmouse.com/)
 - [Soulver](http://www.acqualia.com/soulver/)
 - [SourceTree](https://www.sourcetreeapp.com/)
-- [SpaceLauncher](https://spacelauncherapp.com/)
+- [SpaceLauncher](https://spacelauncherapp.com)
 - [Spacemacs](https://github.com/syl20bnr/spacemacs)
 - [SpaceVim](https://github.com/SpaceVim/SpaceVim)
 - [Spark](http://www.shadowlab.org/softwares/spark.php)

@@ -28,17 +28,21 @@ class Mackup(object):
 
     def check_for_usable_environment(self):
         """Check if the current env is usable and has everything's required."""
-        # Do not let the user run Mackup as root
-        if os.geteuid() == 0:
-            utils.error("Running Mackup as a superuser is useless and"
-                        " dangerous. Don't do it!")
+        # Allow only explicit superuser usage
+        if os.geteuid() == 0 and not utils.CAN_RUN_AS_ROOT:
+            utils.error(
+                "Running Mackup as superuser can be dangerous."
+                " Don't do it unless you know what you're doing!"
+                " Run mackup --help for guidance."
+            )
 
-        # Do we have a folder to put the Mackup folder ?
+        # Do we have a folder set to save Mackup content into?
         if not os.path.isdir(self._config.path):
-            utils.error("Unable to find the storage folder: {}"
-                        .format(self._config.path))
+            utils.error(
+                "Unable to find the storage folder: {}".format(self._config.path)
+            )
 
-        # Is Sublime Text running ?
+        # Is Sublime Text running?
         # if is_process_running('Sublime Text'):
         #    error("Sublime Text is running. It is known to cause problems"
         #          " when Sublime Text is running while I backup or restore"
@@ -55,10 +59,11 @@ class Mackup(object):
         self.check_for_usable_environment()
 
         if not os.path.isdir(self.mackup_folder):
-            utils.error("Unable to find the Mackup folder: {}\n"
-                        "You might want to back up some files or get your"
-                        " storage directory synced first."
-                        .format(self.mackup_folder))
+            utils.error(
+                "Unable to find the Mackup folder: {}\n"
+                "You might want to back up some files or get your"
+                " storage directory synced first.".format(self.mackup_folder)
+            )
 
     def clean_temp_folder(self):
         """Delete the temp folder and files created while running."""
@@ -67,10 +72,11 @@ class Mackup(object):
     def create_mackup_home(self):
         """If the Mackup home folder does not exist, create it."""
         if not os.path.isdir(self.mackup_folder):
-            if utils.confirm("Mackup needs a directory to store your"
-                             " configuration files\n"
-                             "Do you want to create it now? <{}>"
-                             .format(self.mackup_folder)):
+            if utils.confirm(
+                "Mackup needs a directory to store your"
+                " configuration files\n"
+                "Do you want to create it now? <{}>".format(self.mackup_folder)
+            ):
                 os.makedirs(self.mackup_folder)
             else:
                 utils.error("Mackup can't do anything without a home =(")

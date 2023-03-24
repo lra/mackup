@@ -72,7 +72,6 @@ class ApplicationProfile(object):
                 and (os.path.isfile(mackup_filepath) or os.path.isdir(mackup_filepath))
                 and os.path.samefile(home_filepath, mackup_filepath)
             ):
-
                 if self.verbose:
                     print(
                         "Backing up\n  {}\n  to\n  {} ...".format(
@@ -87,7 +86,6 @@ class ApplicationProfile(object):
 
                 # Check if we already have a backup
                 if os.path.exists(mackup_filepath):
-
                     # Name it right
                     if os.path.isfile(mackup_filepath):
                         file_type = "file"

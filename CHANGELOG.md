@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for macOS Preview (via @iloveitaly)
 - Fixed support for Bat (via @grigorii-horos)
 - Add support for Rust (via @grigorii-horos)
 - Add support for Termux (via @grigorii-horos)

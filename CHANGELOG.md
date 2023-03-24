@@ -25,6 +25,7 @@
 - Added support for Elgato StreamDeck (via @fharper)
 - Added support for ni (via @wxh16144)
 - Added support for TablePlus Favorites (via @pesonn)
+- updated poetry config location (via @syphar)
 
 ## Mackup 0.8.36
 

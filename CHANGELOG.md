@@ -5,7 +5,7 @@
 - Add support for Stats (via @iloveitaly)
 - Fixed support for LunarVim 1.2 (via @secsaba)
 - Fixed support for Base (via @iloveitaly)
-- Added support for ActivityWatch (via @iloveitaly)
+- Added support for ActivityWatch (via @YiGeon)
 - Added support for Zoom (via @iloveitaly)
 - Fixed support for LunarVim (via @YiGeon)
 - Updated support for Caffeine (via @joshmedeski)

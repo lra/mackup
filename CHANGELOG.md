@@ -27,6 +27,7 @@
 - Added support for TablePlus Favorites (via @pesonn)
 - Updated poetry config location (via @syphar)
 - Updated support for vim (via @iarchean)
+- Updated support for Maven: include settings-security.xml (via @stevenodb)
 
 ## Mackup 0.8.36
 

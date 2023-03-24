@@ -12,6 +12,7 @@
 - Added support for PrusaSlicer (via @visika)
 - Added support for Logseq (via @visika)
 - Added support for SwitchHosts (via @zxjlm)
+- Added support for Warp (via @drallas)
 - Added support for Wooshy (via @godbout)
 - Added support for Scrolla (via @godbout)
 - Update support for Amethyst (via @max-sixty)

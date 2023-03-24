@@ -16,10 +16,10 @@ MACKUP_APP_NAME = "mackup"
 MACKUP_BACKUP_PATH = "Mackup"
 
 # Mackup config file
-MACKUP_CONFIG_FILE = ".mackup.cfg"
+MACKUP_CONFIG_FILE = ".config/mackup/mackup.cfg"
 
 # Directory that can contains user defined app configs
-CUSTOM_APPS_DIR = ".mackup"
+CUSTOM_APPS_DIR = ".config/mackup"
 
 # Supported engines
 ENGINE_COPY = "copy"

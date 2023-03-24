@@ -132,7 +132,6 @@ def main():
                 "Are you sure?"
             )
         ):
-
             # Uninstall the apps except Mackup, which we'll uninstall last, to
             # keep the settings as long as possible
             app_names = mckp.get_apps_to_backup()

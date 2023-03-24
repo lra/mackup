@@ -11,6 +11,7 @@
 - Added support for PrusaSlicer (via @visika)
 - Added support for Logseq (via @visika)
 - Added support for SwitchHosts (via @zxjlm)
+- Update support for Amethyst (via @max-sixty)
 - Added support for Elgato StreamDeck (via @fharper)
 - Added support for ni (via @wxh16144)
 - Added support for TablePlus Favorites (via @pesonn)

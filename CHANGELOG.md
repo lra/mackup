@@ -2,14 +2,15 @@
 
 ## WIP
 
-- Add support for macOS Preview (via @iloveitaly)
+- Added support for macOS Preview (via @iloveitaly)
 - Fixed support for Bat (via @grigorii-horos)
-- Add support for Rust (via @grigorii-horos)
-- Add support for Termux (via @grigorii-horos)
-- Add support for Stats (via @iloveitaly)
+- Added support for Rust (via @grigorii-horos)
+- Added support for Termux (via @grigorii-horos)
+- Added support for Stats (via @iloveitaly)
 - Fixed support for LunarVim 1.2 (via @secsaba)
 - Fixed support for Base (via @iloveitaly)
 - Added support for ActivityWatch (via @YiGeon)
+- Added support for dozer (via @iloveitaly)
 - Added support for Zoom (via @iloveitaly)
 - Fixed support for LunarVim (via @YiGeon)
 - Updated support for Caffeine (via @joshmedeski)
@@ -19,7 +20,7 @@
 - Added support for Warp (via @drallas)
 - Added support for Wooshy (via @godbout)
 - Added support for Scrolla (via @godbout)
-- Update support for Amethyst (via @max-sixty)
+- Updated support for Amethyst (via @max-sixty)
 - Added support for Elgato StreamDeck (via @fharper)
 - Added support for ni (via @wxh16144)
 - Added support for TablePlus Favorites (via @pesonn)

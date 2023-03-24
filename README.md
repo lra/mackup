@@ -291,6 +291,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Doom Emacs](https://github.com/hlissner/doom-emacs)
 - [Double Commander](http://doublecmd.sourceforge.net/)
 - [Doxie](http://www.getdoxie.com/)
+- [Dozer](https://github.com/Mortennn/Dozer)
 - [Draft](https://draft.sh/)
 - [Droplr](https://droplr.com/)
 - [Dropzone 3](https://aptonic.com/dropzone3/)

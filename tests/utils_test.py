@@ -279,7 +279,7 @@ class TestMackup(unittest.TestCase):
     def test_failed_backup_location(self):
         """
         Tests for the error that should occur if the backup folder cannot be
-        found for Dropbox, Google, Box and Copy
+        found for Dropbox, Google, and Copy
         """
         # Hack to make our home folder some temporary folder
         temp_home = tempfile.mkdtemp()
@@ -296,15 +296,6 @@ class TestMackup(unittest.TestCase):
             )
         )
         self.assertRaises(SystemExit, utils.get_google_drive_folder_location)
-
-        # Check for the missing Box folder
-        assert not os.path.exists(
-            os.path.join(
-                temp_home,
-                "Library/Application Support/Box/Box Sync/sync_root_folder.txt",
-            )
-        )
-        self.assertRaises(SystemExit, utils.get_box_folder_location)
 
         # Check for the missing Copy Folder
         assert not os.path.exists(

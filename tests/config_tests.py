@@ -6,7 +6,6 @@ from mackup.constants import (
     ENGINE_GDRIVE,
     ENGINE_COPY,
     ENGINE_ICLOUD,
-    ENGINE_BOX,
     ENGINE_FS,
 )
 from mackup.config import Config, ConfigError
@@ -25,14 +24,14 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_DROPBOX
 
         assert isinstance(cfg.path, str)
-        print (cfg.path)
+        print(cfg.path)
         assert cfg.path == "/home/some_user/Dropbox"
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u"Mackup"
+        assert cfg.directory == "Mackup"
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u"/home/some_user/Dropbox/Mackup"
+        assert cfg.fullpath == "/home/some_user/Dropbox/Mackup"
 
         assert cfg.apps_to_ignore == set()
         assert cfg.apps_to_sync == set()
@@ -44,13 +43,13 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_DROPBOX
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u"/home/some_user/Dropbox"
+        assert cfg.path == "/home/some_user/Dropbox"
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u"Mackup"
+        assert cfg.directory == "Mackup"
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u"/home/some_user/Dropbox/Mackup"
+        assert cfg.fullpath == "/home/some_user/Dropbox/Mackup"
 
         assert cfg.apps_to_ignore == set()
         assert cfg.apps_to_sync == set()
@@ -62,13 +61,13 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_DROPBOX
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u"/home/some_user/Dropbox"
+        assert cfg.path == "/home/some_user/Dropbox"
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u"some_weirld_name"
+        assert cfg.directory == "some_weirld_name"
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u"/home/some_user/Dropbox/some_weirld_name"
+        assert cfg.fullpath == "/home/some_user/Dropbox/some_weirld_name"
 
         assert cfg.apps_to_ignore == set()
         assert cfg.apps_to_sync == set()
@@ -80,13 +79,13 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_FS
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u"/some/absolute/folder"
+        assert cfg.path == "/some/absolute/folder"
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u"custom_folder"
+        assert cfg.directory == "custom_folder"
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u"/some/absolute/folder/custom_folder"
+        assert cfg.fullpath == "/some/absolute/folder/custom_folder"
 
         assert cfg.apps_to_ignore == set(["subversion", "sequel-pro"])
         assert cfg.apps_to_sync == set()
@@ -99,15 +98,15 @@ class TestConfig(unittest.TestCase):
 
         assert isinstance(cfg.path, str)
         assert cfg.path.endswith(
-            os.path.join(os.environ[u"HOME"], u"some/relative/folder")
+            os.path.join(os.environ["HOME"], "some/relative/folder")
         )
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u"Mackup"
+        assert cfg.directory == "Mackup"
 
         assert isinstance(cfg.fullpath, str)
         assert cfg.fullpath == os.path.join(
-            os.environ[u"HOME"], u"some/relative/folder", u"Mackup"
+            os.environ["HOME"], "some/relative/folder", "Mackup"
         )
 
         assert cfg.apps_to_ignore == set()
@@ -120,13 +119,13 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_GDRIVE
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u"/Users/whatever/Google Drive"
+        assert cfg.path == "/Users/whatever/Google Drive"
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u"Mackup"
+        assert cfg.directory == "Mackup"
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath.endswith(u"/Google Drive/Mackup")
+        assert cfg.fullpath.endswith("/Google Drive/Mackup")
 
         assert cfg.apps_to_ignore == set(["subversion", "sequel-pro", "sabnzbd"])
         assert cfg.apps_to_sync == set(["sublime-text-3", "x11", "sabnzbd"])
@@ -138,13 +137,13 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_COPY
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u"/Users/someuser/Copy"
+        assert cfg.path == "/Users/someuser/Copy"
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u"Mackup"
+        assert cfg.directory == "Mackup"
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath.endswith(u"/Copy/Mackup")
+        assert cfg.fullpath.endswith("/Copy/Mackup")
 
         assert cfg.apps_to_ignore == set(["subversion", "sequel-pro", "sabnzbd"])
         assert cfg.apps_to_sync == set(["sublime-text-3", "x11", "sabnzbd"])
@@ -161,31 +160,13 @@ class TestConfig(unittest.TestCase):
         )
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u"Mackup"
+        assert cfg.directory == "Mackup"
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath.endswith(u"/com~apple~CloudDocs/Mackup")
+        assert cfg.fullpath.endswith("/com~apple~CloudDocs/Mackup")
 
         assert cfg.apps_to_ignore == set(["subversion", "sequel-pro", "sabnzbd"])
         assert cfg.apps_to_sync == set(["sublime-text-3", "x11", "sabnzbd"])
-
-    def test_config_engine_box(self):
-        cfg = Config("mackup-engine-box.cfg")
-
-        assert isinstance(cfg.engine, str)
-        assert cfg.engine == ENGINE_BOX
-
-        assert isinstance(cfg.path, str)
-        assert cfg.path == u"/Users/whatever/Box Sync"
-
-        assert isinstance(cfg.directory, str)
-        assert cfg.directory == u"some_weirder_name"
-
-        assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u"/Users/whatever/Box Sync/some_weirder_name"
-
-        assert cfg.apps_to_ignore == set()
-        assert cfg.apps_to_sync == set()
 
     def test_config_engine_filesystem_no_path(self):
         with self.assertRaises(ConfigError):
@@ -205,10 +186,10 @@ class TestConfig(unittest.TestCase):
         assert cfg.path == "/home/some_user/Dropbox"
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u"Mackup"
+        assert cfg.directory == "Mackup"
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u"/home/some_user/Dropbox/Mackup"
+        assert cfg.fullpath == "/home/some_user/Dropbox/Mackup"
 
         assert cfg.apps_to_ignore == set(["subversion", "sequel-pro", "sabnzbd"])
         assert cfg.apps_to_sync == set()
@@ -220,13 +201,13 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_DROPBOX
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u"/home/some_user/Dropbox"
+        assert cfg.path == "/home/some_user/Dropbox"
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u"Mackup"
+        assert cfg.directory == "Mackup"
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u"/home/some_user/Dropbox/Mackup"
+        assert cfg.fullpath == "/home/some_user/Dropbox/Mackup"
 
         assert cfg.apps_to_ignore == set()
         assert cfg.apps_to_sync == set(["sabnzbd", "sublime-text-3", "x11"])
@@ -238,13 +219,13 @@ class TestConfig(unittest.TestCase):
         assert cfg.engine == ENGINE_DROPBOX
 
         assert isinstance(cfg.path, str)
-        assert cfg.path == u"/home/some_user/Dropbox"
+        assert cfg.path == "/home/some_user/Dropbox"
 
         assert isinstance(cfg.directory, str)
-        assert cfg.directory == u"Mackup"
+        assert cfg.directory == "Mackup"
 
         assert isinstance(cfg.fullpath, str)
-        assert cfg.fullpath == u"/home/some_user/Dropbox/Mackup"
+        assert cfg.fullpath == "/home/some_user/Dropbox/Mackup"
 
         assert cfg.apps_to_ignore == set(["subversion", "sequel-pro", "sabnzbd"])
         assert cfg.apps_to_sync == set(["sabnzbd", "sublime-text-3", "x11", "vim"])

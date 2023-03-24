@@ -28,20 +28,21 @@ class Mackup(object):
 
     def check_for_usable_environment(self):
         """Check if the current env is usable and has everything's required."""
-        # Do not let the user run Mackup as root
-        if os.geteuid() == 0:
+        # Allow only explicit superuser usage
+        if os.geteuid() == 0 and not utils.CAN_RUN_AS_ROOT:
             utils.error(
-                "Running Mackup as a superuser is useless and"
-                " dangerous. Don't do it!"
+                "Running Mackup as superuser can be dangerous."
+                " Don't do it unless you know what you're doing!"
+                " Run mackup --help for guidance."
             )
 
-        # Do we have a folder to put the Mackup folder ?
+        # Do we have a folder set to save Mackup content into?
         if not os.path.isdir(self._config.path):
             utils.error(
                 "Unable to find the storage folder: {}".format(self._config.path)
             )
 
-        # Is Sublime Text running ?
+        # Is Sublime Text running?
         # if is_process_running('Sublime Text'):
         #    error("Sublime Text is running. It is known to cause problems"
         #          " when Sublime Text is running while I backup or restore"

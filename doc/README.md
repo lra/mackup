@@ -11,14 +11,16 @@ vi ~/.mackup.cfg
 
 ## Storage
 
-### Dropbox
-
 You can specify the storage type Mackup will use to store your configuration
 files.
-For now you have 4 options: `dropbox`, `google_drive`, `copy` and `file_system`.
+
+For now, you have 4 options: `dropbox`, `google_drive`, `icloud`, `copy` and `file_system`.
+
 If none is specified, Mackup will try to use the default: `dropbox`.
 With the `dropbox` storage engine, Mackup will automatically figure out your
 Dropbox folder.
+
+### Dropbox
 
 ```ini
 [storage]
@@ -36,6 +38,9 @@ engine = google_drive
 ```
 
 ### iCloud
+
+If you choose the `iCloud` storage engine, Mackup will store store your
+configuration files in the `~/Library/Mobile\ Documents/com\~apple\~CloudDocs/` folder.
 
 ```ini
 [storage]
@@ -106,6 +111,16 @@ engine = icloud
 directory = .config/mackup
 ```
 
+### Switching Storage
+
+If you ever change your mind and switch storage solutions after Mackup is
+already setup (ex: from `dropbox` to `icloud`), complete the following steps.
+
+1. Run `mackup uninstall` on all computers
+2. Copy your Mackup files to the new storage location
+3. Change the storage provider details in your `.mackup.cfg` file (see above)
+4. Run `mackup backup` on the main computer and `mackup restore` on all others
+
 ## Applications
 
 ### Only sync one or two applications
@@ -119,6 +134,9 @@ names to allow in the `[applications_to_sync]` section, one by line.
 ssh
 adium
 ```
+
+Use `mackup list` to get a list of valid application names. Don't use fancy
+names (with spaces) here.
 
 A [sample](.mackup.cfg) of this file is available in this folder. Just copy it
 in your home folder:
@@ -139,6 +157,9 @@ ssh
 adium
 ```
 
+Use `mackup list` to get a list of valid application names. Don't use fancy
+names (with spaces) here.
+
 A [sample](.mackup.cfg) of this file is available in this folder. Just copy it
 in your home folder:
 
@@ -153,10 +174,15 @@ fork Mackup and open a
 [Pull Request](https://help.github.com/articles/using-pull-requests).
 The stock application configs are in the `mackup/applications` directory.
 
-### Add support for an application or any file or directory
+Remember to follow the guidelines in [CONTRIBUTING.md](https://github.com/lra/mackup/blob/master/.github/CONTRIBUTING.md)
+to get your Pull Request merged faster.
+
+### Add support for an application or (almost) any file or directory
 
 You can customize the Mackup engine and add support for unsupported
 applications or just custom files and directories you'd like to sync.
+
+NOTE: Files and directory to be synced should be rooted at $HOME.
 
 Let's say that you'd like to add support for Nethack (config file:
 `.nethackrc`) and for the `bin` and `.hidden` directories you keep in your
@@ -174,7 +200,7 @@ touch ~/.mackup/my-files.cfg
 Edit those files
 
 ```bash
-$ cat ~/.mackup/nethack.cfg
+$ nano ~/.mackup/nethack.cfg
 [application]
 name = Nethack
 
@@ -183,7 +209,7 @@ name = Nethack
 ```
 
 ```bash
-$ cat ~/.mackup/my-files.cfg
+$ nano ~/.mackup/my-files.cfg
 [application]
 name = My personal synced files and dirs
 
@@ -227,3 +253,46 @@ You can add and test an application by following these steps:
 - if everything works as expected:
   - run `make undevelop` to revert to the official version
   - commit and push the change to your fork and then create the Pulls Request
+
+### Add support for an application using the XDG directory
+
+For application storing their configuration under the `~/.config` folder, you
+should not hardcode it. The `.config` folder is the default location but it can
+be named differently on other users' systems by setting the `XDG_CONFIG_HOME`
+environment variable.
+
+See <https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html>
+
+Mackup supports this mechanism and provide a dedicated `xdg_configuration_files`
+section for those applications.
+
+If any path starts with `.config`, remove the `.config` part and move the path
+to a dedicated `xdg_configuration_files` section.
+
+Instead of:
+
+```ini
+[application]
+name = Git
+
+[configuration_files]
+.gitconfig
+.config/git/config
+.config/git/ignore
+.config/git/attributes
+```
+
+Use this:
+
+```ini
+[application]
+name = Git
+
+[configuration_files]
+.gitconfig
+
+[xdg_configuration_files]
+git/config
+git/ignore
+git/attributes
+```

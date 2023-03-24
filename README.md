@@ -435,6 +435,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [LunarVim](https://www.lunarvim.org/)
 - [MacDive](http://www.mac-dive.com/)
 - [MacDown](http://macdown.uranusjr.com/)
+- macOS Preview
 - [MacOSX](http://www.apple.com/osx/)
 - [MacVim](https://github.com/macvim-dev/macvim)
 - [Magic Launch](https://www.oneperiodic.com/products/magiclaunch/)
@@ -551,7 +552,6 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [PyCharm](https://www.jetbrains.com/pycharm/)
 - [PyPI](https://pypi.python.org/pypi)
 - [PyRadio](http://www.coderholic.com/pyradio/)
-- macOS Preview
 - [Querious](http://www.araelium.com/querious/)
 - [Quicksilver](http://qsapp.com/)
 - [Quitter](https://marco.org/apps)

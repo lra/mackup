@@ -16,6 +16,7 @@
 - Updated support for Caffeine (via @joshmedeski)
 - Added support for PrusaSlicer (via @visika)
 - Added support for Logseq (via @visika)
+- Updated support for iTerm2 (via @LucasLarson)
 - Added support for SwitchHosts (via @zxjlm)
 - Added support for Warp (via @drallas)
 - Added support for Wooshy (via @godbout)

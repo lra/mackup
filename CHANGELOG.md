@@ -1,6 +1,7 @@
 # Mackup Changelog
 
 ## WIP
+- Updated support for GeekTool (via @yuchen-lea)
 
 ## Mackup 0.8.37
 

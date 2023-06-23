@@ -36,6 +36,9 @@ class TestConfig(unittest.TestCase):
         assert cfg.apps_to_ignore == set()
         assert cfg.apps_to_sync == set()
 
+        assert isinstance(cfg.copy_symlinks, bool)
+        assert cfg.copy_symlinks == False
+
     def test_config_empty(self):
         cfg = Config("mackup-empty.cfg")
 
@@ -53,6 +56,9 @@ class TestConfig(unittest.TestCase):
 
         assert cfg.apps_to_ignore == set()
         assert cfg.apps_to_sync == set()
+
+        assert isinstance(cfg.copy_symlinks, bool)
+        assert cfg.copy_symlinks == False
 
     def test_config_engine_dropbox(self):
         cfg = Config("mackup-engine-dropbox.cfg")
@@ -232,3 +238,9 @@ class TestConfig(unittest.TestCase):
 
     def test_config_old_config(self):
         self.assertRaises(SystemExit, Config, "mackup-old-config.cfg")
+
+    def test_config_copy_symlinks(self):
+        cfg = Config("mackup-copy-symlinks.cfg")
+
+        assert isinstance(cfg.copy_symlinks, bool)
+        assert cfg.copy_symlinks == True

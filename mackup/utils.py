@@ -19,6 +19,8 @@ FORCE_YES = False
 # Flag that control if mackup can be run as root
 CAN_RUN_AS_ROOT = False
 
+# Are we going to copy symlinks as links?
+COPY_SYMLINKS = False
 
 def confirm(question):
     """
@@ -98,18 +100,19 @@ def copy(src, dst):
     # We need to copy a single file
     if os.path.isfile(src):
         # Copy the src file to dst
-        shutil.copy(src, dst)
+        shutil.copy(src, dst, follow_symlinks=not(COPY_SYMLINKS))
 
     # We need to copy a whole folder
     elif os.path.isdir(src):
-        shutil.copytree(src, dst)
+        shutil.copytree(src, dst, symlinks=COPY_SYMLINKS)
 
     # What the heck is this?
     else:
         raise ValueError("Unsupported file: {}".format(src))
 
     # Set the good mode to the file or folder recursively
-    chmod(dst)
+    if COPY_SYMLINKS == False:
+        chmod(dst)
 
 
 def link(target, link_to):

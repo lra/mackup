@@ -78,6 +78,8 @@ def main():
     if args["--root"]:
         utils.CAN_RUN_AS_ROOT = True
 
+    utils.COPY_SYMLINKS = mckp._config._copy_symlinks
+
     dry_run = args["--dry-run"]
 
     verbose = args["--verbose"]

@@ -81,6 +81,19 @@ path = some/path in your/home
 path = /some path/in/your/root
 ```
 
+### Copying Symlinks as Links
+
+By default, when Mackup backs up the application configuration, any symbolic
+links to files results in the destination file being copied into the backup.
+
+You can optionally configure Mackup to ensure that any Symlinks are copied as
+Links, and not files:
+
+```ini
+[storage]
+copy_symlinks = true
+```
+
 ### Custom Directory Name
 
 You can customize the directory name in which Mackup stores your file. By

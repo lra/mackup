@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Add optional support to copy symlinks as links, rather than copying the target (via @jamesrtnz)
+
 ## Mackup 0.8.37
 
 - Added support for macOS Preview (via @iloveitaly)

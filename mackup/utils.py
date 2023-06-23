@@ -301,6 +301,39 @@ def get_icloud_folder_location():
     return str(icloud_home)
 
 
+def get_microsoft_onedrive_folder_location():
+    """
+    Try to locate the Microsoft OneDrive folder.
+
+    Returns:
+        (str) Full path to the current Microsoft OneDrive folder
+    """
+    # the OneDrive sync path should always be found at ~/Library/CloudStorage/OneDrive-*/
+    onedrive_paths = get_cloud_storage_paths("OneDrive-")
+    if not onedrive_paths:
+        error(
+            constants.ERROR_UNABLE_TO_FIND_STORAGE.format(
+                provider="Microsoft OneDrive install"
+            )
+        )
+    # if there are multiple OneDrive paths, choose the first
+    return sorted(onedrive_paths, key=lambda p: p.name)[0].path
+
+
+def get_cloud_storage_paths(prefix=None):
+    # The Cloud Storage path is found at ~/Library/CloudStorage/. This is the standard path used for all
+    # storage providers as of macOS 10.15+. ref: https://developer.apple.com/documentation/fileprovider.
+    cloud_storage_root_path = os.path.join(os.environ["HOME"], "Library/CloudStorage")
+    if not os.path.exists(cloud_storage_root_path):
+        return []
+    cloud_storage_paths = (p for p in os.scandir(cloud_storage_root_path) if p.is_dir())
+    if prefix:
+        cloud_storage_paths = (
+            p for p in cloud_storage_paths if p.name.lower().startswith(prefix.lower())
+        )
+    return cloud_storage_paths
+
+
 def is_process_running(process_name):
     """
     Check if a process with the given name is running.

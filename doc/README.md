@@ -12,9 +12,14 @@ vi ~/.mackup.cfg
 ## Storage
 
 You can specify the storage type Mackup will use to store your configuration
-files.
+files. Options include:
 
-For now, you have 4 options: `dropbox`, `google_drive`, `icloud`, `copy` and `file_system`.
+- `dropbox`
+- `google_drive`
+- `icloud`
+- `microsoft_onedrive`
+- `copy`
+- `file_system`
 
 If none is specified, Mackup will try to use the default: `dropbox`.
 With the `dropbox` storage engine, Mackup will automatically figure out your
@@ -45,6 +50,13 @@ configuration files in the `~/Library/Mobile\ Documents/com\~apple\~CloudDocs/` 
 ```ini
 [storage]
 engine = icloud
+```
+
+### Microsoft OneDrive
+
+```ini
+[storage]
+engine = microsoft_onedrive
 ```
 
 ### Copy

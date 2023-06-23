@@ -57,6 +57,9 @@ class Config(object):
         # Get the directory replacing 'Mackup', if any
         self._directory = self._parse_directory()
 
+        # Get the copy_symlinks value
+        self._copy_symlinks = self._parse_symlinks()
+
         # Get the list of apps to ignore
         self._apps_to_ignore = self._parse_apps_to_ignore()
 
@@ -130,6 +133,16 @@ class Config(object):
             set. Set of application names to allow, lowercase
         """
         return set(self._apps_to_sync)
+
+    @property
+    def copy_symlinks(self):
+        """
+        The copy_symlinks flag status.
+
+        Returns:
+            bool
+        """
+        return bool(self._copy_symlinks)
 
     def _setup_parser(self, filename=None):
         """
@@ -225,6 +238,21 @@ class Config(object):
                 )
 
         return str(path)
+
+    def _parse_symlinks(self):
+        """
+        Parse the copy_symlinks setting in the config.
+
+        Returns:
+            bool
+        """
+        if self._parser.has_option("storage", "copy_symlinks"):
+            copy_symlinks = self._parser.getboolean("storage", "copy_symlinks", fallback=False)
+        else:
+            copy_symlinks = False
+
+        return bool(copy_symlinks)
+
 
     def _parse_directory(self):
         """

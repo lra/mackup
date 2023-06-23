@@ -7,6 +7,7 @@ from mackup.constants import (
     ENGINE_COPY,
     ENGINE_ICLOUD,
     ENGINE_FS,
+    ENGINE_MSONEDRIVE,
 )
 from mackup.config import Config, ConfigError
 
@@ -173,6 +174,22 @@ class TestConfig(unittest.TestCase):
 
         assert cfg.apps_to_ignore == set(["subversion", "sequel-pro", "sabnzbd"])
         assert cfg.apps_to_sync == set(["sublime-text-3", "x11", "sabnzbd"])
+
+    def test_config_engine_microsoft_onedrive(self):
+        cfg = Config("mackup-engine-microsoft_onedrive.cfg")
+
+        assert isinstance(cfg.engine, str)
+        assert cfg.engine == ENGINE_MSONEDRIVE
+
+        assert isinstance(cfg.path, str)
+        assert cfg.path == os.path.join(
+            os.environ["HOME"], "Library/CloudStorage/OneDrive-Personal"
+        )
+
+        assert isinstance(cfg.fullpath, str)
+        assert cfg.fullpath == os.path.join(
+            os.environ["HOME"], "Library/CloudStorage/OneDrive-Personal/Mackup"
+        )
 
     def test_config_engine_filesystem_no_path(self):
         with self.assertRaises(ConfigError):

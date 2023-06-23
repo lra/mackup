@@ -3,6 +3,7 @@
 ## WIP
 
 - Add optional support to copy symlinks as links, rather than copying the target (via @jamesrtnz)
+- Add support for Microsoft OneDrive as a new storage engine (via @burck1)
 
 ## Mackup 0.8.37
 

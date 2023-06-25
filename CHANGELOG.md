@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Updated support for Factorio (via @jpuris)
+
 ## Mackup 0.8.37
 
 - Added support for macOS Preview (via @iloveitaly)

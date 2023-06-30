@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for Zed (via @sethherr)
+
 ## Mackup 0.8.37
 
 - Added support for macOS Preview (via @iloveitaly)

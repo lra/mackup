@@ -1,6 +1,14 @@
 # Mackup Changelog
 
 ## WIP
+- Updated support for IntelliJIdea version 2023.1 and 2023.2
+- Updated support for CLion version 2023.1 and 2023.2
+- Updated support for DataGrip version 2023.1 and 2023.2
+- Updated support for GoLand version 2023.1 and 2023.2
+- Updated support for PhpStorm version 2023.1 and 2023.2
+- Updated support for PyCharm version 2023.1 and 2023.2
+- Updated support for RubyMine version 2023.1 and 2023.2
+- Updated support for WebStorm version 2023.1 and 2023.2
 
 ## Mackup 0.8.37
 

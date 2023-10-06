@@ -5,6 +5,9 @@ The Applications Database provides an easy to use interface to load application
 data from the Mackup Database (files).
 """
 import os
+from typing import Set
+
+from . import utils
 
 try:
     import configparser
@@ -75,7 +78,7 @@ class ApplicationsDatabase(object):
                         (self.apps[app_name]["configuration_files"].add(path))
 
     @staticmethod
-    def get_config_files():
+    def get_config_files() -> Set[str]:
         """
         Return the application configuration files.
 
@@ -116,7 +119,13 @@ class ApplicationsDatabase(object):
 
         return config_files
 
-    def get_name(self, name):
+    def get_app(self, name) -> dict:
+        app = self.apps.get(name, None)
+        if app is None:
+            utils.error(f"App '{name}' is not supported")
+        return app
+
+    def get_name(self, name) -> str:
         """
         Return the fancy name of an application.
 
@@ -126,9 +135,9 @@ class ApplicationsDatabase(object):
         Returns:
             str
         """
-        return self.apps[name]["name"]
+        return self.get_app(name)["name"]
 
-    def get_files(self, name):
+    def get_files(self, name) -> Set[str]:
         """
         Return the list of config files of an application.
 
@@ -138,9 +147,9 @@ class ApplicationsDatabase(object):
         Returns:
             set of str.
         """
-        return self.apps[name]["configuration_files"]
+        return self.get_app(name)["configuration_files"]
 
-    def get_app_names(self):
+    def get_app_names(self) -> Set[str]:
         """
         Return application names.
 
@@ -156,7 +165,7 @@ class ApplicationsDatabase(object):
 
         return app_names
 
-    def get_pretty_app_names(self):
+    def get_pretty_app_names(self) -> Set[str]:
         """
         Return the list of pretty app names that are available in the database.
 

@@ -2,6 +2,7 @@
 
 import os
 import os.path
+from typing import Optional, Set
 
 from .constants import (
     CUSTOM_APPS_DIR,
@@ -32,7 +33,7 @@ class Config(object):
 
     """The Mackup Config class."""
 
-    def __init__(self, filename=None):
+    def __init__(self, filename: Optional[str] = None):
         """
         Create a Config instance.
 
@@ -64,7 +65,7 @@ class Config(object):
         self._apps_to_sync = self._parse_apps_to_sync()
 
     @property
-    def engine(self):
+    def engine(self) -> str:
         """
         The engine used by the storage.
 
@@ -76,7 +77,7 @@ class Config(object):
         return str(self._engine)
 
     @property
-    def path(self):
+    def path(self) -> str:
         """
         Path to the Mackup configuration files.
 
@@ -89,7 +90,7 @@ class Config(object):
         return str(self._path)
 
     @property
-    def directory(self):
+    def directory(self) -> str:
         """
         The name of the Mackup directory, named Mackup by default.
 
@@ -99,7 +100,7 @@ class Config(object):
         return str(self._directory)
 
     @property
-    def fullpath(self):
+    def fullpath(self) -> str:
         """
         Full path to the Mackup configuration files.
 
@@ -112,7 +113,7 @@ class Config(object):
         return str(os.path.join(self.path, self.directory))
 
     @property
-    def apps_to_ignore(self):
+    def apps_to_ignore(self) -> Set[str]:
         """
         Get the list of applications ignored in the config file.
 
@@ -122,7 +123,7 @@ class Config(object):
         return set(self._apps_to_ignore)
 
     @property
-    def apps_to_sync(self):
+    def apps_to_sync(self) -> Set[str]:
         """
         Get the list of applications allowed in the config file.
 
@@ -131,7 +132,7 @@ class Config(object):
         """
         return set(self._apps_to_sync)
 
-    def _setup_parser(self, filename=None):
+    def _setup_parser(self, filename=None) -> configparser.SafeConfigParser:
         """
         Configure the ConfigParser instance the way we want it.
 
@@ -154,7 +155,7 @@ class Config(object):
 
         return parser
 
-    def _warn_on_old_config(self):
+    def _warn_on_old_config(self) -> None:
         """Warn the user if an old config format is detected."""
         # Is an old section in the config file?
         old_sections = ["Allowed Applications", "Ignored Applications"]
@@ -174,7 +175,7 @@ class Config(object):
                     " your configuration file.".format(MACKUP_CONFIG_FILE)
                 )
 
-    def _parse_engine(self):
+    def _parse_engine(self) -> str:
         """
         Parse the storage engine in the config.
 
@@ -199,7 +200,7 @@ class Config(object):
 
         return str(engine)
 
-    def _parse_path(self):
+    def _parse_path(self) -> Optional[str]:
         """
         Parse the storage path in the config.
 
@@ -223,10 +224,12 @@ class Config(object):
                     "The required 'path' can't be found while"
                     " the 'file_system' engine is used."
                 )
+        else:
+            path = None
 
         return str(path)
 
-    def _parse_directory(self):
+    def _parse_directory(self) -> str:
         """
         Parse the storage directory in the config.
 
@@ -245,7 +248,7 @@ class Config(object):
 
         return str(directory)
 
-    def _parse_apps_to_ignore(self):
+    def _parse_apps_to_ignore(self) -> Set[str]:
         """
         Parse the applications to ignore in the config.
 
@@ -262,7 +265,7 @@ class Config(object):
 
         return apps_to_ignore
 
-    def _parse_apps_to_sync(self):
+    def _parse_apps_to_sync(self) -> Set[str]:
         """
         Parse the applications to backup in the config.
 
@@ -281,7 +284,5 @@ class Config(object):
 
 
 class ConfigError(Exception):
-
     """Exception used for handle errors in the configuration."""
-
     pass

@@ -20,9 +20,9 @@ jobs:
         python-version:
           - "3.8"
           - "3.9"
-          - "3.10"
-          - "3.11"
-          - "3.12"
+          # - "3.10" # AttributeError: module 'collections' has no attribute 'Callable'
+          # - "3.11" # AttributeError: module 'collections' has no attribute 'Callable'
+          # - "3.12" # ModuleNotFoundError: No module named 'imp'
     container: python:${{ matrix.python-version }}
     steps:
       - run: echo "${HOME}/.local/bin" >> $GITHUB_PATH

@@ -26,7 +26,7 @@ class ApplicationsDatabase(object):
         self.apps = dict()
 
         for config_file in ApplicationsDatabase.get_config_files():
-            config = configparser.SafeConfigParser(allow_no_value=True)
+            config = configparser.ConfigParser(allow_no_value=True)
 
             # Needed to not lowercase the configuration_files in the ini files
             config.optionxform = str

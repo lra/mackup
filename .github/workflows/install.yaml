@@ -6,16 +6,16 @@ jobs:
   install-on-linux:
     strategy:
       matrix:
-        linux-version:
-          - ubuntu-20.04
-          - ubuntu-22.04
+        os:
+          - "ubuntu-20.04"
+          - "ubuntu-22.04"
         python-version:
           - "3.8"
           - "3.9"
           - "3.10"
           - "3.11"
           - "3.12"
-    runs-on: ${{ matrix.linux-version }}
+    runs-on: ${{ matrix.os }}
     container: python:${{ matrix.python-version }}
     steps:
       - uses: actions/checkout@v2
@@ -23,12 +23,13 @@ jobs:
       - run: mackup --help
 
   install-on-macos:
-    matrix:
-      macos-version:
-        - macos-11
-        - macos-12
-        - macos-13
-    runs-on: ${{ matrix.macos-version }}
+    strategy:
+      matrix:
+        os:
+          - macos-11
+          - macos-12
+          - macos-13
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
       - run: pip install .

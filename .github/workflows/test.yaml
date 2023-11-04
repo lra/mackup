@@ -25,8 +25,8 @@ jobs:
           - "3.12"
     container: python:${{ matrix.python-version }}
     steps:
+      - run: echo "${HOME}/.local/bin" >> $GITHUB_PATH
       - run: pip install pipx
-      - run: pipx ensurepath
       - run: pipx install poetry
       - uses: actions/checkout@v2
       - run: make test

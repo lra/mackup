@@ -7,6 +7,7 @@ test:
 	poetry run nosetests --with-coverage --cover-branches --cover-package=mackup
 
 clean:
+	rm -rf __pycache__
 	rm -rf dist/
 	rm -rf Mackup.egg-info/
 

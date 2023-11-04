@@ -1,8 +1,8 @@
 # Mackup Changelog
 
 ## WIP
-- Updated support for GeekTool (via @yuchen-lea)
 
+- Updated support for GeekTool (via @yuchen-lea)
 - Added support for Zed (via @sethherr)
 - Updated support for IntelliJIdea version 2023.1 and 2023.2
 - Updated support for CLion version 2023.1 and 2023.2

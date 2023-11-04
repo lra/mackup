@@ -19,5 +19,5 @@ jobs:
     container: python:${{ matrix.python-version }}
     steps:
       - uses: actions/checkout@v2
-      - run: python setup.py install
+      - run: pip install .
       - run: mackup --help

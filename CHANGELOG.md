@@ -2,11 +2,11 @@
 
 ## WIP
 
- - Removed support for kindaVim (via @godbout)
- - Removed support for Wooshy (via @godbout)
- - Removed support for Scrolla (via @godbout)
- - fix: Deprecated SafeConfigParser resolved
- - bugfix: added Brewfile
+- Removed support for kindaVim (via @godbout)
+- Removed support for Wooshy (via @godbout)
+- Removed support for Scrolla (via @godbout)
+- fix: Deprecated SafeConfigParser resolved
+- bugfix: added Brewfile
 
 ## Mackup 0.8.38
 

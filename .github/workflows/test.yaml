@@ -25,7 +25,7 @@ jobs:
           - "3.12"
     container: python:${{ matrix.python-version }}
     steps:
-      - run: pip install pipenv
+      - run: pip install pipx
+      - run: pipx install poetry
       - uses: actions/checkout@v2
-      - run: pipenv install -d
       - run: make test

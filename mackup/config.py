@@ -139,7 +139,7 @@ class Config(object):
             filename (str) or None
 
         Returns:
-            SafeConfigParser
+            ConfigParser
         """
         assert isinstance(filename, str) or filename is None
 
@@ -147,7 +147,7 @@ class Config(object):
         if not filename:
             filename = MACKUP_CONFIG_FILE
 
-        parser = configparser.SafeConfigParser(
+        parser = configparser.ConfigParser(
             allow_no_value=True, inline_comment_prefixes=(";", "#")
         )
         parser.read(os.path.join(os.path.join(os.environ["HOME"], filename)))

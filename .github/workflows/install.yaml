@@ -19,17 +19,23 @@ jobs:
       - run: pip install .
       - run: mackup --help
 
-  install-macos-10:
-    runs-on: macos-10.15
-    steps:
-      - uses: actions/checkout@v2
-      - run: python setup.py install
-      - run: ls -l /usr/local/bin
-      - run: mackup --help
-
   install-macos-11:
     runs-on: macos-11
     steps:
       - uses: actions/checkout@v2
-      - run: python setup.py install
+      - run: pip install .
+      - run: mackup --help
+
+  install-macos-12:
+    runs-on: macos-12
+    steps:
+      - uses: actions/checkout@v2
+      - run: pip install .
+      - run: mackup --help
+
+  install-macos-13:
+    runs-on: macos-13
+    steps:
+      - uses: actions/checkout@v2
+      - run: pip install .
       - run: mackup --help

@@ -4,7 +4,7 @@ lint:
 
 test:
 	poetry install --with dev
-	poetry run nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
+	poetry run nosetests --with-coverage --cover-branches --cover-package=mackup
 
 clean:
 	rm -rf dist/

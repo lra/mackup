@@ -2,6 +2,16 @@
 
 ## WIP
 
+- Removed support for kindaVim (via @godbout)
+- Removed support for Wooshy (via @godbout)
+- Removed support for Scrolla (via @godbout)
+- fix: Deprecated SafeConfigParser resolved
+- bugfix: added Brewfile
+
+## Mackup 0.8.38
+
+- Build and release with poetry
+
 ## Mackup 0.8.37
 
 - Added support for macOS Preview (via @iloveitaly)

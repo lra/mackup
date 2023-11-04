@@ -1,7 +1,5 @@
 name: Run tests
-on:
-  - pull_request
-  - push
+on: pull_request
 
 jobs:
 
@@ -18,14 +16,15 @@ jobs:
     strategy:
       matrix:
         python-version:
-          - "3.6"
-          - "3.7"
           - "3.8"
           - "3.9"
           - "3.10"
+          - "3.11"
+          # - "3.12" # Installing numpy (1.24.4): Failed
     container: python:${{ matrix.python-version }}
     steps:
-      - run: pip install pipenv
+      - run: echo "${HOME}/.local/bin" >> $GITHUB_PATH
+      - run: pip install pipx
+      - run: pipx install poetry
       - uses: actions/checkout@v2
-      - run: pipenv install -d
       - run: make test

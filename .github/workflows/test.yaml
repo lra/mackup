@@ -26,6 +26,7 @@ jobs:
     container: python:${{ matrix.python-version }}
     steps:
       - run: pip install pipx
+      - run: pipx ensurepath
       - run: pipx install poetry
       - uses: actions/checkout@v2
       - run: make test

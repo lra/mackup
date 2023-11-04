@@ -1,7 +1,5 @@
 name: Test installs
-on:
-  - pull_request
-  - push
+on: pull_request
 
 jobs:
 
@@ -15,6 +13,8 @@ jobs:
           - "3.8"
           - "3.9"
           - "3.10"
+          - "3.11"
+          - "3.12"
     runs-on: ubuntu-latest
     container: python:${{ matrix.python-version }}
     steps:

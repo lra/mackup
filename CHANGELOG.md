@@ -2,6 +2,10 @@
 
 ## WIP
 
+## Mackup 0.8.38
+
+- Build and release with poetry
+
 ## Mackup 0.8.37
 
 - Added support for macOS Preview (via @iloveitaly)

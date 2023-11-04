@@ -72,7 +72,6 @@ class ApplicationProfile(object):
                 and (os.path.isfile(mackup_filepath) or os.path.isdir(mackup_filepath))
                 and os.path.samefile(home_filepath, mackup_filepath)
             ):
-
                 if self.verbose:
                     print(
                         "Backing up\n  {}\n  to\n  {} ...".format(
@@ -87,7 +86,6 @@ class ApplicationProfile(object):
 
                 # Check if we already have a backup
                 if os.path.exists(mackup_filepath):
-
                     # Name it right
                     if os.path.isfile(mackup_filepath):
                         file_type = "file"
@@ -98,7 +96,7 @@ class ApplicationProfile(object):
                     else:
                         raise ValueError("Unsupported file: {}".format(mackup_filepath))
 
-                    # Ask the user if he really want to replace it
+                    # Ask the user if he really wants to replace it
                     if utils.confirm(
                         "A {} named {} already exists in the"
                         " backup.\nAre you sure that you want to"

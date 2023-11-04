@@ -39,6 +39,9 @@ engine = google_drive
 
 ### iCloud
 
+If you choose the `iCloud` storage engine, Mackup will store store your
+configuration files in the `~/Library/Mobile\ Documents/com\~apple\~CloudDocs/` folder.
+
 ```ini
 [storage]
 engine = icloud
@@ -114,9 +117,9 @@ If you ever change your mind and switch storage solutions after Mackup is
 already setup (ex: from `dropbox` to `icloud`), complete the following steps.
 
 1. Run `mackup uninstall` on all computers
-1. Copy your Mackup files to the new storage location
-1. Change the storage provider details in your `.mackup.cfg` file (see above)
-1. Run `mackup backup` on the main computer and `mackup restore` on all others
+2. Copy your Mackup files to the new storage location
+3. Change the storage provider details in your `.mackup.cfg` file (see above)
+4. Run `mackup backup` on the main computer and `mackup restore` on all others
 
 ## Applications
 
@@ -174,10 +177,12 @@ The stock application configs are in the `mackup/applications` directory.
 Remember to follow the guidelines in [CONTRIBUTING.md](https://github.com/lra/mackup/blob/master/.github/CONTRIBUTING.md)
 to get your Pull Request merged faster.
 
-### Add support for an application or any file or directory
+### Add support for an application or (almost) any file or directory
 
 You can customize the Mackup engine and add support for unsupported
 applications or just custom files and directories you'd like to sync.
+
+NOTE: Files and directory to be synced should be rooted at $HOME.
 
 Let's say that you'd like to add support for Nethack (config file:
 `.nethackrc`) and for the `bin` and `.hidden` directories you keep in your
@@ -195,7 +200,7 @@ touch ~/.mackup/my-files.cfg
 Edit those files
 
 ```bash
-$ cat ~/.mackup/nethack.cfg
+$ nano ~/.mackup/nethack.cfg
 [application]
 name = Nethack
 
@@ -204,7 +209,7 @@ name = Nethack
 ```
 
 ```bash
-$ cat ~/.mackup/my-files.cfg
+$ nano ~/.mackup/my-files.cfg
 [application]
 name = My personal synced files and dirs
 

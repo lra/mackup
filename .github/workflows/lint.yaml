@@ -10,5 +10,5 @@ jobs:
     container: python
     steps:
       - run: pip install black
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - run: black --check --target-version py310 .

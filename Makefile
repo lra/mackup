@@ -9,8 +9,8 @@ test:
 clean:
 	rm -rf __pycache__
 	rm -rf mackup/__pycache__
+	rm -rf tests/__pycache__
 	rm -rf dist/
-	rm -rf Mackup.egg-info/
 
 release: clean
 	poetry build

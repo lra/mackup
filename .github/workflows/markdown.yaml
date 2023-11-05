@@ -1,7 +1,9 @@
 name: Lint Markdown
 on:
-  - pull_request
-  - push
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
 

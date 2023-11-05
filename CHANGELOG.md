@@ -5,6 +5,7 @@
 - Updated support for GeekTool (via @yuchen-lea)
 - Remve support for Apple Preview, problematic on macOS 14.1
 - Added support for Subler (via @EpicKris)
+- Added support for SpamSieve (via @michaelgrossklos)
 
 ## Mackup 0.8.39
 
@@ -196,8 +197,7 @@
 - Added support for mitmproxy (via @etiennelb)
 - Added support for Hocus Focus (via @jrolfs)
 - Added support for TripMode (via @ttuygun)
-- Added support for Starship (via @callumm)
-- Added support for SpamSieve (via @michaelgrossklos)
+- Added support for Starship (via @callummr)
 - Added support for Joplin (via @geekrainy)
 - Added support for iStat Menus 6 and unified config files (via @lumaxis)
 - Added the `--root` command line option

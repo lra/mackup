@@ -1,21 +1,20 @@
-develop:
-	python setup.py develop
-
-undevelop:
-	python setup.py develop --uninstall
-
 lint:
 	# Install mdl with "gem install mdl"
 	mdl .
-	flake8
 
 test:
-	nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
+	poetry install --with dev
+	poetry run nosetests --with-coverage --cover-branches --cover-package=mackup
 
 clean:
+	rm -rf __pycache__
+	rm -rf mackup/__pycache__
+	rm -rf tests/__pycache__
 	rm -rf dist/
-	rm -rf Mackup.egg-info/
 
 release: clean
-	python setup.py sdist
-	twine upload dist/*
+	poetry build
+	poetry publish
+
+black:
+	black --target-version py310 .

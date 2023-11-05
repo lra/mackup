@@ -1,0 +1,16 @@
+name: Lint Python
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+
+  black:
+    runs-on: ubuntu-latest
+    container: python
+    steps:
+      - run: pip install black
+      - uses: actions/checkout@v4
+      - run: black --check --target-version py310 .

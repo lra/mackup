@@ -1,0 +1,19 @@
+# Make sure that all text files end with a newline character.
+# Configure your editor to end every file with a newline character.
+# See <https://stackoverflow.com/a/729795>
+name: linelint
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  linelint:
+    runs-on: ubuntu-latest
+    name: Check if all files end with a newline character
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Linelint
+        uses: fernandrone/linelint@master

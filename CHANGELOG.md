@@ -9,6 +9,7 @@
 - Added support for Subler (via @EpicKris)
 - Added support for SpamSieve (via @michaelgrossklos)
 - Added support for Robo 3T (via @captnswing)
+- Remove support for Copy engine as the service has been discontinued (via @sonnyp)
 
 ## Mackup 0.8.39
 

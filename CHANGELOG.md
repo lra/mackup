@@ -7,6 +7,7 @@
 - Remve support for Apple Preview, problematic on macOS 14.1
 - Added support for Subler (via @EpicKris)
 - Added support for SpamSieve (via @michaelgrossklos)
+- Added support for Robo 3T (via @captnswing)
 
 ## Mackup 0.8.39
 

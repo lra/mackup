@@ -572,7 +572,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Rhythmbox](https://wiki.gnome.org/Apps/Rhythmbox)
 - [Rime](http://rime.im/)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [Robomongo](http://robomongo.org/)
+- [Robo 3T](http://robomongo.org/)
 - [Rocket](https://matthewpalmer.net/rocket/)
 - [Rofi](https://github.com/DaveDavenport/rofi)
 - [Royal TSX](http://www.royaltsx.com/ts/osx/features)

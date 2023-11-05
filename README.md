@@ -632,6 +632,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Stats](https://github.com/exelban/stats)
 - [Stay](https://cordlessdog.com/stay/)
 - [Storyist](http://storyist.com/)
+- [Subler](https://subler.org)
 - [Sublime Merge](https://www.sublimemerge.com/)
 - [Sublime Text](http://www.sublimetext.com/)
 - [Subversion](http://subversion.apache.org/)

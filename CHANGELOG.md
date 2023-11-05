@@ -4,6 +4,7 @@
 
 - Updated support for GeekTool (via @yuchen-lea)
 - Remve support for Apple Preview, problematic on macOS 14.1
+- Added support for Subler (via @EpicKris)
 
 ## Mackup 0.8.39
 

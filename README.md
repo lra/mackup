@@ -620,6 +620,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [SpaceLauncher](https://spacelauncherapp.com)
 - [Spacemacs](https://github.com/syl20bnr/spacemacs)
 - [SpaceVim](https://github.com/SpaceVim/SpaceVim)
+- [SpamSieve](https://c-command.com/spamsieve)
 - [Spark](http://www.shadowlab.org/softwares/spark.php)
 - [Spectacle](https://www.spectacleapp.com/)
 - [Spectrwm](https://github.com/conformal/spectrwm/wiki)

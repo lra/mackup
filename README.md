@@ -673,6 +673,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Transmission](http://www.transmissionbt.com/)
 - [Transmit](http://panic.com/transmit/)
 - [TripMode](https://www.tripmode.ch)
+- [Trizen](https://github.com/trizen/trizen)
 - [Tunnelblick](https://tunnelblick.net)
 - [tvnamer](https://github.com/dbr/tvnamer)
 - [Twitterrific](http://twitterrific.com/)

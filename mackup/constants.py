@@ -22,7 +22,6 @@ MACKUP_CONFIG_FILE = ".mackup.cfg"
 CUSTOM_APPS_DIR = ".mackup"
 
 # Supported engines
-ENGINE_COPY = "copy"
 ENGINE_DROPBOX = "dropbox"
 ENGINE_FS = "file_system"
 ENGINE_GDRIVE = "google_drive"

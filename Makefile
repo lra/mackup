@@ -8,6 +8,7 @@ test:
 
 clean:
 	rm -rf __pycache__
+	rm -rf mackup/__pycache__
 	rm -rf dist/
 	rm -rf Mackup.egg-info/
 

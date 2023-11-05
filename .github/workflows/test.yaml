@@ -8,7 +8,7 @@ jobs:
     container: python:2.7
     steps:
       - run: pip install docopt six nose
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - run: nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
 
   nose:
@@ -26,5 +26,5 @@ jobs:
       - run: echo "${HOME}/.local/bin" >> $GITHUB_PATH
       - run: pip install pipx
       - run: pipx install poetry
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - run: make test

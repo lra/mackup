@@ -3,6 +3,10 @@
 ## WIP
 
 - Updated support for GeekTool (via @yuchen-lea)
+- Remve support for Apple Preview, problematic on macOS 14.1
+
+## Mackup 0.8.39
+
 - Updated support for Factorio (via @jpuris)
 - Added support for Zed (via @sethherr)
 - Updated support for IntelliJIdea version 2023.1 and 2023.2

@@ -22,7 +22,7 @@ CAN_RUN_AS_ROOT = False
 
 def confirm(question):
     """
-    Ask the user if he really want something to happen.
+    Ask the user if he really wants something to happen.
 
     Args:
         question(str): What can happen
@@ -34,7 +34,7 @@ def confirm(question):
         return True
 
     while True:
-        answer = input(question + " <Yes|No>").lower()
+        answer = input(question + " <Yes|No> ").lower()
 
         if answer == "yes" or answer == "y":
             confirmed = True
@@ -72,7 +72,7 @@ def copy(src, dst):
     """
     Copy a file or a folder (recursively) from src to dst.
 
-    For simplicity sake, both src and dst must be absolute path and must
+    For the sake of simplicity, both src and dst must be absolute path and must
     include the filename of the file or folder.
     Also do not include any trailing slash.
 
@@ -90,7 +90,7 @@ def copy(src, dst):
     assert os.path.exists(src)
     assert isinstance(dst, str)
 
-    # Create the path to the dst file if it does not exists
+    # Create the path to the dst file if it does not exist
     abs_path = os.path.dirname(os.path.abspath(dst))
     if not os.path.isdir(abs_path):
         os.makedirs(abs_path)
@@ -104,7 +104,7 @@ def copy(src, dst):
     elif os.path.isdir(src):
         shutil.copytree(src, dst)
 
-    # What the heck is this ?
+    # What the heck is this?
     else:
         raise ValueError("Unsupported file: {}".format(src))
 
@@ -116,7 +116,7 @@ def link(target, link_to):
     """
     Create a link to a target file or a folder.
 
-    For simplicity sake, both target and link_to must be absolute path and must
+    For the sake of simplicity, both target and link_to must be absolute path and must
     include the filename of the file or folder.
     Also do not include any trailing slash.
 
@@ -133,7 +133,7 @@ def link(target, link_to):
     assert os.path.exists(target)
     assert isinstance(link_to, str)
 
-    # Create the path to the link if it does not exists
+    # Create the path to the link if it does not exist
     abs_path = os.path.dirname(os.path.abspath(link_to))
     if not os.path.isdir(abs_path):
         os.makedirs(abs_path)
@@ -205,7 +205,7 @@ def get_dropbox_folder_location():
         with open(host_db_path, "r") as f_hostdb:
             data = f_hostdb.read().split()
     except IOError:
-        error("Unable to find your Dropbox install =(")
+        error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="Dropbox install"))
     dropbox_home = base64.b64decode(data[1]).decode()
 
     return dropbox_home
@@ -244,37 +244,13 @@ def get_google_drive_folder_location():
             con.close()
 
     if not googledrive_home:
-        error("Unable to find your Google Drive install =(")
+        error(
+            constants.ERROR_UNABLE_TO_FIND_STORAGE.format(
+                provider="Google Drive install"
+            )
+        )
 
     return googledrive_home
-
-
-def get_copy_folder_location():
-    """
-    Try to locate the Copy folder.
-
-    Returns:
-        (str) Full path to the current Copy folder
-    """
-    copy_settings_path = "Library/Application Support/Copy Agent/config.db"
-    copy_home = None
-
-    copy_settings = os.path.join(os.environ["HOME"], copy_settings_path)
-
-    if os.path.isfile(copy_settings):
-        database = sqlite3.connect(copy_settings)
-        if database:
-            cur = database.cursor()
-            query = "SELECT value " "FROM config2 " "WHERE option = 'csmRootPath';"
-            cur.execute(query)
-            data = cur.fetchone()
-            copy_home = str(data[0])
-            cur.close()
-
-    if not copy_home:
-        error("Unable to find your Copy install =(")
-
-    return copy_home
 
 
 def get_icloud_folder_location():
@@ -289,7 +265,7 @@ def get_icloud_folder_location():
     icloud_home = os.path.expanduser(yosemite_icloud_path)
 
     if not os.path.isdir(icloud_home):
-        error("Unable to find your iCloud Drive =(")
+        error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="iCloud Drive"))
 
     return str(icloud_home)
 
@@ -381,7 +357,7 @@ def can_file_be_synced_on_current_platform(path):
     # If the given path is relative, prepend home
     fullpath = os.path.join(os.environ["HOME"], path)
 
-    # Compute the ~/Library path on OS X
+    # Compute the ~/Library path on macOS
     # End it with a slash because we are looking for this specific folder and
     # not any file/folder named LibrarySomething
     library_path = os.path.join(os.environ["HOME"], "Library/")

@@ -9,7 +9,6 @@ from .constants import (
     MACKUP_CONFIG_FILE,
     ENGINE_DROPBOX,
     ENGINE_GDRIVE,
-    ENGINE_COPY,
     ENGINE_ICLOUD,
     ENGINE_FS,
 )
@@ -17,7 +16,6 @@ from .constants import (
 from .utils import (
     error,
     get_dropbox_folder_location,
-    get_copy_folder_location,
     get_google_drive_folder_location,
     get_icloud_folder_location,
 )
@@ -45,7 +43,7 @@ class Config(object):
         # Initialize the parser
         self._parser = self._setup_parser(filename)
 
-        # Do we have an old config file ?
+        # Do we have an old config file?
         self._warn_on_old_config()
 
         # Get the storage engine
@@ -68,7 +66,7 @@ class Config(object):
         """
         The engine used by the storage.
 
-        ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_COPY, ENGINE_ICLOUD or ENGINE_FS.
+        ENGINE_DROPBOX, ENGINE_GDRIVE, ENGINE_ICLOUD or ENGINE_FS.
 
         Returns:
             str
@@ -139,7 +137,7 @@ class Config(object):
             filename (str) or None
 
         Returns:
-            SafeConfigParser
+            ConfigParser
         """
         assert isinstance(filename, str) or filename is None
 
@@ -147,14 +145,16 @@ class Config(object):
         if not filename:
             filename = MACKUP_CONFIG_FILE
 
-        parser = configparser.SafeConfigParser(allow_no_value=True)
+        parser = configparser.ConfigParser(
+            allow_no_value=True, inline_comment_prefixes=(";", "#")
+        )
         parser.read(os.path.join(os.path.join(os.environ["HOME"], filename)))
 
         return parser
 
     def _warn_on_old_config(self):
         """Warn the user if an old config format is detected."""
-        # Is an old setion is in the config file ?
+        # Is an old section in the config file?
         old_sections = ["Allowed Applications", "Ignored Applications"]
         for old_section in old_sections:
             if self._parser.has_section(old_section):
@@ -189,7 +189,6 @@ class Config(object):
         if engine not in [
             ENGINE_DROPBOX,
             ENGINE_GDRIVE,
-            ENGINE_COPY,
             ENGINE_ICLOUD,
             ENGINE_FS,
         ]:
@@ -208,8 +207,6 @@ class Config(object):
             path = get_dropbox_folder_location()
         elif self.engine == ENGINE_GDRIVE:
             path = get_google_drive_folder_location()
-        elif self.engine == ENGINE_COPY:
-            path = get_copy_folder_location()
         elif self.engine == ENGINE_ICLOUD:
             path = get_icloud_folder_location()
         elif self.engine == ENGINE_FS:
@@ -253,7 +250,7 @@ class Config(object):
         # We ignore nothing by default
         apps_to_ignore = set()
 
-        # Is the "[applications_to_ignore]" in the cfg file ?
+        # Is the "[applications_to_ignore]" in the cfg file?
         section_title = "applications_to_ignore"
         if self._parser.has_section(section_title):
             apps_to_ignore = set(self._parser.options(section_title))
@@ -270,7 +267,7 @@ class Config(object):
         # We allow nothing by default
         apps_to_sync = set()
 
-        # Is the "[applications_to_sync]" section in the cfg file ?
+        # Is the "[applications_to_sync]" section in the cfg file?
         section_title = "applications_to_sync"
         if self._parser.has_section(section_title):
             apps_to_sync = set(self._parser.options(section_title))

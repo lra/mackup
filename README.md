@@ -627,6 +627,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Splice](https://splice.com/)
 - [Spotify Notifications](http://spotify-notifications.citruspi.io/)
 - [Spotify](https://www.spotify.com/)
+- [Sqitch](https://sqitch.org/)
 - [Starship](https://starship.rs/)
 - [Startupizer2](http://appledoc.gentlebytes.com/startupizer/)
 - [Stata](http://www.stata.com/)

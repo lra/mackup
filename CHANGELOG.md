@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Added support for Sqitch (via @ra1fee)
 - Updated support for GeekTool (via @yuchen-lea)
 - Remve support for Apple Preview, problematic on macOS 14.1
 - Added support for Subler (via @EpicKris)

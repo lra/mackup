@@ -16,8 +16,8 @@ these guidelines:
 
 - Keep one application supported per PR
 - Add the application to the list of supported applications in
-  [README.md](README.md)
-- Add your change to the WIP section of the [CHANGELOG.md](CHANGELOG.md)
+  [README.md][README.md]
+- Add your change to the WIP section of the [CHANGELOG.md][CHANGELOG.md]
 - Sync configurations should follow the following principles:
   - Syncing should not break the application, and PRs should be tested
   - Syncing should not break any syncing functionality internal to the
@@ -34,3 +34,5 @@ Thank you for your contribution!
 [TOFIX]: https://github.com/lra/mackup/labels/TOFIX
 [CODETRIAGE]: https://www.codetriage.com/lra/mackup
 [CODETRIAGE-IMG]: https://www.codetriage.com/lra/mackup/badges/users.svg
+[README.md]: https://github.com/lra/mackup/blob/master/README.md
+[CHANGELOG.md]: https://github.com/lra/mackup/blob/master/CHANGELOG.md

@@ -53,7 +53,7 @@ class ApplicationProfile(object):
             if exists home/file
               if home/file is a real file
                 if exists mackup/file
-                  are you sure ?
+                  are you sure?
                   if sure
                     rm mackup/file
                     mv home/file mackup/file
@@ -72,7 +72,6 @@ class ApplicationProfile(object):
                 and (os.path.isfile(mackup_filepath) or os.path.isdir(mackup_filepath))
                 and os.path.samefile(home_filepath, mackup_filepath)
             ):
-
                 if self.verbose:
                     print(
                         "Backing up\n  {}\n  to\n  {} ...".format(
@@ -87,7 +86,6 @@ class ApplicationProfile(object):
 
                 # Check if we already have a backup
                 if os.path.exists(mackup_filepath):
-
                     # Name it right
                     if os.path.isfile(mackup_filepath):
                         file_type = "file"
@@ -98,11 +96,11 @@ class ApplicationProfile(object):
                     else:
                         raise ValueError("Unsupported file: {}".format(mackup_filepath))
 
-                    # Ask the user if he really want to replace it
+                    # Ask the user if he really wants to replace it
                     if utils.confirm(
                         "A {} named {} already exists in the"
                         " backup.\nAre you sure that you want to"
-                        " replace it ?".format(file_type, mackup_filepath)
+                        " replace it?".format(file_type, mackup_filepath)
                     ):
                         # Delete the file in Mackup
                         utils.delete(mackup_filepath)
@@ -144,7 +142,7 @@ class ApplicationProfile(object):
         Algorithm:
             if exists mackup/file
               if exists home/file
-                are you sure ?
+                are you sure?
                 if sure
                   rm home/file
                   link mackup/file home/file
@@ -196,7 +194,7 @@ class ApplicationProfile(object):
                     if utils.confirm(
                         "You already have a {} named {} in your"
                         " home.\nDo you want to replace it with"
-                        " your backup ?".format(file_type, filename)
+                        " your backup?".format(file_type, filename)
                     ):
                         utils.delete(home_filepath)
                         utils.link(mackup_filepath, home_filepath)

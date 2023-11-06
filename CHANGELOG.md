@@ -2,6 +2,8 @@
 
 ## WIP
 
+## Mackup 0.8.40
+
 - Add support for Trizen (via @cilenco)
 - Added support for Sqitch (via @ra1fee)
 - Updated support for GeekTool (via @yuchen-lea)

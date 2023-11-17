@@ -2,6 +2,8 @@
 
 ## WIP
 
+- Added support for DBeaver (via @or-tal-0)
+
 ## Mackup 0.8.40
 
 - Add support for Trizen (via @cilenco)

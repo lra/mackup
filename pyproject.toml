@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "mackup"
+version = "0.8.40"
+description = "Keep your application settings in sync (macOS/Linux)"
+authors = ["Laurent Raufaste <analogue@glop.org>"]
+license = "GPLv3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+docopt = "^0.6.2"
+six = "^1.16.0"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+nose-py3 = "^1.6.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+mackup = "mackup.main:main"

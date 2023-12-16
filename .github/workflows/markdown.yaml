@@ -1,13 +1,17 @@
 name: Lint Markdown
 on:
-  - pull_request
-  - push
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
 
   mdl:
     runs-on: ubuntu-latest
-    container: rsrchboy/mdl
     steps:
-      - uses: actions/checkout@v2
-      - run: mdl .
+      - uses: actions/checkout@v4
+      - uses: articulate/actions-markdownlint@v1
+        with:
+          config: .markdownlint.yaml
+          ignore: 'tests/'

@@ -2,9 +2,6 @@
 
 Keep your application settings in sync.
 
-[![Run tests](https://github.com/lra/mackup/actions/workflows/test.yaml/badge.svg)](https://github.com/lra/mackup/actions/workflows/test.yaml)
-[![snapcraft](https://snapcraft.io/mackup/badge.svg)](https://snapcraft.io/mackup)
-
 ## Table of content
 
 - [Mackup](#mackup)

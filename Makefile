@@ -1,23 +1,20 @@
-develop:
-	pipenv run python setup.py develop
-
-undevelop:
-	pipenv run python setup.py develop --uninstall
-
 lint:
 	# Install mdl with "gem install mdl"
 	mdl .
 
 test:
-	pipenv run nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
+	poetry install --with dev
+	poetry run nosetests --with-coverage --cover-branches --cover-package=mackup
 
 clean:
+	rm -rf __pycache__
+	rm -rf mackup/__pycache__
+	rm -rf tests/__pycache__
 	rm -rf dist/
-	rm -rf Mackup.egg-info/
 
 release: clean
-	pipenv run python setup.py sdist
-	pipenv run twine upload dist/*
+	poetry build
+	poetry publish
 
 black:
 	black --target-version py310 .

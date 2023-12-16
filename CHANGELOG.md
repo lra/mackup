@@ -2,6 +2,41 @@
 
 ## WIP
 
+- Added support for DBeaver (via @or-tal-0)
+
+## Mackup 0.8.40
+
+- Add support for Trizen (via @cilenco)
+- Added support for Sqitch (via @ra1fee)
+- Updated support for GeekTool (via @yuchen-lea)
+- Remve support for Apple Preview, problematic on macOS 14.1
+- Added support for Subler (via @EpicKris)
+- Added support for SpamSieve (via @michaelgrossklos)
+- Added support for Robo 3T (via @captnswing)
+- Remove support for Copy engine as the service has been discontinued (via @sonnyp)
+
+## Mackup 0.8.39
+
+- Updated support for Factorio (via @jpuris)
+- Added support for Zed (via @sethherr)
+- Updated support for IntelliJIdea version 2023.1 and 2023.2
+- Updated support for CLion version 2023.1 and 2023.2
+- Updated support for DataGrip version 2023.1 and 2023.2
+- Updated support for GoLand version 2023.1 and 2023.2
+- Updated support for PhpStorm version 2023.1 and 2023.2
+- Updated support for PyCharm version 2023.1 and 2023.2
+- Updated support for RubyMine version 2023.1 and 2023.2
+- Updated support for WebStorm version 2023.1 and 2023.2
+- Removed support for kindaVim (via @godbout)
+- Removed support for Wooshy (via @godbout)
+- Removed support for Scrolla (via @godbout)
+- fix: Deprecated SafeConfigParser resolved
+- bugfix: added Brewfile
+
+## Mackup 0.8.38
+
+- Build and release with poetry
+
 ## Mackup 0.8.37
 
 - Added support for macOS Preview (via @iloveitaly)

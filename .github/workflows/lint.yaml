@@ -1,7 +1,9 @@
 name: Lint Python
 on:
-  - pull_request
-  - push
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
 
@@ -10,5 +12,5 @@ jobs:
     container: python
     steps:
       - run: pip install black
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - run: black --check --target-version py310 .

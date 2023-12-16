@@ -7,9 +7,8 @@ Feel free to add more, the more the better!
 ## How to run the tests
 
 ```bash
-pip install pipenv
-pipenv install -d
-pipenv run make test
+pip install poetry
+make test
 ```
 
 And you should see

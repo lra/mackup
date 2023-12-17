@@ -3,6 +3,7 @@
 ## WIP
 
 - Added support for DBeaver (via @or-tal-0)
+- Added support for rtx (via @dnicolson)
 
 ## Mackup 0.8.40
 

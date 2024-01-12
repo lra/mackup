@@ -242,8 +242,17 @@ class TestMackup(unittest.TestCase):
         file_name = tfile.name
 
         # Create a tmp directory with a sub folder
-        dir_name = tempfile.mkdtemp()
+        dir_name = tempfile.mkdtemp(prefix='mackup-tests-')
         nested_dir = tempfile.mkdtemp(dir=dir_name)
+
+        # Create orphaned link
+        link_target = tempfile.NamedTemporaryFile(dir=nested_dir, delete=False)
+        link_name   = os.path.join(dir_name, 'link')
+        os.symlink(link_target.name, link_name)
+        os.remove(link_target.name)
+        assert not os.path.isfile(link_target.name)
+        assert not os.path.isfile(link_name)
+        assert os.path.islink(link_name)
 
         # # File Tests
 

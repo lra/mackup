@@ -5,6 +5,7 @@
 - Added support for DBeaver (via @or-tal-0)
 - Added support for rtx (via @dnicolson)
 - Add support for new TOML config for Alacritty (via @syphar)
+- Remove dependency on the six package
 
 ## Mackup 0.8.40
 

@@ -4,6 +4,7 @@ The applications database.
 The Applications Database provides an easy to use interface to load application
 data from the Mackup Database (files).
 """
+import glob
 import os
 
 try:
@@ -52,7 +53,7 @@ class ApplicationsDatabase(object):
                             raise ValueError(
                                 "Unsupported absolute path: {}".format(path)
                             )
-                        self.apps[app_name]["configuration_files"].add(path)
+                        self._add_path(app_name, path, config)
 
                 # Add the XDG configuration files to sync
                 home = os.path.expanduser("~/")
@@ -72,7 +73,7 @@ class ApplicationsDatabase(object):
                             )
                         path = os.path.join(xdg_config_home, path)
                         path = path.replace(home, "")
-                        (self.apps[app_name]["configuration_files"].add(path))
+                        self._add_path(app_name, path, config)
 
     @staticmethod
     def get_config_files():
@@ -168,3 +169,11 @@ class ApplicationsDatabase(object):
             pretty_app_names.add(self.get_name(app_name))
 
         return pretty_app_names
+
+    def _add_path(self, app_name, path, config):
+        if config.getboolean("options", "enable_glob", fallback=False):
+            expanded_paths = glob.glob(path)
+        else:
+            expanded_paths = [path]
+        for expanded_path in expanded_paths:
+            self.apps[app_name]["configuration_files"].add(expanded_path)

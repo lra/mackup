@@ -5,14 +5,11 @@ import os.path
 
 from .constants import (
     CUSTOM_APPS_DIR,
-    MACKUP_BACKUP_PATH,
-    MACKUP_CONFIG_FILE,
     ENGINE_DROPBOX,
     ENGINE_GDRIVE,
     ENGINE_ICLOUD,
     ENGINE_FS,
 )
-
 from .utils import (
     error,
     get_dropbox_folder_location,
@@ -142,7 +139,17 @@ class Config(object):
 
         # If we are not overriding the config filename
         if not filename:
-            filename = MACKUP_CONFIG_FILE
+            if os.path.exists(MACKUP_CONFIG_FILE):
+                filename = MACKUP_CONFIG_FILE
+            elif "MACKUP_CONFIG_FILE" in os.environ:
+                filename = os.environ["MACKUP_CONFIG_FILE"]
+            elif "XDG_CONFIG_HOME" in os.environ:
+                filename = os.path.join(
+                    os.environ["XDG_CONFIG_HOME"],
+                    MACKUP_CONFIG_FILE.lstrip("."),
+                )
+            else:
+                filename = MACKUP_CONFIG_FILE
 
         parser = configparser.ConfigParser(
             allow_no_value=True, inline_comment_prefixes=(";", "#")

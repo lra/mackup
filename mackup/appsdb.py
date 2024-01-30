@@ -4,6 +4,7 @@ The applications database.
 The Applications Database provides an easy to use interface to load application
 data from the Mackup Database (files).
 """
+
 import os
 
 try:
@@ -17,7 +18,6 @@ from .constants import CUSTOM_APPS_DIR
 
 
 class ApplicationsDatabase(object):
-
     """Database containing all the configured applications."""
 
     def __init__(self):

@@ -387,6 +387,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [iTerm2](https://www.iterm2.com/)
 - [iTermocil](https://github.com/TomAnthony/itermocil)
 - [iTunes Scripts](https://www.apple.com/)
+- [JankyBorders](https://github.com/FelixKratz/JankyBorders)
 - [Janus](https://github.com/carlhuda/janus)
 - [Jitouch](http://www.jitouch.com/)
 - [Joplin](https://joplinapp.org/)

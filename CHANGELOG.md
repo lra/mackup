@@ -6,6 +6,7 @@
 - Added support for rtx (via @dnicolson)
 - Add support for new TOML config for Alacritty (via @syphar)
 - Remove dependency on the six package
+- Add support for JankyBorders (via @LarsRefsgaard)
 
 ## Mackup 0.8.40
 

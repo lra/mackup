@@ -27,7 +27,6 @@ except ImportError:
 
 
 class Config(object):
-
     """The Mackup Config class."""
 
     def __init__(self, filename=None):
@@ -276,7 +275,6 @@ class Config(object):
 
 
 class ConfigError(Exception):
-
     """Exception used for handle errors in the configuration."""
 
     pass

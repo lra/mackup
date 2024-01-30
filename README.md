@@ -175,6 +175,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Adobe Photoshop Lightroom CC](https://www.adobe.com/products/photoshop-lightroom.html)
 - [Adobe Photoshop Lightroom Classic](https://www.adobe.com/de/products/photoshop-lightroom-classic.html)
 - [aerc](https://aerc-mail.org/)
+- [AeroSpace](https://github.com/nikitabobko/AeroSpace)
 - [Affinity Designer](https://affinity.serif.com/designer)
 - [Affinity Photo](https://affinity.serif.com/photo)
 - [Affinity Publisher](https://affinity.serif.com/publisher)

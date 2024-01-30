@@ -1,4 +1,5 @@
 """System static utilities being used by the modules."""
+
 import base64
 import os
 import platform

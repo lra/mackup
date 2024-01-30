@@ -4,6 +4,7 @@ Application Profile.
 An Application Profile contains all the information about an application in
 Mackup. Name, files, ...
 """
+
 import os
 
 from .mackup import Mackup
@@ -11,7 +12,6 @@ from . import utils
 
 
 class ApplicationProfile(object):
-
     """Instantiate this class with application specific data."""
 
     def __init__(self, mackup, files, dry_run, verbose):

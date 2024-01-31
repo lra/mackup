@@ -1,5 +1,8 @@
 # Mackup
 
+> [!WARNING]
+> With recent versions of macOS, the symlinking of config files no longer works, and apps may not save updates to the settings when using mackup. It is currently recommended to uninstall mackup until we have a feature that allows us to copy files instead of symlinking them. For more information on this, please visit https://github.com/lra/mackup/issues/1924.
+
 Keep your application settings in sync.
 
 ## Table of content

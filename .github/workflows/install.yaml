@@ -33,8 +33,9 @@ jobs:
           - macos-11
           - macos-12
           - macos-13
+          - macos-14
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - run: pip install .
+      - run: pip3 install .
       - run: mackup --help

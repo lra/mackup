@@ -37,7 +37,5 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - if: ${{ matrix.os == 'macos-14' }}
-        run: python3 -m ensurepip
-      - run: pip install .
+      - run: pip3 install .
       - run: mackup --help

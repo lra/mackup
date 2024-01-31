@@ -607,6 +607,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Shuttle](http://fitztrev.github.io/shuttle/)
 - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
 - [Sizzy](https://sizzy.co/)
+- [SketchyBar](https://github.com/FelixKratz/SketchyBar)
 - [skhd](https://github.com/koekeishiya/skhd/)
 - [Skim](http://skim-app.sourceforge.net/)
 - [Skitch](https://evernote.com/skitch/)

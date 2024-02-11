@@ -16,5 +16,5 @@ release: clean
 	poetry build
 	poetry publish
 
-black:
-	black --target-version py310 .
+ruff:
+	ruff check .

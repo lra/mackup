@@ -13,4 +13,5 @@ jobs:
       - uses: actions/checkout@v4
       - uses: articulate/actions-markdownlint@v1
         with:
+          config: .markdownlint.yaml
           ignore: 'tests/'

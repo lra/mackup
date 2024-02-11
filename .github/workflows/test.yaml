@@ -16,7 +16,7 @@ jobs:
           - "3.9"
           - "3.10"
           - "3.11"
-          # - "3.12" # Installing numpy (1.24.4): Failed
+          - "3.12"
     container: python:${{ matrix.python-version }}
     steps:
       - run: echo "${HOME}/.local/bin" >> $GITHUB_PATH

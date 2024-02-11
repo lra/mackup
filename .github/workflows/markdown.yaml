@@ -7,7 +7,7 @@ on:
 
 jobs:
 
-  mdl:
+  markdownlint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

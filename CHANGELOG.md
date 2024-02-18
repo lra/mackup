@@ -3,6 +3,12 @@
 ## WIP
 
 - Added support for DBeaver (via @or-tal-0)
+- Added support for rtx (via @dnicolson)
+- Add support for new TOML config for Alacritty (via @syphar)
+- Remove dependency on the six package
+- Add support for JankyBorders (via @LarsRefsgaard)
+- Add support for AeroSpace (via @LarsRefsgaard)
+- Add support for SketchyBar (via @LarsRefsgaard)
 
 ## Mackup 0.8.40
 

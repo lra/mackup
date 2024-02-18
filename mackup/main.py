@@ -35,6 +35,7 @@ backend with a .mackup.cfg file.
 See https://github.com/lra/mackup/tree/master/doc for more information.
 
 """
+
 from docopt import docopt
 from .appsdb import ApplicationsDatabase
 from .application import ApplicationProfile

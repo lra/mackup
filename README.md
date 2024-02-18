@@ -2,9 +2,6 @@
 
 Keep your application settings in sync.
 
-[![Run tests](https://github.com/lra/mackup/actions/workflows/test.yaml/badge.svg)](https://github.com/lra/mackup/actions/workflows/test.yaml)
-[![snapcraft](https://snapcraft.io/mackup/badge.svg)](https://snapcraft.io/mackup)
-
 ## Table of content
 
 - [Mackup](#mackup)
@@ -178,6 +175,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Adobe Photoshop Lightroom CC](https://www.adobe.com/products/photoshop-lightroom.html)
 - [Adobe Photoshop Lightroom Classic](https://www.adobe.com/de/products/photoshop-lightroom-classic.html)
 - [aerc](https://aerc-mail.org/)
+- [AeroSpace](https://github.com/nikitabobko/AeroSpace)
 - [Affinity Designer](https://affinity.serif.com/designer)
 - [Affinity Photo](https://affinity.serif.com/photo)
 - [Affinity Publisher](https://affinity.serif.com/publisher)
@@ -390,6 +388,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [iTerm2](https://www.iterm2.com/)
 - [iTermocil](https://github.com/TomAnthony/itermocil)
 - [iTunes Scripts](https://www.apple.com/)
+- [JankyBorders](https://github.com/FelixKratz/JankyBorders)
 - [Janus](https://github.com/carlhuda/janus)
 - [Jitouch](http://www.jitouch.com/)
 - [Joplin](https://joplinapp.org/)
@@ -563,7 +562,6 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [R](http://www.r-project.org/)
 - [Rails](http://rubyonrails.org/)
 - [Ranger](https://ranger.github.io/)
-- [Raycast](https://raycast.com/)
 - [Rbenv](https://www.github.com/rbenv/rbenv)
 - [Rclone](https://rclone.org/)
 - [Rectangle](https://rectangleapp.com/)
@@ -579,6 +577,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Royal TSX](http://www.royaltsx.com/ts/osx/features)
 - [RStudio](https://www.rstudio.com/)
 - [rTorrent](http://libtorrent.rakshasa.no/)
+- [rtx](https://github.com/jdx/rtx)
 - [rubiTrack 5](https://www.rubitrack.com)
 - [Rubocop](https://github.com/bbatsov/rubocop)
 - [Ruby Version Manager](https://rvm.io/)
@@ -608,6 +607,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Shuttle](http://fitztrev.github.io/shuttle/)
 - [SizeUp](http://www.irradiatedsoftware.com/sizeup/)
 - [Sizzy](https://sizzy.co/)
+- [SketchyBar](https://felixkratz.github.io/SketchyBar/)
 - [skhd](https://github.com/koekeishiya/skhd/)
 - [Skim](http://skim-app.sourceforge.net/)
 - [Skitch](https://evernote.com/skitch/)

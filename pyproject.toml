@@ -9,13 +9,12 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.8"
 docopt = "^0.6.2"
-six = "^1.16.0"
 
 [tool.poetry.group.dev]
 optional = true
 
 [tool.poetry.group.dev.dependencies]
-nose-py3 = "^1.6.3"
+pytest = "^7.4.4"
 
 [build-system]
 requires = ["poetry-core"]

@@ -7,15 +7,7 @@ on:
 
 jobs:
 
-  nose-2_7:
-    runs-on: ubuntu-latest
-    container: python:2.7
-    steps:
-      - run: pip install docopt six nose
-      - uses: actions/checkout@v4
-      - run: nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
-
-  nose:
+  pytest:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -24,7 +16,7 @@ jobs:
           - "3.9"
           - "3.10"
           - "3.11"
-          # - "3.12" # Installing numpy (1.24.4): Failed
+          - "3.12"
     container: python:${{ matrix.python-version }}
     steps:
       - run: echo "${HOME}/.local/bin" >> $GITHUB_PATH

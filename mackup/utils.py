@@ -1,4 +1,5 @@
 """System static utilities being used by the modules."""
+
 import base64
 import os
 import platform
@@ -7,7 +8,6 @@ import stat
 import subprocess
 import sys
 import sqlite3
-from six.moves import input
 
 from . import constants
 

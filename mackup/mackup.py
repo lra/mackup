@@ -5,6 +5,7 @@ The Mackup class is keeping all the state that Mackup needs to keep during its
 runtime. It also provides easy to use interface that is used by the Mackup UI.
 The only UI for now is the command line.
 """
+
 import os
 import os.path
 import shutil
@@ -16,7 +17,6 @@ from . import appsdb
 
 
 class Mackup(object):
-
     """Main Mackup class."""
 
     def __init__(self):

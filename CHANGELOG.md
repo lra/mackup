@@ -9,6 +9,7 @@
 - Add support for JankyBorders (via @LarsRefsgaard)
 - Add support for AeroSpace (via @LarsRefsgaard)
 - Add support for SketchyBar (via @LarsRefsgaard)
+- Add support for nvm (via @Wxh16144)
 
 ## Mackup 0.8.40
 

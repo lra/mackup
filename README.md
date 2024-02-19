@@ -500,6 +500,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [nuget](https://www.nuget.org/)
 - [Nushell](https://www.nushell.sh/)
 - [nvALT](http://brettterpstra.com/projects/nvalt/)
+- [nvm](https://github.com/nvm-sh/nvm)
 - [nvpy](https://github.com/cpbotha/nvpy)
 - [OBS](https://obsproject.com)
 - [Oh My Fish](https://github.com/bpinto/oh-my-fish)

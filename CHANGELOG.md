@@ -2,6 +2,7 @@
 
 ## WIP
 
+- Add support for Helix (via @xtrasmal)
 - Added support for DBeaver (via @or-tal-0)
 - Added support for rtx (via @dnicolson)
 - Add support for new TOML config for Alacritty (via @syphar)

@@ -13,13 +13,13 @@ Usage:
   mackup --version
 
 Options:
-  -h --help     Show this screen.
-  -f --force    Force every question asked to be answered with "Yes".
-  -r --root     Allow mackup to be run as superuser.
-  -n --dry-run  Show steps without executing.
-  -c --copy-only   Copy only files when backup.
-  -v --verbose  Show additional details.
-  --version     Show version.
+  -h --help         Show this screen.
+  -f --force        Force every question asked to be answered with "Yes".
+  -r --root         Allow mackup to be run as superuser.
+  -n --dry-run      Show steps without executing.
+  -c --copy-only    Copy only files when backup.
+  -v --verbose      Show additional details.
+  --version         Show version.
 
 Modes of action:
  1. list: display a list of all supported applications.
@@ -37,15 +37,13 @@ See https://github.com/lra/mackup/tree/master/doc for more information.
 
 """
 
-import sys
-
 from docopt import docopt
-
-from . import utils
-from .application import ApplicationProfile
 from .appsdb import ApplicationsDatabase
+from .application import ApplicationProfile
 from .constants import MACKUP_APP_NAME, VERSION
 from .mackup import Mackup
+from . import utils
+import sys
 
 
 class ColorFormatCodes:

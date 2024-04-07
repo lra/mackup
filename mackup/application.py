@@ -7,8 +7,8 @@ Mackup. Name, files, ...
 
 import os
 
-from . import utils
 from .mackup import Mackup
+from . import utils
 
 
 class ApplicationProfile(object):

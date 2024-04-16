@@ -17,7 +17,7 @@ Options:
   -f --force        Force every question asked to be answered with "Yes".
   -r --root         Allow mackup to be run as superuser.
   -n --dry-run      Show steps without executing.
-  -c --copy-only    Copy only files when backup.
+  -c --copy-only    Only copy files when backing up.
   -v --verbose      Show additional details.
   --version         Show version.
 

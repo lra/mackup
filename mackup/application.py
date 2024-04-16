@@ -14,7 +14,7 @@ from . import utils
 class ApplicationProfile(object):
     """Instantiate this class with application specific data."""
 
-    def __init__(self, mackup, files, dry_run, verbose):
+    def __init__(self, mackup, files, dry_run, verbose, copy_only):
         """
         Create an ApplicationProfile instance.
 
@@ -29,6 +29,7 @@ class ApplicationProfile(object):
         self.files = list(files)
         self.dry_run = dry_run
         self.verbose = verbose
+        self.copy_only = copy_only
 
     def getFilepaths(self, filename):
         """
@@ -106,6 +107,8 @@ class ApplicationProfile(object):
                         utils.delete(mackup_filepath)
                         # Copy the file
                         utils.copy(home_filepath, mackup_filepath)
+                        if self.copy_only:
+                            continue
                         # Delete the file in the home
                         utils.delete(home_filepath)
                         # Link the backuped file to its original place
@@ -113,6 +116,8 @@ class ApplicationProfile(object):
                 else:
                     # Copy the file
                     utils.copy(home_filepath, mackup_filepath)
+                    if self.copy_only:
+                        continue
                     # Delete the file in the home
                     utils.delete(home_filepath)
                     # Link the backuped file to its original place

@@ -11,6 +11,7 @@
 - Add support for SketchyBar (via @LarsRefsgaard)
 - Add support for nvm (via @Wxh16144)
 - Add support for PHPStorm 2023.3 (via @damosse31)
+- Add support for Cursor (via @takyshu98)
 
 ## Mackup 0.8.40
 

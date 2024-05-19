@@ -38,5 +38,5 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - run: pip3 install .
+      - run: pip install .
       - run: mackup --help

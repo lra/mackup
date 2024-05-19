@@ -267,6 +267,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [CoRD](http://cord.sourceforge.net/)
 - [CotEditor](http://coteditor.com/)
 - [Ctags](http://ctags.sourceforge.net/)
+- [Cursor](https://cursor.sh/)
 - [cVim](https://github.com/1995eaton/chromium-vim)
 - [Cyberduck](https://cyberduck.io/)
 - [DaisyDisk](https://daisydiskapp.com)

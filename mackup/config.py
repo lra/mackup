@@ -5,7 +5,7 @@ import os.path
 
 from .constants import (
     CUSTOM_APPS_DIR,
-    MACKUP_BACKUP_PATH,
+    MACKUP_SYMLINK_PATH,
     MACKUP_CONFIG_FILE,
     ENGINE_DROPBOX,
     ENGINE_GDRIVE,
@@ -235,7 +235,7 @@ class Config(object):
                     "{} cannot be used as a storage directory.".format(CUSTOM_APPS_DIR)
                 )
         else:
-            directory = MACKUP_BACKUP_PATH
+            directory = MACKUP_SYMLINK_PATH
 
         return str(directory)
 
@@ -258,7 +258,7 @@ class Config(object):
 
     def _parse_apps_to_sync(self):
         """
-        Parse the applications to backup in the config.
+        Parse the applications to symlink in the config.
 
         Returns:
             set

@@ -45,11 +45,11 @@ class Mackup(object):
         # Is Sublime Text running?
         # if is_process_running('Sublime Text'):
         #    error("Sublime Text is running. It is known to cause problems"
-        #          " when Sublime Text is running while I backup or restore"
+        #          " when Sublime Text is running while I symlink or restore"
         #          " its configuration files. Please close Sublime Text and"
         #          " run me again.")
 
-    def check_for_usable_backup_env(self):
+    def check_for_usable_symlink_env(self):
         """Check if the current env can be used to back up files."""
         self.check_for_usable_environment()
         self.create_mackup_home()
@@ -81,7 +81,7 @@ class Mackup(object):
             else:
                 utils.error("Mackup can't do anything without a home =(")
 
-    def get_apps_to_backup(self):
+    def get_apps_to_symlink(self):
         """
         Get the list of applications that should be backed up by Mackup.
 
@@ -95,10 +95,10 @@ class Mackup(object):
 
         # If a list of apps to sync is specify, we only allow those
         # Or we allow every supported app by default
-        apps_to_backup = self._config.apps_to_sync or app_db.get_app_names()
+        apps_to_symlink = self._config.apps_to_sync or app_db.get_app_names()
 
         # Remove the specified apps to ignore
         for app_name in self._config.apps_to_ignore:
-            apps_to_backup.discard(app_name)
+            apps_to_symlink.discard(app_name)
 
-        return apps_to_backup
+        return apps_to_symlink

@@ -13,6 +13,7 @@
 - Add support for PHPStorm 2023.3 (via @damosse31)
 - Add support for Cursor (via @takyshu98)
 - Add warning for danger actions (#1913, via @xiazeyu)
+- Replace `mackup backup` with `mackup symlink` (#1913, via @xiazeyu)
 
 ## Mackup 0.8.40
 

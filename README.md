@@ -10,7 +10,7 @@ Symlink your application settings to sync folder.
   - [Usage](#usage)
   - [What does it do](#what-does-it-do)
   - [Bullsh\*t, what does it really do to my files](#bullsht-what-does-it-really-do-to-my-files)
-    - [Backup](#backup)
+    - [Symlink](#symlink)
     - [Restore](#restore)
     - [Uninstall](#uninstall)
   - [Supported Storages](#supported-storages)
@@ -36,7 +36,7 @@ On macOS, if you want an easy install, you can install
 brew install mackup
 
 # Launch it and back up your files
-mackup backup
+mackup symlink
 ```
 
 If not running macOS, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/).
@@ -50,7 +50,7 @@ If not running macOS, or you don't like Homebrew, you can use [pip](https://pip.
 pip install --upgrade mackup
 
 # Launch it and back up your files
-mackup backup
+mackup symlink
 ```
 
 > On **Ubuntu**, pip will install to the current user's home
@@ -77,9 +77,9 @@ You can find more detailed instructions in [INSTALL.md](INSTALL.md).
 
 ## Usage
 
-`mackup backup`
+`mackup symlink`
 
-Backup your application settings.
+Symlink your application settings.
 
 `mackup restore`
 
@@ -115,9 +115,9 @@ family, great ideas, and all the cool stuff you like.
 Let's take `git` as an example. Your settings for `git` are saved in your home
 folder, in the `.gitconfig` file.
 
-### Backup
+### Symlink
 
-If you have Dropbox, these things happen when you launch `mackup backup`:
+If you have Dropbox, these things happen when you launch `mackup symlink`:
 
 1. `cp ~/.gitconfig ~/Dropbox/Mackup/.gitconfig`
 2. `rm ~/.gitconfig`

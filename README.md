@@ -1,6 +1,6 @@
 # Mackup
 
-Keep your application settings in sync.
+Symlink your application settings to sync folder.
 
 ## Table of content
 

@@ -14,6 +14,7 @@
 - Add support for Cursor (via @takyshu98)
 - Add warning for danger actions (#1913, via @xiazeyu)
 - Replace `mackup backup` with `mackup symlink` (#1913, via @xiazeyu)
+- Add support for PHPStorm 2024.1 (via @edwinvdpol)
 
 ## Mackup 0.8.40
 

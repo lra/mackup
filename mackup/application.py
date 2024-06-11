@@ -45,9 +45,9 @@ class ApplicationProfile(object):
             os.path.join(self.mackup.mackup_folder, filename),
         )
 
-    def backup(self):
+    def symlink(self):
         """
-        Backup the application config files.
+        Symlink the application config files.
 
         Algorithm:
             if exists home/file
@@ -84,7 +84,7 @@ class ApplicationProfile(object):
                 if self.dry_run:
                     continue
 
-                # Check if we already have a backup
+                # Check if we already have a symlink
                 if os.path.exists(mackup_filepath):
                     # Name it right
                     if os.path.isfile(mackup_filepath):
@@ -99,7 +99,7 @@ class ApplicationProfile(object):
                     # Ask the user if he really wants to replace it
                     if utils.confirm(
                         "A {} named {} already exists in the"
-                        " backup.\nAre you sure that you want to"
+                        " symlink.\nAre you sure that you want to"
                         " replace it?".format(file_type, mackup_filepath)
                     ):
                         # Delete the file in Mackup
@@ -108,14 +108,14 @@ class ApplicationProfile(object):
                         utils.copy(home_filepath, mackup_filepath)
                         # Delete the file in the home
                         utils.delete(home_filepath)
-                        # Link the backuped file to its original place
+                        # Link the symlinked file to its original place
                         utils.link(mackup_filepath, home_filepath)
                 else:
                     # Copy the file
                     utils.copy(home_filepath, mackup_filepath)
                     # Delete the file in the home
                     utils.delete(home_filepath)
-                    # Link the backuped file to its original place
+                    # Link the symlinked file to its original place
                     utils.link(mackup_filepath, home_filepath)
             elif self.verbose:
                 if os.path.exists(home_filepath):
@@ -194,7 +194,7 @@ class ApplicationProfile(object):
                     if utils.confirm(
                         "You already have a {} named {} in your"
                         " home.\nDo you want to replace it with"
-                        " your backup?".format(file_type, filename)
+                        " your symlink?".format(file_type, filename)
                     ):
                         utils.delete(home_filepath)
                         utils.link(mackup_filepath, home_filepath)
@@ -223,7 +223,7 @@ class ApplicationProfile(object):
         """
         Uninstall Mackup.
 
-        Restore any file where it was before the 1st Mackup backup.
+        Restore any file where it was before the 1st Mackup symlink.
 
         Algorithm:
             for each file in config

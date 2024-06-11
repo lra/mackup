@@ -276,9 +276,9 @@ class TestMackup(unittest.TestCase):
         test_string = "Hello World"
         self.assertRaises(SystemExit, utils.error, test_string)
 
-    def test_failed_backup_location(self):
+    def test_failed_symlink_location(self):
         """
-        Tests for the error that should occur if the backup folder cannot be
+        Tests for the error that should occur if the symlink folder cannot be
         found for Dropbox and Google
         """
         # Hack to make our home folder some temporary folder

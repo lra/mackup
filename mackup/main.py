@@ -5,7 +5,7 @@ Copyright (C) 2013-2021 Laurent Raufaste <http://glop.org/>
 
 Usage:
   mackup list
-  mackup [options] backup
+  mackup [options] symlink
   mackup [options] restore
   mackup show <application>
   mackup [options] uninstall
@@ -22,7 +22,7 @@ Options:
 
 Modes of action:
  1. list: display a list of all supported applications.
- 2. backup: sync your conf files to your synced storage, use this the 1st time
+ 2. symlink: sync your conf files to your synced storage, use this the 1st time
     you use Mackup.
  3. restore: link the conf files already in your synced storage on your system,
     use it on any new system you use.
@@ -83,15 +83,32 @@ def main():
 
     verbose = args["--verbose"]
 
-    if args["backup"]:
+    if args["symlink"]:
         # Check the env where the command is being run
-        mckp.check_for_usable_backup_env()
+        mckp.check_for_usable_symlink_env()
 
-        # Backup each application
-        for app_name in sorted(mckp.get_apps_to_backup()):
-            app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
-            printAppHeader(app_name)
-            app.backup()
+        if utils.confirm(
+            "DANGEROUS: Mackup will REPLACE your original configuration files with symlinks to the ones in the "
+            "destination folder.\n"
+            "DO NOT DELETE these files in <{}> in ANY SITUATIONS, even there's an error, or you will LOST ALL "
+            "YOUR CONFIG FILES.\n"
+            "See https://github.com/lra/mackup/issues/1913.\n"
+            "Do you understand what you are doing?".format(mckp.mackup_folder)
+        ):
+            if utils.confirm(
+                "It is recommended to read https://github.com/lra/mackup?tab=readme-ov-file#bullsht-what-does-it"
+                "-really-do-to-my-files before you take any further actions.\n"
+                "Do you sure you want to continue?"
+            ):
+                # Symlink each application
+                for app_name in sorted(mckp.get_apps_to_symlink()):
+                    app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
+                    printAppHeader(app_name)
+                    app.symlink()
+            else:
+                utils.error("It seems you are not sure what you are doing. Exiting...")
+        else:
+            utils.error("It seems you are not sure what you are doing. Exiting...")
 
     elif args["restore"]:
         # Check the env where the command is being run
@@ -111,7 +128,7 @@ def main():
         app_db = ApplicationsDatabase()
 
         # Restore the rest of the app configs, using the restored Mackup config
-        app_names = mckp.get_apps_to_backup()
+        app_names = mckp.get_apps_to_symlink()
         # Mackup has already been done
         app_names.discard(MACKUP_APP_NAME)
 
@@ -125,17 +142,17 @@ def main():
         mckp.check_for_usable_restore_env()
 
         if dry_run or (
-            utils.confirm(
-                "You are going to uninstall Mackup.\n"
-                "Every configuration file, setting and dotfile"
-                " managed by Mackup will be unlinked and copied back"
-                " to their original place, in your home folder.\n"
-                "Are you sure?"
-            )
+                utils.confirm(
+                    "You are going to uninstall Mackup.\n"
+                    "Every configuration file, setting and dotfile"
+                    " managed by Mackup will be unlinked and copied back"
+                    " to their original place, in your home folder.\n"
+                    "Are you sure?"
+                )
         ):
             # Uninstall the apps except Mackup, which we'll uninstall last, to
             # keep the settings as long as possible
-            app_names = mckp.get_apps_to_backup()
+            app_names = mckp.get_apps_to_symlink()
             app_names.discard(MACKUP_APP_NAME)
 
             for app_name in sorted(app_names):

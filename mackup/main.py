@@ -8,7 +8,7 @@ Usage:
   mackup [options] backup [--] [<application> ...]
   mackup [options] restore [--] [<application> ...]
   mackup show <application>
-  mackup [options] uninstall
+  mackup [options] uninstall [--] [<application> ...]
   mackup (-h | --help)
   mackup --version
 
@@ -150,7 +150,13 @@ def main():
             app_names = mckp.get_apps_to_backup()
             app_names.discard(MACKUP_APP_NAME)
 
-            for app_name in sorted(app_names):
+            app_names = sorted(app_names)
+
+            # To allow for specific applications to be uninstalled, we replace the full list with only the valid ones from the command line
+            if args["<application>"]:
+                app_names = list(set(args["<application>"]) & set(app_names))
+
+            for app_name in app_names:
                 app = ApplicationProfile(
                     mckp, app_db.get_files(app_name), dry_run, verbose
                 )

@@ -87,8 +87,14 @@ def main():
         # Check the env where the command is being run
         mckp.check_for_usable_backup_env()
 
+        applications = sorted(mckp.get_apps_to_backup())
+        
+        # To allow for specific applications to be backed up, we replace the full list with only the valid ones from the command line
+        if args["<application>"]:
+            applications = list(set(args["<application>"]) & set(applications))
+        
         # Backup each application
-        for app_name in sorted(mckp.get_apps_to_backup()):
+        for app_name in applications:
             app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
             printAppHeader(app_name)
             app.backup()
@@ -115,7 +121,13 @@ def main():
         # Mackup has already been done
         app_names.discard(MACKUP_APP_NAME)
 
-        for app_name in sorted(app_names):
+        app_names = sorted(app_names)
+
+        # To allow for specific applications to be restored up, we replace the full list with only the valid ones from the command line
+        if args["<application>"]:
+            app_names = list(set(args["<application>"]) & set(app_names))
+
+        for app_name in app_names:
             app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
             printAppHeader(app_name)
             app.restore()

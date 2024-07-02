@@ -5,8 +5,8 @@ Copyright (C) 2013-2021 Laurent Raufaste <http://glop.org/>
 
 Usage:
   mackup list
-  mackup [options] backup
-  mackup [options] restore
+  mackup [options] backup [--] [<application> ...]
+  mackup [options] restore [--] [<application> ...]
   mackup show <application>
   mackup [options] uninstall
   mackup (-h | --help)
@@ -179,8 +179,8 @@ def main():
 
     elif args["show"]:
         mckp.check_for_usable_environment()
-        app_name = args["<application>"]
-
+        app_name = args["<application>"][0] # Needed because args["<application>"] is now a list
+        
         # Make sure the app exists
         if app_name not in app_db.get_app_names():
             sys.exit("Unsupported application: {}".format(app_name))

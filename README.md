@@ -701,6 +701,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Warp](https://www.warp.dev)
 - [waybar](https://github.com/Alexays/Waybar)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
+- [WezTerm](https://wezfurlong.org/wezterm/index.html)
 - [Wget](https://www.gnu.org/software/wget/)
 - [WhatsApp Web](https://web.whatsapp.com/)
 - [Wireshark 2](https://www.wireshark.org)

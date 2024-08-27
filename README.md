@@ -26,9 +26,9 @@ Keep your application settings in sync.
 
 ## WARNING
 
-⚠️ Mackup does not work correctly in Macos Sonoma, since it does not support symlinked
-files for preferences. Running this code will destroy all user preferences without a
-means for recovery. For more information, see issues
+⚠️ Mackup does not work correctly in Macos Sonoma, since it does not support
+symlinked files for preferences. Running this code will destroy all user
+preferences without a means for recovery. For more information, see issues
 [#1924](https://github.com/lra/mackup/issues/1924) and
 [2035](https://github.com/lra/mackup/issues/2035).
 

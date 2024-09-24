@@ -11,13 +11,16 @@
 - Add support for SketchyBar (via @LarsRefsgaard)
 - Add support for nvm (via @Wxh16144)
 - Add support for PHPStorm 2023.3 (via @damosse31)
+- Add support for Cursor (via @takyshu98)
+- Add support for PHPStorm 2024.1 (via @edwinvdpol)
+- Add support for WezTerm (via @asm0dey)
 
 ## Mackup 0.8.40
 
 - Add support for Trizen (via @cilenco)
 - Added support for Sqitch (via @ra1fee)
 - Updated support for GeekTool (via @yuchen-lea)
-- Remve support for Apple Preview, problematic on macOS 14.1
+- Remove support for Apple Preview, problematic on macOS 14.1
 - Added support for Subler (via @EpicKris)
 - Added support for SpamSieve (via @michaelgrossklos)
 - Added support for Robo 3T (via @captnswing)

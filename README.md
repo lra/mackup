@@ -1,11 +1,12 @@
-# Mackup
+# Mackup™
 
 Keep your application settings in sync.
 
-## Table of content
+## Table of contents
 
 - [Mackup](#mackup)
-  - [Table of content](#table-of-content)
+  - [Table of contents](#table-of-contents)
+  - [WARNING](#warning)
   - [Quickstart](#quickstart)
   - [Usage](#usage)
   - [What does it do](#what-does-it-do)
@@ -22,6 +23,14 @@ Keep your application settings in sync.
   - [What platforms are supported](#what-platforms-are-supported)
   - [What's up with the weird name](#whats-up-with-the-weird-name)
   - [Where can I find more information](#where-can-i-find-more-information)
+
+## WARNING
+
+⚠️ Mackup does not work correctly in Macos Sonoma, since it does not support
+symlinked files for preferences. Running this code will destroy all user
+preferences without a means for recovery. For more information, see issues
+[#1924](https://github.com/lra/mackup/issues/1924) and
+[2035](https://github.com/lra/mackup/issues/2035).
 
 ## Quickstart
 
@@ -267,6 +276,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [CoRD](http://cord.sourceforge.net/)
 - [CotEditor](http://coteditor.com/)
 - [Ctags](http://ctags.sourceforge.net/)
+- [Cursor](https://cursor.sh/)
 - [cVim](https://github.com/1995eaton/chromium-vim)
 - [Cyberduck](https://cyberduck.io/)
 - [DaisyDisk](https://daisydiskapp.com)
@@ -700,6 +710,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Warp](https://www.warp.dev)
 - [waybar](https://github.com/Alexays/Waybar)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
+- [WezTerm](https://wezfurlong.org/wezterm/)
 - [Wget](https://www.gnu.org/software/wget/)
 - [WhatsApp Web](https://web.whatsapp.com/)
 - [Wireshark 2](https://www.wireshark.org)

@@ -98,6 +98,8 @@ Restore your application settings on a newly installed workstation.
 
 Copy back any synced config file to its original place.
 
+Note: **Do NOT remove the backup folder as all files are linked, not copied.**
+
 `mackup list`
 
 Display the list of applications supported by Mackup.

@@ -343,6 +343,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [GeekTool](http://projects.tynsoe.org/en/geektool/)
 - [GHCi](https://wiki.haskell.org/GHC/GHCi)
 - [Ghidra](https://ghidra-sre.org)
+- [Ghostty](https://ghostty.org/)
 - [Ghostwriter](https://wereturtle.github.io/ghostwriter/)
 - [Gimp](https://www.gimp.org/)
 - [Git Hooks](https://github.com/git-hooks/git-hooks)

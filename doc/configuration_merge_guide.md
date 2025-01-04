@@ -37,7 +37,7 @@ You can get a list of supported apps by running `mackup list`.
 1. Save the file
 2. Run the following command:
 
-`mackup --dry-run --verbose backup`
+`mackup --dry-run --verbose symlink`
 
 This command will let you see what mackup will do behind the scenes when it
 backs up your application's configuration files so you can readily see what
@@ -60,9 +60,9 @@ few machines. Method 2 is probably best if you have a machine that is very
 close to working the way you want and just need a few configuration settings
 from other machines.
 
-### Method 1: Backup Merge-Push Approach
+### Method 1: Symlink Merge-Push Approach
 
-1. Create a backup of each machine's configuration files for the app you wish
+1. Create a symlink of each machine's configuration files for the app you wish
    to sync.
 2. Choose a machine that will serve as the initial "master". It doesn't really
    matter which one.
@@ -75,25 +75,25 @@ from other machines.
 Let's say we have two machines, A and B and that we want to sync our bash configuration
 across the machines. We decide that Machine A will serve as our master.
 
-First, backup the bash configuration files (there are a few of them)
+First, symlink the bash configuration files (there are a few of them)
 for your application on all machines.
 
-##### Sample backup commands for Machine A**
+##### Sample symlink commands for Machine A**
 
 ```bash
-mkdir ~/bash_backup
-cp ~/.bash_profile ~/bash_backup/bash_profile.bak
-cp ~/.bash_login ~/bash_backup/bash_login.bak
+mkdir ~/bash_symlink
+cp ~/.bash_profile ~/bash_symlink/bash_profile.bak
+cp ~/.bash_login ~/bash_symlink/bash_login.bak
 
 ...plus any other bash config files you want to keep
 ```
 
-##### Sample backup commands for Machine B
+##### Sample symlink commands for Machine B
 
 ```bash
-mkdir ~/bash_backup
-cp ~/.bash_profile ~/bash_backup/bash_profile.bak
-cp ~/.bash_login ~/bash_backup/bash_login.bak
+mkdir ~/bash_symlink
+cp ~/.bash_profile ~/bash_symlink/bash_profile.bak
+cp ~/.bash_login ~/bash_symlink/bash_login.bak
 
 ...plus any other bash config files you want to keep
 ```
@@ -113,7 +113,7 @@ configuration files together. Once you are satisfied the configuration files
 have all the settings you want and need, you are ready to push out your changes
 from the master machine.
 
-### Method 2: Backup Push-Merge Approach
+### Method 2: Symlink Push-Merge Approach
 
 1. Choose a machine that will serve as the initial "master". You'll probably
    want to use choose the machine you use most and like its configuration
@@ -127,15 +127,15 @@ from the master machine.
 Let's say we have two machines, A and B and that we want to sync our bash configuration
 across the machines. We decide that Machine A will serve as our master.
 
-Since A is our master, we only need to backup the bash configuration files on
+Since A is our master, we only need to symlink the bash configuration files on
 Machine B:
 
-##### Sample backup commands for Machine B**
+##### Sample symlink commands for Machine B**
 
 ```bash
-mkdir ~/bash_backup
-cp ~/.bash_profile ~/bash_backup/bash_profile.bak
-cp ~/.bash_login ~/bash_backup/bash_login.bak
+mkdir ~/bash_symlink
+cp ~/.bash_profile ~/bash_symlink/bash_profile.bak
+cp ~/.bash_login ~/bash_symlink/bash_login.bak
 
 ...plus any other bash config files you want to keep
 ```
@@ -150,7 +150,7 @@ instructions provided above. If not, do that before proceeding.
 
 Run the following command on the master machine:
 
-`mackup backup`
+`mackup symlink`
 
 On each of the other "slave" machines, run:
 
@@ -158,14 +158,14 @@ On each of the other "slave" machines, run:
 
 If you used Method 1 in Step 2 above, you are done. You may you discover
 that you didn't quite merge the files exactly the way you wanted but don't
-worry, that's why you created the configuration file backups. You can grab
-snippets from these backup configuration files and add them in to the live
+worry, that's why you created the configuration file symlinks. You can grab
+snippets from these symlink configuration files and add them in to the live
 configuration files and then easily push the changes out to all your
 machines using mackup.
 
 If you used Method 2, you'll need to merge in new features over time. As you
 discover features you need to add, you'll need to take the appropriate snippets
-of configuration code from the backup configuration files you created and
+of configuration code from the symlink configuration files you created and
 insert them into the appropriate configuration file. Remember it does not matter
 which machine's configuration file you update as these configuration files are
 now shared across all machines.

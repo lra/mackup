@@ -14,6 +14,7 @@
 - Add support for Cursor (via @takyshu98)
 - Add support for PHPStorm 2024.1 (via @edwinvdpol)
 - Add support for WezTerm (via @asm0dey)
+- Add support for Ghostty (via @michaeltinsley)
 
 ## Mackup 0.8.40
 

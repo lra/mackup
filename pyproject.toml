@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "mackup"
 version = "0.8.40"
-description = "Keep your application settings in sync (macOS/Linux)"
+description = "Symlink your application settings to sync folder (macOS/Linux)"
 authors = ["Laurent Raufaste <analogue@glop.org>"]
 license = "GPLv3"
 readme = "README.md"

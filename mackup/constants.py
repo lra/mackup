@@ -13,8 +13,8 @@ APPS_DIR = "applications"
 # Mackup application name
 MACKUP_APP_NAME = "mackup"
 
-# Default Mackup backup path where it stores its files in Dropbox
-MACKUP_BACKUP_PATH = "Mackup"
+# Default Mackup symlink path where it stores its files in Dropbox
+MACKUP_SYMLINK_PATH = "Mackup"
 
 # Mackup config file
 MACKUP_CONFIG_FILE = ".mackup.cfg"

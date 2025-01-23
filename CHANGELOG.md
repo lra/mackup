@@ -12,6 +12,8 @@
 - Add support for nvm (via @Wxh16144)
 - Add support for PHPStorm 2023.3 (via @damosse31)
 - Add support for Cursor (via @takyshu98)
+- Add warning for danger actions (#1913, via @xiazeyu)
+- Replace `mackup backup` with `mackup symlink` (#1913, via @xiazeyu)
 - Add support for PHPStorm 2024.1 (via @edwinvdpol)
 - Add support for WezTerm (via @asm0dey)
 - Add support for Ghostty (via @michaeltinsley)

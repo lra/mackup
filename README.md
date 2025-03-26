@@ -714,6 +714,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [WezTerm](https://wezfurlong.org/wezterm/)
 - [Wget](https://www.gnu.org/software/wget/)
 - [WhatsApp Web](https://web.whatsapp.com/)
+- [Windsurf](https://www.codeium.com)
 - [Wireshark 2](https://www.wireshark.org)
 - [Witch](http://manytricks.com/witch/)
 - [WordGrinder](https://cowlark.com/wordgrinder/)

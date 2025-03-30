@@ -12,10 +12,13 @@ wheels = [
 ]
 
 [[package]]
-name = "docopt"
-version = "0.6.2"
+name = "docopt-ng"
+version = "0.9.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz", hash = "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491", size = 25901 }
+sdist = { url = "https://files.pythonhosted.org/packages/e4/50/8d6806cf13138127692ae6ff79ddeb4e25eb3b0bcc3c1bd033e7e04531a9/docopt_ng-0.9.0.tar.gz", hash = "sha256:91c6da10b5bb6f2e9e25345829fb8278c78af019f6fc40887ad49b060483b1d7", size = 32264 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6c/4a/c3b77fc1a24510b08918b43a473410c0168f6e657118807015f1f1edceea/docopt_ng-0.9.0-py3-none-any.whl", hash = "sha256:bfe4c8b03f9fca424c24ee0b4ffa84bf7391cb18c29ce0f6a8227a3b01b81ff9", size = 16689 },
+]
 
 [[package]]
 name = "exceptiongroup"
@@ -37,10 +40,10 @@ wheels = [
 
 [[package]]
 name = "mackup"
-version = "0.8.42"
+version = "0.8.43"
 source = { editable = "." }
 dependencies = [
-    { name = "docopt" },
+    { name = "docopt-ng" },
 ]
 
 [package.dev-dependencies]
@@ -49,7 +52,7 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "docopt", specifier = ">=0.6.2" }]
+requires-dist = [{ name = "docopt-ng", specifier = ">=0.9.0" }]
 
 [package.metadata.requires-dev]
 dev = [{ name = "pytest", specifier = ">=8.3.5" }]

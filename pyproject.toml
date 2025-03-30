@@ -1,10 +1,10 @@
 [project]
 name = "mackup"
-version = "0.8.42"
+version = "0.8.43"
 description = "Keep your application settings in sync (macOS/Linux)"
 readme = "README.md"
 dependencies = [
-    "docopt>=0.6.2",
+    "docopt-ng>=0.9.0",
 ]
 requires-python = ">= 3.8"
 authors = [

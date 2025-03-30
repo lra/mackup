@@ -10,8 +10,8 @@ clean:
 	rm -rf dist/
 
 release: clean
-	poetry build
-	poetry publish
+	uv build
+	uv publish
 
 ruff:
 	ruff check .

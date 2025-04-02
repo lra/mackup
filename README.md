@@ -233,6 +233,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Bitchx](http://www.bitchx.org/)
 - [Blackfire](https://blackfire.io/)
 - [Blender](https://blender.org/)
+- [ble.sh](https://github.com/akinomyoga/ble.sh)
 - [Boto](https://github.com/boto/boto)
 - [Boxer](http://boxerapp.com)
 - [Brackets](http://brackets.io/)

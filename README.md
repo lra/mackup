@@ -26,11 +26,11 @@ Keep your application settings in sync.
 
 ## WARNING
 
-⚠️ Mackup does not work correctly in Macos Sonoma, since it does not support
-symlinked files for preferences. Running this code will destroy all user
-preferences without a means for recovery. For more information, see issues
-[#1924](https://github.com/lra/mackup/issues/1924) and
-[2035](https://github.com/lra/mackup/issues/2035).
+⚠️ Mackup does not work correctly in macOS Sonoma and all later versions,
+since it does not support symlinked files for preferences. Running this code
+will destroy all user preferences without a means for recovery. For more
+information, see issues [#1924](https://github.com/lra/mackup/issues/1924)
+and [2035](https://github.com/lra/mackup/issues/2035).
 
 ## Quickstart
 
@@ -343,6 +343,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [GeekTool](http://projects.tynsoe.org/en/geektool/)
 - [GHCi](https://wiki.haskell.org/GHC/GHCi)
 - [Ghidra](https://ghidra-sre.org)
+- [Ghostty](https://ghostty.org/)
 - [Ghostwriter](https://wereturtle.github.io/ghostwriter/)
 - [Gimp](https://www.gimp.org/)
 - [Git Hooks](https://github.com/git-hooks/git-hooks)
@@ -713,6 +714,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [WezTerm](https://wezfurlong.org/wezterm/)
 - [Wget](https://www.gnu.org/software/wget/)
 - [WhatsApp Web](https://web.whatsapp.com/)
+- [Windsurf](https://www.codeium.com)
 - [Wireshark 2](https://www.wireshark.org)
 - [Witch](http://manytricks.com/witch/)
 - [WordGrinder](https://cowlark.com/wordgrinder/)

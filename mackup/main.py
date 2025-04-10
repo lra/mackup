@@ -5,10 +5,10 @@ Copyright (C) 2013-2021 Laurent Raufaste <http://glop.org/>
 
 Usage:
   mackup list
-  mackup [options] backup
-  mackup [options] restore
+  mackup [options] backup [--] [<application> ...]
+  mackup [options] restore [--] [<application> ...]
   mackup show <application>
-  mackup [options] uninstall
+  mackup [options] uninstall [--] [<application> ...]
   mackup (-h | --help)
   mackup --version
 
@@ -87,8 +87,14 @@ def main():
         # Check the env where the command is being run
         mckp.check_for_usable_backup_env()
 
+        applications = sorted(mckp.get_apps_to_backup())
+        
+        # To allow for specific applications to be backed up, we replace the full list with only the valid ones from the command line
+        if args["<application>"]:
+            applications = list(set(args["<application>"]) & set(applications))
+        
         # Backup each application
-        for app_name in sorted(mckp.get_apps_to_backup()):
+        for app_name in applications:
             app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
             printAppHeader(app_name)
             app.backup()
@@ -115,7 +121,13 @@ def main():
         # Mackup has already been done
         app_names.discard(MACKUP_APP_NAME)
 
-        for app_name in sorted(app_names):
+        app_names = sorted(app_names)
+
+        # To allow for specific applications to be restored up, we replace the full list with only the valid ones from the command line
+        if args["<application>"]:
+            app_names = list(set(args["<application>"]) & set(app_names))
+
+        for app_name in app_names:
             app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
             printAppHeader(app_name)
             app.restore()
@@ -138,7 +150,13 @@ def main():
             app_names = mckp.get_apps_to_backup()
             app_names.discard(MACKUP_APP_NAME)
 
-            for app_name in sorted(app_names):
+            app_names = sorted(app_names)
+
+            # To allow for specific applications to be uninstalled, we replace the full list with only the valid ones from the command line
+            if args["<application>"]:
+                app_names = list(set(args["<application>"]) & set(app_names))
+
+            for app_name in app_names:
                 app = ApplicationProfile(
                     mckp, app_db.get_files(app_name), dry_run, verbose
                 )
@@ -179,8 +197,8 @@ def main():
 
     elif args["show"]:
         mckp.check_for_usable_environment()
-        app_name = args["<application>"]
-
+        app_name = args["<application>"][0] # Needed because args["<application>"] is now a list
+        
         # Make sure the app exists
         if app_name not in app_db.get_app_names():
             sys.exit("Unsupported application: {}".format(app_name))

@@ -734,6 +734,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [XtraFinder](http://www.trankynam.com/xtrafinder/)
 - [yabai](https://github.com/koekeishiya/yabai)
 - [yarn](https://yarnpkg.com)
+- [yazi](https://github.com/sxyazi/yazi)
 - [Yummy FTP](http://www.yummysoftware.com/)
 - [zabbix-cli](https://github.com/usit-gd/zabbix-cli)
 - [zathura](https://pwmt.org/projects/zathura/)

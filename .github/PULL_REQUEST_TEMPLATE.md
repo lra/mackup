@@ -7,9 +7,6 @@
 
 * [ ] This PR is only for one application
 * [ ] It has been added to the list of supported applications in the [README](https://github.com/lra/mackup/blob/master/README.md)
-* [ ] Changes have been added to the WIP section of the [CHANGELOG](https://github.com/lra/mackup/blob/master/CHANGELOG.md)
-* [ ] Syncing does not break the application
-* [ ] Syncing does not compete with any syncing functionality internal to the application
 * [ ] The configuration syncs the minimal set of data
 * [ ] No file specific to the local workstation is synced
 * [ ] No sensitive data is synced

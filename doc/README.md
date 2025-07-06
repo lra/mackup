@@ -157,6 +157,23 @@ in your home folder:
 cp mackup/doc/.mackup.cfg ~/
 ```
 
+### Sync an application that doesn't work with symbolic links
+
+In the application specific configuration, either as part of this repository or in your home folder's `.mackup` folder,
+add the option to **not** symlink:
+
+```ini
+[application]
+name = Alfred
+symlink = false
+
+[configuration_files]
+Library/Preferences/com.runningwithcrayons.Alfred-Preferences.plist
+Library/Preferences/com.runningwithcrayons.Alfred.plist
+```
+
+If this flag is not present, default behaviour is to create symbolic links. This is to ensure backwards compatibility.
+
 ### Get official support for an application
 
 Open a [new issue](https://github.com/lra/mackup/issues) and ask for it, or

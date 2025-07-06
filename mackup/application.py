@@ -14,7 +14,7 @@ from . import utils
 class ApplicationProfile(object):
     """Instantiate this class with application specific data."""
 
-    def __init__(self, mackup, files, dry_run, verbose):
+    def __init__(self, mackup, files, symlink, dry_run, verbose):
         """
         Create an ApplicationProfile instance.
 
@@ -27,6 +27,7 @@ class ApplicationProfile(object):
 
         self.mackup = mackup
         self.files = list(files)
+        self.symlink = symlink
         self.dry_run = dry_run
         self.verbose = verbose
 
@@ -104,19 +105,17 @@ class ApplicationProfile(object):
                     ):
                         # Delete the file in Mackup
                         utils.delete(mackup_filepath)
-                        # Copy the file
-                        utils.copy(home_filepath, mackup_filepath)
+
+                if not os.path.exists(mackup_filepath):
+                    # Copy the file
+                    utils.copy(home_filepath, mackup_filepath)
+
+                    if self.symlink:
                         # Delete the file in the home
                         utils.delete(home_filepath)
                         # Link the backuped file to its original place
                         utils.link(mackup_filepath, home_filepath)
-                else:
-                    # Copy the file
-                    utils.copy(home_filepath, mackup_filepath)
-                    # Delete the file in the home
-                    utils.delete(home_filepath)
-                    # Link the backuped file to its original place
-                    utils.link(mackup_filepath, home_filepath)
+
             elif self.verbose:
                 if os.path.exists(home_filepath):
                     print(
@@ -197,9 +196,15 @@ class ApplicationProfile(object):
                         " your backup?".format(file_type, filename)
                     ):
                         utils.delete(home_filepath)
+
+                if not os.path.exists(home_filepath):
+                    if self.symlink:
+                        # Link the backuped file to its original place
                         utils.link(mackup_filepath, home_filepath)
-                else:
-                    utils.link(mackup_filepath, home_filepath)
+                    else:
+                        # Copy the backuped file to its original place
+                        utils.copy(mackup_filepath, home_filepath)
+
             elif self.verbose:
                 if os.path.exists(home_filepath):
                     print(

@@ -744,6 +744,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [Zsh](http://zsh.sourceforge.net/)
 - [Übersicht](http://tracesof.net/uebersicht/)
+- [Fynix](https://www.fynix.ai/)
 
 ## Can you support application X
 

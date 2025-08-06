@@ -44,6 +44,10 @@ class ApplicationsDatabase(object):
                 app_pretty_name = config.get("application", "name")
                 self.apps[app_name]["name"] = app_pretty_name
 
+                # Add the symlink setting for the app
+                # Default to True to not break backward compatibility
+                self.apps[app_name]["symlink"] = config.getboolean("application", "symlink", fallback=True)
+
                 # Add the configuration files to sync
                 self.apps[app_name]["configuration_files"] = set()
                 if config.has_section("configuration_files"):
@@ -127,6 +131,24 @@ class ApplicationsDatabase(object):
             str
         """
         return self.apps[name]["name"]
+
+    def get_setting(self, name, setting):
+        """
+        Return a setting of an application.
+
+        Args:
+            name (str)
+            setting (str)
+
+        Returns:
+            str or None.
+        """
+        if setting == "name":
+            return self.get_name(name)
+        elif setting == "symlink":
+            return self.apps[name]["symlink"]
+        else:
+            raise ValueError("Unknown setting: {}".format(setting))
 
     def get_files(self, name):
         """

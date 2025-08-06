@@ -89,7 +89,7 @@ def main():
 
         # Backup each application
         for app_name in sorted(mckp.get_apps_to_backup()):
-            app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
+            app = ApplicationProfile(mckp, app_db.get_files(app_name), app_db.get_setting(app_name, "symlink"), dry_run, verbose)
             printAppHeader(app_name)
             app.backup()
 

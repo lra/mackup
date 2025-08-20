@@ -1,4 +1,16 @@
-# Mackup™
+ SrK9.baconator
+ ===============
+
+ # STATUS -> PRE-ALPHA PROOF OF CONCEPT -> DEV USE ONLY!
+
+Here is the plan:
+
+- [ ] - No symlinks just backups
+- [ ] - Convert to rust or zig
+- [ ] - Expand to debian
+- [ ] - Sync to R2 instead of Dropbox
+
+---
 
 Keep your application settings in sync.
 

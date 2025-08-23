@@ -11,7 +11,7 @@ on:
 jobs:
   linelint:
     runs-on: ubuntu-latest
-    name: Check if all files end with a newline character
+    name: linelint
     steps:
       - name: Checkout
         uses: actions/checkout@v4

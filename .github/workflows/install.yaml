@@ -1,4 +1,4 @@
-name: Test installs
+name: install
 on:
   push:
     branches:

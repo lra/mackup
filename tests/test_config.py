@@ -1,6 +1,7 @@
 import unittest
 import os.path
 
+from mackup.appsdb import ApplicationsDatabase
 from mackup.constants import (
     ENGINE_DROPBOX,
     ENGINE_GDRIVE,
@@ -213,3 +214,24 @@ class TestConfig(unittest.TestCase):
 
     def test_config_old_config(self):
         self.assertRaises(SystemExit, Config, "mackup-old-config.cfg")
+
+    def test_config_symlink_setting(self):
+        cfg = Config("mackup-application-symlink.cfg")
+
+        os.environ["XDG_CONFIG_HOME"] = os.environ["HOME"] + "/.config"
+
+        appdb = ApplicationsDatabase()
+        assert appdb.get_setting("existing_app", "symlink") is True
+        assert appdb.get_setting("symlink_app", "symlink") is True
+
+        assert cfg.apps_to_sync == set(["existing_app", "symlink_app"])
+
+    def test_config_no_symlink_setting(self):
+        cfg = Config("mackup-application-no-symlink.cfg")
+
+        os.environ["XDG_CONFIG_HOME"] = os.environ["HOME"] + "/.config"
+
+        appdb = ApplicationsDatabase()
+        assert appdb.get_setting("nosymlink_app", "symlink") is False
+
+        assert cfg.apps_to_sync == set(["nosymlink_app"])

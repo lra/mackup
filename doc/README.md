@@ -39,7 +39,7 @@ engine = google_drive
 
 ### iCloud
 
-If you choose the `iCloud` storage engine, Mackup will store store your
+If you choose the `iCloud` storage engine, Mackup will store your
 configuration files in the `~/Library/Mobile\ Documents/com\~apple\~CloudDocs/` folder.
 
 ```ini

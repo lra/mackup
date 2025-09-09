@@ -1,4 +1,4 @@
-name: Test installs
+name: install
 on:
   push:
     branches:
@@ -11,8 +11,10 @@ jobs:
     strategy:
       matrix:
         os:
-          - "ubuntu-22.04"
-          - "ubuntu-24.04"
+          - ubuntu-22.04
+          - ubuntu-22.04-arm
+          - ubuntu-24.04
+          - ubuntu-24.04-arm
         python-version:
           - "3.9"
           - "3.10"

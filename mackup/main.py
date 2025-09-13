@@ -43,6 +43,7 @@ from .constants import MACKUP_APP_NAME, VERSION
 from .mackup import Mackup
 from . import utils
 import sys
+from typing import Dict, Any
 
 
 class ColorFormatCodes:
@@ -51,23 +52,23 @@ class ColorFormatCodes:
     NORMAL = "\033[0m"
 
 
-def header(str):
+def header(text: str) -> str:
     return ColorFormatCodes.BLUE + str + ColorFormatCodes.NORMAL
 
 
-def bold(str):
+def bold(text: str) -> str:
     return ColorFormatCodes.BOLD + str + ColorFormatCodes.NORMAL
 
 
-def main():
+def main() -> None:
     """Main function."""
     # Get the command line arg
-    args = docopt(__doc__, version="Mackup {}".format(VERSION))
+    args: Dict[str, Any] = docopt(__doc__, version="Mackup {}".format(VERSION))
 
     mckp = Mackup()
     app_db = ApplicationsDatabase()
 
-    def printAppHeader(app_name):
+    def printAppHeader(app_name: str) -> None:
         if verbose:
             print(("\n{0} {1} {0}").format(header("---"), bold(app_name)))
 

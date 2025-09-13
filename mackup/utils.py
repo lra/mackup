@@ -8,6 +8,7 @@ import stat
 import subprocess
 import sys
 import sqlite3
+from typing import Optional
 
 from . import constants
 
@@ -20,7 +21,7 @@ FORCE_YES = False
 CAN_RUN_AS_ROOT = False
 
 
-def confirm(question):
+def confirm(question: str) -> bool:
     """
     Ask the user if he really wants something to happen.
 
@@ -46,7 +47,7 @@ def confirm(question):
     return confirmed
 
 
-def delete(filepath):
+def delete(filepath: str) -> None:
     """
     Delete the given file, directory or link.
 
@@ -68,7 +69,7 @@ def delete(filepath):
         shutil.rmtree(filepath)
 
 
-def copy(src, dst):
+def copy(src: str, dst: str) -> None:
     """
     Copy a file or a folder (recursively) from src to dst.
 
@@ -112,7 +113,7 @@ def copy(src, dst):
     chmod(dst)
 
 
-def link(target, link_to):
+def link(target: str, link_to: str) -> None:
     """
     Create a link to a target file or a folder.
 
@@ -145,7 +146,7 @@ def link(target, link_to):
     os.symlink(target, link_to)
 
 
-def chmod(target):
+def chmod(target: str) -> None:
     """
     Recursively set the chmod for files to 0600 and 0700 for folders.
 
@@ -181,7 +182,7 @@ def chmod(target):
         raise ValueError("Unsupported file type: {}".format(target))
 
 
-def error(message):
+def error(message: str) -> None:
     """
     Throw an error with the given message and immediately quit.
 
@@ -193,7 +194,7 @@ def error(message):
     sys.exit(fail + "Error: {}".format(message) + end)
 
 
-def get_dropbox_folder_location():
+def get_dropbox_folder_location() -> str:
     """
     Try to locate the Dropbox folder.
 
@@ -211,7 +212,7 @@ def get_dropbox_folder_location():
     return dropbox_home
 
 
-def get_google_drive_folder_location():
+def get_google_drive_folder_location() -> str:
     """
     Try to locate the Google Drive folder.
 
@@ -226,7 +227,7 @@ def get_google_drive_folder_location():
     if os.path.isfile(yosemite_gdrive_db):
         gdrive_db_path = yosemite_gdrive_db
 
-    googledrive_home = None
+    googledrive_home: Optional[str] = None
 
     gdrive_db = os.path.join(os.environ["HOME"], gdrive_db_path)
     if os.path.isfile(gdrive_db):
@@ -253,7 +254,7 @@ def get_google_drive_folder_location():
     return googledrive_home
 
 
-def get_icloud_folder_location():
+def get_icloud_folder_location() -> str:
     """
     Try to locate the iCloud Drive folder.
 
@@ -270,7 +271,7 @@ def get_icloud_folder_location():
     return str(icloud_home)
 
 
-def is_process_running(process_name):
+def is_process_running(process_name: str) -> bool:
     """
     Check if a process with the given name is running.
 
@@ -291,7 +292,7 @@ def is_process_running(process_name):
     return is_running
 
 
-def remove_acl(path):
+def remove_acl(path: str) -> None:
     """
     Remove the ACL of the file or folder located on the given path.
 
@@ -311,7 +312,7 @@ def remove_acl(path):
         subprocess.call(["/bin/setfacl", "-R", "-b", path])
 
 
-def remove_immutable_attribute(path):
+def remove_immutable_attribute(path: str) -> None:
     """
     Remove the immutable attribute of the given path.
 
@@ -334,7 +335,7 @@ def remove_immutable_attribute(path):
         subprocess.call(["/usr/bin/chattr", "-R", "-f", "-i", path])
 
 
-def can_file_be_synced_on_current_platform(path):
+def can_file_be_synced_on_current_platform(path: str) -> bool:
     """
     Check if the given path can be synced locally.
 

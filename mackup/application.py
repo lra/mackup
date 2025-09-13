@@ -6,6 +6,7 @@ Mackup. Name, files, ...
 """
 
 import os
+from typing import List, Set, Tuple
 
 from .mackup import Mackup
 from . import utils
@@ -14,7 +15,7 @@ from . import utils
 class ApplicationProfile(object):
     """Instantiate this class with application specific data."""
 
-    def __init__(self, mackup, files, dry_run, verbose):
+    def __init__(self, mackup: Mackup, files: Set[str], dry_run: bool, verbose: bool) -> None:
         """
         Create an ApplicationProfile instance.
 
@@ -26,11 +27,11 @@ class ApplicationProfile(object):
         assert isinstance(files, set)
 
         self.mackup = mackup
-        self.files = list(files)
+        self.files: List[str] = list(files)
         self.dry_run = dry_run
         self.verbose = verbose
 
-    def getFilepaths(self, filename):
+    def getFilepaths(self, filename: str) -> Tuple[str, str]:
         """
         Get home and mackup filepaths for given file
 
@@ -45,7 +46,7 @@ class ApplicationProfile(object):
             os.path.join(self.mackup.mackup_folder, filename),
         )
 
-    def backup(self):
+    def backup(self) -> None:
         """
         Backup the application config files.
 
@@ -135,7 +136,7 @@ class ApplicationProfile(object):
                 else:
                     print("Doing nothing\n  {}\n  does not exist".format(home_filepath))
 
-    def restore(self):
+    def restore(self) -> None:
         """
         Restore the application config files.
 
@@ -219,7 +220,7 @@ class ApplicationProfile(object):
                         "Doing nothing\n  {}\n  does not exist".format(mackup_filepath)
                     )
 
-    def uninstall(self):
+    def uninstall(self) -> None:
         """
         Uninstall Mackup.
 

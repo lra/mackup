@@ -47,6 +47,12 @@ configuration files in the `~/Library/Mobile\ Documents/com\~apple\~CloudDocs/` 
 engine = icloud
 ```
 
+You can check if your files are synced using:
+
+```sh
+brctl monitor com.apple.CloudDocs
+```
+
 ### File System
 
 If you want to specify another directory, you can use the `file_system` engine

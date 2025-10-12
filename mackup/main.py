@@ -53,11 +53,11 @@ class ColorFormatCodes:
 
 
 def header(text: str) -> str:
-    return ColorFormatCodes.BLUE + str + ColorFormatCodes.NORMAL
+    return ColorFormatCodes.BLUE + text + ColorFormatCodes.NORMAL
 
 
 def bold(text: str) -> str:
-    return ColorFormatCodes.BOLD + str + ColorFormatCodes.NORMAL
+    return ColorFormatCodes.BOLD + text + ColorFormatCodes.NORMAL
 
 
 def main() -> None:

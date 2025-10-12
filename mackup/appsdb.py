@@ -6,7 +6,7 @@ data from the Mackup Database (files).
 """
 
 import os
-from typing import Dict, Set, Any, Union
+from typing import Dict, Set, Union
 
 try:
     import configparser

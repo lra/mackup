@@ -136,9 +136,9 @@ class ApplicationProfile(object):
                 else:
                     print("Doing nothing\n  {}\n  does not exist".format(home_filepath))
 
-    def restore(self) -> None:
+    def link(self) -> None:
         """
-        Restore the application config files.
+        Link the application config files.
 
         Algorithm:
             if exists mackup/file

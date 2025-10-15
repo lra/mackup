@@ -135,7 +135,7 @@ def main() -> None:
         for app_name in sorted(mckp.get_apps_to_backup()):
             app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
             printAppHeader(app_name)
-            app.backup()
+            app.link_install()
 
     # mackup link uninstall
     elif args['link'] and args['uninstall']:
@@ -161,14 +161,14 @@ def main() -> None:
                     mckp, app_db.get_files(app_name), dry_run, verbose
                 )
                 printAppHeader(app_name)
-                app.uninstall()
+                app.link_uninstall()
 
             # Restore the Mackup config before any other config, as we might
             # need it to know about custom settings
             mackup_app = ApplicationProfile(
                 mckp, app_db.get_files(MACKUP_APP_NAME), dry_run, verbose
             )
-            mackup_app.uninstall()
+            mackup_app.link_uninstall()
 
             # Delete the Mackup folder in Dropbox
             # Don't delete this as there might be other Macs that aren't
@@ -194,7 +194,7 @@ def main() -> None:
             mckp, app_db.get_files(MACKUP_APP_NAME), dry_run, verbose
         )
         printAppHeader(MACKUP_APP_NAME)
-        mackup_app.restore()
+        mackup_app.link()
 
         # Initialize again the apps db, as the Mackup config might have changed
         # it
@@ -209,7 +209,7 @@ def main() -> None:
         for app_name in sorted(app_names):
             app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
             printAppHeader(app_name)
-            app.restore()
+            app.link()
 
     # Delete the tmp folder
     mckp.clean_temp_folder()

@@ -46,9 +46,9 @@ class ApplicationProfile(object):
             os.path.join(self.mackup.mackup_folder, filename),
         )
 
-    def backup(self) -> None:
+    def link_install(self) -> None:
         """
-        Backup the application config files.
+        Create the application config file links.
 
         Algorithm:
             if exists home/file
@@ -220,11 +220,9 @@ class ApplicationProfile(object):
                         "Doing nothing\n  {}\n  does not exist".format(mackup_filepath)
                     )
 
-    def uninstall(self) -> None:
+    def link_uninstall(self) -> None:
         """
-        Uninstall Mackup.
-
-        Restore any file where it was before the 1st Mackup backup.
+        Removes links and copy config files from the remote folder locally.
 
         Algorithm:
             for each file in config
@@ -232,8 +230,6 @@ class ApplicationProfile(object):
                     if home/file exists
                         delete home/file
                     copy mackup/file home/file
-            delete the mackup folder
-            print how to delete mackup
         """
         # For each file used by the application
         for filename in self.files:

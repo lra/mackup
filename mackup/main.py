@@ -27,7 +27,7 @@ Modes of action:
  - mackup backup: copy local config files in the configured remote folder.
  - mackup restore: copy config files from the configured remote folder locally.
  - mackup prune: delete any remote file that are not present locally anymore.
- - mackup link install: moves local config file in remote folder, and links them.
+ - mackup link install: moves local config files in remote folder, and links them.
  - mackup link: links local config file from the remote folder.
  - mackup link uninstall: removes the links and copy config files from the remote folder locally.
 

@@ -1,6 +1,6 @@
 # Mackup™
 
-Keep your application settings in sync.
+Backup and keep your application settings in sync.
 
 ## Table of contents
 
@@ -24,18 +24,7 @@ Keep your application settings in sync.
   - [What's up with the weird name](#whats-up-with-the-weird-name)
   - [Where can I find more information](#where-can-i-find-more-information)
 
-## WARNING
-
-⚠️ Mackup does not work correctly in macOS Sonoma and all later versions,
-since it does not support symlinked files for preferences. Running this code
-will destroy all user preferences without a means for recovery. For more
-information, see issues [#1924](https://github.com/lra/mackup/issues/1924)
-and [2035](https://github.com/lra/mackup/issues/2035).
-
 ## Quickstart
-
-If you have [Dropbox](https://www.dropbox.com) installed and want to use it to
-save your config files, that's super easy.
 
 On macOS, if you want an easy install, you can install
 [Homebrew](http://brew.sh/) and do:
@@ -50,10 +39,6 @@ mackup backup
 
 If not running macOS, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/).
 
-> Note: The below command will check if a previous version of Mackup
-> is already installed on your system.
-> If this is the case, it will be upgraded to the latest version.
-
 ```bash
 # Install Mackup with PIP
 pip install --upgrade mackup
@@ -62,13 +47,7 @@ pip install --upgrade mackup
 mackup backup
 ```
 
-> On **Ubuntu**, pip will install to the current user's home
-> directory rather than system-wide. Because of this, when
-> installing pip on **Ubuntu** you will need to run `pip install`
-> with the `--system` flag as well (on other platforms this is not
-> needed)
-
-You're all set and constantly backed up from now on.
+You're all set and can back up from now on.
 
 Next, on any new workstation, do:
 
@@ -88,15 +67,23 @@ You can find more detailed instructions in [INSTALL.md](INSTALL.md).
 
 `mackup backup`
 
-Backup your application settings.
+Backup your application files. Copy your local config files in the Mackup folder.
 
 `mackup restore`
 
-Restore your application settings on a newly installed workstation.
+Restore your application settings on a newly installed workstation. Copy config files from the Mackup folder to your home folder.
 
-`mackup uninstall`
+`mackup link install`
 
-Copy back any synced config file to its original place.
+Move your local config file into the Mackup folder, and links them from their original place.
+
+`mackup link`
+
+On another workstation, links local config file from the Mackup folder.
+
+`mackup link uninstall`
+
+Copy back any synced config file to its original place. Removes the links and copy config files from the Mackup folder back into your home.
 
 `mackup list`
 
@@ -108,25 +95,45 @@ Get some help, obviously...
 
 ## What does it do
 
-- Back ups your application settings in a safe directory (e.g. Dropbox)
-- Syncs your application settings among all your workstations
-- Restores your configuration on any fresh install in one command line
-
 By only tracking pure configuration files, it keeps the crap out of your
 freshly new installed workstation (no cache, temporary and locally specific
 files are transfered).
 
-Mackup makes setting up the environment easy and simple, saving time for your
-family, great ideas, and all the cool stuff you like.
+Mackup makes setting up the environment easy and simple.
 
-## Bullsh\*t, what does it really do to my files
+There are 2 modes of operations: copy mode and link mode.
+
+### Copy mode
+
+Copy mode is used to backup and restore your files. The files are backup into the configured Mackup folder, which can be in Dropbox, iCloud, or where you configure it to.
+
+It is covered by the 2 commands:
+
+- `mackup backup`
+- `mackup restore`
+
+### Link mode
+
+Link mode is used to move your config files into the Mackup folder, and link them back to their original place.
+This mode is useful if you are using multiple workstations, and want to keep your application settings in sync at all times.
+
+- Back ups your application settings in a safe directory (e.g. Dropbox)
+- Syncs your application settings among all your workstations
+- Restores your configuration on any fresh install in one command line
 
 Let's take `git` as an example. Your settings for `git` are saved in your home
 folder, in the `.gitconfig` file.
 
-### Backup
+It is covered by the 3 commands:
 
-If you have Dropbox, these things happen when you launch `mackup backup`:
+- `mackup link install`
+- `mackup link`
+- `mackup link uninstall`
+
+
+#### `mackup link install`
+
+If you have Dropbox, these things happen when you launch `mackup link install`:
 
 1. `cp ~/.gitconfig ~/Dropbox/Mackup/.gitconfig`
 2. `rm ~/.gitconfig`
@@ -134,9 +141,9 @@ If you have Dropbox, these things happen when you launch `mackup backup`:
 
 Now your `git` config is always backed up and up to date on all your workstations.
 
-### Restore
+#### `mackup link`
 
-When you launch `mackup restore`, here's what it's really doing:
+When you launch `mackup link`, here's what it's really doing:
 
 1. `ln -s ~/Dropbox/Mackup/.gitconfig ~/.gitconfig`
 
@@ -144,13 +151,13 @@ That's it, you got your `git` config setup on your new workstation.
 
 `mackup` does the same for any supported application.
 
-### Uninstall
+#### `mackup link uninstall`
 
 You can revert all your files to their original state.
 
 ```bash
 # Just run this
-mackup uninstall
+mackup link uninstall
 ```
 
 This will remove the symlinks and copy back the files from the Mackup folder in

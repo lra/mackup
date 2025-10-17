@@ -73,7 +73,7 @@ Copy config files from the Mackup folder to your home folder.
 
 `mackup link install`
 
-Move your local config file into the Mackup folder,
+Move your local config files into the Mackup folder,
 and links them from their original place.
 
 `mackup link`

@@ -106,7 +106,7 @@ There are 2 modes of operations: copy mode and link mode.
 ### Copy mode
 
 Copy mode is used to backup and restore your files.
-The files are backup into the configured Mackup folder,
+The files are backed up into the configured Mackup folder,
 which can be in Dropbox, iCloud, or where you configure it to.
 
 It is covered by the 2 commands:

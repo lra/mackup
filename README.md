@@ -6,14 +6,11 @@ Backup and keep your application settings in sync.
 
 - [Mackup](#mackup)
   - [Table of contents](#table-of-contents)
-  - [WARNING](#warning)
   - [Quickstart](#quickstart)
   - [Usage](#usage)
   - [What does it do](#what-does-it-do)
-  - [Bullsh\*t, what does it really do to my files](#bullsht-what-does-it-really-do-to-my-files)
-    - [Backup](#backup)
-    - [Restore](#restore)
-    - [Uninstall](#uninstall)
+    - [Copy mode](#copy-mode)
+    - [Link mode](#link-mode)
   - [Supported Storages](#supported-storages)
   - [Unsupported Storages](#unsupported-storages)
   - [Supported Applications](#supported-applications)
@@ -71,11 +68,13 @@ Backup your application files. Copy your local config files in the Mackup folder
 
 `mackup restore`
 
-Restore your application settings on a newly installed workstation. Copy config files from the Mackup folder to your home folder.
+Restore your application settings on a newly installed workstation.
+Copy config files from the Mackup folder to your home folder.
 
 `mackup link install`
 
-Move your local config file into the Mackup folder, and links them from their original place.
+Move your local config file into the Mackup folder,
+and links them from their original place.
 
 `mackup link`
 
@@ -83,7 +82,8 @@ On another workstation, links local config file from the Mackup folder.
 
 `mackup link uninstall`
 
-Copy back any synced config file to its original place. Removes the links and copy config files from the Mackup folder back into your home.
+Copy back any synced config file to its original place.
+Removes the links and copy config files from the Mackup folder back into your home.
 
 `mackup list`
 
@@ -105,7 +105,9 @@ There are 2 modes of operations: copy mode and link mode.
 
 ### Copy mode
 
-Copy mode is used to backup and restore your files. The files are backup into the configured Mackup folder, which can be in Dropbox, iCloud, or where you configure it to.
+Copy mode is used to backup and restore your files.
+The files are backup into the configured Mackup folder,
+which can be in Dropbox, iCloud, or where you configure it to.
 
 It is covered by the 2 commands:
 
@@ -114,8 +116,11 @@ It is covered by the 2 commands:
 
 ### Link mode
 
-Link mode is used to move your config files into the Mackup folder, and link them back to their original place.
-This mode is useful if you are using multiple workstations, and want to keep your application settings in sync at all times.
+Link mode is used to move your config files into the Mackup folder,
+and link them back to their original place.
+
+This mode is useful if you are using multiple workstations,
+and want to keep your application settings in sync at all times.
 
 - Back ups your application settings in a safe directory (e.g. Dropbox)
 - Syncs your application settings among all your workstations
@@ -129,7 +134,6 @@ It is covered by the 3 commands:
 - `mackup link install`
 - `mackup link`
 - `mackup link uninstall`
-
 
 #### `mackup link install`
 

@@ -78,7 +78,7 @@ and links them from their original place.
 
 `mackup link`
 
-On another workstation, links local config file from the Mackup folder.
+On another workstation, links local config files from the Mackup folder.
 
 `mackup link uninstall`
 

@@ -29,6 +29,7 @@ class Mackup(object):
 
     def check_for_usable_environment(self) -> None:
         """Check if the current env is usable and has everything's required."""
+
         # Allow only explicit superuser usage
         if os.geteuid() == 0 and not utils.CAN_RUN_AS_ROOT:
             utils.error(

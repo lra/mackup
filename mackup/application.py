@@ -46,6 +46,112 @@ class ApplicationProfile(object):
             os.path.join(self.mackup.mackup_folder, filename),
         )
 
+    def copy_files_to_mackup_folder(self) -> None:
+        """
+        Backup the application config files to the Mackup folder.
+
+        Algorithm:
+            for config_file
+                if config_file exists and is a real file/folder
+                    if exists mackup/file
+                        are you sure?
+                        if sure
+                            rm mackup/file
+                    cp home/file mackup/file
+        """
+        for filename in self.files:
+            (home_filepath, mackup_filepath) = self.getFilepaths(filename)
+
+            # If config_file exists and is a real file/folder
+            if (os.path.isfile(home_filepath) or os.path.isdir(home_filepath)):
+                if self.verbose:
+                    print(
+                        "Backing up\n  {}\n  to\n  {} ...".format(
+                            home_filepath, mackup_filepath
+                        )
+                    )
+                else:
+                    print("Backing up {} ...".format(filename))
+
+                if self.dry_run:
+                    continue
+
+                # If exists mackup/file
+                if os.path.lexists(mackup_filepath):
+                    # Name it right
+                    if os.path.isfile(mackup_filepath):
+                        file_type = "file"
+                    elif os.path.isdir(mackup_filepath):
+                        file_type = "folder"
+                    elif os.path.islink(mackup_filepath):
+                        file_type = "link"
+                    else:
+                        raise ValueError("Unsupported file: {}".format(mackup_filepath))
+                    # Ask the user if he really wants to replace it
+                    if utils.confirm(
+                        "A {} named {} already exists in the"
+                        " Mackup folder.\nAre you sure that you want to"
+                        " replace it?".format(file_type, mackup_filepath)
+                    ):
+                        # If confirmed, delete the file in Mackup
+                        utils.delete(mackup_filepath)
+
+                # Copy the file
+                utils.copy(home_filepath, mackup_filepath)
+
+    def copy_files_from_mackup_folder(self) -> None:
+        """
+        Recover the application config files from the Mackup folder.
+
+        Algorithm:
+            for config_file
+                if config_file exists in mackup and is a real file/folder
+                    if exists home/file
+                        are you sure?
+                        if sure
+                            rm home/file
+                    cp mackup/file home/file
+        """
+        for filename in self.files:
+            (home_filepath, mackup_filepath) = self.getFilepaths(filename)
+
+            # If config_file exists in mackup and is a real file/folder
+            if (os.path.isfile(mackup_filepath) or os.path.isdir(mackup_filepath)):
+                if self.verbose:
+                    print(
+                        "Recovering\n  {}\n  to\n  {} ...".format(
+                            mackup_filepath, home_filepath
+                        )
+                    )
+                else:
+                    print("Recovering {} ...".format(filename))
+
+                if self.dry_run:
+                    continue
+
+                # If exists home/file
+                if os.path.lexists(home_filepath):
+                    # Name it right
+                    if os.path.isfile(home_filepath):
+                        file_type = "file"
+                    elif os.path.isdir(home_filepath):
+                        file_type = "folder"
+                    elif os.path.islink(home_filepath):
+                        file_type = "link"
+                    else:
+                        raise ValueError("Unsupported file: {}".format(home_filepath))
+                    # Ask the user if he really wants to replace it
+                    if utils.confirm(
+                        "A {} named {} already exists in your"
+                        " home folder.\nAre you sure that you want to"
+                        " replace it?".format(file_type, home_filepath)
+                    ):
+                        # If confirmed, delete the file in Mackup
+                        utils.delete(home_filepath)
+
+                # Copy the file
+                utils.copy(mackup_filepath, home_filepath)
+
     def link_install(self) -> None:
         """
         Create the application config file links.
@@ -80,7 +186,7 @@ class ApplicationProfile(object):
                         )
                     )
                 else:
-                    print("Backing up {} ...".format(filename))
+                    print("Linking {} ...".format(filename))
 
                 if self.dry_run:
                     continue

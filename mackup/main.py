@@ -8,7 +8,6 @@ Usage:
   mackup show <application>
   mackup [options] backup
   mackup [options] restore
-  mackup [options] prune
   mackup [options] link install
   mackup [options] link
   mackup [options] link uninstall
@@ -116,22 +115,30 @@ def main() -> None:
 
     # mackup backup
     elif args['backup']:
-        pass
+        mckp.check_for_usable_backup_env()
+
+        # Create a backup of the files of each application
+        for app_name in sorted(mckp.get_apps_to_backup()):
+            app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
+            printAppHeader(app_name)
+            app.copy_files_to_mackup_folder()
 
     # mackup restore
     elif args['restore']:
-        pass
+        mckp.check_for_usable_backup_env()
 
-    # mackup prune
-    elif args['prune']:
-        pass
+        # Recover a backup of the files of each application
+        for app_name in sorted(mckp.get_apps_to_backup()):
+            app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
+            printAppHeader(app_name)
+            app.copy_files_from_mackup_folder()
 
     # mackup link install
     elif args['link'] and args['install']:
         # Check the env where the command is being run
         mckp.check_for_usable_backup_env()
 
-        # Backup each application
+        # Create a link for each application
         for app_name in sorted(mckp.get_apps_to_backup()):
             app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
             printAppHeader(app_name)

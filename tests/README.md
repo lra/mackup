@@ -7,7 +7,7 @@ Feel free to add more, the more the better!
 ## How to run the tests
 
 ```bash
-pip install poetry
+brew install uv
 make test
 ```
 

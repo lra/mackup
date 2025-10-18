@@ -203,6 +203,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Airmail](http://airmailapp.com/)
 - [Akamai-CLI](https://developer.akamai.com/cli)
 - [Alacritty](https://github.com/jwilm/alacritty)
+- [AlDente](https://apphousekitchen.com/)
 - [AltTab](https://alt-tab-macos.netlify.app/)
 - [Amethyst](https://ianyh.com/amethyst/)
 - [Ancient Domains of Mystery](http://www.adom.de/home/index.html)

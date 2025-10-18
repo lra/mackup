@@ -2,7 +2,7 @@ import unittest
 import os
 import tempfile
 import shutil
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 from mackup.main import main
 from mackup import utils
 

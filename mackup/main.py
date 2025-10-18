@@ -113,7 +113,7 @@ def main() -> None:
             print(" - {}".format(file))
 
     # mackup backup
-    elif args['backup']:
+    elif args["backup"]:
         mckp.check_for_usable_backup_env()
 
         # Create a backup of the files of each application
@@ -123,7 +123,7 @@ def main() -> None:
             app.copy_files_to_mackup_folder()
 
     # mackup restore
-    elif args['restore']:
+    elif args["restore"]:
         mckp.check_for_usable_backup_env()
 
         # Recover a backup of the files of each application
@@ -133,7 +133,7 @@ def main() -> None:
             app.copy_files_from_mackup_folder()
 
     # mackup link install
-    elif args['link'] and args['install']:
+    elif args["link"] and args["install"]:
         # Check the env where the command is being run
         mckp.check_for_usable_backup_env()
 
@@ -144,7 +144,7 @@ def main() -> None:
             app.link_install()
 
     # mackup link uninstall
-    elif args['link'] and args['uninstall']:
+    elif args["link"] and args["uninstall"]:
         # Check the env where the command is being run
         mckp.check_for_usable_restore_env()
 

@@ -19,9 +19,11 @@ class TestCLI(unittest.TestCase):
 
         # Store original HOME
         self.original_home = os.environ.get("HOME")
+        self.original_xdg = os.environ.get("XDG_CONFIG_HOME")
 
         # Set HOME to our test directory
         os.environ["HOME"] = self.test_home
+        os.environ["XDG_CONFIG_HOME"] = os.path.join(self.test_home, ".config")
 
         # Create test config file
         self.config_path = os.path.join(self.test_home, ".mackup.cfg")
@@ -66,6 +68,12 @@ class TestCLI(unittest.TestCase):
             os.environ["HOME"] = self.original_home
         else:
             del os.environ["HOME"]
+
+        # Restore original XDG_CONFIG_HOME
+        if self.original_xdg:
+            os.environ["XDG_CONFIG_HOME"] = self.original_xdg
+        else:
+            del os.environ["XDG_CONFIG_HOME"]
 
         # Clean up temporary directories
         if os.path.exists(self.test_home):

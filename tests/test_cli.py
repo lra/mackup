@@ -67,13 +67,13 @@ class TestCLI(unittest.TestCase):
         if self.original_home:
             os.environ["HOME"] = self.original_home
         else:
-            del os.environ["HOME"]
+            os.environ.pop("HOME", None)
 
         # Restore original XDG_CONFIG_HOME
         if self.original_xdg:
             os.environ["XDG_CONFIG_HOME"] = self.original_xdg
         else:
-            del os.environ["XDG_CONFIG_HOME"]
+            os.environ.pop("XDG_CONFIG_HOME", None)
 
         # Clean up temporary directories
         if os.path.exists(self.test_home):

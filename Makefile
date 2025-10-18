@@ -1,21 +1,17 @@
-develop:
-	python setup.py develop
-
-undevelop:
-	python setup.py develop --uninstall
-
 lint:
-	# Install mdl with "gem install mdl"
-	mdl .
-	flake8
+	markdownlint -c .markdownlint.yaml '**/*.md'
 
 test:
-	nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
+	uv run pytest
 
 clean:
+	rm -rf mackup/__pycache__
+	rm -rf tests/__pycache__
 	rm -rf dist/
-	rm -rf Mackup.egg-info/
 
 release: clean
-	python setup.py sdist
-	twine upload dist/*
+	uv build
+	uv publish
+
+ruff:
+	ruff check .

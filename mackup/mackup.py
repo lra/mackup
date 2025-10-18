@@ -5,10 +5,12 @@ The Mackup class is keeping all the state that Mackup needs to keep during its
 runtime. It also provides easy to use interface that is used by the Mackup UI.
 The only UI for now is the command line.
 """
+
 import os
 import os.path
 import shutil
 import tempfile
+from typing import Set
 
 from . import utils
 from . import config
@@ -16,66 +18,72 @@ from . import appsdb
 
 
 class Mackup(object):
-
     """Main Mackup class."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Mackup Constructor."""
         self._config = config.Config()
 
         self.mackup_folder = self._config.fullpath
         self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
 
-    def check_for_usable_environment(self):
+    def check_for_usable_environment(self) -> None:
         """Check if the current env is usable and has everything's required."""
-        # Do not let the user run Mackup as root
-        if os.geteuid() == 0:
-            utils.error("Running Mackup as a superuser is useless and"
-                        " dangerous. Don't do it!")
 
-        # Do we have a folder to put the Mackup folder ?
+        # Allow only explicit superuser usage
+        if os.geteuid() == 0 and not utils.CAN_RUN_AS_ROOT:
+            utils.error(
+                "Running Mackup as superuser can be dangerous."
+                " Don't do it unless you know what you're doing!"
+                " Run mackup --help for guidance."
+            )
+
+        # Do we have a folder set to save Mackup content into?
         if not os.path.isdir(self._config.path):
-            utils.error("Unable to find the storage folder: {}"
-                        .format(self._config.path))
+            utils.error(
+                "Unable to find the storage folder: {}".format(self._config.path)
+            )
 
-        # Is Sublime Text running ?
+        # Is Sublime Text running?
         # if is_process_running('Sublime Text'):
         #    error("Sublime Text is running. It is known to cause problems"
         #          " when Sublime Text is running while I backup or restore"
         #          " its configuration files. Please close Sublime Text and"
         #          " run me again.")
 
-    def check_for_usable_backup_env(self):
+    def check_for_usable_backup_env(self) -> None:
         """Check if the current env can be used to back up files."""
         self.check_for_usable_environment()
         self.create_mackup_home()
 
-    def check_for_usable_restore_env(self):
+    def check_for_usable_restore_env(self) -> None:
         """Check if the current env can be used to restore files."""
         self.check_for_usable_environment()
 
         if not os.path.isdir(self.mackup_folder):
-            utils.error("Unable to find the Mackup folder: {}\n"
-                        "You might want to back up some files or get your"
-                        " storage directory synced first."
-                        .format(self.mackup_folder))
+            utils.error(
+                "Unable to find the Mackup folder: {}\n"
+                "You might want to back up some files or get your"
+                " storage directory synced first.".format(self.mackup_folder)
+            )
 
-    def clean_temp_folder(self):
+    def clean_temp_folder(self) -> None:
         """Delete the temp folder and files created while running."""
         shutil.rmtree(self.temp_folder)
 
-    def create_mackup_home(self):
+    def create_mackup_home(self) -> None:
         """If the Mackup home folder does not exist, create it."""
         if not os.path.isdir(self.mackup_folder):
-            if utils.confirm("Mackup needs a directory to store your"
-                             " configuration files\n"
-                             "Do you want to create it now? <{}>"
-                             .format(self.mackup_folder)):
+            if utils.confirm(
+                "Mackup needs a directory to store your"
+                " configuration files\n"
+                "Do you want to create it now? <{}>".format(self.mackup_folder)
+            ):
                 os.makedirs(self.mackup_folder)
             else:
                 utils.error("Mackup can't do anything without a home =(")
 
-    def get_apps_to_backup(self):
+    def get_apps_to_backup(self) -> Set[str]:
         """
         Get the list of applications that should be backed up by Mackup.
 

@@ -21,6 +21,7 @@ jobs:
           - "3.11"
           - "3.12"
           - "3.13"
+          - "3.14"
     runs-on: ${{ matrix.os }}
     container: python:${{ matrix.python-version }}
     steps:
@@ -34,6 +35,7 @@ jobs:
         os:
           - macos-14
           - macos-15
+          - macos-15-intel
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4

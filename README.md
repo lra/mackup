@@ -64,7 +64,7 @@ You can find more detailed instructions in [INSTALL.md](INSTALL.md).
 
 `mackup backup`
 
-Backup your application files. Copy your local config files in the Mackup folder.
+Back up your application files. Copy your local config files into the Mackup folder.
 
 `mackup restore`
 
@@ -74,7 +74,7 @@ Copy config files from the Mackup folder to your home folder.
 `mackup link install`
 
 Move your local config files into the Mackup folder,
-and links them from their original place.
+and link them to their original place.
 
 `mackup link`
 
@@ -83,7 +83,7 @@ On another workstation, links local config files from the Mackup folder.
 `mackup link uninstall`
 
 Copy back any synced config file to its original place.
-Removes the links and copy config files from the Mackup folder back into your home.
+Removes the links and copies config files from the Mackup folder back into your home.
 
 `mackup list`
 
@@ -97,7 +97,7 @@ Get some help, obviously...
 
 By only tracking pure configuration files, it keeps the crap out of your
 freshly new installed workstation (no cache, temporary and locally specific
-files are transfered).
+files are transferred).
 
 Mackup makes setting up the environment easy and simple.
 
@@ -105,9 +105,9 @@ There are 2 modes of operations: copy mode and link mode.
 
 ### Copy mode
 
-Copy mode is used to backup and restore your files.
+Copy mode is used to back up and restore your files.
 The files are backed up into the configured Mackup folder,
-which can be in Dropbox, iCloud, or where you configure it to.
+which can be in Dropbox, iCloud, or wherever you configure it.
 
 It is covered by the 2 commands:
 
@@ -122,7 +122,7 @@ and link them back to their original place.
 This mode is useful if you are using multiple workstations,
 and want to keep your application settings in sync at all times.
 
-- Back ups your application settings in a safe directory (e.g. Dropbox)
+- Backs up your application settings in a safe directory (e.g. Dropbox)
 - Syncs your application settings among all your workstations
 - Restores your configuration on any fresh install in one command line
 

@@ -683,6 +683,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Terminator](https://launchpad.net/terminator/)
 - [termite](https://github.com/thestinger/termite)
 - [Termux](https://termux.dev/)
+- [Terraform](https://developer.hashicorp.com/terraform)
 - [TextExpander](https://smilesoftware.com/textexpander)
 - [TextMate](http://macromates.com/)
 - [Textual](http://www.codeux.com/textual/)

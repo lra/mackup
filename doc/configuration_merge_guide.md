@@ -78,7 +78,7 @@ across the machines. We decide that Machine A will serve as our master.
 First, backup the bash configuration files (there are a few of them)
 for your application on all machines.
 
-##### Sample backup commands for Machine A
+##### Method 1: Sample backup commands for Machine A
 
 ```bash
 mkdir ~/bash_backup
@@ -88,7 +88,7 @@ cp ~/.bash_login ~/bash_backup/bash_login.bak
 ...plus any other bash config files you want to keep
 ```
 
-##### Sample backup commands for Machine B
+##### Method 1: Sample backup commands for Machine B
 
 ```bash
 mkdir ~/bash_backup
@@ -130,7 +130,7 @@ across the machines. We decide that Machine A will serve as our master.
 Since A is our master, we only need to backup the bash configuration files on
 Machine B:
 
-##### Sample backup commands for Machine B
+##### Method 2: Sample backup commands for Machine B
 
 ```bash
 mkdir ~/bash_backup

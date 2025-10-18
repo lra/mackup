@@ -19,7 +19,8 @@ mackup -h
 
 ### With Homebrew (OSX only) master branch for latest updates
 
-Want to install the latest master release instead of waiting on the homebrew package version?
+Want to install the latest master release instead of waiting on the homebrew
+package version?
 
 [Homebrew reference](https://docs.brew.sh/Manpage#install-options-formulacask)
 

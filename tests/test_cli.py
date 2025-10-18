@@ -8,7 +8,7 @@ from mackup import utils
 
 
 class TestCLI(unittest.TestCase):
-    """Test suite for CLI commands: backup and restore."""
+    """Test suite for CLI commands: backup, restore, and copy mode workflows."""
 
     def setUp(self):
         """Set up test environment before each test."""

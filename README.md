@@ -534,7 +534,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [OmniFocus](https://www.omnigroup.com/omnifocus/)
 - [OmniGraffle](https://www.omnigroup.com/omnigraffle/)
 - [Openbox](http://openbox.org)
-- [Opencode](https://opencode.ai)
+- [OpenCode](https://opencode.ai)
 - [OpenEmu](http://openemu.org)
 - [OpenSSH](http://www.openssh.com/)
 - [Oracle Cloud Infrastructure CLI](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)

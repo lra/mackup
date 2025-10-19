@@ -1,0 +1,17 @@
+name: markdown
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: articulate/actions-markdownlint@v1
+        with:
+          config: .markdownlint.yaml
+          ignore: 'tests/'

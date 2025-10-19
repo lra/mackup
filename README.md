@@ -118,12 +118,8 @@ It is covered by the 2 commands:
 
 ### Link mode
 
-$\color{Red}\Huge{\textsf{warning}}$ - if you are using Mackup on a current
-version of macOS, link mode will BREAK YOUR PREFERENCES. macOS Sonoma (macOS 14)
-and later don't support symlinked preferences, see
-[issue #2035](https://github.com/lra/mackup/issues/2035) for additional
-information. [PR #2085](https://github.com/lra/mackup/pull/2085) added copy
-mode, which should be used instead.
+> [!WARNING]
+> If you are using Mackup on a current version of macOS, link mode will BREAK YOUR PREFERENCES. macOS Sonoma (macOS 14) and later don't support symlinked preferences, see [issue #2035](https://github.com/lra/mackup/issues/2035) for additional information. [PR #2085](https://github.com/lra/mackup/pull/2085) added copy mode, which should be used instead.
 
 Link mode is used to move your config files into the Mackup folder,
 and link them back to their original place.

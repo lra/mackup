@@ -766,20 +766,6 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Zsh](http://zsh.sourceforge.net/)
 - [Übersicht](http://tracesof.net/uebersicht/)
 
-## Syncing private keys
-
-By default private keys for OpenSSH and GnuPG are NOT sycned. You can sync your private keys if you
-want. For example, to sync your entire OpenSSH `.ssh` directory, create a `~/.mackup/ssh.cfg` file
-with the following content:
-
-```
-[application]
-name = SSH
-
-[configuration_files]
-.ssh
-```
-
 ## Can you support application X
 
 We can [with your help](doc#get-official-support-for-an-application) ;)

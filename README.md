@@ -394,6 +394,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Homebrew](https://brew.sh)
 - [Houdini](http://uglyapps.co.uk/houdini/)
 - [Hstr](https://github.com/dvorka/hstr)
+- [HTML Tidy](https://www.html-tidy.org/)
 - [Htop](http://htop.sourceforge.net/)
 - [HTTPie](https://httpie.org/)
 - [hub](https://hub.github.com)

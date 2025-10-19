@@ -542,6 +542,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [OpenCode](https://opencode.ai)
 - [OpenEmu](http://openemu.org)
 - [OpenSSH](http://www.openssh.com/)
+- [Opera](http://www.opera.com)
 - [Oracle Cloud Infrastructure CLI](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
 - [Paintbrush](http://paintbrush.sourceforge.net/)
 - [Pandoc](http://pandoc.org)

@@ -363,6 +363,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Git](http://git-scm.com/)
 - [Gitbox](http://gitboxapp.com/)
 - [GitFox](https://www.gitfox.app)
+- [GitHub CLI](https://cli.github.com/)
 - [GitKraken](https://www.gitkraken.com)
 - [GitUp](http://gitup.co/)
 - [Gmail Notifr](http://ashchan.com/projects/gmail-notifr)

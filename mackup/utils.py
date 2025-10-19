@@ -16,6 +16,8 @@ from . import constants
 # Flag that controls how user confirmation works.
 # If True, the user wants to say "yes" to everything.
 FORCE_YES = False
+# If True, the user wants to say "no" to everything.
+FORCE_NO = False
 
 # Flag that control if mackup can be run as root
 CAN_RUN_AS_ROOT = False
@@ -33,6 +35,8 @@ def confirm(question: str) -> bool:
     """
     if FORCE_YES:
         return True
+    if FORCE_NO:
+        return False
 
     while True:
         answer = input(question + " <Yes|No> ").lower()

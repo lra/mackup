@@ -451,6 +451,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [lazydocker](https://github.com/jesseduffield/lazydocker)
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [Ledger](http://ledger-cli.org)
+- [Leiningen](http://leiningen.org/)
 - [lf](https://github.com/gokcehan/lf)
 - [LibreOffice](https://www.libreoffice.org/)
 - [Liftoff](https://github.com/thoughtbot/liftoff)

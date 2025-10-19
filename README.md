@@ -753,7 +753,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [yabai](https://github.com/koekeishiya/yabai)
 - [yarn](https://yarnpkg.com)
 - [yazi](https://github.com/sxyazi/yazi)
-- [youtube-dl](https://rg3.github.io/youtube-dl/)
+- [youtube-dl](https://ytdl-org.github.io/youtube-dl/)
 - [Yummy FTP](http://www.yummysoftware.com/)
 - [zabbix-cli](https://github.com/usit-gd/zabbix-cli)
 - [zathura](https://pwmt.org/projects/zathura/)

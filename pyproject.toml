@@ -1,12 +1,12 @@
 [project]
 name = "mackup"
-version = "0.9.0"
-description = "Keep your application settings in sync (macOS/Linux)"
+version = "0.9.1"
+description = "Backup and keep your application settings in sync."
 readme = "README.md"
 dependencies = [
     "docopt-ng>=0.9.0",
 ]
-requires-python = ">= 3.8"
+requires-python = ">= 3.9"
 authors = [
 	{ name = "Laurent Raufaste", email = "analogue@glop.org" }
 ]

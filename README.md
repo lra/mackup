@@ -559,6 +559,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [PixelSnap](https://getpixelsnap.com/)
 - [PixelSnap 2](https://getpixelsnap.com/)
 - [Planner](https://useplanner.com/)
+- [Plover](http://www.openstenoproject.org/plover/)
 - [Pnpm](https://pnpm.js.org/)
 - [Pock](https://pock.pigigaldi.com)
 - [Poedit](http://poedit.net/)

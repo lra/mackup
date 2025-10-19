@@ -724,6 +724,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Versions](http://www.versionsapp.com)
 - [Vim](http://www.vim.org/)
 - [Vimperator](http://www.vimperator.org/vimperator)
+- [Vimwiki](https://vimwiki.github.io/)
 - [Viscosity](http://www.sparklabs.com/viscosity/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Visual Studio Code - Insiders](https://code.visualstudio.com/insiders)

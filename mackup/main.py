@@ -16,6 +16,7 @@ Usage:
 Options:
   -h --help     Show this screen.
   -f --force    Force every question asked to be answered with "Yes".
+  --force-no    Force every question asked to be answered with "No".
   -r --root     Allow mackup to be run as superuser.
   -n --dry-run  Show steps without executing.
   -v --verbose  Show additional details.
@@ -77,6 +78,10 @@ def main() -> None:
     # If we want to answer mackup with "yes" for each question
     if args["--force"]:
         utils.FORCE_YES = True
+
+     # If we want to answer mackup with "no" for each question
+    if args['--force-no']:
+        utils.FORCE_NO = True
 
     # Allow mackup to be run as root
     if args["--root"]:

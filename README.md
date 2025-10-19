@@ -631,6 +631,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
 - [SelfControl](http://selfcontrolapp.com/)
 - [Sequel Pro](http://www.sequelpro.com/)
+- [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG)
 - [ShiftIt](https://github.com/fikovnik/ShiftIt)
 - [Shifty](https://shifty.natethompson.io/)
 - [Shimo](https://www.feingeist.io/shimo/)

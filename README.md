@@ -370,6 +370,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [GMVault](http://gmvault.org/)
 - [Gnome SSH Tunnel Manager](http://sourceforge.net/projects/gstm/)
 - [GnuPG](https://www.gnupg.org/)
+- [GNU Stow](https://www.gnu.org/software/stow/)
 - [Go2Shell](http://zipzapmac.com/Go2Shell)
 - [Goku](https://github.com/yqrashawn/GokuRakuJoudo)
 - [GoLand](https://www.jetbrains.com/go/)

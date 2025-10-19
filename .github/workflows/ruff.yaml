@@ -1,4 +1,4 @@
-name: Lint Python
+name: ruff
 on:
   push:
     branches:

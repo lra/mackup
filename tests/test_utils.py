@@ -209,6 +209,50 @@ class TestMackup(unittest.TestCase):
         utils.delete(srcpath)
         utils.delete(dstpath)
 
+    def test_copy_dir_that_exists(self):
+        """Copies a directory recursively to a destination path that already exists, overwriting it."""
+        # Create a source and a destination tmp folders
+        src_folder = tempfile.mkdtemp()
+        dst_folder = tempfile.mkdtemp()
+
+        # Create a folder inside the source folder
+        src_subfolder = tempfile.mkdtemp(dir=src_folder)
+
+        # Create the same subfolder inside the destination folder
+        src_subfolder_name = os.path.basename(src_subfolder)
+        dst_subfolder = os.path.join(dst_folder, src_subfolder_name)
+        os.mkdir(dst_subfolder)
+
+        # Create a tmp file in the src subfolder
+        src_file = tempfile.NamedTemporaryFile(delete=False, dir=src_subfolder)
+        src_file_name = src_file.name
+        src_file.close()
+
+        # Set the destination filename
+        dst_file = os.path.join(dst_subfolder, os.path.basename(src_file_name))
+
+        # Make sure the source file and destination folder exist and the
+        # destination file doesn't yet exist
+        assert os.path.isdir(src_folder)
+        assert os.path.isdir(src_subfolder)
+        assert os.path.isfile(src_file_name)
+        assert os.path.isdir(dst_folder)
+        assert os.path.isdir(dst_subfolder)
+        assert not os.path.exists(dst_file)
+
+        # Check if mackup can copy it
+        utils.copy(src_folder, dst_folder)
+        assert os.path.isdir(src_folder)
+        assert os.path.isdir(src_subfolder)
+        assert os.path.isfile(src_file_name)
+        assert os.path.isdir(dst_folder)
+        assert os.path.isdir(dst_subfolder)
+        assert os.path.exists(dst_file)
+
+        # Let's clean up
+        utils.delete(src_folder)
+        utils.delete(dst_folder)
+
     def test_link_file(self):
         # Create a tmp file
         tfile = tempfile.NamedTemporaryFile(delete=False)

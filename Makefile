@@ -2,8 +2,7 @@ lint:
 	markdownlint -c .markdownlint.yaml '**/*.md'
 
 test:
-	poetry install --with dev
-	poetry run pytest
+	uv run pytest
 
 clean:
 	rm -rf mackup/__pycache__
@@ -11,8 +10,8 @@ clean:
 	rm -rf dist/
 
 release: clean
-	poetry build
-	poetry publish
+	uv build
+	uv publish
 
 ruff:
 	ruff check .

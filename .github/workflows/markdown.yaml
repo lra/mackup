@@ -1,4 +1,4 @@
-name: Lint Markdown
+name: markdown
 on:
   push:
     branches:

@@ -1,7 +1,6 @@
 """Constants used in Mackup."""
 
-# Current version
-VERSION = "0.8.40"
+from importlib.metadata import version
 
 # Support platforms
 PLATFORM_DARWIN = "Darwin"
@@ -18,6 +17,9 @@ MACKUP_BACKUP_PATH = "Mackup"
 
 # Mackup config file
 MACKUP_CONFIG_FILE = ".mackup.cfg"
+
+# Current version
+VERSION = version(MACKUP_APP_NAME)
 
 # Directory that can contains user defined app configs
 CUSTOM_APPS_DIR = ".mackup"

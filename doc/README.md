@@ -39,12 +39,18 @@ engine = google_drive
 
 ### iCloud
 
-If you choose the `iCloud` storage engine, Mackup will store store your
+If you choose the `iCloud` storage engine, Mackup will store your
 configuration files in the `~/Library/Mobile\ Documents/com\~apple\~CloudDocs/` folder.
 
 ```ini
 [storage]
 engine = icloud
+```
+
+You can check if your files are synced using:
+
+```sh
+brctl monitor com.apple.CloudDocs
 ```
 
 ### File System
@@ -64,7 +70,7 @@ path = some/folder/in/your/home
 ```
 
 Note: you don't need to escape spaces or wrap the path in quotes.
-For example, the following paths are valid :
+For example, the following paths are valid:
 
 ```ini
 path = some/path in your/home
@@ -73,7 +79,7 @@ path = /some path/in/your/root
 
 ### Custom Directory Name
 
-You can customize the directory name in which Mackup stores your file. By
+You can customize the directory name in which Mackup stores your files. By
 default, if not specified, Mackup creates a `Mackup` directory in the storage
 engine you chose, e.g. `~/Dropbox/Mackup`.
 
@@ -116,7 +122,7 @@ already setup (ex: from `dropbox` to `icloud`), complete the following steps.
 ### Only sync one or two applications
 
 In your home folder, create a file named `.mackup.cfg` and add the application
-names to allow in the `[applications_to_sync]` section, one by line.
+names to allow in the `[applications_to_sync]` section, one per line.
 
 ```ini
 # Example, to only sync SSH and Adium:
@@ -129,7 +135,7 @@ Use `mackup list` to get a list of valid application names. Don't use fancy
 names (with spaces) here.
 
 A [sample](.mackup.cfg) of this file is available in this folder. Just copy it
-in your home folder:
+to your home folder:
 
 ```bash
 cp mackup/doc/.mackup.cfg ~/
@@ -138,7 +144,7 @@ cp mackup/doc/.mackup.cfg ~/
 ### Don't sync an application
 
 In your home folder, create a file named `.mackup.cfg` and add the application
-names to ignore in the `[applications_to_ignore]` section, one by line.
+names to ignore in the `[applications_to_ignore]` section, one per line.
 
 ```ini
 # Example, to not sync SSH and Adium:
@@ -151,7 +157,7 @@ Use `mackup list` to get a list of valid application names. Don't use fancy
 names (with spaces) here.
 
 A [sample](.mackup.cfg) of this file is available in this folder. Just copy it
-in your home folder:
+to your home folder:
 
 ```bash
 cp mackup/doc/.mackup.cfg ~/
@@ -172,7 +178,7 @@ to get your Pull Request merged faster.
 You can customize the Mackup engine and add support for unsupported
 applications or just custom files and directories you'd like to sync.
 
-NOTE: Files and directory to be synced should be rooted at $HOME.
+NOTE: Files and directories to be synced should be rooted at $HOME.
 
 Let's say that you'd like to add support for Nethack (config file:
 `.nethackrc`) and for the `bin` and `.hidden` directories you keep in your
@@ -187,7 +193,7 @@ touch ~/.mackup/nethack.cfg
 touch ~/.mackup/my-files.cfg
 ```
 
-Edit those files
+Edit those files:
 
 ```bash
 $ nano ~/.mackup/nethack.cfg
@@ -228,7 +234,7 @@ mackup backup
 If you override an application config that is already supported by Mackup, your
 new config for this application will replace the one provided by Mackup.
 
-You can find some sample config in this directory.
+You can find some sample configs in this directory.
 
 ### Locally test an application before submitting a Pull Request
 
@@ -246,14 +252,14 @@ You can add and test an application by following these steps:
 
 ### Add support for an application using the XDG directory
 
-For application storing their configuration under the `~/.config` folder, you
+For applications storing their configuration under the `~/.config` folder, you
 should not hardcode it. The `.config` folder is the default location but it can
 be named differently on other users' systems by setting the `XDG_CONFIG_HOME`
 environment variable.
 
 See <https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html>
 
-Mackup supports this mechanism and provide a dedicated `xdg_configuration_files`
+Mackup supports this mechanism and provides a dedicated `xdg_configuration_files`
 section for those applications.
 
 If any path starts with `.config`, remove the `.config` part and move the path

@@ -1,9 +1,9 @@
 # Detailed install instructions for Mackup
 
-There are 2 ways to run mackup
+There are 2 ways to run mackup:
 
 1. Install it with Homebrew (OSX only)
-1. Install it with PIP (OSX and GNU/Linux)
+2. Install it with PIP (OSX and GNU/Linux)
 
 ## Install
 
@@ -14,6 +14,22 @@ There are 2 ways to run mackup
 brew install mackup
 
 # Now just run it
+mackup -h
+```
+
+### With Homebrew (OSX only) master branch for latest updates
+
+Want to install the latest master release instead of waiting on the homebrew
+package version?
+
+[Homebrew reference](https://docs.brew.sh/Manpage#install-options-formulacask)
+
+```bash
+# Install master
+brew install --HEAD
+# Check if you are using the master or stale package
+brew switch mackup <HEAD-XXXX>
+
 mackup -h
 ```
 

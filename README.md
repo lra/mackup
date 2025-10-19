@@ -532,6 +532,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [nvm](https://github.com/nvm-sh/nvm)
 - [nvpy](https://github.com/cpbotha/nvpy)
 - [OBS](https://obsproject.com)
+- [OfflineIMAP](https://www.offlineimap.org/)
 - [Oh My Fish](https://github.com/bpinto/oh-my-fish)
 - [Oh My Tmux](https://github.com/gpakosz/.tmux)
 - [OmniFocus](https://www.omnigroup.com/omnifocus/)

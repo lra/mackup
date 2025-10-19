@@ -76,6 +76,9 @@ Copy config files from the Mackup folder to your home folder.
 Move your local config files into the Mackup folder,
 and link them to their original place.
 
+$\color{Red}\Huge{\textsf{Warning}}$ the `link` strategy
+[doesn't work correctly on Macs](#link-mode)
+
 `mackup link`
 
 On another workstation, links local config files from the Mackup folder.
@@ -116,8 +119,14 @@ It is covered by the 2 commands:
 
 ### Link mode
 
+$\color{Red}\Huge{\textsf{Warning}}$ - if you are using Mackup on a current version of macOS, link mode will
+BREAK YOUR PREFERENCES. macOS Sonoma (macOS 14) and later doesn't support symlinked
+preferences, see [issue #2035](https://github.com/lra/mackup/issues/2035) for additional
+information. Link mode is was the only strategy supported prior to #2085.
+
 Link mode is used to move your config files into the Mackup folder,
 and link them back to their original place.
+
 
 This mode is useful if you are using multiple workstations,
 and want to keep your application settings in sync at all times.

@@ -456,6 +456,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [LibreOffice](https://www.libreoffice.org/)
 - [Liftoff](https://github.com/thoughtbot/liftoff)
 - [Light Table](http://lighttable.com/)
+- [LightPaper](https://getlightpaper.com/)
 - [LimeChat](http://limechat.net/mac/)
 - [Liquid Prompt](https://github.com/nojhan/liquidprompt)
 - [LittleSnitch](http://www.obdev.at/products/littlesnitch/)

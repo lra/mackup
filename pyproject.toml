@@ -1,0 +1,31 @@
+[project]
+name = "mackup"
+version = "0.9.1"
+description = "Backup and keep your application settings in sync."
+readme = "README.md"
+dependencies = [
+    "docopt-ng>=0.9.0",
+]
+requires-python = ">= 3.9"
+authors = [
+	{ name = "Laurent Raufaste", email = "analogue@glop.org" }
+]
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+
+[project.scripts]
+mackup = "mackup.main:main"
+
+[project.urls]
+Repository = "https://github.com/lra/mackup.git"
+Issues = "https://github.com/lra/mackup/issues"
+Changelog = "https://github.com/lra/mackup/releases"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

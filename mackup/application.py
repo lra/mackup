@@ -97,7 +97,10 @@ class ApplicationProfile(object):
                         utils.delete(mackup_filepath)
 
                 # Copy the file
-                utils.copy(home_filepath, mackup_filepath)
+                try:
+                    utils.copy(home_filepath, mackup_filepath)
+                except PermissionError as e:
+                    print(f"Error: Unable to copy file from {home_filepath} to {mackup_filepath} due to permission issue: {e}")
 
     def copy_files_from_mackup_folder(self) -> None:
         """
@@ -150,7 +153,10 @@ class ApplicationProfile(object):
                         utils.delete(home_filepath)
 
                 # Copy the file
-                utils.copy(mackup_filepath, home_filepath)
+                try:
+                    utils.copy(mackup_filepath, home_filepath)
+                except PermissionError as e:
+                    print(f"Error: Unable to copy file from {mackup_filepath} to {home_filepath} due to permission issue: {e}")
 
     def link_install(self) -> None:
         """

@@ -91,7 +91,7 @@ class ApplicationProfile(object):
                     if utils.confirm(
                         "A {} named {} already exists in the"
                         " Mackup folder.\nAre you sure that you want to"
-                        " replace it?".format(file_type, mackup_filepath)
+                        " replace it? (use --force to skip this prompt)".format(file_type, mackup_filepath)
                     ):
                         # If confirmed, delete the file in Mackup
                         utils.delete(mackup_filepath)

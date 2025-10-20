@@ -339,6 +339,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Exercism](http://exercism.io/)
 - [ExpanDrive](http://www.expandrive.com/)
 - [Factorio](https://www.factorio.com)
+- [Factory Droid](https://factory.ai/)
 - [Fantastical](http://flexibits.com/fantastical)
 - [fasd](https://github.com/clvv/fasd)
 - [fastlane](https://fastlane.tools)

@@ -10,7 +10,7 @@ To configure Mackup, create a file named `.mackup.cfg` in your home directory.
 vi ~/.mackup.cfg
 ```
 
-### Configuration file location
+## Configuration file location
 
 Config files are searched in the following order. If none is found, Mackup will
 use the default config location of `~/.mackup.cfg`

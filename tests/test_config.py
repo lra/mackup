@@ -63,7 +63,7 @@ class TestConfig(unittest.TestCase):
         os.environ["XDG_CONFIG_HOME"] = "~/xdg-config-home/"
         assert_correct_config_read("test_config_xdg")
 
-        # set MACKUP_CONFIG, but should still find the default file
+        # set MACKUP_CONFIG, should find the MACKUP_CONFIG file
         os.environ["MACKUP_CONFIG"] = "~/mackup-envarcheck.cfg"
         assert_correct_config_read("test_config_envvar")
 

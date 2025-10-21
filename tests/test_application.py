@@ -339,6 +339,126 @@ class TestApplicationProfile(unittest.TestCase):
             output = captured_output.getvalue()
             self.assertIn("Recovering", output)
 
+    def test_link_uninstall_mackup_not_a_link(self):
+        """Test that link_uninstall skips and warns when mackup file is not a symbolic link."""
+        # Create a test file in the mackup directory (regular file, not a link)
+        test_file = ".testfile"
+        mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
+        home_filepath = os.path.join(self.temp_home, test_file)
+
+        # Create the mackup file as a regular file (not a link)
+        with open(mackup_filepath, "w") as f:
+            f.write("mackup content")
+
+        # Create the home file
+        with open(home_filepath, "w") as f:
+            f.write("home content")
+
+        # Patch utils.delete and utils.copy
+        with patch("mackup.application.utils.delete") as mock_delete, \
+             patch("mackup.application.utils.copy") as mock_copy:
+            # Capture stdout
+            captured_output = StringIO()
+            sys.stdout = captured_output
+
+            # Call the method
+            self.app_profile.link_uninstall()
+
+            # Restore stdout
+            sys.stdout = sys.__stdout__
+
+            # Verify that delete and copy were NOT called
+            mock_delete.assert_not_called()
+            mock_copy.assert_not_called()
+
+            # Verify that the warning message was printed
+            output = captured_output.getvalue()
+            self.assertIn("Warning: the file in Mackup", output)
+            self.assertIn("does not point to the original file", output)
+            self.assertIn(mackup_filepath, output)
+            self.assertIn(home_filepath, output)
+            self.assertIn("skipping", output)
+
+    def test_link_uninstall_mackup_points_to_wrong_target(self):
+        """Test that link_uninstall skips and warns when mackup link points to wrong target."""
+        # Create a test file
+        test_file = ".testfile"
+        mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
+        home_filepath = os.path.join(self.temp_home, test_file)
+
+        # Create a different target file
+        wrong_target = os.path.join(self.temp_home, ".wrongtarget")
+        with open(wrong_target, "w") as f:
+            f.write("wrong target content")
+
+        # Create the mackup file as a symbolic link pointing to the wrong target
+        os.symlink(wrong_target, mackup_filepath)
+
+        # Create the home file
+        with open(home_filepath, "w") as f:
+            f.write("home content")
+
+        # Patch utils.delete and utils.copy
+        with patch("mackup.application.utils.delete") as mock_delete, \
+             patch("mackup.application.utils.copy") as mock_copy:
+            # Capture stdout
+            captured_output = StringIO()
+            sys.stdout = captured_output
+
+            # Call the method
+            self.app_profile.link_uninstall()
+
+            # Restore stdout
+            sys.stdout = sys.__stdout__
+
+            # Verify that delete and copy were NOT called
+            mock_delete.assert_not_called()
+            mock_copy.assert_not_called()
+
+            # Verify that the warning message was printed
+            output = captured_output.getvalue()
+            self.assertIn("Warning: the file in Mackup", output)
+            self.assertIn("does not point to the original file", output)
+            self.assertIn(mackup_filepath, output)
+            self.assertIn(home_filepath, output)
+            self.assertIn("skipping", output)
+
+    def test_link_uninstall_mackup_points_correctly(self):
+        """Test that link_uninstall proceeds normally when mackup link points to home file correctly."""
+        # Create a test file
+        test_file = ".testfile"
+        mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
+        home_filepath = os.path.join(self.temp_home, test_file)
+
+        # Create the home file first
+        with open(home_filepath, "w") as f:
+            f.write("home content")
+
+        # Create the mackup file as a symbolic link pointing to the home file
+        os.symlink(home_filepath, mackup_filepath)
+
+        # Patch utils.delete and utils.copy
+        with patch("mackup.application.utils.delete") as mock_delete, \
+             patch("mackup.application.utils.copy") as mock_copy:
+            # Capture stdout
+            captured_output = StringIO()
+            sys.stdout = captured_output
+
+            # Call the method
+            self.app_profile.link_uninstall()
+
+            # Restore stdout
+            sys.stdout = sys.__stdout__
+
+            # Verify that delete and copy WERE called (normal operation)
+            mock_delete.assert_called_once_with(home_filepath)
+            mock_copy.assert_called_once_with(mackup_filepath, home_filepath)
+
+            # Verify that the reverting message was printed (not warning)
+            output = captured_output.getvalue()
+            self.assertIn("Reverting", output)
+            self.assertNotIn("Warning", output)
+
 
 if __name__ == "__main__":
     unittest.main()

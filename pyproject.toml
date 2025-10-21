@@ -1,6 +1,6 @@
 [project]
 name = "mackup"
-version = "0.9.1"
+version = "0.9.2"
 description = "Backup and keep your application settings in sync."
 readme = "README.md"
 dependencies = [
@@ -23,7 +23,7 @@ Changelog = "https://github.com/lra/mackup/releases"
 
 [dependency-groups]
 dev = [
-    "pytest>=8.3.5",
+    "pytest>=8.4.2",
 ]
 
 [build-system]

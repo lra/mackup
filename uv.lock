@@ -62,7 +62,7 @@ wheels = [
 
 [[package]]
 name = "mackup"
-version = "0.9.1"
+version = "0.9.2"
 source = { editable = "." }
 dependencies = [
     { name = "docopt-ng" },
@@ -77,7 +77,7 @@ dev = [
 requires-dist = [{ name = "docopt-ng", specifier = ">=0.9.0" }]
 
 [package.metadata.requires-dev]
-dev = [{ name = "pytest", specifier = ">=8.3.5" }]
+dev = [{ name = "pytest", specifier = ">=8.4.2" }]
 
 [[package]]
 name = "packaging"

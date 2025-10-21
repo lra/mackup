@@ -352,7 +352,7 @@ class ApplicationProfile(object):
                 # Check if there is a corresponding file in the home folder
                 if os.path.exists(home_filepath):
                     # If the mackup file is not a link or does not point to the home file,
-                    # display an warning and skip it.
+                    # display a warning and skip it.
                     if not os.path.islink(mackup_filepath) or os.readlink(mackup_filepath) != home_filepath:
                         print(f"Warning: the file in Mackup \"{mackup_filepath}\" does not point to the original file {home_filepath}, skipping...")
                         continue

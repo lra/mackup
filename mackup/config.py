@@ -162,7 +162,7 @@ class Config(object):
         if none of these files exist, we create ~/.mackup.cfg
 
         Args:
-            filename (_type_, optional): _description_. Defaults to None.
+            filename (str or None, optional): Optional override for the config file path. Defaults to None.
 
         Returns:
             str: the absolute path to the config file

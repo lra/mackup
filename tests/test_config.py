@@ -59,7 +59,7 @@ class TestConfig(unittest.TestCase):
         assert config_path.exists() is False
 
     def test_config_finds_correct_envvar(self):
-        # set XDG_CONFIG_HOME, but should still find the default file
+        # set XDG_CONFIG_HOME, should find the XDG config file
         os.environ["XDG_CONFIG_HOME"] = "~/xdg-config-home/"
         assert_correct_config_read("test_config_xdg")
 

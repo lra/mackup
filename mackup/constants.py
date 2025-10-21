@@ -5,6 +5,7 @@ from importlib.metadata import version
 # Support platforms
 PLATFORM_DARWIN = "Darwin"
 PLATFORM_LINUX = "Linux"
+PLATFORM_WINDOWS = "Windows"
 
 # Directory containing the application configs
 APPS_DIR = "applications"

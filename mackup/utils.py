@@ -103,7 +103,7 @@ def copy(src: str, dst: str) -> None:
     # We need to copy a single file
     if os.path.isfile(src):
         # Copy the src file to dst
-        shutil.copy2(src, dst)
+        shutil.copy(src, dst)
 
     # We need to copy a whole folder
     elif os.path.isdir(src):

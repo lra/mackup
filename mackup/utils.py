@@ -107,7 +107,7 @@ def copy(src: str, dst: str) -> None:
 
     # We need to copy a whole folder
     elif os.path.isdir(src):
-        shutil.copytree(src, dst, dirs_exist_ok=True)
+        shutil.copytree(src, dst, dirs_exist_ok=True, copy_function=shutil.copy)
 
     # What the heck is this?
     else:

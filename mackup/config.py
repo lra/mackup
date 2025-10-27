@@ -3,17 +3,17 @@
 import os
 import os.path
 from typing import Optional, Set
+from pathlib import Path
 
 from .constants import (
     CUSTOM_APPS_DIR,
-    MACKUP_BACKUP_PATH,
-    MACKUP_CONFIG_FILE,
     ENGINE_DROPBOX,
+    ENGINE_FS,
     ENGINE_GDRIVE,
     ENGINE_ICLOUD,
-    ENGINE_FS,
+    MACKUP_BACKUP_PATH,
+    MACKUP_CONFIG_FILE,
 )
-
 from .utils import (
     error,
     get_dropbox_folder_location,
@@ -141,16 +141,63 @@ class Config(object):
         """
         assert isinstance(filename, str) or filename is None
 
-        # If we are not overriding the config filename
-        if not filename:
-            filename = MACKUP_CONFIG_FILE
-
         parser = configparser.ConfigParser(
             allow_no_value=True, inline_comment_prefixes=(";", "#")
         )
-        parser.read(os.path.join(os.path.join(os.environ["HOME"], filename)))
+        parser.read(self._best_config_path(filename))
 
         return parser
+
+    def _best_config_path(self, filename=None):
+        """
+        If no filename is provided, we try to find one in according to the following
+        order, note that we will always check the original default of `~/.mackup.cfg`
+        first before checking the other options:
+
+        - ~/.mackup.cfg
+        - $MACKUP_CONFIG
+        - $XDG_CONFIG_HOME/mackup/mackup.cfg
+        - ~/.config/mackup/mackup.cfg
+
+        if none of these files exist, we create ~/.mackup.cfg
+
+        Args:
+            filename (str or None, optional): Optional override for the config file path. Defaults to None.
+
+        Returns:
+            str: the absolute path to the config file
+        """
+        assert isinstance(filename, str) or filename is None
+
+        # If we are not overriding the config filename
+        if not filename:
+            default = Path.home() / MACKUP_CONFIG_FILE
+            search_paths = [
+                # 1. the default config file is ~/.mackup.cfg
+                default,
+                # 2. check for the MACKUP_CONFIG envvar
+                Path(os.environ.get("MACKUP_CONFIG", "")).expanduser(),
+                # 3. check for a config file in the XDG_CONFIG_HOME directory
+                (
+                    Path(os.environ.get("XDG_CONFIG_HOME", "~/.config")).expanduser()
+                    / "mackup"
+                    / MACKUP_CONFIG_FILE.lstrip(".")
+                ),
+            ]
+            filename = next((p for p in search_paths if p.is_file()), default)
+        else:
+            filename = Path.home() / filename
+
+        try:
+            # Make sure the config file is in the home directory
+            filename.relative_to(Path.home())
+        except ValueError:
+            error(
+                f"The config file '{filename}' is not in your home directory. Aborting."
+            )
+
+        # return the absolute path to the config file
+        return str(filename.absolute())
 
     def _warn_on_old_config(self) -> None:
         """Warn the user if an old config format is detected."""

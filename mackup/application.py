@@ -97,7 +97,10 @@ class ApplicationProfile(object):
                         utils.delete(mackup_filepath)
 
                 # Copy the file
-                utils.copy(home_filepath, mackup_filepath)
+                try:
+                    utils.copy(home_filepath, mackup_filepath)
+                except PermissionError as e:
+                    print(f"Error: Unable to copy file from {home_filepath} to {mackup_filepath} due to permission issue: {e}")
 
     def copy_files_from_mackup_folder(self) -> None:
         """
@@ -150,7 +153,10 @@ class ApplicationProfile(object):
                         utils.delete(home_filepath)
 
                 # Copy the file
-                utils.copy(mackup_filepath, home_filepath)
+                try:
+                    utils.copy(mackup_filepath, home_filepath)
+                except PermissionError as e:
+                    print(f"Error: Unable to copy file from {mackup_filepath} to {home_filepath} due to permission issue: {e}")
 
     def link_install(self) -> None:
         """
@@ -345,6 +351,11 @@ class ApplicationProfile(object):
             if os.path.isfile(mackup_filepath) or os.path.isdir(mackup_filepath):
                 # Check if there is a corresponding file in the home folder
                 if os.path.exists(home_filepath):
+                    # If the mackup file is not a link or does not point to the home file,
+                    # display a warning and skip it.
+                    if not os.path.islink(mackup_filepath) or os.readlink(mackup_filepath) != home_filepath:
+                        print(f"Warning: the file in Mackup \"{mackup_filepath}\" does not point to the original file {home_filepath}, skipping...")
+                        continue
                     if self.verbose:
                         print(
                             "Reverting {}\n  at {} ...".format(

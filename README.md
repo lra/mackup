@@ -277,6 +277,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Cider](https://github.com/msanders/cider)
 - [ClashX](https://github.com/yichengchen/clashX)
 - [Clasp](https://github.com/google/clasp)
+- [Claude Code](https://www.claude.com/product/claude-code)
 - [CleanShot](https://cleanshot.com/)
 - [Clementine](https://www.clementine-player.org/)
 - [CLion](https://www.jetbrains.com/clion/)

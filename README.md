@@ -284,6 +284,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Clipy](https://clipy-app.com/)
 - [CloudApp](http://getcloudapp.com/)
 - [Coda 2](http://panic.com/coda/)
+- [Codex](https://openai.com/codex/)
 - [Colloquy](http://colloquy.info/)
 - [ColorSchemer Studio 2](http://www.colorschemer.com/osx_info.php)
 - [ColorSlurp](http://colorslurp.com/)

@@ -191,11 +191,11 @@ applications or just custom files and directories you'd like to sync.
 NOTE: Files and directories to be synced should be rooted at $HOME.
 
 Let's say that you'd like to add support for Nethack (config file:
-`.nethackrc`) and for the `bin` and `.hidden` directories you keep in your
-home.
+`.nethackrc`), for the `bin` and `.hidden` directories and for the
+`.gitignore` file you keep in your home.
 
 In your home, create a `.mackup` directory and add a config file for the
-application you'd like to support.
+application you'd like to support:
 
 ```bash
 mkdir ~/.mackup
@@ -222,9 +222,13 @@ name = My personal synced files and dirs
 [configuration_files]
 bin
 .hidden
+.gitignore
 ```
 
-You can run mackup to see if they are listed
+Note that Mackup assumes the file paths listed here are relative to your home
+directory.
+
+You can run mackup to see if they are listed:
 
 ```bash
 $ mackup list

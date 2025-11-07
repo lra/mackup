@@ -1,10 +1,15 @@
 # Configuration
 
+> 💡 **New to Mackup?** Check out the
+> [Architecture Guide](ARCHITECTURE.md) to understand how Mackup works
+> under the hood.
+
 All the configuration is done in a file named `.mackup.cfg` stored at the
 root of your home folder. This location can be overridden via environment
 variables.
 
-To configure Mackup, create a file named `.mackup.cfg` in your home directory.
+To configure Mackup, create a file named `.mackup.cfg` in your home
+directory.
 
 ```bash
 vi ~/.mackup.cfg

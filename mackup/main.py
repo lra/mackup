@@ -79,7 +79,7 @@ def main() -> None:
     if args["--force"]:
         utils.FORCE_YES = True
 
-     # If we want to answer mackup with "no" for each question
+    # If we want to answer mackup with "no" for each question
     if args['--force-no']:
         utils.FORCE_NO = True
 

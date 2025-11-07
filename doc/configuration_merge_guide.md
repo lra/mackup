@@ -5,13 +5,13 @@ more machines.
 
 For example, you might have some bash settings on Machine A (like useful
 command aliases) that are not on Machine B.  You also have some settings on
-Machine B that you would live to move over to Machine A.
+Machine B that you would like to move over to Machine A.
 
 The problem is that if you use Mackup to send Machine A's bash configuration
 settings to Machine B, you will permanently lose any configurations on Machine
 B that you wanted to keep. Mackup obviously has no idea which features you want
-to keep and which ones you don't so you'll have to do a little bit of work to
-merge the different configuration files yourself before using Mackup.
+to keep and which ones you don't, so you'll have to do a bit of work to merge
+the different configuration files yourself before using Mackup.
 
 ## Step 0: Read Through This Entire Guide First
 
@@ -23,11 +23,11 @@ First, pick the app you wish to keep in sync. Then determine which
 configuration files will be synced for that application by doing the following:
 
 1. [Install Mackup](./../INSTALL.md)
-1. Create a `.mackup.cfg` file in your home directory
-1. Add the following two lines to `.mackup.cfg`. Replace **bash**
+2. Create a `.mackup.cfg` file in your home directory
+3. Add the following two lines to `.mackup.cfg`. Replace **bash**
    in the example below with the name of your application.
 
-```
+```text
 [applications_to_sync]
 bash
 ```
@@ -35,7 +35,7 @@ bash
 You can get a list of supported apps by running `mackup list`.
 
 1. Save the file
-1. Run the following command:
+2. Run the following command:
 
 `mackup --dry-run --verbose backup`
 
@@ -47,7 +47,7 @@ configuration files Mackup will sync. Make note of these files.
 
 Now that you've identified which files you have to merge, choose one of the two
 approaches below for merging the configuration files. **Method 1** has you do all
-the configuration file merges first and then pushes out them out with Mackup.
+the configuration file merges first and then pushes them out with Mackup.
 With **Method 2**, you'll push out the configuration files from one machine to the
 others and then merge in your configuration changes gradually over time.
 
@@ -64,23 +64,23 @@ from other machines.
 
 1. Create a backup of each machine's configuration files for the app you wish
    to sync.
-1. Choose a machine that will serve as the initial "master". It doesn't really
+2. Choose a machine that will serve as the initial "master". It doesn't really
    matter which one.
-1. Edit your configuration files on the master machine so that they
+3. Edit your configuration files on the master machine so that they
    represent the ideal version of the file you wish to distribute out to your
    other machines.
 
 #### Method 1 Example
 
-Let's say we have two machines, A and B and that we want to sync our bash configuration
+Let's say we have two machines, A and B, and we want to sync our bash configuration
 across the machines. We decide that Machine A will serve as our master.
 
 First, backup the bash configuration files (there are a few of them)
 for your application on all machines.
 
-##### Sample backup commands for Machine A**
+##### Method 1: Sample backup commands for Machine A
 
-```
+```bash
 mkdir ~/bash_backup
 cp ~/.bash_profile ~/bash_backup/bash_profile.bak
 cp ~/.bash_login ~/bash_backup/bash_login.bak
@@ -88,9 +88,9 @@ cp ~/.bash_login ~/bash_backup/bash_login.bak
 ...plus any other bash config files you want to keep
 ```
 
-##### Sample backup commands for Machine B
+##### Method 1: Sample backup commands for Machine B
 
-```
+```bash
 mkdir ~/bash_backup
 cp ~/.bash_profile ~/bash_backup/bash_profile.bak
 cp ~/.bash_login ~/bash_backup/bash_login.bak
@@ -102,37 +102,37 @@ Machine A will be our master so we now edit the existing configuration files
 on Machine A. We will use the vim text editor to do this for each of our
 configuration files:
 
-```
+```bash
 vim .bash_profile
 vim .bash_login
 ```
 
-When editing these configuration files on Machine A, copy and and paste the settings
+When editing these configuration files on Machine A, copy and paste the settings
 from Machine B that you want to keep. In essence, you are manually merging the
-configuratoin files together. Once you are satisfied the configuration files
-have all the settings you want and need, you are ready to push out your changes from
-the master machine.
+configuration files together. Once you are satisfied the configuration files
+have all the settings you want and need, you are ready to push out your changes
+from the master machine.
 
 ### Method 2: Backup Push-Merge Approach
 
 1. Choose a machine that will serve as the initial "master". You'll probably
-   want to use choose the machine you use most and like its configuration
+   want to choose the machine you use most and like its configuration
    settings the best.
-1. For each machine that aren't the "master" (i.e. "slaves"), back up all the
+2. For each machine that isn't the "master" (i.e. "slaves"), back up all the
    configuration files for each app that you want to sync. That's it for now.
    However, there will be more work for you later.
 
 #### Method 2 Example
 
-Let's say we have two machines, A and B and that we want to sync our bash configuration
+Let's say we have two machines, A and B, and we want to sync our bash configuration
 across the machines. We decide that Machine A will serve as our master.
 
 Since A is our master, we only need to backup the bash configuration files on
 Machine B:
 
-##### Sample backup commands for Machine B**
+##### Method 2: Sample backup commands for Machine B
 
-```
+```bash
 mkdir ~/bash_backup
 cp ~/.bash_profile ~/bash_backup/bash_profile.bak
 cp ~/.bash_login ~/bash_backup/bash_login.bak
@@ -140,7 +140,7 @@ cp ~/.bash_login ~/bash_backup/bash_login.bak
 ...plus any other bash config files you want to keep
 ```
 
-If you have other machines you are syncing with the master, back those up, woo.
+If you have other machines you are syncing with the master, back those up, too.
 
 ## Step 3: Push Out the Configuration Files with Mackup
 
@@ -156,11 +156,11 @@ On each of the other "slave" machines, run:
 
 `mackup restore`
 
-If you used Method 1 in Step 2 above, you are done. You may you discover
+If you used Method 1 in Step 2 above, you are done. You may discover
 that you didn't quite merge the files exactly the way you wanted but don't
 worry, that's why you created the configuration file backups. You can grab
 snippets from these backup configuration files and add them in to the live
-configuraton files and then easily push the changes out to all your
+configuration files and then easily push the changes out to all your
 machines using mackup.
 
 If you used Method 2, you'll need to merge in new features over time. As you

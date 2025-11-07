@@ -1,29 +1,27 @@
-name: Run tests
+name: test
 on:
-  - pull_request
-  - push
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
 
-  nose-2_7:
-    runs-on: ubuntu-latest
-    container: python:2.7
-    steps:
-      - run: pip install docopt six nose
-      - uses: actions/checkout@v2
-      - run: nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
-
-  nose:
+  pytest:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version:
-          - 3.6
-          - 3.7
-          - 3.8
-    container: python:${{ matrix.python-version }}
+          - "3.9"
+          - "3.10"
+          - "3.11"
+          - "3.12"
+          - "3.13"
+          - "3.14"
     steps:
-      - run: pip install pipenv
-      - uses: actions/checkout@v2
-      - run: pipenv install -d
-      - run: make test
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: uv sync --all-extras --dev
+      - run: uv run pytest

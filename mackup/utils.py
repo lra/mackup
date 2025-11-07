@@ -1,4 +1,5 @@
 """System static utilities being used by the modules."""
+
 import base64
 import os
 import platform
@@ -7,7 +8,7 @@ import stat
 import subprocess
 import sys
 import sqlite3
-from six.moves import input
+from typing import Optional
 
 from . import constants
 
@@ -15,14 +16,16 @@ from . import constants
 # Flag that controls how user confirmation works.
 # If True, the user wants to say "yes" to everything.
 FORCE_YES = False
+# If True, the user wants to say "no" to everything.
+FORCE_NO = False
 
 # Flag that control if mackup can be run as root
 CAN_RUN_AS_ROOT = False
 
 
-def confirm(question):
+def confirm(question: str) -> bool:
     """
-    Ask the user if he really want something to happen.
+    Ask the user if he really wants something to happen.
 
     Args:
         question(str): What can happen
@@ -32,9 +35,11 @@ def confirm(question):
     """
     if FORCE_YES:
         return True
+    if FORCE_NO:
+        return False
 
     while True:
-        answer = input(question + " <Yes|No>").lower()
+        answer = input(question + " <Yes|No> ").lower()
 
         if answer == "yes" or answer == "y":
             confirmed = True
@@ -46,7 +51,7 @@ def confirm(question):
     return confirmed
 
 
-def delete(filepath):
+def delete(filepath: str) -> None:
     """
     Delete the given file, directory or link.
 
@@ -68,11 +73,11 @@ def delete(filepath):
         shutil.rmtree(filepath)
 
 
-def copy(src, dst):
+def copy(src: str, dst: str) -> None:
     """
     Copy a file or a folder (recursively) from src to dst.
 
-    For simplicity sake, both src and dst must be absolute path and must
+    For the sake of simplicity, both src and dst must be absolute path and must
     include the filename of the file or folder.
     Also do not include any trailing slash.
 
@@ -90,7 +95,7 @@ def copy(src, dst):
     assert os.path.exists(src)
     assert isinstance(dst, str)
 
-    # Create the path to the dst file if it does not exists
+    # Create the path to the dst file if it does not exist
     abs_path = os.path.dirname(os.path.abspath(dst))
     if not os.path.isdir(abs_path):
         os.makedirs(abs_path)
@@ -102,9 +107,9 @@ def copy(src, dst):
 
     # We need to copy a whole folder
     elif os.path.isdir(src):
-        shutil.copytree(src, dst)
+        shutil.copytree(src, dst, dirs_exist_ok=True, copy_function=shutil.copy)
 
-    # What the heck is this ?
+    # What the heck is this?
     else:
         raise ValueError("Unsupported file: {}".format(src))
 
@@ -112,11 +117,11 @@ def copy(src, dst):
     chmod(dst)
 
 
-def link(target, link_to):
+def link(target: str, link_to: str) -> None:
     """
     Create a link to a target file or a folder.
 
-    For simplicity sake, both target and link_to must be absolute path and must
+    For the sake of simplicity, both target and link_to must be absolute path and must
     include the filename of the file or folder.
     Also do not include any trailing slash.
 
@@ -133,7 +138,7 @@ def link(target, link_to):
     assert os.path.exists(target)
     assert isinstance(link_to, str)
 
-    # Create the path to the link if it does not exists
+    # Create the path to the link if it does not exist
     abs_path = os.path.dirname(os.path.abspath(link_to))
     if not os.path.isdir(abs_path):
         os.makedirs(abs_path)
@@ -145,7 +150,7 @@ def link(target, link_to):
     os.symlink(target, link_to)
 
 
-def chmod(target):
+def chmod(target: str) -> None:
     """
     Recursively set the chmod for files to 0600 and 0700 for folders.
 
@@ -181,7 +186,7 @@ def chmod(target):
         raise ValueError("Unsupported file type: {}".format(target))
 
 
-def error(message):
+def error(message: str) -> None:
     """
     Throw an error with the given message and immediately quit.
 
@@ -193,7 +198,7 @@ def error(message):
     sys.exit(fail + "Error: {}".format(message) + end)
 
 
-def get_dropbox_folder_location():
+def get_dropbox_folder_location() -> str:
     """
     Try to locate the Dropbox folder.
 
@@ -205,13 +210,13 @@ def get_dropbox_folder_location():
         with open(host_db_path, "r") as f_hostdb:
             data = f_hostdb.read().split()
     except IOError:
-        error("Unable to find your Dropbox install =(")
+        error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="Dropbox install"))
     dropbox_home = base64.b64decode(data[1]).decode()
 
     return dropbox_home
 
 
-def get_google_drive_folder_location():
+def get_google_drive_folder_location() -> str:
     """
     Try to locate the Google Drive folder.
 
@@ -226,7 +231,7 @@ def get_google_drive_folder_location():
     if os.path.isfile(yosemite_gdrive_db):
         gdrive_db_path = yosemite_gdrive_db
 
-    googledrive_home = None
+    googledrive_home: Optional[str] = None
 
     gdrive_db = os.path.join(os.environ["HOME"], gdrive_db_path)
     if os.path.isfile(gdrive_db):
@@ -244,40 +249,16 @@ def get_google_drive_folder_location():
             con.close()
 
     if not googledrive_home:
-        error("Unable to find your Google Drive install =(")
+        error(
+            constants.ERROR_UNABLE_TO_FIND_STORAGE.format(
+                provider="Google Drive install"
+            )
+        )
 
     return googledrive_home
 
 
-def get_copy_folder_location():
-    """
-    Try to locate the Copy folder.
-
-    Returns:
-        (str) Full path to the current Copy folder
-    """
-    copy_settings_path = "Library/Application Support/Copy Agent/config.db"
-    copy_home = None
-
-    copy_settings = os.path.join(os.environ["HOME"], copy_settings_path)
-
-    if os.path.isfile(copy_settings):
-        database = sqlite3.connect(copy_settings)
-        if database:
-            cur = database.cursor()
-            query = "SELECT value " "FROM config2 " "WHERE option = 'csmRootPath';"
-            cur.execute(query)
-            data = cur.fetchone()
-            copy_home = str(data[0])
-            cur.close()
-
-    if not copy_home:
-        error("Unable to find your Copy install =(")
-
-    return copy_home
-
-
-def get_icloud_folder_location():
+def get_icloud_folder_location() -> str:
     """
     Try to locate the iCloud Drive folder.
 
@@ -289,12 +270,12 @@ def get_icloud_folder_location():
     icloud_home = os.path.expanduser(yosemite_icloud_path)
 
     if not os.path.isdir(icloud_home):
-        error("Unable to find your iCloud Drive =(")
+        error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="iCloud Drive"))
 
     return str(icloud_home)
 
 
-def is_process_running(process_name):
+def is_process_running(process_name: str) -> bool:
     """
     Check if a process with the given name is running.
 
@@ -315,7 +296,7 @@ def is_process_running(process_name):
     return is_running
 
 
-def remove_acl(path):
+def remove_acl(path: str) -> None:
     """
     Remove the ACL of the file or folder located on the given path.
 
@@ -335,7 +316,7 @@ def remove_acl(path):
         subprocess.call(["/bin/setfacl", "-R", "-b", path])
 
 
-def remove_immutable_attribute(path):
+def remove_immutable_attribute(path: str) -> None:
     """
     Remove the immutable attribute of the given path.
 
@@ -358,7 +339,7 @@ def remove_immutable_attribute(path):
         subprocess.call(["/usr/bin/chattr", "-R", "-f", "-i", path])
 
 
-def can_file_be_synced_on_current_platform(path):
+def can_file_be_synced_on_current_platform(path: str) -> bool:
     """
     Check if the given path can be synced locally.
 
@@ -381,7 +362,7 @@ def can_file_be_synced_on_current_platform(path):
     # If the given path is relative, prepend home
     fullpath = os.path.join(os.environ["HOME"], path)
 
-    # Compute the ~/Library path on OS X
+    # Compute the ~/Library path on macOS
     # End it with a slash because we are looking for this specific folder and
     # not any file/folder named LibrarySomething
     library_path = os.path.join(os.environ["HOME"], "Library/")

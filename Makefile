@@ -1,23 +1,17 @@
-develop:
-	pipenv run python setup.py develop
-
-undevelop:
-	pipenv run python setup.py develop --uninstall
-
 lint:
-	# Install mdl with "gem install mdl"
-	mdl .
+	markdownlint -c .markdownlint.yaml '**/*.md'
 
 test:
-	pipenv run nosetests --with-coverage --cover-tests --cover-inclusive --cover-branches --cover-package=mackup
+	uv run pytest
 
 clean:
+	rm -rf mackup/__pycache__
+	rm -rf tests/__pycache__
 	rm -rf dist/
-	rm -rf Mackup.egg-info/
 
 release: clean
-	pipenv run python setup.py sdist
-	pipenv run twine upload dist/*
+	uv build
+	uv publish
 
-black:
-	black --target-version py27 .
+ruff:
+	ruff check .

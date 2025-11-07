@@ -8,3 +8,45 @@ pipx install uv
 uv run mackup --version
 make test
 ```
+
+## Running Tests with Coverage
+
+To run tests with coverage reporting:
+
+```sh
+# Run tests with coverage
+make coverage
+
+# View coverage report in terminal
+make coverage-report
+
+# Open HTML coverage report
+open htmlcov/index.html
+```
+
+## Code Quality Checks
+
+The project includes several code quality tools:
+
+```sh
+# Run all checks (ruff, mypy, pytest)
+make check
+
+# Run individual checks
+make ruff      # Code linting
+make mypy      # Type checking
+make test      # Unit tests
+make coverage  # Tests with coverage
+```
+
+## Coverage Configuration
+
+Coverage is configured in `pyproject.toml` with:
+
+- Branch coverage enabled
+- Test files excluded from coverage
+- HTML and XML reports generated
+- 67%+ coverage currently achieved
+
+You can view detailed coverage reports by running `make coverage` and opening
+`htmlcov/index.html` in your browser.

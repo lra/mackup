@@ -1,5 +1,12 @@
 # Mackup™
 
+[![Tests](https://github.com/lra/mackup/actions/workflows/test.yaml/badge.svg)](https://github.com/lra/mackup/actions/workflows/test.yaml)
+[![PyPI version](https://badge.fury.io/py/mackup.svg)](https://badge.fury.io/py/mackup)
+[![Python Versions](https://img.shields.io/pypi/pyversions/mackup.svg)](https://pypi.org/project/mackup/)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![mypy](https://img.shields.io/badge/mypy-checked-blue)](http://mypy-lang.org/)
+[![License](https://img.shields.io/github/license/lra/mackup.svg)](https://github.com/lra/mackup/blob/master/LICENSE)
+
 Backup and keep your application settings in sync.
 
 ## Table of contents

@@ -24,8 +24,28 @@ Changelog = "https://github.com/lra/mackup/releases"
 [dependency-groups]
 dev = [
     "pytest>=8.4.2",
+    "mypy>=1.13.0",
 ]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+check_untyped_defs = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+show_error_codes = true
+
+[[tool.mypy.overrides]]
+module = "docopt"
+ignore_missing_imports = true

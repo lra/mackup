@@ -107,14 +107,14 @@ def main() -> None:
     # mackup show <application>
     elif args["show"]:
         mckp.check_for_usable_environment()
-        app_name: str = args["<application>"]
+        requested_app_name: str = args["<application>"]
 
         # Make sure the app exists
-        if app_name not in app_db.get_app_names():
-            sys.exit("Unsupported application: {}".format(app_name))
-        print("Name: {}".format(app_db.get_name(app_name)))
+        if requested_app_name not in app_db.get_app_names():
+            sys.exit("Unsupported application: {}".format(requested_app_name))
+        print("Name: {}".format(app_db.get_name(requested_app_name)))
         print("Configuration files:")
-        for file in app_db.get_files(app_name):
+        for file in app_db.get_files(requested_app_name):
             print(" - {}".format(file))
 
     # mackup backup

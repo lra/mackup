@@ -12,7 +12,7 @@ from .mackup import Mackup
 from . import utils
 
 
-class ApplicationProfile(object):
+class ApplicationProfile:
     """Instantiate this class with application specific data."""
 
     def __init__(self, mackup: Mackup, files: Set[str], dry_run: bool, verbose: bool) -> None:

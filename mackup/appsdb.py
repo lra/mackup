@@ -8,17 +8,13 @@ data from the Mackup Database (files).
 import os
 from typing import Dict, Set, Union
 
-try:
-    import configparser
-except ImportError:
-    import ConfigParser as configparser  # type: ignore
-
+import configparser
 
 from .constants import APPS_DIR
 from .constants import CUSTOM_APPS_DIR
 
 
-class ApplicationsDatabase(object):
+class ApplicationsDatabase:
     """Database containing all the configured applications."""
 
     def __init__(self) -> None:

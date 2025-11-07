@@ -8,19 +8,19 @@ import stat
 import subprocess
 import sys
 import sqlite3
-from typing import Optional
+from typing import NoReturn, Optional
 
 from . import constants
 
 
 # Flag that controls how user confirmation works.
 # If True, the user wants to say "yes" to everything.
-FORCE_YES = False
+FORCE_YES: bool = False
 # If True, the user wants to say "no" to everything.
-FORCE_NO = False
+FORCE_NO: bool = False
 
 # Flag that control if mackup can be run as root
-CAN_RUN_AS_ROOT = False
+CAN_RUN_AS_ROOT: bool = False
 
 
 def confirm(question: str) -> bool:
@@ -39,10 +39,10 @@ def confirm(question: str) -> bool:
         return False
 
     while True:
-        answer = input(question + " <Yes|No> ").lower()
+        answer: str = input(question + " <Yes|No> ").lower()
 
         if answer == "yes" or answer == "y":
-            confirmed = True
+            confirmed: bool = True
             break
         if answer == "no" or answer == "n":
             confirmed = False
@@ -186,15 +186,15 @@ def chmod(target: str) -> None:
         raise ValueError("Unsupported file type: {}".format(target))
 
 
-def error(message: str) -> None:
+def error(message: str) -> NoReturn:
     """
     Throw an error with the given message and immediately quit.
 
     Args:
         message(str): The message to display.
     """
-    fail = "\033[91m"
-    end = "\033[0m"
+    fail: str = "\033[91m"
+    end: str = "\033[0m"
     sys.exit(fail + "Error: {}".format(message) + end)
 
 
@@ -285,12 +285,12 @@ def is_process_running(process_name: str) -> bool:
     Returns:
         (bool): True if the process is running
     """
-    is_running = False
+    is_running: bool = False
 
     # On systems with pgrep, check if the given process is running
     if os.path.isfile("/usr/bin/pgrep"):
         dev_null = open(os.devnull, "wb")
-        returncode = subprocess.call(["/usr/bin/pgrep", process_name], stdout=dev_null)
+        returncode: int = subprocess.call(["/usr/bin/pgrep", process_name], stdout=dev_null)
         is_running = bool(returncode == 0)
 
     return is_running
@@ -357,15 +357,15 @@ def can_file_be_synced_on_current_platform(path: str) -> bool:
     Returns:
         (bool): True if given file can be synced
     """
-    can_be_synced = True
+    can_be_synced: bool = True
 
     # If the given path is relative, prepend home
-    fullpath = os.path.join(os.environ["HOME"], path)
+    fullpath: str = os.path.join(os.environ["HOME"], path)
 
     # Compute the ~/Library path on macOS
     # End it with a slash because we are looking for this specific folder and
     # not any file/folder named LibrarySomething
-    library_path = os.path.join(os.environ["HOME"], "Library/")
+    library_path: str = os.path.join(os.environ["HOME"], "Library/")
 
     if platform.system() == constants.PLATFORM_LINUX:
         if fullpath.startswith(library_path):

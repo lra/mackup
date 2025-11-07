@@ -48,4 +48,5 @@ Coverage is configured in `pyproject.toml` with:
 - HTML and XML reports generated
 - 67%+ coverage currently achieved
 
-The coverage reports are automatically uploaded to Codecov on CI runs for Python 3.12.
+The coverage reports are automatically uploaded to Codecov on CI runs for
+Python 3.12.

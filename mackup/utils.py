@@ -367,8 +367,17 @@ def can_file_be_synced_on_current_platform(path: str) -> bool:
     # not any file/folder named LibrarySomething
     library_path = os.path.join(os.environ["HOME"], "Library/")
 
-    if platform.system() == constants.PLATFORM_LINUX:
+    if platform.system() == constants.PLATFORM_LINUX or platform.system() == constants.PLATFORM_WINDOWS:
         if fullpath.startswith(library_path):
+            can_be_synced = False
+
+    # Compute the ~/AppData path on Windows
+    # End it with a slash because we are looking for this specific folder and
+    # not any file/folder named AppDataSomething
+    appdata_path = os.path.join(os.environ["HOME"], "AppData/")
+
+    if platform.system() == constants.PLATFORM_LINUX or platform.system() == constants.PLATFORM_DARWIN:
+        if fullpath.startswith(appdata_path):
             can_be_synced = False
 
     return can_be_synced

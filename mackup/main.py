@@ -68,8 +68,8 @@ def main() -> None:
     # Get the command line arg
     args: Dict[str, Any] = docopt(__doc__, version="Mackup {}".format(VERSION))
 
-    mckp = Mackup()
-    app_db = ApplicationsDatabase()
+    mckp: Mackup = Mackup()
+    app_db: ApplicationsDatabase = ApplicationsDatabase()
 
     def printAppHeader(app_name: str) -> None:
         if verbose:
@@ -87,15 +87,15 @@ def main() -> None:
     if args["--root"]:
         utils.CAN_RUN_AS_ROOT = True
 
-    dry_run = args["--dry-run"]
+    dry_run: bool = args["--dry-run"]
 
-    verbose = args["--verbose"]
+    verbose: bool = args["--verbose"]
 
     # mackup list
     if args["list"]:
         # Display the list of supported applications
         mckp.check_for_usable_environment()
-        output = "Supported applications:\n"
+        output: str = "Supported applications:\n"
         for app_name in sorted(app_db.get_app_names()):
             output += " - {}\n".format(app_name)
         output += "\n"
@@ -107,7 +107,7 @@ def main() -> None:
     # mackup show <application>
     elif args["show"]:
         mckp.check_for_usable_environment()
-        app_name = args["<application>"]
+        app_name: str = args["<application>"]
 
         # Make sure the app exists
         if app_name not in app_db.get_app_names():
@@ -123,7 +123,7 @@ def main() -> None:
 
         # Create a backup of the files of each application
         for app_name in sorted(mckp.get_apps_to_backup()):
-            app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
+            app: ApplicationProfile = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
             printAppHeader(app_name)
             app.copy_files_to_mackup_folder()
 

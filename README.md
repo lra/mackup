@@ -19,6 +19,7 @@ Backup and keep your application settings in sync.
   - [Why did you do this](#why-did-you-do-this)
   - [What platforms are supported](#what-platforms-are-supported)
   - [What's up with the weird name](#whats-up-with-the-weird-name)
+  - [Architecture](#architecture)
   - [Where can I find more information](#where-can-i-find-more-information)
 
 ## Quickstart
@@ -834,6 +835,20 @@ And it's [GPL](http://www.gnu.org/licenses/gpl.html), of course.
 Mackup is just a portmanteau of Mac and Backup. It is simple, short, and easy to
 remember, and it corresponds with the whole idea of Mackup: the simpler – the better!
 (And I suck at naming stuff, but who doesn't.)
+
+## Architecture
+
+Want to understand how Mackup works internally? Check out the
+[Architecture Guide](doc/ARCHITECTURE.md) which includes:
+
+- Visual architecture diagram
+- Component breakdown
+- Data flow diagrams
+- Design decisions
+- Extension points for contributors
+
+Perfect for contributors who want to understand the codebase or users
+curious about how their configs are managed.
 
 ## Where can I find more information
 

@@ -1,7 +1,6 @@
 # Mackup™
 
 [![Tests](https://github.com/lra/mackup/actions/workflows/test.yaml/badge.svg)](https://github.com/lra/mackup/actions/workflows/test.yaml)
-[![codecov](https://codecov.io/gh/lra/mackup/branch/master/graph/badge.svg)](https://codecov.io/gh/lra/mackup)
 [![PyPI version](https://badge.fury.io/py/mackup.svg)](https://badge.fury.io/py/mackup)
 [![Python Versions](https://img.shields.io/pypi/pyversions/mackup.svg)](https://pypi.org/project/mackup/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)

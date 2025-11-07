@@ -17,7 +17,7 @@ from . import config
 from . import appsdb
 
 
-class Mackup(object):
+class Mackup:
     """Main Mackup class."""
 
     def __init__(self) -> None:

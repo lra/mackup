@@ -21,13 +21,10 @@ from .utils import (
     get_icloud_folder_location,
 )
 
-try:
-    import configparser
-except ImportError:
-    import ConfigParser as configparser  # type: ignore
+import configparser
 
 
-class Config(object):
+class Config:
     """The Mackup Config class."""
 
     def __init__(self, filename: Optional[str] = None) -> None:

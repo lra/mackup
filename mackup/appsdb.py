@@ -8,17 +8,13 @@ data from the Mackup Database (files).
 import os
 from typing import Dict, Set, Union
 
-try:
-    import configparser
-except ImportError:
-    import ConfigParser as configparser  # type: ignore
-
+import configparser
 
 from .constants import APPS_DIR
 from .constants import CUSTOM_APPS_DIR
 
 
-class ApplicationsDatabase(object):
+class ApplicationsDatabase:
     """Database containing all the configured applications."""
 
     def __init__(self) -> None:
@@ -27,38 +23,39 @@ class ApplicationsDatabase(object):
         self.apps: Dict[str, Dict[str, Union[str, Set[str]]]] = {}
 
         for config_file in ApplicationsDatabase.get_config_files():
-            config = configparser.ConfigParser(allow_no_value=True)
+            config: configparser.ConfigParser = configparser.ConfigParser(allow_no_value=True)
 
             # Needed to not lowercase the configuration_files in the ini files
-            config.optionxform = str
+            config.optionxform = str  # type: ignore
 
             if config.read(config_file):
                 # Get the filename without the directory name
-                filename = os.path.basename(config_file)
+                filename: str = os.path.basename(config_file)
                 # The app name is the cfg filename with the extension
-                app_name = filename[: -len(".cfg")]
+                app_name: str = filename[: -len(".cfg")]
 
                 # Start building a dict for this app
                 self.apps[app_name] = {}
 
                 # Add the fancy name for the app, for display purpose
-                app_pretty_name = config.get("application", "name")
+                app_pretty_name: str = config.get("application", "name")
                 self.apps[app_name]["name"] = app_pretty_name
 
                 # Add the configuration files to sync
-                self.apps[app_name]["configuration_files"] = set()
+                config_files: Set[str] = set()
+                self.apps[app_name]["configuration_files"] = config_files
                 if config.has_section("configuration_files"):
                     for path in config.options("configuration_files"):
                         if path.startswith("/"):
                             raise ValueError(
                                 "Unsupported absolute path: {}".format(path)
                             )
-                        self.apps[app_name]["configuration_files"].add(path)
+                        config_files.add(path)
 
                 # Add the XDG configuration files to sync
-                home = os.path.expanduser("~/")
-                failobj = "{}.config".format(home)
-                xdg_config_home = os.environ.get("XDG_CONFIG_HOME", failobj)
+                home: str = os.path.expanduser("~/")
+                failobj: str = "{}.config".format(home)
+                xdg_config_home: str = os.environ.get("XDG_CONFIG_HOME", failobj)
                 if not xdg_config_home.startswith(home):
                     raise ValueError(
                         "$XDG_CONFIG_HOME: {} must be "
@@ -73,7 +70,7 @@ class ApplicationsDatabase(object):
                             )
                         path = os.path.join(xdg_config_home, path)
                         path = path.replace(home, "")
-                        (self.apps[app_name]["configuration_files"].add(path))
+                        config_files.add(path)
 
     @staticmethod
     def get_config_files() -> Set[str]:
@@ -91,14 +88,14 @@ class ApplicationsDatabase(object):
             set of strings.
         """
         # Configure the config parser
-        apps_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), APPS_DIR)
-        custom_apps_dir = os.path.join(os.environ["HOME"], CUSTOM_APPS_DIR)
+        apps_dir: str = os.path.join(os.path.dirname(os.path.realpath(__file__)), APPS_DIR)
+        custom_apps_dir: str = os.path.join(os.environ["HOME"], CUSTOM_APPS_DIR)
 
         # List of stock application config files
-        config_files = set()
+        config_files: Set[str] = set()
 
         # Temp list of user added app config file names
-        custom_files = set()
+        custom_files: Set[str] = set()
 
         # Get the list of custom application config files first
         if os.path.isdir(custom_apps_dir):
@@ -127,7 +124,9 @@ class ApplicationsDatabase(object):
         Returns:
             str
         """
-        return self.apps[name]["name"]
+        value = self.apps[name]["name"]
+        assert isinstance(value, str)
+        return value
 
     def get_files(self, name: str) -> Set[str]:
         """
@@ -139,7 +138,9 @@ class ApplicationsDatabase(object):
         Returns:
             set of str.
         """
-        return self.apps[name]["configuration_files"]
+        value = self.apps[name]["configuration_files"]
+        assert isinstance(value, set)
+        return value
 
     def get_app_names(self) -> Set[str]:
         """
@@ -151,7 +152,7 @@ class ApplicationsDatabase(object):
         Returns:
             set of str.
         """
-        app_names = set()
+        app_names: Set[str] = set()
         for name in self.apps:
             app_names.add(name)
 
@@ -164,7 +165,7 @@ class ApplicationsDatabase(object):
         Returns:
             set of str.
         """
-        pretty_app_names = set()
+        pretty_app_names: Set[str] = set()
         for app_name in self.get_app_names():
             pretty_app_names.add(self.get_name(app_name))
 

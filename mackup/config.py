@@ -21,13 +21,10 @@ from .utils import (
     get_icloud_folder_location,
 )
 
-try:
-    import configparser
-except ImportError:
-    import ConfigParser as configparser  # type: ignore
+import configparser
 
 
-class Config(object):
+class Config:
     """The Mackup Config class."""
 
     def __init__(self, filename: Optional[str] = None) -> None:
@@ -148,7 +145,7 @@ class Config(object):
 
         return parser
 
-    def _best_config_path(self, filename=None):
+    def _best_config_path(self, filename: Optional[str] = None) -> str:
         """
         If no filename is provided, we try to find one in according to the following
         order, note that we will always check the original default of `~/.mackup.cfg`
@@ -170,6 +167,7 @@ class Config(object):
         assert isinstance(filename, str) or filename is None
 
         # If we are not overriding the config filename
+        config_path: Path
         if not filename:
             default = Path.home() / MACKUP_CONFIG_FILE
             search_paths = [
@@ -184,20 +182,20 @@ class Config(object):
                     / MACKUP_CONFIG_FILE.lstrip(".")
                 ),
             ]
-            filename = next((p for p in search_paths if p.is_file()), default)
+            config_path = next((p for p in search_paths if p.is_file()), default)
         else:
-            filename = Path.home() / filename
+            config_path = Path.home() / filename
 
         try:
             # Make sure the config file is in the home directory
-            filename.relative_to(Path.home())
+            config_path.relative_to(Path.home())
         except ValueError:
             error(
-                f"The config file '{filename}' is not in your home directory. Aborting."
+                f"The config file '{config_path}' is not in your home directory. Aborting."
             )
 
         # return the absolute path to the config file
-        return str(filename.absolute())
+        return str(config_path.absolute())
 
     def _warn_on_old_config(self) -> None:
         """Warn the user if an old config format is detected."""

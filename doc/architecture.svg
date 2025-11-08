@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <style>
+      .title { font: bold 24px sans-serif; fill: #2c3e50; }
+      .subtitle { font: bold 18px sans-serif; fill: #34495e; }
+      .text { font: 14px sans-serif; fill: #2c3e50; }
+      .small-text { font: 12px sans-serif; fill: #7f8c8d; }
+      .box { fill: #ecf0f1; stroke: #34495e; stroke-width: 2; }
+      .highlight-box { fill: #3498db; stroke: #2980b9; stroke-width: 2; }
+      .storage-box { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+      .app-box { fill: #2ecc71; stroke: #27ae60; stroke-width: 2; }
+      .white-text { fill: white; }
+      .arrow { fill: none; stroke: #7f8c8d; stroke-width: 2; marker-end: url(#arrowhead); }
+      .thick-arrow { fill: none; stroke: #34495e; stroke-width: 3; marker-end: url(#arrowhead-thick); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#7f8c8d" />
+    </marker>
+    <marker id="arrowhead-thick" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#34495e" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="600" y="35" class="title" text-anchor="middle">Mackup Architecture</text>
+  <text x="600" y="60" class="small-text" text-anchor="middle">How Mackup backs up and syncs your application settings</text>
+  
+  <!-- Main Flow Sections -->
+  
+  <!-- Section 1: User Commands -->
+  <text x="100" y="110" class="subtitle">1. User Commands</text>
+  <rect x="100" y="120" width="200" height="140" class="highlight-box" rx="5"/>
+  <text x="200" y="150" class="white-text subtitle" text-anchor="middle">mackup</text>
+  <text x="200" y="175" class="white-text text" text-anchor="middle">backup</text>
+  <text x="200" y="200" class="white-text text" text-anchor="middle">restore</text>
+  <text x="200" y="225" class="white-text text" text-anchor="middle">link [install|uninstall]</text>
+  <text x="200" y="245" class="white-text text" text-anchor="middle">list</text>
+  
+  <!-- Section 2: Configuration -->
+  <text x="400" y="110" class="subtitle">2. Configuration</text>
+  <rect x="400" y="120" width="200" height="140" class="box" rx="5"/>
+  <text x="500" y="150" class="text subtitle" text-anchor="middle">~/.mackup.cfg</text>
+  <text x="500" y="175" class="small-text" text-anchor="middle">Storage: dropbox/icloud/</text>
+  <text x="500" y="193" class="small-text" text-anchor="middle">google_drive/file_system</text>
+  <text x="500" y="215" class="small-text" text-anchor="middle">Applications to sync</text>
+  <text x="500" y="233" class="small-text" text-anchor="middle">Applications to ignore</text>
+  <text x="500" y="251" class="small-text" text-anchor="middle">Custom directory</text>
+  
+  <!-- Section 3: Application Database -->
+  <text x="700" y="110" class="subtitle">3. Application Database</text>
+  <rect x="700" y="120" width="200" height="140" class="box" rx="5"/>
+  <text x="800" y="150" class="text subtitle" text-anchor="middle">mackup/applications/</text>
+  <text x="800" y="175" class="small-text" text-anchor="middle">600+ app configs (.cfg)</text>
+  <text x="800" y="195" class="small-text" text-anchor="middle">+ Custom configs</text>
+  <text x="800" y="215" class="small-text" text-anchor="middle">(~/.mackup/*.cfg)</text>
+  <text x="800" y="240" class="small-text" text-anchor="middle">Defines what files</text>
+  <text x="800" y="255" class="small-text" text-anchor="middle">to sync per app</text>
+  
+  <!-- Arrows between sections -->
+  <path d="M 300 190 L 390 190" class="thick-arrow"/>
+  <path d="M 600 190 L 690 190" class="thick-arrow"/>
+  
+  <!-- Main Processing Box -->
+  <text x="100" y="320" class="subtitle">4. Core Processing</text>
+  <rect x="100" y="330" width="800" height="200" class="highlight-box" rx="5"/>
+  
+  <!-- Inside Processing Box -->
+  <text x="500" y="365" class="white-text subtitle" text-anchor="middle">Mackup Engine</text>
+  
+  <!-- Processing Steps -->
+  <g>
+    <rect x="130" y="385" width="220" height="120" class="box" rx="3"/>
+    <text x="240" y="410" class="text subtitle" text-anchor="middle">Parse Config</text>
+    <text x="240" y="430" class="small-text" text-anchor="middle">• Read .mackup.cfg</text>
+    <text x="240" y="448" class="small-text" text-anchor="middle">• Detect storage path</text>
+    <text x="240" y="466" class="small-text" text-anchor="middle">• Load app definitions</text>
+    <text x="240" y="484" class="small-text" text-anchor="middle">• Apply filters</text>
+  </g>
+  
+  <g>
+    <rect x="380" y="385" width="220" height="120" class="box" rx="3"/>
+    <text x="490" y="410" class="text subtitle" text-anchor="middle">Process Files</text>
+    <text x="490" y="430" class="small-text" text-anchor="middle">• Locate config files</text>
+    <text x="490" y="448" class="small-text" text-anchor="middle">• Copy or symlink</text>
+    <text x="490" y="466" class="small-text" text-anchor="middle">• Handle XDG paths</text>
+    <text x="490" y="484" class="small-text" text-anchor="middle">• Preserve permissions</text>
+  </g>
+  
+  <g>
+    <rect x="630" y="385" width="220" height="120" class="box" rx="3"/>
+    <text x="740" y="410" class="text subtitle" text-anchor="middle">Sync to Storage</text>
+    <text x="740" y="430" class="small-text" text-anchor="middle">• Move to Mackup folder</text>
+    <text x="740" y="448" class="small-text" text-anchor="middle">• Create symlinks back</text>
+    <text x="740" y="466" class="small-text" text-anchor="middle">• Or copy files (restore)</text>
+    <text x="740" y="484" class="small-text" text-anchor="middle">• Update timestamps</text>
+  </g>
+  
+  <!-- Arrows between processing steps -->
+  <path d="M 350 445 L 370 445" class="arrow"/>
+  <path d="M 600 445 L 620 445" class="arrow"/>
+  
+  <!-- Home Directory -->
+  <text x="100" y="590" class="subtitle">5. Your Home Directory</text>
+  <rect x="100" y="600" width="350" height="180" class="app-box" rx="5"/>
+  <text x="275" y="630" class="white-text subtitle" text-anchor="middle">~/</text>
+  <g>
+    <text x="130" y="660" class="white-text text">Config Files (actual or symlinks):</text>
+    <text x="140" y="685" class="white-text small-text">~/.gitconfig → ~/Dropbox/Mackup/.gitconfig</text>
+    <text x="140" y="705" class="white-text small-text">~/.vimrc → ~/Dropbox/Mackup/.vimrc</text>
+    <text x="140" y="725" class="white-text small-text">~/.ssh/config → ~/Dropbox/Mackup/.ssh/config</text>
+    <text x="140" y="745" class="white-text small-text">~/.zshrc → ~/Dropbox/Mackup/.zshrc</text>
+    <text x="140" y="765" class="white-text small-text">etc...</text>
+  </g>
+  
+  <!-- Storage Destination -->
+  <text x="550" y="590" class="subtitle">6. Storage Destination</text>
+  <rect x="550" y="600" width="350" height="180" class="storage-box" rx="5"/>
+  <text x="725" y="630" class="white-text subtitle" text-anchor="middle">Sync Folder</text>
+  <g>
+    <text x="580" y="660" class="white-text text">Backed up files in:</text>
+    <text x="590" y="685" class="white-text small-text">~/Dropbox/Mackup/.gitconfig</text>
+    <text x="590" y="705" class="white-text small-text">~/Dropbox/Mackup/.vimrc</text>
+    <text x="590" y="725" class="white-text small-text">~/Dropbox/Mackup/.ssh/config</text>
+    <text x="590" y="745" class="white-text small-text">~/Dropbox/Mackup/.zshrc</text>
+    <text x="590" y="765" class="white-text small-text">etc...</text>
+  </g>
+  
+  <!-- Arrows from processing to destinations -->
+  <path d="M 500 530 L 275 590" class="thick-arrow"/>
+  <path d="M 500 530 L 725 590" class="thick-arrow"/>
+  
+  <!-- Operation Modes -->
+  <text x="1000" y="110" class="subtitle">Operation Modes</text>
+  
+  <!-- Backup Mode -->
+  <rect x="980" y="130" width="180" height="110" class="box" rx="5"/>
+  <text x="1070" y="155" class="text subtitle" text-anchor="middle">backup</text>
+  <text x="1070" y="178" class="small-text" text-anchor="middle">Copy files from home</text>
+  <text x="1070" y="196" class="small-text" text-anchor="middle">to storage folder</text>
+  <text x="1070" y="220" class="small-text" text-anchor="middle">Used for initial</text>
+  <text x="1070" y="235" class="small-text" text-anchor="middle">backup only</text>
+  
+  <!-- Restore Mode -->
+  <rect x="980" y="260" width="180" height="110" class="box" rx="5"/>
+  <text x="1070" y="285" class="text subtitle" text-anchor="middle">restore</text>
+  <text x="1070" y="308" class="small-text" text-anchor="middle">Copy files from storage</text>
+  <text x="1070" y="326" class="small-text" text-anchor="middle">to home folder</text>
+  <text x="1070" y="350" class="small-text" text-anchor="middle">Used on new machines</text>
+  
+  <!-- Link Mode -->
+  <rect x="980" y="390" width="180" height="130" class="box" rx="5"/>
+  <text x="1070" y="415" class="text subtitle" text-anchor="middle">link [install]</text>
+  <text x="1070" y="438" class="small-text" text-anchor="middle">Move files to storage</text>
+  <text x="1070" y="456" class="small-text" text-anchor="middle">Create symlinks back</text>
+  <text x="1070" y="480" class="small-text" text-anchor="middle">⚠️ Broken on macOS</text>
+  <text x="1070" y="498" class="small-text" text-anchor="middle">Sonoma+ (use copy)</text>
+  <text x="1070" y="513" class="small-text" text-anchor="middle">instead)</text>
+  
+  <!-- Key Benefits -->
+  <rect x="980" y="580" width="180" height="140" class="highlight-box" rx="5"/>
+  <text x="1070" y="610" class="white-text subtitle" text-anchor="middle">Benefits</text>
+  <text x="1070" y="638" class="white-text small-text" text-anchor="middle">✓ Single source of truth</text>
+  <text x="1070" y="658" class="white-text small-text" text-anchor="middle">✓ Multi-machine sync</text>
+  <text x="1070" y="678" class="white-text small-text" text-anchor="middle">✓ Quick setup on new</text>
+  <text x="1070" y="696" class="white-text small-text" text-anchor="middle">machines</text>
+  <text x="1070" y="713" class="white-text small-text" text-anchor="middle">✓ Version control ready</text>
+  
+  <!-- Footer note -->
+  <text x="600" y="870" class="small-text" text-anchor="middle" style="font-style: italic;">
+    Files are either copied (backup/restore) or symlinked (link mode) between your home and storage folder
+  </text>
+</svg>

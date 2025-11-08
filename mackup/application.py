@@ -12,7 +12,7 @@ from .mackup import Mackup
 from . import utils
 
 
-class ApplicationProfile(object):
+class ApplicationProfile:
     """Instantiate this class with application specific data."""
 
     def __init__(self, mackup: Mackup, files: Set[str], dry_run: bool, verbose: bool) -> None:
@@ -26,10 +26,10 @@ class ApplicationProfile(object):
         assert isinstance(mackup, Mackup)
         assert isinstance(files, set)
 
-        self.mackup = mackup
+        self.mackup: Mackup = mackup
         self.files: List[str] = list(files)
-        self.dry_run = dry_run
-        self.verbose = verbose
+        self.dry_run: bool = dry_run
+        self.verbose: bool = verbose
 
     def getFilepaths(self, filename: str) -> Tuple[str, str]:
         """
@@ -79,6 +79,7 @@ class ApplicationProfile(object):
                 # If exists mackup/file
                 if os.path.lexists(mackup_filepath):
                     # Name it right
+                    file_type: str
                     if os.path.isfile(mackup_filepath):
                         file_type = "file"
                     elif os.path.isdir(mackup_filepath):
@@ -269,15 +270,15 @@ class ApplicationProfile(object):
             # If the file exists and is not already pointing to the mackup file
             # and the folder makes sense on the current platform (Don't sync
             # any subfolder of ~/Library on GNU/Linux)
-            file_or_dir_exists = os.path.isfile(mackup_filepath) or os.path.isdir(
+            file_or_dir_exists: bool = os.path.isfile(mackup_filepath) or os.path.isdir(
                 mackup_filepath
             )
-            pointing_to_mackup = (
+            pointing_to_mackup: bool = (
                 os.path.islink(home_filepath)
                 and os.path.exists(mackup_filepath)
                 and os.path.samefile(mackup_filepath, home_filepath)
             )
-            supported = utils.can_file_be_synced_on_current_platform(filename)
+            supported: bool = utils.can_file_be_synced_on_current_platform(filename)
 
             if file_or_dir_exists and not pointing_to_mackup and supported:
                 if self.verbose:
@@ -351,14 +352,14 @@ class ApplicationProfile(object):
             if os.path.isfile(mackup_filepath) or os.path.isdir(mackup_filepath):
                 # Check if there is a corresponding file in the home folder
                 if os.path.exists(home_filepath):
-                    # If the mackup file is not a link or does not point to the home file,
+                    # If the home file is not a link or does not point to the mackup file,
                     # display a warning and skip it.
-                    if not os.path.islink(mackup_filepath) or os.readlink(mackup_filepath) != home_filepath:
-                        print(f"Warning: the file in Mackup \"{mackup_filepath}\" does not point to the original file {home_filepath}, skipping...")
+                    if not os.path.islink(home_filepath) or os.readlink(home_filepath) != mackup_filepath:
+                        print(f"Warning: the file in your home \"{home_filepath}\" does not point to the original file in Mackup {mackup_filepath}, skipping...")
                         continue
                     if self.verbose:
                         print(
-                            "Reverting {}\n  at {} ...".format(
+                            "Reverting {}\n at {} ...".format(
                                 mackup_filepath, home_filepath
                             )
                         )

@@ -17,15 +17,15 @@ from . import config
 from . import appsdb
 
 
-class Mackup(object):
+class Mackup:
     """Main Mackup class."""
 
     def __init__(self) -> None:
         """Mackup Constructor."""
-        self._config = config.Config()
+        self._config: config.Config = config.Config()
 
-        self.mackup_folder = self._config.fullpath
-        self.temp_folder = tempfile.mkdtemp(prefix="mackup_tmp_")
+        self.mackup_folder: str = self._config.fullpath
+        self.temp_folder: str = tempfile.mkdtemp(prefix="mackup_tmp_")
 
     def check_for_usable_environment(self) -> None:
         """Check if the current env is usable and has everything's required."""
@@ -93,11 +93,11 @@ class Mackup(object):
             (set) List of application names to back up
         """
         # Instantiate the app db
-        app_db = appsdb.ApplicationsDatabase()
+        app_db: appsdb.ApplicationsDatabase = appsdb.ApplicationsDatabase()
 
         # If a list of apps to sync is specify, we only allow those
         # Or we allow every supported app by default
-        apps_to_backup = self._config.apps_to_sync or app_db.get_app_names()
+        apps_to_backup: Set[str] = self._config.apps_to_sync or app_db.get_app_names()
 
         # Remove the specified apps to ignore
         for app_name in self._config.apps_to_ignore:

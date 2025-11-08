@@ -340,17 +340,17 @@ class TestApplicationProfile(unittest.TestCase):
             self.assertIn("Recovering", output)
 
     def test_link_uninstall_mackup_not_a_link(self):
-        """Test that link_uninstall skips and warns when mackup file is not a symbolic link."""
+        """Test that link_uninstall skips and warns when home file is not a symbolic link."""
         # Create a test file in the mackup directory (regular file, not a link)
         test_file = ".testfile"
         mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
         home_filepath = os.path.join(self.temp_home, test_file)
 
-        # Create the mackup file as a regular file (not a link)
+        # Create the mackup file as a regular file
         with open(mackup_filepath, "w") as f:
             f.write("mackup content")
 
-        # Create the home file
+        # Create the home file as a regular file (not a link)
         with open(home_filepath, "w") as f:
             f.write("home content")
 
@@ -373,30 +373,30 @@ class TestApplicationProfile(unittest.TestCase):
 
             # Verify that the warning message was printed
             output = captured_output.getvalue()
-            self.assertIn("Warning: the file in Mackup", output)
+            self.assertIn("Warning: the file in your home", output)
             self.assertIn("does not point to the original file", output)
             self.assertIn(mackup_filepath, output)
             self.assertIn(home_filepath, output)
             self.assertIn("skipping", output)
 
     def test_link_uninstall_mackup_points_to_wrong_target(self):
-        """Test that link_uninstall skips and warns when mackup link points to wrong target."""
+        """Test that link_uninstall skips and warns when home link points to wrong target."""
         # Create a test file
         test_file = ".testfile"
         mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
         home_filepath = os.path.join(self.temp_home, test_file)
+
+        # Create the mackup file
+        with open(mackup_filepath, "w") as f:
+            f.write("mackup content")
 
         # Create a different target file
         wrong_target = os.path.join(self.temp_home, ".wrongtarget")
         with open(wrong_target, "w") as f:
             f.write("wrong target content")
 
-        # Create the mackup file as a symbolic link pointing to the wrong target
-        os.symlink(wrong_target, mackup_filepath)
-
-        # Create the home file
-        with open(home_filepath, "w") as f:
-            f.write("home content")
+        # Create the home file as a symbolic link pointing to the wrong target
+        os.symlink(wrong_target, home_filepath)
 
         # Patch utils.delete and utils.copy
         with patch("mackup.application.utils.delete") as mock_delete, \
@@ -417,25 +417,25 @@ class TestApplicationProfile(unittest.TestCase):
 
             # Verify that the warning message was printed
             output = captured_output.getvalue()
-            self.assertIn("Warning: the file in Mackup", output)
+            self.assertIn("Warning: the file in your home", output)
             self.assertIn("does not point to the original file", output)
             self.assertIn(mackup_filepath, output)
             self.assertIn(home_filepath, output)
             self.assertIn("skipping", output)
 
     def test_link_uninstall_mackup_points_correctly(self):
-        """Test that link_uninstall proceeds normally when mackup link points to home file correctly."""
+        """Test that link_uninstall proceeds normally when home link points to mackup file correctly."""
         # Create a test file
         test_file = ".testfile"
         mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
         home_filepath = os.path.join(self.temp_home, test_file)
 
-        # Create the home file first
-        with open(home_filepath, "w") as f:
-            f.write("home content")
+        # Create the mackup file first
+        with open(mackup_filepath, "w") as f:
+            f.write("mackup content")
 
-        # Create the mackup file as a symbolic link pointing to the home file
-        os.symlink(home_filepath, mackup_filepath)
+        # Create the home file as a symbolic link pointing to the mackup file
+        os.symlink(mackup_filepath, home_filepath)
 
         # Patch utils.delete and utils.copy
         with patch("mackup.application.utils.delete") as mock_delete, \

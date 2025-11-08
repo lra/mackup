@@ -1,5 +1,12 @@
 # Mackup™
 
+[![Tests](https://github.com/lra/mackup/actions/workflows/test.yaml/badge.svg)](https://github.com/lra/mackup/actions/workflows/test.yaml)
+[![PyPI version](https://badge.fury.io/py/mackup.svg)](https://badge.fury.io/py/mackup)
+[![Python Versions](https://img.shields.io/pypi/pyversions/mackup.svg)](https://pypi.org/project/mackup/)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![mypy](https://img.shields.io/badge/mypy-checked-blue)](http://mypy-lang.org/)
+[![License](https://img.shields.io/github/license/lra/mackup.svg)](https://github.com/lra/mackup/blob/master/LICENSE)
+
 Backup and keep your application settings in sync.
 
 ## Table of contents
@@ -19,6 +26,7 @@ Backup and keep your application settings in sync.
   - [Why did you do this](#why-did-you-do-this)
   - [What platforms are supported](#what-platforms-are-supported)
   - [What's up with the weird name](#whats-up-with-the-weird-name)
+  - [Architecture](#architecture)
   - [Where can I find more information](#where-can-i-find-more-information)
 
 ## Quickstart
@@ -277,6 +285,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Cider](https://github.com/msanders/cider)
 - [ClashX](https://github.com/yichengchen/clashX)
 - [Clasp](https://github.com/google/clasp)
+- [Claude Code](https://www.claude.com/product/claude-code)
 - [CleanShot](https://cleanshot.com/)
 - [Clementine](https://www.clementine-player.org/)
 - [CLion](https://www.jetbrains.com/clion/)
@@ -284,6 +293,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Clipy](https://clipy-app.com/)
 - [CloudApp](http://getcloudapp.com/)
 - [Coda 2](http://panic.com/coda/)
+- [Codex](https://openai.com/codex/)
 - [Colloquy](http://colloquy.info/)
 - [ColorSchemer Studio 2](http://www.colorschemer.com/osx_info.php)
 - [ColorSlurp](http://colorslurp.com/)
@@ -791,7 +801,8 @@ We can [with your help](doc#get-official-support-for-an-application) ;)
 ## Personalization & configuration
 
 Have an application that shouldn't be generally supported but that you use?
-Or a cool file you want to sync?
+Or some personal files you want to sync, e.g. various config files in a `~/.config/`
+directory or your personal `~/.gitignore`?
 
 - Create a `~/.mackup` directory to [sync an application or any file or directory](doc#add-support-for-an-application-or-any-file-or-directory)
 
@@ -832,6 +843,20 @@ And it's [GPL](http://www.gnu.org/licenses/gpl.html), of course.
 Mackup is just a portmanteau of Mac and Backup. It is simple, short, and easy to
 remember, and it corresponds with the whole idea of Mackup: the simpler – the better!
 (And I suck at naming stuff, but who doesn't.)
+
+## Architecture
+
+Want to understand how Mackup works internally? Check out the
+[Architecture Guide](doc/ARCHITECTURE.md) which includes:
+
+- Visual architecture diagram
+- Component breakdown
+- Data flow diagrams
+- Design decisions
+- Extension points for contributors
+
+Perfect for contributors who want to understand the codebase or users
+curious about how their configs are managed.
 
 ## Where can I find more information
 

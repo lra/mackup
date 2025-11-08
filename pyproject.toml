@@ -69,7 +69,7 @@ strict_equality = true
 show_error_codes = true
 
 [tool.coverage.run]
-source = ["mackup"]
+source = ["src/mackup"]
 branch = true
 omit = [
     "*/tests/*",
@@ -102,4 +102,4 @@ addopts = [
     "-ra",
 ]
 testpaths = ["tests"]
-pythonpath = ["."]
+pythonpath = ["src"]

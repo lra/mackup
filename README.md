@@ -31,7 +31,7 @@ Backup and keep your application settings in sync.
 
 ## Quickstart
 
-On macOS, if you want an easy install, you can install
+On macOS or Linux, if you want an easy install, you can install
 [Homebrew](http://brew.sh/) and do:
 
 ```bash
@@ -42,7 +42,7 @@ brew install mackup
 mackup backup
 ```
 
-If not running macOS, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/).
+If not running macOS or Linux, or you don't like Homebrew, you can use [pip](https://pip.pypa.io/en/stable/).
 
 ```bash
 # Install Mackup with PIP

@@ -1,8 +1,6 @@
 """Tests for the --config-file command line option."""
 import os
-import tempfile
 import unittest
-from pathlib import Path
 from mackup.config import Config
 from mackup.mackup import Mackup
 

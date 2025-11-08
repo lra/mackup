@@ -11,13 +11,13 @@ coverage-report:
 	uv run coverage report
 
 mypy:
-	uv run mypy mackup/
+	uv run mypy src/mackup/
 
 check: ruff mypy test
 	@echo "All checks passed!"
 
 clean:
-	rm -rf mackup/__pycache__
+	rm -rf src/mackup/__pycache__
 	rm -rf tests/__pycache__
 	rm -rf dist/
 	rm -rf htmlcov/

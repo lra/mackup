@@ -67,10 +67,6 @@ warn_unreachable = true
 strict_equality = true
 show_error_codes = true
 
-[[tool.mypy.overrides]]
-module = "docopt"
-ignore_missing_imports = true
-
 [tool.coverage.run]
 source = ["mackup"]
 branch = true

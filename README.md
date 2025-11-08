@@ -505,6 +505,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [mitmproxy](https://mitmproxy.org/)
 - [mkcert](https://github.com/FiloSottile/mkcert)
 - [MonoDevelop](http://www.monodevelop.com)
+- [Mole](https://github.com/tw93/Mole)
 - [Moom](http://manytricks.com/moom/)
 - [Mosaic](https://lightpillar.com/mosaic.html)
 - [Mou](http://25.io/mou/)

@@ -24,14 +24,14 @@ use the default config location of `~/.mackup.cfg`
 - `$MACKUP_CONFIG`
 - `$XDG_CONFIG_HOME/mackup/mackup.cfg` or `~/.config/mackup/mackup.cfg`
 
-You can also specify a custom config file location using the `--config-file` 
+You can also specify a custom config file location using the `--config-file`
 command-line option:
 
 ```bash
 mackup --config-file ~/.mackup-custom.cfg backup
 ```
 
-The path can be absolute or relative to your home directory. Note that the 
+The path can be absolute or relative to your home directory. Note that the
 config file must be located within your home directory for security reasons.
 
 ## Storage

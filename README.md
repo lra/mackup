@@ -514,6 +514,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Microsoft Remote Desktop](https://itunes.apple.com/us/app/microsoft-remote-desktop-10/id1295203466)
 - [mitmproxy](https://mitmproxy.org/)
 - [mkcert](https://github.com/FiloSottile/mkcert)
+- [Mole](https://github.com/tw93/Mole)
 - [MonoDevelop](http://www.monodevelop.com)
 - [Moom](http://manytricks.com/moom/)
 - [Mosaic](https://lightpillar.com/mosaic.html)

@@ -4,8 +4,8 @@ Keep your application settings in sync.
 Copyright (C) 2013-2025 Laurent Raufaste <http://glop.org/>
 
 Usage:
-  mackup list
-  mackup show <application>
+  mackup [options] list
+  mackup [options] show <application>
   mackup [options] backup
   mackup [options] restore
   mackup [options] link install
@@ -14,13 +14,14 @@ Usage:
   mackup (-h | --help)
 
 Options:
-  -h --help     Show this screen.
-  -f --force    Force every question asked to be answered with "Yes".
-  --force-no    Force every question asked to be answered with "No".
-  -r --root     Allow mackup to be run as superuser.
-  -n --dry-run  Show steps without executing.
-  -v --verbose  Show additional details.
-  --version     Show version.
+  -h --help                 Show this screen.
+  -f --force                Force every question asked to be answered with "Yes".
+  --force-no                Force every question asked to be answered with "No".
+  -r --root                 Allow mackup to be run as superuser.
+  -n --dry-run              Show steps without executing.
+  -v --verbose              Show additional details.
+  -c --config-file=<path>   Specify custom config file path.
+  --version                 Show version.
 
 Modes of action:
  - mackup list: display a list of all supported applications.
@@ -46,7 +47,7 @@ from .constants import MACKUP_APP_NAME, VERSION
 from .mackup import Mackup
 from . import utils
 import sys
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 
 
 class ColorFormatCodes:
@@ -68,7 +69,8 @@ def main() -> None:
     # Get the command line arg
     args: Dict[str, Any] = docopt(__doc__, version="Mackup {}".format(VERSION))
 
-    mckp: Mackup = Mackup()
+    config_file: Optional[str] = args.get("--config-file")
+    mckp: Mackup = Mackup(config_file)
     app_db: ApplicationsDatabase = ApplicationsDatabase()
 
     def printAppHeader(app_name: str) -> None:
@@ -209,7 +211,7 @@ def main() -> None:
 
         # Initialize again the apps db, as the Mackup config might have changed
         # it
-        mckp = Mackup()
+        mckp = Mackup(config_file)
         app_db = ApplicationsDatabase()
 
         # Restore the rest of the app configs, using the restored Mackup config

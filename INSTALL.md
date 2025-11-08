@@ -2,12 +2,12 @@
 
 There are 2 ways to run mackup:
 
-1. Install it with Homebrew (OSX only)
-2. Install it with PIP (OSX and GNU/Linux)
+1. Install it with Homebrew (macOS and GNU/Linux)
+2. Install it with PIP (macOS and GNU/Linux)
 
 ## Install
 
-### With Homebrew (OSX only)
+### With Homebrew
 
 ```bash
 # Easy
@@ -17,7 +17,7 @@ brew install mackup
 mackup -h
 ```
 
-### With Homebrew (OSX only) master branch for latest updates
+### With Homebrew master branch for latest updates
 
 Want to install the latest master release instead of waiting on the homebrew
 package version?
@@ -45,7 +45,7 @@ mackup -h
 
 ## Upgrade
 
-### Upgrade with Homebrew (OSX only)
+### Upgrade with Homebrew
 
 ```bash
 brew update
@@ -62,7 +62,7 @@ mackup -h
 
 ## Uninstall
 
-### Uninstall with Homebrew (OSX only)
+### Uninstall with Homebrew
 
 ```bash
 brew uninstall mackup

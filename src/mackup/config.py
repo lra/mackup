@@ -189,6 +189,12 @@ class Config:
             config_path = Path(filename).expanduser()
             if not config_path.is_absolute():
                 config_path = Path.home() / filename
+            
+            # When explicitly specified, check that the file exists
+            if not config_path.is_file():
+                error(
+                    f"The config file '{config_path}' does not exist. Aborting."
+                )
 
         try:
             # Make sure the config file is in the home directory

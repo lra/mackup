@@ -44,3 +44,8 @@ class TestConfigFileOption(unittest.TestCase):
         # Verify that the config was properly initialized
         assert mckp._config is not None
         assert isinstance(mckp.mackup_folder, str)
+
+    def test_config_file_does_not_exist(self):
+        """Test that specifying a non-existent config file raises an error."""
+        with self.assertRaises(SystemExit):
+            Config("nonexistent-config-file.cfg")

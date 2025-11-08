@@ -159,7 +159,8 @@ class Config:
         if none of these files exist, we create ~/.mackup.cfg
 
         Args:
-            filename (str or None, optional): Optional override for the config file path. Defaults to None.
+            filename (str or None, optional): Optional override for the config file path. 
+                Can be absolute or relative to home directory. Defaults to None.
 
         Returns:
             str: the absolute path to the config file
@@ -184,7 +185,16 @@ class Config:
             ]
             config_path = next((p for p in search_paths if p.is_file()), default)
         else:
-            config_path = Path.home() / filename
+            # Support both absolute and relative paths
+            config_path = Path(filename).expanduser()
+            if not config_path.is_absolute():
+                config_path = Path.home() / filename
+            
+            # When explicitly specified, check that the file exists
+            if not config_path.is_file():
+                error(
+                    f"The config file '{config_path}' does not exist. Aborting."
+                )
 
         try:
             # Make sure the config file is in the home directory

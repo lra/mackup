@@ -10,7 +10,7 @@ import os
 import os.path
 import shutil
 import tempfile
-from typing import Set
+from typing import Optional, Set
 
 from . import utils
 from . import config
@@ -20,9 +20,9 @@ from . import appsdb
 class Mackup:
     """Main Mackup class."""
 
-    def __init__(self) -> None:
+    def __init__(self, config_file: Optional[str] = None) -> None:
         """Mackup Constructor."""
-        self._config: config.Config = config.Config()
+        self._config: config.Config = config.Config(config_file)
 
         self.mackup_folder: str = self._config.fullpath
         self.temp_folder: str = tempfile.mkdtemp(prefix="mackup_tmp_")

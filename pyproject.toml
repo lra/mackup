@@ -95,6 +95,9 @@ exclude_lines = [
 [tool.coverage.html]
 directory = "htmlcov"
 
+[pytest]
+strict = true
+
 [tool.pytest.ini_options]
 addopts = [
     "--strict-markers",

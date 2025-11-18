@@ -95,14 +95,9 @@ exclude_lines = [
 [tool.coverage.html]
 directory = "htmlcov"
 
-[pytest]
+[tool.pytest]
 strict = true
-
-[tool.pytest.ini_options]
-addopts = [
-    "--strict-markers",
-    "--strict-config",
-    "-ra",
-]
+minversion = "9.0"
 testpaths = ["tests"]
 pythonpath = ["src"]
+addopts = ["-ra"]

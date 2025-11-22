@@ -643,6 +643,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Ruby](https://www.ruby-lang.org/)
 - [RubyMine](http://www.jetbrains.com/ruby/)
 - [Rust](https://www.rust-lang.org/)
+- [RustRover](https://www.jetbrains.com/rust/)
 - [S3cmd](http://s3tools.org/s3cmd)
 - [SABnzbd](http://sabnzbd.org/)
 - [SBCL](http://www.sbcl.org/)

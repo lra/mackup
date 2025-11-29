@@ -19,27 +19,39 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
         # Create a mock Mackup instance
         self.mock_mackup = Mock(spec=Mackup)
         self.mock_mackup.mackup_folder = tempfile.mkdtemp()
+        
+        # Register cleanup for mackup folder
+        self.addCleanup(self._cleanup_directory, self.mock_mackup.mackup_folder)
 
         # Create a temporary home directory
         self.temp_home = tempfile.mkdtemp()
+        
+        # Register cleanup for temp home
+        self.addCleanup(self._cleanup_directory, self.temp_home)
 
         # Save original HOME and set it to temp directory
         self.original_home = os.environ.get("HOME")
         os.environ["HOME"] = self.temp_home
+        
+        # Register cleanup for HOME restoration
+        self.addCleanup(self._restore_home, self.original_home)
+
+    def _cleanup_directory(self, directory):
+        """Safely clean up a directory."""
+        if os.path.exists(directory):
+            shutil.rmtree(directory)
+
+    def _restore_home(self, original_home):
+        """Restore the original HOME environment variable."""
+        if original_home is not None:
+            os.environ["HOME"] = original_home
+        elif "HOME" in os.environ:
+            del os.environ["HOME"]
 
     def tearDown(self):
         """Clean up test fixtures."""
-        # Restore original HOME
-        if self.original_home is not None:
-            os.environ["HOME"] = self.original_home
-        else:
-            del os.environ["HOME"]
-
-        # Clean up temporary directories
-        if os.path.exists(self.temp_home):
-            shutil.rmtree(self.temp_home)
-        if os.path.exists(self.mock_mackup.mackup_folder):
-            shutil.rmtree(self.mock_mackup.mackup_folder)
+        # Cleanup is now handled by addCleanup, which runs even if test fails
+        pass
 
     def test_backup_after_link_install_does_not_delete_mackup_files(self):
         """

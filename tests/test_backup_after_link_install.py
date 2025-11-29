@@ -52,8 +52,7 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
         test_files = {".testfile", ".testdir"}
 
         # Step 1: Simulate initial state - files exist in home
-        test_file = ".testfile"
-        test_dir = ".testdir"
+        test_file, test_dir = list(test_files)
         home_file = os.path.join(self.temp_home, test_file)
         home_dir = os.path.join(self.temp_home, test_dir)
         

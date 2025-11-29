@@ -495,6 +495,16 @@ class TestApplicationProfile(unittest.TestCase):
             output = captured_output.getvalue()
             self.assertNotIn("Backing up", output)
 
+        # Verify the symlink still exists and points to mackup file
+        self.assertTrue(os.path.islink(home_filepath))
+        self.assertTrue(os.path.samefile(home_filepath, mackup_filepath))
+        
+        # Verify the mackup file still exists with original content
+        self.assertTrue(os.path.exists(mackup_filepath))
+        with open(mackup_filepath, "r") as f:
+            self.assertEqual(f.read(), "mackup content")
+
+
     def test_copy_files_to_mackup_folder_skips_already_linked_files_verbose(self):
         """Test that backup skips files already linked from link install with verbose mode."""
         # Create a verbose ApplicationProfile
@@ -541,6 +551,16 @@ class TestApplicationProfile(unittest.TestCase):
             self.assertIn("already linked to", output)
             self.assertIn(home_filepath, output)
             self.assertIn(mackup_filepath, output)
+
+        # Verify the symlink still exists and points to mackup file
+        self.assertTrue(os.path.islink(home_filepath))
+        self.assertTrue(os.path.samefile(home_filepath, mackup_filepath))
+        
+        # Verify the mackup file still exists with original content
+        self.assertTrue(os.path.exists(mackup_filepath))
+        with open(mackup_filepath, "r") as f:
+            self.assertEqual(f.read(), "mackup content")
+
 
     def test_copy_files_to_mackup_folder_backs_up_symlink_to_different_location(self):
         """Test that backup still works for symlinks pointing elsewhere (not mackup)."""

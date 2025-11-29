@@ -1,6 +1,9 @@
 lint:
 	markdownlint -c .markdownlint.yaml '**/*.md'
 
+ruff:
+	ruff check .
+
 test:
 	uv run pytest
 
@@ -13,7 +16,7 @@ coverage-report:
 mypy:
 	uv run mypy src/mackup/
 
-check: ruff mypy test
+check: lint ruff mypy test
 	@echo "All checks passed!"
 
 clean:
@@ -27,6 +30,3 @@ clean:
 release: clean
 	uv build
 	uv publish
-
-ruff:
-	ruff check .

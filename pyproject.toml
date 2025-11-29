@@ -1,6 +1,6 @@
 [project]
 name = "mackup"
-version = "0.10.0"
+version = "0.10.1"
 description = "Backup and keep your application settings in sync."
 readme = "README.md"
 dependencies = [

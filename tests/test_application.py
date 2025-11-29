@@ -459,6 +459,124 @@ class TestApplicationProfile(unittest.TestCase):
             self.assertIn("Reverting", output)
             self.assertNotIn("Warning", output)
 
+    def test_copy_files_to_mackup_folder_skips_already_linked_files(self):
+        """Test that backup skips files already linked from link install."""
+        # Create a test file
+        test_file = ".testfile"
+        mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
+        home_filepath = os.path.join(self.temp_home, test_file)
+
+        # Create the mackup file first (simulating link install)
+        with open(mackup_filepath, "w") as f:
+            f.write("mackup content")
+
+        # Create the home file as a symbolic link pointing to the mackup file
+        # (simulating what link install does)
+        os.symlink(mackup_filepath, home_filepath)
+
+        # Patch utils.delete and utils.copy
+        with patch("mackup.application.utils.delete") as mock_delete, \
+             patch("mackup.application.utils.copy") as mock_copy:
+            # Capture stdout
+            captured_output = StringIO()
+            sys.stdout = captured_output
+
+            # Call the method
+            self.app_profile.copy_files_to_mackup_folder()
+
+            # Restore stdout
+            sys.stdout = sys.__stdout__
+
+            # Verify that delete and copy were NOT called (should skip)
+            mock_delete.assert_not_called()
+            mock_copy.assert_not_called()
+
+            # Verify that the skipping message was NOT printed (non-verbose)
+            output = captured_output.getvalue()
+            self.assertNotIn("Backing up", output)
+
+    def test_copy_files_to_mackup_folder_skips_already_linked_files_verbose(self):
+        """Test that backup skips files already linked from link install with verbose mode."""
+        # Create a verbose ApplicationProfile
+        app_profile_verbose = ApplicationProfile(
+            mackup=self.mock_mackup,
+            files=self.test_files,
+            dry_run=False,
+            verbose=True
+        )
+
+        # Create a test file
+        test_file = ".testfile"
+        mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
+        home_filepath = os.path.join(self.temp_home, test_file)
+
+        # Create the mackup file first (simulating link install)
+        with open(mackup_filepath, "w") as f:
+            f.write("mackup content")
+
+        # Create the home file as a symbolic link pointing to the mackup file
+        # (simulating what link install does)
+        os.symlink(mackup_filepath, home_filepath)
+
+        # Patch utils.delete and utils.copy
+        with patch("mackup.application.utils.delete") as mock_delete, \
+             patch("mackup.application.utils.copy") as mock_copy:
+            # Capture stdout
+            captured_output = StringIO()
+            sys.stdout = captured_output
+
+            # Call the method
+            app_profile_verbose.copy_files_to_mackup_folder()
+
+            # Restore stdout
+            sys.stdout = sys.__stdout__
+
+            # Verify that delete and copy were NOT called (should skip)
+            mock_delete.assert_not_called()
+            mock_copy.assert_not_called()
+
+            # Verify that the skipping message WAS printed (verbose mode)
+            output = captured_output.getvalue()
+            self.assertIn("Skipping", output)
+            self.assertIn("already linked to", output)
+            self.assertIn(home_filepath, output)
+            self.assertIn(mackup_filepath, output)
+
+    def test_copy_files_to_mackup_folder_backs_up_symlink_to_different_location(self):
+        """Test that backup still works for symlinks pointing elsewhere (not mackup)."""
+        # Create a test file
+        test_file = ".testfile"
+        mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
+        home_filepath = os.path.join(self.temp_home, test_file)
+
+        # Create a different target file (not in mackup folder)
+        other_target = os.path.join(self.temp_home, ".otherlocation")
+        with open(other_target, "w") as f:
+            f.write("other content")
+
+        # Create the home file as a symbolic link pointing to different location
+        os.symlink(other_target, home_filepath)
+
+        # Patch utils.copy and utils.confirm
+        with patch("mackup.application.utils.copy") as mock_copy, \
+             patch("mackup.application.utils.confirm", return_value=False):
+            # Capture stdout
+            captured_output = StringIO()
+            sys.stdout = captured_output
+
+            # Call the method
+            self.app_profile.copy_files_to_mackup_folder()
+
+            # Restore stdout
+            sys.stdout = sys.__stdout__
+
+            # Verify that copy WAS called (should backup symlinks to other locations)
+            mock_copy.assert_called_once_with(home_filepath, mackup_filepath)
+
+            # Verify that the backing up message was printed
+            output = captured_output.getvalue()
+            self.assertIn("Backing up", output)
+
 
 if __name__ == "__main__":
     unittest.main()

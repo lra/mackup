@@ -53,6 +53,8 @@ class ApplicationProfile:
         Algorithm:
             for config_file
                 if config_file exists and is a real file/folder
+                    if home/file is a symlink pointing to mackup/file
+                        skip (already backed up via link install)
                     if exists mackup/file
                         are you sure?
                         if sure
@@ -64,6 +66,19 @@ class ApplicationProfile:
 
             # If config_file exists and is a real file/folder
             if (os.path.isfile(home_filepath) or os.path.isdir(home_filepath)):
+                # Check if home file is a symlink pointing to mackup file
+                # (already backed up via link install)
+                if (os.path.islink(home_filepath) and 
+                    os.path.exists(mackup_filepath) and 
+                    os.path.samefile(home_filepath, mackup_filepath)):
+                    if self.verbose:
+                        print(
+                            "Skipping {}\n  already linked to\n  {}".format(
+                                home_filepath, mackup_filepath
+                            )
+                        )
+                    continue
+
                 if self.verbose:
                     print(
                         "Backing up\n  {}\n  to\n  {} ...".format(

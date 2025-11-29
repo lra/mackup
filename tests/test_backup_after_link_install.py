@@ -49,7 +49,6 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
         Test the complete scenario:
         1. Run link install (moves files to mackup and creates symlinks)
         2. Run backup (should skip already linked files)
-        
         This prevents mackup from trying to delete files in the backup folder.
         """
         # Step 1: Simulate initial state - files exist in home

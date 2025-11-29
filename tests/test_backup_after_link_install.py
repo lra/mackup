@@ -52,9 +52,8 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
         test_files = {".testfile", ".testdir"}
 
         # Step 1: Simulate initial state - files exist in home
-        test_file, test_dir = list(test_files)
-        home_file = os.path.join(self.temp_home, test_file)
-        home_dir = os.path.join(self.temp_home, test_dir)
+        home_file = os.path.join(self.temp_home, ".testfile")
+        home_dir = os.path.join(self.temp_home, ".testdir")
         
         # Create initial files
         with open(home_file, "w") as f:
@@ -77,8 +76,8 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
         sys.stdout = sys.__stdout__
         
         # Verify link install worked correctly
-        mackup_file = os.path.join(self.mock_mackup.mackup_folder, test_file)
-        mackup_dir = os.path.join(self.mock_mackup.mackup_folder, test_dir)
+        mackup_file = os.path.join(self.mock_mackup.mackup_folder, ".testfile")
+        mackup_dir = os.path.join(self.mock_mackup.mackup_folder, ".testdir")
         
         # Files should exist in mackup folder
         self.assertTrue(os.path.exists(mackup_file))
@@ -129,8 +128,7 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
         test_files = {".testfile"}
 
         # Create initial file
-        test_file = ".testfile"
-        home_file = os.path.join(self.temp_home, test_file)
+        home_file = os.path.join(self.temp_home, ".testfile")
         
         with open(home_file, "w") as f:
             f.write("test content")

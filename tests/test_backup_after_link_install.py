@@ -27,9 +27,6 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
         self.original_home = os.environ.get("HOME")
         os.environ["HOME"] = self.temp_home
 
-        # Define test files
-        self.test_files = {".testfile", ".testdir"}
-
     def tearDown(self):
         """Clean up test fixtures."""
         # Restore original HOME
@@ -51,6 +48,9 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
         2. Run backup (should skip already linked files)
         This prevents mackup from trying to delete files in the backup folder.
         """
+        # Define test files for this test
+        test_files = {".testfile", ".testdir"}
+
         # Step 1: Simulate initial state - files exist in home
         test_file = ".testfile"
         test_dir = ".testdir"
@@ -67,7 +67,7 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
         # Step 2: Run link install
         app_profile = ApplicationProfile(
             mackup=self.mock_mackup,
-            files=self.test_files,
+            files=test_files,
             dry_run=False,
             verbose=False
         )
@@ -126,6 +126,9 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
 
     def test_backup_after_link_install_verbose_shows_skip_message(self):
         """Test that verbose mode shows skip messages for already linked files."""
+        # Define test file for this test
+        test_files = {".testfile"}
+
         # Create initial file
         test_file = ".testfile"
         home_file = os.path.join(self.temp_home, test_file)
@@ -136,7 +139,7 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
         # Run link install
         app_profile = ApplicationProfile(
             mackup=self.mock_mackup,
-            files=self.test_files,
+            files=test_files,
             dry_run=False,
             verbose=False
         )
@@ -145,7 +148,7 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
         # Run backup in verbose mode
         app_profile_verbose = ApplicationProfile(
             mackup=self.mock_mackup,
-            files=self.test_files,
+            files=test_files,
             dry_run=False,
             verbose=True
         )

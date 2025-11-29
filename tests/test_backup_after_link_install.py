@@ -4,6 +4,7 @@ import tempfile
 import unittest
 from unittest.mock import Mock
 from io import StringIO
+import shutil
 import sys
 
 from mackup.application import ApplicationProfile
@@ -38,7 +39,6 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
             del os.environ["HOME"]
 
         # Clean up temporary directories
-        import shutil
         if os.path.exists(self.temp_home):
             shutil.rmtree(self.temp_home)
         if os.path.exists(self.mock_mackup.mackup_folder):

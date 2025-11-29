@@ -557,9 +557,8 @@ class TestApplicationProfile(unittest.TestCase):
         # Create the home file as a symbolic link pointing to different location
         os.symlink(other_target, home_filepath)
 
-        # Patch utils.copy and utils.confirm
-        with patch("mackup.application.utils.copy") as mock_copy, \
-             patch("mackup.application.utils.confirm", return_value=False):
+        # Patch utils.copy (no mackup file exists, so confirm won't be called)
+        with patch("mackup.application.utils.copy") as mock_copy:
             # Capture stdout
             captured_output = StringIO()
             sys.stdout = captured_output

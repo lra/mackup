@@ -13,7 +13,7 @@ coverage-report:
 mypy:
 	uv run mypy src/mackup/
 
-check: ruff mypy test
+check: lint test mypy ruff
 	@echo "All checks passed!"
 
 clean:

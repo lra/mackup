@@ -30,7 +30,7 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
     def tearDown(self):
         """Clean up test fixtures."""
         # Restore original HOME
-        if self.original_home:
+        if self.original_home is not None:
             os.environ["HOME"] = self.original_home
         else:
             del os.environ["HOME"]

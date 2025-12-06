@@ -144,7 +144,3 @@ const paths = await getPathsToSync(['git', 'bash', 'nvim', 'vscode']);
 ## Source
 
 Configuration data extracted from [Mackup](https://github.com/lra/mackup) application database (v0.8.43).
-
-## License
-
-GPL-3.0 (inherited from Mackup)

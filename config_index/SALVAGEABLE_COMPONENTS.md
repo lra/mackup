@@ -178,32 +178,38 @@ for each config_file:
 
 ## 7. Recommended Usage for S3 Sync Engine
 
-```python
-import json
+```typescript
+import { homedir } from 'os';
+import { join } from 'path';
 
-# Load the index
-with open('config_index/application_configs.json') as f:
-    index = json.load(f)
+// Load the index
+const index = await Bun.file('config_index/application_configs.json').json();
 
-# Get paths for specific apps
-def get_paths_for_app(app_id):
-    app = index['applications'].get(app_id, {})
-    paths = []
+// Get paths for specific apps
+function getPathsForApp(appId: string): string[] {
+  const app = index.applications[appId];
+  if (!app) return [];
 
-    # Home-relative paths
-    for p in app.get('configuration_files', []):
-        paths.append(os.path.expanduser(f'~/{p}'))
+  const paths: string[] = [];
+  const home = homedir();
 
-    # XDG paths
-    xdg_home = os.environ.get('XDG_CONFIG_HOME', os.path.expanduser('~/.config'))
-    for p in app.get('xdg_configuration_files', []):
-        paths.append(os.path.join(xdg_home, p))
+  // Home-relative paths
+  for (const p of app.configuration_files) {
+    paths.push(join(home, p));
+  }
 
-    return paths
+  // XDG paths
+  const xdgHome = process.env.XDG_CONFIG_HOME || join(home, '.config');
+  for (const p of app.xdg_configuration_files) {
+    paths.push(join(xdgHome, p));
+  }
 
-# Example: Get all git config paths
-git_paths = get_paths_for_app('git')
-# Returns: ['~/.gitconfig', '~/.config/git/config', '~/.config/git/ignore', ...]
+  return paths;
+}
+
+// Example: Get all git config paths
+const gitPaths = getPathsForApp('git');
+// Returns: ['~/.gitconfig', '~/.config/git/config', '~/.config/git/ignore', ...]
 ```
 
 ---
@@ -218,9 +224,21 @@ config_index/
 └── SALVAGEABLE_COMPONENTS.md # This document
 
 scripts/
-└── generate_config_index.py  # Regenerate if needed
+├── package.json              # Bun project config
+├── tsconfig.json             # TypeScript config
+├── generate-config-index.ts  # Main generator script
+└── lib/
+    └── ini-parser.ts         # INI file parser
 
 mackup/utils.py               # Useful utility functions (copy selectively)
+```
+
+### Regenerating the Index
+
+```bash
+cd scripts
+bun install        # Install dependencies (optional, only for types)
+bun run generate   # Regenerate the index
 ```
 
 ---

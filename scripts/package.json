@@ -1,0 +1,12 @@
+{
+  "name": "mackup-config-index",
+  "version": "1.0.0",
+  "description": "Generate configuration index from Mackup application database",
+  "type": "module",
+  "scripts": {
+    "generate": "bun run generate-config-index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

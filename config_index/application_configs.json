@@ -5115,7 +5115,7 @@
       "name": "Ubersicht",
       "config_file": "ubersicht.cfg",
       "configuration_files": [
-        "Library/Application Support/\u00dcbersicht/widgets",
+        "Library/Application Support/Übersicht/widgets",
         "Library/Preferences/tracesOf.Uebersicht.plist"
       ],
       "xdg_configuration_files": []
@@ -6493,7 +6493,7 @@
       "Library/Application Support/xbar/plugins",
       "Library/Application Support/xbar/xbar.config.json",
       "Library/Application Support/zoxide",
-      "Library/Application Support/\u00dcbersicht/widgets",
+      "Library/Application Support/Übersicht/widgets",
       "Library/ColorSync/Profiles",
       "Library/Containers/Affinity Designer/Data/Library/Application Support/user",
       "Library/Containers/Affinity Photo/Data/Library/Application Support/user",
@@ -7587,7 +7587,7 @@
       "Library/Application Support/xbar/plugins",
       "Library/Application Support/xbar/xbar.config.json",
       "Library/Application Support/zoxide",
-      "Library/Application Support/\u00dcbersicht/widgets",
+      "Library/Application Support/Übersicht/widgets",
       "Library/ColorSync/Profiles",
       "Library/Containers/Affinity Designer/Data/Library/Application Support/user",
       "Library/Containers/Affinity Photo/Data/Library/Application Support/user",

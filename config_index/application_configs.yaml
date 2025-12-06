@@ -1,0 +1,3329 @@
+# Application Configuration Index
+# Generated from Mackup application database
+# For use with custom sync engines
+
+metadata:
+  source: "Mackup Application Database"
+  source_url: "https://github.com/lra/mackup"
+  total_applications: 581
+  total_home_paths: 1307
+  total_xdg_paths: 196
+  total_macos_library_paths: 884
+  description: "Configuration file locations for application settings backup/sync"
+
+path_resolution:
+  home_relative: "Paths are relative to $HOME (e.g., ~/.bashrc)"
+  xdg_relative: "Paths are relative to $XDG_CONFIG_HOME (defaults to ~/.config)"
+  macos_library: "Paths starting with Library/ are macOS-specific (~/Library/...)"
+
+applications:
+  1password-4:
+    name: "1Password 4"
+    configuration_files:
+      - "Library/Preferences/com.agilebits.onepassword4.plist"
+      - "Library/Preferences/ws.agile.1Password.plist"
+  2do:
+    name: "2Do"
+    configuration_files:
+      - "Library/Preferences/com.guidedways.TodoMac.plist"
+  ack:
+    name: "Ack"
+    configuration_files:
+      - ".ackrc"
+  act:
+    name: "act"
+    configuration_files:
+      - ".actrc"
+  activitywatch:
+    name: "Activity Watch"
+    configuration_files:
+      - "Library/Application Support/activitywatch"
+  adium:
+    name: "Adium"
+    configuration_files:
+      - "Library/Application Support/Adium 2.0"
+      - "Library/Preferences/com.adiumX.adiumX.plist"
+  adobe-camera-raw:
+    name: "Adobe Camera Raw"
+    configuration_files:
+      - "Library/Application Support/Adobe/CameraRaw"
+  aerc:
+    name: "aerc"
+    configuration_files:
+      - "Library/Preferences/aerc"
+  aerospace:
+    name: "aerospace"
+    configuration_files:
+      - ".aerospace.toml"
+    xdg_configuration_files:
+      - "aerospace/aerospace.toml"
+  affinity-designer:
+    name: "Affinity Designer"
+    configuration_files:
+      - "Library/Containers/Affinity Designer/Data/Library/Application Support/user"
+  affinity-photo:
+    name: "Affinity Photo"
+    configuration_files:
+      - "Library/Containers/Affinity Photo/Data/Library/Application Support/user"
+  affinity-publisher:
+    name: "Affinity Publisher"
+    configuration_files:
+      - "Library/Containers/Affinity Publisher/Data/Library/Application Support/user"
+  airflow:
+    name: "Airflow"
+    configuration_files:
+      - "Library/Preferences/com.bitcavehq.Airflow.plist"
+      - "Library/Application Support/Airflow"
+  airmail:
+    name: "Airmail"
+    configuration_files:
+      - "Library/Containers/it.bloop.airmail2/Container.plist"
+  akamai-cli:
+    name: "Akamai-CLI"
+    configuration_files:
+      - ".edgerc"
+  alacritty:
+    name: "Alacritty"
+    configuration_files:
+      - ".alacritty.yml"
+      - ".alacritty.toml"
+    xdg_configuration_files:
+      - "alacritty/alacritty.yml"
+      - "alacritty/alacritty.toml"
+  alt-tab:
+    name: "AltTab"
+    configuration_files:
+      - "Library/Preferences/com.lwouis.alt-tab-macos.plist"
+  amethyst:
+    name: "Amethyst"
+    configuration_files:
+      - "Library/Preferences/com.amethyst.Amethyst.plist"
+    xdg_configuration_files:
+      - "amethyst/amethyst.yml"
+  ancient-domains-of-mystery:
+    name: "Ancient Domains of Mystery"
+    configuration_files:
+      - ".adom.data"
+  androidstudio-13:
+    name: "Android Studio 1.3"
+    configuration_files:
+      - "Library/Application Support/AndroidStudio1.3"
+      - "Library/Preferences/AndroidStudio1.3"
+  ansible:
+    name: "Ansible"
+    configuration_files:
+      - ".ansible"
+      - ".ansible.cfg"
+  appcleaner:
+    name: "AppCleaner"
+    configuration_files:
+      - "Library/Preferences/net.freemacsoft.AppCleaner.plist"
+      - "Library/Preferences/net.freemacsoft.AppCleaner-SmartDelete.plist"
+  appcode-2:
+    name: "AppCode 2"
+    configuration_files:
+      - "Library/Application Support/appCode20"
+      - "Library/Preferences/appCode20"
+  appcode-3:
+    name: "AppCode 3"
+    configuration_files:
+      - "Library/Application Support/appCode30"
+      - "Library/Preferences/appCode30"
+  appcode-31:
+    name: "AppCode 3.1"
+    configuration_files:
+      - "Library/Application Support/appCode31"
+      - "Library/Preferences/appCode31"
+  appcode-32:
+    name: "AppCode 3.2"
+    configuration_files:
+      - "Library/Application Support/AppCode32"
+      - "Library/Preferences/AppCode32"
+  apple-music:
+    name: "Apple Music"
+    configuration_files:
+      - "Library/Music/Scripts"
+      - "Library/Preferences/com.apple.Music.eq.plist"
+      - "Library/Preferences/com.apple.Music.plist"
+  apptivate:
+    name: "Apptivate"
+    configuration_files:
+      - "Library/Application Support/Apptivate/hotkeys"
+  arara:
+    name: "Arara"
+    configuration_files:
+      - ".araraconfig.yaml"
+      - "araraconfig.yaml"
+  aria2c:
+    name: "aria2c"
+    configuration_files:
+      - ".aria2"
+    xdg_configuration_files:
+      - "aria2"
+  arm:
+    name: "Arm"
+    configuration_files:
+      - ".arm/armrc"
+  asciinema:
+    name: "asciinema"
+    xdg_configuration_files:
+      - "asciinema"
+  asdf:
+    name: "asdf"
+    configuration_files:
+      - ".asdfrc"
+      - ".default-gems"
+      - ".default-npm-packages"
+      - ".default-python-packages"
+      - ".default-golang-pkgs"
+      - ".default-mix-commands"
+      - ".tool-versions"
+  aspell:
+    name: "Aspell"
+    configuration_files:
+      - ".aspell.conf"
+      - ".aspell.en.prepl"
+      - ".aspell.en.pws"
+  astyle:
+    name: "Artistic Style"
+    configuration_files:
+      - ".astylerc"
+  atlantis:
+    name: "Atlantis"
+    configuration_files:
+      - "Library/Application Support/Atlantis"
+  atom:
+    name: "Atom"
+    configuration_files:
+      - "Library/Preferences/com.github.atom.plist"
+      - ".atom/config.cson"
+      - ".atom/init.coffee"
+      - ".atom/keymap.cson"
+      - ".atom/keymaps"
+      - ".atom/snippets.cson"
+      - ".atom/styles.less"
+  audacious:
+    name: "Audacious"
+    xdg_configuration_files:
+      - "audacious/config"
+      - "audacious/plugin-registry"
+      - "audacious/playlists"
+      - "audacious/playlist-state"
+      - "audacious/scrobbler.log"
+  auskey:
+    name: "AusKey"
+    configuration_files:
+      - "Library/Application Support/AUSkey/keystore.xml"
+  autokey:
+    name: "Autokey"
+    xdg_configuration_files:
+      - "autokey"
+  awareness:
+    name: "Awareness"
+    configuration_files:
+      - "Library/Preferences/com.futureproof.awareness.plist"
+  aws:
+    name: "AWS CLI"
+    configuration_files:
+      - ".aws"
+  azure:
+    name: "Azure CLI"
+    configuration_files:
+      - ".azure"
+  b-ryan_powerline-shell:
+    name: "Powerline Shell Prompt"
+    xdg_configuration_files:
+      - "powerline-shell/config.json"
+  bartender:
+    name: "Bartender"
+    configuration_files:
+      - "Library/Preferences/com.surteesstudios.Bartender.plist"
+      - "Library/Preferences/com.surteesstudios.Bartender-setapp.plist"
+      - "Library/Application Support/Bartender/Bartender.BartenderPreferences"
+  base:
+    name: "Base"
+    configuration_files:
+      - "Library/Containers/uk.co.menial.Base/Data/Library/Preferences/uk.co.menial.Base.plist"
+      - "Library/Containers/uk.co.menial.Base/Data/Library/Application Support/Base/"
+  bash:
+    name: "Bash"
+    configuration_files:
+      - ".aliases"
+      - ".bash_aliases"
+      - ".bash_login"
+      - ".bash_logout"
+      - ".bashrc"
+      - ".profile"
+      - ".bash_profile"
+      - ".inputrc"
+  bash-it:
+    name: "Bash it"
+    configuration_files:
+      - ".bash_it/enabled"
+  bat:
+    name: "Bat"
+    xdg_configuration_files:
+      - "bat/config"
+      - "bat/syntaxes"
+      - "bat/themes"
+  bc:
+    name: "bc"
+    configuration_files:
+      - ".bcrc"
+  beatport-pro:
+    name: "Beatport Pro"
+    configuration_files:
+      - "Library/Preferences/com.beatport.BeatportPro.plist"
+  beets:
+    name: "Beets"
+    xdg_configuration_files:
+      - "beets/config.yaml"
+  bettersnaptool:
+    name: "BetterSnapTool"
+    configuration_files:
+      - "Library/Preferences/com.hegenberg.BetterSnapTool.plist"
+      - "Library/Application Support/BetterSnapTool"
+  bettertouchtool:
+    name: "BetterTouchTool"
+    configuration_files:
+      - "Library/Application Support/BetterTouchTool/bettertouchtool.license"
+      - "Library/Application Support/BetterTouchTool/btt_data_store.v2"
+      - "Library/Application Support/BetterTouchTool/btt_data_store.v2-shm"
+      - "Library/Application Support/BetterTouchTool/btt_data_store.v2-wal"
+      - "Library/Application Support/BetterTouchTool/bttdata2"
+      - "Library/Preferences/com.hegenberg.BetterTouchTool.plist"
+      - "Library/Application Support/BetterTouchTool/bettersnaptool.bttlicense"
+  beyond-compare:
+    name: "Beyond Compare"
+    configuration_files:
+      - "Library/Preferences/com.ScooterSoftware.BeyondCompare.plist"
+      - "Library/Application Support/Beyond Compare/BC4Key.txt"
+      - "Library/Application Support/Beyond Compare/BCColors.xml"
+      - "Library/Application Support/Beyond Compare/BCCommands.xml"
+      - "Library/Application Support/Beyond Compare/BCPreferences.xml"
+  bibdesk:
+    name: "BibDesk"
+    configuration_files:
+      - "Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist"
+      - "Library/Application Support/BibDesk"
+  billings-pro-server-admin:
+    name: "Billings Pro Server Admin"
+    configuration_files:
+      - "Library/Preferences/com.marketcircle.BillingsProServerAdmin.plist"
+  bitbar:
+    name: "BitBar"
+    configuration_files:
+      - "Library/Preferences/com.matryer.BitBar.plist"
+  bitchx:
+    name: "Bitchx"
+    configuration_files:
+      - ".bitchxrc"
+      - ".ircservers"
+  blackfire:
+    name: "Blackfire"
+    configuration_files:
+      - ".blackfire.ini"
+  blender:
+    name: "Blender"
+    configuration_files:
+      - "Library/Application Support/Blender"
+    xdg_configuration_files:
+      - "blender"
+  blesh:
+    name: "ble.sh"
+    configuration_files:
+      - ".blerc"
+  boto:
+    name: "Boto"
+    configuration_files:
+      - ".boto"
+  boxer:
+    name: "Boxer"
+    configuration_files:
+      - "Library/Preferences/net.washboardabs.boxer.plist"
+      - "Applications/DOS Games"
+  brackets:
+    name: "Brackets"
+    configuration_files:
+      - "Library/Application Support/Brackets"
+      - "Library/Preferences/io.brackets.appshell.plist"
+  brave:
+    name: "Brave"
+    configuration_files:
+      - "Library/Application Support/BraveSoftware/Brave-Browser/Default/Preferences"
+  btop:
+    name: "btop"
+    xdg_configuration_files:
+      - "btop"
+  bump:
+    name: "Bump"
+    configuration_files:
+      - ".bump.json"
+  bundler:
+    name: "Bundler"
+    configuration_files:
+      - ".bundle/config"
+  byobu:
+    name: "Byobu"
+    configuration_files:
+      - ".byobu/.screenrc"
+      - ".byobu/.tmux.conf"
+      - ".byobu/backend"
+      - ".byobu/color"
+      - ".byobu/color.tmux"
+      - ".byobu/datetime.tmux"
+      - ".byobu/keybindings"
+      - ".byobu/keybindings.tmux"
+      - ".byobu/profile"
+      - ".byobu/profile.tmux"
+      - ".byobu/prompt"
+      - ".byobu/prompt.tmux"
+      - ".byobu/status"
+      - ".byobu/statusrc"
+      - ".byobu/windows"
+      - ".byobu/windows.tmux"
+      - ".byoburc"
+      - ".byoburc.tmux"
+      - ".byoburc.screen"
+  caffeine:
+    name: "Caffeine"
+    configuration_files:
+      - "Library/Preferences/com.lightheadsw.Caffeine.plist"
+      - "Library/Preferences/com.intelliscapesolutions.caffeine.plist"
+  calibre:
+    name: "Calibre"
+    configuration_files:
+      - "Library/Preferences/calibre"
+    xdg_configuration_files:
+      - "calibre"
+  capture-one:
+    name: "Capture One"
+    configuration_files:
+      - "Library/Application Support/Capture One"
+  cartographica:
+    name: "Cartographica"
+    configuration_files:
+      - "Library/Application Support/Cartographica"
+      - "Library/Preferences/com.ClueTrust.Cartographica.plist"
+  cerebro:
+    name: "Cerebro"
+    configuration_files:
+      - "Library/Application Support/Cerebro/config.json"
+      - "Library/Application Support/Cerebro/plugins"
+    xdg_configuration_files:
+      - "Cerebro/config.json"
+      - "Cerebro/plugins"
+  charles:
+    name: "Charles"
+    configuration_files:
+      - "Library/Application Support/Charles"
+      - "Library/Preferences/com.xk72.charles.config"
+  cheat:
+    name: "Cheat"
+    configuration_files:
+      - ".cheat"
+    xdg_configuration_files:
+      - "cheat/conf.yml"
+  chef:
+    name: "Chef"
+    configuration_files:
+      - ".chef"
+  chicken:
+    name: "Chicken"
+    configuration_files:
+      - "Library/Preferences/net.sourceforge.chicken.plist"
+  choosy:
+    name: "Choosy"
+    configuration_files:
+      - "Library/Application Support/Choosy/behaviours.plist"
+  chunkwm:
+    name: "chunkwm"
+    configuration_files:
+      - ".chunkwmrc"
+      - ".chunkwm_plugins"
+  cider:
+    name: "Cider"
+    configuration_files:
+      - ".cider"
+  clashx:
+    name: "ClashX"
+    xdg_configuration_files:
+      - "clash"
+  clasp:
+    name: "Clasp"
+    configuration_files:
+      - ".clasprc.json"
+  cleanshot:
+    name: "CleanShot"
+    configuration_files:
+      - "Library/Preferences/com.getcleanshot.app-setapp.plist"
+      - "Library/Preferences/pl.maketheweb.cleanshotx.plist"
+  clementine:
+    name: "Clementine"
+    configuration_files:
+      - "Library/Preferences/org.clementine-player.Clementine.plist"
+  clion:
+    name: "CLion"
+    configuration_files:
+      - "Library/Preferences/CLion2016.2"
+      - "Library/Application Support/CLion2016.2"
+      - "Library/Application Support/JetBrains/CLion2023.1"
+      - "Library/Application Support/JetBrains/CLion2023.2"
+  clipmenu:
+    name: "ClipMenu"
+    configuration_files:
+      - "Library/Application Support/ClipMenu"
+      - "Library/Preferences/com.naotaka.ClipMenu.plist"
+  clipy:
+    name: "Clipy"
+    configuration_files:
+      - "Library/Preferences/com.clipy-app.Clipy.plist"
+  cloudapp:
+    name: "CloudApp"
+    configuration_files:
+      - "Library/Preferences/com.linebreak.CloudAppMacOSX.plist"
+  coda-2:
+    name: "Coda 2"
+    configuration_files:
+      - "Library/Application Support/Coda 2"
+      - "Library/Preferences/com.panic.Coda2.plist"
+  colloquy:
+    name: "Colloquy"
+    configuration_files:
+      - "Library/Preferences/info.colloquy.plist"
+      - "Library/Application Support/Colloquy"
+  colorschemer-studio-2:
+    name: "ColorSchemer Studio 2"
+    configuration_files:
+      - "Library/Preferences/com.colorschemer.studio2.plist"
+      - "Library/Application Support/ColorSchemer"
+  colorslurp:
+    name: "ColorSlurp"
+    configuration_files:
+      - "Library/Preferences/com.IdeaPunch.ColorSlurp.plist"
+      - "Library/Containers/com.IdeaPunch.ColorSlurp/Data/Library/Application Support/default.realm"
+  colorsync:
+    name: "ColorSync"
+    configuration_files:
+      - "Library/ColorSync/Profiles"
+  composer:
+    name: "composer"
+    configuration_files:
+      - ".composer/auth.json"
+      - ".composer/config.json"
+      - ".composer/composer.json"
+  concentrate:
+    name: "Concentrate"
+    configuration_files:
+      - "Library/Application Support/Concentrate/Concentrate.sqlite3"
+  conky:
+    name: "Conky"
+    configuration_files:
+      - ".conkyrc"
+  consular:
+    name: "Consular"
+    configuration_files:
+      - ".consularc"
+    xdg_configuration_files:
+      - "consular"
+  contexts:
+    name: "Contexts"
+    configuration_files:
+      - "Library/Preferences/com.contextsformac.Contexts.plist"
+  controlplane:
+    name: "ControlPlane"
+    configuration_files:
+      - "Library/Preferences/com.dustinrue.ControlPlane.plist"
+  copyq:
+    name: "CopyQ"
+    xdg_configuration_files:
+      - "copyq"
+  cord:
+    name: "CoRD"
+    configuration_files:
+      - "Library/Application Support/CoRD"
+  coteditor:
+    name: "CotEditor"
+    configuration_files:
+      - "Library/Application Support/CotEditor"
+      - "Library/Preferences/com.coteditor.CotEditor.plist"
+  ctags:
+    name: "Ctags"
+    configuration_files:
+      - ".ctags"
+      - ".ctags.d"
+  curl:
+    name: "Curl"
+    configuration_files:
+      - ".netrc"
+      - ".curlrc"
+  cursor:
+    name: "Cursor"
+    configuration_files:
+      - "Library/Application Support/Cursor/User/snippets"
+      - "Library/Application Support/Cursor/User/keybindings.json"
+      - "Library/Application Support/Cursor/User/settings.json"
+    xdg_configuration_files:
+      - "Cursor/User/snippets"
+      - "Cursor/User/keybindings.json"
+      - "Cursor/User/settings.json"
+  cvim:
+    name: "cVim"
+    configuration_files:
+      - ".cvimrc"
+  cyberduck:
+    name: "Cyberduck"
+    configuration_files:
+      - "Library/Application Support/Cyberduck"
+      - "Library/Preferences/ch.sudo.cyberduck.plist"
+  daisydisk:
+    name: "DaisyDisk"
+    configuration_files:
+      - "Library/Application Support/DaisyDisk/License.DaisyDisk"
+      - "Library/Preferences/com.daisydiskapp.DaisyDiskStandAlone.plist"
+  dash:
+    name: "Dash"
+    configuration_files:
+      - "Library/Application Support/Dash/library.dash"
+      - "Library/Application Support/Dash/License/license.dash-license"
+      - "Library/Preferences/com.kapeli.dash.plist"
+      - "Library/Preferences/com.kapeli.dashdoc.plist"
+  datagrip:
+    name: "DataGrip"
+    configuration_files:
+      - "Library/Application Support/DataGrip2017.3"
+      - "Library/Preferences/DataGrip2017.3"
+      - "Library/Application Support/DataGrip2018.1"
+      - "Library/Preferences/DataGrip2018.1"
+      - "Library/Application Support/DataGrip2018.2"
+      - "Library/Preferences/DataGrip2018.2"
+      - "Library/Application Support/DataGrip2018.3"
+      - "Library/Preferences/DataGrip2018.3"
+      - "Library/Application Support/DataGrip2019.1"
+      - "Library/Preferences/DataGrip2019.1"
+      - "Library/Preferences/DataGrip2019.2"
+      - "Library/Application Support/JetBrains/DataGrip2023.1"
+      - "Library/Application Support/JetBrains/DataGrip2023.2"
+  day-o:
+    name: "Day-O"
+    configuration_files:
+      - "Library/Preferences/com.shauninman.Day-O.plist"
+  dbeaver:
+    name: "DBeaver"
+    configuration_files:
+      - "Library/DBeaverData/workspace6/.metadata/.plugins/org.eclipse.core.runtime/.settings"
+      - "Library/DBeaverData/workspace6/General"
+  dbvisualizer:
+    name: "DbVisualizer"
+    configuration_files:
+      - ".dbvis"
+  deal-alert:
+    name: "Deal Alert"
+    configuration_files:
+      - "Library/Preferences/com.LittleFin.DealAlert.plist"
+  deepin-dde-dock:
+    name: "deepin-dde-dock"
+    xdg_configuration_files:
+      - "deepin/dde-dock.conf"
+  deepin-dde-file-manager:
+    name: "deepin-dde-file-manager"
+    xdg_configuration_files:
+      - "deepin/dde-file-manager.json"
+  deepin-terminal:
+    name: "deepin-terminal"
+    xdg_configuration_files:
+      - "deepin/deepin-terminal/config.conf"
+  default-folder-x:
+    name: "Default Folder X"
+    configuration_files:
+      - "Library/Preferences/com.stclairsoft.DefaultFolderX.favorites.plist"
+      - "Library/Preferences/com.stclairsoft.DefaultFolderX.plist"
+      - "Library/Preferences/com.stclairsoft.DefaultFolderX.settings.plist"
+  defaultkeybinding:
+    name: "DefaultKeyBinding"
+    configuration_files:
+      - "Library/KeyBindings/DefaultKeyBinding.dict"
+  devilspie:
+    name: "Devil's Pie"
+    configuration_files:
+      - ".devilspie"
+  devilspie2:
+    name: "Devilspie2"
+    xdg_configuration_files:
+      - "devilspie2"
+  dig:
+    name: "dig"
+    configuration_files:
+      - ".digrc"
+  divvy:
+    name: "Divvy"
+    configuration_files:
+      - "Library/Preferences/com.mizage.direct.Divvy.plist"
+      - "Library/Preferences/com.mizage.Divvy.plist"
+  docker:
+    name: "Docker"
+    configuration_files:
+      - ".docker/config.json"
+      - ".docker/daemon.json"
+  dolphin:
+    name: "Dolphin"
+    configuration_files:
+      - "Library/Application Support/Dolphin"
+      - "Library/Preferences/org.dolphin-emu.dolphin.plist"
+  doom-emacs:
+    name: "Doom Emacs"
+    configuration_files:
+      - ".doom.d"
+  doublecmd:
+    name: "Double Commander"
+    xdg_configuration_files:
+      - "doublecmd/wfx.ini"
+      - "doublecmd/doublecmd.ext"
+      - "doublecmd/shortcuts.scf"
+      - "doublecmd/doublecmd.xml"
+  doxie:
+    name: "Doxie"
+    configuration_files:
+      - "Library/Preferences/com.getdoxie.doxie.plist"
+  dozer:
+    name: "Dozer"
+    configuration_files:
+      - "Library/Preferences/com.mortennn.Dozer.plist"
+  draft:
+    name: "Draft"
+    configuration_files:
+      - ".draft/config.toml"
+  droplr:
+    name: "Droplr"
+    configuration_files:
+      - "Library/Preferences/com.droplr.droplr-mac.plist"
+  dropzone:
+    name: "Dropzone 3"
+    configuration_files:
+      - "Library/Application Support/Dropzone 3"
+      - "Library/Preferences/com.aptonic.Dropzone3.plist"
+  drush:
+    name: "Drush"
+    configuration_files:
+      - ".drush"
+  editorconfig:
+    name: "EditorConfig"
+    configuration_files:
+      - ".editorconfig"
+  electrum:
+    name: "Electrum"
+    configuration_files:
+      - ".electrum/config"
+  emacs:
+    name: "Emacs"
+    configuration_files:
+      - ".emacs"
+      - ".emacs.d"
+  enjoyable:
+    name: "Enjoyable"
+    configuration_files:
+      - "Library/Preferences/com.yukkurigames.Enjoyable.plist"
+  environmental-station-alpha:
+    name: "Environmental Station Alpha"
+    configuration_files:
+      - "Library/Application Support/MMFApplications"
+  eqmac-2:
+    name: "eqMac2"
+    configuration_files:
+      - "Library/Preferences/com.bitgapp.eqMac2.plist"
+  eslint:
+    name: "ESLint"
+    configuration_files:
+      - ".eslintrc.js"
+      - ".eslintrc.yaml"
+      - ".eslintrc.yml"
+      - ".eslintrc.json"
+      - ".eslintrc"
+      - ".eslintignore"
+  espanso:
+    name: "espanso"
+    configuration_files:
+      - "Library/Preferences/espanso"
+      - "Library/Application Support/espanso"
+    xdg_configuration_files:
+      - "espanso"
+  exercism:
+    name: "Exercism"
+    configuration_files:
+      - ".exercism"
+    xdg_configuration_files:
+      - "exercism"
+  expandrive:
+    name: "ExpanDrive"
+    configuration_files:
+      - "Library/Application Support/ExpanDrive"
+      - "Preferences/com.expandrive.ExpanDrive2.plist"
+      - "Preferences/com.expandrive.ExpanDrive3.plist"
+  factorio:
+    name: "Factorio"
+    configuration_files:
+      - "Library/Application Support/factorio/config"
+      - "Library/Application Support/factorio/mods"
+      - "Library/Application Support/factorio/saves"
+      - "Library/Application Support/factorio/player-data.json"
+      - "Library/Application Support/factorio/blueprint-storage.dat"
+  fantastical:
+    name: "Fantastical"
+    configuration_files:
+      - "Library/Preferences/com.flexibits.fantastical.plist"
+      - "Library/Containers/com.flexibits.fantastical2.mac/Container.plist"
+  fasd:
+    name: "fasd"
+    configuration_files:
+      - ".fasd"
+      - ".fasdrc"
+  fastlane:
+    name: "fastlane"
+    configuration_files:
+      - ".fastlane/completions"
+  fastscripts:
+    name: "FastScripts"
+    configuration_files:
+      - "Library/Preferences/com.red-sweater.fastscripts.plist"
+      - "Library/Application Support/FastScripts"
+  feeds:
+    name: "Feeds"
+    configuration_files:
+      - "Library/Preferences/com.feedsapp.Feeds.plist"
+  filezilla:
+    name: "FileZilla"
+    configuration_files:
+      - ".filezilla"
+    xdg_configuration_files:
+      - "filezilla/filezilla.xml"
+      - "filezilla/layout.xml"
+      - "filezilla/sitemanager.xml"
+  finicky:
+    name: "finicky"
+    configuration_files:
+      - ".finicky.js"
+  fish:
+    name: "Fish"
+    xdg_configuration_files:
+      - "fish/config.fish"
+      - "fish/conf.d"
+      - "fish/fish_variables"
+      - "fish/functions"
+      - "fish/completions"
+  fisher:
+    name: "Fisher"
+    xdg_configuration_files:
+      - "fish/fish_plugins"
+  flake8:
+    name: "flake8"
+    configuration_files:
+      - ".flake8"
+    xdg_configuration_files:
+      - "flake8"
+  flameshot:
+    name: "Flameshot"
+    xdg_configuration_files:
+      - "flameshot/flameshot.ini"
+  flexget:
+    name: "FlexGet"
+    configuration_files:
+      - ".flexget/config.yml"
+    xdg_configuration_files:
+      - "flexget/config.yml"
+  flux:
+    name: "Flux"
+    configuration_files:
+      - "Library/Preferences/org.herf.Flux.plist"
+  focus:
+    name: "Focus"
+    configuration_files:
+      - "Library/Application Support/Focus/default.cfg"
+  fontconfig:
+    name: "Fontconfig"
+    xdg_configuration_files:
+      - "fontconfig"
+  fontexplorer-x:
+    name: "FontExplorer X"
+    configuration_files:
+      - "Library/Application Support/Linotype/FontExplorer X"
+      - "FontExplorer X"
+  forge:
+    name: "Forge"
+    configuration_files:
+      - "Library/Application Support/Forge"
+  fork:
+    name: "Fork"
+    configuration_files:
+      - "Library/Application Support/com.DanPristupov.Fork/custom-commands.json"
+      - "Library/Preferences/com.DanPristupov.Fork.plist"
+  forklift:
+    name: "ForkLift"
+    configuration_files:
+      - "Library/Preferences/com.binarynights.ForkLift2.plist"
+      - "Library/Preferences/com.binarynights.ForkLift-3.plist"
+      - "Library/Application Support/ForkLift/Favorites/Favorites.json"
+  franz:
+    name: "Franz"
+    configuration_files:
+      - "Library/Application Support/Franz/settings"
+    xdg_configuration_files:
+      - "Franz/settings"
+  gasmask:
+    name: "Gas Mask"
+    configuration_files:
+      - "Library/Gas Mask"
+      - "Library/Preferences/ee.clockwise.gmask.plist"
+  gdb:
+    name: "gdb"
+    configuration_files:
+      - ".gdbinit"
+  gearplayer:
+    name: "Gear Player"
+    configuration_files:
+      - "Library/Preferences/com.treasurebox.gear.plist"
+      - "Library/Preferences/com.treasurebox.magickeys.plist"
+      - "Library/Application Support/Gear Player/paddata.padl"
+  geektool:
+    name: "GeekTool"
+    configuration_files:
+      - "Library/Preferences/org.tynsoe.GeekTool.plist"
+      - "Library/Preferences/org.tynsoe.geeklet.file.plist"
+      - "Library/Preferences/org.tynsoe.geeklet.image.plist"
+      - "Library/Preferences/org.tynsoe.geeklet.shell.plist"
+      - "Library/Preferences/org.tynsoe.geeklet.web.plist"
+      - "Library/Preferences/org.tynsoe.geektool3.plist"
+  ghci:
+    name: "ghci"
+    configuration_files:
+      - ".ghci"
+  ghidra:
+    name: "Ghidra"
+    configuration_files:
+      - ".ghidra"
+  ghostty:
+    name: "Ghostty"
+    xdg_configuration_files:
+      - "ghostty/config"
+  ghostwriter:
+    name: "Ghostwriter"
+    xdg_configuration_files:
+      - "ghostwriter"
+  gimp:
+    name: "gimp"
+    configuration_files:
+      - ".gimp/colorrc"
+      - ".gimp/contextrc"
+      - ".gimp/controllerrc"
+      - ".gimp/devicerc"
+      - ".gimp/dockrc"
+      - ".gimp/gimprc"
+      - ".gimp/gtkrc"
+      - ".gimp/menurc"
+      - ".gimp/parasiterc"
+      - ".gimp/pluginrc"
+      - ".gimp/profilerc"
+      - ".gimp/sessionrc"
+      - ".gimp/templaterc"
+      - ".gimp/themerc"
+      - ".gimp/toolrc"
+      - ".gimp/unitrc"
+      - "Library/Application Support/GIMP/2.8/colorrc"
+      - "Library/Application Support/GIMP/2.8/contextrc"
+      - "Library/Application Support/GIMP/2.8/controllerrc"
+      - "Library/Application Support/GIMP/2.8/devicerc"
+      - "Library/Application Support/GIMP/2.8/dockrc"
+      - "Library/Application Support/GIMP/2.8/gimprc"
+      - "Library/Application Support/GIMP/2.8/gtkrc"
+      - "Library/Application Support/GIMP/2.8/menurc"
+      - "Library/Application Support/GIMP/2.8/parasiterc"
+      - "Library/Application Support/GIMP/2.8/pluginrc"
+      - "Library/Application Support/GIMP/2.8/profilerc"
+      - "Library/Application Support/GIMP/2.8/sessionrc"
+      - "Library/Application Support/GIMP/2.8/templaterc"
+      - "Library/Application Support/GIMP/2.8/themerc"
+      - "Library/Application Support/GIMP/2.8/toolrc"
+      - "Library/Application Support/GIMP/2.8/unitrc"
+      - "Library/Application Support/GIMP/2.10/colorrc"
+      - "Library/Application Support/GIMP/2.10/contextrc"
+      - "Library/Application Support/GIMP/2.10/controllerrc"
+      - "Library/Application Support/GIMP/2.10/devicerc"
+      - "Library/Application Support/GIMP/2.10/dockrc"
+      - "Library/Application Support/GIMP/2.10/gimprc"
+      - "Library/Application Support/GIMP/2.10/gtkrc"
+      - "Library/Application Support/GIMP/2.10/menurc"
+      - "Library/Application Support/GIMP/2.10/parasiterc"
+      - "Library/Application Support/GIMP/2.10/pluginrc"
+      - "Library/Application Support/GIMP/2.10/profilerc"
+      - "Library/Application Support/GIMP/2.10/sessionrc"
+      - "Library/Application Support/GIMP/2.10/templaterc"
+      - "Library/Application Support/GIMP/2.10/themerc"
+      - "Library/Application Support/GIMP/2.10/toolrc"
+      - "Library/Application Support/GIMP/2.10/unitrc"
+  git:
+    name: "Git"
+    configuration_files:
+      - ".gitconfig"
+    xdg_configuration_files:
+      - "git/config"
+      - "git/ignore"
+      - "git/attributes"
+  git-hooks:
+    name: "Git Hooks"
+    configuration_files:
+      - ".git_hooks"
+  gitbox:
+    name: "Gitbox"
+    configuration_files:
+      - "Library/Preferences/com.oleganza.gitbox.plist"
+  gitfox:
+    name: "GitFox"
+    configuration_files:
+      - "Library/Preferences/com.bytieful.Gitfox.plist"
+      - "Library/Preferences/com.bytieful.Gitfox-retail.plist"
+      - "Library/Preferences/com.bytieful.Gitfox-setapp.plist"
+  gitkraken:
+    name: "GitKraken"
+    configuration_files:
+      - ".gitkraken"
+      - "Library/Preferences/com.axosoft.gitkraken.plist"
+  gitup:
+    name: "GitUp"
+    configuration_files:
+      - "Library/Preferences/co.gitup.mac.plist"
+  gmail-notifr:
+    name: "Gmail Notifr"
+    configuration_files:
+      - "Library/Preferences/com.ashchan.GmailNotifr.plist"
+  gmailctl:
+    name: "gmailctl"
+    configuration_files:
+      - ".gmailctl/config.jsonnet"
+      - ".gmailctl/credentials.json"
+      - ".gmailctl/gmailctl.libsonnet"
+  gmvault:
+    name: "GMVault"
+    configuration_files:
+      - ".gmvault/gmvault_defaults.conf"
+  gnupg:
+    name: "GnuPG"
+    configuration_files:
+      - ".gnupg/gpg-agent.conf"
+      - ".gnupg/gpg.conf"
+      - ".gnupg/trustdb.gpg"
+  go2shell:
+    name: "Go2Shell"
+    configuration_files:
+      - "Library/Preferences/com.zipzapmac.Go2Shell.plist"
+  goku:
+    name: "Goku"
+    xdg_configuration_files:
+      - "karabiner.edn"
+  goland:
+    name: "GoLand"
+    configuration_files:
+      - "Library/Application Support/Gogland1.0"
+      - "Library/Application Support/GoLand2017.3"
+      - "Library/Application Support/GoLand2018.1"
+      - "Library/Application Support/GoLand2018.2"
+      - "Library/Application Support/GoLand2018.3"
+      - "Library/Application Support/GoLand2019.2"
+      - "Library/Preferences/com.jetbrains.gogland-EAP.plist"
+      - "Library/Preferences/Gogland1.0"
+      - "Library/Preferences/GoLand2017.3"
+      - "Library/Preferences/GoLand2018.1"
+      - "Library/Preferences/GoLand2018.2"
+      - "Library/Preferences/GoLand2018.3"
+      - "Library/Preferences/GoLand2019.2"
+      - "Library/Application Support/JetBrains/GoLand2023.1"
+      - "Library/Application Support/JetBrains/GoLand2023.2"
+  goldendict:
+    name: "Goldendict"
+    configuration_files:
+      - ".goldendict/config"
+  goodsync:
+    name: "GoodSync"
+    configuration_files:
+      - ".goodsync"
+  goshare:
+    name: "GoShare"
+    xdg_configuration_files:
+      - "dictget/goshare"
+  gradle:
+    name: "Gradle"
+    configuration_files:
+      - ".gradle/gradle.properties"
+      - ".gradle/init.gradle"
+      - ".gradle/init.d"
+  grandtotal-3:
+    name: "GrandTotal 3"
+    configuration_files:
+      - "Library/Application Support/GrandTotal/AddressBook.plist"
+      - "Library/Preferences/com.mediaatelier.GrandTotal3.plist"
+  grsync:
+    name: "grsync"
+    configuration_files:
+      - ".grsync/grsync.ini"
+  gstm:
+    name: "Gnome SSH Tunnel Manager"
+    configuration_files:
+      - ".gSTM"
+  hammerspoon:
+    name: "Hammerspoon"
+    configuration_files:
+      - ".hammerspoon"
+  handbrake:
+    name: "HandBrake"
+    configuration_files:
+      - "Library/Containers/fr.handbrake.HandBrake/Data/Library/Application Support/HandBrake/UserPresets.json"
+  hands-off:
+    name: "Hands Off!"
+    configuration_files:
+      - "Library/Preferences/com.metakine.handsoff.plist"
+  hazel:
+    name: "Hazel"
+    configuration_files:
+      - "Library/Application Support/Hazel"
+      - "Library/Preferences/com.noodlesoft.Hazel.plist"
+  hero-lab:
+    name: "Hero Lab"
+    configuration_files:
+      - "Library/Application Support/Hero Lab/customoutput"
+      - "Library/Application Support/Hero Lab/data"
+      - "Library/Application Support/Hero Lab/docs"
+  heroku:
+    name: "Heroku"
+    configuration_files:
+      - ".heroku/accounts"
+      - ".heroku/plugins"
+  hexchat:
+    name: "HexChat"
+    xdg_configuration_files:
+      - "hexchat"
+  hexels:
+    name: "Hexels"
+    configuration_files:
+      - "Library/Preferences/com.hex-ray.hexels.plist"
+  hocus-focus:
+    name: "Hocus Focus"
+    configuration_files:
+      - "Library/Preferences/com.uglyapps.HocusFocus.plist"
+      - "Library/Application Support/com.uglyapps.HocusFocus/HocusFocus.db"
+      - "Library/Application Support/com.uglyapps.HocusFocus/HocusFocus.db-shm"
+      - "Library/Application Support/com.uglyapps.HocusFocus/HocusFocus.db-wal"
+  homebrew:
+    name: "Homebrew"
+    configuration_files:
+      - ".Brewfile"
+      - "Brewfile"
+  homebridge:
+    name: "Homebridge"
+    configuration_files:
+      - ".homebridge"
+  houdini:
+    name: "Houdini"
+    configuration_files:
+      - "Library/Preferences/com.uglyapps.Houdini.plist"
+      - "Library/Application Support/Houdini"
+  hstr:
+    name: "hstr"
+    configuration_files:
+      - ".hstr_favorites"
+      - ".hstr_blacklist"
+  htop:
+    name: "Htop"
+    configuration_files:
+      - ".htoprc"
+    xdg_configuration_files:
+      - "htop/htoprc"
+  httpie:
+    name: "HTTPie"
+    configuration_files:
+      - ".httpie/config.json"
+  hub:
+    name: "hub"
+    xdg_configuration_files:
+      - "hub"
+  hyper:
+    name: "Hyper.app"
+    configuration_files:
+      - ".hyper.js"
+  hyperdock:
+    name: "HyperDock"
+    configuration_files:
+      - "Library/Application Support/HyperDock"
+      - "Library/Preferences/de.bahoom.HyperDock.plist"
+      - "Library/Preferences/de.bahoom.HyperDock.prefpane.plist"
+  hyperswitch:
+    name: "HyperSwitch"
+    configuration_files:
+      - "Library/Preferences/com.bahoom.HyperSwitch.plist"
+  i2cssh:
+    name: "i2cssh"
+    configuration_files:
+      - ".i2csshrc"
+  i3:
+    name: "i3"
+    configuration_files:
+      - ".i3/config"
+      - ".i3status.conf"
+    xdg_configuration_files:
+      - "i3/config"
+  idapro:
+    name: "IDA Pro"
+    configuration_files:
+      - ".idapro"
+  ideavim:
+    name: "IdeaVim"
+    configuration_files:
+      - ".ideavimrc"
+  iina:
+    name: "IINA"
+    configuration_files:
+      - "Library/Application Support/com.colliderli.iina/input_conf"
+      - "Library/Preferences/com.colliderli.iina.plist"
+  illustrator:
+    name: "Adobe Illustrator"
+    configuration_files:
+      - "Library/Application Support/Adobe/Adobe Illustrator 17"
+      - "Library/Application Support/Adobe/Adobe Illustrator 18"
+      - "Library/Application Support/Adobe/Adobe Illustrator 19"
+      - "Library/Application Support/Adobe/Adobe Illustrator 20"
+      - "Library/Application Support/Adobe/Adobe Illustrator 23/en_US/Adobe SVG Filters.svg"
+      - "Library/Application Support/Adobe/Adobe Illustrator 23/en_US/Swatches"
+      - "Library/Application Support/Adobe/Adobe Illustrator 24/en_US/Adobe SVG Filters.svg"
+      - "Library/Application Support/Adobe/Adobe Illustrator 24/en_US/Swatches"
+      - "Library/Application Support/Adobe/OOBE"
+      - "Library/Preferences/Adobe Illustrator 17 Settings"
+      - "Library/Preferences/Adobe Illustrator 18 Settings"
+      - "Library/Preferences/Adobe Illustrator 19 Settings"
+      - "Library/Preferences/Adobe Illustrator 20 Settings"
+      - "Library/Preferences/Adobe Illustrator 23 Settings/en_US/Adobe Illustrator Prefs"
+      - "Library/Preferences/Adobe Illustrator 23 Settings/en_US/Last Used Artboard Export Settings"
+      - "Library/Preferences/Adobe Illustrator 23 Settings/en_US/Last Used Asset Export Settings"
+      - "Library/Preferences/Adobe Illustrator 23 Settings/en_US/Modified Workspaces"
+      - "Library/Preferences/Adobe Illustrator 23 Settings/en_US/Perspective grid Presets"
+      - "Library/Preferences/Adobe Illustrator 23 Settings/en_US/Print Presets"
+      - "Library/Preferences/Adobe Illustrator 23 Settings/en_US/Tools/Tools Panel Presets"
+      - "Library/Preferences/Adobe Illustrator 23 Settings/en_US/Transparency flattener presets"
+      - "Library/Preferences/Adobe Illustrator 23 Settings/en_US/VariableWidthProfiles"
+      - "Library/Preferences/Adobe Illustrator 23 Settings/en_US/Vectorizing Presets"
+      - "Library/Preferences/Adobe Illustrator 23 Settings/en_US/Workspaces"
+      - "Library/Preferences/Adobe Illustrator 24 Settings/en_US/Adobe Illustrator Prefs"
+      - "Library/Preferences/Adobe Illustrator 24 Settings/en_US/Last Used Artboard Export Settings"
+      - "Library/Preferences/Adobe Illustrator 24 Settings/en_US/Last Used Asset Export Settings"
+      - "Library/Preferences/Adobe Illustrator 24 Settings/en_US/Modified Workspaces"
+      - "Library/Preferences/Adobe Illustrator 24 Settings/en_US/Perspective grid Presets"
+      - "Library/Preferences/Adobe Illustrator 24 Settings/en_US/Print Presets"
+      - "Library/Preferences/Adobe Illustrator 24 Settings/en_US/Tools/Tools Panel Presets"
+      - "Library/Preferences/Adobe Illustrator 24 Settings/en_US/Transparency flattener presets"
+      - "Library/Preferences/Adobe Illustrator 24 Settings/en_US/VariableWidthProfiles"
+      - "Library/Preferences/Adobe Illustrator 24 Settings/en_US/Vectorizing Presets"
+      - "Library/Preferences/Adobe Illustrator 24 Settings/en_US/Workspaces"
+      - "Library/Preferences/com.adobe.illustrator.plist"
+  inkscape:
+    name: "inkscape"
+    xdg_configuration_files:
+      - "inkscape/preferences.xml"
+  insomnia:
+    name: "Insomnia"
+    configuration_files:
+      - "Library/Application Support/Insomnia"
+    xdg_configuration_files:
+      - "Insomnia"
+  intellijidea:
+    name: "IntelliJ IDEA"
+    configuration_files:
+      - ".IntelliJIdea12/config"
+      - ".IntelliJIdea13/config"
+      - ".IntelliJIdea14/config"
+      - ".IntelliJIdea15/config"
+      - "IdeaIC2018.2/config"
+      - "IdeaIC2018.3/config"
+      - "IdeaIC2019.1/config"
+      - "IdeaIC2019.2/config"
+      - "IdeaIC2019.3/config"
+      - "IntelliJIdea2016.1/config"
+      - "IntelliJIdea2016.2/config"
+      - "IntelliJIdea2016.3/config"
+      - "IntelliJIdea2017.1/config"
+      - "IntelliJIdea2017.2/config"
+      - "IntelliJIdea2017.3/config"
+      - "IntelliJIdea2018.1/config"
+      - "IntelliJIdea2018.2/config"
+      - "IntelliJIdea2018.3/config"
+      - "IntelliJIdea2019.1/config"
+      - "IntelliJIdea2019.2/config"
+      - "IntelliJIdea2019.3/config"
+      - "Library/Application Support/IdeaIC2016.1"
+      - "Library/Application Support/IdeaIC2017.1"
+      - "Library/Application Support/IdeaIC2017.2"
+      - "Library/Application Support/IdeaIC2017.3"
+      - "Library/Application Support/IdeaIC2018.2"
+      - "Library/Application Support/IdeaIC2018.3"
+      - "Library/Application Support/IdeaIC2019.1"
+      - "Library/Application Support/IntelliJIdea12"
+      - "Library/Application Support/IntelliJIdea13"
+      - "Library/Application Support/IntelliJIdea14"
+      - "Library/Application Support/IntelliJIdea15"
+      - "Library/Application Support/IntelliJIdea2016.1"
+      - "Library/Application Support/IntelliJIdea2016.2"
+      - "Library/Application Support/IntelliJIdea2016.3"
+      - "Library/Application Support/IntelliJIdea2017.1"
+      - "Library/Application Support/IntelliJIdea2017.2"
+      - "Library/Application Support/IntelliJIdea2017.3"
+      - "Library/Application Support/IntelliJIdea2018.1"
+      - "Library/Application Support/IntelliJIdea2018.2"
+      - "Library/Application Support/IntelliJIdea2018.3"
+      - "Library/Application Support/IntelliJIdea2019.1"
+      - "Library/Application Support/IntelliJIdea2019.2"
+      - "Library/Application Support/IntelliJIdea2019.3"
+      - "Library/Application Support/JetBrains/IntelliJIdea2020.1"
+      - "Library/Application Support/JetBrains/IntelliJIdea2020.2"
+      - "Library/Application Support/JetBrains/IntelliJIdea2020.3"
+      - "Library/Application Support/JetBrains/IntelliJIdea2021.1"
+      - "Library/Application Support/JetBrains/IntelliJIdea2022.1"
+      - "Library/Application Support/JetBrains/IntelliJIdea2022.2"
+      - "Library/Application Support/JetBrains/IntelliJIdea2023.1"
+      - "Library/Application Support/JetBrains/IntelliJIdea2023.2"
+      - "Library/Preferences/IdeaIC2016.1"
+      - "Library/Preferences/IdeaIC2016.2"
+      - "Library/Preferences/IdeaIC2016.3"
+      - "Library/Preferences/IdeaIC2017.1"
+      - "Library/Preferences/IdeaIC2017.2"
+      - "Library/Preferences/IdeaIC2017.3"
+      - "Library/Preferences/IdeaIC2018.2"
+      - "Library/Preferences/IdeaIC2018.3"
+      - "Library/Preferences/IdeaIC2019.1"
+      - "Library/Preferences/IntelliJIdea12"
+      - "Library/Preferences/IntelliJIdea13"
+      - "Library/Preferences/IntelliJIdea14"
+      - "Library/Preferences/IntelliJIdea15"
+      - "Library/Preferences/IntelliJIdea2016.1"
+      - "Library/Preferences/IntelliJIdea2016.2"
+      - "Library/Preferences/IntelliJIdea2016.3"
+      - "Library/Preferences/IntelliJIdea2017.1"
+      - "Library/Preferences/IntelliJIdea2017.2"
+      - "Library/Preferences/IntelliJIdea2017.3"
+      - "Library/Preferences/IntelliJIdea2018.1"
+      - "Library/Preferences/IntelliJIdea2018.2"
+      - "Library/Preferences/IntelliJIdea2018.3"
+      - "Library/Preferences/IntelliJIdea2019.1"
+      - "Library/Preferences/IntelliJIdea2019.2"
+      - "Library/Preferences/IntelliJIdea2019.3"
+  ipython:
+    name: "IPython"
+    configuration_files:
+      - ".ipython"
+  irssi:
+    name: "Irssi"
+    configuration_files:
+      - ".irssi"
+  istat-menus:
+    name: "iStat Menus"
+    configuration_files:
+      - "Library/Preferences/com.bjango.istatmenus.plist"
+      - "Library/Preferences/com.bjango.istatmenus.status.plist"
+      - "Library/Preferences/com.bjango.istatmenus5.extras.plist"
+      - "Library/Preferences/com.bjango.istatmenus6.extras.plist"
+      - "Library/Preferences/com.bjango.istatmenus.menubar.7.plist"
+  iterm2:
+    name: "iTerm2"
+    configuration_files:
+      - "Library/Preferences/com.googlecode.iterm2.plist"
+    xdg_configuration_files:
+      - "iterm2/AppSupport/DynamicProfiles"
+  itermocil:
+    name: "iTermocil"
+    configuration_files:
+      - ".itermocil"
+  itsycal:
+    name: "Itsycal"
+    configuration_files:
+      - "Library/Preferences/com.mowglii.ItsycalApp.plist"
+  itunes-scripts:
+    name: "iTunes Scripts"
+    configuration_files:
+      - "Library/iTunes/Scripts"
+  jankyborders:
+    name: "Janky Borders"
+    xdg_configuration_files:
+      - "borders/bordersrc"
+  janus:
+    name: "Janus"
+    configuration_files:
+      - ".janus"
+      - ".vimrc.before"
+      - ".vimrc.after"
+  jitouch:
+    name: "Jitouch"
+    configuration_files:
+      - "Library/Preferences/com.jitouch.Jitouch.plist"
+  joplin:
+    name: "Joplin"
+    xdg_configuration_files:
+      - "joplin-desktop/userchrome.css"
+      - "joplin-desktop/userstyle.css"
+  jrnl:
+    name: "jrnl"
+    configuration_files:
+      - ".jrnl_config"
+    xdg_configuration_files:
+      - "jrnl/jrnl.yaml"
+  jsbeautifier:
+    name: "JS Beautifier"
+    configuration_files:
+      - ".jsbeautifyrc"
+  jshint:
+    name: "JSHint"
+    configuration_files:
+      - ".jshintrc"
+  julia:
+    name: "Julia"
+    configuration_files:
+      - ".juliarc.jl"
+      - ".julia/config/startup.jl"
+  jumpcut:
+    name: "Jumpcut"
+    configuration_files:
+      - "Library/Application Support/Jumpcut"
+      - "Library/Preferences/net.sf.Jumpcut.plist"
+  jupyter:
+    name: "Jupyter"
+    configuration_files:
+      - ".jupyter"
+  k9s:
+    name: "k9s"
+    xdg_configuration_files:
+      - "k9s/config.yml"
+      - "k9s/skin.yml"
+  kaggle:
+    name: "Kaggle"
+    configuration_files:
+      - ".kaggle/kaggle.json"
+  kaleidoscope:
+    name: "Kaleidoscope"
+    configuration_files:
+      - "Library/Preferences/com.blackpixel.kaleidoscope.plist"
+      - "Library/Application Support/Kaleidoscope"
+  karabiner:
+    name: "Karabiner"
+    configuration_files:
+      - "Library/Preferences/org.pqrs.Karabiner.plist"
+      - "Library/Preferences/org.pqrs.Karabiner-AXNotifier.plist"
+      - "Library/Preferences/org.pqrs.Karabiner.multitouchextension.plist"
+      - "Library/Application Support/Karabiner"
+  karabiner-elements:
+    name: "Karabiner Elements"
+    xdg_configuration_files:
+      - "karabiner"
+  kdenlive:
+    name: "Kdenlive"
+    configuration_files:
+      - "kdenlive"
+    xdg_configuration_files:
+      - "kdenliverc"
+  keepassx:
+    name: "KeePassX"
+    configuration_files:
+      - ".keepassx"
+      - "Library/Preferences/org.keepassx.keepassx.plist"
+      - "Library/Application Support/keepassx/keepassx2.ini"
+    xdg_configuration_files:
+      - "keepassx/keepassx2.ini"
+  keepassxc:
+    name: "KeePassXC"
+    configuration_files:
+      - "Library/Preferences/org.keepassxc.keepassxc.plist"
+      - "Library/Application Support/keepassxc/keepassxc.ini"
+  keepingyouawake:
+    name: "KeepingYouAwake"
+    configuration_files:
+      - "Library/Preferences/info.marcel-dierkes.KeepingYouAwake.plist"
+  keka:
+    name: "Keka"
+    configuration_files:
+      - "Library/Preferences/com.aone.keka.plist"
+  keybase:
+    name: "Keybase"
+    configuration_files:
+      - ".keybase/config.json"
+  keyboard-maestro:
+    name: "Keyboard Maestro"
+    configuration_files:
+      - "Library/Application Support/Keyboard Maestro"
+  keymo:
+    name: "Keymo"
+    configuration_files:
+      - "Library/Preferences/com.manytricks.Keymo.plist"
+  keyremap4macbook:
+    name: "KeyRemap4MacBook"
+    configuration_files:
+      - "Library/Preferences/org.pqrs.KeyRemap4MacBook.plist"
+      - "Library/Preferences/org.pqrs.KeyRemap4MacBook.multitouchextension.plist"
+      - "Library/Application Support/KeyRemap4MacBook/private.xml"
+  khd:
+    name: "khd"
+    configuration_files:
+      - ".khdrc"
+  kitty:
+    name: "kitty"
+    xdg_configuration_files:
+      - "kitty/kitty.conf"
+  krew:
+    name: "Krew"
+    configuration_files:
+      - ".krew"
+  kubectl:
+    name: "kubectl"
+    configuration_files:
+      - ".kube/config"
+  kwm:
+    name: "Kwm"
+    configuration_files:
+      - ".kwm"
+  latexit:
+    name: "LaTeXiT"
+    configuration_files:
+      - "Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist"
+  launchbar:
+    name: "LaunchBar"
+    configuration_files:
+      - "Library/Preferences/at.obdev.LaunchBar.plist"
+      - "Library/Application Support/LaunchBar/Actions"
+      - "Library/Application Support/LaunchBar/Snippets"
+      - "Library/Application Support/LaunchBar/Configuration.plist"
+      - "Library/Application Support/LaunchBar/CustomShortcuts.plist"
+  lazydocker:
+    name: "lazydocker"
+    configuration_files:
+      - "Library/Application Support/jesseduffield/lazydocker/config.yml"
+  lazygit:
+    name: "lazygit"
+    configuration_files:
+      - "Library/Application Support/jesseduffield/lazygit/config.yml"
+      - "Library/Application Support/lazygit/config.yml"
+    xdg_configuration_files:
+      - "lazygit/config.yml"
+  ledger:
+    name: "ledger"
+    configuration_files:
+      - ".ledgerrc"
+  lf:
+    name: "lf"
+    xdg_configuration_files:
+      - "lf/lfrc"
+  libreoffice:
+    name: "LibreOffice"
+    xdg_configuration_files:
+      - "libreoffice"
+  liftoff:
+    name: "liftoff"
+    configuration_files:
+      - ".liftoffrc"
+  light-table:
+    name: "Light Table"
+    configuration_files:
+      - "Library/Application Support/LightTable/plugins"
+      - "Library/Application Support/LightTable/settings"
+      - "Library/Application Support/LightTable/User"
+      - "Library/Preferences/com.kodowa.LightTable.plist"
+  lightroom:
+    name: "Adobe Lightroom"
+    configuration_files:
+      - "Library/Application Support/Adobe/Lightroom"
+      - "Library/Preferences/com.adobe.Lightroom4.plist"
+      - "Library/Preferences/com.adobe.Lightroom5.plist"
+      - "Library/Preferences/com.adobe.Lightroom6.plist"
+  lightroom-classic:
+    name: "Adobe Lightroom Classic"
+    configuration_files:
+      - "Library/Preferences/com.adobe.LightroomClassicCC7.plist"
+  limechat:
+    name: "LimeChat"
+    configuration_files:
+      - "Library/Preferences/net.limechat.LimeChat-AppStore.plist"
+  liquidprompt:
+    name: "Liquid Prompt"
+    configuration_files:
+      - ".liquidpromptrc"
+    xdg_configuration_files:
+      - "liquidpromptrc"
+  littlesnitch:
+    name: "LittleSnitch"
+    configuration_files:
+      - "Library/Preferences/at.obdev.LittleSnitchNetworkMonitor.plist"
+      - "Library/Preferences/at.obdev.littlesnitch.networkmonitor.plist"
+      - "Library/Application Support/Little Snitch/rules.usr.xpl"
+      - "Library/Application Support/Little Snitch/configuration.xpl"
+      - "Library/Application Support/Little Snitch/configuration.user.xpl"
+      - "Library/Application Support/Little Snitch/configuration4.user.xpl"
+  livestreamer:
+    name: "Livestreamer"
+    configuration_files:
+      - ".livestreamerrc"
+    xdg_configuration_files:
+      - "livestreamer/config"
+      - "livestreamer/plugins"
+  logitech-options:
+    name: "Logitech Options"
+    configuration_files:
+      - "Library/Preferences/com.logitech.manager.setting.ffff.plist"
+  logseq:
+    name: "Logseq"
+    configuration_files:
+      - ".logseq"
+  lollypop:
+    name: "Lollypop"
+    configuration_files:
+      - ".local/share/lollypop"
+  loopback:
+    name: "Loopback"
+    configuration_files:
+      - "Library/Preferences/com.rogueamoeba.Loopback.plist"
+      - "Library/Application Support/Loopback/Devices.plist"
+  luftrausers:
+    name: "Luftrausers"
+    configuration_files:
+      - ".LUFTRAUSERS"
+  lunarvim:
+    name: "LunarVim"
+    xdg_configuration_files:
+      - "lvim/config.lua"
+  macdive2:
+    name: "MacDive"
+    configuration_files:
+      - "Library/Application Support/MacDive"
+      - "Library/Preferences/com.mintsoftware.MacDive2.plist"
+  macdown:
+    name: "MacDown"
+    configuration_files:
+      - "Library/Preferences/com.uranusjr.macdown.plist"
+      - "Library/Application Support/MacDown/Styles"
+      - "Library/Application Support/MacDown/Themes"
+  mackup:
+    name: "Mackup"
+    configuration_files:
+      - ".mackup.cfg"
+      - ".mackup"
+  macosx:
+    name: "MacOSX"
+    configuration_files:
+      - ".MacOSX"
+      - "Library/KeyBindings/DefaultKeyBinding.dict"
+      - "Library/PDF Services"
+      - "Library/Preferences/com.apple.symbolichotkeys.plist"
+      - "Library/Scripts"
+      - "Library/Speech/Speakable Items"
+      - "Library/Workflows"
+  macvim:
+    name: "MacVim"
+    configuration_files:
+      - "Library/Preferences/org.vim.MacVim.LSSharedFileList.plist"
+      - "Library/Preferences/org.vim.MacVim.plist"
+  magic-launch:
+    name: "Magic Launch"
+    configuration_files:
+      - "Library/Preferences/com.metakine.magic-launch.agent.plist"
+  magicprefs:
+    name: "MagicPrefs"
+    configuration_files:
+      - "Library/Preferences/com.vladalexa.MagicPrefs.MagicPrefsPlugins.plist"
+      - "Library/Preferences/com.vladalexa.MagicPrefs.plist"
+  magnet:
+    name: "Magnet"
+    configuration_files:
+      - "Library/Preferences/com.crowdcafe.windowmagnet.plist"
+  maid:
+    name: "Maid"
+    configuration_files:
+      - ".maid"
+  mail:
+    name: "Mail"
+    configuration_files:
+      - "Library/Preferences/com.apple.mail.plist"
+  mailmate:
+    name: "Mailmate"
+    configuration_files:
+      - "Library/Preferences/com.freron.MailMate.plist"
+      - "Library/Application Support/Mailmate/com.freron.MailMate.pid"
+      - "Library/Application Support/Mailmate/Identities.plist"
+      - "Library/Application Support/Mailmate/Mailboxes.plist"
+      - "Library/Application Support/Mailmate/Signatures.plist"
+      - "Library/Application Support/Mailmate/Sources.plist"
+      - "Library/Application Support/Mailmate/Submission.plist"
+      - "Library/Application Support/Mailmate/Tags.plist"
+      - "Library/Application Support/Mailmate/Resources/KeyBindings"
+  mailplane:
+    name: "Mailplane"
+    configuration_files:
+      - "Library/Preferences/com.mailplaneapp.Mailplane.plist"
+      - "Library/Preferences/com.mailplaneapp.Mailplane3.plist"
+  mako:
+    name: "mako"
+    xdg_configuration_files:
+      - "mako/config"
+  marked2:
+    name: "Marked 2"
+    configuration_files:
+      - "Library/Application Support/Marked 2"
+      - "Library/Preferences/com.brettterpstra.marked2.plist"
+  marta:
+    name: "Marta"
+    configuration_files:
+      - "Library/Application Support/org.yanex.marta/conf.json"
+      - "Library/Application Support/org.yanex.marta/favorites.json"
+      - "Library/Application Support/org.yanex.marta/conf.marco"
+      - "Library/Application Support/org.yanex.marta/favorites.marco"
+  matlab:
+    name: "MATLAB"
+    configuration_files:
+      - ".matlab"
+  maven:
+    name: "Maven"
+    configuration_files:
+      - ".m2/settings-security.xml"
+      - ".m2/settings.xml"
+      - ".m2/toolchains.xml"
+  max:
+    name: "Max"
+    configuration_files:
+      - "Library/Preferences/org.sbooth.Max.plist"
+  mendeley:
+    name: "Mendelay Desktop"
+    configuration_files:
+      - "Library/Application Support/Mendeley Desktop"
+  menumeters:
+    name: "MenuMeters"
+    configuration_files:
+      - "Library/Preferences/com.ragingmenace.MenuMeters.plist"
+  mercurial:
+    name: "Mercurial"
+    configuration_files:
+      - ".hgrc"
+      - ".hgignore_global"
+  mercurymover:
+    name: "MercuryMover"
+    configuration_files:
+      - "Library/Preferences/com.heliumfoot.MyWiAgent.plist"
+  messages:
+    name: "Messages"
+    configuration_files:
+      - "Library/Preferences/com.apple.iChat.AIM.plist"
+      - "Library/Preferences/com.apple.iChat.Jabber.plist"
+      - "Library/Preferences/com.apple.iChat.StatusMessages.plist"
+      - "Library/Preferences/com.apple.iChat.Yahoo.plist"
+  micro:
+    name: "Micro"
+    xdg_configuration_files:
+      - "micro/colorschemes"
+      - "micro/syntax"
+      - "micro/settings.json"
+      - "micro/bindings.json"
+  microsoft-remote-desktop:
+    name: "Microsoft Remote Desktop"
+    configuration_files:
+      - "Library/Containers/com.microsoft.rdc.macos/Data/Library/Preferences/com.microsoft.rdc.macos.plist"
+  mitmproxy:
+    name: "mitmproxy"
+    configuration_files:
+      - ".mitmproxy/config.yaml"
+  mkcert:
+    name: "mkcert"
+    configuration_files:
+      - "Library/Application Support/mkcert"
+  monodevelop:
+    name: "MonoDevelop"
+    configuration_files:
+      - "Library/MonoDevelop-Unity-5.0/KeyBindings/Custom.mac-kb.xml"
+      - "Library/Preferences/MonoDevelop-Unity-5.0/MonoDevelopProperties.xml"
+      - "Library/MonoDevelop-Unity-5.0/Policies/Default.mdpolicy.xml"
+  moom:
+    name: "Moom"
+    configuration_files:
+      - "Library/Preferences/com.manytricks.Moom.plist"
+      - "Library/Application Support/Many Tricks"
+  mosaic:
+    name: "Mosaic"
+    configuration_files:
+      - "Library/Application Support/com.lightpillar.Mosaic/MosaicCoreData.storedata"
+  mou:
+    name: "Mou"
+    configuration_files:
+      - "Library/Preferences/com.mouapp.Mou.plist"
+      - "Library/Preferences/com.mouapp.Mou.LSSharedFileList.plist"
+      - "Library/Application Support/Mou"
+  mpd:
+    name: "mpd"
+    configuration_files:
+      - ".mpd"
+      - ".mpdconf"
+  mplayerx:
+    name: "MPlayerX"
+    configuration_files:
+      - "Library/Preferences/org.niltsh.MPlayerX.plist"
+  mps-youtube:
+    name: "MPS Youtube"
+    xdg_configuration_files:
+      - "mps-youtube/config"
+      - "mps-youtube/playlist_v2"
+  mpv:
+    name: "MPV"
+    configuration_files:
+      - ".mpv/channels.conf"
+      - ".mpv/config"
+      - ".mpv/input.conf"
+    xdg_configuration_files:
+      - "mpv/config"
+      - "mpv/mpv.conf"
+      - "mpv/scripts"
+      - "mpv/script-opts"
+      - "mpv/input.conf"
+      - "mpv/watch_later"
+  mtmr:
+    name: "mtmr"
+    configuration_files:
+      - "Library/Application Support/MTMR/items.json"
+  multitouch:
+    name: "Multitouch"
+    configuration_files:
+      - "Library/Preferences/com.brassmonkery.Multitouch.plist"
+  mumu:
+    name: "Mumu"
+    configuration_files:
+      - "Library/Application Support/Mumu"
+  musicbrainz-picard:
+    name: "MusicBrainz Picard"
+    xdg_configuration_files:
+      - "MusicBrainz"
+  mutespotifyads:
+    name: "MuteSpotifyAds"
+    configuration_files:
+      - "Library/Preferences/de.simonmeusel.MuteSpotifyAds.plist"
+  mycli:
+    name: "mycli"
+    configuration_files:
+      - ".myclirc"
+  myrepos:
+    name: "myrepos"
+    configuration_files:
+      - ".mrconfig"
+  mysql:
+    name: "MySQL"
+    configuration_files:
+      - ".my.cnf"
+  mysqlworkbench:
+    name: "MySQL Workbench"
+    configuration_files:
+      - "Library/Application Support/MySQL/Workbench/connections.xml"
+      - "Library/Application Support/MySQL/Workbench/server_instances.xml"
+      - "Library/Application Support/MySQL/Workbench/wb_options.xml"
+      - "Library/Preferences/com.oracle.mysql.workbench.plist"
+  name-mangler:
+    name: "Name Mangler"
+    configuration_files:
+      - "Library/Application Support/Name Mangler"
+      - "Library/Preferences/com.manytricks.NameMangler.plist"
+  nano:
+    name: "Nano"
+    configuration_files:
+      - ".nanorc"
+  navicat:
+    name: "Navicat"
+    configuration_files:
+      - "Library/Application Support/PremiumSoft CyberTech"
+      - "Library/Application Support/Navicat for MySQL"
+      - "Library/Application Support/Navicat Premium"
+      - "Library/Preferences/com.prect.Navicat.plist"
+      - "Library/Preferences/com.prect.NavicatPremium.plist"
+      - "Library/Preferences/com.prect.NavicatPremiumEssentials.plist"
+  ncmpcpp:
+    name: "ncmpcpp"
+    configuration_files:
+      - ".ncmpcpp"
+  neofetch:
+    name: "Neofetch"
+    xdg_configuration_files:
+      - "neofetch/config.conf"
+  neovim:
+    name: "neovim"
+    configuration_files:
+      - ".nvimrc"
+      - ".nvim"
+    xdg_configuration_files:
+      - "nvim/init.vim"
+      - "nvim/init.lua"
+      - "nvim/lua"
+      - "nvim/colors"
+      - "nvim/compiler"
+      - "nvim/ftplugin"
+      - "nvim/ftdetect"
+      - "nvim/indent"
+      - "nvim/plugin"
+      - "nvim/syntax"
+  nethack:
+    name: "Nethack"
+    configuration_files:
+      - ".nethackrc"
+  netlify:
+    name: "Netlify"
+    configuration_files:
+      - ".netlify/config.json"
+  newsbeuter:
+    name: "newsbeuter"
+    configuration_files:
+      - ".newsbeuter/config"
+      - ".newsbeuter/urls"
+  ngrok:
+    name: "ngrok"
+    configuration_files:
+      - ".ngrok"
+      - ".ngrok2"
+  ni:
+    name: "ni"
+    configuration_files:
+      - ".nirc"
+  nomacs:
+    name: "Nomacs"
+    xdg_configuration_files:
+      - "nomacs"
+  nosqlbooster-for-mongodb:
+    name: "NoSQLBooster for MongoDB"
+    configuration_files:
+      - "Documents/NoSQLBooster"
+  notion-enhancer:
+    name: "notion-enhancer"
+    configuration_files:
+      - ".notion-enhancer"
+  nova:
+    name: "Nova"
+    configuration_files:
+      - "Library/Preferences/com.panic.Nova.plist"
+  npm:
+    name: "npm"
+    configuration_files:
+      - ".npmrc"
+  npmrc:
+    name: "npmrc"
+    configuration_files:
+      - ".npmrcs"
+  nslogger:
+    name: "NSLogger"
+    configuration_files:
+      - "Library/Preferences/com.florentpillet.NSLogger.plist"
+  nuget:
+    name: "nuget"
+    configuration_files:
+      - ".nuget/NuGet/NuGet.Config"
+  nushell:
+    name: "Nushell"
+    configuration_files:
+      - "Library/Application Support/nushell/env.nu"
+      - "Library/Application Support/nushell/config.nu"
+    xdg_configuration_files:
+      - "nushell/config.nu"
+      - "nushell/env.nu"
+  nvalt:
+    name: "nvALT"
+    configuration_files:
+      - "Library/Preferences/net.elasticthreads.nv.plist"
+      - "Library/Application Support/Notational Velocity"
+  nvm:
+    name: "nvm"
+    configuration_files:
+      - ".nvm/default-packages"
+  nvpy:
+    name: "nvpy"
+    configuration_files:
+      - ".nvpy.cfg"
+  obs:
+    name: "OBS"
+    configuration_files:
+      - "Library/Preferences/com.obsproject.obs-studio.plist"
+      - "Library/Application Support/obs-studio/global.ini"
+      - "Library/Application Support/obs-studio/basic"
+  oci:
+    name: "Oracle Cloud Infrastructure CLI"
+    configuration_files:
+      - ".oci/config"
+      - ".oci/oci_cli_rc"
+  ogdesign-eagle:
+    name: "Eagle (ogdesign)"
+    configuration_files:
+      - "Library/Application Support/Eagle/Settings"
+  oh-my-fish:
+    name: "Oh My Fish"
+    xdg_configuration_files:
+      - "omf"
+  oh-my-tmux:
+    name: "Oh My Tmux"
+    configuration_files:
+      - ".tmux.conf.local"
+  omnifocus:
+    name: "OmniFocus"
+    configuration_files:
+      - "Library/Application Support/OmniFocus/Plug-Ins"
+      - "Library/Application Support/OmniFocus/Themes"
+      - "Library/Preferences/com.omnigroup.OmniFocus.plist"
+  omnigraffle:
+    name: "OmniGraffle"
+    configuration_files:
+      - "Library/Application Support/The Omni Group/OmniGraffle"
+  openbox:
+    name: "openbox"
+    xdg_configuration_files:
+      - "openbox/menu.xml"
+      - "openbox/rc.xml"
+      - "openbox/environment"
+      - "openbox/autostart"
+  openemu:
+    name: "OpenEmu"
+    configuration_files:
+      - "Library/Preferences/org.openemu.OpenEmu.plist"
+      - "Library/Application Support/OpenEmu"
+  p10k:
+    name: "Powerlevel10k"
+    configuration_files:
+      - ".p10k.zsh"
+  paintbrush:
+    name: "Paintbrush"
+    configuration_files:
+      - "Library/Preferences/com.soggywaffles.Paintbrush.plist"
+  pandoc:
+    name: "Pandoc"
+    configuration_files:
+      - ".pandoc"
+  pass:
+    name: "pass"
+    configuration_files:
+      - ".password-store"
+  pastebot:
+    name: "Pastebot"
+    configuration_files:
+      - "Library/Preferences/com.tapbots.PastebotSync.plist"
+      - "Library/Preferences/com.tapbots.PastebotSync.prefPane.plist"
+      - "Library/Preferences/com.tapbots.PastebotSync.stats.plist"
+  path-finder:
+    name: "Path Finder"
+    configuration_files:
+      - "Library/Preferences/com.cocoatech.PathFinder.plist"
+      - "Library/Application Support/Path Finder"
+  pdfjam:
+    name: "PDFjam"
+    configuration_files:
+      - ".pdfjam.conf"
+  pear:
+    name: "Pear"
+    configuration_files:
+      - ".pearrc"
+  pentadactyl:
+    name: "Pentadactyl"
+    configuration_files:
+      - ".pentadactyl"
+      - ".pentadactylrc"
+  perl:
+    name: "Perl"
+    configuration_files:
+      - ".perltidyrc"
+      - ".perlcriticrc"
+      - ".proverc"
+  pgsql:
+    name: "PostgreSQL"
+    configuration_files:
+      - ".pgpass"
+      - ".psqlrc"
+  phoenix:
+    name: "Phoenix"
+    configuration_files:
+      - ".phoenix.js"
+  phoneview:
+    name: "PhoneView"
+    configuration_files:
+      - "Library/Preferences/com.ecamm.PhoneView.plist"
+  photoshop:
+    name: "Adobe Photoshop"
+    configuration_files:
+      - "Library/Application Support/Adobe/Adobe Photoshop CC 2013/Presets"
+      - "Library/Application Support/Adobe/Adobe Photoshop CC 2014/Presets"
+      - "Library/Application Support/Adobe/Adobe Photoshop CC 2015/Presets"
+      - "Library/Application Support/Adobe/Adobe Photoshop CC 2015.5/Presets"
+      - "Library/Application Support/Adobe/Adobe Photoshop CC 2019/Presets"
+      - "Library/Preferences/Adobe Photoshop CC 2013 Settings"
+      - "Library/Preferences/Adobe Photoshop CC 2014 Settings"
+      - "Library/Preferences/Adobe Photoshop CC 2015 Settings"
+      - "Library/Preferences/Adobe Photoshop CC 2015.5 Settings"
+      - "Library/Preferences/Adobe Photoshop CC 2019 Settings"
+      - "Library/Preferences/com.adobe.Photoshop.plist"
+  phpstorm:
+    name: "PhpStorm"
+    configuration_files:
+      - "Library/Application Support/JetBrains/PhpStorm2020.1"
+      - "Library/Application Support/JetBrains/PhpStorm2020.2"
+      - "Library/Application Support/JetBrains/PhpStorm2020.3"
+      - "Library/Application Support/JetBrains/PhpStorm2021.1"
+      - "Library/Application Support/JetBrains/PhpStorm2021.2"
+      - "Library/Application Support/JetBrains/PhpStorm2021.3"
+      - "Library/Application Support/JetBrains/PhpStorm2022.1"
+      - "Library/Application Support/JetBrains/PhpStorm2022.2"
+      - "Library/Application Support/JetBrains/PhpStorm2022.3"
+      - "Library/Application Support/JetBrains/PhpStorm2023.1"
+      - "Library/Application Support/JetBrains/PhpStorm2023.2"
+      - "Library/Application Support/JetBrains/PhpStorm2023.3"
+      - "Library/Application Support/JetBrains/PhpStorm2024.1"
+      - "Library/Application Support/PhpStorm2016.1"
+      - "Library/Application Support/PhpStorm2016.2"
+      - "Library/Application Support/PhpStorm2016.3"
+      - "Library/Application Support/PhpStorm2017.1"
+      - "Library/Application Support/PhpStorm2017.2"
+      - "Library/Application Support/PhpStorm2017.3"
+      - "Library/Application Support/PhpStorm2018.1"
+      - "Library/Application Support/PhpStorm2018.2"
+      - "Library/Application Support/PhpStorm2018.3"
+      - "Library/Application Support/PhpStorm2019.1"
+      - "Library/Application Support/PhpStorm2019.2"
+      - "Library/Application Support/PhpStorm2019.3"
+      - "Library/Application Support/PhpStorm2019.4"
+      - "Library/Application Support/WebIde100"
+      - "Library/Application Support/WebIde60"
+      - "Library/Application Support/WebIde70"
+      - "Library/Application Support/WebIde80"
+      - "Library/Application Support/WebIde90"
+      - "Library/Application Support/WebIde95"
+      - "Library/Preferences/com.jetbrains.PhpStorm.plist"
+      - "Library/Preferences/PhpStorm2016.1"
+      - "Library/Preferences/PhpStorm2016.2"
+      - "Library/Preferences/PhpStorm2016.3"
+      - "Library/Preferences/PhpStorm2017.1"
+      - "Library/Preferences/PhpStorm2017.2"
+      - "Library/Preferences/PhpStorm2017.3"
+      - "Library/Preferences/PhpStorm2018.1"
+      - "Library/Preferences/PhpStorm2018.2"
+      - "Library/Preferences/PhpStorm2018.3"
+      - "Library/Preferences/PhpStorm2019.1"
+      - "Library/Preferences/PhpStorm2019.2"
+      - "Library/Preferences/PhpStorm2019.3"
+      - "Library/Preferences/PhpStorm2019.4"
+      - "Library/Preferences/WebIde100"
+      - "Library/Preferences/WebIde60"
+      - "Library/Preferences/WebIde70"
+      - "Library/Preferences/WebIde80"
+      - "Library/Preferences/WebIde90"
+      - "Library/Preferences/WebIde95"
+      - ".PhpStorm2016.1/config"
+      - ".PhpStorm2016.2/config"
+      - ".PhpStorm2016.3/config"
+      - ".PhpStorm2017.1/config"
+      - ".PhpStorm2017.2/config"
+      - ".PhpStorm2017.3/config"
+      - ".PhpStorm2018.1/config"
+      - ".PhpStorm2018.2/config"
+      - ".PhpStorm2018.3/config"
+      - ".PhpStorm2019.1/config"
+      - ".PhpStorm2019.2/config"
+      - ".PhpStorm2019.3/config"
+  picgo:
+    name: "PicGo"
+    configuration_files:
+      - "Library/Application Support/picgo/data.json"
+  pidgin:
+    name: "Pidgin"
+    configuration_files:
+      - ".purple"
+  pip:
+    name: "pip"
+    configuration_files:
+      - "Library/Application Support/pip/pip.conf"
+      - ".pip/pip.conf"
+    xdg_configuration_files:
+      - "pip/pip.conf"
+  pixelsnap:
+    name: "PixelSnap"
+    configuration_files:
+      - "Library/Preferences/com.getpixelsnap.app.plist"
+  pixelsnap2:
+    name: "PixelSnap 2"
+    configuration_files:
+      - "Library/Preferences/pl.maketheweb.pixelsnap2.plist"
+  planner:
+    name: "Planner"
+    configuration_files:
+      - ".var/app/com.github.alainm23.planner/config"
+      - ".var/app/com.github.alainm23.planner/data"
+  pnpm:
+    name: "pnpm"
+    configuration_files:
+      - ".pnpm/global_pnpmfile.js"
+      - ".pnpm-store/2/store.json"
+  pock:
+    name: "Pock"
+    configuration_files:
+      - "Library/Preferences/com.pigigaldi.pock.plist"
+  poedit:
+    name: "Poedit"
+    configuration_files:
+      - "Library/Preferences/net.poedit.Poedit.cfg"
+      - "Library/Preferences/net.poedit.Poedit.plist"
+  poetry:
+    name: "poetry"
+    configuration_files:
+      - "Library/Application Support/pypoetry/config.toml"
+      - "Library/Preferences/pypoetry/config.toml"
+    xdg_configuration_files:
+      - "pypoetry/config.toml"
+  pokerstars:
+    name: "PokerStars"
+    configuration_files:
+      - "Library/Application Support/PokerStars"
+      - "Library/Preferences/com.pokerstars.user.ini"
+      - "Library/Preferences/com.pokerstars.PokerStars.plist"
+      - "Library/Application Support/PokerStarsEU"
+      - "Library/Preferences/com.pokerstars.eu.user.ini"
+      - "Library/Preferences/com.pokerstars.PokerStarsEU.plist"
+  polybar:
+    name: "polybar"
+    configuration_files:
+      - ".polybar/config"
+      - ".polybar/launch.sh"
+    xdg_configuration_files:
+      - "polybar/config"
+      - "polybar/launch.sh"
+      - "polybar/scripts"
+  popclip:
+    name: "PopClip"
+    configuration_files:
+      - "Library/Preferences/com.pilotmoon.popclip.plist"
+      - "Library/Application Support/PopClip/Extensions"
+  popcorn-time:
+    name: "Popcorn-Time"
+    configuration_files:
+      - "Library/Application Support/Popcorn-Time/data/bookmarks.db"
+      - "Library/Application Support/Popcorn-Time/data/settings.db"
+      - "Library/Application Support/Popcorn-Time/data/watched.db"
+      - "Library/Application Support/Popcorn-Time/data/movies.db"
+      - "Library/Application Support/Popcorn-Time/data/shows.db"
+  postico:
+    name: "Postico"
+    configuration_files:
+      - "Library/Preferences/at.eggerapps.Postico.plist"
+  pow:
+    name: "Pow"
+    configuration_files:
+      - ".powconfig"
+      - ".powenv"
+      - ".powrc"
+  powerline:
+    name: "Powerline"
+    xdg_configuration_files:
+      - "powerline/config.json"
+      - "powerline/colors.json"
+      - "powerline/themes"
+      - "powerline/colorschemes"
+  prezto:
+    name: "Prezto"
+    configuration_files:
+      - ".zpreztorc"
+  processing:
+    name: "Processing"
+    configuration_files:
+      - "Library/Processing/preferences.txt"
+  proselint:
+    name: "proselint"
+    configuration_files:
+      - ".proselintrc"
+    xdg_configuration_files:
+      - "proselint/config"
+  proxychains:
+    name: "ProxyChains"
+    configuration_files:
+      - ".proxychains"
+  proxyman:
+    name: "Proxyman"
+    configuration_files:
+      - "Library/Application Support/com.proxyman.NSProxy"
+      - "Library/Preferences/com.proxyman.NSProxy.plist"
+      - "Library/Application Support/com.proxyman.NSProxy-setapp"
+      - "Library/Preferences/com.proxyman.NSProxy-setapp.plist"
+  prusa-slicer:
+    name: "PrusaSlicer"
+    xdg_configuration_files:
+      - "PrusaSlicer"
+  psysh:
+    name: "PsySH"
+    xdg_configuration_files:
+      - "psysh/config.php"
+  punto-switcher:
+    name: "Punto Switcher"
+    configuration_files:
+      - "Library/Preferences/ru.yandex.punto.plist"
+  pycharm:
+    name: "PyCharm"
+    configuration_files:
+      - ".PyCharm2016.1/config"
+      - ".PyCharm2016.2/config"
+      - ".PyCharm40/config"
+      - ".PyCharm50/config"
+      - ".PyCharmCE2019.3/config"
+      - "Library/Application Support/JetBrains/PyCharm2020.1"
+      - "Library/Application Support/JetBrains/PyCharm2020.2"
+      - "Library/Application Support/JetBrains/PyCharm2020.3"
+      - "Library/Application Support/JetBrains/PyCharm2020.4"
+      - "Library/Application Support/JetBrains/PyCharmCE2020.1"
+      - "Library/Application Support/JetBrains/PyCharm2023.1"
+      - "Library/Application Support/JetBrains/PyCharm2023.2"
+      - "Library/Application Support/PyCharm"
+      - "Library/Application Support/PyCharm2016.1"
+      - "Library/Application Support/PyCharm2016.2"
+      - "Library/Application Support/PyCharm2019.2"
+      - "Library/Application Support/PyCharm2019.3"
+      - "Library/Application Support/PyCharm40"
+      - "Library/Application Support/PyCharm50"
+      - "Library/Preferences/PyCharm2016.1"
+      - "Library/Preferences/PyCharm2016.2"
+      - "Library/Preferences/PyCharm2019.2"
+      - "Library/Preferences/PyCharm2019.3"
+      - "Library/Preferences/PyCharm40"
+      - "Library/Preferences/PyCharm50"
+  pypi:
+    name: "PyPI"
+    configuration_files:
+      - ".pypirc"
+  pyradio:
+    name: "PyRadio"
+    configuration_files:
+      - ".pyradio/stations.csv"
+  querious:
+    name: "Querious"
+    configuration_files:
+      - "Library/Preferences/com.araeliumgroup.querious.plist"
+      - "Library/Application Support/Querious"
+  quicklook:
+    name: "Quicklook"
+    configuration_files:
+      - "Library/Quicklook"
+  quicksilver:
+    name: "Quicksilver"
+    configuration_files:
+      - "Library/Preferences/com.blacktree.Quicksilver.plist"
+      - "Library/Application Support/Quicksilver"
+  quitter:
+    name: "Quitter"
+    configuration_files:
+      - "Library/Preferences/com.marcoarment.quitter.plist"
+  qutebrowser:
+    name: "Qutebrowser"
+    configuration_files:
+      - ".qutebrowser/config.py"
+    xdg_configuration_files:
+      - "qutebrowser/config.py"
+      - "qutebrowser/qutebrowser.conf"
+  qv2ray:
+    name: "Qv2ray"
+    configuration_files:
+      - "Library/Preferences/qv2ray/Qv2ray.conf"
+      - "Library/Preferences/qv2ray/plugin_settings"
+  r:
+    name: "R"
+    configuration_files:
+      - ".R"
+      - ".Rhistory"
+      - ".Rprofile"
+      - ".Rprofile.d"
+      - ".Renviron"
+      - ".Renviron.d"
+      - "Library/Preferences/org.R-project.R.plist"
+  rails:
+    name: "Rails"
+    configuration_files:
+      - ".railsrc"
+  ranger:
+    name: "Ranger"
+    xdg_configuration_files:
+      - "ranger/commands.py"
+      - "ranger/rc.conf"
+      - "ranger/rifle.conf"
+      - "ranger/scope.sh"
+      - "ranger/plugins"
+  rbenv:
+    name: "rbenv"
+    configuration_files:
+      - ".rbenv/default_gems"
+  rclone:
+    name: "rclone"
+    xdg_configuration_files:
+      - "rclone"
+  rectangle:
+    name: "Rectangle"
+    configuration_files:
+      - "Library/Preferences/com.knollsoft.Rectangle.plist"
+  redshift:
+    name: "Redshift"
+    xdg_configuration_files:
+      - "redshift.conf"
+  redshift-scheduler:
+    name: "Redshift Scheduler"
+    xdg_configuration_files:
+      - "redshift-scheduler/rules.conf"
+  remote-desktop-manager:
+    name: "Remote Desktop Manager"
+    configuration_files:
+      - "Library/Application Support/com.devolutions.remotedesktopmanager.free/Connections.db"
+      - "Library/Application Support/com.devolutions.remotedesktopmanager/Connections.db"
+  rhythmbox:
+    name: "Rhythmbox"
+    configuration_files:
+      - ".gconf/apps/rhythmbox"
+  rime:
+    name: "Rime"
+    configuration_files:
+      - "Library/Rime/default.custom.yaml"
+      - "Library/Rime/default.yaml"
+      - "Library/Rime/installation.yaml"
+      - "Library/Rime/squirrel.custom.yaml"
+      - "Library/Rime/squirrel.yaml"
+      - "Library/Rime/symbols.yaml"
+      - "Library/Rime/user.yaml"
+    xdg_configuration_files:
+      - "ibus/rimedefault.custom.yaml"
+      - "ibus/rimedefault.yaml"
+      - "ibus/rimeinstallation.yaml"
+      - "ibus/rimesquirrel.custom.yaml"
+      - "ibus/rimesquirrel.yaml"
+      - "ibus/rimesymbols.yaml"
+      - "ibus/rimeuser.yaml"
+  ripgrep:
+    name: "ripgrep"
+    configuration_files:
+      - ".ripgreprc"
+  robo3t:
+    name: "Robo 3T"
+    configuration_files:
+      - "Library/Preferences/com.3t.Robomongo.plist"
+      - ".3T"
+  rocket:
+    name: "Rocket"
+    configuration_files:
+      - "Library/Preferences/net.matthewpalmer.Rocket.plist"
+      - "Library/Application Support/Rocket"
+  rofi:
+    name: "rofi"
+    xdg_configuration_files:
+      - "rofi/config.rasi"
+  royaltsx:
+    name: "Royal TSX"
+    configuration_files:
+      - "Library/Application Support/Royal TSX/License.xml"
+      - "Library/Application Support/Royal TSX/UserPreferences.config"
+      - "Library/Preferences/com.lemonmojo.RoyalTSX.App.plist"
+  rstudio:
+    name: "RStudio"
+    configuration_files:
+      - ".rstudio-desktop"
+      - "Library/Preferences/org.rstudio.RStudio.plist"
+    xdg_configuration_files:
+      - "rstudio"
+  rtorrent:
+    name: "rTorrent"
+    configuration_files:
+      - ".rtorrent.rc"
+  rtx:
+    name: "rtx"
+    configuration_files:
+      - ".rtx.toml"
+      - ".tool-versions"
+      - ".default-go-packages"
+      - ".default-gems"
+      - ".default-nodejs-packages"
+      - ".default-node-packages"
+      - ".default-npm-packages"
+      - ".default-python-packages"
+      - ".default-mix-commands"
+    xdg_configuration_files:
+      - "rtx"
+  rubitrack5:
+    name: "rubiTrack 5"
+    configuration_files:
+      - "Library/Preferences/com.shiftoption.rubitrack5.pro.plist"
+  rubocop:
+    name: "Rubocop"
+    configuration_files:
+      - ".rubocop.yml"
+  ruby:
+    name: "Ruby"
+    configuration_files:
+      - ".gemrc"
+      - ".irbrc"
+      - ".gem/credentials"
+      - ".pryrc"
+      - ".aprc"
+  ruby-version:
+    name: "Ruby Version"
+    configuration_files:
+      - ".ruby-version"
+  rubymine:
+    name: "RubyMine"
+    configuration_files:
+      - "Library/Application Support/RubyMine40"
+      - "Library/Preferences/RubyMine40"
+      - "Library/Application Support/RubyMine50"
+      - "Library/Preferences/RubyMine50"
+      - "Library/Application Support/RubyMine60"
+      - "Library/Preferences/RubyMine60"
+      - "Library/Application Support/RubyMine70"
+      - "Library/Preferences/RubyMine70"
+      - "Library/Application Support/RubyMine80"
+      - "Library/Preferences/RubyMine80"
+      - "Library/Application Support/RubyMine2016.1"
+      - "Library/Preferences/RubyMine2016.1"
+      - "Library/Application Support/RubyMine2016.2"
+      - "Library/Preferences/RubyMine2016.2"
+      - "Library/Application Support/RubyMine2016.3"
+      - "Library/Preferences/RubyMine2016.3"
+      - "Library/Application Support/RubyMine2017.3"
+      - "Library/Preferences/RubyMine2017.3"
+      - "Library/Application Support/RubyMine2018.1"
+      - "Library/Preferences/RubyMine2018.1"
+      - "Library/Application Support/JetBrains/RubyMine2023.1"
+      - "Library/Application Support/JetBrains/RubyMine2023.2"
+  rust:
+    name: "Rust"
+    configuration_files:
+      - ".cargo/config.toml"
+      - ".cargo/config"
+  rvm:
+    name: "Ruby Version Manager"
+    configuration_files:
+      - ".rvmrc"
+  s3cmd:
+    name: "S3cmd"
+    configuration_files:
+      - ".s3cfg"
+  sabnzbd:
+    name: "SABnzbd"
+    configuration_files:
+      - "Library/Application Support/SABnzbd/sabnzbd.ini"
+      - "Library/Application Support/SABnzbd/admin/rss_data.sab"
+  sbcl:
+    name: "SBCL"
+    configuration_files:
+      - ".sbclrc"
+  sbt:
+    name: "SBT"
+    configuration_files:
+      - ".sbtconfig"
+      - ".sbt/0.12/global.sbt"
+      - ".sbt/0.12/build.sbt"
+      - ".sbt/0.12/plugins/plugins.sbt"
+      - ".sbt/0.12/plugins/build.sbt"
+      - ".sbt/0.13/global.sbt"
+      - ".sbt/0.13/build.sbt"
+      - ".sbt/0.13/plugins/plugins.sbt"
+      - ".sbt/0.13/plugins/build.sbt"
+      - ".sbt/1.0/global.sbt"
+      - ".sbt/1.0/build.sbt"
+      - ".sbt/1.0/plugins/plugins.sbt"
+      - ".sbt/1.0/plugins/build.sbt"
+  scenario:
+    name: "Scenario"
+    configuration_files:
+      - "Library/Preferences/com.lagente.scenario.plist"
+      - "Library/Scenario"
+  screen:
+    name: "Screen"
+    configuration_files:
+      - ".screenrc"
+  screenhero:
+    name: "Screenhero"
+    configuration_files:
+      - "Library/Preferences/com.screenhero.screenhero.plist"
+  scrivener:
+    name: "Scrivener"
+    configuration_files:
+      - "Library/Preferences/com.literatureandlatte.scrivener2.plist"
+      - "Library/Application Support/Scrivener"
+  scroll-reverser:
+    name: "Scroll Reverser"
+    configuration_files:
+      - "Library/Preferences/com.pilotmoon.scroll-reverser.plist"
+  secure-pipes:
+    name: "Secure Pipes"
+    configuration_files:
+      - "Library/Preferences/net.edgeservices.connections.plist"
+      - "Library/Preferences/net.edgeservices.Secure-Pipes.plist"
+      - "Library/Preferences/net.edgeservices.sp-config.plist"
+      - "Library/Application Support/Secure Pipes"
+  securecrt:
+    name: "SecureCRT"
+    configuration_files:
+      - "Library/Application Support/VanDyke/SecureCRT/Config"
+      - "Library/Preferences/com.vandyke.SecureCRT.plist"
+  seil:
+    name: "Seil"
+    configuration_files:
+      - "Library/Preferences/org.pqrs.PCKeyboardHack.plist"
+      - "Library/Preferences/org.pqrs.Seil.plist"
+  selfcontrol:
+    name: "SelfControl"
+    configuration_files:
+      - "Library/Preferences/org.eyebeam.SelfControl.plist"
+  sequel-pro:
+    name: "Sequel Pro"
+    configuration_files:
+      - "Library/Application Support/Sequel Pro/Data"
+      - "Library/Application Support/Sequel Pro/Bundles"
+      - "Library/Application Support/Sequel Pro/Themes"
+      - "Library/Preferences/com.sequelpro.SequelPro.plist"
+  shiftit:
+    name: "ShiftIt"
+    configuration_files:
+      - "Library/Preferences/org.shiftitapp.ShiftIt.plist"
+  shifty:
+    name: "Shifty"
+    configuration_files:
+      - "Library/Preferences/io.natethompson.Shifty.plist"
+  shimo:
+    name: "Shimo"
+    configuration_files:
+      - "Library/Application Support/Shimo/ShimoProfiles.xml"
+      - "Library/Preferences/com.chungwasoft.Shimo.plist"
+  showyedge:
+    name: "ShowyEdge"
+    configuration_files:
+      - "Library/Preferences/org.pqrs.ShowyEdge.plist"
+  shsh-blobs:
+    name: "SHSH Blobs"
+    configuration_files:
+      - ".shsh"
+  shuttle:
+    name: "Shuttle"
+    configuration_files:
+      - ".shuttle.json"
+  sizeup:
+    name: "SizeUp"
+    configuration_files:
+      - "Library/Preferences/com.irradiatedsoftware.SizeUp.plist"
+      - "Library/Application Support/SizeUp/SizeUp.sizeuplicense"
+  sizzy:
+    name: "Sizzy"
+    configuration_files:
+      - "Library/Application Support/Sizzy/config.json"
+      - "Library/Application Support/Sizzy/window-state.json"
+  sketchybar:
+    name: "SketchyBar"
+    xdg_configuration_files:
+      - "sketchybar/sketchybarrc"
+      - "sketchybar/plugins"
+  skhd:
+    name: "skhd"
+    configuration_files:
+      - ".skhdrc"
+    xdg_configuration_files:
+      - "skhd/skhdrc"
+  skim:
+    name: "Skim"
+    configuration_files:
+      - "Library/Preferences/net.sourceforge.skim-app.skim.plist"
+  skitch:
+    name: "Skitch"
+    configuration_files:
+      - "Library/Preferences/com.plasq.skitch.plist"
+      - "Library/Preferences/com.plasq.skitch.history"
+  slate:
+    name: "Slate"
+    configuration_files:
+      - ".slate"
+      - ".slate.js"
+      - "Library/Application Support/com.slate.Slate"
+  slic3r:
+    name: "Slic3r"
+    configuration_files:
+      - "Library/Application Support/Slic3r"
+  slogger:
+    name: "Slogger"
+    configuration_files:
+      - "Slogger"
+  smartgit:
+    name: "SmartGit"
+    configuration_files:
+      - "Library/Preferences/SmartGit/smartgit.vmoptions"
+  smooth-mouse:
+    name: "Smooth Mouse"
+    configuration_files:
+      - "Library/Preferences/com.cyberic.SmoothMouse.plist"
+  soulver:
+    name: "Soulver"
+    configuration_files:
+      - "Library/Application Support/Soulver"
+      - "Library/Preferences/com.acqualia.soulver.plist"
+      - "Library/Application Support/Soulver 3"
+      - "Library/Preferences/app.soulver.mac.plist"
+  sourcetree:
+    name: "SourceTree"
+    configuration_files:
+      - "Library/Application Support/SourceTree/sourcetree.license"
+      - "Library/Application Support/SourceTree/browser.plist"
+      - "Library/Application Support/SourceTree/hgrc_sourcetree"
+      - "Library/Application Support/SourceTree/hostingservices.plist"
+  spacelauncher:
+    name: "SpaceLauncher"
+    configuration_files:
+      - "Library/Preferences/name.guoc.SpaceLauncher.plist"
+  spacemacs:
+    name: "Spacemacs"
+    configuration_files:
+      - ".spacemacs"
+      - ".spacemacs.d"
+  spacevim:
+    name: "SpaceVim"
+    configuration_files:
+      - ".SpaceVim.d"
+  spamsieve:
+    name: "SpamSieve"
+    configuration_files:
+      - "Library/Application Support/SpamSieve"
+      - "Library/Preferences/com.c-command.SpamSieve.plist"
+  spark:
+    name: "Spark"
+    configuration_files:
+      - "Library/Application Support/Spark"
+  spectacle:
+    name: "Spectacle"
+    configuration_files:
+      - "Library/Preferences/com.divisiblebyzero.Spectacle.plist"
+      - "Library/Application Support/Spectacle"
+  spectrwm:
+    name: "Spectrwm"
+    configuration_files:
+      - ".spectrwm.conf"
+  splice:
+    name: "Splice"
+    configuration_files:
+      - "Library/Preferences/com.splice.Splice.plist"
+  spotify:
+    name: "Spotify"
+    configuration_files:
+      - "Library/Preferences/com.spotify.client.plist"
+  spotify-notifications:
+    name: "Spotify-Notifications"
+    configuration_files:
+      - "Library/Preferences/io.citruspi.Spotify-Notifications.plist"
+  sqitch:
+    name: "Sqitch"
+    configuration_files:
+      - ".sqitch/sqitch.conf"
+  ssh:
+    name: "SSH"
+    configuration_files:
+      - ".ssh/config"
+      - ".ssh/authorized_keys"
+  starship:
+    name: "Starship"
+    configuration_files:
+      - ".config/starship.toml"
+  startupizer2:
+    name: "Startupizer2"
+    configuration_files:
+      - "Library/Application Support/Startupizer"
+  stata:
+    name: "Stata"
+    configuration_files:
+      - "Library/Application Support/Stata"
+      - "Library/Preferences/com.stata.stata12.plist"
+      - "Library/Preferences/com.stata.stata13.plist"
+      - "Library/Preferences/Stata 13 Preferences"
+  stats:
+    name: "Stats"
+    configuration_files:
+      - "Library/Preferences/eu.exelban.Stats.plist"
+  stay:
+    name: "Stay"
+    configuration_files:
+      - "Library/Preferences/com.cordlessdog.Stay.plist"
+      - "Library/Application Support/Stay"
+  storyist-3:
+    name: "storyist-3"
+    configuration_files:
+      - "Library/Preferences/.com.storyist.storyist.plist"
+      - "Library/Preferences/com.storyist.storyist.plist"
+  streamdeck:
+    name: "Elgato StreamDeck"
+    configuration_files:
+      - "Library/Application Support/com.elgato.StreamDeck"
+  subler:
+    name: "Subler"
+    configuration_files:
+      - "Library/Application Support/Subler"
+  sublime-merge:
+    name: "Sublime Merge"
+    configuration_files:
+      - "Library/Application Support/Sublime Merge/Packages/User"
+  sublime-text:
+    name: "Sublime Text"
+    configuration_files:
+      - "Library/Application Support/Sublime Text/Packages/User"
+    xdg_configuration_files:
+      - "sublime-text/Packages/User"
+  sublime-text-2:
+    name: "Sublime Text 2"
+    configuration_files:
+      - "Library/Application Support/Sublime Text 2/Packages/User"
+    xdg_configuration_files:
+      - "sublime-text-2/Packages/User"
+  sublime-text-3:
+    name: "Sublime Text 3"
+    configuration_files:
+      - "Library/Application Support/Sublime Text 3/Packages/User"
+    xdg_configuration_files:
+      - "sublime-text-3/Packages/User"
+  subversion:
+    name: "Subversion"
+    configuration_files:
+      - ".subversion"
+  superduper:
+    name: "SuperDuper!"
+    configuration_files:
+      - "Library/Application Support/SuperDuper!"
+  surge:
+    name: "Surge"
+    configuration_files:
+      - ".surge.conf"
+  swaywm:
+    name: "Swaywm"
+    xdg_configuration_files:
+      - "sway"
+  swinsian:
+    name: "Swinsian"
+    configuration_files:
+      - "Library/Application Support/Swinsian/Library.sqlite"
+      - "Library/Application Support/Swinsian/License.swinsianlicense"
+      - "Library/Preferences/com.swinsian.Swinsian.plist"
+      - "Library/Preferences/com.swinsian.SwinsianDesktopWindow.plist"
+  swish:
+    name: "Swish"
+    configuration_files:
+      - "Library/Preferences/co.highlyopinionated.swish.plist"
+  switchhosts:
+    name: "SwitchHosts"
+    configuration_files:
+      - ".SwitchHosts/data/collection/hosts"
+  t:
+    name: "t"
+    configuration_files:
+      - ".trc"
+  tableplus:
+    name: "TablePlus"
+    configuration_files:
+      - "Library/Application Support/com.tinyapp.TablePlus/Cache/Favorite"
+      - "Library/Application Support/com.tinyapp.TablePlus/Cache/History"
+      - "Library/Application Support/com.tinyapp.TablePlus/Data"
+      - "Library/Application Support/com.tinyapp.TablePlus/Plugins"
+      - "Library/Preferences/com.tinyapp.TablePlus.plist"
+  taskpaper:
+    name: "Task Paper"
+    configuration_files:
+      - "Library/Preferences/com.hogbaysoftware.TaskPaper.mac.plist"
+      - "Library/Application Support/TaskPaper"
+  taskwarrior:
+    name: "Taskwarrior"
+    configuration_files:
+      - ".taskrc"
+  teamocil:
+    name: "Teamocil"
+    configuration_files:
+      - ".teamocil"
+  telegram_macos:
+    name: "Telegram for macOS"
+    configuration_files:
+      - "Library/Preferences/ru.keepcoder.Telegram.plist"
+  terminal:
+    name: "Terminal"
+    configuration_files:
+      - "Library/Preferences/com.apple.Terminal.plist"
+  terminator:
+    name: "Terminator"
+    xdg_configuration_files:
+      - "terminator/config"
+  termite:
+    name: "termite"
+    configuration_files:
+      - "termite/config"
+  termux:
+    name: "Configuration for Termux"
+    configuration_files:
+      - ".termux/colors.properties"
+      - ".termux/termux.properties"
+      - ".termux/font.ttf"
+  textexpander:
+    name: "TextExpander"
+    configuration_files:
+      - "Library/Application Support/TextExpander/Settings.textexpander"
+      - "Library/Preferences/com.smileonmymac.textexpander.plist"
+  textmate:
+    name: "TextMate"
+    configuration_files:
+      - "Library/Application Support/TextMate/Bundles"
+      - "Library/Application Support/TextMate/PlugIns"
+      - "Library/Application Support/TextMate/Pristine Copy"
+      - "Library/Application Support/TextMate/Managed/Bundles"
+      - "Library/Preferences/com.macromates.textmate.latex_config.plist"
+      - ".tm_properties"
+  textual:
+    name: "Textual"
+    configuration_files:
+      - "Library/Application Support/Textual IRC"
+      - "Library/Preferences/com.codeux.irc.textual.plist"
+      - "Library/Containers/com.codeux.irc.textual/Data/Library/Preferences/com.codeux.irc.textual.plist"
+  tig:
+    name: "Tig"
+    configuration_files:
+      - ".tigrc"
+    xdg_configuration_files:
+      - "tig/config"
+  tiles:
+    name: "Tiles"
+    configuration_files:
+      - "Library/Preferences/com.sempliva.Tiles.plist"
+  tilix:
+    name: "tilix"
+    configuration_files:
+      - "tilix.dconf"
+  timeout:
+    name: "TimeOut"
+    configuration_files:
+      - "Library/Group Containers/6Z7QW53WB6.com.dejal.timeout"
+  tint2:
+    name: "tint2"
+    xdg_configuration_files:
+      - "tint2/tint2rc"
+  tinyfugue:
+    name: "TinyFugue"
+    configuration_files:
+      - ".tfrc"
+  tmux:
+    name: "Tmux"
+    configuration_files:
+      - ".tmux.conf"
+    xdg_configuration_files:
+      - "tmux/tmux.conf"
+  tmuxinator:
+    name: "Tmuxinator"
+    xdg_configuration_files:
+      - "tmuxinator"
+  tmuxp:
+    name: "tmuxp"
+    configuration_files:
+      - ".tmuxp"
+  todotxt-cli:
+    name: "Todo.txt CLI"
+    configuration_files:
+      - ".todo/config"
+  toothfairy:
+    name: "ToothFairy"
+    configuration_files:
+      - "Library/Application Scripts/com.robinlu.mac.Tooth-Fairy"
+  totalspaces2:
+    name: "TotalSpaces2"
+    configuration_files:
+      - "Library/Preferences/com.binaryage.TotalSpaces2.plist"
+  tower:
+    name: "Tower"
+    configuration_files:
+      - "Library/Application Support/Tower"
+      - "Library/Application Support/com.fournova.Tower3"
+      - "Library/Preferences/com.fournova.Tower.plist"
+      - "Library/Preferences/com.fournova.Tower3.plist"
+  tower-2:
+    name: "Tower 2"
+    configuration_files:
+      - "Library/Application Support/com.fournova.Tower2"
+      - "Library/Preferences/com.fournova.Tower2.plist"
+  tower-3:
+    name: "Tower 3"
+    configuration_files:
+      - "Library/Application Support/com.fournova.Tower3"
+      - "Library/Preferences/com.fournova.Tower3.plist"
+  transmission:
+    name: "Transmission"
+    configuration_files:
+      - "Library/Preferences/org.m0k.transmission.plist"
+      - "Library/Application Support/Transmission/blocklists"
+    xdg_configuration_files:
+      - "transmission/blocklists"
+      - "transmission/settings.json"
+      - "transmission/stats.json"
+  transmit:
+    name: "Transmit"
+    configuration_files:
+      - "Library/Preferences/com.panic.Transmit.plist"
+      - "Library/Application Support/Transmit/Metadata"
+      - "Library/Application Support/Transmit/Favorites"
+  tripmode:
+    name: "TripMode"
+    configuration_files:
+      - "Library/Application Support/TripMode"
+  trizen:
+    name: "Trizen"
+    xdg_configuration_files:
+      - "trizen/trizen.conf"
+  tunnelblick:
+    name: "Tunnelblick"
+    configuration_files:
+      - "Library/Application Support/Tunnelblick/Configurations"
+  tvnamer:
+    name: "tvnamer"
+    configuration_files:
+      - ".tvnamer.json"
+  twitterrific:
+    name: "Twitterrific"
+    configuration_files:
+      - "Library/Application Support/Twitterrific"
+  typinator:
+    name: "Typinator"
+    configuration_files:
+      - "Library/Application Support/Typinator"
+      - "Library/Preferences/com.macility.typinator2.plist"
+  typora:
+    name: "Typora"
+    configuration_files:
+      - "Library/Application Support/abnerworks.Typora/themes"
+    xdg_configuration_files:
+      - "Typora/themes"
+  ubersicht:
+    name: "Ubersicht"
+    configuration_files:
+      - "Library/Application Support/\u00dcbersicht/widgets"
+      - "Library/Preferences/tracesOf.Uebersicht.plist"
+  ulauncher:
+    name: "Ulauncher"
+    xdg_configuration_files:
+      - "ulauncher/extensions.json"
+      - "ulauncher/settings.json"
+      - "ulauncher/shortcuts.json"
+  ventrilo:
+    name: "Ventrilo"
+    configuration_files:
+      - "Library/Preferences/Ventrilo"
+  verdaccio:
+    name: "Verdaccio"
+    xdg_configuration_files:
+      - "verdaccio/config.yaml"
+  versions:
+    name: "Versions"
+    configuration_files:
+      - "Library/Application Support/Versions/License"
+      - "Library/Preferences/com.blackpixel.versions.plist"
+  vim:
+    name: "Vim"
+    configuration_files:
+      - ".gvimrc"
+      - ".gvimrc.after"
+      - ".gvimrc.before"
+      - ".vim/autoload"
+      - ".vim/after"
+      - ".vim/bundle"
+      - ".vim/colors"
+      - ".vim/doc"
+      - ".vim/ftdetect"
+      - ".vim/ftplugin"
+      - ".vim/indent"
+      - ".vim/pack"
+      - ".vim/plugin/settings"
+      - ".vim/spell"
+      - ".vim/syntax"
+      - ".vim/vimrc"
+      - ".vimrc"
+      - ".vimrc.after"
+      - ".vimrc.before"
+  vimperator:
+    name: "Vimperator"
+    configuration_files:
+      - ".vimperator"
+      - ".vimperatorrc"
+  viscosity:
+    name: "Viscosity"
+    configuration_files:
+      - "Library/Application Support/Viscosity/OpenVPN"
+      - "Library/Preferences/com.viscosityvpn.Viscosity.plist"
+  vlc:
+    name: "VLC"
+    configuration_files:
+      - "Library/Application Support/org.videolan.vlc"
+      - "Library/Preferences/org.videolan.vlc"
+      - "Library/Preferences/org.videolan.vlc.LSSharedFileList.plist"
+      - "Library/Preferences/org.videolan.vlc.plist"
+  volt:
+    name: "Volt"
+    configuration_files:
+      - "volt/lock.json"
+      - "volt/plugconf"
+      - "volt/rc"
+  vs4mac:
+    name: "Visual Studio for Mac"
+    configuration_files:
+      - "Library/VisualStudio"
+      - "Library/Preferences/VisualStudio/7.0/EditingLayout.xml"
+      - "Library/Preferences/VisualStudio/7.0/MonoDevelopProperties.xml"
+      - "Library/Preferences/VisualStudio/8.0/EditingLayout.xml"
+      - "Library/Preferences/VisualStudio/8.0/MonoDevelopProperties.xml"
+  vscode:
+    name: "Visual Studio Code"
+    configuration_files:
+      - "Library/Application Support/Code/User/snippets"
+      - "Library/Application Support/Code/User/prompts"
+      - "Library/Application Support/Code/User/keybindings.json"
+      - "Library/Application Support/Code/User/settings.json"
+    xdg_configuration_files:
+      - "Code/User/snippets"
+      - "Code/User/keybindings.json"
+      - "Code/User/settings.json"
+  vscode-insiders:
+    name: "Visual Studio Code Insiders"
+    configuration_files:
+      - "Library/Application Support/Code - Insiders/User/snippets"
+      - "Library/Application Support/Code - Insiders/User/prompts"
+      - "Library/Application Support/Code - Insiders/User/keybindings.json"
+      - "Library/Application Support/Code - Insiders/User/settings.json"
+    xdg_configuration_files:
+      - "Code - Insiders/User/snippets"
+      - "Code - Insiders/User/keybindings.json"
+      - "Code - Insiders/User/settings.json"
+  vscode-oss:
+    name: "Visual Studio Code Open Source Edition"
+    configuration_files:
+      - "Library/Application Support/Code - OSS/User/snippets"
+      - "Library/Application Support/Code - OSS/User/keybindings.json"
+      - "Library/Application Support/Code - OSS/User/settings.json"
+    xdg_configuration_files:
+      - "Code - OSS/User/snippets"
+      - "Code - OSS/User/keybindings.json"
+      - "Code - OSS/User/settings.json"
+  vscodium:
+    name: "VSCodium"
+    configuration_files:
+      - "Library/Application Support/VSCodium/User/snippets"
+      - "Library/Application Support/VSCodium/User/keybindings.json"
+      - "Library/Application Support/VSCodium/User/settings.json"
+    xdg_configuration_files:
+      - "VSCodium/User/snippets"
+      - "VSCodium/User/keybindings.json"
+      - "VSCodium/User/settings.json"
+  wakatime:
+    name: "Wakatime"
+    configuration_files:
+      - ".wakatime.cfg"
+  warp:
+    name: "Warp"
+    configuration_files:
+      - ".warp"
+  waybar:
+    name: "waybar"
+    xdg_configuration_files:
+      - "waybar"
+  webstorm:
+    name: "WebStorm"
+    configuration_files:
+      - "Library/Application Support/JetBrains/WebStorm2020.1"
+      - "Library/Application Support/JetBrains/WebStorm2020.2"
+      - "Library/Application Support/JetBrains/WebStorm2020.3"
+      - "Library/Application Support/JetBrains/WebStorm2020.4"
+      - "Library/Application Support/JetBrains/WebStorm2021.1"
+      - "Library/Application Support/JetBrains/WebStorm2021.2"
+      - "Library/Application Support/JetBrains/WebStorm2021.3"
+      - "Library/Application Support/JetBrains/WebStorm2023.1"
+      - "Library/Application Support/JetBrains/WebStorm2023.2"
+      - "Library/Application Support/WebStorm"
+      - "Library/Application Support/WebStorm10"
+      - "Library/Application Support/WebStorm11"
+      - "Library/Application Support/WebStorm2016.1"
+      - "Library/Application Support/WebStorm2016.2"
+      - "Library/Application Support/WebStorm2016.3"
+      - "Library/Application Support/WebStorm2017.1"
+      - "Library/Application Support/WebStorm2017.2"
+      - "Library/Application Support/WebStorm2017.3"
+      - "Library/Application Support/WebStorm2018.1"
+      - "Library/Application Support/WebStorm2018.2"
+      - "Library/Application Support/WebStorm2018.3"
+      - "Library/Application Support/WebStorm2019.1"
+      - "Library/Application Support/WebStorm2019.2"
+      - "Library/Application Support/WebStorm2019.3"
+      - "Library/Application Support/WebStorm2019.4"
+      - "Library/Application Support/WebStorm8"
+      - "Library/Application Support/WebStorm9"
+      - "Library/Preferences/WebStorm10"
+      - "Library/Preferences/WebStorm11"
+      - "Library/Preferences/WebStorm2016.1"
+      - "Library/Preferences/WebStorm2016.2"
+      - "Library/Preferences/WebStorm2016.3"
+      - "Library/Preferences/WebStorm2017.1"
+      - "Library/Preferences/WebStorm2017.2"
+      - "Library/Preferences/WebStorm2017.3"
+      - "Library/Preferences/WebStorm2018.1"
+      - "Library/Preferences/WebStorm2018.2"
+      - "Library/Preferences/WebStorm2018.3"
+      - "Library/Preferences/WebStorm2019.1"
+      - "Library/Preferences/WebStorm2019.2"
+      - "Library/Preferences/WebStorm2019.3"
+      - "Library/Preferences/WebStorm2019.4"
+      - "Library/Preferences/WebStorm8"
+      - "Library/Preferences/WebStorm9"
+  wezterm:
+    name: "WezTerm"
+    configuration_files:
+      - ".wezterm.lua"
+    xdg_configuration_files:
+      - "wezterm"
+  wget:
+    name: "Wget"
+    configuration_files:
+      - ".wgetrc"
+      - ".wget-hsts"
+  whatsapp:
+    name: "WhatsApp Web"
+    configuration_files:
+      - "Library/Application Support/WhatsApp/Preferences"
+      - "Library/Application Support/WhatsApp/settings.json"
+      - "Library/Preferences/WhatsApp-Helper.plist"
+      - "Library/Preferences/WhatsApp.plist"
+  windsurf:
+    name: "Windsurf"
+    configuration_files:
+      - "Library/Application Support/Windsurf/User/snippets"
+      - "Library/Application Support/Windsurf/User/keybindings.json"
+      - "Library/Application Support/Windsurf/User/settings.json"
+    xdg_configuration_files:
+      - "Windsurf/User/snippets"
+      - "Windsurf/User/keybindings.json"
+      - "Windsurf/User/settings.json"
+  wireshark:
+    name: "Wireshark 2"
+    xdg_configuration_files:
+      - "wireshark"
+  witch:
+    name: "Witch"
+    configuration_files:
+      - "Library/Preferences/com.manytricks.Witch.plist"
+  wordgrinder:
+    name: "wordgrinder"
+    configuration_files:
+      - ".wordgrinder.settings"
+  workrave:
+    name: "Workrave"
+    configuration_files:
+      - ".workrave/id"
+      - ".workrave/historystats"
+  wp-cli:
+    name: "WP-CLI"
+    configuration_files:
+      - ".wp-cli"
+  x11:
+    name: "X11"
+    configuration_files:
+      - ".Xmodmap"
+      - ".Xresources"
+      - ".fonts"
+      - ".xinitrc"
+  xamarinstudio-5:
+    name: "Xamarin Studio 5"
+    configuration_files:
+      - "Library/Preferences/XamarinStudio-5.0"
+  xbar:
+    name: "xbar"
+    configuration_files:
+      - "Library/Application Support/xbar/xbar.config.json"
+      - "Library/Application Support/xbar/plugins"
+  xbindkeys:
+    name: "xbindkeys"
+    configuration_files:
+      - ".xbindkeysrc"
+  xchat:
+    name: "XChat"
+    configuration_files:
+      - ".xchat2"
+  xcode:
+    name: "Xcode"
+    configuration_files:
+      - "Library/Preferences/com.apple.dt.Xcode.plist"
+      - "Library/Application Support/Developer/Shared/Xcode/Plug-ins"
+      - "Library/Developer/Xcode/UserData/CodeSnippets"
+      - "Library/Developer/Xcode/UserData/FontAndColorThemes"
+      - "Library/Developer/Xcode/UserData/KeyBindings"
+      - "Library/Developer/Xcode/UserData/Debugger"
+      - "Library/Developer/Xcode/UserData/xcdebugger"
+      - "Library/Developer/Xcode/UserData/SearchScopes.xcsclist"
+      - "Library/Developer/Xcode/Templates"
+  xee:
+    name: "Xee"
+    configuration_files:
+      - "Library/Preferences/cx.c3.Xee3.plist"
+  xemacs:
+    name: "XEmacs"
+    configuration_files:
+      - ".xemacs"
+  xld:
+    name: "XLD"
+    configuration_files:
+      - "Library/Application Support/XLD"
+      - "Library/Preferences/jp.tmkk.XLD.plist"
+  xonsh:
+    name: "Xonsh"
+    configuration_files:
+      - ".xonshrc"
+    xdg_configuration_files:
+      - "xonsh"
+  xtrafinder:
+    name: "XtraFinder"
+    configuration_files:
+      - "Library/Preferences/com.trankynam.XtraFinder.plist"
+  yabai:
+    name: "yabai"
+    configuration_files:
+      - ".yabairc"
+    xdg_configuration_files:
+      - "yabai/yabairc"
+  yarn:
+    name: "yarn"
+    configuration_files:
+      - ".yarnrc"
+  yazi:
+    name: "yazi"
+    xdg_configuration_files:
+      - "yazi/yazi.toml"
+      - "yazi/keymap.toml"
+      - "yazi/theme.toml"
+  yummyftp:
+    name: "Yummy FTP"
+    configuration_files:
+      - "Library/Preferences/com.yummysoftware.yummy-ftp.plist"
+      - "Library/Application Support/Yummy FTP/DefaultBookmark.bkmk"
+      - "Library/Application Support/Yummy FTP/Bookmarks"
+  zabbix-cli:
+    name: "Zabbix CLI"
+    configuration_files:
+      - ".zabbix-cli/zabbix-cli.conf"
+  zathura:
+    name: "zathura"
+    xdg_configuration_files:
+      - "zathura/zathurarc"
+  zed:
+    name: "Zed"
+    xdg_configuration_files:
+      - "zed/keymap.json"
+      - "zed/settings.json"
+  zoom:
+    name: "Zoom"
+    configuration_files:
+      - "Library/Preferences/us.zoom.Transcode.plist"
+      - "Library/Preferences/us.zoom.xos.Hotkey.plist"
+      - "Library/Preferences/us.zoom.xos.plist"
+      - "Library/Preferences/us.zoom.ZoomAutoUpdater.plist"
+      - "Library/Preferences/ZoomChat.plist"
+  zoxide:
+    name: "zoxide"
+    configuration_files:
+      - "Library/Application Support/zoxide"
+  zsh:
+    name: "Zsh"
+    configuration_files:
+      - ".zshenv"
+      - ".zprofile"
+      - ".zshrc"
+      - ".zlogin"
+      - ".zlogout"

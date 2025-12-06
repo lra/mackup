@@ -1,0 +1,1521 @@
+# All Configuration Paths
+# Format: [APP_ID] PATH
+
+## Home-relative paths (relative to ~)
+
+[1password-4] ~/Library/Preferences/com.agilebits.onepassword4.plist
+[1password-4] ~/Library/Preferences/ws.agile.1Password.plist
+[2do] ~/Library/Preferences/com.guidedways.TodoMac.plist
+[ack] ~/.ackrc
+[act] ~/.actrc
+[activitywatch] ~/Library/Application Support/activitywatch
+[adium] ~/Library/Application Support/Adium 2.0
+[adium] ~/Library/Preferences/com.adiumX.adiumX.plist
+[adobe-camera-raw] ~/Library/Application Support/Adobe/CameraRaw
+[aerc] ~/Library/Preferences/aerc
+[aerospace] ~/.aerospace.toml
+[affinity-designer] ~/Library/Containers/Affinity Designer/Data/Library/Application Support/user
+[affinity-photo] ~/Library/Containers/Affinity Photo/Data/Library/Application Support/user
+[affinity-publisher] ~/Library/Containers/Affinity Publisher/Data/Library/Application Support/user
+[airflow] ~/Library/Application Support/Airflow
+[airflow] ~/Library/Preferences/com.bitcavehq.Airflow.plist
+[airmail] ~/Library/Containers/it.bloop.airmail2/Container.plist
+[akamai-cli] ~/.edgerc
+[alacritty] ~/.alacritty.toml
+[alacritty] ~/.alacritty.yml
+[alt-tab] ~/Library/Preferences/com.lwouis.alt-tab-macos.plist
+[amethyst] ~/Library/Preferences/com.amethyst.Amethyst.plist
+[ancient-domains-of-mystery] ~/.adom.data
+[androidstudio-13] ~/Library/Application Support/AndroidStudio1.3
+[androidstudio-13] ~/Library/Preferences/AndroidStudio1.3
+[ansible] ~/.ansible
+[ansible] ~/.ansible.cfg
+[appcleaner] ~/Library/Preferences/net.freemacsoft.AppCleaner-SmartDelete.plist
+[appcleaner] ~/Library/Preferences/net.freemacsoft.AppCleaner.plist
+[appcode-2] ~/Library/Application Support/appCode20
+[appcode-2] ~/Library/Preferences/appCode20
+[appcode-3] ~/Library/Application Support/appCode30
+[appcode-3] ~/Library/Preferences/appCode30
+[appcode-31] ~/Library/Application Support/appCode31
+[appcode-31] ~/Library/Preferences/appCode31
+[appcode-32] ~/Library/Application Support/AppCode32
+[appcode-32] ~/Library/Preferences/AppCode32
+[apple-music] ~/Library/Music/Scripts
+[apple-music] ~/Library/Preferences/com.apple.Music.eq.plist
+[apple-music] ~/Library/Preferences/com.apple.Music.plist
+[apptivate] ~/Library/Application Support/Apptivate/hotkeys
+[arara] ~/.araraconfig.yaml
+[arara] ~/araraconfig.yaml
+[aria2c] ~/.aria2
+[arm] ~/.arm/armrc
+[asdf] ~/.asdfrc
+[asdf] ~/.default-gems
+[asdf] ~/.default-golang-pkgs
+[asdf] ~/.default-mix-commands
+[asdf] ~/.default-npm-packages
+[asdf] ~/.default-python-packages
+[asdf] ~/.tool-versions
+[aspell] ~/.aspell.conf
+[aspell] ~/.aspell.en.prepl
+[aspell] ~/.aspell.en.pws
+[astyle] ~/.astylerc
+[atlantis] ~/Library/Application Support/Atlantis
+[atom] ~/.atom/config.cson
+[atom] ~/.atom/init.coffee
+[atom] ~/.atom/keymap.cson
+[atom] ~/.atom/keymaps
+[atom] ~/.atom/snippets.cson
+[atom] ~/.atom/styles.less
+[atom] ~/Library/Preferences/com.github.atom.plist
+[auskey] ~/Library/Application Support/AUSkey/keystore.xml
+[awareness] ~/Library/Preferences/com.futureproof.awareness.plist
+[aws] ~/.aws
+[azure] ~/.azure
+[bartender] ~/Library/Application Support/Bartender/Bartender.BartenderPreferences
+[bartender] ~/Library/Preferences/com.surteesstudios.Bartender-setapp.plist
+[bartender] ~/Library/Preferences/com.surteesstudios.Bartender.plist
+[base] ~/Library/Containers/uk.co.menial.Base/Data/Library/Application Support/Base/
+[base] ~/Library/Containers/uk.co.menial.Base/Data/Library/Preferences/uk.co.menial.Base.plist
+[bash] ~/.aliases
+[bash] ~/.bash_aliases
+[bash] ~/.bash_login
+[bash] ~/.bash_logout
+[bash] ~/.bash_profile
+[bash] ~/.bashrc
+[bash] ~/.inputrc
+[bash] ~/.profile
+[bash-it] ~/.bash_it/enabled
+[bc] ~/.bcrc
+[beatport-pro] ~/Library/Preferences/com.beatport.BeatportPro.plist
+[bettersnaptool] ~/Library/Application Support/BetterSnapTool
+[bettersnaptool] ~/Library/Preferences/com.hegenberg.BetterSnapTool.plist
+[bettertouchtool] ~/Library/Application Support/BetterTouchTool/bettersnaptool.bttlicense
+[bettertouchtool] ~/Library/Application Support/BetterTouchTool/bettertouchtool.license
+[bettertouchtool] ~/Library/Application Support/BetterTouchTool/btt_data_store.v2
+[bettertouchtool] ~/Library/Application Support/BetterTouchTool/btt_data_store.v2-shm
+[bettertouchtool] ~/Library/Application Support/BetterTouchTool/btt_data_store.v2-wal
+[bettertouchtool] ~/Library/Application Support/BetterTouchTool/bttdata2
+[bettertouchtool] ~/Library/Preferences/com.hegenberg.BetterTouchTool.plist
+[beyond-compare] ~/Library/Application Support/Beyond Compare/BC4Key.txt
+[beyond-compare] ~/Library/Application Support/Beyond Compare/BCColors.xml
+[beyond-compare] ~/Library/Application Support/Beyond Compare/BCCommands.xml
+[beyond-compare] ~/Library/Application Support/Beyond Compare/BCPreferences.xml
+[beyond-compare] ~/Library/Preferences/com.ScooterSoftware.BeyondCompare.plist
+[bibdesk] ~/Library/Application Support/BibDesk
+[bibdesk] ~/Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist
+[billings-pro-server-admin] ~/Library/Preferences/com.marketcircle.BillingsProServerAdmin.plist
+[bitbar] ~/Library/Preferences/com.matryer.BitBar.plist
+[bitchx] ~/.bitchxrc
+[bitchx] ~/.ircservers
+[blackfire] ~/.blackfire.ini
+[blender] ~/Library/Application Support/Blender
+[blesh] ~/.blerc
+[boto] ~/.boto
+[boxer] ~/Applications/DOS Games
+[boxer] ~/Library/Preferences/net.washboardabs.boxer.plist
+[brackets] ~/Library/Application Support/Brackets
+[brackets] ~/Library/Preferences/io.brackets.appshell.plist
+[brave] ~/Library/Application Support/BraveSoftware/Brave-Browser/Default/Preferences
+[bump] ~/.bump.json
+[bundler] ~/.bundle/config
+[byobu] ~/.byobu/.screenrc
+[byobu] ~/.byobu/.tmux.conf
+[byobu] ~/.byobu/backend
+[byobu] ~/.byobu/color
+[byobu] ~/.byobu/color.tmux
+[byobu] ~/.byobu/datetime.tmux
+[byobu] ~/.byobu/keybindings
+[byobu] ~/.byobu/keybindings.tmux
+[byobu] ~/.byobu/profile
+[byobu] ~/.byobu/profile.tmux
+[byobu] ~/.byobu/prompt
+[byobu] ~/.byobu/prompt.tmux
+[byobu] ~/.byobu/status
+[byobu] ~/.byobu/statusrc
+[byobu] ~/.byobu/windows
+[byobu] ~/.byobu/windows.tmux
+[byobu] ~/.byoburc
+[byobu] ~/.byoburc.screen
+[byobu] ~/.byoburc.tmux
+[caffeine] ~/Library/Preferences/com.intelliscapesolutions.caffeine.plist
+[caffeine] ~/Library/Preferences/com.lightheadsw.Caffeine.plist
+[calibre] ~/Library/Preferences/calibre
+[capture-one] ~/Library/Application Support/Capture One
+[cartographica] ~/Library/Application Support/Cartographica
+[cartographica] ~/Library/Preferences/com.ClueTrust.Cartographica.plist
+[cerebro] ~/Library/Application Support/Cerebro/config.json
+[cerebro] ~/Library/Application Support/Cerebro/plugins
+[charles] ~/Library/Application Support/Charles
+[charles] ~/Library/Preferences/com.xk72.charles.config
+[cheat] ~/.cheat
+[chef] ~/.chef
+[chicken] ~/Library/Preferences/net.sourceforge.chicken.plist
+[choosy] ~/Library/Application Support/Choosy/behaviours.plist
+[chunkwm] ~/.chunkwm_plugins
+[chunkwm] ~/.chunkwmrc
+[cider] ~/.cider
+[clasp] ~/.clasprc.json
+[cleanshot] ~/Library/Preferences/com.getcleanshot.app-setapp.plist
+[cleanshot] ~/Library/Preferences/pl.maketheweb.cleanshotx.plist
+[clementine] ~/Library/Preferences/org.clementine-player.Clementine.plist
+[clion] ~/Library/Application Support/CLion2016.2
+[clion] ~/Library/Application Support/JetBrains/CLion2023.1
+[clion] ~/Library/Application Support/JetBrains/CLion2023.2
+[clion] ~/Library/Preferences/CLion2016.2
+[clipmenu] ~/Library/Application Support/ClipMenu
+[clipmenu] ~/Library/Preferences/com.naotaka.ClipMenu.plist
+[clipy] ~/Library/Preferences/com.clipy-app.Clipy.plist
+[cloudapp] ~/Library/Preferences/com.linebreak.CloudAppMacOSX.plist
+[coda-2] ~/Library/Application Support/Coda 2
+[coda-2] ~/Library/Preferences/com.panic.Coda2.plist
+[colloquy] ~/Library/Application Support/Colloquy
+[colloquy] ~/Library/Preferences/info.colloquy.plist
+[colorschemer-studio-2] ~/Library/Application Support/ColorSchemer
+[colorschemer-studio-2] ~/Library/Preferences/com.colorschemer.studio2.plist
+[colorslurp] ~/Library/Containers/com.IdeaPunch.ColorSlurp/Data/Library/Application Support/default.realm
+[colorslurp] ~/Library/Preferences/com.IdeaPunch.ColorSlurp.plist
+[colorsync] ~/Library/ColorSync/Profiles
+[composer] ~/.composer/auth.json
+[composer] ~/.composer/composer.json
+[composer] ~/.composer/config.json
+[concentrate] ~/Library/Application Support/Concentrate/Concentrate.sqlite3
+[conky] ~/.conkyrc
+[consular] ~/.consularc
+[contexts] ~/Library/Preferences/com.contextsformac.Contexts.plist
+[controlplane] ~/Library/Preferences/com.dustinrue.ControlPlane.plist
+[cord] ~/Library/Application Support/CoRD
+[coteditor] ~/Library/Application Support/CotEditor
+[coteditor] ~/Library/Preferences/com.coteditor.CotEditor.plist
+[ctags] ~/.ctags
+[ctags] ~/.ctags.d
+[curl] ~/.curlrc
+[curl] ~/.netrc
+[cursor] ~/Library/Application Support/Cursor/User/keybindings.json
+[cursor] ~/Library/Application Support/Cursor/User/settings.json
+[cursor] ~/Library/Application Support/Cursor/User/snippets
+[cvim] ~/.cvimrc
+[cyberduck] ~/Library/Application Support/Cyberduck
+[cyberduck] ~/Library/Preferences/ch.sudo.cyberduck.plist
+[daisydisk] ~/Library/Application Support/DaisyDisk/License.DaisyDisk
+[daisydisk] ~/Library/Preferences/com.daisydiskapp.DaisyDiskStandAlone.plist
+[dash] ~/Library/Application Support/Dash/License/license.dash-license
+[dash] ~/Library/Application Support/Dash/library.dash
+[dash] ~/Library/Preferences/com.kapeli.dash.plist
+[dash] ~/Library/Preferences/com.kapeli.dashdoc.plist
+[datagrip] ~/Library/Application Support/DataGrip2017.3
+[datagrip] ~/Library/Application Support/DataGrip2018.1
+[datagrip] ~/Library/Application Support/DataGrip2018.2
+[datagrip] ~/Library/Application Support/DataGrip2018.3
+[datagrip] ~/Library/Application Support/DataGrip2019.1
+[datagrip] ~/Library/Application Support/JetBrains/DataGrip2023.1
+[datagrip] ~/Library/Application Support/JetBrains/DataGrip2023.2
+[datagrip] ~/Library/Preferences/DataGrip2017.3
+[datagrip] ~/Library/Preferences/DataGrip2018.1
+[datagrip] ~/Library/Preferences/DataGrip2018.2
+[datagrip] ~/Library/Preferences/DataGrip2018.3
+[datagrip] ~/Library/Preferences/DataGrip2019.1
+[datagrip] ~/Library/Preferences/DataGrip2019.2
+[day-o] ~/Library/Preferences/com.shauninman.Day-O.plist
+[dbeaver] ~/Library/DBeaverData/workspace6/.metadata/.plugins/org.eclipse.core.runtime/.settings
+[dbeaver] ~/Library/DBeaverData/workspace6/General
+[dbvisualizer] ~/.dbvis
+[deal-alert] ~/Library/Preferences/com.LittleFin.DealAlert.plist
+[default-folder-x] ~/Library/Preferences/com.stclairsoft.DefaultFolderX.favorites.plist
+[default-folder-x] ~/Library/Preferences/com.stclairsoft.DefaultFolderX.plist
+[default-folder-x] ~/Library/Preferences/com.stclairsoft.DefaultFolderX.settings.plist
+[defaultkeybinding] ~/Library/KeyBindings/DefaultKeyBinding.dict
+[devilspie] ~/.devilspie
+[dig] ~/.digrc
+[divvy] ~/Library/Preferences/com.mizage.Divvy.plist
+[divvy] ~/Library/Preferences/com.mizage.direct.Divvy.plist
+[docker] ~/.docker/config.json
+[docker] ~/.docker/daemon.json
+[dolphin] ~/Library/Application Support/Dolphin
+[dolphin] ~/Library/Preferences/org.dolphin-emu.dolphin.plist
+[doom-emacs] ~/.doom.d
+[doxie] ~/Library/Preferences/com.getdoxie.doxie.plist
+[dozer] ~/Library/Preferences/com.mortennn.Dozer.plist
+[draft] ~/.draft/config.toml
+[droplr] ~/Library/Preferences/com.droplr.droplr-mac.plist
+[dropzone] ~/Library/Application Support/Dropzone 3
+[dropzone] ~/Library/Preferences/com.aptonic.Dropzone3.plist
+[drush] ~/.drush
+[editorconfig] ~/.editorconfig
+[electrum] ~/.electrum/config
+[emacs] ~/.emacs
+[emacs] ~/.emacs.d
+[enjoyable] ~/Library/Preferences/com.yukkurigames.Enjoyable.plist
+[environmental-station-alpha] ~/Library/Application Support/MMFApplications
+[eqmac-2] ~/Library/Preferences/com.bitgapp.eqMac2.plist
+[eslint] ~/.eslintignore
+[eslint] ~/.eslintrc
+[eslint] ~/.eslintrc.js
+[eslint] ~/.eslintrc.json
+[eslint] ~/.eslintrc.yaml
+[eslint] ~/.eslintrc.yml
+[espanso] ~/Library/Application Support/espanso
+[espanso] ~/Library/Preferences/espanso
+[exercism] ~/.exercism
+[expandrive] ~/Library/Application Support/ExpanDrive
+[expandrive] ~/Preferences/com.expandrive.ExpanDrive2.plist
+[expandrive] ~/Preferences/com.expandrive.ExpanDrive3.plist
+[factorio] ~/Library/Application Support/factorio/blueprint-storage.dat
+[factorio] ~/Library/Application Support/factorio/config
+[factorio] ~/Library/Application Support/factorio/mods
+[factorio] ~/Library/Application Support/factorio/player-data.json
+[factorio] ~/Library/Application Support/factorio/saves
+[fantastical] ~/Library/Containers/com.flexibits.fantastical2.mac/Container.plist
+[fantastical] ~/Library/Preferences/com.flexibits.fantastical.plist
+[fasd] ~/.fasd
+[fasd] ~/.fasdrc
+[fastlane] ~/.fastlane/completions
+[fastscripts] ~/Library/Application Support/FastScripts
+[fastscripts] ~/Library/Preferences/com.red-sweater.fastscripts.plist
+[feeds] ~/Library/Preferences/com.feedsapp.Feeds.plist
+[filezilla] ~/.filezilla
+[finicky] ~/.finicky.js
+[flake8] ~/.flake8
+[flexget] ~/.flexget/config.yml
+[flux] ~/Library/Preferences/org.herf.Flux.plist
+[focus] ~/Library/Application Support/Focus/default.cfg
+[fontexplorer-x] ~/FontExplorer X
+[fontexplorer-x] ~/Library/Application Support/Linotype/FontExplorer X
+[forge] ~/Library/Application Support/Forge
+[fork] ~/Library/Application Support/com.DanPristupov.Fork/custom-commands.json
+[fork] ~/Library/Preferences/com.DanPristupov.Fork.plist
+[forklift] ~/Library/Application Support/ForkLift/Favorites/Favorites.json
+[forklift] ~/Library/Preferences/com.binarynights.ForkLift-3.plist
+[forklift] ~/Library/Preferences/com.binarynights.ForkLift2.plist
+[franz] ~/Library/Application Support/Franz/settings
+[gasmask] ~/Library/Gas Mask
+[gasmask] ~/Library/Preferences/ee.clockwise.gmask.plist
+[gdb] ~/.gdbinit
+[gearplayer] ~/Library/Application Support/Gear Player/paddata.padl
+[gearplayer] ~/Library/Preferences/com.treasurebox.gear.plist
+[gearplayer] ~/Library/Preferences/com.treasurebox.magickeys.plist
+[geektool] ~/Library/Preferences/org.tynsoe.GeekTool.plist
+[geektool] ~/Library/Preferences/org.tynsoe.geeklet.file.plist
+[geektool] ~/Library/Preferences/org.tynsoe.geeklet.image.plist
+[geektool] ~/Library/Preferences/org.tynsoe.geeklet.shell.plist
+[geektool] ~/Library/Preferences/org.tynsoe.geeklet.web.plist
+[geektool] ~/Library/Preferences/org.tynsoe.geektool3.plist
+[ghci] ~/.ghci
+[ghidra] ~/.ghidra
+[gimp] ~/.gimp/colorrc
+[gimp] ~/.gimp/contextrc
+[gimp] ~/.gimp/controllerrc
+[gimp] ~/.gimp/devicerc
+[gimp] ~/.gimp/dockrc
+[gimp] ~/.gimp/gimprc
+[gimp] ~/.gimp/gtkrc
+[gimp] ~/.gimp/menurc
+[gimp] ~/.gimp/parasiterc
+[gimp] ~/.gimp/pluginrc
+[gimp] ~/.gimp/profilerc
+[gimp] ~/.gimp/sessionrc
+[gimp] ~/.gimp/templaterc
+[gimp] ~/.gimp/themerc
+[gimp] ~/.gimp/toolrc
+[gimp] ~/.gimp/unitrc
+[gimp] ~/Library/Application Support/GIMP/2.10/colorrc
+[gimp] ~/Library/Application Support/GIMP/2.10/contextrc
+[gimp] ~/Library/Application Support/GIMP/2.10/controllerrc
+[gimp] ~/Library/Application Support/GIMP/2.10/devicerc
+[gimp] ~/Library/Application Support/GIMP/2.10/dockrc
+[gimp] ~/Library/Application Support/GIMP/2.10/gimprc
+[gimp] ~/Library/Application Support/GIMP/2.10/gtkrc
+[gimp] ~/Library/Application Support/GIMP/2.10/menurc
+[gimp] ~/Library/Application Support/GIMP/2.10/parasiterc
+[gimp] ~/Library/Application Support/GIMP/2.10/pluginrc
+[gimp] ~/Library/Application Support/GIMP/2.10/profilerc
+[gimp] ~/Library/Application Support/GIMP/2.10/sessionrc
+[gimp] ~/Library/Application Support/GIMP/2.10/templaterc
+[gimp] ~/Library/Application Support/GIMP/2.10/themerc
+[gimp] ~/Library/Application Support/GIMP/2.10/toolrc
+[gimp] ~/Library/Application Support/GIMP/2.10/unitrc
+[gimp] ~/Library/Application Support/GIMP/2.8/colorrc
+[gimp] ~/Library/Application Support/GIMP/2.8/contextrc
+[gimp] ~/Library/Application Support/GIMP/2.8/controllerrc
+[gimp] ~/Library/Application Support/GIMP/2.8/devicerc
+[gimp] ~/Library/Application Support/GIMP/2.8/dockrc
+[gimp] ~/Library/Application Support/GIMP/2.8/gimprc
+[gimp] ~/Library/Application Support/GIMP/2.8/gtkrc
+[gimp] ~/Library/Application Support/GIMP/2.8/menurc
+[gimp] ~/Library/Application Support/GIMP/2.8/parasiterc
+[gimp] ~/Library/Application Support/GIMP/2.8/pluginrc
+[gimp] ~/Library/Application Support/GIMP/2.8/profilerc
+[gimp] ~/Library/Application Support/GIMP/2.8/sessionrc
+[gimp] ~/Library/Application Support/GIMP/2.8/templaterc
+[gimp] ~/Library/Application Support/GIMP/2.8/themerc
+[gimp] ~/Library/Application Support/GIMP/2.8/toolrc
+[gimp] ~/Library/Application Support/GIMP/2.8/unitrc
+[git] ~/.gitconfig
+[git-hooks] ~/.git_hooks
+[gitbox] ~/Library/Preferences/com.oleganza.gitbox.plist
+[gitfox] ~/Library/Preferences/com.bytieful.Gitfox-retail.plist
+[gitfox] ~/Library/Preferences/com.bytieful.Gitfox-setapp.plist
+[gitfox] ~/Library/Preferences/com.bytieful.Gitfox.plist
+[gitkraken] ~/.gitkraken
+[gitkraken] ~/Library/Preferences/com.axosoft.gitkraken.plist
+[gitup] ~/Library/Preferences/co.gitup.mac.plist
+[gmail-notifr] ~/Library/Preferences/com.ashchan.GmailNotifr.plist
+[gmailctl] ~/.gmailctl/config.jsonnet
+[gmailctl] ~/.gmailctl/credentials.json
+[gmailctl] ~/.gmailctl/gmailctl.libsonnet
+[gmvault] ~/.gmvault/gmvault_defaults.conf
+[gnupg] ~/.gnupg/gpg-agent.conf
+[gnupg] ~/.gnupg/gpg.conf
+[gnupg] ~/.gnupg/trustdb.gpg
+[go2shell] ~/Library/Preferences/com.zipzapmac.Go2Shell.plist
+[goland] ~/Library/Application Support/GoLand2017.3
+[goland] ~/Library/Application Support/GoLand2018.1
+[goland] ~/Library/Application Support/GoLand2018.2
+[goland] ~/Library/Application Support/GoLand2018.3
+[goland] ~/Library/Application Support/GoLand2019.2
+[goland] ~/Library/Application Support/Gogland1.0
+[goland] ~/Library/Application Support/JetBrains/GoLand2023.1
+[goland] ~/Library/Application Support/JetBrains/GoLand2023.2
+[goland] ~/Library/Preferences/GoLand2017.3
+[goland] ~/Library/Preferences/GoLand2018.1
+[goland] ~/Library/Preferences/GoLand2018.2
+[goland] ~/Library/Preferences/GoLand2018.3
+[goland] ~/Library/Preferences/GoLand2019.2
+[goland] ~/Library/Preferences/Gogland1.0
+[goland] ~/Library/Preferences/com.jetbrains.gogland-EAP.plist
+[goldendict] ~/.goldendict/config
+[goodsync] ~/.goodsync
+[gradle] ~/.gradle/gradle.properties
+[gradle] ~/.gradle/init.d
+[gradle] ~/.gradle/init.gradle
+[grandtotal-3] ~/Library/Application Support/GrandTotal/AddressBook.plist
+[grandtotal-3] ~/Library/Preferences/com.mediaatelier.GrandTotal3.plist
+[grsync] ~/.grsync/grsync.ini
+[gstm] ~/.gSTM
+[hammerspoon] ~/.hammerspoon
+[handbrake] ~/Library/Containers/fr.handbrake.HandBrake/Data/Library/Application Support/HandBrake/UserPresets.json
+[hands-off] ~/Library/Preferences/com.metakine.handsoff.plist
+[hazel] ~/Library/Application Support/Hazel
+[hazel] ~/Library/Preferences/com.noodlesoft.Hazel.plist
+[hero-lab] ~/Library/Application Support/Hero Lab/customoutput
+[hero-lab] ~/Library/Application Support/Hero Lab/data
+[hero-lab] ~/Library/Application Support/Hero Lab/docs
+[heroku] ~/.heroku/accounts
+[heroku] ~/.heroku/plugins
+[hexels] ~/Library/Preferences/com.hex-ray.hexels.plist
+[hocus-focus] ~/Library/Application Support/com.uglyapps.HocusFocus/HocusFocus.db
+[hocus-focus] ~/Library/Application Support/com.uglyapps.HocusFocus/HocusFocus.db-shm
+[hocus-focus] ~/Library/Application Support/com.uglyapps.HocusFocus/HocusFocus.db-wal
+[hocus-focus] ~/Library/Preferences/com.uglyapps.HocusFocus.plist
+[homebrew] ~/.Brewfile
+[homebrew] ~/Brewfile
+[homebridge] ~/.homebridge
+[houdini] ~/Library/Application Support/Houdini
+[houdini] ~/Library/Preferences/com.uglyapps.Houdini.plist
+[hstr] ~/.hstr_blacklist
+[hstr] ~/.hstr_favorites
+[htop] ~/.htoprc
+[httpie] ~/.httpie/config.json
+[hyper] ~/.hyper.js
+[hyperdock] ~/Library/Application Support/HyperDock
+[hyperdock] ~/Library/Preferences/de.bahoom.HyperDock.plist
+[hyperdock] ~/Library/Preferences/de.bahoom.HyperDock.prefpane.plist
+[hyperswitch] ~/Library/Preferences/com.bahoom.HyperSwitch.plist
+[i2cssh] ~/.i2csshrc
+[i3] ~/.i3/config
+[i3] ~/.i3status.conf
+[idapro] ~/.idapro
+[ideavim] ~/.ideavimrc
+[iina] ~/Library/Application Support/com.colliderli.iina/input_conf
+[iina] ~/Library/Preferences/com.colliderli.iina.plist
+[illustrator] ~/Library/Application Support/Adobe/Adobe Illustrator 17
+[illustrator] ~/Library/Application Support/Adobe/Adobe Illustrator 18
+[illustrator] ~/Library/Application Support/Adobe/Adobe Illustrator 19
+[illustrator] ~/Library/Application Support/Adobe/Adobe Illustrator 20
+[illustrator] ~/Library/Application Support/Adobe/Adobe Illustrator 23/en_US/Adobe SVG Filters.svg
+[illustrator] ~/Library/Application Support/Adobe/Adobe Illustrator 23/en_US/Swatches
+[illustrator] ~/Library/Application Support/Adobe/Adobe Illustrator 24/en_US/Adobe SVG Filters.svg
+[illustrator] ~/Library/Application Support/Adobe/Adobe Illustrator 24/en_US/Swatches
+[illustrator] ~/Library/Application Support/Adobe/OOBE
+[illustrator] ~/Library/Preferences/Adobe Illustrator 17 Settings
+[illustrator] ~/Library/Preferences/Adobe Illustrator 18 Settings
+[illustrator] ~/Library/Preferences/Adobe Illustrator 19 Settings
+[illustrator] ~/Library/Preferences/Adobe Illustrator 20 Settings
+[illustrator] ~/Library/Preferences/Adobe Illustrator 23 Settings/en_US/Adobe Illustrator Prefs
+[illustrator] ~/Library/Preferences/Adobe Illustrator 23 Settings/en_US/Last Used Artboard Export Settings
+[illustrator] ~/Library/Preferences/Adobe Illustrator 23 Settings/en_US/Last Used Asset Export Settings
+[illustrator] ~/Library/Preferences/Adobe Illustrator 23 Settings/en_US/Modified Workspaces
+[illustrator] ~/Library/Preferences/Adobe Illustrator 23 Settings/en_US/Perspective grid Presets
+[illustrator] ~/Library/Preferences/Adobe Illustrator 23 Settings/en_US/Print Presets
+[illustrator] ~/Library/Preferences/Adobe Illustrator 23 Settings/en_US/Tools/Tools Panel Presets
+[illustrator] ~/Library/Preferences/Adobe Illustrator 23 Settings/en_US/Transparency flattener presets
+[illustrator] ~/Library/Preferences/Adobe Illustrator 23 Settings/en_US/VariableWidthProfiles
+[illustrator] ~/Library/Preferences/Adobe Illustrator 23 Settings/en_US/Vectorizing Presets
+[illustrator] ~/Library/Preferences/Adobe Illustrator 23 Settings/en_US/Workspaces
+[illustrator] ~/Library/Preferences/Adobe Illustrator 24 Settings/en_US/Adobe Illustrator Prefs
+[illustrator] ~/Library/Preferences/Adobe Illustrator 24 Settings/en_US/Last Used Artboard Export Settings
+[illustrator] ~/Library/Preferences/Adobe Illustrator 24 Settings/en_US/Last Used Asset Export Settings
+[illustrator] ~/Library/Preferences/Adobe Illustrator 24 Settings/en_US/Modified Workspaces
+[illustrator] ~/Library/Preferences/Adobe Illustrator 24 Settings/en_US/Perspective grid Presets
+[illustrator] ~/Library/Preferences/Adobe Illustrator 24 Settings/en_US/Print Presets
+[illustrator] ~/Library/Preferences/Adobe Illustrator 24 Settings/en_US/Tools/Tools Panel Presets
+[illustrator] ~/Library/Preferences/Adobe Illustrator 24 Settings/en_US/Transparency flattener presets
+[illustrator] ~/Library/Preferences/Adobe Illustrator 24 Settings/en_US/VariableWidthProfiles
+[illustrator] ~/Library/Preferences/Adobe Illustrator 24 Settings/en_US/Vectorizing Presets
+[illustrator] ~/Library/Preferences/Adobe Illustrator 24 Settings/en_US/Workspaces
+[illustrator] ~/Library/Preferences/com.adobe.illustrator.plist
+[insomnia] ~/Library/Application Support/Insomnia
+[intellijidea] ~/.IntelliJIdea12/config
+[intellijidea] ~/.IntelliJIdea13/config
+[intellijidea] ~/.IntelliJIdea14/config
+[intellijidea] ~/.IntelliJIdea15/config
+[intellijidea] ~/IdeaIC2018.2/config
+[intellijidea] ~/IdeaIC2018.3/config
+[intellijidea] ~/IdeaIC2019.1/config
+[intellijidea] ~/IdeaIC2019.2/config
+[intellijidea] ~/IdeaIC2019.3/config
+[intellijidea] ~/IntelliJIdea2016.1/config
+[intellijidea] ~/IntelliJIdea2016.2/config
+[intellijidea] ~/IntelliJIdea2016.3/config
+[intellijidea] ~/IntelliJIdea2017.1/config
+[intellijidea] ~/IntelliJIdea2017.2/config
+[intellijidea] ~/IntelliJIdea2017.3/config
+[intellijidea] ~/IntelliJIdea2018.1/config
+[intellijidea] ~/IntelliJIdea2018.2/config
+[intellijidea] ~/IntelliJIdea2018.3/config
+[intellijidea] ~/IntelliJIdea2019.1/config
+[intellijidea] ~/IntelliJIdea2019.2/config
+[intellijidea] ~/IntelliJIdea2019.3/config
+[intellijidea] ~/Library/Application Support/IdeaIC2016.1
+[intellijidea] ~/Library/Application Support/IdeaIC2017.1
+[intellijidea] ~/Library/Application Support/IdeaIC2017.2
+[intellijidea] ~/Library/Application Support/IdeaIC2017.3
+[intellijidea] ~/Library/Application Support/IdeaIC2018.2
+[intellijidea] ~/Library/Application Support/IdeaIC2018.3
+[intellijidea] ~/Library/Application Support/IdeaIC2019.1
+[intellijidea] ~/Library/Application Support/IntelliJIdea12
+[intellijidea] ~/Library/Application Support/IntelliJIdea13
+[intellijidea] ~/Library/Application Support/IntelliJIdea14
+[intellijidea] ~/Library/Application Support/IntelliJIdea15
+[intellijidea] ~/Library/Application Support/IntelliJIdea2016.1
+[intellijidea] ~/Library/Application Support/IntelliJIdea2016.2
+[intellijidea] ~/Library/Application Support/IntelliJIdea2016.3
+[intellijidea] ~/Library/Application Support/IntelliJIdea2017.1
+[intellijidea] ~/Library/Application Support/IntelliJIdea2017.2
+[intellijidea] ~/Library/Application Support/IntelliJIdea2017.3
+[intellijidea] ~/Library/Application Support/IntelliJIdea2018.1
+[intellijidea] ~/Library/Application Support/IntelliJIdea2018.2
+[intellijidea] ~/Library/Application Support/IntelliJIdea2018.3
+[intellijidea] ~/Library/Application Support/IntelliJIdea2019.1
+[intellijidea] ~/Library/Application Support/IntelliJIdea2019.2
+[intellijidea] ~/Library/Application Support/IntelliJIdea2019.3
+[intellijidea] ~/Library/Application Support/JetBrains/IntelliJIdea2020.1
+[intellijidea] ~/Library/Application Support/JetBrains/IntelliJIdea2020.2
+[intellijidea] ~/Library/Application Support/JetBrains/IntelliJIdea2020.3
+[intellijidea] ~/Library/Application Support/JetBrains/IntelliJIdea2021.1
+[intellijidea] ~/Library/Application Support/JetBrains/IntelliJIdea2022.1
+[intellijidea] ~/Library/Application Support/JetBrains/IntelliJIdea2022.2
+[intellijidea] ~/Library/Application Support/JetBrains/IntelliJIdea2023.1
+[intellijidea] ~/Library/Application Support/JetBrains/IntelliJIdea2023.2
+[intellijidea] ~/Library/Preferences/IdeaIC2016.1
+[intellijidea] ~/Library/Preferences/IdeaIC2016.2
+[intellijidea] ~/Library/Preferences/IdeaIC2016.3
+[intellijidea] ~/Library/Preferences/IdeaIC2017.1
+[intellijidea] ~/Library/Preferences/IdeaIC2017.2
+[intellijidea] ~/Library/Preferences/IdeaIC2017.3
+[intellijidea] ~/Library/Preferences/IdeaIC2018.2
+[intellijidea] ~/Library/Preferences/IdeaIC2018.3
+[intellijidea] ~/Library/Preferences/IdeaIC2019.1
+[intellijidea] ~/Library/Preferences/IntelliJIdea12
+[intellijidea] ~/Library/Preferences/IntelliJIdea13
+[intellijidea] ~/Library/Preferences/IntelliJIdea14
+[intellijidea] ~/Library/Preferences/IntelliJIdea15
+[intellijidea] ~/Library/Preferences/IntelliJIdea2016.1
+[intellijidea] ~/Library/Preferences/IntelliJIdea2016.2
+[intellijidea] ~/Library/Preferences/IntelliJIdea2016.3
+[intellijidea] ~/Library/Preferences/IntelliJIdea2017.1
+[intellijidea] ~/Library/Preferences/IntelliJIdea2017.2
+[intellijidea] ~/Library/Preferences/IntelliJIdea2017.3
+[intellijidea] ~/Library/Preferences/IntelliJIdea2018.1
+[intellijidea] ~/Library/Preferences/IntelliJIdea2018.2
+[intellijidea] ~/Library/Preferences/IntelliJIdea2018.3
+[intellijidea] ~/Library/Preferences/IntelliJIdea2019.1
+[intellijidea] ~/Library/Preferences/IntelliJIdea2019.2
+[intellijidea] ~/Library/Preferences/IntelliJIdea2019.3
+[ipython] ~/.ipython
+[irssi] ~/.irssi
+[istat-menus] ~/Library/Preferences/com.bjango.istatmenus.menubar.7.plist
+[istat-menus] ~/Library/Preferences/com.bjango.istatmenus.plist
+[istat-menus] ~/Library/Preferences/com.bjango.istatmenus.status.plist
+[istat-menus] ~/Library/Preferences/com.bjango.istatmenus5.extras.plist
+[istat-menus] ~/Library/Preferences/com.bjango.istatmenus6.extras.plist
+[iterm2] ~/Library/Preferences/com.googlecode.iterm2.plist
+[itermocil] ~/.itermocil
+[itsycal] ~/Library/Preferences/com.mowglii.ItsycalApp.plist
+[itunes-scripts] ~/Library/iTunes/Scripts
+[janus] ~/.janus
+[janus] ~/.vimrc.after
+[janus] ~/.vimrc.before
+[jitouch] ~/Library/Preferences/com.jitouch.Jitouch.plist
+[jrnl] ~/.jrnl_config
+[jsbeautifier] ~/.jsbeautifyrc
+[jshint] ~/.jshintrc
+[julia] ~/.julia/config/startup.jl
+[julia] ~/.juliarc.jl
+[jumpcut] ~/Library/Application Support/Jumpcut
+[jumpcut] ~/Library/Preferences/net.sf.Jumpcut.plist
+[jupyter] ~/.jupyter
+[kaggle] ~/.kaggle/kaggle.json
+[kaleidoscope] ~/Library/Application Support/Kaleidoscope
+[kaleidoscope] ~/Library/Preferences/com.blackpixel.kaleidoscope.plist
+[karabiner] ~/Library/Application Support/Karabiner
+[karabiner] ~/Library/Preferences/org.pqrs.Karabiner-AXNotifier.plist
+[karabiner] ~/Library/Preferences/org.pqrs.Karabiner.multitouchextension.plist
+[karabiner] ~/Library/Preferences/org.pqrs.Karabiner.plist
+[kdenlive] ~/kdenlive
+[keepassx] ~/.keepassx
+[keepassx] ~/Library/Application Support/keepassx/keepassx2.ini
+[keepassx] ~/Library/Preferences/org.keepassx.keepassx.plist
+[keepassxc] ~/Library/Application Support/keepassxc/keepassxc.ini
+[keepassxc] ~/Library/Preferences/org.keepassxc.keepassxc.plist
+[keepingyouawake] ~/Library/Preferences/info.marcel-dierkes.KeepingYouAwake.plist
+[keka] ~/Library/Preferences/com.aone.keka.plist
+[keybase] ~/.keybase/config.json
+[keyboard-maestro] ~/Library/Application Support/Keyboard Maestro
+[keymo] ~/Library/Preferences/com.manytricks.Keymo.plist
+[keyremap4macbook] ~/Library/Application Support/KeyRemap4MacBook/private.xml
+[keyremap4macbook] ~/Library/Preferences/org.pqrs.KeyRemap4MacBook.multitouchextension.plist
+[keyremap4macbook] ~/Library/Preferences/org.pqrs.KeyRemap4MacBook.plist
+[khd] ~/.khdrc
+[krew] ~/.krew
+[kubectl] ~/.kube/config
+[kwm] ~/.kwm
+[latexit] ~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist
+[launchbar] ~/Library/Application Support/LaunchBar/Actions
+[launchbar] ~/Library/Application Support/LaunchBar/Configuration.plist
+[launchbar] ~/Library/Application Support/LaunchBar/CustomShortcuts.plist
+[launchbar] ~/Library/Application Support/LaunchBar/Snippets
+[launchbar] ~/Library/Preferences/at.obdev.LaunchBar.plist
+[lazydocker] ~/Library/Application Support/jesseduffield/lazydocker/config.yml
+[lazygit] ~/Library/Application Support/jesseduffield/lazygit/config.yml
+[lazygit] ~/Library/Application Support/lazygit/config.yml
+[ledger] ~/.ledgerrc
+[liftoff] ~/.liftoffrc
+[light-table] ~/Library/Application Support/LightTable/User
+[light-table] ~/Library/Application Support/LightTable/plugins
+[light-table] ~/Library/Application Support/LightTable/settings
+[light-table] ~/Library/Preferences/com.kodowa.LightTable.plist
+[lightroom] ~/Library/Application Support/Adobe/Lightroom
+[lightroom] ~/Library/Preferences/com.adobe.Lightroom4.plist
+[lightroom] ~/Library/Preferences/com.adobe.Lightroom5.plist
+[lightroom] ~/Library/Preferences/com.adobe.Lightroom6.plist
+[lightroom-classic] ~/Library/Preferences/com.adobe.LightroomClassicCC7.plist
+[limechat] ~/Library/Preferences/net.limechat.LimeChat-AppStore.plist
+[liquidprompt] ~/.liquidpromptrc
+[littlesnitch] ~/Library/Application Support/Little Snitch/configuration.user.xpl
+[littlesnitch] ~/Library/Application Support/Little Snitch/configuration.xpl
+[littlesnitch] ~/Library/Application Support/Little Snitch/configuration4.user.xpl
+[littlesnitch] ~/Library/Application Support/Little Snitch/rules.usr.xpl
+[littlesnitch] ~/Library/Preferences/at.obdev.LittleSnitchNetworkMonitor.plist
+[littlesnitch] ~/Library/Preferences/at.obdev.littlesnitch.networkmonitor.plist
+[livestreamer] ~/.livestreamerrc
+[logitech-options] ~/Library/Preferences/com.logitech.manager.setting.ffff.plist
+[logseq] ~/.logseq
+[lollypop] ~/.local/share/lollypop
+[loopback] ~/Library/Application Support/Loopback/Devices.plist
+[loopback] ~/Library/Preferences/com.rogueamoeba.Loopback.plist
+[luftrausers] ~/.LUFTRAUSERS
+[macdive2] ~/Library/Application Support/MacDive
+[macdive2] ~/Library/Preferences/com.mintsoftware.MacDive2.plist
+[macdown] ~/Library/Application Support/MacDown/Styles
+[macdown] ~/Library/Application Support/MacDown/Themes
+[macdown] ~/Library/Preferences/com.uranusjr.macdown.plist
+[mackup] ~/.mackup
+[mackup] ~/.mackup.cfg
+[macosx] ~/.MacOSX
+[macosx] ~/Library/KeyBindings/DefaultKeyBinding.dict
+[macosx] ~/Library/PDF Services
+[macosx] ~/Library/Preferences/com.apple.symbolichotkeys.plist
+[macosx] ~/Library/Scripts
+[macosx] ~/Library/Speech/Speakable Items
+[macosx] ~/Library/Workflows
+[macvim] ~/Library/Preferences/org.vim.MacVim.LSSharedFileList.plist
+[macvim] ~/Library/Preferences/org.vim.MacVim.plist
+[magic-launch] ~/Library/Preferences/com.metakine.magic-launch.agent.plist
+[magicprefs] ~/Library/Preferences/com.vladalexa.MagicPrefs.MagicPrefsPlugins.plist
+[magicprefs] ~/Library/Preferences/com.vladalexa.MagicPrefs.plist
+[magnet] ~/Library/Preferences/com.crowdcafe.windowmagnet.plist
+[maid] ~/.maid
+[mail] ~/Library/Preferences/com.apple.mail.plist
+[mailmate] ~/Library/Application Support/Mailmate/Identities.plist
+[mailmate] ~/Library/Application Support/Mailmate/Mailboxes.plist
+[mailmate] ~/Library/Application Support/Mailmate/Resources/KeyBindings
+[mailmate] ~/Library/Application Support/Mailmate/Signatures.plist
+[mailmate] ~/Library/Application Support/Mailmate/Sources.plist
+[mailmate] ~/Library/Application Support/Mailmate/Submission.plist
+[mailmate] ~/Library/Application Support/Mailmate/Tags.plist
+[mailmate] ~/Library/Application Support/Mailmate/com.freron.MailMate.pid
+[mailmate] ~/Library/Preferences/com.freron.MailMate.plist
+[mailplane] ~/Library/Preferences/com.mailplaneapp.Mailplane.plist
+[mailplane] ~/Library/Preferences/com.mailplaneapp.Mailplane3.plist
+[marked2] ~/Library/Application Support/Marked 2
+[marked2] ~/Library/Preferences/com.brettterpstra.marked2.plist
+[marta] ~/Library/Application Support/org.yanex.marta/conf.json
+[marta] ~/Library/Application Support/org.yanex.marta/conf.marco
+[marta] ~/Library/Application Support/org.yanex.marta/favorites.json
+[marta] ~/Library/Application Support/org.yanex.marta/favorites.marco
+[matlab] ~/.matlab
+[maven] ~/.m2/settings-security.xml
+[maven] ~/.m2/settings.xml
+[maven] ~/.m2/toolchains.xml
+[max] ~/Library/Preferences/org.sbooth.Max.plist
+[mendeley] ~/Library/Application Support/Mendeley Desktop
+[menumeters] ~/Library/Preferences/com.ragingmenace.MenuMeters.plist
+[mercurial] ~/.hgignore_global
+[mercurial] ~/.hgrc
+[mercurymover] ~/Library/Preferences/com.heliumfoot.MyWiAgent.plist
+[messages] ~/Library/Preferences/com.apple.iChat.AIM.plist
+[messages] ~/Library/Preferences/com.apple.iChat.Jabber.plist
+[messages] ~/Library/Preferences/com.apple.iChat.StatusMessages.plist
+[messages] ~/Library/Preferences/com.apple.iChat.Yahoo.plist
+[microsoft-remote-desktop] ~/Library/Containers/com.microsoft.rdc.macos/Data/Library/Preferences/com.microsoft.rdc.macos.plist
+[mitmproxy] ~/.mitmproxy/config.yaml
+[mkcert] ~/Library/Application Support/mkcert
+[monodevelop] ~/Library/MonoDevelop-Unity-5.0/KeyBindings/Custom.mac-kb.xml
+[monodevelop] ~/Library/MonoDevelop-Unity-5.0/Policies/Default.mdpolicy.xml
+[monodevelop] ~/Library/Preferences/MonoDevelop-Unity-5.0/MonoDevelopProperties.xml
+[moom] ~/Library/Application Support/Many Tricks
+[moom] ~/Library/Preferences/com.manytricks.Moom.plist
+[mosaic] ~/Library/Application Support/com.lightpillar.Mosaic/MosaicCoreData.storedata
+[mou] ~/Library/Application Support/Mou
+[mou] ~/Library/Preferences/com.mouapp.Mou.LSSharedFileList.plist
+[mou] ~/Library/Preferences/com.mouapp.Mou.plist
+[mpd] ~/.mpd
+[mpd] ~/.mpdconf
+[mplayerx] ~/Library/Preferences/org.niltsh.MPlayerX.plist
+[mpv] ~/.mpv/channels.conf
+[mpv] ~/.mpv/config
+[mpv] ~/.mpv/input.conf
+[mtmr] ~/Library/Application Support/MTMR/items.json
+[multitouch] ~/Library/Preferences/com.brassmonkery.Multitouch.plist
+[mumu] ~/Library/Application Support/Mumu
+[mutespotifyads] ~/Library/Preferences/de.simonmeusel.MuteSpotifyAds.plist
+[mycli] ~/.myclirc
+[myrepos] ~/.mrconfig
+[mysql] ~/.my.cnf
+[mysqlworkbench] ~/Library/Application Support/MySQL/Workbench/connections.xml
+[mysqlworkbench] ~/Library/Application Support/MySQL/Workbench/server_instances.xml
+[mysqlworkbench] ~/Library/Application Support/MySQL/Workbench/wb_options.xml
+[mysqlworkbench] ~/Library/Preferences/com.oracle.mysql.workbench.plist
+[name-mangler] ~/Library/Application Support/Name Mangler
+[name-mangler] ~/Library/Preferences/com.manytricks.NameMangler.plist
+[nano] ~/.nanorc
+[navicat] ~/Library/Application Support/Navicat Premium
+[navicat] ~/Library/Application Support/Navicat for MySQL
+[navicat] ~/Library/Application Support/PremiumSoft CyberTech
+[navicat] ~/Library/Preferences/com.prect.Navicat.plist
+[navicat] ~/Library/Preferences/com.prect.NavicatPremium.plist
+[navicat] ~/Library/Preferences/com.prect.NavicatPremiumEssentials.plist
+[ncmpcpp] ~/.ncmpcpp
+[neovim] ~/.nvim
+[neovim] ~/.nvimrc
+[nethack] ~/.nethackrc
+[netlify] ~/.netlify/config.json
+[newsbeuter] ~/.newsbeuter/config
+[newsbeuter] ~/.newsbeuter/urls
+[ngrok] ~/.ngrok
+[ngrok] ~/.ngrok2
+[ni] ~/.nirc
+[nosqlbooster-for-mongodb] ~/Documents/NoSQLBooster
+[notion-enhancer] ~/.notion-enhancer
+[nova] ~/Library/Preferences/com.panic.Nova.plist
+[npm] ~/.npmrc
+[npmrc] ~/.npmrcs
+[nslogger] ~/Library/Preferences/com.florentpillet.NSLogger.plist
+[nuget] ~/.nuget/NuGet/NuGet.Config
+[nushell] ~/Library/Application Support/nushell/config.nu
+[nushell] ~/Library/Application Support/nushell/env.nu
+[nvalt] ~/Library/Application Support/Notational Velocity
+[nvalt] ~/Library/Preferences/net.elasticthreads.nv.plist
+[nvm] ~/.nvm/default-packages
+[nvpy] ~/.nvpy.cfg
+[obs] ~/Library/Application Support/obs-studio/basic
+[obs] ~/Library/Application Support/obs-studio/global.ini
+[obs] ~/Library/Preferences/com.obsproject.obs-studio.plist
+[oci] ~/.oci/config
+[oci] ~/.oci/oci_cli_rc
+[ogdesign-eagle] ~/Library/Application Support/Eagle/Settings
+[oh-my-tmux] ~/.tmux.conf.local
+[omnifocus] ~/Library/Application Support/OmniFocus/Plug-Ins
+[omnifocus] ~/Library/Application Support/OmniFocus/Themes
+[omnifocus] ~/Library/Preferences/com.omnigroup.OmniFocus.plist
+[omnigraffle] ~/Library/Application Support/The Omni Group/OmniGraffle
+[openemu] ~/Library/Application Support/OpenEmu
+[openemu] ~/Library/Preferences/org.openemu.OpenEmu.plist
+[p10k] ~/.p10k.zsh
+[paintbrush] ~/Library/Preferences/com.soggywaffles.Paintbrush.plist
+[pandoc] ~/.pandoc
+[pass] ~/.password-store
+[pastebot] ~/Library/Preferences/com.tapbots.PastebotSync.plist
+[pastebot] ~/Library/Preferences/com.tapbots.PastebotSync.prefPane.plist
+[pastebot] ~/Library/Preferences/com.tapbots.PastebotSync.stats.plist
+[path-finder] ~/Library/Application Support/Path Finder
+[path-finder] ~/Library/Preferences/com.cocoatech.PathFinder.plist
+[pdfjam] ~/.pdfjam.conf
+[pear] ~/.pearrc
+[pentadactyl] ~/.pentadactyl
+[pentadactyl] ~/.pentadactylrc
+[perl] ~/.perlcriticrc
+[perl] ~/.perltidyrc
+[perl] ~/.proverc
+[pgsql] ~/.pgpass
+[pgsql] ~/.psqlrc
+[phoenix] ~/.phoenix.js
+[phoneview] ~/Library/Preferences/com.ecamm.PhoneView.plist
+[photoshop] ~/Library/Application Support/Adobe/Adobe Photoshop CC 2013/Presets
+[photoshop] ~/Library/Application Support/Adobe/Adobe Photoshop CC 2014/Presets
+[photoshop] ~/Library/Application Support/Adobe/Adobe Photoshop CC 2015.5/Presets
+[photoshop] ~/Library/Application Support/Adobe/Adobe Photoshop CC 2015/Presets
+[photoshop] ~/Library/Application Support/Adobe/Adobe Photoshop CC 2019/Presets
+[photoshop] ~/Library/Preferences/Adobe Photoshop CC 2013 Settings
+[photoshop] ~/Library/Preferences/Adobe Photoshop CC 2014 Settings
+[photoshop] ~/Library/Preferences/Adobe Photoshop CC 2015 Settings
+[photoshop] ~/Library/Preferences/Adobe Photoshop CC 2015.5 Settings
+[photoshop] ~/Library/Preferences/Adobe Photoshop CC 2019 Settings
+[photoshop] ~/Library/Preferences/com.adobe.Photoshop.plist
+[phpstorm] ~/.PhpStorm2016.1/config
+[phpstorm] ~/.PhpStorm2016.2/config
+[phpstorm] ~/.PhpStorm2016.3/config
+[phpstorm] ~/.PhpStorm2017.1/config
+[phpstorm] ~/.PhpStorm2017.2/config
+[phpstorm] ~/.PhpStorm2017.3/config
+[phpstorm] ~/.PhpStorm2018.1/config
+[phpstorm] ~/.PhpStorm2018.2/config
+[phpstorm] ~/.PhpStorm2018.3/config
+[phpstorm] ~/.PhpStorm2019.1/config
+[phpstorm] ~/.PhpStorm2019.2/config
+[phpstorm] ~/.PhpStorm2019.3/config
+[phpstorm] ~/Library/Application Support/JetBrains/PhpStorm2020.1
+[phpstorm] ~/Library/Application Support/JetBrains/PhpStorm2020.2
+[phpstorm] ~/Library/Application Support/JetBrains/PhpStorm2020.3
+[phpstorm] ~/Library/Application Support/JetBrains/PhpStorm2021.1
+[phpstorm] ~/Library/Application Support/JetBrains/PhpStorm2021.2
+[phpstorm] ~/Library/Application Support/JetBrains/PhpStorm2021.3
+[phpstorm] ~/Library/Application Support/JetBrains/PhpStorm2022.1
+[phpstorm] ~/Library/Application Support/JetBrains/PhpStorm2022.2
+[phpstorm] ~/Library/Application Support/JetBrains/PhpStorm2022.3
+[phpstorm] ~/Library/Application Support/JetBrains/PhpStorm2023.1
+[phpstorm] ~/Library/Application Support/JetBrains/PhpStorm2023.2
+[phpstorm] ~/Library/Application Support/JetBrains/PhpStorm2023.3
+[phpstorm] ~/Library/Application Support/JetBrains/PhpStorm2024.1
+[phpstorm] ~/Library/Application Support/PhpStorm2016.1
+[phpstorm] ~/Library/Application Support/PhpStorm2016.2
+[phpstorm] ~/Library/Application Support/PhpStorm2016.3
+[phpstorm] ~/Library/Application Support/PhpStorm2017.1
+[phpstorm] ~/Library/Application Support/PhpStorm2017.2
+[phpstorm] ~/Library/Application Support/PhpStorm2017.3
+[phpstorm] ~/Library/Application Support/PhpStorm2018.1
+[phpstorm] ~/Library/Application Support/PhpStorm2018.2
+[phpstorm] ~/Library/Application Support/PhpStorm2018.3
+[phpstorm] ~/Library/Application Support/PhpStorm2019.1
+[phpstorm] ~/Library/Application Support/PhpStorm2019.2
+[phpstorm] ~/Library/Application Support/PhpStorm2019.3
+[phpstorm] ~/Library/Application Support/PhpStorm2019.4
+[phpstorm] ~/Library/Application Support/WebIde100
+[phpstorm] ~/Library/Application Support/WebIde60
+[phpstorm] ~/Library/Application Support/WebIde70
+[phpstorm] ~/Library/Application Support/WebIde80
+[phpstorm] ~/Library/Application Support/WebIde90
+[phpstorm] ~/Library/Application Support/WebIde95
+[phpstorm] ~/Library/Preferences/PhpStorm2016.1
+[phpstorm] ~/Library/Preferences/PhpStorm2016.2
+[phpstorm] ~/Library/Preferences/PhpStorm2016.3
+[phpstorm] ~/Library/Preferences/PhpStorm2017.1
+[phpstorm] ~/Library/Preferences/PhpStorm2017.2
+[phpstorm] ~/Library/Preferences/PhpStorm2017.3
+[phpstorm] ~/Library/Preferences/PhpStorm2018.1
+[phpstorm] ~/Library/Preferences/PhpStorm2018.2
+[phpstorm] ~/Library/Preferences/PhpStorm2018.3
+[phpstorm] ~/Library/Preferences/PhpStorm2019.1
+[phpstorm] ~/Library/Preferences/PhpStorm2019.2
+[phpstorm] ~/Library/Preferences/PhpStorm2019.3
+[phpstorm] ~/Library/Preferences/PhpStorm2019.4
+[phpstorm] ~/Library/Preferences/WebIde100
+[phpstorm] ~/Library/Preferences/WebIde60
+[phpstorm] ~/Library/Preferences/WebIde70
+[phpstorm] ~/Library/Preferences/WebIde80
+[phpstorm] ~/Library/Preferences/WebIde90
+[phpstorm] ~/Library/Preferences/WebIde95
+[phpstorm] ~/Library/Preferences/com.jetbrains.PhpStorm.plist
+[picgo] ~/Library/Application Support/picgo/data.json
+[pidgin] ~/.purple
+[pip] ~/.pip/pip.conf
+[pip] ~/Library/Application Support/pip/pip.conf
+[pixelsnap] ~/Library/Preferences/com.getpixelsnap.app.plist
+[pixelsnap2] ~/Library/Preferences/pl.maketheweb.pixelsnap2.plist
+[planner] ~/.var/app/com.github.alainm23.planner/config
+[planner] ~/.var/app/com.github.alainm23.planner/data
+[pnpm] ~/.pnpm-store/2/store.json
+[pnpm] ~/.pnpm/global_pnpmfile.js
+[pock] ~/Library/Preferences/com.pigigaldi.pock.plist
+[poedit] ~/Library/Preferences/net.poedit.Poedit.cfg
+[poedit] ~/Library/Preferences/net.poedit.Poedit.plist
+[poetry] ~/Library/Application Support/pypoetry/config.toml
+[poetry] ~/Library/Preferences/pypoetry/config.toml
+[pokerstars] ~/Library/Application Support/PokerStars
+[pokerstars] ~/Library/Application Support/PokerStarsEU
+[pokerstars] ~/Library/Preferences/com.pokerstars.PokerStars.plist
+[pokerstars] ~/Library/Preferences/com.pokerstars.PokerStarsEU.plist
+[pokerstars] ~/Library/Preferences/com.pokerstars.eu.user.ini
+[pokerstars] ~/Library/Preferences/com.pokerstars.user.ini
+[polybar] ~/.polybar/config
+[polybar] ~/.polybar/launch.sh
+[popclip] ~/Library/Application Support/PopClip/Extensions
+[popclip] ~/Library/Preferences/com.pilotmoon.popclip.plist
+[popcorn-time] ~/Library/Application Support/Popcorn-Time/data/bookmarks.db
+[popcorn-time] ~/Library/Application Support/Popcorn-Time/data/movies.db
+[popcorn-time] ~/Library/Application Support/Popcorn-Time/data/settings.db
+[popcorn-time] ~/Library/Application Support/Popcorn-Time/data/shows.db
+[popcorn-time] ~/Library/Application Support/Popcorn-Time/data/watched.db
+[postico] ~/Library/Preferences/at.eggerapps.Postico.plist
+[pow] ~/.powconfig
+[pow] ~/.powenv
+[pow] ~/.powrc
+[prezto] ~/.zpreztorc
+[processing] ~/Library/Processing/preferences.txt
+[proselint] ~/.proselintrc
+[proxychains] ~/.proxychains
+[proxyman] ~/Library/Application Support/com.proxyman.NSProxy
+[proxyman] ~/Library/Application Support/com.proxyman.NSProxy-setapp
+[proxyman] ~/Library/Preferences/com.proxyman.NSProxy-setapp.plist
+[proxyman] ~/Library/Preferences/com.proxyman.NSProxy.plist
+[punto-switcher] ~/Library/Preferences/ru.yandex.punto.plist
+[pycharm] ~/.PyCharm2016.1/config
+[pycharm] ~/.PyCharm2016.2/config
+[pycharm] ~/.PyCharm40/config
+[pycharm] ~/.PyCharm50/config
+[pycharm] ~/.PyCharmCE2019.3/config
+[pycharm] ~/Library/Application Support/JetBrains/PyCharm2020.1
+[pycharm] ~/Library/Application Support/JetBrains/PyCharm2020.2
+[pycharm] ~/Library/Application Support/JetBrains/PyCharm2020.3
+[pycharm] ~/Library/Application Support/JetBrains/PyCharm2020.4
+[pycharm] ~/Library/Application Support/JetBrains/PyCharm2023.1
+[pycharm] ~/Library/Application Support/JetBrains/PyCharm2023.2
+[pycharm] ~/Library/Application Support/JetBrains/PyCharmCE2020.1
+[pycharm] ~/Library/Application Support/PyCharm
+[pycharm] ~/Library/Application Support/PyCharm2016.1
+[pycharm] ~/Library/Application Support/PyCharm2016.2
+[pycharm] ~/Library/Application Support/PyCharm2019.2
+[pycharm] ~/Library/Application Support/PyCharm2019.3
+[pycharm] ~/Library/Application Support/PyCharm40
+[pycharm] ~/Library/Application Support/PyCharm50
+[pycharm] ~/Library/Preferences/PyCharm2016.1
+[pycharm] ~/Library/Preferences/PyCharm2016.2
+[pycharm] ~/Library/Preferences/PyCharm2019.2
+[pycharm] ~/Library/Preferences/PyCharm2019.3
+[pycharm] ~/Library/Preferences/PyCharm40
+[pycharm] ~/Library/Preferences/PyCharm50
+[pypi] ~/.pypirc
+[pyradio] ~/.pyradio/stations.csv
+[querious] ~/Library/Application Support/Querious
+[querious] ~/Library/Preferences/com.araeliumgroup.querious.plist
+[quicklook] ~/Library/Quicklook
+[quicksilver] ~/Library/Application Support/Quicksilver
+[quicksilver] ~/Library/Preferences/com.blacktree.Quicksilver.plist
+[quitter] ~/Library/Preferences/com.marcoarment.quitter.plist
+[qutebrowser] ~/.qutebrowser/config.py
+[qv2ray] ~/Library/Preferences/qv2ray/Qv2ray.conf
+[qv2ray] ~/Library/Preferences/qv2ray/plugin_settings
+[r] ~/.R
+[r] ~/.Renviron
+[r] ~/.Renviron.d
+[r] ~/.Rhistory
+[r] ~/.Rprofile
+[r] ~/.Rprofile.d
+[r] ~/Library/Preferences/org.R-project.R.plist
+[rails] ~/.railsrc
+[rbenv] ~/.rbenv/default_gems
+[rectangle] ~/Library/Preferences/com.knollsoft.Rectangle.plist
+[remote-desktop-manager] ~/Library/Application Support/com.devolutions.remotedesktopmanager.free/Connections.db
+[remote-desktop-manager] ~/Library/Application Support/com.devolutions.remotedesktopmanager/Connections.db
+[rhythmbox] ~/.gconf/apps/rhythmbox
+[rime] ~/Library/Rime/default.custom.yaml
+[rime] ~/Library/Rime/default.yaml
+[rime] ~/Library/Rime/installation.yaml
+[rime] ~/Library/Rime/squirrel.custom.yaml
+[rime] ~/Library/Rime/squirrel.yaml
+[rime] ~/Library/Rime/symbols.yaml
+[rime] ~/Library/Rime/user.yaml
+[ripgrep] ~/.ripgreprc
+[robo3t] ~/.3T
+[robo3t] ~/Library/Preferences/com.3t.Robomongo.plist
+[rocket] ~/Library/Application Support/Rocket
+[rocket] ~/Library/Preferences/net.matthewpalmer.Rocket.plist
+[royaltsx] ~/Library/Application Support/Royal TSX/License.xml
+[royaltsx] ~/Library/Application Support/Royal TSX/UserPreferences.config
+[royaltsx] ~/Library/Preferences/com.lemonmojo.RoyalTSX.App.plist
+[rstudio] ~/.rstudio-desktop
+[rstudio] ~/Library/Preferences/org.rstudio.RStudio.plist
+[rtorrent] ~/.rtorrent.rc
+[rtx] ~/.default-gems
+[rtx] ~/.default-go-packages
+[rtx] ~/.default-mix-commands
+[rtx] ~/.default-node-packages
+[rtx] ~/.default-nodejs-packages
+[rtx] ~/.default-npm-packages
+[rtx] ~/.default-python-packages
+[rtx] ~/.rtx.toml
+[rtx] ~/.tool-versions
+[rubitrack5] ~/Library/Preferences/com.shiftoption.rubitrack5.pro.plist
+[rubocop] ~/.rubocop.yml
+[ruby] ~/.aprc
+[ruby] ~/.gem/credentials
+[ruby] ~/.gemrc
+[ruby] ~/.irbrc
+[ruby] ~/.pryrc
+[ruby-version] ~/.ruby-version
+[rubymine] ~/Library/Application Support/JetBrains/RubyMine2023.1
+[rubymine] ~/Library/Application Support/JetBrains/RubyMine2023.2
+[rubymine] ~/Library/Application Support/RubyMine2016.1
+[rubymine] ~/Library/Application Support/RubyMine2016.2
+[rubymine] ~/Library/Application Support/RubyMine2016.3
+[rubymine] ~/Library/Application Support/RubyMine2017.3
+[rubymine] ~/Library/Application Support/RubyMine2018.1
+[rubymine] ~/Library/Application Support/RubyMine40
+[rubymine] ~/Library/Application Support/RubyMine50
+[rubymine] ~/Library/Application Support/RubyMine60
+[rubymine] ~/Library/Application Support/RubyMine70
+[rubymine] ~/Library/Application Support/RubyMine80
+[rubymine] ~/Library/Preferences/RubyMine2016.1
+[rubymine] ~/Library/Preferences/RubyMine2016.2
+[rubymine] ~/Library/Preferences/RubyMine2016.3
+[rubymine] ~/Library/Preferences/RubyMine2017.3
+[rubymine] ~/Library/Preferences/RubyMine2018.1
+[rubymine] ~/Library/Preferences/RubyMine40
+[rubymine] ~/Library/Preferences/RubyMine50
+[rubymine] ~/Library/Preferences/RubyMine60
+[rubymine] ~/Library/Preferences/RubyMine70
+[rubymine] ~/Library/Preferences/RubyMine80
+[rust] ~/.cargo/config
+[rust] ~/.cargo/config.toml
+[rvm] ~/.rvmrc
+[s3cmd] ~/.s3cfg
+[sabnzbd] ~/Library/Application Support/SABnzbd/admin/rss_data.sab
+[sabnzbd] ~/Library/Application Support/SABnzbd/sabnzbd.ini
+[sbcl] ~/.sbclrc
+[sbt] ~/.sbt/0.12/build.sbt
+[sbt] ~/.sbt/0.12/global.sbt
+[sbt] ~/.sbt/0.12/plugins/build.sbt
+[sbt] ~/.sbt/0.12/plugins/plugins.sbt
+[sbt] ~/.sbt/0.13/build.sbt
+[sbt] ~/.sbt/0.13/global.sbt
+[sbt] ~/.sbt/0.13/plugins/build.sbt
+[sbt] ~/.sbt/0.13/plugins/plugins.sbt
+[sbt] ~/.sbt/1.0/build.sbt
+[sbt] ~/.sbt/1.0/global.sbt
+[sbt] ~/.sbt/1.0/plugins/build.sbt
+[sbt] ~/.sbt/1.0/plugins/plugins.sbt
+[sbt] ~/.sbtconfig
+[scenario] ~/Library/Preferences/com.lagente.scenario.plist
+[scenario] ~/Library/Scenario
+[screen] ~/.screenrc
+[screenhero] ~/Library/Preferences/com.screenhero.screenhero.plist
+[scrivener] ~/Library/Application Support/Scrivener
+[scrivener] ~/Library/Preferences/com.literatureandlatte.scrivener2.plist
+[scroll-reverser] ~/Library/Preferences/com.pilotmoon.scroll-reverser.plist
+[secure-pipes] ~/Library/Application Support/Secure Pipes
+[secure-pipes] ~/Library/Preferences/net.edgeservices.Secure-Pipes.plist
+[secure-pipes] ~/Library/Preferences/net.edgeservices.connections.plist
+[secure-pipes] ~/Library/Preferences/net.edgeservices.sp-config.plist
+[securecrt] ~/Library/Application Support/VanDyke/SecureCRT/Config
+[securecrt] ~/Library/Preferences/com.vandyke.SecureCRT.plist
+[seil] ~/Library/Preferences/org.pqrs.PCKeyboardHack.plist
+[seil] ~/Library/Preferences/org.pqrs.Seil.plist
+[selfcontrol] ~/Library/Preferences/org.eyebeam.SelfControl.plist
+[sequel-pro] ~/Library/Application Support/Sequel Pro/Bundles
+[sequel-pro] ~/Library/Application Support/Sequel Pro/Data
+[sequel-pro] ~/Library/Application Support/Sequel Pro/Themes
+[sequel-pro] ~/Library/Preferences/com.sequelpro.SequelPro.plist
+[shiftit] ~/Library/Preferences/org.shiftitapp.ShiftIt.plist
+[shifty] ~/Library/Preferences/io.natethompson.Shifty.plist
+[shimo] ~/Library/Application Support/Shimo/ShimoProfiles.xml
+[shimo] ~/Library/Preferences/com.chungwasoft.Shimo.plist
+[showyedge] ~/Library/Preferences/org.pqrs.ShowyEdge.plist
+[shsh-blobs] ~/.shsh
+[shuttle] ~/.shuttle.json
+[sizeup] ~/Library/Application Support/SizeUp/SizeUp.sizeuplicense
+[sizeup] ~/Library/Preferences/com.irradiatedsoftware.SizeUp.plist
+[sizzy] ~/Library/Application Support/Sizzy/config.json
+[sizzy] ~/Library/Application Support/Sizzy/window-state.json
+[skhd] ~/.skhdrc
+[skim] ~/Library/Preferences/net.sourceforge.skim-app.skim.plist
+[skitch] ~/Library/Preferences/com.plasq.skitch.history
+[skitch] ~/Library/Preferences/com.plasq.skitch.plist
+[slate] ~/.slate
+[slate] ~/.slate.js
+[slate] ~/Library/Application Support/com.slate.Slate
+[slic3r] ~/Library/Application Support/Slic3r
+[slogger] ~/Slogger
+[smartgit] ~/Library/Preferences/SmartGit/smartgit.vmoptions
+[smooth-mouse] ~/Library/Preferences/com.cyberic.SmoothMouse.plist
+[soulver] ~/Library/Application Support/Soulver
+[soulver] ~/Library/Application Support/Soulver 3
+[soulver] ~/Library/Preferences/app.soulver.mac.plist
+[soulver] ~/Library/Preferences/com.acqualia.soulver.plist
+[sourcetree] ~/Library/Application Support/SourceTree/browser.plist
+[sourcetree] ~/Library/Application Support/SourceTree/hgrc_sourcetree
+[sourcetree] ~/Library/Application Support/SourceTree/hostingservices.plist
+[sourcetree] ~/Library/Application Support/SourceTree/sourcetree.license
+[spacelauncher] ~/Library/Preferences/name.guoc.SpaceLauncher.plist
+[spacemacs] ~/.spacemacs
+[spacemacs] ~/.spacemacs.d
+[spacevim] ~/.SpaceVim.d
+[spamsieve] ~/Library/Application Support/SpamSieve
+[spamsieve] ~/Library/Preferences/com.c-command.SpamSieve.plist
+[spark] ~/Library/Application Support/Spark
+[spectacle] ~/Library/Application Support/Spectacle
+[spectacle] ~/Library/Preferences/com.divisiblebyzero.Spectacle.plist
+[spectrwm] ~/.spectrwm.conf
+[splice] ~/Library/Preferences/com.splice.Splice.plist
+[spotify] ~/Library/Preferences/com.spotify.client.plist
+[spotify-notifications] ~/Library/Preferences/io.citruspi.Spotify-Notifications.plist
+[sqitch] ~/.sqitch/sqitch.conf
+[ssh] ~/.ssh/authorized_keys
+[ssh] ~/.ssh/config
+[starship] ~/.config/starship.toml
+[startupizer2] ~/Library/Application Support/Startupizer
+[stata] ~/Library/Application Support/Stata
+[stata] ~/Library/Preferences/Stata 13 Preferences
+[stata] ~/Library/Preferences/com.stata.stata12.plist
+[stata] ~/Library/Preferences/com.stata.stata13.plist
+[stats] ~/Library/Preferences/eu.exelban.Stats.plist
+[stay] ~/Library/Application Support/Stay
+[stay] ~/Library/Preferences/com.cordlessdog.Stay.plist
+[storyist-3] ~/Library/Preferences/.com.storyist.storyist.plist
+[storyist-3] ~/Library/Preferences/com.storyist.storyist.plist
+[streamdeck] ~/Library/Application Support/com.elgato.StreamDeck
+[subler] ~/Library/Application Support/Subler
+[sublime-merge] ~/Library/Application Support/Sublime Merge/Packages/User
+[sublime-text] ~/Library/Application Support/Sublime Text/Packages/User
+[sublime-text-2] ~/Library/Application Support/Sublime Text 2/Packages/User
+[sublime-text-3] ~/Library/Application Support/Sublime Text 3/Packages/User
+[subversion] ~/.subversion
+[superduper] ~/Library/Application Support/SuperDuper!
+[surge] ~/.surge.conf
+[swinsian] ~/Library/Application Support/Swinsian/Library.sqlite
+[swinsian] ~/Library/Application Support/Swinsian/License.swinsianlicense
+[swinsian] ~/Library/Preferences/com.swinsian.Swinsian.plist
+[swinsian] ~/Library/Preferences/com.swinsian.SwinsianDesktopWindow.plist
+[swish] ~/Library/Preferences/co.highlyopinionated.swish.plist
+[switchhosts] ~/.SwitchHosts/data/collection/hosts
+[t] ~/.trc
+[tableplus] ~/Library/Application Support/com.tinyapp.TablePlus/Cache/Favorite
+[tableplus] ~/Library/Application Support/com.tinyapp.TablePlus/Cache/History
+[tableplus] ~/Library/Application Support/com.tinyapp.TablePlus/Data
+[tableplus] ~/Library/Application Support/com.tinyapp.TablePlus/Plugins
+[tableplus] ~/Library/Preferences/com.tinyapp.TablePlus.plist
+[taskpaper] ~/Library/Application Support/TaskPaper
+[taskpaper] ~/Library/Preferences/com.hogbaysoftware.TaskPaper.mac.plist
+[taskwarrior] ~/.taskrc
+[teamocil] ~/.teamocil
+[telegram_macos] ~/Library/Preferences/ru.keepcoder.Telegram.plist
+[terminal] ~/Library/Preferences/com.apple.Terminal.plist
+[termite] ~/termite/config
+[termux] ~/.termux/colors.properties
+[termux] ~/.termux/font.ttf
+[termux] ~/.termux/termux.properties
+[textexpander] ~/Library/Application Support/TextExpander/Settings.textexpander
+[textexpander] ~/Library/Preferences/com.smileonmymac.textexpander.plist
+[textmate] ~/.tm_properties
+[textmate] ~/Library/Application Support/TextMate/Bundles
+[textmate] ~/Library/Application Support/TextMate/Managed/Bundles
+[textmate] ~/Library/Application Support/TextMate/PlugIns
+[textmate] ~/Library/Application Support/TextMate/Pristine Copy
+[textmate] ~/Library/Preferences/com.macromates.textmate.latex_config.plist
+[textual] ~/Library/Application Support/Textual IRC
+[textual] ~/Library/Containers/com.codeux.irc.textual/Data/Library/Preferences/com.codeux.irc.textual.plist
+[textual] ~/Library/Preferences/com.codeux.irc.textual.plist
+[tig] ~/.tigrc
+[tiles] ~/Library/Preferences/com.sempliva.Tiles.plist
+[tilix] ~/tilix.dconf
+[timeout] ~/Library/Group Containers/6Z7QW53WB6.com.dejal.timeout
+[tinyfugue] ~/.tfrc
+[tmux] ~/.tmux.conf
+[tmuxp] ~/.tmuxp
+[todotxt-cli] ~/.todo/config
+[toothfairy] ~/Library/Application Scripts/com.robinlu.mac.Tooth-Fairy
+[totalspaces2] ~/Library/Preferences/com.binaryage.TotalSpaces2.plist
+[tower] ~/Library/Application Support/Tower
+[tower] ~/Library/Application Support/com.fournova.Tower3
+[tower] ~/Library/Preferences/com.fournova.Tower.plist
+[tower] ~/Library/Preferences/com.fournova.Tower3.plist
+[tower-2] ~/Library/Application Support/com.fournova.Tower2
+[tower-2] ~/Library/Preferences/com.fournova.Tower2.plist
+[tower-3] ~/Library/Application Support/com.fournova.Tower3
+[tower-3] ~/Library/Preferences/com.fournova.Tower3.plist
+[transmission] ~/Library/Application Support/Transmission/blocklists
+[transmission] ~/Library/Preferences/org.m0k.transmission.plist
+[transmit] ~/Library/Application Support/Transmit/Favorites
+[transmit] ~/Library/Application Support/Transmit/Metadata
+[transmit] ~/Library/Preferences/com.panic.Transmit.plist
+[tripmode] ~/Library/Application Support/TripMode
+[tunnelblick] ~/Library/Application Support/Tunnelblick/Configurations
+[tvnamer] ~/.tvnamer.json
+[twitterrific] ~/Library/Application Support/Twitterrific
+[typinator] ~/Library/Application Support/Typinator
+[typinator] ~/Library/Preferences/com.macility.typinator2.plist
+[typora] ~/Library/Application Support/abnerworks.Typora/themes
+[ubersicht] ~/Library/Application Support/Übersicht/widgets
+[ubersicht] ~/Library/Preferences/tracesOf.Uebersicht.plist
+[ventrilo] ~/Library/Preferences/Ventrilo
+[versions] ~/Library/Application Support/Versions/License
+[versions] ~/Library/Preferences/com.blackpixel.versions.plist
+[vim] ~/.gvimrc
+[vim] ~/.gvimrc.after
+[vim] ~/.gvimrc.before
+[vim] ~/.vim/after
+[vim] ~/.vim/autoload
+[vim] ~/.vim/bundle
+[vim] ~/.vim/colors
+[vim] ~/.vim/doc
+[vim] ~/.vim/ftdetect
+[vim] ~/.vim/ftplugin
+[vim] ~/.vim/indent
+[vim] ~/.vim/pack
+[vim] ~/.vim/plugin/settings
+[vim] ~/.vim/spell
+[vim] ~/.vim/syntax
+[vim] ~/.vim/vimrc
+[vim] ~/.vimrc
+[vim] ~/.vimrc.after
+[vim] ~/.vimrc.before
+[vimperator] ~/.vimperator
+[vimperator] ~/.vimperatorrc
+[viscosity] ~/Library/Application Support/Viscosity/OpenVPN
+[viscosity] ~/Library/Preferences/com.viscosityvpn.Viscosity.plist
+[vlc] ~/Library/Application Support/org.videolan.vlc
+[vlc] ~/Library/Preferences/org.videolan.vlc
+[vlc] ~/Library/Preferences/org.videolan.vlc.LSSharedFileList.plist
+[vlc] ~/Library/Preferences/org.videolan.vlc.plist
+[volt] ~/volt/lock.json
+[volt] ~/volt/plugconf
+[volt] ~/volt/rc
+[vs4mac] ~/Library/Preferences/VisualStudio/7.0/EditingLayout.xml
+[vs4mac] ~/Library/Preferences/VisualStudio/7.0/MonoDevelopProperties.xml
+[vs4mac] ~/Library/Preferences/VisualStudio/8.0/EditingLayout.xml
+[vs4mac] ~/Library/Preferences/VisualStudio/8.0/MonoDevelopProperties.xml
+[vs4mac] ~/Library/VisualStudio
+[vscode] ~/Library/Application Support/Code/User/keybindings.json
+[vscode] ~/Library/Application Support/Code/User/prompts
+[vscode] ~/Library/Application Support/Code/User/settings.json
+[vscode] ~/Library/Application Support/Code/User/snippets
+[vscode-insiders] ~/Library/Application Support/Code - Insiders/User/keybindings.json
+[vscode-insiders] ~/Library/Application Support/Code - Insiders/User/prompts
+[vscode-insiders] ~/Library/Application Support/Code - Insiders/User/settings.json
+[vscode-insiders] ~/Library/Application Support/Code - Insiders/User/snippets
+[vscode-oss] ~/Library/Application Support/Code - OSS/User/keybindings.json
+[vscode-oss] ~/Library/Application Support/Code - OSS/User/settings.json
+[vscode-oss] ~/Library/Application Support/Code - OSS/User/snippets
+[vscodium] ~/Library/Application Support/VSCodium/User/keybindings.json
+[vscodium] ~/Library/Application Support/VSCodium/User/settings.json
+[vscodium] ~/Library/Application Support/VSCodium/User/snippets
+[wakatime] ~/.wakatime.cfg
+[warp] ~/.warp
+[webstorm] ~/Library/Application Support/JetBrains/WebStorm2020.1
+[webstorm] ~/Library/Application Support/JetBrains/WebStorm2020.2
+[webstorm] ~/Library/Application Support/JetBrains/WebStorm2020.3
+[webstorm] ~/Library/Application Support/JetBrains/WebStorm2020.4
+[webstorm] ~/Library/Application Support/JetBrains/WebStorm2021.1
+[webstorm] ~/Library/Application Support/JetBrains/WebStorm2021.2
+[webstorm] ~/Library/Application Support/JetBrains/WebStorm2021.3
+[webstorm] ~/Library/Application Support/JetBrains/WebStorm2023.1
+[webstorm] ~/Library/Application Support/JetBrains/WebStorm2023.2
+[webstorm] ~/Library/Application Support/WebStorm
+[webstorm] ~/Library/Application Support/WebStorm10
+[webstorm] ~/Library/Application Support/WebStorm11
+[webstorm] ~/Library/Application Support/WebStorm2016.1
+[webstorm] ~/Library/Application Support/WebStorm2016.2
+[webstorm] ~/Library/Application Support/WebStorm2016.3
+[webstorm] ~/Library/Application Support/WebStorm2017.1
+[webstorm] ~/Library/Application Support/WebStorm2017.2
+[webstorm] ~/Library/Application Support/WebStorm2017.3
+[webstorm] ~/Library/Application Support/WebStorm2018.1
+[webstorm] ~/Library/Application Support/WebStorm2018.2
+[webstorm] ~/Library/Application Support/WebStorm2018.3
+[webstorm] ~/Library/Application Support/WebStorm2019.1
+[webstorm] ~/Library/Application Support/WebStorm2019.2
+[webstorm] ~/Library/Application Support/WebStorm2019.3
+[webstorm] ~/Library/Application Support/WebStorm2019.4
+[webstorm] ~/Library/Application Support/WebStorm8
+[webstorm] ~/Library/Application Support/WebStorm9
+[webstorm] ~/Library/Preferences/WebStorm10
+[webstorm] ~/Library/Preferences/WebStorm11
+[webstorm] ~/Library/Preferences/WebStorm2016.1
+[webstorm] ~/Library/Preferences/WebStorm2016.2
+[webstorm] ~/Library/Preferences/WebStorm2016.3
+[webstorm] ~/Library/Preferences/WebStorm2017.1
+[webstorm] ~/Library/Preferences/WebStorm2017.2
+[webstorm] ~/Library/Preferences/WebStorm2017.3
+[webstorm] ~/Library/Preferences/WebStorm2018.1
+[webstorm] ~/Library/Preferences/WebStorm2018.2
+[webstorm] ~/Library/Preferences/WebStorm2018.3
+[webstorm] ~/Library/Preferences/WebStorm2019.1
+[webstorm] ~/Library/Preferences/WebStorm2019.2
+[webstorm] ~/Library/Preferences/WebStorm2019.3
+[webstorm] ~/Library/Preferences/WebStorm2019.4
+[webstorm] ~/Library/Preferences/WebStorm8
+[webstorm] ~/Library/Preferences/WebStorm9
+[wezterm] ~/.wezterm.lua
+[wget] ~/.wget-hsts
+[wget] ~/.wgetrc
+[whatsapp] ~/Library/Application Support/WhatsApp/Preferences
+[whatsapp] ~/Library/Application Support/WhatsApp/settings.json
+[whatsapp] ~/Library/Preferences/WhatsApp-Helper.plist
+[whatsapp] ~/Library/Preferences/WhatsApp.plist
+[windsurf] ~/Library/Application Support/Windsurf/User/keybindings.json
+[windsurf] ~/Library/Application Support/Windsurf/User/settings.json
+[windsurf] ~/Library/Application Support/Windsurf/User/snippets
+[witch] ~/Library/Preferences/com.manytricks.Witch.plist
+[wordgrinder] ~/.wordgrinder.settings
+[workrave] ~/.workrave/historystats
+[workrave] ~/.workrave/id
+[wp-cli] ~/.wp-cli
+[x11] ~/.Xmodmap
+[x11] ~/.Xresources
+[x11] ~/.fonts
+[x11] ~/.xinitrc
+[xamarinstudio-5] ~/Library/Preferences/XamarinStudio-5.0
+[xbar] ~/Library/Application Support/xbar/plugins
+[xbar] ~/Library/Application Support/xbar/xbar.config.json
+[xbindkeys] ~/.xbindkeysrc
+[xchat] ~/.xchat2
+[xcode] ~/Library/Application Support/Developer/Shared/Xcode/Plug-ins
+[xcode] ~/Library/Developer/Xcode/Templates
+[xcode] ~/Library/Developer/Xcode/UserData/CodeSnippets
+[xcode] ~/Library/Developer/Xcode/UserData/Debugger
+[xcode] ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+[xcode] ~/Library/Developer/Xcode/UserData/KeyBindings
+[xcode] ~/Library/Developer/Xcode/UserData/SearchScopes.xcsclist
+[xcode] ~/Library/Developer/Xcode/UserData/xcdebugger
+[xcode] ~/Library/Preferences/com.apple.dt.Xcode.plist
+[xee] ~/Library/Preferences/cx.c3.Xee3.plist
+[xemacs] ~/.xemacs
+[xld] ~/Library/Application Support/XLD
+[xld] ~/Library/Preferences/jp.tmkk.XLD.plist
+[xonsh] ~/.xonshrc
+[xtrafinder] ~/Library/Preferences/com.trankynam.XtraFinder.plist
+[yabai] ~/.yabairc
+[yarn] ~/.yarnrc
+[yummyftp] ~/Library/Application Support/Yummy FTP/Bookmarks
+[yummyftp] ~/Library/Application Support/Yummy FTP/DefaultBookmark.bkmk
+[yummyftp] ~/Library/Preferences/com.yummysoftware.yummy-ftp.plist
+[zabbix-cli] ~/.zabbix-cli/zabbix-cli.conf
+[zoom] ~/Library/Preferences/ZoomChat.plist
+[zoom] ~/Library/Preferences/us.zoom.Transcode.plist
+[zoom] ~/Library/Preferences/us.zoom.ZoomAutoUpdater.plist
+[zoom] ~/Library/Preferences/us.zoom.xos.Hotkey.plist
+[zoom] ~/Library/Preferences/us.zoom.xos.plist
+[zoxide] ~/Library/Application Support/zoxide
+[zsh] ~/.zlogin
+[zsh] ~/.zlogout
+[zsh] ~/.zprofile
+[zsh] ~/.zshenv
+[zsh] ~/.zshrc
+
+## XDG paths (relative to $XDG_CONFIG_HOME, default ~/.config)
+
+[aerospace] $XDG_CONFIG_HOME/aerospace/aerospace.toml
+[alacritty] $XDG_CONFIG_HOME/alacritty/alacritty.toml
+[alacritty] $XDG_CONFIG_HOME/alacritty/alacritty.yml
+[amethyst] $XDG_CONFIG_HOME/amethyst/amethyst.yml
+[aria2c] $XDG_CONFIG_HOME/aria2
+[asciinema] $XDG_CONFIG_HOME/asciinema
+[audacious] $XDG_CONFIG_HOME/audacious/config
+[audacious] $XDG_CONFIG_HOME/audacious/playlist-state
+[audacious] $XDG_CONFIG_HOME/audacious/playlists
+[audacious] $XDG_CONFIG_HOME/audacious/plugin-registry
+[audacious] $XDG_CONFIG_HOME/audacious/scrobbler.log
+[autokey] $XDG_CONFIG_HOME/autokey
+[b-ryan_powerline-shell] $XDG_CONFIG_HOME/powerline-shell/config.json
+[bat] $XDG_CONFIG_HOME/bat/config
+[bat] $XDG_CONFIG_HOME/bat/syntaxes
+[bat] $XDG_CONFIG_HOME/bat/themes
+[beets] $XDG_CONFIG_HOME/beets/config.yaml
+[blender] $XDG_CONFIG_HOME/blender
+[btop] $XDG_CONFIG_HOME/btop
+[calibre] $XDG_CONFIG_HOME/calibre
+[cerebro] $XDG_CONFIG_HOME/Cerebro/config.json
+[cerebro] $XDG_CONFIG_HOME/Cerebro/plugins
+[cheat] $XDG_CONFIG_HOME/cheat/conf.yml
+[clashx] $XDG_CONFIG_HOME/clash
+[consular] $XDG_CONFIG_HOME/consular
+[copyq] $XDG_CONFIG_HOME/copyq
+[cursor] $XDG_CONFIG_HOME/Cursor/User/keybindings.json
+[cursor] $XDG_CONFIG_HOME/Cursor/User/settings.json
+[cursor] $XDG_CONFIG_HOME/Cursor/User/snippets
+[deepin-dde-dock] $XDG_CONFIG_HOME/deepin/dde-dock.conf
+[deepin-dde-file-manager] $XDG_CONFIG_HOME/deepin/dde-file-manager.json
+[deepin-terminal] $XDG_CONFIG_HOME/deepin/deepin-terminal/config.conf
+[devilspie2] $XDG_CONFIG_HOME/devilspie2
+[doublecmd] $XDG_CONFIG_HOME/doublecmd/doublecmd.ext
+[doublecmd] $XDG_CONFIG_HOME/doublecmd/doublecmd.xml
+[doublecmd] $XDG_CONFIG_HOME/doublecmd/shortcuts.scf
+[doublecmd] $XDG_CONFIG_HOME/doublecmd/wfx.ini
+[espanso] $XDG_CONFIG_HOME/espanso
+[exercism] $XDG_CONFIG_HOME/exercism
+[filezilla] $XDG_CONFIG_HOME/filezilla/filezilla.xml
+[filezilla] $XDG_CONFIG_HOME/filezilla/layout.xml
+[filezilla] $XDG_CONFIG_HOME/filezilla/sitemanager.xml
+[fish] $XDG_CONFIG_HOME/fish/completions
+[fish] $XDG_CONFIG_HOME/fish/conf.d
+[fish] $XDG_CONFIG_HOME/fish/config.fish
+[fish] $XDG_CONFIG_HOME/fish/fish_variables
+[fish] $XDG_CONFIG_HOME/fish/functions
+[fisher] $XDG_CONFIG_HOME/fish/fish_plugins
+[flake8] $XDG_CONFIG_HOME/flake8
+[flameshot] $XDG_CONFIG_HOME/flameshot/flameshot.ini
+[flexget] $XDG_CONFIG_HOME/flexget/config.yml
+[fontconfig] $XDG_CONFIG_HOME/fontconfig
+[franz] $XDG_CONFIG_HOME/Franz/settings
+[ghostty] $XDG_CONFIG_HOME/ghostty/config
+[ghostwriter] $XDG_CONFIG_HOME/ghostwriter
+[git] $XDG_CONFIG_HOME/git/attributes
+[git] $XDG_CONFIG_HOME/git/config
+[git] $XDG_CONFIG_HOME/git/ignore
+[goku] $XDG_CONFIG_HOME/karabiner.edn
+[goshare] $XDG_CONFIG_HOME/dictget/goshare
+[hexchat] $XDG_CONFIG_HOME/hexchat
+[htop] $XDG_CONFIG_HOME/htop/htoprc
+[hub] $XDG_CONFIG_HOME/hub
+[i3] $XDG_CONFIG_HOME/i3/config
+[inkscape] $XDG_CONFIG_HOME/inkscape/preferences.xml
+[insomnia] $XDG_CONFIG_HOME/Insomnia
+[iterm2] $XDG_CONFIG_HOME/iterm2/AppSupport/DynamicProfiles
+[jankyborders] $XDG_CONFIG_HOME/borders/bordersrc
+[joplin] $XDG_CONFIG_HOME/joplin-desktop/userchrome.css
+[joplin] $XDG_CONFIG_HOME/joplin-desktop/userstyle.css
+[jrnl] $XDG_CONFIG_HOME/jrnl/jrnl.yaml
+[k9s] $XDG_CONFIG_HOME/k9s/config.yml
+[k9s] $XDG_CONFIG_HOME/k9s/skin.yml
+[karabiner-elements] $XDG_CONFIG_HOME/karabiner
+[kdenlive] $XDG_CONFIG_HOME/kdenliverc
+[keepassx] $XDG_CONFIG_HOME/keepassx/keepassx2.ini
+[kitty] $XDG_CONFIG_HOME/kitty/kitty.conf
+[lazygit] $XDG_CONFIG_HOME/lazygit/config.yml
+[lf] $XDG_CONFIG_HOME/lf/lfrc
+[libreoffice] $XDG_CONFIG_HOME/libreoffice
+[liquidprompt] $XDG_CONFIG_HOME/liquidpromptrc
+[livestreamer] $XDG_CONFIG_HOME/livestreamer/config
+[livestreamer] $XDG_CONFIG_HOME/livestreamer/plugins
+[lunarvim] $XDG_CONFIG_HOME/lvim/config.lua
+[mako] $XDG_CONFIG_HOME/mako/config
+[micro] $XDG_CONFIG_HOME/micro/bindings.json
+[micro] $XDG_CONFIG_HOME/micro/colorschemes
+[micro] $XDG_CONFIG_HOME/micro/settings.json
+[micro] $XDG_CONFIG_HOME/micro/syntax
+[mps-youtube] $XDG_CONFIG_HOME/mps-youtube/config
+[mps-youtube] $XDG_CONFIG_HOME/mps-youtube/playlist_v2
+[mpv] $XDG_CONFIG_HOME/mpv/config
+[mpv] $XDG_CONFIG_HOME/mpv/input.conf
+[mpv] $XDG_CONFIG_HOME/mpv/mpv.conf
+[mpv] $XDG_CONFIG_HOME/mpv/script-opts
+[mpv] $XDG_CONFIG_HOME/mpv/scripts
+[mpv] $XDG_CONFIG_HOME/mpv/watch_later
+[musicbrainz-picard] $XDG_CONFIG_HOME/MusicBrainz
+[neofetch] $XDG_CONFIG_HOME/neofetch/config.conf
+[neovim] $XDG_CONFIG_HOME/nvim/colors
+[neovim] $XDG_CONFIG_HOME/nvim/compiler
+[neovim] $XDG_CONFIG_HOME/nvim/ftdetect
+[neovim] $XDG_CONFIG_HOME/nvim/ftplugin
+[neovim] $XDG_CONFIG_HOME/nvim/indent
+[neovim] $XDG_CONFIG_HOME/nvim/init.lua
+[neovim] $XDG_CONFIG_HOME/nvim/init.vim
+[neovim] $XDG_CONFIG_HOME/nvim/lua
+[neovim] $XDG_CONFIG_HOME/nvim/plugin
+[neovim] $XDG_CONFIG_HOME/nvim/syntax
+[nomacs] $XDG_CONFIG_HOME/nomacs
+[nushell] $XDG_CONFIG_HOME/nushell/config.nu
+[nushell] $XDG_CONFIG_HOME/nushell/env.nu
+[oh-my-fish] $XDG_CONFIG_HOME/omf
+[openbox] $XDG_CONFIG_HOME/openbox/autostart
+[openbox] $XDG_CONFIG_HOME/openbox/environment
+[openbox] $XDG_CONFIG_HOME/openbox/menu.xml
+[openbox] $XDG_CONFIG_HOME/openbox/rc.xml
+[pip] $XDG_CONFIG_HOME/pip/pip.conf
+[poetry] $XDG_CONFIG_HOME/pypoetry/config.toml
+[polybar] $XDG_CONFIG_HOME/polybar/config
+[polybar] $XDG_CONFIG_HOME/polybar/launch.sh
+[polybar] $XDG_CONFIG_HOME/polybar/scripts
+[powerline] $XDG_CONFIG_HOME/powerline/colors.json
+[powerline] $XDG_CONFIG_HOME/powerline/colorschemes
+[powerline] $XDG_CONFIG_HOME/powerline/config.json
+[powerline] $XDG_CONFIG_HOME/powerline/themes
+[proselint] $XDG_CONFIG_HOME/proselint/config
+[prusa-slicer] $XDG_CONFIG_HOME/PrusaSlicer
+[psysh] $XDG_CONFIG_HOME/psysh/config.php
+[qutebrowser] $XDG_CONFIG_HOME/qutebrowser/config.py
+[qutebrowser] $XDG_CONFIG_HOME/qutebrowser/qutebrowser.conf
+[ranger] $XDG_CONFIG_HOME/ranger/commands.py
+[ranger] $XDG_CONFIG_HOME/ranger/plugins
+[ranger] $XDG_CONFIG_HOME/ranger/rc.conf
+[ranger] $XDG_CONFIG_HOME/ranger/rifle.conf
+[ranger] $XDG_CONFIG_HOME/ranger/scope.sh
+[rclone] $XDG_CONFIG_HOME/rclone
+[redshift] $XDG_CONFIG_HOME/redshift.conf
+[redshift-scheduler] $XDG_CONFIG_HOME/redshift-scheduler/rules.conf
+[rime] $XDG_CONFIG_HOME/ibus/rimedefault.custom.yaml
+[rime] $XDG_CONFIG_HOME/ibus/rimedefault.yaml
+[rime] $XDG_CONFIG_HOME/ibus/rimeinstallation.yaml
+[rime] $XDG_CONFIG_HOME/ibus/rimesquirrel.custom.yaml
+[rime] $XDG_CONFIG_HOME/ibus/rimesquirrel.yaml
+[rime] $XDG_CONFIG_HOME/ibus/rimesymbols.yaml
+[rime] $XDG_CONFIG_HOME/ibus/rimeuser.yaml
+[rofi] $XDG_CONFIG_HOME/rofi/config.rasi
+[rstudio] $XDG_CONFIG_HOME/rstudio
+[rtx] $XDG_CONFIG_HOME/rtx
+[sketchybar] $XDG_CONFIG_HOME/sketchybar/plugins
+[sketchybar] $XDG_CONFIG_HOME/sketchybar/sketchybarrc
+[skhd] $XDG_CONFIG_HOME/skhd/skhdrc
+[sublime-text] $XDG_CONFIG_HOME/sublime-text/Packages/User
+[sublime-text-2] $XDG_CONFIG_HOME/sublime-text-2/Packages/User
+[sublime-text-3] $XDG_CONFIG_HOME/sublime-text-3/Packages/User
+[swaywm] $XDG_CONFIG_HOME/sway
+[terminator] $XDG_CONFIG_HOME/terminator/config
+[tig] $XDG_CONFIG_HOME/tig/config
+[tint2] $XDG_CONFIG_HOME/tint2/tint2rc
+[tmux] $XDG_CONFIG_HOME/tmux/tmux.conf
+[tmuxinator] $XDG_CONFIG_HOME/tmuxinator
+[transmission] $XDG_CONFIG_HOME/transmission/blocklists
+[transmission] $XDG_CONFIG_HOME/transmission/settings.json
+[transmission] $XDG_CONFIG_HOME/transmission/stats.json
+[trizen] $XDG_CONFIG_HOME/trizen/trizen.conf
+[typora] $XDG_CONFIG_HOME/Typora/themes
+[ulauncher] $XDG_CONFIG_HOME/ulauncher/extensions.json
+[ulauncher] $XDG_CONFIG_HOME/ulauncher/settings.json
+[ulauncher] $XDG_CONFIG_HOME/ulauncher/shortcuts.json
+[verdaccio] $XDG_CONFIG_HOME/verdaccio/config.yaml
+[vscode] $XDG_CONFIG_HOME/Code/User/keybindings.json
+[vscode] $XDG_CONFIG_HOME/Code/User/settings.json
+[vscode] $XDG_CONFIG_HOME/Code/User/snippets
+[vscode-insiders] $XDG_CONFIG_HOME/Code - Insiders/User/keybindings.json
+[vscode-insiders] $XDG_CONFIG_HOME/Code - Insiders/User/settings.json
+[vscode-insiders] $XDG_CONFIG_HOME/Code - Insiders/User/snippets
+[vscode-oss] $XDG_CONFIG_HOME/Code - OSS/User/keybindings.json
+[vscode-oss] $XDG_CONFIG_HOME/Code - OSS/User/settings.json
+[vscode-oss] $XDG_CONFIG_HOME/Code - OSS/User/snippets
+[vscodium] $XDG_CONFIG_HOME/VSCodium/User/keybindings.json
+[vscodium] $XDG_CONFIG_HOME/VSCodium/User/settings.json
+[vscodium] $XDG_CONFIG_HOME/VSCodium/User/snippets
+[waybar] $XDG_CONFIG_HOME/waybar
+[wezterm] $XDG_CONFIG_HOME/wezterm
+[windsurf] $XDG_CONFIG_HOME/Windsurf/User/keybindings.json
+[windsurf] $XDG_CONFIG_HOME/Windsurf/User/settings.json
+[windsurf] $XDG_CONFIG_HOME/Windsurf/User/snippets
+[wireshark] $XDG_CONFIG_HOME/wireshark
+[xonsh] $XDG_CONFIG_HOME/xonsh
+[yabai] $XDG_CONFIG_HOME/yabai/yabairc
+[yazi] $XDG_CONFIG_HOME/yazi/keymap.toml
+[yazi] $XDG_CONFIG_HOME/yazi/theme.toml
+[yazi] $XDG_CONFIG_HOME/yazi/yazi.toml
+[zathura] $XDG_CONFIG_HOME/zathura/zathurarc
+[zed] $XDG_CONFIG_HOME/zed/keymap.json
+[zed] $XDG_CONFIG_HOME/zed/settings.json

@@ -11,13 +11,16 @@ Backup and keep your application settings in sync.
 
 ## Table of contents
 
-- [Mackup](#mackup)
+- [Mackup™](#mackup)
   - [Table of contents](#table-of-contents)
   - [Quickstart](#quickstart)
   - [Usage](#usage)
   - [What does it do](#what-does-it-do)
     - [Copy mode](#copy-mode)
     - [Link mode](#link-mode)
+      - [`mackup link install`](#mackup-link-install)
+      - [`mackup link`](#mackup-link)
+      - [`mackup link uninstall`](#mackup-link-uninstall)
   - [Supported Storages](#supported-storages)
   - [Unsupported Storages](#unsupported-storages)
   - [Supported Applications](#supported-applications)
@@ -101,7 +104,37 @@ Display the list of applications supported by Mackup.
 
 `mackup -h`
 
-Get some help, obviously...
+Show usage including options / flags:
+
+Usage:
+  mackup [options] list
+  mackup [options] show \<application>
+  mackup [options] backup
+  mackup [options] restore
+  mackup [options] link install
+  mackup [options] link
+  mackup [options] link uninstall
+  mackup (-h | --help)
+
+Options:
+  -h --help                 Show this screen.
+  -f --force                Force every question asked to be answered with "Yes".
+  --force-no                Force every question asked to be answered with "No".
+  -r --root                 Allow mackup to be run as superuser.
+  -n --dry-run              Show steps without executing.
+  -v --verbose              Show additional details.
+  -c --config-file=\<path>   Specify custom config file path.
+  --version                 Show version.
+
+Modes of action:
+ - mackup list: display a list of all supported applications.
+ - mackup show: display the details for a supported application.
+ - mackup backup: copy local config files in the configured remote folder.
+ - mackup restore: copy config files from the configured remote folder locally.
+ - mackup link install: moves local config files in remote folder, and links them.
+ - mackup link: links local config files from the remote folder.
+ - mackup link uninstall: removes the links and copy config files from the remote folder locally.
+
 
 ## What does it do
 

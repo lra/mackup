@@ -16,6 +16,7 @@ Usage:
 Options:
   -h --help                 Show this screen.
   -f --force                Force every question asked to be answered with "Yes".
+    -y --yes                  Answer "Yes" to all questions (skip prompts).
   --force-no                Force every question asked to be answered with "No".
   -r --root                 Allow mackup to be run as superuser.
   -n --dry-run              Show steps without executing.

@@ -87,7 +87,7 @@ Copy config files from the Mackup folder to your home folder.
 Move your local config files into the Mackup folder,
 and link them to their original place.
 
-$${\color{red}warning}$$ _the `link` strategy [doesn't work correctly on macOS](#link-mode)_
+> **Warning:** the `link` strategy [doesn't work correctly on macOS](#link-mode)
 
 `mackup link`
 
@@ -108,7 +108,7 @@ Show usage including options / flags:
 
 Usage:
   mackup [options] list
-  mackup [options] show \<application>
+  mackup [options] show <application>
   mackup [options] backup
   mackup [options] restore
   mackup [options] link install
@@ -119,11 +119,12 @@ Usage:
 Options:
   -h --help                 Show this screen.
   -f --force                Force every question asked to be answered with "Yes".
+  -y --yes                  Answer "Yes" to all questions (skip prompts).
   --force-no                Force every question asked to be answered with "No".
   -r --root                 Allow mackup to be run as superuser.
   -n --dry-run              Show steps without executing.
   -v --verbose              Show additional details.
-  -c --config-file=\<path>   Specify custom config file path.
+  -c --config-file=<path>   Specify custom config file path.
   --version                 Show version.
 
 Modes of action:

@@ -73,68 +73,34 @@ You can find more detailed instructions in [INSTALL.md](INSTALL.md).
 
 ## Usage
 
-`mackup backup`
 
-Back up your application files. Copy your local config files into the Mackup folder.
+Kurz & wichtig:
 
-`mackup restore`
+- `mackup backup` — Kopiert lokale Konfigurationsdateien in den Mackup-Ordner.
+- `mackup restore` — Stellt Dateien aus dem Mackup-Ordner in dein Home-Verzeichnis wieder her.
+- `mackup link install` — Verschiebt lokale Dateien in Mackup und legt Symlinks an.
+- `mackup link` — Erstellt Symlinks von Mackup in dein Home.
+- `mackup link uninstall` — Entfernt Symlinks und kopiert die Dateien zurück.
+- `mackup list` — Zeigt unterstützte Anwendungen an.
+- `mackup -h` — Zeigt die Hilfe an.
 
-Restore your application settings on a newly installed workstation.
-Copy config files from the Mackup folder to your home folder.
+Wichtige Optionen (kurz):
 
-`mackup link install`
+- `-h`, `--help` — Zeigt die Hilfe an.
+- `-y`, `--yes` — Alle Rückfragen automatisch mit "Yes" beantworten (non‑interaktiv).
+- `-f`, `--force` — Alias: Antworten mit "Yes" (ähnlich zu `-y`).
+- `--force-no` — Antworten mit "No".
+- `-r`, `--root` — Erlaubt das Ausführen als Superuser (nur wenn nötig).
+- `-n`, `--dry-run` — Schritte anzeigen, aber nichts ausführen.
+- `-v`, `--verbose` — Zeigt mehr Ausgaben/Details.
+- `-c`, `--config-file=<path>` — Individuelle Konfigurationsdatei verwenden.
+- `--version` — Zeigt die Versionsnummer an.
 
-Move your local config files into the Mackup folder,
-and link them to their original place.
+Hinweis:
 
-> **Warning:** the `link` strategy [doesn't work correctly on macOS](#link-mode)
-
-`mackup link`
-
-On another workstation, links local config files from the Mackup folder.
-
-`mackup link uninstall`
-
-Copy back any synced config file to its original place.
-Removes the links and copies config files from the Mackup folder back into your home.
-
-`mackup list`
-
-Display the list of applications supported by Mackup.
-
-`mackup -h`
-
-Show usage including options / flags:
-
-Usage:
-  mackup [options] list
-  mackup [options] show <application>
-  mackup [options] backup
-  mackup [options] restore
-  mackup [options] link install
-  mackup [options] link
-  mackup [options] link uninstall
-  mackup (-h | --help)
-
-Options:
-  -h --help                 Show this screen.
-  -f --force                Force every question asked to be answered with "Yes".
-  -y --yes                  Answer "Yes" to all questions (skip prompts).
-  --force-no                Force every question asked to be answered with "No".
-  -r --root                 Allow mackup to be run as superuser.
-  -n --dry-run              Show steps without executing.
-  -v --verbose              Show additional details.
-  -c --config-file=<path>   Specify custom config file path.
-  --version                 Show version.
-
-Modes of action:
- - mackup list: display a list of all supported applications.
- - mackup show: display the details for a supported application.
- - mackup backup: copy local config files in the configured remote folder.
- - mackup restore: copy config files from the configured remote folder locally.
- - mackup link install: moves local config files in remote folder, and links them.
- - mackup link: links local config files from the remote folder.
- - mackup link uninstall: removes the links and copy config files from the remote folder locally.
+> **Warning:** Die `link`-Strategie kann auf neueren macOS-Versionen
+> Probleme mit Präferenzen verursachen. Verwende im Zweifel `backup`/
+> `restore` (Copy-Modus).
 
 
 ## What does it do

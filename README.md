@@ -512,6 +512,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Micro](https://github.com/zyedidia/micro)
 - [Microsoft Azure CLI](https://github.com/Azure/azure-xplat-cli)
 - [Microsoft Remote Desktop](https://itunes.apple.com/us/app/microsoft-remote-desktop-10/id1295203466)
+- [mise-en-place](https://github.com/jdx/mise)
 - [mitmproxy](https://mitmproxy.org/)
 - [mkcert](https://github.com/FiloSottile/mkcert)
 - [Mole](https://github.com/tw93/Mole)

@@ -93,7 +93,8 @@ On another workstation, links local config files from the Mackup folder.
 `mackup link uninstall`
 
 Copy back any synced config file to its original place.
-Removes the links and copies config files from the Mackup folder back into your home.
+Removes the links and copies config files from the Mackup folder back into your
+home.
 
 `mackup list`
 
@@ -821,7 +822,8 @@ workstations (home, work).
 
 Boring...
 
-Some people tried to solve the problem on the application layer, like [Github's Boxen](https://boxen.github.com/),
+Some people tried to solve the problem on the application layer, like
+[Github's Boxen](https://boxen.github.com/),
 but it solves a different problem, from my point of view. I don't spend a lot
 of time installing or downloading stuff. I spend time configuring it.
 

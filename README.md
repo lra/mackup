@@ -11,13 +11,16 @@ Backup and keep your application settings in sync.
 
 ## Table of contents
 
-- [Mackup](#mackup)
+- [Mackup™](#mackup)
   - [Table of contents](#table-of-contents)
   - [Quickstart](#quickstart)
   - [Usage](#usage)
   - [What does it do](#what-does-it-do)
     - [Copy mode](#copy-mode)
     - [Link mode](#link-mode)
+      - [`mackup link install`](#mackup-link-install)
+      - [`mackup link`](#mackup-link)
+      - [`mackup link uninstall`](#mackup-link-uninstall)
   - [Supported Storages](#supported-storages)
   - [Unsupported Storages](#unsupported-storages)
   - [Supported Applications](#supported-applications)
@@ -590,6 +593,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Plover](http://www.openstenoproject.org/plover/)
 - [Pnpm](https://pnpm.js.org/)
 - [Pock](https://pock.pigigaldi.com)
+- [Podman](https://podman.io/)
 - [Poedit](http://poedit.net/)
 - [Poetry](https://python-poetry.org)
 - [PokerStars](https://www.pokerstars.com/)

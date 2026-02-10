@@ -219,6 +219,23 @@ touch ~/.mackup/nethack.cfg
 touch ~/.mackup/my-files.cfg
 ```
 
+#### Custom applications directory location
+
+Custom application configs are searched in the following order:
+
+1. `~/.mackup/` (legacy location, takes priority)
+2. `$XDG_CONFIG_HOME/mackup/applications/` or `~/.config/mackup/applications/`
+
+If the same application config exists in both locations, the legacy location
+(`~/.mackup/`) takes priority.
+
+For XDG-compliant setups, you can use:
+
+```bash
+mkdir -p ~/.config/mackup/applications
+touch ~/.config/mackup/applications/nethack.cfg
+```
+
 Edit those files:
 
 ```bash

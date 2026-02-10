@@ -291,7 +291,12 @@ class Config:
                 raise ConfigError(
                     "{} cannot be used as a storage directory.".format(CUSTOM_APPS_DIR)
                 )
-            if directory == CUSTOM_APPS_DIR_XDG or directory.endswith("/" + CUSTOM_APPS_DIR_XDG):
+            xdg_custom_apps_dir = os.path.join(".config", CUSTOM_APPS_DIR_XDG)
+            if (
+                directory == CUSTOM_APPS_DIR_XDG
+                or directory == xdg_custom_apps_dir
+                or directory.endswith("/" + xdg_custom_apps_dir)
+            ):
                 raise ConfigError(
                     "{} cannot be used as a storage directory.".format(CUSTOM_APPS_DIR_XDG)
                 )

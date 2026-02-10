@@ -13,11 +13,24 @@ class TestApplicationsDatabaseXDG(unittest.TestCase):
         """Set up test fixtures."""
         realpath = os.path.dirname(os.path.realpath(__file__))
         self.fixtures_path = os.path.join(realpath, "fixtures")
+        self._original_home = os.environ.get("HOME")
+        self._original_xdg_config_home = os.environ.get("XDG_CONFIG_HOME")
         os.environ["HOME"] = self.fixtures_path
 
         # Clear XDG_CONFIG_HOME to ensure clean state
         os.environ.pop("XDG_CONFIG_HOME", None)
 
+    def tearDown(self):
+        """Restore environment variables modified during tests."""
+        if self._original_home is None:
+            os.environ.pop("HOME", None)
+        else:
+            os.environ["HOME"] = self._original_home
+
+        if self._original_xdg_config_home is None:
+            os.environ.pop("XDG_CONFIG_HOME", None)
+        else:
+            os.environ["XDG_CONFIG_HOME"] = self._original_xdg_config_home
     def test_legacy_custom_apps_dir(self):
         """Test that legacy ~/.mackup/ directory is found."""
         # Don't set XDG_CONFIG_HOME, only legacy should be found

@@ -24,6 +24,9 @@ VERSION: str = version(MACKUP_APP_NAME)
 # Directory that can contains user defined app configs
 CUSTOM_APPS_DIR: str = ".mackup"
 
+# XDG-compliant directory for user defined app configs (relative to XDG_CONFIG_HOME)
+CUSTOM_APPS_DIR_XDG: str = "mackup/applications"
+
 # Supported engines
 ENGINE_DROPBOX: str = "dropbox"
 ENGINE_FS: str = "file_system"

@@ -7,6 +7,7 @@ from pathlib import Path
 
 from .constants import (
     CUSTOM_APPS_DIR,
+    CUSTOM_APPS_DIR_XDG,
     ENGINE_DROPBOX,
     ENGINE_FS,
     ENGINE_GDRIVE,
@@ -285,10 +286,19 @@ class Config:
         """
         if self._parser.has_option("storage", "directory"):
             directory = self._parser.get("storage", "directory")
-            # Don't allow CUSTOM_APPS_DIR as a storage directory
+            # Don't allow CUSTOM_APPS_DIR or XDG custom apps dir as a storage directory
             if directory == CUSTOM_APPS_DIR:
                 raise ConfigError(
                     "{} cannot be used as a storage directory.".format(CUSTOM_APPS_DIR)
+                )
+            xdg_custom_apps_dir = os.path.join(".config", CUSTOM_APPS_DIR_XDG)
+            if (
+                directory == CUSTOM_APPS_DIR_XDG
+                or directory == xdg_custom_apps_dir
+                or directory.endswith("/" + xdg_custom_apps_dir)
+            ):
+                raise ConfigError(
+                    "{} cannot be used as a storage directory.".format(CUSTOM_APPS_DIR_XDG)
                 )
         else:
             directory = MACKUP_BACKUP_PATH

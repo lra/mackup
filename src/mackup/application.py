@@ -315,7 +315,7 @@ class ApplicationProfile:
                     elif os.path.islink(home_filepath):
                         file_type = "link"
                     else:
-                        raise ValueError(f"Unsupported file: {mackup_filepath}")
+                        raise ValueError(f"Unsupported file: {home_filepath}")
 
                     if utils.confirm(
                         f"You already have a {file_type} named {filename} in your"

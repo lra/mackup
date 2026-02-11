@@ -132,7 +132,6 @@ select = [
     "PLR", # pylint refactor
     "PLW", # pylint warning
     "PT", # flake8-pytest-style
-    "PTH", # flake8-use-pathlib
     "PYI", # flake8-pyi
     "Q", # flake8-quotes
     "RSE", # flake8-raise

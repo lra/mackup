@@ -69,7 +69,7 @@ def bold(text: str) -> str:
 def main() -> None:
     """Main function."""
     # Get the command line arg
-    args: dict[str, Any] = docopt(__doc__, version=f"Mackup {VERSION}")
+    args: dict[str, Any] = docopt(__doc__ or "", version=f"Mackup {VERSION}")
 
     config_file: Optional[str] = args.get("--config-file")
     mckp: Mackup = Mackup(config_file)

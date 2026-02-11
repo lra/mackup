@@ -253,6 +253,7 @@ def get_google_drive_folder_location() -> str:
                 provider="Google Drive install",
             ),
         )
+        raise SystemExit(1)  # error() exits, but this satisfies type checker
 
     return googledrive_home
 

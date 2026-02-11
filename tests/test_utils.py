@@ -2,8 +2,8 @@ import os
 import stat
 import tempfile
 import unittest
+from unittest.mock import patch
 
-# from unittest.mock import patch
 from mackup import utils
 
 
@@ -17,27 +17,18 @@ def convert_to_octal(file_name):
 class TestMackup(unittest.TestCase):
     def test_confirm_yes(self):
         # Override the input used in utils
-        def custom_input(_):
-            return "Yes"
-
-        utils.input = custom_input
-        assert utils.confirm("Answer Yes to this question")
+        with patch.object(utils, "input", return_value="Yes"):
+            assert utils.confirm("Answer Yes to this question")
 
     def test_confirm_no(self):
         # Override the input used in utils
-        def custom_input(_):
-            return "No"
-
-        utils.input = custom_input
-        assert not utils.confirm("Answer No to this question")
+        with patch.object(utils, "input", return_value="No"):
+            assert not utils.confirm("Answer No to this question")
 
     def test_confirm_typo(self):
         # Override the input used in utils
-        def custom_input(_):
-            return "No"
-
-        utils.input = custom_input
-        assert not utils.confirm("Answer garbage to this question")
+        with patch.object(utils, "input", return_value="No"):
+            assert not utils.confirm("Answer garbage to this question")
 
     def test_delete_file(self):
         # Create a tmp file
@@ -349,14 +340,18 @@ class TestMackup(unittest.TestCase):
         # Any file path will do, even if it doesn't exist
         path = "some/file"
 
-        # Force the Mac OSX Test using lambda magic
-        utils.platform.system = lambda *args: utils.constants.PLATFORM_DARWIN
-        assert utils.can_file_be_synced_on_current_platform(path)
+        # Force the Mac OSX Test using mock
+        with patch.object(
+            utils.platform, "system", return_value=utils.constants.PLATFORM_DARWIN
+        ):
+            assert utils.can_file_be_synced_on_current_platform(path)
 
-        # Force the Linux Test using lambda magic
-        utils.platform.system = lambda *args: utils.constants.PLATFORM_LINUX
-        assert utils.can_file_be_synced_on_current_platform(path)
+        # Force the Linux Test using mock
+        with patch.object(
+            utils.platform, "system", return_value=utils.constants.PLATFORM_LINUX
+        ):
+            assert utils.can_file_be_synced_on_current_platform(path)
 
-        # Try to use the library path on Linux, which shouldn't work
-        path = os.path.join(os.environ["HOME"], "Library/")
-        assert not utils.can_file_be_synced_on_current_platform(path)
+            # Try to use the library path on Linux, which shouldn't work
+            path = os.path.join(os.environ["HOME"], "Library/")
+            assert not utils.can_file_be_synced_on_current_platform(path)

@@ -47,6 +47,7 @@ dev = [
     "coverage[toml]>=7.6.0",
     "mypy>=1.13.0",
     "ruff>=0.14.4",
+    "ty>=0.0.16",
 ]
 
 [build-system]

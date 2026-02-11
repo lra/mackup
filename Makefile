@@ -4,6 +4,9 @@ lint:
 ruff:
 	ruff check .
 
+ty:
+	uv run ty check
+
 test:
 	uv run pytest
 
@@ -16,7 +19,7 @@ coverage-report:
 mypy:
 	uv run mypy src/mackup/
 
-check: lint ruff mypy test
+check: lint ruff mypy ty test
 	@echo "All checks passed!"
 
 clean:

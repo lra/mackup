@@ -247,14 +247,14 @@ def get_google_drive_folder_location() -> str:
             googledrive_home = str(data[0])
             con.close()
 
-    if not googledrive_home:
-        error(
-            constants.ERROR_UNABLE_TO_FIND_STORAGE.format(
-                provider="Google Drive install",
-            ),
-        )
+    if googledrive_home:
+        return googledrive_home
 
-    return googledrive_home
+    error(
+        constants.ERROR_UNABLE_TO_FIND_STORAGE.format(
+            provider="Google Drive install",
+        ),
+    )
 
 
 def get_icloud_folder_location() -> str:

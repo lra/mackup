@@ -41,7 +41,8 @@ class TestApplicationsDatabaseXDG(unittest.TestCase):
 
     def test_xdg_custom_apps_dir(self):
         """Test that XDG custom apps directory is found."""
-        os.environ["XDG_CONFIG_HOME"] = os.path.join(self.fixtures_path, "xdg-config-home")
+        xdg_config = os.path.join(self.fixtures_path, "xdg-config-home")
+        os.environ["XDG_CONFIG_HOME"] = xdg_config
 
         config_files = ApplicationsDatabase.get_config_files()
         filenames = {os.path.basename(f) for f in config_files}
@@ -49,8 +50,9 @@ class TestApplicationsDatabaseXDG(unittest.TestCase):
         self.assertIn("xdg-test-app.cfg", filenames)
 
     def test_legacy_takes_priority_over_xdg(self):
-        """Test that legacy directory takes priority when same app exists in both."""
-        os.environ["XDG_CONFIG_HOME"] = os.path.join(self.fixtures_path, "xdg-config-home")
+        """Test that legacy directory takes priority when same app exists."""
+        xdg_config = os.path.join(self.fixtures_path, "xdg-config-home")
+        os.environ["XDG_CONFIG_HOME"] = xdg_config
 
         config_files = ApplicationsDatabase.get_config_files()
 
@@ -66,7 +68,8 @@ class TestApplicationsDatabaseXDG(unittest.TestCase):
 
     def test_both_directories_merged(self):
         """Test that apps from both directories are available."""
-        os.environ["XDG_CONFIG_HOME"] = os.path.join(self.fixtures_path, "xdg-config-home")
+        xdg_config = os.path.join(self.fixtures_path, "xdg-config-home")
+        os.environ["XDG_CONFIG_HOME"] = xdg_config
 
         config_files = ApplicationsDatabase.get_config_files()
         filenames = {os.path.basename(f) for f in config_files}
@@ -88,8 +91,9 @@ class TestApplicationsDatabaseXDG(unittest.TestCase):
         self.assertTrue(len(config_files) > 0)
 
     def test_applications_database_loads_xdg_apps(self):
-        """Test that ApplicationsDatabase correctly loads apps from XDG directory."""
-        os.environ["XDG_CONFIG_HOME"] = os.path.join(self.fixtures_path, "xdg-config-home")
+        """Test that ApplicationsDatabase correctly loads apps from XDG."""
+        xdg_config = os.path.join(self.fixtures_path, "xdg-config-home")
+        os.environ["XDG_CONFIG_HOME"] = xdg_config
 
         db = ApplicationsDatabase()
 
@@ -98,8 +102,9 @@ class TestApplicationsDatabaseXDG(unittest.TestCase):
         self.assertEqual(db.get_name("xdg-test-app"), "XDG Test App")
 
     def test_applications_database_priority_loads_legacy(self):
-        """Test that ApplicationsDatabase loads legacy version when app exists in both."""
-        os.environ["XDG_CONFIG_HOME"] = os.path.join(self.fixtures_path, "xdg-config-home")
+        """Test ApplicationsDatabase loads legacy version when app exists."""
+        xdg_config = os.path.join(self.fixtures_path, "xdg-config-home")
+        os.environ["XDG_CONFIG_HOME"] = xdg_config
 
         db = ApplicationsDatabase()
 

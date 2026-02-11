@@ -1,9 +1,10 @@
 """Package used to manage the .mackup.cfg config file."""
 
+import configparser
 import os
 import os.path
-from typing import Optional, Set
 from pathlib import Path
+from typing import Optional
 
 from .constants import (
     CUSTOM_APPS_DIR,
@@ -21,8 +22,6 @@ from .utils import (
     get_google_drive_folder_location,
     get_icloud_folder_location,
 )
-
-import configparser
 
 
 class Config:
@@ -108,7 +107,7 @@ class Config:
         return str(os.path.join(self.path, self.directory))
 
     @property
-    def apps_to_ignore(self) -> Set[str]:
+    def apps_to_ignore(self) -> set[str]:
         """
         Get the list of applications ignored in the config file.
 
@@ -118,7 +117,7 @@ class Config:
         return set(self._apps_to_ignore)
 
     @property
-    def apps_to_sync(self) -> Set[str]:
+    def apps_to_sync(self) -> set[str]:
         """
         Get the list of applications allowed in the config file.
 
@@ -127,7 +126,9 @@ class Config:
         """
         return set(self._apps_to_sync)
 
-    def _setup_parser(self, filename: Optional[str] = None) -> configparser.ConfigParser:
+    def _setup_parser(
+        self, filename: Optional[str] = None
+    ) -> configparser.ConfigParser:
         """
         Configure the ConfigParser instance the way we want it.
 
@@ -140,7 +141,7 @@ class Config:
         assert isinstance(filename, str) or filename is None
 
         parser = configparser.ConfigParser(
-            allow_no_value=True, inline_comment_prefixes=(";", "#")
+            allow_no_value=True, inline_comment_prefixes=(";", "#"),
         )
         parser.read(self._best_config_path(filename))
 
@@ -160,8 +161,9 @@ class Config:
         if none of these files exist, we create ~/.mackup.cfg
 
         Args:
-            filename (str or None, optional): Optional override for the config file path. 
-                Can be absolute or relative to home directory. Defaults to None.
+            filename (str or None, optional): Optional override for the config
+                file path. Can be absolute or relative to home directory.
+                Defaults to None.
 
         Returns:
             str: the absolute path to the config file
@@ -190,11 +192,11 @@ class Config:
             config_path = Path(filename).expanduser()
             if not config_path.is_absolute():
                 config_path = Path.home() / filename
-            
+
             # When explicitly specified, check that the file exists
             if not config_path.is_file():
                 error(
-                    f"The config file '{config_path}' does not exist. Aborting."
+                    f"The config file '{config_path}' does not exist. Aborting.",
                 )
 
         try:
@@ -202,7 +204,8 @@ class Config:
             config_path.relative_to(Path.home())
         except ValueError:
             error(
-                f"The config file '{config_path}' is not in your home directory. Aborting."
+                f"The config file '{config_path}' is not in your home "
+                "directory. Aborting.",
             )
 
         # return the absolute path to the config file
@@ -219,13 +222,13 @@ class Config:
                     "\n"
                     "An old section (e.g. [Allowed Applications]"
                     " or [Ignored Applications] has been detected"
-                    " in your {} file.\n"
+                    f" in your {MACKUP_CONFIG_FILE} file.\n"
                     "I'd rather do nothing than do something you"
                     " do not want me to do.\n"
                     "\n"
                     "Please read the up to date documentation on"
                     " <https://github.com/lra/mackup> and migrate"
-                    " your configuration file.".format(MACKUP_CONFIG_FILE)
+                    " your configuration file.",
                 )
 
     def _parse_engine(self) -> str:
@@ -248,7 +251,7 @@ class Config:
             ENGINE_ICLOUD,
             ENGINE_FS,
         ]:
-            raise ConfigError("Unknown storage engine: {}".format(engine))
+            raise ConfigError(f"Unknown storage engine: {engine}")
 
         return str(engine)
 
@@ -272,7 +275,7 @@ class Config:
             else:
                 raise ConfigError(
                     "The required 'path' can't be found while"
-                    " the 'file_system' engine is used."
+                    " the 'file_system' engine is used.",
                 )
 
         return str(path)
@@ -289,23 +292,20 @@ class Config:
             # Don't allow CUSTOM_APPS_DIR or XDG custom apps dir as a storage directory
             if directory == CUSTOM_APPS_DIR:
                 raise ConfigError(
-                    "{} cannot be used as a storage directory.".format(CUSTOM_APPS_DIR)
+                    f"{CUSTOM_APPS_DIR} cannot be used as a storage directory.",
                 )
             xdg_custom_apps_dir = os.path.join(".config", CUSTOM_APPS_DIR_XDG)
-            if (
-                directory == CUSTOM_APPS_DIR_XDG
-                or directory == xdg_custom_apps_dir
-                or directory.endswith("/" + xdg_custom_apps_dir)
-            ):
+            in_xdg_dir = directory in (CUSTOM_APPS_DIR_XDG, xdg_custom_apps_dir)
+            if in_xdg_dir or directory.endswith("/" + xdg_custom_apps_dir):
                 raise ConfigError(
-                    "{} cannot be used as a storage directory.".format(CUSTOM_APPS_DIR_XDG)
+                    f"{CUSTOM_APPS_DIR_XDG} cannot be used as a storage directory.",
                 )
         else:
             directory = MACKUP_BACKUP_PATH
 
         return str(directory)
 
-    def _parse_apps_to_ignore(self) -> Set[str]:
+    def _parse_apps_to_ignore(self) -> set[str]:
         """
         Parse the applications to ignore in the config.
 
@@ -322,7 +322,7 @@ class Config:
 
         return apps_to_ignore
 
-    def _parse_apps_to_sync(self) -> Set[str]:
+    def _parse_apps_to_sync(self) -> set[str]:
         """
         Parse the applications to backup in the config.
 
@@ -342,5 +342,3 @@ class Config:
 
 class ConfigError(Exception):
     """Exception used for handle errors in the configuration."""
-
-    pass

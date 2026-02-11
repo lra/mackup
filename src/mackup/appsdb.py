@@ -58,7 +58,8 @@ class ApplicationsDatabase:
                 xdg_config_home: str = os.environ.get("XDG_CONFIG_HOME", failobj)
                 if not xdg_config_home.startswith(home):
                     raise ValueError(
-                        f"$XDG_CONFIG_HOME: {xdg_config_home} must be somewhere within your home directory: {home}",
+                        f"$XDG_CONFIG_HOME: {xdg_config_home} must be somewhere "
+                        f"within your home directory: {home}",
                     )
                 if config.has_section("xdg_configuration_files"):
                     for path in config.options("xdg_configuration_files"):

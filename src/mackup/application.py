@@ -318,9 +318,8 @@ class ApplicationProfile:
                         raise ValueError(f"Unsupported file: {home_filepath}")
 
                     if utils.confirm(
-                        f"You already have a {file_type} named {filename} in your"
-                        " home.\nDo you want to replace it with"
-                        " your backup?",
+                        f"You already have a {file_type} at {home_filepath}.\n"
+                        "Do you want to replace it with your backup?",
                     ):
                         utils.delete(home_filepath)
                         utils.link(mackup_filepath, home_filepath)

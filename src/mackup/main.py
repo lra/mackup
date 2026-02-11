@@ -137,7 +137,7 @@ def main() -> None:
 
     # mackup restore
     elif args["restore"]:
-        mckp.check_for_usable_backup_env()
+        mckp.check_for_usable_restore_env()
 
         # Recover a backup of the files of each application
         for app_name in sorted(mckp.get_apps_to_backup()):

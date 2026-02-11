@@ -294,6 +294,19 @@ class TestCLI(unittest.TestCase):
         with open(test_file_in_folder) as f:
             self.assertEqual(f.read(), "folder_config=value\n")
 
+    def test_restore_fails_when_mackup_folder_missing(self):
+        """Test that mackup restore fails when Mackup folder doesn't exist."""
+        # Ensure Mackup folder doesn't exist
+        self.assertFalse(os.path.exists(self.mackup_folder))
+
+        # Run restore - should exit with error when backup folder is missing
+        with patch("sys.argv", ["mackup", "restore"]):
+            with self.assertRaises(SystemExit) as context:
+                main()
+
+            # Should exit with non-zero status
+            self.assertNotEqual(context.exception.code, 0)
+
 
 if __name__ == "__main__":
     unittest.main()

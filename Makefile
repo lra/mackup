@@ -5,7 +5,7 @@ ruff:
 	ruff check .
 
 ty:
-	ty check
+	uv run ty check
 
 test:
 	uv run pytest

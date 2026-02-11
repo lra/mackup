@@ -247,7 +247,7 @@ def get_google_drive_folder_location() -> str:
             googledrive_home = str(data[0])
             con.close()
 
-    if googledrive_home is not None:
+    if googledrive_home:
         return googledrive_home
 
     error(

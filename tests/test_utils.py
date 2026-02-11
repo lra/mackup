@@ -1,4 +1,3 @@
-import builtins
 import os
 import stat
 import tempfile
@@ -18,17 +17,17 @@ def convert_to_octal(file_name):
 class TestMackup(unittest.TestCase):
     def test_confirm_yes(self):
         # Override the input used in utils
-        with patch.object(builtins, "input", return_value="Yes"):
+        with patch.object(utils, "input", return_value="Yes", create=True):
             assert utils.confirm("Answer Yes to this question")
 
     def test_confirm_no(self):
         # Override the input used in utils
-        with patch.object(builtins, "input", return_value="No"):
+        with patch.object(utils, "input", return_value="No", create=True):
             assert not utils.confirm("Answer No to this question")
 
     def test_confirm_typo(self):
         # Override the input used in utils
-        with patch.object(builtins, "input", return_value="No"):
+        with patch.object(utils, "input", return_value="No", create=True):
             assert not utils.confirm("Answer garbage to this question")
 
     def test_delete_file(self):

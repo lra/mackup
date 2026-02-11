@@ -69,13 +69,15 @@ def bold(text: str) -> str:
 def main() -> None:
     """Main function."""
     # Get the command line arg
-    if __doc__ is None:
-        raise RuntimeError(
+    docstring = __doc__
+    if docstring:
+        args: dict[str, Any] = docopt(docstring, version=f"Mackup {VERSION}")
+    else:
+        sys.exit(
             "Usage information is not available because __doc__ is None. "
             "This can happen when running Python with optimizations (python -OO). "
             "Please run Mackup without -OO to use the command-line interface."
         )
-    args: dict[str, Any] = docopt(__doc__, version=f"Mackup {VERSION}")
 
     config_file: Optional[str] = args.get("--config-file")
     mckp: Mackup = Mackup(config_file)

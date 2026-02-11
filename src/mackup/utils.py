@@ -4,14 +4,13 @@ import base64
 import os
 import platform
 import shutil
+import sqlite3
 import stat
 import subprocess
 import sys
-import sqlite3
 from typing import NoReturn, Optional
 
 from . import constants
-
 
 # Flag that controls how user confirmation works.
 # If True, the user wants to say "yes" to everything.
@@ -111,7 +110,7 @@ def copy(src: str, dst: str) -> None:
 
     # What the heck is this?
     else:
-        raise ValueError("Unsupported file: {}".format(src))
+        raise ValueError(f"Unsupported file: {src}")
 
     # Set the good mode to the file or folder recursively
     chmod(dst)
@@ -183,7 +182,7 @@ def chmod(target: str) -> None:
                 os.chmod(os.path.join(root, cur_file), file_mode)
 
     else:
-        raise ValueError("Unsupported file type: {}".format(target))
+        raise ValueError(f"Unsupported file type: {target}")
 
 
 def error(message: str) -> NoReturn:
@@ -195,7 +194,7 @@ def error(message: str) -> NoReturn:
     """
     fail: str = "\033[91m"
     end: str = "\033[0m"
-    sys.exit(fail + "Error: {}".format(message) + end)
+    sys.exit(fail + f"Error: {message}" + end)
 
 
 def get_dropbox_folder_location() -> str:
@@ -207,9 +206,9 @@ def get_dropbox_folder_location() -> str:
     """
     host_db_path = os.path.join(os.environ["HOME"], ".dropbox/host.db")
     try:
-        with open(host_db_path, "r") as f_hostdb:
+        with open(host_db_path) as f_hostdb:
             data = f_hostdb.read().split()
-    except IOError:
+    except OSError:
         error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="Dropbox install"))
     dropbox_home = base64.b64decode(data[1]).decode()
 
@@ -225,7 +224,7 @@ def get_google_drive_folder_location() -> str:
     """
     gdrive_db_path = "Library/Application Support/Google/Drive/sync_config.db"
     yosemite_gdrive_db_path = (
-        "Library/Application Support/Google/Drive/" "user_default/sync_config.db"
+        "Library/Application Support/Google/Drive/user_default/sync_config.db"
     )
     yosemite_gdrive_db = os.path.join(os.environ["HOME"], yosemite_gdrive_db_path)
     if os.path.isfile(yosemite_gdrive_db):
@@ -251,8 +250,8 @@ def get_google_drive_folder_location() -> str:
     if not googledrive_home:
         error(
             constants.ERROR_UNABLE_TO_FIND_STORAGE.format(
-                provider="Google Drive install"
-            )
+                provider="Google Drive install",
+            ),
         )
 
     return googledrive_home
@@ -290,7 +289,9 @@ def is_process_running(process_name: str) -> bool:
     # On systems with pgrep, check if the given process is running
     if os.path.isfile("/usr/bin/pgrep"):
         dev_null = open(os.devnull, "wb")
-        returncode: int = subprocess.call(["/usr/bin/pgrep", process_name], stdout=dev_null)
+        returncode: int = subprocess.call(
+            ["/usr/bin/pgrep", process_name], stdout=dev_null
+        )
         is_running = bool(returncode == 0)
 
     return is_running
@@ -311,7 +312,7 @@ def remove_acl(path: str) -> None:
     if platform.system() == constants.PLATFORM_DARWIN and os.path.isfile("/bin/chmod"):
         subprocess.call(["/bin/chmod", "-R", "-N", path])
     elif (platform.system() == constants.PLATFORM_LINUX) and os.path.isfile(
-        "/bin/setfacl"
+        "/bin/setfacl",
     ):
         subprocess.call(["/bin/setfacl", "-R", "-b", path])
 
@@ -330,11 +331,11 @@ def remove_immutable_attribute(path: str) -> None:
     """
     # Some files have ACLs, let's remove them recursively
     if (platform.system() == constants.PLATFORM_DARWIN) and os.path.isfile(
-        "/usr/bin/chflags"
+        "/usr/bin/chflags",
     ):
         subprocess.call(["/usr/bin/chflags", "-R", "nouchg", path])
     elif platform.system() == constants.PLATFORM_LINUX and os.path.isfile(
-        "/usr/bin/chattr"
+        "/usr/bin/chattr",
     ):
         subprocess.call(["/usr/bin/chattr", "-R", "-f", "-i", path])
 
@@ -367,8 +368,8 @@ def can_file_be_synced_on_current_platform(path: str) -> bool:
     # not any file/folder named LibrarySomething
     library_path: str = os.path.join(os.environ["HOME"], "Library/")
 
-    if platform.system() == constants.PLATFORM_LINUX:
-        if fullpath.startswith(library_path):
-            can_be_synced = False
+    is_linux = platform.system() == constants.PLATFORM_LINUX
+    if is_linux and fullpath.startswith(library_path):
+        can_be_synced = False
 
     return can_be_synced

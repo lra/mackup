@@ -1,10 +1,9 @@
 import os
+import stat
 import tempfile
 import unittest
-import stat
 
 # from unittest.mock import patch
-
 from mackup import utils
 
 
@@ -155,7 +154,7 @@ class TestMackup(unittest.TestCase):
         # Set the destination filename
         srcpath_basename = os.path.basename(srcpath)
         dstfile = os.path.join(
-            dstpath, "subfolder", srcpath_basename, os.path.basename(srcfile)
+            dstpath, "subfolder", srcpath_basename, os.path.basename(srcfile),
         )
         # Make sure the source file and destination folder exist and the
         # destination file doesn't yet exist
@@ -210,7 +209,7 @@ class TestMackup(unittest.TestCase):
         utils.delete(dstpath)
 
     def test_copy_dir_that_exists(self):
-        """Copies a directory recursively to a destination path that already exists, overwriting it."""
+        """Copies a directory recursively to an existing destination."""
         # Create a source and a destination tmp folders
         src_folder = tempfile.mkdtemp()
         dst_folder = tempfile.mkdtemp()
@@ -336,8 +335,8 @@ class TestMackup(unittest.TestCase):
         # Check for the missing Google Drive folder
         assert not os.path.exists(
             os.path.join(
-                temp_home, "Library/Application Support/Google/Drive/sync_config.db"
-            )
+                temp_home, "Library/Application Support/Google/Drive/sync_config.db",
+            ),
         )
         self.assertRaises(SystemExit, utils.get_google_drive_folder_location)
 

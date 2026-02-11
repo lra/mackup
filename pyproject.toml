@@ -101,3 +101,63 @@ minversion = "9.0"
 testpaths = ["tests"]
 pythonpath = ["src"]
 addopts = ["-ra"]
+
+# https://docs.astral.sh/ruff/rules/
+[tool.ruff.lint]
+select = [
+    "A", # flake8-builtins
+    "ASYNC", # flake8-async
+    "B", # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "C90", # mccabe
+    "COM", # flake8-commas
+    "DTZ", # flake8-datetimez
+    "E", # pycodestyle error
+    "EXE",  # flake8-executable
+    "F", # pyflakes
+    "FA", # flake8-future-annotations
+    "FLY", # flynt, for f-strings
+    "FURB", # refurb
+    "G", # flake8-logging-format
+    "I", # isort
+    "ICN", # flake8-import-conventions
+    "INP", # flake8-no-pep420
+    "INT", # flake8-gettext
+    "ISC", # flake8-implicit-str-concat
+    "N", # pep8-naming
+    "PERF", # perflint
+    "PIE", # flake8-pie
+    "PLC", # pylint convention
+    "PLE", # pylint error
+    "PLR", # pylint refactor
+    "PLW", # pylint warning
+    "PT", # flake8-pytest-style
+    "PTH", # flake8-use-pathlib
+    "PYI", # flake8-pyi
+    "Q", # flake8-quotes
+    "RSE", # flake8-raise
+    "RUF", # ruff
+    "SIM", # flake8-simplify
+    "SLF", # flake8-self
+    "SLOT", # flake8-slots
+    "TCH", # flake8-type-checking
+    "TID", # flake8-tidy-imports
+    "UP", # pyupgrade
+    "W", # pycodestyle warning
+]
+ignore = [
+    "C901", # mccabe complexity - too complex functions
+    "COM812", # trailing comma missing - conflicts with formatter
+    "FA100", # future annotations - would change behavior
+    "INP001", # implicit namespace package - tests don't need __init__.py
+    "PLR0912", # too many branches
+    "PLR0913", # too many arguments
+    "PLR0915", # too many statements
+    "PLR1714", # repeated equality comparison
+    "PLW2901", # loop variable overwritten
+    "PT009", # use pytest.raises - existing unittest style
+    "PT027", # use pytest.raises - existing unittest style
+    "PTH", # use pathlib - os.path is fine for this codebase
+    "SIM115", # use context manager for open - some cases require this
+    "SLF001", # private member access - needed for testing
+]

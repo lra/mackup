@@ -342,4 +342,3 @@ class Config:
 
 class ConfigError(Exception):
     """Exception used for handle errors in the configuration."""
-

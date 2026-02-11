@@ -77,7 +77,8 @@ def main() -> None:
 
     def print_app_header(app_name: str) -> None:
         if verbose:
-            print(("\n{0} {1} {0}").format(header("---"), bold(app_name)))
+            header_str = header("---")
+            print(f"\n{header_str} {bold(app_name)} {header_str}")
 
     # If we want to answer mackup with "yes" for each question
     if args["--force"]:

@@ -1,10 +1,11 @@
-import unittest
 import os
-import tempfile
 import shutil
+import tempfile
+import unittest
 from unittest.mock import patch
-from mackup.main import main
+
 from mackup import utils
+from mackup.main import main
 
 
 class TestCLI(unittest.TestCase):
@@ -111,9 +112,9 @@ class TestCLI(unittest.TestCase):
         self.assertTrue(os.path.exists(backed_up_file))
 
         # Verify content is the same
-        with open(self.test_file_path, "r") as f:
+        with open(self.test_file_path) as f:
             original_content = f.read()
-        with open(backed_up_file, "r") as f:
+        with open(backed_up_file) as f:
             backed_up_content = f.read()
 
         self.assertEqual(original_content, backed_up_content)
@@ -140,7 +141,7 @@ class TestCLI(unittest.TestCase):
         self.assertTrue(os.path.exists(self.test_file_path))
 
         # Verify content is correct
-        with open(self.test_file_path, "r") as f:
+        with open(self.test_file_path) as f:
             restored_content = f.read()
 
         self.assertEqual(restored_content, "test_config=value\n")
@@ -151,7 +152,7 @@ class TestCLI(unittest.TestCase):
 
         # Verify original file exists and has correct content
         self.assertTrue(os.path.exists(self.test_file_path))
-        with open(self.test_file_path, "r") as f:
+        with open(self.test_file_path) as f:
             self.assertEqual(f.read(), original_content)
 
         # Step 1: Backup
@@ -168,7 +169,7 @@ class TestCLI(unittest.TestCase):
             f.write(modified_content)
 
         # Verify file was modified
-        with open(self.test_file_path, "r") as f:
+        with open(self.test_file_path) as f:
             self.assertEqual(f.read(), modified_content)
 
         # Step 3: Restore (should replace modified file with backup)
@@ -176,7 +177,7 @@ class TestCLI(unittest.TestCase):
             main()
 
         # Verify file was restored to original content
-        with open(self.test_file_path, "r") as f:
+        with open(self.test_file_path) as f:
             self.assertEqual(f.read(), original_content)
 
     def test_backup_preserves_file_permissions(self):
@@ -247,7 +248,7 @@ class TestCLI(unittest.TestCase):
         self.assertTrue(os.path.exists(backed_up_file_in_folder))
 
         # Verify content
-        with open(backed_up_file_in_folder, "r") as f:
+        with open(backed_up_file_in_folder) as f:
             self.assertEqual(f.read(), "folder_config=value\n")
 
     def test_restore_with_folder(self):
@@ -290,8 +291,21 @@ class TestCLI(unittest.TestCase):
         self.assertTrue(os.path.exists(test_file_in_folder))
 
         # Verify content
-        with open(test_file_in_folder, "r") as f:
+        with open(test_file_in_folder) as f:
             self.assertEqual(f.read(), "folder_config=value\n")
+
+    def test_restore_fails_when_mackup_folder_missing(self):
+        """Test that mackup restore fails when Mackup folder doesn't exist."""
+        # Ensure Mackup folder doesn't exist
+        self.assertFalse(os.path.exists(self.mackup_folder))
+
+        # Run restore - should exit with error when backup folder is missing
+        with patch("sys.argv", ["mackup", "restore"]):
+            with self.assertRaises(SystemExit) as context:
+                main()
+
+            # Should exit with non-zero status
+            self.assertNotEqual(context.exception.code, 0)
 
 
 if __name__ == "__main__":

@@ -1,9 +1,8 @@
 import os
+import stat
 import tempfile
 import unittest
-import stat
-
-# from unittest.mock import patch
+from unittest.mock import patch
 
 from mackup import utils
 
@@ -18,27 +17,18 @@ def convert_to_octal(file_name):
 class TestMackup(unittest.TestCase):
     def test_confirm_yes(self):
         # Override the input used in utils
-        def custom_input(_):
-            return "Yes"
-
-        utils.input = custom_input
-        assert utils.confirm("Answer Yes to this question")
+        with patch.object(utils, "input", return_value="Yes", create=True):
+            assert utils.confirm("Answer Yes to this question")
 
     def test_confirm_no(self):
         # Override the input used in utils
-        def custom_input(_):
-            return "No"
-
-        utils.input = custom_input
-        assert not utils.confirm("Answer No to this question")
+        with patch.object(utils, "input", return_value="No", create=True):
+            assert not utils.confirm("Answer No to this question")
 
     def test_confirm_typo(self):
         # Override the input used in utils
-        def custom_input(_):
-            return "No"
-
-        utils.input = custom_input
-        assert not utils.confirm("Answer garbage to this question")
+        with patch.object(utils, "input", return_value="No", create=True):
+            assert not utils.confirm("Answer garbage to this question")
 
     def test_delete_file(self):
         # Create a tmp file
@@ -155,7 +145,7 @@ class TestMackup(unittest.TestCase):
         # Set the destination filename
         srcpath_basename = os.path.basename(srcpath)
         dstfile = os.path.join(
-            dstpath, "subfolder", srcpath_basename, os.path.basename(srcfile)
+            dstpath, "subfolder", srcpath_basename, os.path.basename(srcfile),
         )
         # Make sure the source file and destination folder exist and the
         # destination file doesn't yet exist
@@ -210,7 +200,7 @@ class TestMackup(unittest.TestCase):
         utils.delete(dstpath)
 
     def test_copy_dir_that_exists(self):
-        """Copies a directory recursively to a destination path that already exists, overwriting it."""
+        """Copies a directory recursively to an existing destination."""
         # Create a source and a destination tmp folders
         src_folder = tempfile.mkdtemp()
         dst_folder = tempfile.mkdtemp()
@@ -336,8 +326,8 @@ class TestMackup(unittest.TestCase):
         # Check for the missing Google Drive folder
         assert not os.path.exists(
             os.path.join(
-                temp_home, "Library/Application Support/Google/Drive/sync_config.db"
-            )
+                temp_home, "Library/Application Support/Google/Drive/sync_config.db",
+            ),
         )
         self.assertRaises(SystemExit, utils.get_google_drive_folder_location)
 
@@ -350,14 +340,18 @@ class TestMackup(unittest.TestCase):
         # Any file path will do, even if it doesn't exist
         path = "some/file"
 
-        # Force the Mac OSX Test using lambda magic
-        utils.platform.system = lambda *args: utils.constants.PLATFORM_DARWIN
-        assert utils.can_file_be_synced_on_current_platform(path)
+        # Force the Mac OSX Test using mock
+        with patch.object(
+            utils.platform, "system", return_value=utils.constants.PLATFORM_DARWIN
+        ):
+            assert utils.can_file_be_synced_on_current_platform(path)
 
-        # Force the Linux Test using lambda magic
-        utils.platform.system = lambda *args: utils.constants.PLATFORM_LINUX
-        assert utils.can_file_be_synced_on_current_platform(path)
+        # Force the Linux Test using mock
+        with patch.object(
+            utils.platform, "system", return_value=utils.constants.PLATFORM_LINUX
+        ):
+            assert utils.can_file_be_synced_on_current_platform(path)
 
-        # Try to use the library path on Linux, which shouldn't work
-        path = os.path.join(os.environ["HOME"], "Library/")
-        assert not utils.can_file_be_synced_on_current_platform(path)
+            # Try to use the library path on Linux, which shouldn't work
+            path = os.path.join(os.environ["HOME"], "Library/")
+            assert not utils.can_file_be_synced_on_current_platform(path)

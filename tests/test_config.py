@@ -138,7 +138,7 @@ class TestConfig(unittest.TestCase):
         assert isinstance(cfg.fullpath, str)
         assert cfg.fullpath == "/some/absolute/folder/custom_folder"
 
-        assert cfg.apps_to_ignore == set(["subversion", "sequel-pro"])
+        assert cfg.apps_to_ignore == {"subversion", "sequel-pro"}
         assert cfg.apps_to_sync == set()
 
     def test_config_engine_filesystem(self):
@@ -149,7 +149,7 @@ class TestConfig(unittest.TestCase):
 
         assert isinstance(cfg.path, str)
         assert cfg.path.endswith(
-            os.path.join(os.environ["HOME"], "some/relative/folder")
+            os.path.join(os.environ["HOME"], "some/relative/folder"),
         )
 
         assert isinstance(cfg.directory, str)
@@ -157,11 +157,11 @@ class TestConfig(unittest.TestCase):
 
         assert isinstance(cfg.fullpath, str)
         assert cfg.fullpath == os.path.join(
-            os.environ["HOME"], "some/relative/folder", "Mackup"
+            os.environ["HOME"], "some/relative/folder", "Mackup",
         )
 
         assert cfg.apps_to_ignore == set()
-        assert cfg.apps_to_sync == set(["sabnzbd", "sublime-text-3", "x11"])
+        assert cfg.apps_to_sync == {"sabnzbd", "sublime-text-3", "x11"}
 
     def test_config_engine_google_drive(self):
         cfg = Config("mackup-engine-google_drive.cfg")
@@ -178,8 +178,8 @@ class TestConfig(unittest.TestCase):
         assert isinstance(cfg.fullpath, str)
         assert cfg.fullpath.endswith("/Google Drive/Mackup")
 
-        assert cfg.apps_to_ignore == set(["subversion", "sequel-pro", "sabnzbd"])
-        assert cfg.apps_to_sync == set(["sublime-text-3", "x11", "sabnzbd"])
+        assert cfg.apps_to_ignore == {"subversion", "sequel-pro", "sabnzbd"}
+        assert cfg.apps_to_sync == {"sublime-text-3", "x11", "sabnzbd"}
 
     def test_config_engine_icloud(self):
         cfg = Config("mackup-engine-icloud.cfg")
@@ -189,7 +189,7 @@ class TestConfig(unittest.TestCase):
 
         assert isinstance(cfg.path, str)
         assert cfg.path == os.path.expanduser(
-            "~/Library/Mobile Documents/com~apple~CloudDocs/"
+            "~/Library/Mobile Documents/com~apple~CloudDocs/",
         )
 
         assert isinstance(cfg.directory, str)
@@ -198,8 +198,8 @@ class TestConfig(unittest.TestCase):
         assert isinstance(cfg.fullpath, str)
         assert cfg.fullpath.endswith("/com~apple~CloudDocs/Mackup")
 
-        assert cfg.apps_to_ignore == set(["subversion", "sequel-pro", "sabnzbd"])
-        assert cfg.apps_to_sync == set(["sublime-text-3", "x11", "sabnzbd"])
+        assert cfg.apps_to_ignore == {"subversion", "sequel-pro", "sabnzbd"}
+        assert cfg.apps_to_sync == {"sublime-text-3", "x11", "sabnzbd"}
 
     def test_config_engine_filesystem_no_path(self):
         with self.assertRaises(ConfigError):
@@ -224,7 +224,7 @@ class TestConfig(unittest.TestCase):
         assert isinstance(cfg.fullpath, str)
         assert cfg.fullpath == "/home/some_user/Dropbox/Mackup"
 
-        assert cfg.apps_to_ignore == set(["subversion", "sequel-pro", "sabnzbd"])
+        assert cfg.apps_to_ignore == {"subversion", "sequel-pro", "sabnzbd"}
         assert cfg.apps_to_sync == set()
 
     def test_config_apps_to_sync(self):
@@ -243,7 +243,7 @@ class TestConfig(unittest.TestCase):
         assert cfg.fullpath == "/home/some_user/Dropbox/Mackup"
 
         assert cfg.apps_to_ignore == set()
-        assert cfg.apps_to_sync == set(["sabnzbd", "sublime-text-3", "x11"])
+        assert cfg.apps_to_sync == {"sabnzbd", "sublime-text-3", "x11"}
 
     def test_config_apps_to_ignore_and_sync(self):
         cfg = Config("mackup-apps_to_ignore_and_sync.cfg")
@@ -260,8 +260,8 @@ class TestConfig(unittest.TestCase):
         assert isinstance(cfg.fullpath, str)
         assert cfg.fullpath == "/home/some_user/Dropbox/Mackup"
 
-        assert cfg.apps_to_ignore == set(["subversion", "sequel-pro", "sabnzbd"])
-        assert cfg.apps_to_sync == set(["sabnzbd", "sublime-text-3", "x11", "vim"])
+        assert cfg.apps_to_ignore == {"subversion", "sequel-pro", "sabnzbd"}
+        assert cfg.apps_to_sync == {"sabnzbd", "sublime-text-3", "x11", "vim"}
 
     def test_config_old_config(self):
         self.assertRaises(SystemExit, Config, "mackup-old-config.cfg")

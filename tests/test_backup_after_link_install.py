@@ -1,11 +1,11 @@
 """Test the edge case: running backup after link install."""
 import os
-import tempfile
-import unittest
-from unittest.mock import Mock
-from io import StringIO
 import shutil
 import sys
+import tempfile
+import unittest
+from io import StringIO
+from unittest.mock import Mock
 
 from mackup.application import ApplicationProfile
 from mackup.mackup import Mackup
@@ -19,20 +19,20 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
         # Create a mock Mackup instance
         self.mock_mackup = Mock(spec=Mackup)
         self.mock_mackup.mackup_folder = tempfile.mkdtemp()
-        
+
         # Register cleanup for mackup folder
         self.addCleanup(self._cleanup_directory, self.mock_mackup.mackup_folder)
 
         # Create a temporary home directory
         self.temp_home = tempfile.mkdtemp()
-        
+
         # Register cleanup for temp home
         self.addCleanup(self._cleanup_directory, self.temp_home)
 
         # Save original HOME and set it to temp directory
         self.original_home = os.environ.get("HOME")
         os.environ["HOME"] = self.temp_home
-        
+
         # Register cleanup for HOME restoration
         self.addCleanup(self._restore_home, self.original_home)
 
@@ -51,7 +51,6 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
     def tearDown(self):
         """Clean up test fixtures."""
         # Cleanup is now handled by addCleanup, which runs even if test fails
-        pass
 
     def test_backup_after_link_install_does_not_delete_mackup_files(self):
         """
@@ -66,7 +65,7 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
         # Step 1: Simulate initial state - files exist in home
         home_file = os.path.join(self.temp_home, ".testfile")
         home_dir = os.path.join(self.temp_home, ".testdir")
-        
+
         # Create initial files
         with open(home_file, "w") as f:
             f.write("original file content")
@@ -79,32 +78,32 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
             mackup=self.mock_mackup,
             files=test_files,
             dry_run=False,
-            verbose=False
+            verbose=False,
         )
-        
+
         captured_output = StringIO()
         sys.stdout = captured_output
         app_profile.link_install()
         sys.stdout = sys.__stdout__
-        
+
         # Verify link install worked correctly
         mackup_file = os.path.join(self.mock_mackup.mackup_folder, ".testfile")
         mackup_dir = os.path.join(self.mock_mackup.mackup_folder, ".testdir")
-        
+
         # Files should exist in mackup folder
         self.assertTrue(os.path.exists(mackup_file))
         self.assertTrue(os.path.exists(mackup_dir))
-        
+
         # Home should have symlinks pointing to mackup
         self.assertTrue(os.path.islink(home_file))
         self.assertTrue(os.path.islink(home_dir))
         self.assertTrue(os.path.samefile(home_file, mackup_file))
         self.assertTrue(os.path.samefile(home_dir, mackup_dir))
-        
+
         # Verify content is preserved
-        with open(mackup_file, "r") as f:
+        with open(mackup_file) as f:
             self.assertEqual(f.read(), "original file content")
-        with open(os.path.join(mackup_dir, "subfile.txt"), "r") as f:
+        with open(os.path.join(mackup_dir, "subfile.txt")) as f:
             self.assertEqual(f.read(), "original dir content")
 
         # Step 3: Run backup (this is where the edge case would occur)
@@ -113,21 +112,21 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
         app_profile.copy_files_to_mackup_folder()
         output = captured_output.getvalue()
         sys.stdout = sys.__stdout__
-        
+
         # Verify backup skipped the already linked files
         # Should not print "Backing up" for these files
         self.assertNotIn("Backing up", output)
-        
+
         # Verify the mackup files still exist and weren't deleted
         self.assertTrue(os.path.exists(mackup_file))
         self.assertTrue(os.path.exists(mackup_dir))
-        
+
         # Verify content is still intact
-        with open(mackup_file, "r") as f:
+        with open(mackup_file) as f:
             self.assertEqual(f.read(), "original file content")
-        with open(os.path.join(mackup_dir, "subfile.txt"), "r") as f:
+        with open(os.path.join(mackup_dir, "subfile.txt")) as f:
             self.assertEqual(f.read(), "original dir content")
-        
+
         # Verify symlinks are still in place
         self.assertTrue(os.path.islink(home_file))
         self.assertTrue(os.path.islink(home_dir))
@@ -141,7 +140,7 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
 
         # Create initial file
         home_file = os.path.join(self.temp_home, ".testfile")
-        
+
         with open(home_file, "w") as f:
             f.write("test content")
 
@@ -150,24 +149,24 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
             mackup=self.mock_mackup,
             files=test_files,
             dry_run=False,
-            verbose=False
+            verbose=False,
         )
         app_profile.link_install()
-        
+
         # Run backup in verbose mode
         app_profile_verbose = ApplicationProfile(
             mackup=self.mock_mackup,
             files=test_files,
             dry_run=False,
-            verbose=True
+            verbose=True,
         )
-        
+
         captured_output = StringIO()
         sys.stdout = captured_output
         app_profile_verbose.copy_files_to_mackup_folder()
         output = captured_output.getvalue()
         sys.stdout = sys.__stdout__
-        
+
         # Verify skip message is shown
         self.assertIn("Skipping", output)
         self.assertIn("already linked to", output)

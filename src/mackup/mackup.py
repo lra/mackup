@@ -10,11 +10,9 @@ import os
 import os.path
 import shutil
 import tempfile
-from typing import Optional, Set
+from typing import Optional
 
-from . import utils
-from . import config
-from . import appsdb
+from . import appsdb, config, utils
 
 
 class Mackup:
@@ -35,13 +33,13 @@ class Mackup:
             utils.error(
                 "Running Mackup as superuser can be dangerous."
                 " Don't do it unless you know what you're doing!"
-                " Run mackup --help for guidance."
+                " Run mackup --help for guidance.",
             )
 
         # Do we have a folder set to save Mackup content into?
         if not os.path.isdir(self._config.path):
             utils.error(
-                "Unable to find the storage folder: {}".format(self._config.path)
+                f"Unable to find the storage folder: {self._config.path}",
             )
 
         # Is Sublime Text running?
@@ -62,9 +60,9 @@ class Mackup:
 
         if not os.path.isdir(self.mackup_folder):
             utils.error(
-                "Unable to find the Mackup folder: {}\n"
+                f"Unable to find the Mackup folder: {self.mackup_folder}\n"
                 "You might want to back up some files or get your"
-                " storage directory synced first.".format(self.mackup_folder)
+                " storage directory synced first.",
             )
 
     def clean_temp_folder(self) -> None:
@@ -77,13 +75,13 @@ class Mackup:
             if utils.confirm(
                 "Mackup needs a directory to store your"
                 " configuration files\n"
-                "Do you want to create it now? <{}>".format(self.mackup_folder)
+                f"Do you want to create it now? <{self.mackup_folder}>",
             ):
                 os.makedirs(self.mackup_folder)
             else:
                 utils.error("Mackup can't do anything without a home =(")
 
-    def get_apps_to_backup(self) -> Set[str]:
+    def get_apps_to_backup(self) -> set[str]:
         """
         Get the list of applications that should be backed up by Mackup.
 
@@ -97,7 +95,7 @@ class Mackup:
 
         # If a list of apps to sync is specify, we only allow those
         # Or we allow every supported app by default
-        apps_to_backup: Set[str] = self._config.apps_to_sync or app_db.get_app_names()
+        apps_to_backup: set[str] = self._config.apps_to_sync or app_db.get_app_names()
 
         # Remove the specified apps to ignore
         for app_name in self._config.apps_to_ignore:

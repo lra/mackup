@@ -1,9 +1,10 @@
 import os
+import shutil
+import sys
 import tempfile
 import unittest
-from unittest.mock import Mock, patch
 from io import StringIO
-import sys
+from unittest.mock import Mock, patch
 
 from mackup.application import ApplicationProfile
 from mackup.mackup import Mackup
@@ -31,7 +32,7 @@ class TestApplicationProfile(unittest.TestCase):
             mackup=self.mock_mackup,
             files=self.test_files,
             dry_run=False,
-            verbose=False
+            verbose=False,
         )
 
     def tearDown(self):
@@ -43,14 +44,13 @@ class TestApplicationProfile(unittest.TestCase):
             del os.environ["HOME"]
 
         # Clean up temporary directories
-        import shutil
         if os.path.exists(self.temp_home):
             shutil.rmtree(self.temp_home)
         if os.path.exists(self.mock_mackup.mackup_folder):
             shutil.rmtree(self.mock_mackup.mackup_folder)
 
     def test_copy_files_to_mackup_folder_permission_error(self):
-        """Test that PermissionError is caught and handled in copy_files_to_mackup_folder."""
+        """Test PermissionError handling in copy_files_to_mackup_folder."""
         # Create a test file in the home directory
         test_file = ".testfile"
         home_filepath = os.path.join(self.temp_home, test_file)
@@ -83,13 +83,13 @@ class TestApplicationProfile(unittest.TestCase):
             self.assertIn(home_filepath, output)
 
     def test_copy_files_to_mackup_folder_permission_error_verbose(self):
-        """Test PermissionError handling in copy_files_to_mackup_folder with verbose mode."""
+        """Test PermissionError handling in copy_files_to_mackup_folder verbose."""
         # Create a verbose ApplicationProfile
         app_profile_verbose = ApplicationProfile(
             mackup=self.mock_mackup,
             files=self.test_files,
             dry_run=False,
-            verbose=True
+            verbose=True,
         )
 
         # Create a test file in the home directory
@@ -124,7 +124,7 @@ class TestApplicationProfile(unittest.TestCase):
             self.assertIn("permission issue", output)
 
     def test_copy_files_from_mackup_folder_permission_error(self):
-        """Test that PermissionError is caught and handled in copy_files_from_mackup_folder."""
+        """Test PermissionError handling in copy_files_from_mackup_folder."""
         # Create a test file in the mackup directory
         test_file = ".testfile"
         mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
@@ -157,13 +157,13 @@ class TestApplicationProfile(unittest.TestCase):
             self.assertIn(mackup_filepath, output)
 
     def test_copy_files_from_mackup_folder_permission_error_verbose(self):
-        """Test PermissionError handling in copy_files_from_mackup_folder with verbose mode."""
+        """Test PermissionError handling in copy_files_from_mackup_folder verbose."""
         # Create a verbose ApplicationProfile
         app_profile_verbose = ApplicationProfile(
             mackup=self.mock_mackup,
             files=self.test_files,
             dry_run=False,
-            verbose=True
+            verbose=True,
         )
 
         # Create a test file in the mackup directory
@@ -266,13 +266,13 @@ class TestApplicationProfile(unittest.TestCase):
             self.assertIn(mackup_dirpath, output)
 
     def test_copy_files_to_mackup_folder_dry_run_no_permission_error(self):
-        """Test that dry_run mode doesn't trigger PermissionError in copy_files_to_mackup_folder."""
+        """Test dry_run mode doesn't trigger PermissionError in backup."""
         # Create a dry_run ApplicationProfile
         app_profile_dry = ApplicationProfile(
             mackup=self.mock_mackup,
             files=self.test_files,
             dry_run=True,
-            verbose=False
+            verbose=False,
         )
 
         # Create a test file in the home directory
@@ -303,13 +303,13 @@ class TestApplicationProfile(unittest.TestCase):
             self.assertIn("Backing up", output)
 
     def test_copy_files_from_mackup_folder_dry_run_no_permission_error(self):
-        """Test that dry_run mode doesn't trigger PermissionError in copy_files_from_mackup_folder."""
+        """Test dry_run mode doesn't trigger PermissionError in restore."""
         # Create a dry_run ApplicationProfile
         app_profile_dry = ApplicationProfile(
             mackup=self.mock_mackup,
             files=self.test_files,
             dry_run=True,
-            verbose=False
+            verbose=False,
         )
 
         # Create a test file in the mackup directory
@@ -340,7 +340,7 @@ class TestApplicationProfile(unittest.TestCase):
             self.assertIn("Recovering", output)
 
     def test_link_uninstall_mackup_not_a_link(self):
-        """Test that link_uninstall skips and warns when home file is not a symbolic link."""
+        """Test link_uninstall skips when home file is not a symbolic link."""
         # Create a test file in the mackup directory (regular file, not a link)
         test_file = ".testfile"
         mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
@@ -380,7 +380,7 @@ class TestApplicationProfile(unittest.TestCase):
             self.assertIn("skipping", output)
 
     def test_link_uninstall_mackup_points_to_wrong_target(self):
-        """Test that link_uninstall skips and warns when home link points to wrong target."""
+        """Test link_uninstall skips when home link points to wrong target."""
         # Create a test file
         test_file = ".testfile"
         mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
@@ -424,7 +424,7 @@ class TestApplicationProfile(unittest.TestCase):
             self.assertIn("skipping", output)
 
     def test_link_uninstall_mackup_points_correctly(self):
-        """Test that link_uninstall proceeds normally when home link points to mackup file correctly."""
+        """Test link_uninstall proceeds when home link points to mackup file."""
         # Create a test file
         test_file = ".testfile"
         mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
@@ -498,21 +498,21 @@ class TestApplicationProfile(unittest.TestCase):
         # Verify the symlink still exists and points to mackup file
         self.assertTrue(os.path.islink(home_filepath))
         self.assertTrue(os.path.samefile(home_filepath, mackup_filepath))
-        
+
         # Verify the mackup file still exists with original content
         self.assertTrue(os.path.exists(mackup_filepath))
-        with open(mackup_filepath, "r") as f:
+        with open(mackup_filepath) as f:
             self.assertEqual(f.read(), "mackup content")
 
 
     def test_copy_files_to_mackup_folder_skips_already_linked_files_verbose(self):
-        """Test that backup skips files already linked from link install with verbose mode."""
+        """Test backup skips files already linked with verbose mode."""
         # Create a verbose ApplicationProfile
         app_profile_verbose = ApplicationProfile(
             mackup=self.mock_mackup,
             files=self.test_files,
             dry_run=False,
-            verbose=True
+            verbose=True,
         )
 
         # Create a test file
@@ -555,10 +555,10 @@ class TestApplicationProfile(unittest.TestCase):
         # Verify the symlink still exists and points to mackup file
         self.assertTrue(os.path.islink(home_filepath))
         self.assertTrue(os.path.samefile(home_filepath, mackup_filepath))
-        
+
         # Verify the mackup file still exists with original content
         self.assertTrue(os.path.exists(mackup_filepath))
-        with open(mackup_filepath, "r") as f:
+        with open(mackup_filepath) as f:
             self.assertEqual(f.read(), "mackup content")
 
 

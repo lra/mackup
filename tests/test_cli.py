@@ -60,6 +60,7 @@ class TestCLI(unittest.TestCase):
 
         # Force yes to all prompts
         utils.FORCE_YES = True
+        utils.FORCE_NO = False
         utils.CAN_RUN_AS_ROOT = False
 
     def tearDown(self):
@@ -84,6 +85,7 @@ class TestCLI(unittest.TestCase):
 
         # Reset utils flags
         utils.FORCE_YES = False
+        utils.FORCE_NO = False
         utils.CAN_RUN_AS_ROOT = False
 
     def test_backup_creates_mackup_folder(self):
@@ -306,6 +308,17 @@ class TestCLI(unittest.TestCase):
 
             # Should exit with non-zero status
             self.assertNotEqual(context.exception.code, 0)
+
+    def test_force_and_force_no_are_mutually_exclusive(self):
+        """Passing --force and --force-no together should fail fast."""
+        with patch("sys.argv", ["mackup", "--force", "--force-no", "backup"]):
+            with self.assertRaises(SystemExit) as context:
+                main()
+
+            self.assertEqual(
+                str(context.exception),
+                "Options --force and --force-no are mutually exclusive.",
+            )
 
 
 if __name__ == "__main__":

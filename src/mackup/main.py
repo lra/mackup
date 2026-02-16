@@ -80,6 +80,9 @@ def main() -> None:
 
     args: dict[str, Any] = docopt(docstring, version=f"Mackup {VERSION}")
 
+    if args["--force"] and args["--force-no"]:
+        sys.exit("Options --force and --force-no are mutually exclusive.")
+
     config_file: Optional[str] = args.get("--config-file")
     mckp: Mackup = Mackup(config_file)
     app_db: ApplicationsDatabase = ApplicationsDatabase()

@@ -206,10 +206,11 @@ def get_dropbox_folder_location() -> str:
         (str) Full path to the current Dropbox folder
     """
     host_db_path = os.path.join(os.environ["HOME"], ".dropbox/host.db")
+    min_host_db_fields = 2
     try:
         with open(host_db_path) as f_hostdb:
             data = f_hostdb.read().split()
-        if len(data) < 2:
+        if len(data) < min_host_db_fields:
             raise ValueError("Malformed Dropbox host.db")
         dropbox_home = base64.b64decode(data[1]).decode()
     except (OSError, ValueError, binascii.Error, UnicodeDecodeError):

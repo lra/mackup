@@ -111,6 +111,8 @@ class ApplicationProfile:
                     ):
                         # If confirmed, delete the file in Mackup
                         utils.delete(mackup_filepath)
+                    else:
+                        continue
 
                 # Copy the file
                 try:
@@ -166,8 +168,10 @@ class ApplicationProfile:
                         " home folder.\nAre you sure that you want to"
                         " replace it?",
                     ):
-                        # If confirmed, delete the file in Mackup
+                        # If confirmed, delete the existing home file
                         utils.delete(home_filepath)
+                    else:
+                        continue
 
                 # Copy the file
                 try:

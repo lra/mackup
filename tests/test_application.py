@@ -339,6 +339,50 @@ class TestApplicationProfile(unittest.TestCase):
             output = captured_output.getvalue()
             self.assertIn("Recovering", output)
 
+    def test_copy_files_to_mackup_folder_decline_replace_skips_copy(self):
+        """Test backup does not overwrite when user declines replacement."""
+        test_file = ".testfile"
+        home_filepath = os.path.join(self.temp_home, test_file)
+        mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
+
+        with open(home_filepath, "w") as f:
+            f.write("home content")
+        with open(mackup_filepath, "w") as f:
+            f.write("existing backup")
+
+        with patch("mackup.application.utils.confirm", return_value=False), \
+             patch("mackup.application.utils.delete") as mock_delete, \
+             patch("mackup.application.utils.copy") as mock_copy:
+            self.app_profile.copy_files_to_mackup_folder()
+
+            mock_delete.assert_not_called()
+            mock_copy.assert_not_called()
+
+        with open(mackup_filepath) as f:
+            self.assertEqual(f.read(), "existing backup")
+
+    def test_copy_files_from_mackup_folder_decline_replace_skips_copy(self):
+        """Test restore does not overwrite when user declines replacement."""
+        test_file = ".testfile"
+        home_filepath = os.path.join(self.temp_home, test_file)
+        mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
+
+        with open(home_filepath, "w") as f:
+            f.write("existing home")
+        with open(mackup_filepath, "w") as f:
+            f.write("backup content")
+
+        with patch("mackup.application.utils.confirm", return_value=False), \
+             patch("mackup.application.utils.delete") as mock_delete, \
+             patch("mackup.application.utils.copy") as mock_copy:
+            self.app_profile.copy_files_from_mackup_folder()
+
+            mock_delete.assert_not_called()
+            mock_copy.assert_not_called()
+
+        with open(home_filepath) as f:
+            self.assertEqual(f.read(), "existing home")
+
     def test_link_uninstall_mackup_not_a_link(self):
         """Test link_uninstall skips when home file is not a symbolic link."""
         # Create a test file in the mackup directory (regular file, not a link)

@@ -344,6 +344,18 @@ class TestMackup(unittest.TestCase):
 
             self.assertRaises(SystemExit, utils.get_dropbox_folder_location)
 
+    def test_dropbox_folder_location_with_invalid_base64(self):
+        """Invalid base64 in Dropbox host.db should fail with a user-facing error."""
+        with tempfile.TemporaryDirectory() as temp_home, patch.dict(
+            os.environ, {"HOME": temp_home}
+        ):
+            host_db_path = os.path.join(temp_home, ".dropbox", "host.db")
+            os.makedirs(os.path.dirname(host_db_path), exist_ok=True)
+            with open(host_db_path, "w") as f:
+                f.write("first-field invalid-base64-!@#$")
+
+            self.assertRaises(SystemExit, utils.get_dropbox_folder_location)
+
     def test_google_drive_folder_location_with_missing_path_entry(self):
         """Google Drive DB without local_sync_root_path should fail cleanly."""
         with tempfile.TemporaryDirectory() as temp_home, patch.dict(

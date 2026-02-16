@@ -239,18 +239,17 @@ def get_google_drive_folder_location() -> str:
     gdrive_db = os.path.join(os.environ["HOME"], gdrive_db_path)
     if os.path.isfile(gdrive_db):
         try:
-            con = sqlite3.connect(gdrive_db)
-            cur = con.cursor()
-            query = (
-                "SELECT data_value "
-                "FROM data "
-                "WHERE entry_key = 'local_sync_root_path';"
-            )
-            cur.execute(query)
-            data = cur.fetchone()
-            if data and data[0]:
-                googledrive_home = str(data[0])
-            con.close()
+            with sqlite3.connect(gdrive_db) as con:
+                cur = con.cursor()
+                query = (
+                    "SELECT data_value "
+                    "FROM data "
+                    "WHERE entry_key = 'local_sync_root_path';"
+                )
+                cur.execute(query)
+                data = cur.fetchone()
+                if data and data[0]:
+                    googledrive_home = str(data[0])
         except sqlite3.Error:
             googledrive_home = None
 

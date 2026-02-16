@@ -168,7 +168,7 @@ class ApplicationProfile:
                         " home folder.\nAre you sure that you want to"
                         " replace it?",
                     ):
-                        # If confirmed, delete the file in Mackup
+                        # If confirmed, delete the existing home file
                         utils.delete(home_filepath)
                     else:
                         continue

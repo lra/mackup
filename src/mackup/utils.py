@@ -1,6 +1,7 @@
 """System static utilities being used by the modules."""
 
 import base64
+import binascii
 import os
 import platform
 import shutil
@@ -208,9 +209,11 @@ def get_dropbox_folder_location() -> str:
     try:
         with open(host_db_path) as f_hostdb:
             data = f_hostdb.read().split()
-    except OSError:
+        if len(data) < 2:
+            raise ValueError("Malformed Dropbox host.db")
+        dropbox_home = base64.b64decode(data[1]).decode()
+    except (OSError, ValueError, binascii.Error, UnicodeDecodeError):
         error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="Dropbox install"))
-    dropbox_home = base64.b64decode(data[1]).decode()
 
     return dropbox_home
 
@@ -234,8 +237,8 @@ def get_google_drive_folder_location() -> str:
 
     gdrive_db = os.path.join(os.environ["HOME"], gdrive_db_path)
     if os.path.isfile(gdrive_db):
-        con = sqlite3.connect(gdrive_db)
-        if con:
+        try:
+            con = sqlite3.connect(gdrive_db)
             cur = con.cursor()
             query = (
                 "SELECT data_value "
@@ -244,8 +247,11 @@ def get_google_drive_folder_location() -> str:
             )
             cur.execute(query)
             data = cur.fetchone()
-            googledrive_home = str(data[0])
+            if data and data[0]:
+                googledrive_home = str(data[0])
             con.close()
+        except sqlite3.Error:
+            googledrive_home = None
 
     if googledrive_home:
         return googledrive_home

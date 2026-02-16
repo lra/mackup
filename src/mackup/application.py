@@ -28,7 +28,7 @@ class ApplicationProfile:
         assert isinstance(files, set)
 
         self.mackup: Mackup = mackup
-        self.files: list[str] = list(files)
+        self.files: list[str] = sorted(files)
         self.dry_run: bool = dry_run
         self.verbose: bool = verbose
 

@@ -111,6 +111,8 @@ class ApplicationProfile:
                     ):
                         # If confirmed, delete the file in Mackup
                         utils.delete(mackup_filepath)
+                    else:
+                        continue
 
                 # Copy the file
                 try:
@@ -168,6 +170,8 @@ class ApplicationProfile:
                     ):
                         # If confirmed, delete the file in Mackup
                         utils.delete(home_filepath)
+                    else:
+                        continue
 
                 # Copy the file
                 try:

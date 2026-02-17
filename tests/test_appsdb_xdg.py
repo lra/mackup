@@ -37,7 +37,7 @@ class TestApplicationsDatabaseXDG(unittest.TestCase):
         config_files = ApplicationsDatabase.get_config_files()
         filenames = {os.path.basename(f) for f in config_files}
 
-        self.assertIn("legacy-test-app.cfg", filenames)
+        assert "legacy-test-app.cfg" in filenames
 
     def test_xdg_custom_apps_dir(self):
         """Test that XDG custom apps directory is found."""
@@ -47,7 +47,7 @@ class TestApplicationsDatabaseXDG(unittest.TestCase):
         config_files = ApplicationsDatabase.get_config_files()
         filenames = {os.path.basename(f) for f in config_files}
 
-        self.assertIn("xdg-test-app.cfg", filenames)
+        assert "xdg-test-app.cfg" in filenames
 
     def test_legacy_takes_priority_over_xdg(self):
         """Test that legacy directory takes priority when same app exists."""
@@ -60,11 +60,11 @@ class TestApplicationsDatabaseXDG(unittest.TestCase):
         priority_files = [f for f in config_files if "priority-test-app.cfg" in f]
 
         # Should only have one file (legacy should win)
-        self.assertEqual(len(priority_files), 1)
+        assert len(priority_files) == 1
 
         # Should be from legacy directory
-        self.assertIn(".mackup", priority_files[0])
-        self.assertNotIn("xdg-config-home", priority_files[0])
+        assert ".mackup" in priority_files[0]
+        assert "xdg-config-home" not in priority_files[0]
 
     def test_both_directories_merged(self):
         """Test that apps from both directories are available."""
@@ -75,8 +75,8 @@ class TestApplicationsDatabaseXDG(unittest.TestCase):
         filenames = {os.path.basename(f) for f in config_files}
 
         # Both unique apps should be present
-        self.assertIn("legacy-test-app.cfg", filenames)
-        self.assertIn("xdg-test-app.cfg", filenames)
+        assert "legacy-test-app.cfg" in filenames
+        assert "xdg-test-app.cfg" in filenames
 
     def test_xdg_default_fallback(self):
         """Test that XDG falls back to ~/.config when XDG_CONFIG_HOME is not set."""
@@ -88,7 +88,7 @@ class TestApplicationsDatabaseXDG(unittest.TestCase):
         config_files = ApplicationsDatabase.get_config_files()
 
         # Should at least contain stock apps and legacy custom apps
-        self.assertTrue(len(config_files) > 0)
+        assert len(config_files) > 0
 
     def test_applications_database_loads_xdg_apps(self):
         """Test that ApplicationsDatabase correctly loads apps from XDG."""
@@ -98,8 +98,8 @@ class TestApplicationsDatabaseXDG(unittest.TestCase):
         db = ApplicationsDatabase()
 
         # XDG app should be loaded
-        self.assertIn("xdg-test-app", db.get_app_names())
-        self.assertEqual(db.get_name("xdg-test-app"), "XDG Test App")
+        assert "xdg-test-app" in db.get_app_names()
+        assert db.get_name("xdg-test-app") == "XDG Test App"
 
     def test_applications_database_priority_loads_legacy(self):
         """Test ApplicationsDatabase loads legacy version when app exists."""
@@ -109,8 +109,8 @@ class TestApplicationsDatabaseXDG(unittest.TestCase):
         db = ApplicationsDatabase()
 
         # Priority app should load the legacy version
-        self.assertIn("priority-test-app", db.get_app_names())
-        self.assertEqual(db.get_name("priority-test-app"), "Priority Test App Legacy")
+        assert "priority-test-app" in db.get_app_names()
+        assert db.get_name("priority-test-app") == "Priority Test App Legacy"
 
 
 if __name__ == "__main__":

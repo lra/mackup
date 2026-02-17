@@ -5,6 +5,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
+import pytest
+
 from mackup import utils
 
 
@@ -120,7 +122,8 @@ class TestMackup(unittest.TestCase):
         assert not os.path.exists(dstfile)
 
         # Check if mackup can copy it
-        self.assertRaises(ValueError, utils.copy, srcfile, dstfile)
+        with pytest.raises(ValueError, match="Unsupported file"):
+            utils.copy(srcfile, dstfile)
         assert not os.path.isfile(srcfile)
         assert stat.S_ISFIFO(os.stat(srcfile).st_mode)
         assert os.path.isdir(dstpath)
@@ -305,11 +308,13 @@ class TestMackup(unittest.TestCase):
         assert convert_to_octal(nested_dir) == "700"
 
         # Use an "unsupported file type". In this case, /dev/null
-        self.assertRaises(ValueError, utils.chmod, os.devnull)
+        with pytest.raises(ValueError, match="Unsupported file type"):
+            utils.chmod(os.devnull)
 
     def test_error(self):
         test_string = "Hello World"
-        self.assertRaises(SystemExit, utils.error, test_string)
+        with pytest.raises(SystemExit):
+            utils.error(test_string)
 
     def test_failed_backup_location(self):
         """
@@ -322,7 +327,8 @@ class TestMackup(unittest.TestCase):
 
         # Check for the missing Dropbox folder
         assert not os.path.exists(os.path.join(temp_home, ".dropbox/host.db"))
-        self.assertRaises(SystemExit, utils.get_dropbox_folder_location)
+        with pytest.raises(SystemExit):
+            utils.get_dropbox_folder_location()
 
         # Check for the missing Google Drive folder
         assert not os.path.exists(
@@ -330,7 +336,8 @@ class TestMackup(unittest.TestCase):
                 temp_home, "Library/Application Support/Google/Drive/sync_config.db",
             ),
         )
-        self.assertRaises(SystemExit, utils.get_google_drive_folder_location)
+        with pytest.raises(SystemExit):
+            utils.get_google_drive_folder_location()
 
     def test_dropbox_folder_location_with_malformed_host_db(self):
         """Malformed Dropbox host.db should fail with a user-facing error."""
@@ -342,7 +349,8 @@ class TestMackup(unittest.TestCase):
             with open(host_db_path, "w") as f:
                 f.write("malformed-content-without-base64-path")
 
-            self.assertRaises(SystemExit, utils.get_dropbox_folder_location)
+            with pytest.raises(SystemExit):
+                utils.get_dropbox_folder_location()
 
     def test_dropbox_folder_location_with_invalid_base64(self):
         """Invalid base64 in Dropbox host.db should fail with a user-facing error."""
@@ -354,7 +362,8 @@ class TestMackup(unittest.TestCase):
             with open(host_db_path, "w") as f:
                 f.write("first-field invalid-base64-!@#$")
 
-            self.assertRaises(SystemExit, utils.get_dropbox_folder_location)
+            with pytest.raises(SystemExit):
+                utils.get_dropbox_folder_location()
 
     def test_google_drive_folder_location_with_missing_path_entry(self):
         """Google Drive DB without local_sync_root_path should fail cleanly."""
@@ -376,7 +385,8 @@ class TestMackup(unittest.TestCase):
             con.commit()
             con.close()
 
-            self.assertRaises(SystemExit, utils.get_google_drive_folder_location)
+            with pytest.raises(SystemExit):
+                utils.get_google_drive_folder_location()
 
     def test_google_drive_folder_location_uses_user_default_db(self):
         """Read Google Drive location from user_default sync DB when present."""
@@ -400,10 +410,7 @@ class TestMackup(unittest.TestCase):
             con.commit()
             con.close()
 
-            self.assertEqual(
-                utils.get_google_drive_folder_location(),
-                expected_path,
-            )
+            assert utils.get_google_drive_folder_location() == expected_path
 
     def test_is_process_running(self):
         # A pgrep that has one letter and a wildcard will always return id 1

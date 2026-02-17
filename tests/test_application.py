@@ -82,6 +82,17 @@ class TestApplicationProfile(unittest.TestCase):
             self.assertIn("permission issue", output)
             self.assertIn(home_filepath, output)
 
+    def test_files_are_sorted_for_deterministic_processing(self):
+        """Application files should always be processed in sorted order."""
+        unsorted_files = {"z-last", "a-first", "m-middle"}
+        app_profile = ApplicationProfile(
+            mackup=self.mock_mackup,
+            files=unsorted_files,
+            dry_run=False,
+            verbose=False,
+        )
+        self.assertEqual(app_profile.files, ["a-first", "m-middle", "z-last"])
+
     def test_copy_files_to_mackup_folder_permission_error_verbose(self):
         """Test PermissionError handling in copy_files_to_mackup_folder verbose."""
         # Create a verbose ApplicationProfile

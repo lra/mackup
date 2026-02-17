@@ -1,6 +1,6 @@
 """Constants used in Mackup."""
 
-from importlib.metadata import version
+from importlib.metadata import PackageNotFoundError, version
 
 # Support platforms
 PLATFORM_DARWIN: str = "Darwin"
@@ -18,8 +18,17 @@ MACKUP_BACKUP_PATH: str = "Mackup"
 # Mackup config file
 MACKUP_CONFIG_FILE: str = ".mackup.cfg"
 
+
+def _get_version() -> str:
+    """Return package version, or a safe fallback when metadata is unavailable."""
+    try:
+        return version(MACKUP_APP_NAME)
+    except PackageNotFoundError:
+        return "unknown"
+
+
 # Current version
-VERSION: str = version(MACKUP_APP_NAME)
+VERSION: str = _get_version()
 
 # Directory that can contains user defined app configs
 CUSTOM_APPS_DIR: str = ".mackup"

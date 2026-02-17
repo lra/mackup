@@ -3,6 +3,8 @@ import os.path
 import unittest
 from pathlib import Path
 
+import pytest
+
 from mackup.config import Config, ConfigError
 from mackup.constants import (
     ENGINE_DROPBOX,
@@ -202,11 +204,11 @@ class TestConfig(unittest.TestCase):
         assert cfg.apps_to_sync == {"sublime-text-3", "x11", "sabnzbd"}
 
     def test_config_engine_filesystem_no_path(self):
-        with self.assertRaises(ConfigError):
+        with pytest.raises(ConfigError):
             Config("mackup-engine-file_system-no_path.cfg")
 
     def test_config_engine_unknown(self):
-        with self.assertRaises(ConfigError):
+        with pytest.raises(ConfigError):
             Config("mackup-engine-unknown.cfg")
 
     def test_config_apps_to_ignore(self):
@@ -264,4 +266,5 @@ class TestConfig(unittest.TestCase):
         assert cfg.apps_to_sync == {"sabnzbd", "sublime-text-3", "x11", "vim"}
 
     def test_config_old_config(self):
-        self.assertRaises(SystemExit, Config, "mackup-old-config.cfg")
+        with pytest.raises(SystemExit):
+            Config("mackup-old-config.cfg")

@@ -78,9 +78,9 @@ class TestApplicationProfile(unittest.TestCase):
 
             # Verify that the error message was printed
             output = captured_output.getvalue()
-            self.assertIn("Error: Unable to copy file", output)
-            self.assertIn("permission issue", output)
-            self.assertIn(home_filepath, output)
+            assert "Error: Unable to copy file" in output
+            assert "permission issue" in output
+            assert home_filepath in output
 
     def test_files_are_sorted_for_deterministic_processing(self):
         """Application files should always be processed in sorted order."""
@@ -91,7 +91,7 @@ class TestApplicationProfile(unittest.TestCase):
             dry_run=False,
             verbose=False,
         )
-        self.assertEqual(app_profile.files, ["a-first", "m-middle", "z-last"])
+        assert app_profile.files == ["a-first", "m-middle", "z-last"]
 
     def test_copy_files_to_mackup_folder_permission_error_verbose(self):
         """Test PermissionError handling in copy_files_to_mackup_folder verbose."""
@@ -130,9 +130,9 @@ class TestApplicationProfile(unittest.TestCase):
 
             # Verify that the verbose backing up message and error message were printed
             output = captured_output.getvalue()
-            self.assertIn("Backing up", output)
-            self.assertIn("Error: Unable to copy file", output)
-            self.assertIn("permission issue", output)
+            assert "Backing up" in output
+            assert "Error: Unable to copy file" in output
+            assert "permission issue" in output
 
     def test_copy_files_from_mackup_folder_permission_error(self):
         """Test PermissionError handling in copy_files_from_mackup_folder."""
@@ -163,9 +163,9 @@ class TestApplicationProfile(unittest.TestCase):
 
             # Verify that the error message was printed
             output = captured_output.getvalue()
-            self.assertIn("Error: Unable to copy file", output)
-            self.assertIn("permission issue", output)
-            self.assertIn(mackup_filepath, output)
+            assert "Error: Unable to copy file" in output
+            assert "permission issue" in output
+            assert mackup_filepath in output
 
     def test_copy_files_from_mackup_folder_permission_error_verbose(self):
         """Test PermissionError handling in copy_files_from_mackup_folder verbose."""
@@ -204,9 +204,9 @@ class TestApplicationProfile(unittest.TestCase):
 
             # Verify that the verbose recovering message and error message were printed
             output = captured_output.getvalue()
-            self.assertIn("Recovering", output)
-            self.assertIn("Error: Unable to copy file", output)
-            self.assertIn("permission issue", output)
+            assert "Recovering" in output
+            assert "Error: Unable to copy file" in output
+            assert "permission issue" in output
 
     def test_copy_files_to_mackup_folder_with_directory_permission_error(self):
         """Test PermissionError with a directory in copy_files_to_mackup_folder."""
@@ -238,9 +238,9 @@ class TestApplicationProfile(unittest.TestCase):
 
             # Verify that the error message was printed
             output = captured_output.getvalue()
-            self.assertIn("Error: Unable to copy file", output)
-            self.assertIn("permission issue", output)
-            self.assertIn(home_dirpath, output)
+            assert "Error: Unable to copy file" in output
+            assert "permission issue" in output
+            assert home_dirpath in output
 
     def test_copy_files_from_mackup_folder_with_directory_permission_error(self):
         """Test PermissionError with a directory in copy_files_from_mackup_folder."""
@@ -272,9 +272,9 @@ class TestApplicationProfile(unittest.TestCase):
 
             # Verify that the error message was printed
             output = captured_output.getvalue()
-            self.assertIn("Error: Unable to copy file", output)
-            self.assertIn("permission issue", output)
-            self.assertIn(mackup_dirpath, output)
+            assert "Error: Unable to copy file" in output
+            assert "permission issue" in output
+            assert mackup_dirpath in output
 
     def test_copy_files_to_mackup_folder_dry_run_no_permission_error(self):
         """Test dry_run mode doesn't trigger PermissionError in backup."""
@@ -311,7 +311,7 @@ class TestApplicationProfile(unittest.TestCase):
 
             # Verify that the backing up message was printed
             output = captured_output.getvalue()
-            self.assertIn("Backing up", output)
+            assert "Backing up" in output
 
     def test_copy_files_from_mackup_folder_dry_run_no_permission_error(self):
         """Test dry_run mode doesn't trigger PermissionError in restore."""
@@ -348,7 +348,7 @@ class TestApplicationProfile(unittest.TestCase):
 
             # Verify that the recovering message was printed
             output = captured_output.getvalue()
-            self.assertIn("Recovering", output)
+            assert "Recovering" in output
 
     def test_copy_files_to_mackup_folder_decline_replace_skips_copy(self):
         """Test backup does not overwrite when user declines replacement."""
@@ -370,7 +370,7 @@ class TestApplicationProfile(unittest.TestCase):
             mock_copy.assert_not_called()
 
         with open(mackup_filepath) as f:
-            self.assertEqual(f.read(), "existing backup")
+            assert f.read() == "existing backup"
 
     def test_copy_files_from_mackup_folder_decline_replace_skips_copy(self):
         """Test restore does not overwrite when user declines replacement."""
@@ -392,7 +392,7 @@ class TestApplicationProfile(unittest.TestCase):
             mock_copy.assert_not_called()
 
         with open(home_filepath) as f:
-            self.assertEqual(f.read(), "existing home")
+            assert f.read() == "existing home"
 
     def test_link_uninstall_mackup_not_a_link(self):
         """Test link_uninstall skips when home file is not a symbolic link."""
@@ -428,11 +428,11 @@ class TestApplicationProfile(unittest.TestCase):
 
             # Verify that the warning message was printed
             output = captured_output.getvalue()
-            self.assertIn("Warning: the file in your home", output)
-            self.assertIn("does not point to the original file", output)
-            self.assertIn(mackup_filepath, output)
-            self.assertIn(home_filepath, output)
-            self.assertIn("skipping", output)
+            assert "Warning: the file in your home" in output
+            assert "does not point to the original file" in output
+            assert mackup_filepath in output
+            assert home_filepath in output
+            assert "skipping" in output
 
     def test_link_uninstall_mackup_points_to_wrong_target(self):
         """Test link_uninstall skips when home link points to wrong target."""
@@ -472,11 +472,11 @@ class TestApplicationProfile(unittest.TestCase):
 
             # Verify that the warning message was printed
             output = captured_output.getvalue()
-            self.assertIn("Warning: the file in your home", output)
-            self.assertIn("does not point to the original file", output)
-            self.assertIn(mackup_filepath, output)
-            self.assertIn(home_filepath, output)
-            self.assertIn("skipping", output)
+            assert "Warning: the file in your home" in output
+            assert "does not point to the original file" in output
+            assert mackup_filepath in output
+            assert home_filepath in output
+            assert "skipping" in output
 
     def test_link_uninstall_mackup_points_correctly(self):
         """Test link_uninstall proceeds when home link points to mackup file."""
@@ -511,8 +511,8 @@ class TestApplicationProfile(unittest.TestCase):
 
             # Verify that the reverting message was printed (not warning)
             output = captured_output.getvalue()
-            self.assertIn("Reverting", output)
-            self.assertNotIn("Warning", output)
+            assert "Reverting" in output
+            assert "Warning" not in output
 
     def test_copy_files_to_mackup_folder_skips_already_linked_files(self):
         """Test that backup skips files already linked from link install."""
@@ -548,16 +548,16 @@ class TestApplicationProfile(unittest.TestCase):
 
             # Verify that the skipping message was NOT printed (non-verbose)
             output = captured_output.getvalue()
-            self.assertNotIn("Backing up", output)
+            assert "Backing up" not in output
 
         # Verify the symlink still exists and points to mackup file
-        self.assertTrue(os.path.islink(home_filepath))
-        self.assertTrue(os.path.samefile(home_filepath, mackup_filepath))
+        assert os.path.islink(home_filepath)
+        assert os.path.samefile(home_filepath, mackup_filepath)
 
         # Verify the mackup file still exists with original content
-        self.assertTrue(os.path.exists(mackup_filepath))
+        assert os.path.exists(mackup_filepath)
         with open(mackup_filepath) as f:
-            self.assertEqual(f.read(), "mackup content")
+            assert f.read() == "mackup content"
 
 
     def test_copy_files_to_mackup_folder_skips_already_linked_files_verbose(self):
@@ -602,19 +602,19 @@ class TestApplicationProfile(unittest.TestCase):
 
             # Verify that the skipping message WAS printed (verbose mode)
             output = captured_output.getvalue()
-            self.assertIn("Skipping", output)
-            self.assertIn("already linked to", output)
-            self.assertIn(home_filepath, output)
-            self.assertIn(mackup_filepath, output)
+            assert "Skipping" in output
+            assert "already linked to" in output
+            assert home_filepath in output
+            assert mackup_filepath in output
 
         # Verify the symlink still exists and points to mackup file
-        self.assertTrue(os.path.islink(home_filepath))
-        self.assertTrue(os.path.samefile(home_filepath, mackup_filepath))
+        assert os.path.islink(home_filepath)
+        assert os.path.samefile(home_filepath, mackup_filepath)
 
         # Verify the mackup file still exists with original content
-        self.assertTrue(os.path.exists(mackup_filepath))
+        assert os.path.exists(mackup_filepath)
         with open(mackup_filepath) as f:
-            self.assertEqual(f.read(), "mackup content")
+            assert f.read() == "mackup content"
 
 
     def test_copy_files_to_mackup_folder_backs_up_symlink_to_different_location(self):
@@ -649,7 +649,7 @@ class TestApplicationProfile(unittest.TestCase):
 
             # Verify that the backing up message was printed
             output = captured_output.getvalue()
-            self.assertIn("Backing up", output)
+            assert "Backing up" in output
 
 
 if __name__ == "__main__":

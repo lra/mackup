@@ -91,20 +91,20 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
         mackup_dir = os.path.join(self.mock_mackup.mackup_folder, ".testdir")
 
         # Files should exist in mackup folder
-        self.assertTrue(os.path.exists(mackup_file))
-        self.assertTrue(os.path.exists(mackup_dir))
+        assert os.path.exists(mackup_file)
+        assert os.path.exists(mackup_dir)
 
         # Home should have symlinks pointing to mackup
-        self.assertTrue(os.path.islink(home_file))
-        self.assertTrue(os.path.islink(home_dir))
-        self.assertTrue(os.path.samefile(home_file, mackup_file))
-        self.assertTrue(os.path.samefile(home_dir, mackup_dir))
+        assert os.path.islink(home_file)
+        assert os.path.islink(home_dir)
+        assert os.path.samefile(home_file, mackup_file)
+        assert os.path.samefile(home_dir, mackup_dir)
 
         # Verify content is preserved
         with open(mackup_file) as f:
-            self.assertEqual(f.read(), "original file content")
+            assert f.read() == "original file content"
         with open(os.path.join(mackup_dir, "subfile.txt")) as f:
-            self.assertEqual(f.read(), "original dir content")
+            assert f.read() == "original dir content"
 
         # Step 3: Run backup (this is where the edge case would occur)
         captured_output = StringIO()
@@ -115,23 +115,23 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
 
         # Verify backup skipped the already linked files
         # Should not print "Backing up" for these files
-        self.assertNotIn("Backing up", output)
+        assert "Backing up" not in output
 
         # Verify the mackup files still exist and weren't deleted
-        self.assertTrue(os.path.exists(mackup_file))
-        self.assertTrue(os.path.exists(mackup_dir))
+        assert os.path.exists(mackup_file)
+        assert os.path.exists(mackup_dir)
 
         # Verify content is still intact
         with open(mackup_file) as f:
-            self.assertEqual(f.read(), "original file content")
+            assert f.read() == "original file content"
         with open(os.path.join(mackup_dir, "subfile.txt")) as f:
-            self.assertEqual(f.read(), "original dir content")
+            assert f.read() == "original dir content"
 
         # Verify symlinks are still in place
-        self.assertTrue(os.path.islink(home_file))
-        self.assertTrue(os.path.islink(home_dir))
-        self.assertTrue(os.path.samefile(home_file, mackup_file))
-        self.assertTrue(os.path.samefile(home_dir, mackup_dir))
+        assert os.path.islink(home_file)
+        assert os.path.islink(home_dir)
+        assert os.path.samefile(home_file, mackup_file)
+        assert os.path.samefile(home_dir, mackup_dir)
 
     def test_backup_after_link_install_verbose_shows_skip_message(self):
         """Test that verbose mode shows skip messages for already linked files."""
@@ -168,9 +168,9 @@ class TestBackupAfterLinkInstall(unittest.TestCase):
         sys.stdout = sys.__stdout__
 
         # Verify skip message is shown
-        self.assertIn("Skipping", output)
-        self.assertIn("already linked to", output)
-        self.assertIn(home_file, output)
+        assert "Skipping" in output
+        assert "already linked to" in output
+        assert home_file in output
 
 
 if __name__ == "__main__":

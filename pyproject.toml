@@ -148,10 +148,7 @@ ignore = [
     "C901", # mccabe complexity - too complex functions
     "FA100", # future annotations - would change behavior
     "PLR0912", # too many branches
-    "PLR0913", # too many arguments
     "PLR0915", # too many statements
-    "PT009", # use pytest.raises - existing unittest style
-    "PT027", # use pytest.raises - existing unittest style
     "PTH", # use pathlib - os.path is fine for this codebase
     "SIM115", # use context manager for open - some cases require this
     "SLF001", # private member access - needed for testing

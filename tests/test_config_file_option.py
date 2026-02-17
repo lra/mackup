@@ -2,6 +2,8 @@
 import os
 import unittest
 
+import pytest
+
 from mackup.config import Config
 from mackup.mackup import Mackup
 
@@ -48,5 +50,5 @@ class TestConfigFileOption(unittest.TestCase):
 
     def test_config_file_does_not_exist(self):
         """Test that specifying a non-existent config file raises an error."""
-        with self.assertRaises(SystemExit):
+        with pytest.raises(SystemExit):
             Config("nonexistent-config-file.cfg")

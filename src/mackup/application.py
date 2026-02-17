@@ -15,7 +15,7 @@ class ApplicationProfile:
     """Instantiate this class with application specific data."""
 
     def __init__(
-        self, mackup: Mackup, files: set[str], dry_run: bool, verbose: bool
+        self, mackup: Mackup, files: set[str], dry_run: bool, verbose: bool,
     ) -> None:
         """
         Create an ApplicationProfile instance.
@@ -120,7 +120,7 @@ class ApplicationProfile:
                 except PermissionError as e:
                     print(
                         f"Error: Unable to copy file from {home_filepath} to "
-                        f"{mackup_filepath} due to permission issue: {e}"
+                        f"{mackup_filepath} due to permission issue: {e}",
                     )
 
     def copy_files_from_mackup_folder(self) -> None:
@@ -179,7 +179,7 @@ class ApplicationProfile:
                 except PermissionError as e:
                     print(
                         f"Error: Unable to copy file from {mackup_filepath} to "
-                        f"{home_filepath} due to permission issue: {e}"
+                        f"{home_filepath} due to permission issue: {e}",
                     )
 
     def link_install(self) -> None:
@@ -367,12 +367,12 @@ class ApplicationProfile:
                     # If the home file is not a link or does not point to the
                     # mackup file, display a warning and skip it.
                     if not os.path.islink(home_filepath) or not os.path.samefile(
-                        home_filepath, mackup_filepath
+                        home_filepath, mackup_filepath,
                     ):
                         print(
                             f'Warning: the file in your home "{home_filepath}" '
                             f"does not point to the original file in Mackup "
-                            f"{mackup_filepath}, skipping..."
+                            f"{mackup_filepath}, skipping...",
                         )
                         continue
                     if self.verbose:

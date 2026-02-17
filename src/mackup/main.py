@@ -74,7 +74,7 @@ def main() -> None:
         sys.exit(
             "Usage information is not available because __doc__ is None. "
             "This can happen when running Python with optimizations (python -OO). "
-            "Please run Mackup without -OO to use the command-line interface."
+            "Please run Mackup without -OO to use the command-line interface.",
         )
     assert docstring is not None  # for type narrowing after sys.exit
 
@@ -142,7 +142,7 @@ def main() -> None:
         # Create a backup of the files of each application
         for app_name in sorted(mckp.get_apps_to_backup()):
             app: ApplicationProfile = ApplicationProfile(
-                mckp, app_db.get_files(app_name), dry_run, verbose
+                mckp, app_db.get_files(app_name), dry_run, verbose,
             )
             print_app_header(app_name)
             app.copy_files_to_mackup_folder()

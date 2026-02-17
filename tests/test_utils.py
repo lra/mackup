@@ -335,7 +335,7 @@ class TestMackup(unittest.TestCase):
     def test_dropbox_folder_location_with_malformed_host_db(self):
         """Malformed Dropbox host.db should fail with a user-facing error."""
         with tempfile.TemporaryDirectory() as temp_home, patch.dict(
-            os.environ, {"HOME": temp_home}
+            os.environ, {"HOME": temp_home},
         ):
             host_db_path = os.path.join(temp_home, ".dropbox", "host.db")
             os.makedirs(os.path.dirname(host_db_path), exist_ok=True)
@@ -347,7 +347,7 @@ class TestMackup(unittest.TestCase):
     def test_dropbox_folder_location_with_invalid_base64(self):
         """Invalid base64 in Dropbox host.db should fail with a user-facing error."""
         with tempfile.TemporaryDirectory() as temp_home, patch.dict(
-            os.environ, {"HOME": temp_home}
+            os.environ, {"HOME": temp_home},
         ):
             host_db_path = os.path.join(temp_home, ".dropbox", "host.db")
             os.makedirs(os.path.dirname(host_db_path), exist_ok=True)
@@ -359,10 +359,10 @@ class TestMackup(unittest.TestCase):
     def test_google_drive_folder_location_with_missing_path_entry(self):
         """Google Drive DB without local_sync_root_path should fail cleanly."""
         with tempfile.TemporaryDirectory() as temp_home, patch.dict(
-            os.environ, {"HOME": temp_home}
+            os.environ, {"HOME": temp_home},
         ):
             gdrive_db = os.path.join(
-                temp_home, "Library/Application Support/Google/Drive/sync_config.db"
+                temp_home, "Library/Application Support/Google/Drive/sync_config.db",
             )
             os.makedirs(os.path.dirname(gdrive_db), exist_ok=True)
 
@@ -381,7 +381,7 @@ class TestMackup(unittest.TestCase):
     def test_google_drive_folder_location_uses_user_default_db(self):
         """Read Google Drive location from user_default sync DB when present."""
         with tempfile.TemporaryDirectory() as temp_home, patch.dict(
-            os.environ, {"HOME": temp_home}
+            os.environ, {"HOME": temp_home},
         ):
             gdrive_db = os.path.join(
                 temp_home,
@@ -416,13 +416,13 @@ class TestMackup(unittest.TestCase):
 
         # Force the Mac OSX Test using mock
         with patch.object(
-            utils.platform, "system", return_value=utils.constants.PLATFORM_DARWIN
+            utils.platform, "system", return_value=utils.constants.PLATFORM_DARWIN,
         ):
             assert utils.can_file_be_synced_on_current_platform(path)
 
         # Force the Linux Test using mock
         with patch.object(
-            utils.platform, "system", return_value=utils.constants.PLATFORM_LINUX
+            utils.platform, "system", return_value=utils.constants.PLATFORM_LINUX,
         ):
             assert utils.can_file_be_synced_on_current_platform(path)
 

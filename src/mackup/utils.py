@@ -41,10 +41,10 @@ def confirm(question: str) -> bool:
     while True:
         answer: str = input(question + " <Yes|No> ").lower()
 
-        if answer == "yes" or answer == "y":
+        if answer in {"yes", "y"}:
             confirmed: bool = True
             break
-        if answer == "no" or answer == "n":
+        if answer in {"no", "n"}:
             confirmed = False
             break
 
@@ -306,7 +306,7 @@ def is_process_running(process_name: str) -> bool:
     if os.path.isfile("/usr/bin/pgrep"):
         with open(os.devnull, "wb") as dev_null:
             returncode: int = subprocess.call(
-                ["/usr/bin/pgrep", process_name], stdout=dev_null
+                ["/usr/bin/pgrep", process_name], stdout=dev_null,
             )
             is_running = bool(returncode == 0)
 

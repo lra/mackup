@@ -213,7 +213,13 @@ def get_dropbox_folder_location() -> str:
         if len(data) < min_host_db_fields:
             raise ValueError("Malformed Dropbox host.db")
         dropbox_home = base64.b64decode(data[1], validate=True).decode()
-    except (OSError, ValueError, binascii.Error, UnicodeEncodeError, UnicodeDecodeError):
+    except (
+        OSError,
+        ValueError,
+        binascii.Error,
+        UnicodeEncodeError,
+        UnicodeDecodeError,
+    ):
         error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="Dropbox install"))
 
     return dropbox_home

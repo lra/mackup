@@ -127,7 +127,7 @@ class Config:
         return set(self._apps_to_sync)
 
     def _setup_parser(
-        self, filename: Optional[str] = None
+        self, filename: Optional[str] = None,
     ) -> configparser.ConfigParser:
         """
         Configure the ConfigParser instance the way we want it.

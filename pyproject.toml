@@ -146,14 +146,10 @@ select = [
 ]
 ignore = [
     "C901", # mccabe complexity - too complex functions
-    "COM812", # trailing comma missing - conflicts with formatter
     "FA100", # future annotations - would change behavior
-    "INP001", # implicit namespace package - tests don't need __init__.py
     "PLR0912", # too many branches
     "PLR0913", # too many arguments
     "PLR0915", # too many statements
-    "PLR1714", # repeated equality comparison
-    "PLW2901", # loop variable overwritten
     "PT009", # use pytest.raises - existing unittest style
     "PT027", # use pytest.raises - existing unittest style
     "PTH", # use pathlib - os.path is fine for this codebase

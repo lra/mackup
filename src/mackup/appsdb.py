@@ -22,7 +22,7 @@ class ApplicationsDatabase:
 
         for config_file in ApplicationsDatabase.get_config_files():
             config: configparser.ConfigParser = configparser.ConfigParser(
-                allow_no_value=True
+                allow_no_value=True,
             )
 
             # Needed to not lowercase the configuration_files in the ini files
@@ -67,9 +67,9 @@ class ApplicationsDatabase:
                             raise ValueError(
                                 f"Unsupported absolute path: {path}",
                             )
-                        path = os.path.join(xdg_config_home, path)
-                        path = path.replace(home, "")
-                        config_files.add(path)
+                        xdg_path = os.path.join(xdg_config_home, path)
+                        xdg_path = xdg_path.replace(home, "")
+                        config_files.add(xdg_path)
 
     @staticmethod
     def get_config_files() -> set[str]:
@@ -89,7 +89,7 @@ class ApplicationsDatabase:
         """
         # Configure the config parser
         apps_dir: str = os.path.join(
-            os.path.dirname(os.path.realpath(__file__)), APPS_DIR
+            os.path.dirname(os.path.realpath(__file__)), APPS_DIR,
         )
 
         # Legacy custom apps directory: ~/.mackup/
@@ -97,7 +97,7 @@ class ApplicationsDatabase:
 
         # XDG custom apps directory: $XDG_CONFIG_HOME/mackup/applications/
         xdg_config_home: str = os.environ.get(
-            "XDG_CONFIG_HOME", os.path.join(os.environ["HOME"], ".config")
+            "XDG_CONFIG_HOME", os.path.join(os.environ["HOME"], ".config"),
         )
         xdg_custom_apps_dir: str = os.path.join(xdg_config_home, CUSTOM_APPS_DIR_XDG)
 

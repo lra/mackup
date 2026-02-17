@@ -236,7 +236,11 @@ def get_google_drive_folder_location() -> str:
 
     googledrive_home: Optional[str] = None
 
-    gdrive_db = os.path.join(os.environ["HOME"], gdrive_db_path)
+    gdrive_db = (
+        gdrive_db_path
+        if os.path.isabs(gdrive_db_path)
+        else os.path.join(os.environ["HOME"], gdrive_db_path)
+    )
     if os.path.isfile(gdrive_db):
         try:
             with sqlite3.connect(gdrive_db) as con:

@@ -1,4 +1,5 @@
 import os
+import sqlite3
 import stat
 import tempfile
 import unittest
@@ -330,6 +331,79 @@ class TestMackup(unittest.TestCase):
             ),
         )
         self.assertRaises(SystemExit, utils.get_google_drive_folder_location)
+
+    def test_dropbox_folder_location_with_malformed_host_db(self):
+        """Malformed Dropbox host.db should fail with a user-facing error."""
+        with tempfile.TemporaryDirectory() as temp_home, patch.dict(
+            os.environ, {"HOME": temp_home}
+        ):
+            host_db_path = os.path.join(temp_home, ".dropbox", "host.db")
+            os.makedirs(os.path.dirname(host_db_path), exist_ok=True)
+            with open(host_db_path, "w") as f:
+                f.write("malformed-content-without-base64-path")
+
+            self.assertRaises(SystemExit, utils.get_dropbox_folder_location)
+
+    def test_dropbox_folder_location_with_invalid_base64(self):
+        """Invalid base64 in Dropbox host.db should fail with a user-facing error."""
+        with tempfile.TemporaryDirectory() as temp_home, patch.dict(
+            os.environ, {"HOME": temp_home}
+        ):
+            host_db_path = os.path.join(temp_home, ".dropbox", "host.db")
+            os.makedirs(os.path.dirname(host_db_path), exist_ok=True)
+            with open(host_db_path, "w") as f:
+                f.write("first-field invalid-base64-!@#$")
+
+            self.assertRaises(SystemExit, utils.get_dropbox_folder_location)
+
+    def test_google_drive_folder_location_with_missing_path_entry(self):
+        """Google Drive DB without local_sync_root_path should fail cleanly."""
+        with tempfile.TemporaryDirectory() as temp_home, patch.dict(
+            os.environ, {"HOME": temp_home}
+        ):
+            gdrive_db = os.path.join(
+                temp_home, "Library/Application Support/Google/Drive/sync_config.db"
+            )
+            os.makedirs(os.path.dirname(gdrive_db), exist_ok=True)
+
+            con = sqlite3.connect(gdrive_db)
+            cur = con.cursor()
+            cur.execute("CREATE TABLE data (entry_key TEXT, data_value TEXT)")
+            cur.execute(
+                "INSERT INTO data (entry_key, data_value) VALUES (?, ?)",
+                ("another_key", "/tmp/whatever"),
+            )
+            con.commit()
+            con.close()
+
+            self.assertRaises(SystemExit, utils.get_google_drive_folder_location)
+
+    def test_google_drive_folder_location_uses_user_default_db(self):
+        """Read Google Drive location from user_default sync DB when present."""
+        with tempfile.TemporaryDirectory() as temp_home, patch.dict(
+            os.environ, {"HOME": temp_home}
+        ):
+            gdrive_db = os.path.join(
+                temp_home,
+                "Library/Application Support/Google/Drive/user_default/sync_config.db",
+            )
+            os.makedirs(os.path.dirname(gdrive_db), exist_ok=True)
+
+            expected_path = os.path.join(temp_home, "Google Drive")
+            con = sqlite3.connect(gdrive_db)
+            cur = con.cursor()
+            cur.execute("CREATE TABLE data (entry_key TEXT, data_value TEXT)")
+            cur.execute(
+                "INSERT INTO data (entry_key, data_value) VALUES (?, ?)",
+                ("local_sync_root_path", expected_path),
+            )
+            con.commit()
+            con.close()
+
+            self.assertEqual(
+                utils.get_google_drive_folder_location(),
+                expected_path,
+            )
 
     def test_is_process_running(self):
         # A pgrep that has one letter and a wildcard will always return id 1

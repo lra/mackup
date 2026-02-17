@@ -1,6 +1,7 @@
 """System static utilities being used by the modules."""
 
 import base64
+import binascii
 import os
 import platform
 import shutil
@@ -205,12 +206,21 @@ def get_dropbox_folder_location() -> str:
         (str) Full path to the current Dropbox folder
     """
     host_db_path = os.path.join(os.environ["HOME"], ".dropbox/host.db")
+    min_host_db_fields = 2
     try:
         with open(host_db_path) as f_hostdb:
             data = f_hostdb.read().split()
-    except OSError:
+        if len(data) < min_host_db_fields:
+            raise ValueError("Malformed Dropbox host.db")
+        dropbox_home = base64.b64decode(data[1], validate=True).decode()
+    except (
+        OSError,
+        ValueError,
+        binascii.Error,
+        UnicodeEncodeError,
+        UnicodeDecodeError,
+    ):
         error(constants.ERROR_UNABLE_TO_FIND_STORAGE.format(provider="Dropbox install"))
-    dropbox_home = base64.b64decode(data[1]).decode()
 
     return dropbox_home
 
@@ -232,20 +242,26 @@ def get_google_drive_folder_location() -> str:
 
     googledrive_home: Optional[str] = None
 
-    gdrive_db = os.path.join(os.environ["HOME"], gdrive_db_path)
+    gdrive_db = (
+        gdrive_db_path
+        if os.path.isabs(gdrive_db_path)
+        else os.path.join(os.environ["HOME"], gdrive_db_path)
+    )
     if os.path.isfile(gdrive_db):
-        con = sqlite3.connect(gdrive_db)
-        if con:
-            cur = con.cursor()
-            query = (
-                "SELECT data_value "
-                "FROM data "
-                "WHERE entry_key = 'local_sync_root_path';"
-            )
-            cur.execute(query)
-            data = cur.fetchone()
-            googledrive_home = str(data[0])
-            con.close()
+        try:
+            with sqlite3.connect(gdrive_db) as con:
+                cur = con.cursor()
+                query = (
+                    "SELECT data_value "
+                    "FROM data "
+                    "WHERE entry_key = 'local_sync_root_path';"
+                )
+                cur.execute(query)
+                data = cur.fetchone()
+                if data and data[0]:
+                    googledrive_home = str(data[0])
+        except sqlite3.Error:
+            googledrive_home = None
 
     if googledrive_home:
         return googledrive_home

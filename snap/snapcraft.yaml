@@ -25,6 +25,12 @@ parts:
   mackup:
     plugin: python
     source: .
+    build-attributes:
+      - enable-patchelf
+    stage-packages:
+      - python3.12-minimal
+      - libpython3.12-minimal
+      - libpython3.12-stdlib
     override-pull: |
       craftctl default
       craftctl set version=$(python3 -c "import tomllib; print(tomllib.load(open('pyproject.toml', 'rb'))['project']['version'])")

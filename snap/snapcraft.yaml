@@ -18,3 +18,5 @@ parts:
   mackup:
     plugin: python
     source: .
+    stage-packages:
+      - python3-venv

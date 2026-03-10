@@ -1,11 +1,18 @@
 name: mackup
-version: git
-version-script: "python -c \"from mackup.constants import VERSION; print(VERSION)\""
+base: core24
+adopt-info: mackup
+title: Mackup
 summary: Keep your application settings in sync
 description: |
   Back ups your application settings in a safe directory (e.g. Dropbox).
   Syncs your application settings among all your workstations.
   Restores your configuration on any fresh install in one command line.
+
+license: GPL-3.0-or-later
+contact: analogue@glop.org
+website: https://github.com/lra/mackup
+source-code: https://github.com/lra/mackup
+issues: https://github.com/lra/mackup/issues
 
 grade: stable
 confinement: classic
@@ -17,5 +24,12 @@ apps:
 parts:
   mackup:
     plugin: python
-    python-version: python3
     source: .
+    stage-packages:
+      - python3.12-minimal
+      - libpython3.12-minimal
+      - libpython3.12-stdlib
+    override-pull: |
+      craftctl default
+      VERSION=$(python3 -c 'import tomllib; print(tomllib.load(open("pyproject.toml", "rb"))["project"]["version"])')
+      craftctl set version="$VERSION"

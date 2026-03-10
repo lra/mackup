@@ -1,11 +1,18 @@
 name: mackup
 base: core24
 version: git
+title: Mackup
 summary: Keep your application settings in sync
 description: |
   Back ups your application settings in a safe directory (e.g. Dropbox).
   Syncs your application settings among all your workstations.
   Restores your configuration on any fresh install in one command line.
+
+license: GPL-3.0-or-later
+contact: analogue@glop.org
+website: https://github.com/lra/mackup
+source-code: https://github.com/lra/mackup
+issues: https://github.com/lra/mackup/issues
 
 grade: stable
 confinement: strict

@@ -1,6 +1,6 @@
 name: mackup
 base: core24
-version: git
+adopt-info: mackup
 title: Mackup
 summary: Keep your application settings in sync
 description: |
@@ -15,15 +15,16 @@ source-code: https://github.com/lra/mackup
 issues: https://github.com/lra/mackup/issues
 
 grade: stable
-confinement: strict
+confinement: classic
 
 apps:
   mackup:
     command: bin/mackup
-    plugs:
-      - home
 
 parts:
   mackup:
     plugin: python
     source: .
+    override-pull: |
+      craftctl default
+      craftctl set version=$(python3 -c "import tomllib; print(tomllib.load(open('pyproject.toml', 'rb'))['project']['version'])")

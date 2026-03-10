@@ -25,12 +25,7 @@ parts:
   mackup:
     plugin: python
     source: .
-    build-packages:
-      - python3.12-venv
-    build-attributes:
-      - enable-patchelf
     stage-packages:
-      - python3-minimal
       - python3.12-minimal
       - libpython3.12-minimal
       - libpython3.12-stdlib

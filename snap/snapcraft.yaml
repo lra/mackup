@@ -1,5 +1,5 @@
 name: mackup
-base: core22
+base: core24
 version: git
 summary: Keep your application settings in sync
 description: |
@@ -8,15 +8,15 @@ description: |
   Restores your configuration on any fresh install in one command line.
 
 grade: stable
-confinement: classic
+confinement: strict
 
 apps:
   mackup:
     command: bin/mackup
+    plugs:
+      - home
 
 parts:
   mackup:
     plugin: python
     source: .
-    stage-packages:
-      - python3.10

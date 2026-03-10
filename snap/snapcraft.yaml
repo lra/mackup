@@ -1,6 +1,6 @@
 name: mackup
+base: core22
 version: git
-version-script: "python -c \"from mackup.constants import VERSION; print(VERSION)\""
 summary: Keep your application settings in sync
 description: |
   Back ups your application settings in a safe directory (e.g. Dropbox).
@@ -17,5 +17,4 @@ apps:
 parts:
   mackup:
     plugin: python
-    python-version: python3
     source: .

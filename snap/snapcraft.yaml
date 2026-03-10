@@ -25,6 +25,8 @@ parts:
   mackup:
     plugin: python
     source: .
+    build-packages:
+      - python3.12-venv
     build-attributes:
       - enable-patchelf
     stage-packages:

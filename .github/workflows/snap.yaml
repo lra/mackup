@@ -2,8 +2,7 @@ name: snap
 
 on:
   push:
-    branches:
-      - master
+  pull_request:
 
 jobs:
   build-and-publish:
@@ -13,6 +12,7 @@ jobs:
       - uses: snapcore/action-build@v1
         id: build
       - uses: snapcore/action-publish@v1
+        if: github.ref == 'refs/heads/master'
         env:
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPCRAFT_STORE_CREDENTIALS }}
         with:

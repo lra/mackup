@@ -19,4 +19,4 @@ parts:
     plugin: python
     source: .
     stage-packages:
-      - python3-venv
+      - python3

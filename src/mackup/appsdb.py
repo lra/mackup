@@ -46,9 +46,11 @@ class ApplicationsDatabase:
                 self.apps[app_name]["configuration_files"] = config_files
                 if config.has_section("configuration_files"):
                     for path in config.options("configuration_files"):
-                        if path.startswith("/"):
+                        # Strip ! prefix for validation, but keep it in the stored path
+                        check_path = path.lstrip("!")
+                        if check_path.startswith("/"):
                             raise ValueError(
-                                f"Unsupported absolute path: {path}",
+                                f"Unsupported absolute path: {check_path}",
                             )
                         config_files.add(path)
 
@@ -63,12 +65,17 @@ class ApplicationsDatabase:
                     )
                 if config.has_section("xdg_configuration_files"):
                     for path in config.options("xdg_configuration_files"):
-                        if path.startswith("/"):
+                        # Strip ! prefix for validation and XDG path construction
+                        is_exclude = path.startswith("!")
+                        check_path = path.lstrip("!")
+                        if check_path.startswith("/"):
                             raise ValueError(
-                                f"Unsupported absolute path: {path}",
+                                f"Unsupported absolute path: {check_path}",
                             )
-                        xdg_path = os.path.join(xdg_config_home, path)
+                        xdg_path = os.path.join(xdg_config_home, check_path)
                         xdg_path = xdg_path.replace(home, "")
+                        if is_exclude:
+                            xdg_path = "!" + xdg_path
                         config_files.add(xdg_path)
 
     @staticmethod

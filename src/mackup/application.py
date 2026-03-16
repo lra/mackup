@@ -9,6 +9,7 @@ import os
 
 from . import utils
 from .mackup import Mackup
+from .pathresolver import is_glob_pattern, parse_paths, resolve_paths
 
 
 class ApplicationProfile:
@@ -28,9 +29,22 @@ class ApplicationProfile:
         assert isinstance(files, set)
 
         self.mackup: Mackup = mackup
-        self.files: list[str] = sorted(files)
         self.dry_run: bool = dry_run
         self.verbose: bool = verbose
+
+        # Check if any paths need resolution (globs or excludes)
+        has_patterns = any(
+            path.startswith("!") or is_glob_pattern(path) for path in files
+        )
+        if has_patterns:
+            includes, excludes = parse_paths(files)
+            self.files: list[str] = resolve_paths(
+                includes,
+                excludes,
+                os.environ["HOME"],
+            )
+        else:
+            self.files = sorted(files)
 
     def get_filepaths(self, filename: str) -> tuple[str, str]:
         """

@@ -651,6 +651,108 @@ class TestApplicationProfile(unittest.TestCase):
             output = captured_output.getvalue()
             assert "Backing up" in output
 
+    def test_link_install_uses_copy_for_library_paths_on_macos(self):
+        """macOS should copy ~/Library files during link install."""
+        test_file = "Library/Preferences/com.test.app.plist"
+        app_profile = ApplicationProfile(
+            mackup=self.mock_mackup,
+            files={test_file},
+            dry_run=False,
+            verbose=False,
+        )
+
+        home_filepath = os.path.join(self.temp_home, test_file)
+        mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
+        os.makedirs(os.path.dirname(home_filepath), exist_ok=True)
+
+        with open(home_filepath, "w") as f:
+            f.write("plist content")
+
+        with patch("mackup.application.platform.system", return_value="Darwin"), \
+             patch("mackup.application.utils.link") as mock_link, \
+             patch("mackup.application.utils.delete") as mock_delete:
+            app_profile.link_install()
+
+        mock_link.assert_not_called()
+        mock_delete.assert_not_called()
+        assert os.path.exists(home_filepath)
+        assert not os.path.islink(home_filepath)
+        assert os.path.exists(mackup_filepath)
+        with open(mackup_filepath) as f:
+            assert f.read() == "plist content"
+
+    def test_link_install_keeps_link_strategy_for_non_library_paths_on_macos(self):
+        """macOS should still link files outside ~/Library during link install."""
+        test_file = ".testfile"
+        home_filepath = os.path.join(self.temp_home, test_file)
+        mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
+
+        with open(home_filepath, "w") as f:
+            f.write("dotfile content")
+
+        with patch("mackup.application.platform.system", return_value="Darwin"):
+            self.app_profile.link_install()
+
+        assert os.path.exists(mackup_filepath)
+        assert os.path.islink(home_filepath)
+        assert os.path.samefile(home_filepath, mackup_filepath)
+
+    def test_link_uses_copy_for_library_paths_on_macos(self):
+        """macOS should copy ~/Library files during link restore."""
+        test_file = "Library/Preferences/com.test.app.plist"
+        app_profile = ApplicationProfile(
+            mackup=self.mock_mackup,
+            files={test_file},
+            dry_run=False,
+            verbose=False,
+        )
+
+        home_filepath = os.path.join(self.temp_home, test_file)
+        mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
+        os.makedirs(os.path.dirname(mackup_filepath), exist_ok=True)
+
+        with open(mackup_filepath, "w") as f:
+            f.write("backup plist")
+
+        with patch("mackup.application.platform.system", return_value="Darwin"), \
+             patch("mackup.application.utils.link") as mock_link:
+            app_profile.link()
+
+        mock_link.assert_not_called()
+        assert os.path.exists(home_filepath)
+        assert not os.path.islink(home_filepath)
+        with open(home_filepath) as f:
+            assert f.read() == "backup plist"
+
+    def test_link_uninstall_uses_copy_for_library_paths_on_macos(self):
+        """macOS should copy ~/Library files during link uninstall."""
+        test_file = "Library/Preferences/com.test.app.plist"
+        app_profile = ApplicationProfile(
+            mackup=self.mock_mackup,
+            files={test_file},
+            dry_run=False,
+            verbose=False,
+        )
+
+        home_filepath = os.path.join(self.temp_home, test_file)
+        mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
+        os.makedirs(os.path.dirname(home_filepath), exist_ok=True)
+        os.makedirs(os.path.dirname(mackup_filepath), exist_ok=True)
+
+        with open(home_filepath, "w") as f:
+            f.write("old local plist")
+        with open(mackup_filepath, "w") as f:
+            f.write("backup plist")
+
+        with patch("mackup.application.platform.system", return_value="Darwin"), \
+             patch("mackup.application.utils.confirm", return_value=True):
+            app_profile.link_uninstall()
+
+        assert os.path.exists(home_filepath)
+        assert not os.path.islink(home_filepath)
+        with open(home_filepath) as f:
+            assert f.read() == "backup plist"
+
 
 if __name__ == "__main__":
     unittest.main()

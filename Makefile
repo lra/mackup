@@ -2,7 +2,7 @@ lint:
 	markdownlint -c .markdownlint.yaml '**/*.md'
 
 ruff:
-	ruff check .
+	uv run ruff check .
 
 ty:
 	uv run ty check

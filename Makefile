@@ -1,5 +1,12 @@
+MDL_PATH := $(shell command -v markdownlint 2> /dev/null)
+
 lint:
+ifdef MDL_PATH
 	markdownlint -c .markdownlint.yaml '**/*.md'
+else
+	$(warning "[WARN] No 'markdownlint' utility in PATH. Consider installing it from your package manager.")
+	$(warning "[WARN] Markdown linting has been skipped.")
+endif
 
 ruff:
 	uv run ruff check .

@@ -306,6 +306,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Concentrate](http://www.getconcentrating.com/)
 - [Conky](https://github.com/brndnmtthws/conky)
 - [Consular](https://github.com/achiu/consular)
+- [Context7](https://context7.com/)
 - [Contexts](https://contexts.co)
 - [ControlPlane](http://www.controlplaneapp.com/)
 - [CopyQ](https://github.com/hluk/CopyQ)

@@ -15,3 +15,6 @@ coverage.xml
 *.cover
 .hypothesis/
 .pytest_cache/
+
+# Intellij project config folder
+.idea/

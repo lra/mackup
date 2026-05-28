@@ -86,8 +86,8 @@ Copy config files from the Mackup folder to your home folder.
 
 Move your local config files into the Mackup folder,
 and link them to their original place.
-
-$${\color{red}warning}$$ _the `link` strategy [doesn't work correctly on macOS](#link-mode)_
+On macOS, Mackup copies any original files under `~/Library` instead of
+symlinking them.
 
 `mackup link`
 
@@ -131,11 +131,12 @@ It is covered by the 2 commands:
 ### Link mode
 
 > [!WARNING]
-> If you are using Mackup on a current version of macOS, link mode will BREAK
-  YOUR PREFERENCES. macOS Sonoma (macOS 14) and later don't support symlinked
-  preferences, see [issue #2035](https://github.com/lra/mackup/issues/2035) for
-  additional information. [PR #2085](<https://github.com/lra/mackup/pull/2085>)
-  added copy mode, which should be used instead.
+> If you are using Mackup on a current version of macOS, symlinking files under
+  `~/Library` will BREAK YOUR PREFERENCES. macOS Sonoma (macOS 14) and later
+  don't support symlinked preferences, see
+  [issue #2035](https://github.com/lra/mackup/issues/2035) for additional
+  information. Mackup falls back to copy mode for `~/Library` paths on macOS
+  and keeps link mode for files elsewhere in your home directory.
 
 Link mode is used to move your config files into the Mackup folder,
 and link them back to their original place.
@@ -166,6 +167,9 @@ If you have Dropbox, these things happen when you launch `mackup link install`:
 
 Now your `git` config is always backed up and up to date on all your workstations.
 
+On macOS, files under `~/Library` are copied into the Mackup folder and left as
+regular files in place instead of being symlinked.
+
 #### `mackup link`
 
 When you launch `mackup link`, here's what it's really doing:
@@ -175,6 +179,8 @@ When you launch `mackup link`, here's what it's really doing:
 That's it, you got your `git` config setup on your new workstation.
 
 `mackup` does the same for any supported application.
+On macOS, `~/Library` paths are restored by copying from the Mackup folder
+instead of creating symlinks.
 
 #### `mackup link uninstall`
 

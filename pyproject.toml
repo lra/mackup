@@ -145,9 +145,7 @@ select = [
 ]
 ignore = [
     "C901", # mccabe complexity - too complex functions
-    "FA100", # future annotations - would change behavior
     "PLR0912", # too many branches
-    "PLR0915", # too many statements
     "PTH", # use pathlib - os.path is fine for this codebase
     "SIM115", # use context manager for open - some cases require this
     "SLF001", # private member access - needed for testing

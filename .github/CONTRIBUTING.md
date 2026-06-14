@@ -90,7 +90,7 @@ uv run pytest -v
 uv run mypy mackup/
 
 # Run linting
-ruff check .
+uv run ruff check .
 ```
 
 ### Code Quality Standards

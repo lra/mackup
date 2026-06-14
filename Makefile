@@ -1,8 +1,15 @@
+MDL_PATH := $(shell command -v markdownlint 2> /dev/null)
+
 lint:
+ifdef MDL_PATH
 	markdownlint -c .markdownlint.yaml '**/*.md'
+else
+	$(warning "[WARN] No 'markdownlint' utility in PATH. Consider installing it from your package manager.")
+	$(warning "[WARN] Markdown linting has been skipped.")
+endif
 
 ruff:
-	ruff check .
+	uv run ruff check .
 
 ty:
 	uv run ty check
@@ -30,6 +37,18 @@ clean:
 	rm -rf .coverage
 	rm -rf coverage.xml
 
-release: clean
-	uv build
-	uv publish
+# Cut a release in one command. Bumps the version, syncs the lockfile, then
+# commits, tags and pushes. The release workflow takes over from the tag push.
+# Bump level defaults to patch: `make release BUMP=minor` / `BUMP=major`,
+# or pin a version with `make release VERSION=1.2.3`.
+BUMP ?= patch
+
+release: check
+	@if [ -n "$(VERSION)" ]; then uv version "$(VERSION)"; else uv version --bump $(BUMP); fi
+	uv sync -U
+	@V=$$(uv version --short); \
+	git commit -am "Mackup $$V" && \
+	git tag "$$V" && \
+	git push && \
+	git push --tags && \
+	echo "Released $$V"

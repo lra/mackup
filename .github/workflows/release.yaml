@@ -1,0 +1,27 @@
+name: release
+
+on:
+  push:
+    tags:
+      - "*"
+
+permissions:
+  contents: write  # create the GitHub release
+  id-token: write  # PyPI Trusted Publishing (OIDC)
+
+jobs:
+
+  release:
+    runs-on: ubuntu-latest
+    environment: release
+    steps:
+      - uses: actions/checkout@v6
+      - uses: astral-sh/setup-uv@v5
+      - run: uv build
+      - name: Publish to PyPI
+        run: uv publish
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: dist/*

@@ -35,9 +35,8 @@ class TestMackup(unittest.TestCase):
 
     def test_delete_file(self):
         # Create a tmp file
-        tfile = tempfile.NamedTemporaryFile(delete=False)
-        tfpath = tfile.name
-        tfile.close()
+        with tempfile.NamedTemporaryFile(delete=False) as tfile:
+            tfpath = tfile.name
 
         # Make sure the created file exists
         assert os.path.isfile(tfpath)
@@ -51,17 +50,15 @@ class TestMackup(unittest.TestCase):
         tfpath = tempfile.mkdtemp()
 
         # Let's put a file in it just for fun
-        tfile = tempfile.NamedTemporaryFile(dir=tfpath, delete=False)
-        filepath = tfile.name
-        tfile.close()
+        with tempfile.NamedTemporaryFile(dir=tfpath, delete=False) as tfile:
+            filepath = tfile.name
 
         # Let's put another folder in it
         subfolder_path = tempfile.mkdtemp(dir=tfpath)
 
         # And a file in the subfolder
-        tfile = tempfile.NamedTemporaryFile(dir=subfolder_path, delete=False)
-        subfilepath = tfile.name
-        tfile.close()
+        with tempfile.NamedTemporaryFile(dir=subfolder_path, delete=False) as tfile:
+            subfilepath = tfile.name
 
         # Make sure the created files and folders exists
         assert os.path.isdir(tfpath)
@@ -78,9 +75,8 @@ class TestMackup(unittest.TestCase):
 
     def test_copy_file(self):
         # Create a tmp file
-        tfile = tempfile.NamedTemporaryFile(delete=False)
-        srcfile = tfile.name
-        tfile.close()
+        with tempfile.NamedTemporaryFile(delete=False) as tfile:
+            srcfile = tfile.name
 
         # Create a tmp folder
         dstpath = tempfile.mkdtemp()
@@ -104,9 +100,8 @@ class TestMackup(unittest.TestCase):
 
     def test_copy_fail(self):
         # Create a tmp FIFO file
-        tfile = tempfile.NamedTemporaryFile()
-        srcfile = tfile.name
-        tfile.close()
+        with tempfile.NamedTemporaryFile() as tfile:
+            srcfile = tfile.name
         os.mkfifo(srcfile)
 
         # Create a tmp folder
@@ -139,9 +134,8 @@ class TestMackup(unittest.TestCase):
         srcpath = tempfile.mkdtemp()
 
         # Create a tmp file
-        tfile = tempfile.NamedTemporaryFile(delete=False, dir=srcpath)
-        srcfile = tfile.name
-        tfile.close()
+        with tempfile.NamedTemporaryFile(delete=False, dir=srcpath) as tfile:
+            srcfile = tfile.name
 
         # Create a tmp folder
         dstpath = tempfile.mkdtemp()
@@ -175,9 +169,8 @@ class TestMackup(unittest.TestCase):
         srcpath = tempfile.mkdtemp()
 
         # Create a tmp file
-        tfile = tempfile.NamedTemporaryFile(delete=False, dir=srcpath)
-        srcfile = tfile.name
-        tfile.close()
+        with tempfile.NamedTemporaryFile(delete=False, dir=srcpath) as tfile:
+            srcfile = tfile.name
 
         # Create a tmp folder
         dstpath = tempfile.mkdtemp()
@@ -218,9 +211,8 @@ class TestMackup(unittest.TestCase):
         os.mkdir(dst_subfolder)
 
         # Create a tmp file in the src subfolder
-        src_file = tempfile.NamedTemporaryFile(delete=False, dir=src_subfolder)
-        src_file_name = src_file.name
-        src_file.close()
+        with tempfile.NamedTemporaryFile(delete=False, dir=src_subfolder) as src_file:
+            src_file_name = src_file.name
 
         # Set the destination filename
         dst_file = os.path.join(dst_subfolder, os.path.basename(src_file_name))
@@ -249,9 +241,8 @@ class TestMackup(unittest.TestCase):
 
     def test_link_file(self):
         # Create a tmp file
-        tfile = tempfile.NamedTemporaryFile(delete=False)
-        srcfile = tfile.name
-        tfile.close()
+        with tempfile.NamedTemporaryFile(delete=False) as tfile:
+            srcfile = tfile.name
 
         # Create a tmp folder
         dstpath = tempfile.mkdtemp()
@@ -276,8 +267,8 @@ class TestMackup(unittest.TestCase):
 
     def test_chmod_file(self):
         # Create a tmp file
-        tfile = tempfile.NamedTemporaryFile(delete=False)
-        file_name = tfile.name
+        with tempfile.NamedTemporaryFile(delete=False) as tfile:
+            file_name = tfile.name
 
         # Create a tmp directory with a sub folder
         dir_name = tempfile.mkdtemp()

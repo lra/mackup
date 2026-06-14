@@ -36,7 +36,3 @@ clean:
 	rm -rf htmlcov/
 	rm -rf .coverage
 	rm -rf coverage.xml
-
-release: clean
-	uv build
-	uv publish

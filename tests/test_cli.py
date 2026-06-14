@@ -342,6 +342,8 @@ class TestCLI(unittest.TestCase):
                 main()
             assert "Unsupported application" in str(context.value)
 
+        # The unknown name must fail before the env check creates the folder.
+        assert not os.path.exists(self.mackup_folder)
         backed_up_file = os.path.join(self.mackup_folder, self.test_file_name)
         assert not os.path.exists(backed_up_file)
 

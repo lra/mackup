@@ -157,10 +157,14 @@ def main() -> None:
 
     # mackup backup [<application>]
     elif args["backup"]:
+        # Resolve and validate the target apps before the env check, so an
+        # unknown application name fails cleanly without creating the Mackup
+        # folder or prompting first.
+        app_names = apps_to_process(args["<application>"])
         mckp.check_for_usable_backup_env()
 
         # Create a backup of the files of each application
-        for app_name in sorted(apps_to_process(args["<application>"])):
+        for app_name in sorted(app_names):
             app: ApplicationProfile = ApplicationProfile(
                 mckp, app_db.get_files(app_name), dry_run, verbose,
             )
@@ -169,35 +173,43 @@ def main() -> None:
 
     # mackup restore [<application>]
     elif args["restore"]:
+        app_names = apps_to_process(args["<application>"])
         mckp.check_for_usable_restore_env()
 
         # Recover a backup of the files of each application
-        for app_name in sorted(apps_to_process(args["<application>"])):
+        for app_name in sorted(app_names):
             app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
             print_app_header(app_name)
             app.copy_files_from_mackup_folder()
 
     # mackup link install [<application>]
     elif args["link"] and args["install"]:
+        app_names = apps_to_process(args["<application>"])
         # Check the env where the command is being run
         mckp.check_for_usable_backup_env()
 
         # Create a link for each application
-        for app_name in sorted(apps_to_process(args["<application>"])):
+        for app_name in sorted(app_names):
             app = ApplicationProfile(mckp, app_db.get_files(app_name), dry_run, verbose)
             print_app_header(app_name)
             app.link_install()
 
     # mackup link uninstall [<application>]
     elif args["link"] and args["uninstall"]:
+        # Validate any named application before the env check, so an unknown
+        # name fails cleanly before any prompt or side effect.
+        named_apps = (
+            apps_to_process(args["<application>"]) if args["<application>"] else None
+        )
+
         # Check the env where the command is being run
         mckp.check_for_usable_restore_env()
 
-        if args["<application>"]:
+        if named_apps is not None:
             # Unlink only the named application, leaving the rest of Mackup
             # (and the Mackup config itself) in place. No global confirmation
             # is needed since the user explicitly scoped the uninstall.
-            for app_name in sorted(apps_to_process(args["<application>"])):
+            for app_name in sorted(named_apps):
                 app = ApplicationProfile(
                     mckp, app_db.get_files(app_name), dry_run, verbose,
                 )
@@ -247,13 +259,18 @@ def main() -> None:
 
     # mackup link [<application>]
     elif args["link"]:
+        # Validate any named application before the env check.
+        named_apps = (
+            apps_to_process(args["<application>"]) if args["<application>"] else None
+        )
+
         # Check the env where the command is being run
         mckp.check_for_usable_restore_env()
 
-        if args["<application>"]:
+        if named_apps is not None:
             # Link only the named application. No need to restore the Mackup
             # config first, as the app set is fixed and config-independent here.
-            for app_name in sorted(apps_to_process(args["<application>"])):
+            for app_name in sorted(named_apps):
                 app = ApplicationProfile(
                     mckp, app_db.get_files(app_name), dry_run, verbose,
                 )

@@ -19,7 +19,7 @@ MACKUP_BACKUP_PATH: str = "Mackup"
 MACKUP_CONFIG_FILE: str = ".mackup.cfg"
 
 
-def _get_version() -> str:
+def get_version() -> str:
     """Return package version, or a safe fallback when metadata is unavailable."""
     try:
         return version(MACKUP_APP_NAME)
@@ -28,7 +28,7 @@ def _get_version() -> str:
 
 
 # Current version
-VERSION: str = _get_version()
+VERSION: str = get_version()
 
 # Directory that can contains user defined app configs
 CUSTOM_APPS_DIR: str = ".mackup"

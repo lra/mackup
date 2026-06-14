@@ -15,8 +15,8 @@ from mackup.constants import (
 )
 
 
-def assert_correct_config_read(testtype):
-    assert testtype == Config()._parser.get("test", "testtype")
+def assert_correct_config_read(expected_directory):
+    assert expected_directory == Config().directory
 
 
 class TestConfig(unittest.TestCase):
@@ -41,7 +41,7 @@ class TestConfig(unittest.TestCase):
 
         try:
             # create a default config file, this must be cleaned up after the test
-            config_path.write_text("[test]\ntesttype = test_config_default")
+            config_path.write_text("[storage]\ndirectory = test_config_default")
 
             # nothing else set, should find the default file
             assert_correct_config_read("test_config_default")

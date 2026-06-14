@@ -36,7 +36,6 @@ class TestConfigFileOption(unittest.TestCase):
         mckp = Mackup("mackup-empty.cfg")
 
         # Verify that the config was properly initialized
-        assert mckp._config is not None
         assert isinstance(mckp.mackup_folder, str)
 
     def test_mackup_without_config_file(self):
@@ -45,7 +44,6 @@ class TestConfigFileOption(unittest.TestCase):
         mckp = Mackup()
 
         # Verify that the config was properly initialized
-        assert mckp._config is not None
         assert isinstance(mckp.mackup_folder, str)
 
     def test_config_file_does_not_exist(self):

@@ -96,6 +96,7 @@ class TestMackup(unittest.TestCase):
         assert os.path.exists(dstfile)
 
         # Let's clean up
+        utils.delete(srcfile)
         utils.delete(dstpath)
 
     def test_copy_fail(self):
@@ -263,6 +264,7 @@ class TestMackup(unittest.TestCase):
         assert os.readlink(dstfile) == srcfile
 
         # Let's clean up
+        utils.delete(srcfile)
         utils.delete(dstpath)
 
     def test_chmod_file(self):
@@ -301,6 +303,10 @@ class TestMackup(unittest.TestCase):
         # Use an "unsupported file type". In this case, /dev/null
         with pytest.raises(ValueError, match="Unsupported file type"):
             utils.chmod(os.devnull)
+
+        # Let's clean up
+        utils.delete(file_name)
+        utils.delete(dir_name)
 
     def test_error(self):
         test_string = "Hello World"

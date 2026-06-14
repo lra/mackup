@@ -15,8 +15,8 @@ from mackup.constants import (
 )
 
 
-def assert_correct_config_read(testtype):
-    assert testtype == Config().directory
+def assert_correct_config_read(expected_directory):
+    assert expected_directory == Config().directory
 
 
 class TestConfig(unittest.TestCase):

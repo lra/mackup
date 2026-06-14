@@ -302,6 +302,3 @@ def main() -> None:
                 )
                 print_app_header(app_name)
                 app.link()
-
-    # Delete the tmp folder
-    mckp.clean_temp_folder()

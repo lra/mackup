@@ -148,5 +148,4 @@ ignore = [
     "PLR0912", # too many branches
     "PTH", # use pathlib - os.path is fine for this codebase
     "SIM115", # use context manager for open - some cases require this
-    "SLF001", # private member access - needed for testing
 ]

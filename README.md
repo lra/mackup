@@ -73,31 +73,44 @@ You can find more detailed instructions in [INSTALL.md](INSTALL.md).
 
 ## Usage
 
-`mackup backup`
+`backup`, `restore`, `link install`, `link uninstall` and `link` operate on all
+of your configured applications by default. To limit a command to a single
+application, add its name (the identifier shown by `mackup list`), e.g.
+`mackup backup vim`. Naming an application overrides the
+`[applications_to_sync]` / `[applications_to_ignore]` settings in your
+`.mackup.cfg`, so you can act on any supported app without editing your config.
+
+`mackup backup [application]`
 
 Back up your application files. Copy your local config files into the Mackup folder.
+Name an application to back up only that one, e.g. `mackup backup vim`.
 
-`mackup restore`
+`mackup restore [application]`
 
 Restore your application settings on a newly installed workstation.
 Copy config files from the Mackup folder to your home folder.
+Name an application to restore only that one, e.g. `mackup restore emacs`.
 
-`mackup link install`
+`mackup link install [application]`
 
 Move your local config files into the Mackup folder,
 and link them to their original place.
+Name an application to install only that one.
 
 $${\color{red}warning}$$ _the `link` strategy [doesn't work correctly on macOS](#link-mode)_
 
-`mackup link`
+`mackup link [application]`
 
 On another workstation, links local config files from the Mackup folder.
+Name an application to link only that one.
 
-`mackup link uninstall`
+`mackup link uninstall [application]`
 
 Copy back any synced config file to its original place.
 Removes the links and copies config files from the Mackup folder back into your
 home.
+Name an application (e.g. `mackup link uninstall git`) to unlink only that one;
+scoping to an application skips the global uninstall confirmation.
 
 `mackup list`
 
@@ -188,6 +201,11 @@ mackup link uninstall
 This will remove the symlinks and copy back the files from the Mackup folder in
 Dropbox to their original places in your home. The Mackup folder and the files
 in it stay put, so that any other computer also running Mackup is unaffected.
+
+To revert a single application instead, name it, e.g. `mackup link uninstall
+git`. Scoping the command to an application unlinks only that app — the rest of
+your setup and the Mackup config itself are left in place, and the global
+uninstall confirmation is skipped.
 
 ## Supported Storages
 

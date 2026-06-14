@@ -1,3 +1,5 @@
+import contextlib
+import io
 import os
 import shutil
 import tempfile
@@ -322,6 +324,115 @@ class TestCLI(unittest.TestCase):
                 str(context.value)
                 == "Options --force and --force-no are mutually exclusive."
             )
+
+    def test_backup_single_named_app(self):
+        """mackup backup <app> backs up that application's files."""
+        with patch("sys.argv", ["mackup", "backup", "test-app"]):
+            main()
+
+        backed_up_file = os.path.join(self.mackup_folder, self.test_file_name)
+        assert os.path.exists(backed_up_file)
+        with open(backed_up_file) as f:
+            assert f.read() == "test_config=value\n"
+
+    def test_backup_unsupported_app_exits_with_error(self):
+        """mackup backup <unknown> exits with an error and backs nothing up."""
+        with patch("sys.argv", ["mackup", "backup", "definitely-not-an-app"]):
+            with pytest.raises(SystemExit) as context:
+                main()
+            assert "Unsupported application" in str(context.value)
+
+        # The unknown name must fail before the env check creates the folder.
+        assert not os.path.exists(self.mackup_folder)
+        backed_up_file = os.path.join(self.mackup_folder, self.test_file_name)
+        assert not os.path.exists(backed_up_file)
+
+    def test_backup_named_app_overrides_config(self):
+        """Naming an app overrides the config's sync/ignore selection."""
+        # A second, supported application that is NOT in [applications_to_sync].
+        second_file_name = ".testrc2"
+        second_file_path = os.path.join(self.test_home, second_file_name)
+        with open(second_file_path, "w") as f:
+            f.write("second=value\n")
+
+        second_app_config = os.path.join(self.custom_apps_dir, "test-app-2.cfg")
+        with open(second_app_config, "w") as f:
+            f.write("[application]\n")
+            f.write("name = test-app-2\n")
+            f.write("\n")
+            f.write("[configuration_files]\n")
+            f.write(f"{second_file_name}\n")
+
+        # Even though test-app-2 is not in [applications_to_sync], naming it
+        # explicitly backs it up.
+        with patch("sys.argv", ["mackup", "backup", "test-app-2"]):
+            main()
+
+        assert os.path.exists(os.path.join(self.mackup_folder, second_file_name))
+
+    def test_link_uninstall_single_app_skips_global_teardown(self):
+        """Scoped link uninstall unlinks one app without the global teardown."""
+        # Put the app under link management first.
+        with patch("sys.argv", ["mackup", "link", "install"]):
+            main()
+        assert os.path.islink(self.test_file_path)
+
+        # Uninstall just this app.
+        buffer = io.StringIO()
+        with patch("sys.argv", ["mackup", "link", "uninstall", "test-app"]):
+            with contextlib.redirect_stdout(buffer):
+                main()
+            # The global "all done" message must not appear for a scoped run.
+            assert "Thanks for using Mackup!" not in buffer.getvalue()
+
+        # The file is back in place as a regular file, not a symlink.
+        assert os.path.exists(self.test_file_path)
+        assert not os.path.islink(self.test_file_path)
+
+    def test_restore_single_named_app(self):
+        """mackup restore <app> restores that application's files."""
+        # Back up first, then remove the home file.
+        with patch("sys.argv", ["mackup", "backup", "test-app"]):
+            main()
+        assert os.path.exists(os.path.join(self.mackup_folder, self.test_file_name))
+        os.remove(self.test_file_path)
+        assert not os.path.exists(self.test_file_path)
+
+        # Scoped restore.
+        with patch("sys.argv", ["mackup", "restore", "test-app"]):
+            main()
+
+        assert os.path.exists(self.test_file_path)
+        with open(self.test_file_path) as f:
+            assert f.read() == "test_config=value\n"
+
+    def test_link_install_single_named_app(self):
+        """mackup link install <app> links that application's files."""
+        with patch("sys.argv", ["mackup", "link", "install", "test-app"]):
+            main()
+
+        # The home file is now a symlink into the Mackup folder.
+        mackup_file = os.path.join(self.mackup_folder, self.test_file_name)
+        assert os.path.islink(self.test_file_path)
+        assert os.path.exists(mackup_file)
+        assert os.path.samefile(self.test_file_path, mackup_file)
+
+    def test_link_single_named_app(self):
+        """mackup link <app> links that application's files from the storage."""
+        # Put the file in the Mackup folder, then simulate a fresh home.
+        with patch("sys.argv", ["mackup", "backup", "test-app"]):
+            main()
+        os.remove(self.test_file_path)
+        assert not os.path.exists(self.test_file_path)
+
+        # Scoped link.
+        with patch("sys.argv", ["mackup", "link", "test-app"]):
+            main()
+
+        # The home file is now a symlink into the Mackup folder.
+        mackup_file = os.path.join(self.mackup_folder, self.test_file_name)
+        assert os.path.islink(self.test_file_path)
+        assert os.path.samefile(self.test_file_path, mackup_file)
 
 
 if __name__ == "__main__":

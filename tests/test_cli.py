@@ -389,6 +389,51 @@ class TestCLI(unittest.TestCase):
         assert os.path.exists(self.test_file_path)
         assert not os.path.islink(self.test_file_path)
 
+    def test_restore_single_named_app(self):
+        """mackup restore <app> restores that application's files."""
+        # Back up first, then remove the home file.
+        with patch("sys.argv", ["mackup", "backup", "test-app"]):
+            main()
+        assert os.path.exists(os.path.join(self.mackup_folder, self.test_file_name))
+        os.remove(self.test_file_path)
+        assert not os.path.exists(self.test_file_path)
+
+        # Scoped restore.
+        with patch("sys.argv", ["mackup", "restore", "test-app"]):
+            main()
+
+        assert os.path.exists(self.test_file_path)
+        with open(self.test_file_path) as f:
+            assert f.read() == "test_config=value\n"
+
+    def test_link_install_single_named_app(self):
+        """mackup link install <app> links that application's files."""
+        with patch("sys.argv", ["mackup", "link", "install", "test-app"]):
+            main()
+
+        # The home file is now a symlink into the Mackup folder.
+        mackup_file = os.path.join(self.mackup_folder, self.test_file_name)
+        assert os.path.islink(self.test_file_path)
+        assert os.path.exists(mackup_file)
+        assert os.path.samefile(self.test_file_path, mackup_file)
+
+    def test_link_single_named_app(self):
+        """mackup link <app> links that application's files from the storage."""
+        # Put the file in the Mackup folder, then simulate a fresh home.
+        with patch("sys.argv", ["mackup", "backup", "test-app"]):
+            main()
+        os.remove(self.test_file_path)
+        assert not os.path.exists(self.test_file_path)
+
+        # Scoped link.
+        with patch("sys.argv", ["mackup", "link", "test-app"]):
+            main()
+
+        # The home file is now a symlink into the Mackup folder.
+        mackup_file = os.path.join(self.mackup_folder, self.test_file_name)
+        assert os.path.islink(self.test_file_path)
+        assert os.path.samefile(self.test_file_path, mackup_file)
+
 
 if __name__ == "__main__":
     unittest.main()

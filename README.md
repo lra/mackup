@@ -202,10 +202,10 @@ This will remove the symlinks and copy back the files from the Mackup folder in
 Dropbox to their original places in your home. The Mackup folder and the files
 in it stay put, so that any other computer also running Mackup is unaffected.
 
-To revert a single application instead, name it, e.g. `mackup link uninstall
-git`. Scoping the command to an application unlinks only that app — the rest of
-your setup and the Mackup config itself are left in place, and the global
-uninstall confirmation is skipped.
+To revert a single application instead, name it, e.g.
+`mackup link uninstall git`. Scoping the command to an application unlinks only
+that app — the rest of your setup and the Mackup config itself are left in
+place, and the global uninstall confirmation is skipped.
 
 ## Supported Storages
 

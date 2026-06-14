@@ -17,7 +17,7 @@ Mackup uses [uv](https://docs.astral.sh/uv/) for fast, reliable Python package m
 
 ### Prerequisites
 
-- Python 3.9 or higher
+- Python 3.10 or higher
 - [uv](https://docs.astral.sh/uv/) installed
 
 Install uv if you haven't already:

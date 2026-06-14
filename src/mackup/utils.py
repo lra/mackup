@@ -9,7 +9,7 @@ import sqlite3
 import stat
 import subprocess
 import sys
-from typing import NoReturn, Optional
+from typing import NoReturn
 
 from . import constants
 
@@ -240,7 +240,7 @@ def get_google_drive_folder_location() -> str:
     if os.path.isfile(yosemite_gdrive_db):
         gdrive_db_path = yosemite_gdrive_db
 
-    googledrive_home: Optional[str] = None
+    googledrive_home: str | None = None
 
     gdrive_db = (
         gdrive_db_path

@@ -8,7 +8,6 @@ The only UI for now is the command line.
 
 import os
 import os.path
-from typing import Optional
 
 from . import appsdb, config, utils
 
@@ -16,7 +15,7 @@ from . import appsdb, config, utils
 class Mackup:
     """Main Mackup class."""
 
-    def __init__(self, config_file: Optional[str] = None) -> None:
+    def __init__(self, config_file: str | None = None) -> None:
         """Mackup Constructor."""
         self._config: config.Config = config.Config(config_file)
 

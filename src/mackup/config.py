@@ -4,7 +4,6 @@ import configparser
 import os
 import os.path
 from pathlib import Path
-from typing import Optional
 
 from .constants import (
     CUSTOM_APPS_DIR,
@@ -27,7 +26,7 @@ from .utils import (
 class Config:
     """The Mackup Config class."""
 
-    def __init__(self, filename: Optional[str] = None) -> None:
+    def __init__(self, filename: str | None = None) -> None:
         """
         Create a Config instance.
 
@@ -127,7 +126,7 @@ class Config:
         return set(self._apps_to_sync)
 
     def _setup_parser(
-        self, filename: Optional[str] = None,
+        self, filename: str | None = None,
     ) -> configparser.ConfigParser:
         """
         Configure the ConfigParser instance the way we want it.
@@ -147,7 +146,7 @@ class Config:
 
         return parser
 
-    def _best_config_path(self, filename: Optional[str] = None) -> str:
+    def _best_config_path(self, filename: str | None = None) -> str:
         """
         If no filename is provided, we try to find one in according to the following
         order, note that we will always check the original default of `~/.mackup.cfg`

@@ -46,7 +46,7 @@ See https://github.com/lra/mackup/tree/master/doc for more information.
 """
 
 import sys
-from typing import Any, Optional
+from typing import Any
 
 from docopt import docopt
 
@@ -88,7 +88,7 @@ def main() -> None:
     if args["--force"] and args["--force-no"]:
         sys.exit("Options --force and --force-no are mutually exclusive.")
 
-    config_file: Optional[str] = args.get("--config-file")
+    config_file: str | None = args.get("--config-file")
     mckp: Mackup = Mackup(config_file)
     app_db: ApplicationsDatabase = ApplicationsDatabase()
 
@@ -97,7 +97,7 @@ def main() -> None:
             header_str = header("---")
             print(f"\n{header_str} {bold(app_name)} {header_str}")
 
-    def apps_to_process(app_name: Optional[str]) -> set[str]:
+    def apps_to_process(app_name: str | None) -> set[str]:
         """Resolve which apps a per-app command should act on.
 
         If an application is named, error out when it is not a supported app

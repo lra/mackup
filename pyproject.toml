@@ -147,5 +147,4 @@ ignore = [
     "C901", # mccabe complexity - too complex functions
     "PLR0912", # too many branches
     "PTH", # use pathlib - os.path is fine for this codebase
-    "SIM115", # use context manager for open - some cases require this
 ]

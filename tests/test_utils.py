@@ -304,7 +304,21 @@ class TestMackup(unittest.TestCase):
         with pytest.raises(ValueError, match="Unsupported file type"):
             utils.chmod(os.devnull)
 
-        # Let's clean up
+        # # Orphaned symlink test
+
+        # An orphaned symlink (e.g. a link restored before its target) is
+        # listed by os.walk but can't be followed by os.chmod. utils.chmod
+        # must skip it instead of crashing with FileNotFoundError.
+        link_target = os.path.join(nested_dir, "orphaned_target")
+        link_name = os.path.join(dir_name, "orphaned_link")
+        os.symlink(link_target, link_name)
+        assert not os.path.exists(link_target)
+        assert os.path.islink(link_name)
+
+        # This used to raise FileNotFoundError
+        utils.chmod(dir_name)
+
+        # # Let's clean up
         utils.delete(file_name)
         utils.delete(dir_name)
 

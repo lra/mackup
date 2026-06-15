@@ -180,7 +180,11 @@ def chmod(target: str) -> None:
             for cur_dir in dirs:
                 os.chmod(os.path.join(root, cur_dir), folder_mode)
             for cur_file in files:
-                os.chmod(os.path.join(root, cur_file), file_mode)
+                fullpath = os.path.join(root, cur_file)
+                # Skip orphaned symlinks (e.g. links restored before their
+                # target), which os.walk lists but os.chmod can't follow
+                if os.path.isfile(fullpath):
+                    os.chmod(fullpath, file_mode)
 
     else:
         raise ValueError(f"Unsupported file type: {target}")

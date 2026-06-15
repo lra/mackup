@@ -155,5 +155,5 @@ ignore = [
 exclude = ["tests"]
 disable = [
     "MD013", # line length - docs contain long, unwrappable URLs
-    "MD041", # first line must be a heading - the PR template starts with a list
+    "MD041", # first line must be a top-level heading (PR template starts with a level-3 heading)
 ]

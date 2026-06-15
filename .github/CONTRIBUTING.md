@@ -55,6 +55,7 @@ uv sync --dev
 ```
 
 This will:
+
 - Create a `.venv` directory with a virtual environment
 - Install all project dependencies
 - Install development dependencies (pytest, mypy, etc.)
@@ -96,6 +97,7 @@ uv run ruff check .
 ### Code Quality Standards
 
 All pull requests must pass:
+
 - ✅ **Tests**: All pytest tests must pass
 - ✅ **Type checking**: No mypy errors
 - ✅ **Linting**: Code must pass ruff checks

@@ -7,11 +7,10 @@ on:
 
 jobs:
 
-  markdownlint:
+  rumdl:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: articulate/actions-markdownlint@v1
-        with:
-          config: .markdownlint.yaml
-          ignore: 'tests/'
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --all-extras --dev
+      - run: uv run rumdl check .

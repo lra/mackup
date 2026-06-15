@@ -47,6 +47,7 @@ dev = [
     "mypy>=2.1.0",
     "ruff>=0.15.17",
     "ty>=0.0.49",
+    "rumdl>=0.2.16",
 ]
 
 [build-system]
@@ -148,3 +149,14 @@ ignore = [
     "PLR0912", # too many branches
     "PTH", # use pathlib - os.path is fine for this codebase
 ]
+
+# https://github.com/rvben/rumdl
+[tool.rumdl]
+exclude = ["tests"]
+disable = [
+    "MD013", # line length - docs contain long, unwrappable URLs
+    "MD041", # first line must be a heading - the PR template starts with a list
+]
+
+[tool.rumdl.MD004]
+style = "dash" # Unordered list marker style

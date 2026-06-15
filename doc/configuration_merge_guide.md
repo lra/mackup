@@ -4,7 +4,7 @@ This guide is for users who want to combine configuration settings for two or
 more machines.
 
 For example, you might have some bash settings on Machine A (like useful
-command aliases) that are not on Machine B.  You also have some settings on
+command aliases) that are not on Machine B. You also have some settings on
 Machine B that you would like to move over to Machine A.
 
 The problem is that if you use Mackup to send Machine A's bash configuration

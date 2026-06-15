@@ -181,11 +181,16 @@ def chmod(target: str) -> None:
                 os.chmod(os.path.join(root, cur_dir), folder_mode)
             for cur_file in files:
                 fullpath = os.path.join(root, cur_file)
-                # Skip broken symlinks (e.g. links restored before their
-                # target), which os.walk lists but os.chmod can't follow
-                if os.path.islink(fullpath) and not os.path.exists(fullpath):
-                    continue
-                os.chmod(fullpath, file_mode)
+                try:
+                    os.chmod(fullpath, file_mode)
+                except FileNotFoundError:
+                    # A broken symlink (e.g. a link restored before its
+                    # target) is listed by os.walk but can't be followed by
+                    # os.chmod. Skip it instead of crashing; re-raise for
+                    # real missing regular files.
+                    if os.path.islink(fullpath):
+                        continue
+                    raise
 
     else:
         raise ValueError(f"Unsupported file type: {target}")

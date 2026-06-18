@@ -168,8 +168,15 @@ class ApplicationProfile:
                         " home folder.\nAre you sure that you want to"
                         " replace it?",
                     ):
-                        # If confirmed, delete the existing home file
-                        utils.delete(home_filepath)
+                        # If confirmed, delete the existing home file before restoring.
+                        try:
+                            utils.delete(home_filepath)
+                        except PermissionError as e:
+                            print(
+                                f"Error: Unable to copy file from {mackup_filepath} to "
+                                f"{home_filepath} due to permission issue: {e}",
+                            )
+                            continue
                     else:
                         continue
 

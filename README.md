@@ -758,6 +758,7 @@ See the [README](doc/README.md) file in the doc directory for more info.
 - [Tmuxp](https://github.com/tony/tmuxp)
 - [Todo.txt CLI](http://todotxt.com/)
 - [ToothFairy](https://c-command.com/toothfairy/)
+- [Topgrade](https://github.com/topgrade-rs/topgrade)
 - [TotalSpaces2](http://totalspaces.binaryage.com/)
 - [Tower](http://www.git-tower.com/)
 - [Transmission](http://www.transmissionbt.com/)

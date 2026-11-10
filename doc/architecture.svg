@@ -153,7 +153,7 @@
   <text x="1070" y="438" class="small-text" text-anchor="middle">Move files to storage</text>
   <text x="1070" y="456" class="small-text" text-anchor="middle">Create symlinks back</text>
   <text x="1070" y="480" class="small-text" text-anchor="middle">⚠️ Broken on macOS</text>
-  <text x="1070" y="498" class="small-text" text-anchor="middle">Sonoma+ (use copy)</text>
+  <text x="1070" y="498" class="small-text" text-anchor="middle">(use copy mode</text>
   <text x="1070" y="513" class="small-text" text-anchor="middle">instead)</text>
   
   <!-- Key Benefits -->

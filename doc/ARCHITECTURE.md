@@ -29,7 +29,7 @@ Copy mode is used for backing up and restoring files:
 This is a one-time operation used when setting up a new machine or creating
 an initial backup.
 
-#### 2. Link Mode (Legacy - Not recommended for macOS Sonoma+)
+#### 2. Link Mode (Legacy - Not recommended on macOS)
 
 Link mode creates persistent symlinks between your home directory and the
 Mackup folder:
@@ -41,8 +41,8 @@ Mackup folder:
 - **`mackup link uninstall`**: Removes symlinks and copies files back to
   original locations
 
-⚠️ **Warning**: Link mode is broken on macOS Sonoma (14) and later due to
-changes in how macOS handles symlinked preferences. Use copy mode instead.
+⚠️ **Warning**: Link mode is broken on macOS due to changes in how macOS
+handles symlinked preferences. Use copy mode instead.
 
 ## Component Architecture
 
@@ -210,7 +210,7 @@ Symlinks in home: ~/.config → ~/Dropbox/Mackup/.config
 
 **Current Recommendation (Copy Mode):**
 
-- macOS Sonoma+ broke symlink support for preferences
+- macOS no longer supports symlinked preferences
 - Copy mode is more reliable across platforms
 - Trade-off: manual sync required (re-run backup/restore)
 

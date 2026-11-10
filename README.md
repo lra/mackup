@@ -144,11 +144,11 @@ It is covered by the 2 commands:
 ### Link mode
 
 > [!WARNING]
-> If you are using Mackup on a current version of macOS, link mode will BREAK
-  YOUR PREFERENCES. macOS Sonoma (macOS 14) and later don't support symlinked
-  preferences, see [issue #2035](https://github.com/lra/mackup/issues/2035) for
-  additional information. [PR #2085](<https://github.com/lra/mackup/pull/2085>)
-  added copy mode, which should be used instead.
+> If you are using Mackup on macOS, link mode will BREAK YOUR PREFERENCES.
+  macOS doesn't support symlinked preferences anymore, see
+  [issue #2035](https://github.com/lra/mackup/issues/2035) for additional
+  information. [PR #2085](<https://github.com/lra/mackup/pull/2085>) added copy
+  mode, which should be used instead.
 
 Link mode is used to move your config files into the Mackup folder,
 and link them back to their original place.
@@ -867,6 +867,11 @@ And it's [GPL](http://www.gnu.org/licenses/gpl.html), of course.
 
 - macOS
 - GNU/Linux
+
+Mackup is tested on:
+
+- macOS 15 and 26, on Apple silicon and Intel
+- Ubuntu 22.04, 24.04 and 26.04, on x86-64 and ARM64
 
 ## What's up with the weird name
 

@@ -293,6 +293,7 @@ class ApplicationProfile:
             pointing_to_mackup: bool = (
                 os.path.islink(home_filepath)
                 and os.path.exists(mackup_filepath)
+                and os.path.exists(home_filepath)
                 and os.path.samefile(mackup_filepath, home_filepath)
             )
             supported: bool = utils.can_file_be_synced_on_current_platform(filename)
@@ -310,7 +311,7 @@ class ApplicationProfile:
                     continue
 
                 # Check if there is already a file in the home folder
-                if os.path.exists(home_filepath):
+                if os.path.lexists(home_filepath):
                     # Name it right
                     if os.path.isfile(home_filepath):
                         file_type = "file"

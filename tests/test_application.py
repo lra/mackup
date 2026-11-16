@@ -664,7 +664,7 @@ class TestApplicationProfile(unittest.TestCase):
 
     def test_link_dry_run_with_broken_home_symlink(self):
         """link --dry-run must not crash when the home path is a broken symlink."""
-        mackup_filepath, home_filepath = self._make_broken_home_link()
+        _, home_filepath = self._make_broken_home_link()
         self.app_profile.dry_run = True
 
         with patch("mackup.application.utils.link") as mock_link:
@@ -685,7 +685,7 @@ class TestApplicationProfile(unittest.TestCase):
 
     def test_link_keeps_broken_home_symlink_when_declined(self):
         """link leaves a broken home symlink alone if the user declines."""
-        mackup_filepath, home_filepath = self._make_broken_home_link()
+        _, home_filepath = self._make_broken_home_link()
 
         with patch("mackup.application.utils.confirm", return_value=False):
             self.app_profile.link()

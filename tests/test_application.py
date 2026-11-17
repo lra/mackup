@@ -651,6 +651,48 @@ class TestApplicationProfile(unittest.TestCase):
             output = captured_output.getvalue()
             assert "Backing up" in output
 
+    def _make_broken_home_link(self):
+        """Create a valid mackup backup and a home symlink whose target is gone."""
+        test_file = ".testfile"
+        mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
+        home_filepath = os.path.join(self.temp_home, test_file)
+        with open(mackup_filepath, "w") as f:
+            f.write("mackup content")
+        os.symlink(os.path.join(self.temp_home, ".missing"), home_filepath)
+        self.app_profile.files = {test_file}
+        return mackup_filepath, home_filepath
+
+    def test_link_dry_run_with_broken_home_symlink(self):
+        """link --dry-run must not crash when the home path is a broken symlink."""
+        _, home_filepath = self._make_broken_home_link()
+        self.app_profile.dry_run = True
+
+        with patch("mackup.application.utils.link") as mock_link:
+            self.app_profile.link()
+
+        mock_link.assert_not_called()
+        assert os.path.islink(home_filepath)
+
+    def test_link_replaces_broken_home_symlink_when_confirmed(self):
+        """link replaces a broken home symlink with a link to the backup."""
+        mackup_filepath, home_filepath = self._make_broken_home_link()
+
+        with patch("mackup.application.utils.confirm", return_value=True) as confirm:
+            self.app_profile.link()
+
+        confirm.assert_called_once()
+        assert os.path.samefile(mackup_filepath, home_filepath)
+
+    def test_link_keeps_broken_home_symlink_when_declined(self):
+        """link leaves a broken home symlink alone if the user declines."""
+        _, home_filepath = self._make_broken_home_link()
+
+        with patch("mackup.application.utils.confirm", return_value=False):
+            self.app_profile.link()
+
+        assert os.path.islink(home_filepath)
+        assert not os.path.exists(home_filepath)
+
 
 if __name__ == "__main__":
     unittest.main()

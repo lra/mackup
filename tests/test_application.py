@@ -394,6 +394,37 @@ class TestApplicationProfile(unittest.TestCase):
         with open(home_filepath) as f:
             assert f.read() == "existing home"
 
+    def test_copy_files_from_mackup_folder_delete_permission_error(self):
+        """Test restore handles PermissionError when removing existing home file."""
+        test_file = ".testfile"
+        home_filepath = os.path.join(self.temp_home, test_file)
+        mackup_filepath = os.path.join(self.mock_mackup.mackup_folder, test_file)
+
+        with open(home_filepath, "w") as f:
+            f.write("existing home")
+        with open(mackup_filepath, "w") as f:
+            f.write("backup content")
+
+        with patch("mackup.application.utils.confirm", return_value=True), \
+             patch("mackup.application.utils.delete") as mock_delete, \
+             patch("mackup.application.utils.copy") as mock_copy:
+            mock_delete.side_effect = PermissionError("Permission denied")
+
+            captured_output = StringIO()
+            sys.stdout = captured_output
+
+            self.app_profile.copy_files_from_mackup_folder()
+
+            sys.stdout = sys.__stdout__
+
+            mock_delete.assert_called_once_with(home_filepath)
+            mock_copy.assert_not_called()
+
+            output = captured_output.getvalue()
+            assert "Error: Unable to copy file" in output
+            assert "permission issue" in output
+            assert home_filepath in output
+
     def test_link_uninstall_mackup_not_a_link(self):
         """Test link_uninstall skips when home file is not a symbolic link."""
         # Create a test file in the mackup directory (regular file, not a link)
